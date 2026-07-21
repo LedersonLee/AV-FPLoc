@@ -4,7 +4,7 @@ Research scaffold for active acoustic-visual floorplan localization under visual
 
 ## Status
 
-The repository currently defines the public method boundary and design contracts. The acoustic observation model, likelihood fusion, and evaluation pipeline are not implemented yet.
+The repository includes a collaborator-facing Gibson SoundSpaces RIR and acoustic-likelihood reproduction path. Fusion remains research work in progress; the visual F3Loc baseline remains an external pinned adapter.
 
 ## Research goal
 
@@ -28,3 +28,14 @@ Datasets, floorplan caches, checkpoints, generated figures, external repository 
 ## Design-first workflow
 
 Use the documents in `docs/` as the source of truth for research design. Record accepted design choices in [docs/decision_log.md](docs/decision_log.md) before implementation changes are made in `track1_core/`.
+
+## Gibson RIR Reproduction
+
+With the shared licensed assets under `/file2/jeongeon/AV-FPLoc` and an existing SoundSpaces environment, run the read-only preflight:
+
+```bash
+export AVFPLOC_DATA_ROOT=/file2/jeongeon/AV-FPLoc
+python scripts/verify_collaborator_env.py --scene Springhill
+```
+
+The full workflow is documented in [docs/collaborator_gibson_rir.md](docs/collaborator_gibson_rir.md).
