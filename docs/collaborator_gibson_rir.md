@@ -10,6 +10,8 @@ export AVFPLOC_DATA_ROOT=/file2/jeongeon/AV-FPLoc
 
 Use the existing SoundSpaces container/environment. The shared assets are licensed data and live on `/file2`; they are not downloaded by Git.
 
+If `import habitat_sim` terminates with `free(): invalid pointer`, start the SoundSpaces container with `LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6`. This is required for the legacy audio binding in the validated Track1 image; it is already set in Track1's SoundSpaces Compose service.
+
 ## Verify shared assets and SoundSpaces
 
 ```bash
