@@ -26,6 +26,16 @@ alignment, ray ordering, Repair/Harm, main/experiment dependency separation,
 checkpoint roundtrip, split leakage rejection and one-epoch synthetic gate
 training. All 15 tests passed in the existing Torch environment.
 
+The same 15 tests subsequently passed in a fresh public-base Python3.10/CUDA12.4
+Docker image built from a clean Git clone, with no legacy workspace mounted.
+Three real Train-query adaptive weights, fused scores and decoded poses matched
+the original validation environment exactly. The clean image also ran actual
+RGB inference through the newly fetched patched UnLoc checkout successfully.
+Validated dependency versions are recorded in `environments/validated-runtime-freeze.txt`.
+The initial fresh build exposed old pip metadata incompatibility; pinning pip25.2
+and explicit CUDA wheel versions fixed it. Clean-clone testing also caught and
+fixed old `.gitignore` rules excluding data/visualization source packages.
+
 Five shared artifact files were checked, including checkpoint SHA256 values.
 The epoch20 Vision checkpoint and pretrained DA weights were absent at the
 documented File2 paths; they were copied without overwriting existing files,
