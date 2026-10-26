@@ -49,3 +49,5 @@ external/checkouts/
 # Visualization source is code; only generated visualizations are excluded.
 !src/avfploc/visualization/
 !src/avfploc/visualization/*.py
+!src/avfploc/data/
+!src/avfploc/data/*.py
