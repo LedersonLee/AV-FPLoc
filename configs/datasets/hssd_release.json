@@ -1,0 +1,30 @@
+{
+  "dataset_root_example": "/file2/jeongeon/AV-FPLoc/datasets/HSSD",
+  "files": [
+    {
+      "path": "UnLoc/evaluation_checkpoints/epoch020/model.ckpt",
+      "size": 1356405020,
+      "sha256": "b9626c0f8b5411f365d6151e7a760b8e79fffe5e6ee2abced6caaa7705a1c36f"
+    },
+    {
+      "path": "UnLoc/pretrained/depth_anything_v2_metric_hypersim_vitl.pth",
+      "size": 1341401882,
+      "sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d"
+    },
+    {
+      "path": "AcousticContrastive/pilots/scene_subset_v1/input_ablation_v1/runs/all/best.pt",
+      "size": 8506460,
+      "sha256": "f7ba7267c66490a034338d19867049e7392fef6795a6b947dfbbdc02f57d27b8"
+    },
+    {
+      "path": "ReliabilityFusion/pilots/capacity_probe_v1/runs/128_64_seed42/best.pt",
+      "size": 213748,
+      "sha256": "b96d7beffb41e20c4e3c79f25ecd612e7029eda1d5bf59db18203c87a827bd28"
+    },
+    {
+      "path": "manifests/scene_splits_v1.json",
+      "size": 3875,
+      "sha256": "af1f5ded1e3cc8286b7f6fc4155f39761b0afc12c04c33313ea43f40705f2dc8"
+    }
+  ]
+}

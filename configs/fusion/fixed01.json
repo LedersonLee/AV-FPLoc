@@ -1,0 +1,8 @@
+{
+  "type": "fixed",
+  "acoustic_weight": 0.1,
+  "normalization": "per_query_full_xy_yaw_zscore",
+  "yaw_step_deg": 10,
+  "score_direction": "higher_is_better",
+  "calibrated_probability": false
+}

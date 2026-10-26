@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avfploc"
+version = "0.1.0"
+description = "Independent visual/acoustic floorplan localization and weighted fusion"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10", "Pillow>=9"]
+
+[project.optional-dependencies]
+train = ["torch>=2.4", "torchvision>=0.19", "lightning>=2.4", "opencv-python-headless>=4.8", "matplotlib>=3.7", "wandb>=0.26.1", "tensorboard", "einops", "timm"]
+test = ["pytest>=7"]
+
+[project.scripts]
+avfploc = "avfploc.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/hssd"]

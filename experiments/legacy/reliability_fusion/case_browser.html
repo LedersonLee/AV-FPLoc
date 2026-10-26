@@ -1,0 +1,67 @@
+<h2>Val query 검토: 상황 확률·RGB·선택한 scalar</h2>
+<p>대표 사례를 고른 것이 아니라 Val 1,704개 전체를 표시합니다. GT 라벨은 설명용이며 모델 입력이 아닙니다. 확률은 독립적이므로 합이 1일 필요가 없습니다.</p>
+<div class="controls"><label>모델 <select id="caseModel"></select></label>
+<label>결과 <select id="caseOutcome"><option value="all">전체</option><option value="repair">Fixed .1 실패 → 복구</option><option value="harm">Fixed .1 성공 → 실패</option><option value="preserved">Fixed .1 성공 유지</option><option value="failed">둘 다 실패</option></select></label>
+<label>GT 상황 <select id="caseFilter"><option value="-1">전체</option><option value="0">① Vision 보존</option><option value="1">② Acoustic 보완</option><option value="2">③ 결합 복구 가능</option><option value="3">④ 방향 충돌</option><option value="4">⑤ Scalar 복구 불가</option></select></label>
+<label>Query <select id="caseQuery"></select></label><button id="casePrev">이전</button><button id="caseNext">다음</button></div>
+<p id="caseStatus"></p><div class="caseGrid"><div><img id="caseRGB" alt="RGB observation"><p id="casePose"></p></div><div><canvas id="caseMap"></canvas><p>+X 오른쪽 · +Z 아래쪽 · logical yaw0°=+X</p></div></div>
+<p><label><input id="showGT" type="checkbox" checked> <span style="color:#c65c00">GT</span></label> · <label><input id="showV" type="checkbox" checked> <span style="color:#0669ce">Vision</span></label> · <label><input id="showA" type="checkbox" checked> <span style="color:#138a3b">Acoustic</span></label> · <label><input id="showF" type="checkbox" checked> <span style="color:#9b29c2">Fusion</span></label></p>
+<div id="caseBars"></div><p id="caseErrors"></p>
+<style>.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.controls select{max-width:340px;padding:6px}.caseGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.caseGrid img,.caseGrid canvas{width:100%;height:auto;max-height:600px;object-fit:contain;background:white}.caseBar{display:grid;grid-template-columns:280px 1fr 70px 120px;gap:12px;margin:8px 0;align-items:center}.caseTrack{background:#dae3ee;height:17px;border-radius:5px;overflow:hidden}.caseTrack div{height:100%;background:#3975ba}@media(max-width:800px){.caseGrid{grid-template-columns:1fr}.caseBar{grid-template-columns:150px 1fr 60px 75px}}</style>
+<script>
+(async()=>{
+const E=id=>document.getElementById(id),data=await(await fetch('case_records.json')).json(),names=['① Vision 보존 필요','② Acoustic 보완 가능','③ 두 MAP 실패·결합 복구 가능','④ 위치 일치·방향 충돌','⑤ Scalar 복구 불가'];
+const models=Object.keys(data.models),images=new Map();let filtered=[],version=0;
+for(const key of models)E('caseModel').add(new Option(data.models[key],key));
+function errors(p,t){let a=Math.abs(((p[2]-t[2])%360+540)%360-180);return {d:Math.hypot(p[0]-t[0],p[1]-t[1]),a,ok:Math.hypot(p[0]-t[0],p[1]-t[1])<=1&&a<=30}}
+function filter(){
+ const previous=filtered[Number(E('caseQuery').value)||0];
+ const model=E('caseModel').value,out=E('caseOutcome').value,c=Number(E('caseFilter').value);
+ filtered=data.records.filter(r=>{const ok=errors(r.models[model].pose,r.gt).ok,fixed=errors(r.fixed,r.gt).ok;return(c<0||r.labels[c])&&(out==='all'||out==='repair'&&!fixed&&ok||out==='harm'&&fixed&&!ok||out==='preserved'&&fixed&&ok||out==='failed'&&!fixed&&!ok)});
+ E('caseQuery').replaceChildren();
+ filtered.forEach((r,i)=>E('caseQuery').add(new Option(r.scene+' / Q'+String(r.sample).padStart(5,'0'),i)));
+ if(previous){const i=filtered.findIndex(r=>r.scene===previous.scene&&r.sample===previous.sample);if(i>=0)E('caseQuery').value=i}
+ show();
+}
+function arrow(ctx,p,name,color,meta,factor){let s=meta.map_spacing_m,b=meta.world_bounds_m,x=(p[0]-b.x_min)/s,y=(p[1]-b.z_min)/s,a=p[2]*Math.PI/180,l=.95/s*factor,h=.22/s,dx=l*Math.cos(a),dy=l*Math.sin(a);ctx.save();ctx.lineCap='round';ctx.strokeStyle='white';ctx.lineWidth=.09/s;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+dx,y+dy);ctx.stroke();ctx.lineWidth=.045/s;ctx.strokeStyle=color;ctx.stroke();ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(x+dx,y+dy);ctx.lineTo(x+dx-h*Math.cos(a-.55),y+dy-h*Math.sin(a-.55));ctx.lineTo(x+dx-h*Math.cos(a+.55),y+dy-h*Math.sin(a+.55));ctx.closePath();ctx.fill();ctx.font=`bold ${.22/s}px sans-serif`;ctx.lineWidth=.055/s;ctx.strokeStyle='white';ctx.strokeText(name,x+dx+.08/s,y+dy-.08/s);ctx.fillText(name,x+dx+.08/s,y+dy-.08/s);ctx.restore()}
+async function show(){
+ const serial=++version,r=filtered[Number(E('caseQuery').value)||0];
+ E('caseStatus').textContent=filtered.length+'개 query';E('caseBars').replaceChildren();
+ if(!r){
+  E('caseRGB').removeAttribute('src');E('casePose').textContent='';E('caseErrors').textContent='';
+  const c=E('caseMap');c.getContext('2d').clearRect(0,0,c.width,c.height);return;
+ }
+ const m=r.models[E('caseModel').value];E('caseRGB').src=r.rgb;
+ E('casePose').textContent=`GT (x,z,yaw)=(${r.gt.map(x=>x.toFixed(2)).join(', ')}) · Acoustic w=${m.weight}, Vision w=${1-m.weight}`;
+ const extra=m.reference_probabilities||[],probabilities=[...m.probabilities,...extra];
+ const labels=[...names,...(extra.length?['보조: 기준 .1이 이미 정답','보조: 기준 .1 실패·복구 가능']:[])];
+ const truth=[...r.labels,...(r.reference_labels||[])];
+ labels.forEach((name,k)=>{
+  const row=document.createElement('div');row.className='caseBar';
+  const title=document.createElement('span');title.textContent=name;
+  const track=document.createElement('div');track.className='caseTrack';
+  const bar=document.createElement('div');bar.style.width=(probabilities[k]*100)+'%';
+  if(k>=5)bar.style.background='#708195';track.append(bar);
+  const val=document.createElement('span');val.textContent=(probabilities[k]*100).toFixed(1)+'%';
+  const label=document.createElement('span');label.textContent='GT: '+(truth[k]?'해당':'비해당');
+  row.append(title,track,val,label);E('caseBars').append(row);
+ });
+ const parts=[];
+ for(const[name,p]of[['Vision',r.vision],['Acoustic',r.acoustic],['Fixed .1',r.fixed],['Fusion',m.pose]]){
+  const e=errors(p,r.gt);parts.push(`${name}: ${e.d.toFixed(2)}m / ${e.a.toFixed(0)}° (${e.ok?'성공':'실패'})`);
+ }
+ E('caseErrors').textContent=parts.join(' · ');
+ if(!images.has(r.scene)){
+  const img=new Image();img.src='maps/'+r.scene+'.png';await img.decode();images.set(r.scene,img);
+ }
+ if(serial!==version)return;
+ const img=images.get(r.scene),c=E('caseMap');c.width=img.naturalWidth;c.height=img.naturalHeight;
+ const ctx=c.getContext('2d');ctx.drawImage(img,0,0);const meta=data.maps[r.scene];
+ if(E('showA').checked)arrow(ctx,r.acoustic,'A','#138a3b',meta,.8);
+ if(E('showV').checked)arrow(ctx,r.vision,'V','#0669ce',meta,1);
+ if(E('showF').checked)arrow(ctx,m.pose,'F','#9b29c2',meta,1.2);
+ if(E('showGT').checked)arrow(ctx,r.gt,'GT','#c65c00',meta,1.4);
+}
+for(const id of['caseModel','caseOutcome','caseFilter'])E(id).onchange=filter;E('caseQuery').onchange=show;for(const id of['showGT','showV','showA','showF'])E(id).onchange=show;E('casePrev').onclick=()=>{E('caseQuery').selectedIndex=Math.max(0,E('caseQuery').selectedIndex-1);show()};E('caseNext').onclick=()=>{E('caseQuery').selectedIndex=Math.min(filtered.length-1,E('caseQuery').selectedIndex+1);show()};filter();
+})().catch(e=>{document.getElementById('caseStatus').textContent='보고서 로드 오류: '+e.message;console.error(e)});
+</script>

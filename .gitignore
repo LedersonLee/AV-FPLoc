@@ -39,3 +39,9 @@ result/
 .DS_Store
 .idea/
 .vscode/
+
+# Installed source package and local external clones
+*.egg-info/
+build/
+dist/
+external/checkouts/

@@ -1,0 +1,20 @@
+{
+  "version": "hssd_acoustic_contrastive_v1",
+  "split_sha256": "af1f5ded1e3cc8286b7f6fc4155f39761b0afc12c04c33313ea43f40705f2dc8",
+  "expected_scenes": {"train": 116, "val": 19, "test": 17},
+  "seed": 42,
+  "features": {
+    "version": "energy_complex_v1", "sample_rate_hz": 48000, "direct_sample": 7,
+    "start_ms": 2, "end_ms": 128, "early_end_ms": 50,
+    "nfft": 256, "hop": 64, "band_hz": [500, 4000], "log_energy_gain": 100.0
+  },
+  "model": {"features": "both", "width": 32, "embedding_dim": 128},
+  "loss": {"temperature": 0.07, "negative_count": 7},
+  "training": {
+    "epochs": 100, "batch_size": 64, "workers": 4, "cpu_threads": 4,
+    "lr": 0.0003, "weight_decay": 0.0001, "grad_clip": 1.0,
+    "early_stop_patience": 12, "min_delta": 0.0001,
+    "evaluate_every": 5, "amp": true, "device": "cuda"
+  },
+  "wandb": {"project": "hssd-acoustic-contrastive", "entity": null, "mode": "online"}
+}

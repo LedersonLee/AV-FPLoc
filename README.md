@@ -1,5 +1,30 @@
 # AV-FPLoc
 
+## HSSD two-branch localization and weighted fusion
+
+The installable implementation is now `src/avfploc`: independent UnLoc vision,
+contrastive acoustic E/C/N features, aligned dense scores, fixed and learned
+query-level weighted fusion. The paper title (AV-FLoc / AV-Loc) remains undecided.
+
+Start with [HSSD installation and reproduction](docs/hssd_reproduction.md).
+Main code, configs, tests, environment recipes and historical experiments are
+separate. Data and checkpoints remain on the shared File2 server, never in Git.
+`track1_core` below is the preserved Gibson scaffold, not a second HSSD library;
+it remains for compatibility with existing Gibson scripts.
+
+```text
+src/avfploc/     data, geometry, vision, acoustic, fusion, evaluation, cli
+configs/        versioned experiment and dataset settings
+experiments/    historical experiments, not library dependencies
+tests/hssd/     portability and numerical-contract tests
+environments/   reproducible install/container recipes
+external/       pinned upstream revisions, license and UnLoc patch
+docs/           reproduction and migration evidence
+```
+
+The following sections describe the earlier Gibson scaffold and remain as
+historical documentation, not the current HSSD implementation status.
+
 Research scaffold for active acoustic-visual floorplan localization under visual degradation.
 
 ## Status

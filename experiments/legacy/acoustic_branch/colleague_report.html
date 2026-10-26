@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8"><title>HSSD colleague projection control</title>
+<style>body{font:16px system-ui;background:#eef2f7;color:#152337;margin:24px}table{border-collapse:collapse;background:white}td,th{padding:10px;border:1px solid #ccd5e1;text-align:right}td:first-child{text-align:left}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}canvas,img{width:100%;background:white;object-fit:contain}section{background:white;padding:16px;margin:16px 0;border-radius:8px}label{display:inline-block;margin:8px}#status{white-space:pre-wrap}</style>
+<h1>HSSD: colleague yaw0 projection vs energy/coherence CNN</h1>
+<p>Same12 train /3val /3test scenes, frozen epoch20 vision, same0.2m XY candidate grid. XY-only acoustic predictions have no yaw arrow or joint recall.</p>
+<section><h2>Learning-method comparison</h2><table>
+<tr><th>Item</th><th>Colleague projection (HSSD adaptation)</th><th>Our corrected contrastive CNN</th></tr>
+<tr><td>Feature</td><td>STFT power,3 bands0–0.5/0.5–1.5/1.5–4kHz;18x97</td><td>500–4000Hz resolved energy + complex adjacent-microphone coherency</td></tr>
+<tr><td>Time alignment</td><td>Strongest absolute sample +2ms guard, then128ms</td><td>Geometric direct sample7; reflections2–128ms</td></tr>
+<tr><td>Encoder / score</td><td>Shared linear1746→128; negative L1 distance; no output normalization</td><td>Shared energy/coherence CNN; normalized128-D; cosine</td></tr>
+<tr><td>Negatives</td><td>Other sampled positions in same scene; NxN InfoNCE</td><td>4 visual spatial hard +2 wrong-yaw +1 random;8 candidates including positive</td></tr>
+<tr><td>Optimizer</td><td>Adam1e-3; temperature0.05; no scheduler</td><td>AdamW3e-4; temperature0.07; cosine scheduler</td></tr>
+<tr><td>Selection</td><td>Fixed40epochs; best val paired-position R@1m</td><td>Max40epochs; patience8; best sampled-candidate val loss</td></tr>
+<tr><td>FP heading / output</td><td>Physical yaw0 only; acoustic XY only, no query yaw compensation</td><td>6 physical bases + cyclic microphone permutations;36 yaw candidates, joint XY/yaw</td></tr>
+<tr><td>Raw bank cost at same XY grid</td><td>1 physical6-channel RIR per cell</td><td>6 physical6-channel RIRs per cell (not36)</td></tr>
+</table><p>This comparison changes feature, capacity, negatives and heading policy together. It is a method comparison, not an isolated architecture ablation.</p></section>
+<table><tr><th>Method</th><th>R@0.1m</th><th>R@0.5m</th><th>R@1m</th><th>R@1m30°</th><th>Repair</th><th>Harm</th></tr>__ROWS__</table>
+<section><h2>Protocol and limitations</h2><ul>__LIMITATIONS__</ul><a href="summary.json">Full summary</a></section>
+<section><label>Scene <select id="scene"></select></label><label>Query <select id="query"></select></label><label>Heatmap <select id="heat"><option value="0">Vision</option><option value="1">Colleague learned acoustic XY</option><option value="2">Colleague W + vision1:1</option><option value="3">Untrained reference L1 XY</option></select></label>
+<label>Cases <select id="filter"><option value="all">All</option><option value="repair">Projection fusion repair</option><option value="harm">Projection fusion harm</option></select></label><div id="status"></div>
+<p>GT cyan arrow · vision blue · our CNN acoustic orange · projection acoustic purple circle (NO yaw) · projection fusion green arrow · projection top50 magenta arrow. Black=wall/exterior; +X right,+Z downward.</p>
+<div class="grid"><img id="rgb" alt="Furnished RGB observation"><canvas id="map"></canvas></div></section>
+<script>
+let records,banks,active=[],epoch=0;const $=id=>document.getElementById(id);
+function options(el,values){el.replaceChildren(...values.map(([v,t])=>{let o=document.createElement('option');o.value=v;o.textContent=t;return o}));}
+function refresh(){active=records.filter(r=>r.scene_id===$('scene').value).filter(r=>{let a=r.methods.vision_only.xy_error_m<=1,b=r.methods.projection_equal_fusion.xy_error_m<=1;return $('filter').value==='all'||($('filter').value==='repair'?!a&&b:a&&!b)});options($('query'),active.map((r,i)=>[i,`Q${r.sample_index} · GT yaw${r.gt_pose_xzyaw[2]}°`]));draw();}
+async function draw(){let token=++epoch,r=active[+$('query').value];if(!r){$('status').textContent='No matching cases';return}let b=banks[r.scene_id],img=new Image();img.src=b.map;await img.decode();let bytes=new Uint8Array(await(await fetch(r.heatmap)).arrayBuffer());if(token!==epoch)return;let c=$('map');c.width=img.width;c.height=img.height;let ctx=c.getContext('2d');ctx.drawImage(img,0,0);let scale=b.meta.map_spacing_m,origin=b.meta.world_bounds_m;let point=p=>[(p[0]-origin.x_min)/scale,(p[1]-origin.z_min)/scale];let layer=+$('heat').value,n=b.xy.length;
+for(let i=0;i<n;i++){let [x,y]=point(b.xy[i]),t=bytes[layer*n+i]/255;ctx.fillStyle=`hsla(${240*(1-t)},90%,50%,.55)`;ctx.fillRect(x-.1/scale,y-.1/scale,.2/scale,.2/scale)}
+function mark(p,color,label){let [x,y]=point(p),length=Math.max(c.width,c.height)*.042;ctx.strokeStyle='white';ctx.fillStyle=color;ctx.lineWidth=Math.max(2,c.width/250);if(p[2]===null){ctx.beginPath();ctx.arc(x,y,length*.18,0,Math.PI*2);ctx.fill();ctx.stroke()}else{let a=p[2]*Math.PI/180,dx=Math.cos(a),dy=Math.sin(a),ex=x+length*dx,ey=y+length*dy;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(ex,ey);ctx.stroke();ctx.strokeStyle=color;ctx.lineWidth=Math.max(1,c.width/450);ctx.stroke();ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(ex-length*.3*dx+length*.17*dy,ey-length*.3*dy-length*.17*dx);ctx.lineTo(ex-length*.3*dx-length*.17*dy,ey-length*.3*dy+length*.17*dx);ctx.closePath();ctx.fill()}ctx.font=`bold ${Math.max(12,c.width/65)}px system-ui`;ctx.fillStyle=color;ctx.fillText(label,x+4,y-5)}
+mark(r.gt_pose_xzyaw,'#00a6b8','GT');for(let [m,color,label] of [['vision_only','#1555e9','V'],['acoustic_only','#e97709','A-CNN'],['projection_acoustic_xy','#8040d0','A-W XY'],['projection_equal_fusion','#009944','Fusion-W'],['projection_top50_rerank','#dd1888','Top50-W']])mark(r.methods[m].pose_xzyaw,color,label);
+$('rgb').src=r.image;$('status').textContent=Object.entries(r.methods).map(([m,v])=>`${m}: ${v.xy_error_m.toFixed(2)}m · yaw ${v.yaw_error_deg===null?'N/A':v.yaw_error_deg.toFixed(0)+'°'}`).join('\n');}
+Promise.all([fetch('records.json').then(r=>r.json()),fetch('banks.json').then(r=>r.json())]).then(([r,b])=>{records=r;banks=b;options($('scene'),Object.keys(b).map(s=>[s,s]));refresh()});$('scene').onchange=refresh;$('filter').onchange=refresh;$('query').onchange=draw;$('heat').onchange=draw;
+</script>

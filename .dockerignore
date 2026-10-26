@@ -1,0 +1,10 @@
+.git
+external/checkouts
+experiments/legacy
+**/__pycache__
+**/*.pt
+**/*.pth
+**/*.ckpt
+.venv
+outputs
+data

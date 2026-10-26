@@ -1,0 +1,66 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>HSSD weighted fusion · 상수 / query별 가중치 / GT oracle</title>
+<style>
+body{font:16px system-ui;margin:24px;color:#17314a;background:#f5f7fa}section{padding:18px;margin:16px 0;background:white;border-radius:8px}h1{font-size:25px}h2{font-size:20px}p,li{line-height:1.65}table{border-collapse:collapse;font-variant-numeric:tabular-nums;width:100%}td,th{padding:10px;border-bottom:1px solid #d8e0e8;text-align:right;white-space:nowrap}td:first-child,th:first-child{text-align:left}.scroll{overflow:auto}.descriptions td{white-space:normal;text-align:left;min-width:180px}.descriptions td:last-child{min-width:400px}.note{background:#fff1cc;padding:14px;line-height:1.7}.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}img,canvas{max-width:100%;height:auto}select,button{font:inherit;padding:7px;max-width:100%}label{display:inline-block;margin:6px}pre{white-space:pre-wrap;overflow-wrap:anywhere}#error{color:#a22}.muted{color:#52647b}details{margin:12px 0}a{color:#1262a0}@media(max-width:850px){body{margin:10px}.grid{grid-template-columns:1fr}}
+</style>
+<h1>Weighted fusion · 상수 가중치 / query별 adaptive / GT oracle</h1>
+<p>동일 fusion train6 / val3 / exploratory test3. UnLoc epoch20 + 완료된 <strong>subset E+C+N</strong> acoustic 모델을 고정했습니다.
+별도 학습한 전체 train116 모델의 결과가 아닙니다. 동일 0.2m×0.2m 후보 / yaw10° / DESDF radial cap10m.
+기존에 검토한 test subset이며 blind benchmark가 아닙니다.</p>
+<section><h2>가중치의 의미</h2>
+<p>현재 query q마다 acoustic 가중치 <code>wA(q)</code> 한 개와 vision 가중치 <code>wV(q)=1−wA(q)</code>를 사용합니다.
+같은 query의 모든 위치·yaw 후보에는 같은 가중치가 적용됩니다. 후보별 가중치나 위치/yaw별 별도 가중치가 아닙니다.
+다음 query가 들어오면 adaptive 모델은 다른 값을 출력할 수 있지만, 상수 모델은 모든 query에 동일한 값을 사용합니다.</p>
+<p><code>s(q,pose)=(1−wA(q))·zV(q,pose)+wA(q)·zA(q,pose)</code>. 각 modality 점수는 query의 전체 후보 bank에서 z-score 정규화합니다.</p>
+<p id="selection-note" class="note"></p>
+<p>Best = val scene-macro R@1m → 공동 성공률 순으로 선택한 checkpoint. Last = 학습이 종료된 마지막 checkpoint.
+<strong>Best ep0은 학습 전 초기값</strong>이며, 학습이 실행되지 않았다는 뜻은 아닙니다. 이후 checkpoint가 초기 성능을 넘지 못한 것입니다.</p>
+<p><a href="metrics_explained.csv">설명 포함 모든 지표 CSV</a> · <a href="review.json">추가 진단·설명 JSON</a> · <a href="summary.json">변경하지 않은 원본 결과</a> · <a href="selection.json">Val 선택 기록</a></p></section>
+<section><h2>실제 추론 가능한 방법 · Test 3 scenes / 1,472 queries</h2><div id="main-metrics" class="scroll"></div>
+<p class="muted">R.1/.5/1은 위치만, R1·30°는 위치·yaw 공동 성공률. Yaw≤10/30/50°는 위치와 무관한 방향 성공률입니다.
+Repair/Harm은 Vision 대비 위치1m 실패→성공 / 성공→실패 query 수입니다. 색상 지도는 보정된 확률이 아닙니다.</p></section>
+<section><h2>7개 학습 조건 · Best와 Last를 구분</h2>
+<p>동일 14개 입력·작은 MLP·optimizer·seed를 사용합니다. 공통 상수 조건만 query 입력을 사용하지 않고 scalar 한 개를 학습합니다.
+온도 T는 <strong>fusion loss 온도</strong>이며 acoustic contrastive 학습의 τ=0.07과 다릅니다.
+<code>NLL(T)=logsumexp(s/T)−E_GT[s]/T</code>. 낮은 T는 분포를 날카롭게 만들지만, 고정된 w에서 MAP pose 순위를 바꾸지는 않습니다.</p>
+<div id="conditions" class="scroll"></div>
+<p>Margin XY: 1m 이내 정답 영역의 최고점과 영역 밖 최고점을 비교.
+Margin XY·yaw: 1m·30° 이내를 정답 영역으로 사용. 둘 다 softplus(max_bad−max_good+0.1), T=1이며 NLL과 다른 supervision입니다.</p>
+<p>이번 subset에서는 margin 조건의 Best/Last 차이가 NLL보다 작고 낮은 acoustic 가중치가 비교적 안정적입니다.
+다만 w=0은 Vision-only이므로, acoustic 가중치를 낮출수록 항상 좋아진다는 뜻은 아닙니다. 이 결과만으로 최적 비율을 다른 모델·scene에 일반화할 수 없습니다.</p>
+<details><summary>조건별 Test Best 전체 지표 — 초기값이 같은 경우 수치가 같은 이유</summary>
+<p>아래 행은 조건별 Best만 표시합니다. Query별 모델의 Best가 모두 epoch0이면 같은 초기 w=0.1에서 같은 pose를 출력하므로 수치가 동일합니다.
+실제 학습 후 차이는 위 Last 열에서 확인할 수 있습니다. Test Last는 frozen checkpoint의 사후 진단이며 모델 선택에 사용하지 않았습니다.</p><div id="control-metrics" class="scroll"></div></details></section>
+<section><h2>GT oracle · 실제 모델과 분리된 사후 진단</h2>
+<div class="note"><strong>Oracle은 GT를 사용하므로 실제 추론에 사용할 수 없습니다.</strong>
+Query별 w를 0, 0.05, …, 1의 21개 값에서 고릅니다. 학습·설정·checkpoint 선택은 변경하지 않았습니다.
+성공 oracle은 해당 성공 기준에 대해서만 이 격자에서의 ceiling입니다. 연속 가중치 전체의 상한이나 모든 지표의 상한은 아닙니다.
+GT NLL oracle은 NLL 최소값을 고를 뿐, 위치/yaw 성공률의 상한이 아닙니다. 동일 목적값이면 w=0.5에 가까운 값을 선택합니다.</div>
+<p id="oracle-description"></p><label>평가 split <select id="oracle-split"><option value="test">Test · 1,472 queries</option><option value="val">Val · 1,704 queries</option></select></label>
+<div id="oracle-metrics" class="scroll"></div></section>
+<section><h2>행별 의미</h2><div id="descriptions" class="scroll"></div></section>
+<section><h2>RGB · 점수 지도 · GT / 추정 pose</h2>
+<p>여기서는 실제 추론 가능한 7개 방식의 기존 점수 지도만 표시합니다. GT oracle 지도와 혼합하지 않습니다.</p>
+<label>Scene <select id="scene"></select></label><label>사례 <select id="case"><option value="all">전체</option><option value="repair">학습 공통 상수 Best: Vision 실패 보완</option><option value="harm">학습 공통 상수 Best: Vision 성공 악화</option><option value="beat_fixed">Train 고정값 실패 → 학습 공통 상수 Best 성공</option><option value="hurt_fixed">Train 고정값 성공 → 학습 공통 상수 Best 실패</option></select></label>
+<label>Query <select id="query"></select></label><button id="prev">← 이전</button><button id="next">다음 →</button><label>점수 지도 <select id="layer"></select></label>
+<p id="weight"></p><div id="legend"></div><div class="grid"><div><img id="rgb" alt="Furnished RGB observation"><div id="errors" class="scroll"></div></div><canvas id="map" aria-label="동일 2DFP 위 GT와 각 방식의 방향 화살표"></canvas></div></section>
+<div id="error" role="alert"></div>
+<script>
+const $=id=>document.getElementById(id),layers=['vision_only','acoustic_only','equal_weight_fusion','visual_topk_acoustic_rerank','train_fixed','adaptive_best','adaptive_last'];
+let records,banks,summary,review,filtered=[],serial=0,visible={GT:true};layers.forEach(n=>visible[n]=true);
+const fields=['recall_0.1m','recall_0.5m','recall_1m','recall_1m_30deg','yaw_within_10deg','yaw_within_30deg','yaw_within_50deg','median_xy_m','median_yaw_deg','repair','harm'],heads=['R.1','R.5','R1','R1·30°','Yaw≤10°','Yaw≤30°','Yaw≤50°','XY중앙값(m)','Yaw중앙값(°)','Repair','Harm'];
+const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),pct=x=>(100*x).toFixed(2)+'%',label=n=>review.policies[n].label;
+function table(h,rr){return '<table><thead><tr>'+h.map(v=>'<th>'+esc(v)+'</th>').join('')+'</tr></thead><tbody>'+rr.map(r=>'<tr>'+r.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table>'}
+function metricsTable(values){return table(['방법',...heads],values.map(([name,m])=>[name,...fields.map(k=>k.startsWith('recall')||k.startsWith('yaw_within')?pct(m[k]):m[k].toFixed(k==='repair'||k==='harm'?0:2))]))}
+function opt(id,v,t){let o=document.createElement('option');o.value=v;o.textContent=t;$(id).append(o)}
+function oracle(){let values=review.oracles[$('oracle-split').value];$('oracle-metrics').innerHTML=metricsTable(Object.values(values).map(m=>[m.label,m]));$('oracle-description').textContent='성공 oracle: GT로 성공 가능 가중치를 고름. NLL oracle: GT soft-pose loss 최소 가중치를 고름. 둘은 서로 다른 진단입니다.'}
+function conditions(){let rows=review.conditions.map(c=>[c.label,c.best_epoch===0?'0 (학습 전)':c.best_epoch,c.last_epoch,pct(c.best_val.micro.recall_1m),pct(c.last_val.micro.recall_1m),pct(c.last_val.micro.recall_1m_30deg),c.last_val.weight_mean.toFixed(3),pct(c.test_best.recall_1m),pct(c.test_last.recall_1m),pct(c.test_last.recall_1m_30deg),c.test_last_weight_min.toFixed(3)+'–'+c.test_last_weight_max.toFixed(3)]);$('conditions').innerHTML=table(['조건','Best epoch','Last epoch','Val Best R1','Val Last R1','Val Last R1·30°','Val Last 평균 wA','Test Best R1','Test Last R1','Test Last R1·30°','Test Last wA 범위'],rows)}
+function arrow(ctx,p,color,text,meta,l){let b=meta.world_bounds_m,s=meta.map_spacing_m,x=(p[0]-b.x_min)/s,y=(p[1]-b.z_min)/s,a=p[2]*Math.PI/180,dx=Math.cos(a),dy=Math.sin(a);ctx.save();ctx.lineWidth=7;ctx.strokeStyle='white';ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+l*dx,y+l*dy);ctx.stroke();ctx.lineWidth=3;ctx.strokeStyle=color;ctx.stroke();ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(x+l*dx,y+l*dy);ctx.lineTo(x+l*.72*dx+l*.14*dy,y+l*.72*dy-l*.14*dx);ctx.lineTo(x+l*.72*dx-l*.14*dy,y+l*.72*dy+l*.14*dx);ctx.closePath();ctx.fill();ctx.font='16px system-ui';ctx.lineWidth=3;ctx.strokeStyle='white';ctx.strokeText(text,x+6,y-6);ctx.fillText(text,x+6,y-6);ctx.restore()}
+const markers=[['vision_only','#df8418','V'],['acoustic_only','#159d64','A'],['equal_weight_fusion','#9a42ba','1:1'],['visual_topk_acoustic_rerank','#0899ba','Top50'],['train_fixed','#db4474','Fix'],['adaptive_best','#1115cf','Const-B'],['adaptive_last','#7b4d27','Const-L']];
+async function show(){let token=++serial,r=filtered[Number($('query').value)||0];if(!r){$('weight').textContent='해당 사례 없음';return}$('error').textContent='';let base='../input-ablation-dense/all/';$('rgb').src=base+'rgb/'+r.scene_id+'_'+r.sample_index+'.png';$('weight').textContent='Acoustic wA / Vision (1−wA): Train 고정 '+r.weights.train_fixed.toFixed(3)+' / 학습 공통 상수 Best '+r.weights.adaptive_best.toFixed(4)+' / 공통 상수 Last '+r.weights.adaptive_last.toFixed(4)+' · 이 세 값은 query를 바꿔도 동일합니다.';$('errors').innerHTML=table(['방법','XY error(m)','Yaw error(°)'],layers.map(n=>[label(n),r.methods[n].xy_error_m.toFixed(2),r.methods[n].yaw_error_deg.toFixed(1)]));let b=banks[r.scene_id],meta=b.floorplan_metadata||b.metadata,image=new Image();image.src=base+'maps/'+r.scene_id+'.png';await image.decode();let response=await fetch(r.heatmap);if(!response.ok)throw Error('Heatmap '+response.status);let bytes=new Uint8Array(await response.arrayBuffer());if(token!==serial)return;if(bytes.length!==7*b.xy.length)throw Error('Heatmap support mismatch');let c=$('map');c.width=image.naturalWidth;c.height=image.naturalHeight;let ctx=c.getContext('2d');ctx.drawImage(image,0,0);let pixels=ctx.getImageData(0,0,c.width,c.height),original=new Uint8ClampedArray(pixels.data),s=meta.map_spacing_m,half=Math.round(.1/s),layer=Number($('layer').value),bounds=meta.world_bounds_m;
+b.xy.forEach((p,i)=>{let value=bytes[layer*b.xy.length+i];if(!value)return;let t=(value-1)/254,color=t<.5?[80+300*t,110+180*t,205]:[230-80*(t-.5),200-330*(t-.5),205-300*(t-.5)],x=Math.round((p[0]-bounds.x_min)/s),y=Math.round((p[1]-bounds.z_min)/s);for(let yy=Math.max(0,y-half);yy<Math.min(c.height,y+half);yy++)for(let xx=Math.max(0,x-half);xx<Math.min(c.width,x+half);xx++){let k=(yy*c.width+xx)*4;if(original[k]<128)continue;pixels.data[k]=color[0];pixels.data[k+1]=color[1];pixels.data[k+2]=color[2]}});ctx.putImageData(pixels,0,0);let l=Math.max(c.width,c.height)*.045;if(visible.GT)arrow(ctx,r.gt_pose_xzyaw,'#00a6b8','GT',meta,l*1.1);markers.forEach(([n,color,text],i)=>{if(visible[n])arrow(ctx,r.methods[n].pose_xzyaw,color,text,meta,l*(1-i*.04))})}
+function choose(){filtered=records.filter(r=>{if(r.scene_id!==$('scene').value)return false;let v=r.methods.vision_only.xy_error_m<=1,a=r.methods.adaptive_best.xy_error_m<=1,f=r.methods.train_fixed.xy_error_m<=1;return $('case').value==='all'||$('case').value==='repair'&&!v&&a||$('case').value==='harm'&&v&&!a||$('case').value==='beat_fixed'&&!f&&a||$('case').value==='hurt_fixed'&&f&&!a});$('query').replaceChildren();filtered.forEach((r,i)=>opt('query',i,'Q'+r.sample_index+' · '+r.gt_pose_xzyaw[2]+'°'));return show()}
+const safe=f=>(...args)=>Promise.resolve(f(...args)).catch(e=>$('error').textContent=e.stack||String(e));
+async function load(){let values=await Promise.all(['summary.json','records.json','banks.json','review.json'].map(n=>fetch(n).then(r=>{if(!r.ok)throw Error(n+' '+r.status);return r.json()})));[summary,records,banks,review]=values;$('selection-note').textContent='이번 Val에서 선택된 것은 query별 adaptive 모델이 아니라 '+label('adaptive_best')+'입니다. 기존 내부 키 adaptive_best/last는 호환성을 위해 JSON에만 남겼고, 화면에서는 실제 모델 유형으로 명명합니다.';$('main-metrics').innerHTML=metricsTable(layers.map(n=>[label(n),summary.methods[n]]));let controls=Object.keys(summary.methods).filter(n=>n.startsWith('control_'));$('control-metrics').innerHTML=metricsTable(controls.map(n=>[label(n),summary.methods[n]]));conditions();oracle();$('descriptions').innerHTML=table(['행 이름','실제 의미'],Object.entries(review.policies).map(([n,m])=>[m.label,m.description]));$('descriptions').querySelector('table').classList.add('descriptions');Object.keys(banks).forEach(s=>opt('scene',s,s));layers.forEach((n,i)=>opt('layer',i,label(n)));$('layer').value='5';[['GT','#00a6b8'],...markers.map(([n,color])=>[n,color])].forEach(([n,color])=>{let l=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=true;l.style.color=color;l.append(input,document.createTextNode(n==='GT'?'GT':label(n)));input.onchange=safe(()=>{visible[n]=input.checked;return show()});$('legend').append(l)});['scene','case'].forEach(id=>$(id).onchange=safe(choose));['query','layer'].forEach(id=>$(id).onchange=safe(show));$('oracle-split').onchange=oracle;$('prev').onclick=safe(()=>{$('query').value=String(Math.max(0,Number($('query').value)-1));return show()});$('next').onclick=safe(()=>{$('query').value=String(Math.min(filtered.length-1,Number($('query').value)+1));return show()});await choose()}
+safe(load)();
+</script></html>

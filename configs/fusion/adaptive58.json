@@ -1,0 +1,9 @@
+{
+  "type": "adaptive_scalar",
+  "schema": "processed58",
+  "hidden": [128, 64],
+  "checkpoint_relative": "ReliabilityFusion/pilots/capacity_probe_v1/runs/128_64_seed42/best.pt",
+  "normalization": "per_query_full_xy_yaw_zscore",
+  "feature_normalization": "checkpoint_train_mean_std",
+  "note": "Historical capacity experiment example, not a newly selected optimal model; no guaranteed improvement over fixed0.1"
+}

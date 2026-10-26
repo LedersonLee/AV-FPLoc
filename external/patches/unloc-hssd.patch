@@ -1,0 +1,95 @@
+diff --git a/modules/depth_net.py b/modules/depth_net.py
+index 9f74b9f..1ed6a95 100644
+--- a/modules/depth_net.py
++++ b/modules/depth_net.py
+@@ -6,6 +6,8 @@ uncertainty (Laplace scale) from a single image using a frozen
+ DepthAnything-V2 backbone followed by a trainable cross-attention head.
+ """
+ 
++from __future__ import annotations
++
+ import os
+ 
+ import cv2
+@@ -54,7 +56,7 @@ class UnLocDepthNet(nn.Module):
+         prob : softmax over feature channels.
+         """
+ 
+-        x, attn = self.depth_feature(x, mask)   # (N, fW, 128)
++        x, attn = self.forward_features(x, mask)   # (N, fW, 128)
+ 
+         prob = F.softmax(x, dim=-1)             # (N, fW, D)
+ 
+@@ -63,6 +65,14 @@ class UnLocDepthNet(nn.Module):
+ 
+         return loc, scale, attn, prob
+ 
++    def forward_features(self, x, mask=None):
++        """Expose ordered pre-depth features for joint AV localization.
++
++        Returns the original (N, fW, 128) tokens without detaching gradients.
++        Existing forward outputs and checkpoint parameter keys are unchanged.
++        """
++        return self.depth_feature(x, mask)
++
+ 
+ # ---------------------------------------------------------------------------
+ # Feature extractor (frozen DepthAnything backbone + trainable attention)
+@@ -167,7 +177,10 @@ class UnLocDepthFeatures(nn.Module):
+             resized.append(torch.from_numpy(img_t))
+         imgs_resized = torch.stack(resized).to(imgs.device)
+ 
+-        with torch.no_grad():
++        # Frozen by default. Explicitly enabling backbone parameters must also
++        # enable their graph; requires_grad alone previously had no effect.
++        backbone_grad = torch.is_grad_enabled() and any(p.requires_grad for p in self.da.parameters())
++        with torch.set_grad_enabled(backbone_grad):
+             feats = self.da.pretrained.get_intermediate_layers(
+                 imgs_resized, reshape=True,
+             )[0]
+@@ -176,6 +189,12 @@ class UnLocDepthFeatures(nn.Module):
+             )
+         return feats
+ 
++    def set_backbone_trainable(self, enabled: bool) -> None:
++        """Opt-in fine tuning; preserves the historical frozen default."""
++        for param in self.da.parameters():
++            param.requires_grad_(enabled)
++        self.da.train(self.training if enabled else False)
++
+     # ------------------------------------------------------------------ #
+     def forward(
+         self,
+@@ -257,4 +276,4 @@ class UnLocDepthFeatures(nn.Module):
+         if squeeze_L:
+             out = out.squeeze(1)
+ 
+-        return out, attn_w
+\ No newline at end of file
++        return out, attn_w
+diff --git a/modules/depth_net_pl.py b/modules/depth_net_pl.py
+index b282779..9879bd8 100644
+--- a/modules/depth_net_pl.py
++++ b/modules/depth_net_pl.py
+@@ -9,6 +9,8 @@ the core ``UnLocDepthNet`` encoder with Lightning
+ training/validation logic and a Laplace negative log-likelihood loss.
+ """
+ 
++from __future__ import annotations
++
+ import torch
+ import torch.nn.functional as F
+ import torch.optim as optim
+diff --git a/utils/data_utils.py b/utils/data_utils.py
+index ba70032..84b174a 100644
+--- a/utils/data_utils.py
++++ b/utils/data_utils.py
+@@ -12,6 +12,8 @@ LaMAR HGE) in two granularities:
+     for training the depth prediction head).
+ """
+ 
++from __future__ import annotations
++
+ import os
+ 
+ import cv2
