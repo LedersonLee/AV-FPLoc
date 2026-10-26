@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from track1_core.configs.data_paths import DataRoots
+from avfploc.data.gibson_paths import DataRoots
 
 
 def test_data_roots_uses_environment_variable(monkeypatch, tmp_path: Path) -> None:

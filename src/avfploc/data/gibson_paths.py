@@ -1,4 +1,4 @@
-"""Machine-local roots for non-versioned AV-FPLoc experiment assets."""
+"""Machine-local roots for legacy Gibson assets, not the HSSD dataset root."""
 
 from __future__ import annotations
 

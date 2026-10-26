@@ -41,7 +41,7 @@ def load_yaml(path: Path) -> Dict[str, Any]:
     return data or {}
 
 
-DEFAULT_CONFIG_PATH = Path(__file__).resolve().parents[2] / "track1_core/configs/datasets/gibson_av.yaml"
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs/datasets/gibson_av.yaml"
 
 
 def load_phase_one_scenes(config_path: Path = DEFAULT_CONFIG_PATH) -> List[str]:

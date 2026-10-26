@@ -3,8 +3,8 @@
 from __future__ import annotations
 import argparse, json, subprocess, sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from track1_core.configs.data_paths import DataRoots
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from avfploc.data.gibson_paths import DataRoots
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
