@@ -10,6 +10,7 @@ requires-python = ">=3.10"
 dependencies = ["numpy>=1.24,<3", "scipy>=1.10", "Pillow>=9"]
 
 [project.optional-dependencies]
+preprocess = ["PyYAML>=6", "trimesh>=3.9"]
 train = ["torch>=2.4", "torchvision>=0.19", "lightning>=2.4", "opencv-python-headless>=4.8", "matplotlib>=3.7", "wandb>=0.26.1", "tensorboard", "einops", "timm"]
 test = ["pytest>=7"]
 
@@ -20,4 +21,4 @@ avfploc = "avfploc.cli.main:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests/hssd"]
+testpaths = ["tests/hssd", "tests/preprocessing"]

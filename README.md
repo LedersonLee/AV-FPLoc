@@ -11,6 +11,7 @@
 
 - [Installation, checkpoints, inference, and training](docs/hssd_reproduction.md)
 - [Migration checks and numerical validation](docs/migration_validation.md)
+- [HSSD preprocessing: maps, RGB, QA, and RIR schedules](docs/hssd_preprocessing.md)
 - Run both branches independently, then fuse their aligned scores.
 - Shared HSSD data: `/file2/jeongeon/AV-FPLoc/datasets/HSSD`.
 

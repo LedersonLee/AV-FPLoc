@@ -1,0 +1,135 @@
+{
+  "note": "Source hashes before migration; package imports and CLI safety guards were changed.",
+  "files": [
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/audit_hssd_unloc_furnished_depth.py",
+      "destination": "src/avfploc/preprocessing/hssd/audit_hssd_unloc_furnished_depth.py",
+      "source_sha256": "ba4f865ad8123623675d6a33fab5aa5b01bb4e6ece9fe00c10d19775371a5a58"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/audit_hssd_unloc_geometry.py",
+      "destination": "src/avfploc/preprocessing/hssd/audit_hssd_unloc_geometry.py",
+      "source_sha256": "0d32bf11d792e253fbc231874e11b3c5b9fdb5648675275b345e83814fc48b92"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/build_hssd_furnished_depth_review.py",
+      "destination": "src/avfploc/preprocessing/hssd/build_hssd_furnished_depth_review.py",
+      "source_sha256": "f1188034e162adcecb927ad998c78c5c66397f5e0dad5c5eb430094ea885d380"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/build_hssd_geometry_audit_review.py",
+      "destination": "src/avfploc/preprocessing/hssd/build_hssd_geometry_audit_review.py",
+      "source_sha256": "60e58815a426ef1d17f59ccc63effdfdf9d319aea8b2e65c3dce517a5e24a68a"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/build_hssd_unloc_curation_manifest.py",
+      "destination": "src/avfploc/preprocessing/hssd/build_hssd_unloc_curation_manifest.py",
+      "source_sha256": "45986856069e6f1b9f54b7eec38bf560b98ff44a8f2e9a74e7cd82d7d51b7470"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/build_hssd_unloc_dataset.py",
+      "destination": "src/avfploc/preprocessing/hssd/build_hssd_unloc_dataset.py",
+      "source_sha256": "3d5d6786783a1c122e96e7bf0bcf5ed01e497b86856ae227f0da684b25c06668"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/build_hssd_unloc_semantic_maps.py",
+      "destination": "src/avfploc/preprocessing/hssd/build_hssd_unloc_semantic_maps.py",
+      "source_sha256": "933570846383dea7850651455d115e30f08c6554a6b6f5ca4bcf3555ca63c093"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/export_hssd_unloc_clean_adapter.py",
+      "destination": "src/avfploc/preprocessing/hssd/export_hssd_unloc_clean_adapter.py",
+      "source_sha256": "8a13096b61a47239d74054c8bf7859a0ce0fcef27ad507055903dc5fe04ead07"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/export_hssd_unloc_frames.py",
+      "destination": "src/avfploc/preprocessing/hssd/export_hssd_unloc_frames.py",
+      "source_sha256": "ae6784f5093c9ce9eb9975d1e87c9461967204e56f7f880eda9b444987f4d838"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/export_hssd_unloc_furnished_adapter.py",
+      "destination": "src/avfploc/preprocessing/hssd/export_hssd_unloc_furnished_adapter.py",
+      "source_sha256": "930524e473cf43aeef4dbe91607dff4246874af2b83ad0af23ee2ce31ba95ecc"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_distributed_negatives.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_distributed_negatives.py",
+      "source_sha256": "9956d765c11f6b979c98f4c3079f41d34d5a60545aa0c4a888c498d8324417c5"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_furnished_2dfp_rays.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_furnished_2dfp_rays.py",
+      "source_sha256": "3360c04ec6ccc383416aeaa35b524378a6b296dff1da41dc7df185602b2f5064"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_furnished_depth_policy.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_furnished_depth_policy.py",
+      "source_sha256": "c02089b88dc332b3c64224c87806c2da82fe6d4b65b7e5de2f86a09fd3dccf49"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_furnished_depth_rays.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_furnished_depth_rays.py",
+      "source_sha256": "4f640652eb4954afb4579ea67e754dd4216542531ccf708904ff2015b3b7e3be"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_geometry_audit_policy.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_geometry_audit_policy.py",
+      "source_sha256": "7f2ff6e7a4e66867ad791295d8a9f8fe7d12262152e4415b341caf2b4d90767a"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_geometry_audit_rays.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_geometry_audit_rays.py",
+      "source_sha256": "e72bee0bd15ddf843cb529f0c9e23771e8aeb7c6f4248dd7eb2bc6e72aff331f"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_negative_rirs.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_negative_rirs.py",
+      "source_sha256": "2f9c00d06dc5037c3f205ba29a4c8b99978eb6e10d2ffc41d12a77ca7d7a5ba5"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_positive_pairs.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_positive_pairs.py",
+      "source_sha256": "2af41f9fda72aca4f5ef4e703badbd12c81f549fba21a7a6996be2b4951d21f1"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_rir_supervisor.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_rir_supervisor.py",
+      "source_sha256": "ab5d168701850f3b94a58c81f83196e42b907a3fa75a69d5154b3f7818f79064"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/hssd_unloc_dataset.py",
+      "destination": "src/avfploc/preprocessing/hssd/hssd_unloc_dataset.py",
+      "source_sha256": "759cb4b3b2ce5930b8ecce3ee76d3b2eefd6a34670ad097bf0f0d7653af87ea7"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/prepare_hssd_unloc_structural_targets.py",
+      "destination": "src/avfploc/preprocessing/hssd/prepare_hssd_unloc_structural_targets.py",
+      "source_sha256": "923749ee05422319cce8acc76b465a20d31f88814f3a69c0a6f050cf9839f7a1"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/reclassify_hssd_furnished_nohit.py",
+      "destination": "src/avfploc/preprocessing/hssd/reclassify_hssd_furnished_nohit.py",
+      "source_sha256": "24bd1efca2351d355a0e40c9e3a3f99bbdf2aaf5d158d6d5c295f0be52239da4"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/reconcile_hssd_unloc_connectivity.py",
+      "destination": "src/avfploc/preprocessing/hssd/reconcile_hssd_unloc_connectivity.py",
+      "source_sha256": "2c67ea9bae2b192f55a91605036f8cbe5f8bcd4a509f11a4213faf954b606d6c"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/render_hssd_unloc_rgb_pilot.py",
+      "destination": "src/avfploc/preprocessing/hssd/render_hssd_unloc_rgb_pilot.py",
+      "source_sha256": "0a85e6b8da891c35202e53b5f72f801afc19097e45737fe17ff707105dc162ac"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/replenish_hssd_unloc_furnished_views.py",
+      "destination": "src/avfploc/preprocessing/hssd/replenish_hssd_unloc_furnished_views.py",
+      "source_sha256": "5833522818df65e2865dc472992d8f44d1b4cfd74e511ffcc77372163b70cd08"
+    },
+    {
+      "source": "experiments/exp4_acoustic_xy_observability/scripts/validate_hssd_nohit_dataset.py",
+      "destination": "src/avfploc/preprocessing/hssd/validate_hssd_nohit_dataset.py",
+      "source_sha256": "cc545a4c5cca948a149880dbe5077263baff2aa07e8d7629eabbdb3c3060fe9d"
+    }
+  ]
+}
