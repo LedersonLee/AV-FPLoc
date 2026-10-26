@@ -1,0 +1,65 @@
+{
+  "version": "hssd_acoustic_contrastive_v1",
+  "split_sha256": "af1f5ded1e3cc8286b7f6fc4155f39761b0afc12c04c33313ea43f40705f2dc8",
+  "expected_scenes": {
+    "train": 116,
+    "val": 19,
+    "test": 17
+  },
+  "seed": 42,
+  "features": {
+    "version": "energy_complex_zero_tail_v2",
+    "sample_rate_hz": 48000,
+    "direct_sample": 7,
+    "start_ms": 2,
+    "end_ms": 128,
+    "early_end_ms": 50,
+    "nfft": 256,
+    "hop": 64,
+    "band_hz": [
+      500,
+      4000
+    ],
+    "log_energy_gain": 100.0
+  },
+  "model": {
+    "features": "all",
+    "width": 32,
+    "embedding_dim": 128
+  },
+  "loss": {
+    "temperature": 0.07,
+    "negative_count": 7
+  },
+  "training": {
+    "epochs": 40,
+    "batch_size": 64,
+    "workers": 4,
+    "cpu_threads": 4,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "early_stop_patience": 8,
+    "min_delta": 0.0001,
+    "evaluate_every": 5,
+    "amp": true,
+    "device": "cuda"
+  },
+  "wandb": {
+    "project": "hssd-acoustic-contrastive",
+    "entity": null,
+    "mode": "online"
+  },
+  "scene_subset_path": "AcousticContrastive/pilots/scene_subset_v1/scene_splits.json",
+  "scene_subset_sha256": "86a06c33b721b76273355a9619ebf9999ddcb828de11a227048f1c6b6536f5c6",
+  "subset_counts": {
+    "train": 12,
+    "val": 3,
+    "test": 3
+  },
+  "corrected_extrusion": {
+    "prefix": "RIR/FP_corrected_yup_v2",
+    "plan_path": "AcousticContrastive/pilots/scene_subset_v1/corrected_yup_v2/plan.json",
+    "plan_sha256": "bcd073f12d0462235892c162f4d74df364483b00dce66a12f91251399b76487f"
+  }
+}
