@@ -45,3 +45,7 @@ result/
 build/
 dist/
 external/checkouts/
+
+# Visualization source is code; only generated visualizations are excluded.
+!src/avfploc/visualization/
+!src/avfploc/visualization/*.py
