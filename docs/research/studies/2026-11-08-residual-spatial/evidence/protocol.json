@@ -1,0 +1,22 @@
+{
+  "status": "phase_a",
+  "seeds": [
+    42,
+    43
+  ],
+  "first_probe": "R0-R5 fixed candidates; ridge and HistGB; 128 evenly spaced queries per scene pilot; no outcome-based feature selection; four fixed outer folds",
+  "thresholds": {
+    "42": 0,
+    "43": 0.01
+  },
+  "reused_validation": "development only",
+  "test_accessed": false,
+  "upstream_exposure": "outer B2 held scenes excluded; frozen visual Train116/Val19 and acoustic Val3 exposure remains",
+  "prior_manifest_sha256": "8a2a31d3f6ae3c85532e6e53348092fa454af2289dedfdc03299ecb1ff28a193",
+  "git_diff_sha256": "02ff3357f1cead0b70e2255c5f27eb15e325c161c6966ca1dbe06743fb1eabd3",
+  "threshold_provenance": "Historical GEOQ thresholds0(seed42)/.01(seed43) were selected inpreviousTrainOOF research. Frozen inthisstudy; currentheadfit/inner-epochselection disjointness doesnoterasehistoricalTrainlabel exposure.",
+  "_archive_export": {
+    "source": "protocol.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

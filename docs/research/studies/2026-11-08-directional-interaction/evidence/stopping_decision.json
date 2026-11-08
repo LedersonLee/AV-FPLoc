@@ -1,0 +1,18 @@
+{
+  "decision": "Complete controlled research; retain E0 as frozen experimentaldevelopmentcandidate, preserveoriginalbaseline",
+  "evidence": [
+    "702savedfits includingpilotreplications; directional8arms andfrontends; originalobjectivecounterfactuals",
+    "Correctaudio-specific hypothesis-level effect survives audiofree proposals",
+    "ExplicitAtoV gain vsGEOQ +.095pp CIincludes0; concat/scalar controls disallowinteractionadvantageclaim",
+    "E0+GEOQ repeatedVal11 +.442pp CI[+.167,+.678], Val8+.453pp; TrainOOF-.110pp CIincludes0",
+    "Full-data baselineGEOQ exactreplay and GTfreecandidateAPI exact19930queryreplay"
+  ],
+  "why_stop": "Multiple competing mechanisms and objective/data/stackingconfounds tested. No evidence to justify broader frontend token search or replacement. Latest request allows sufficient controlled evidence; report limits rather than manufacture generalization.",
+  "resume": "Obtain teacher-unseen non-Test evaluation scenes under frozenprotocol; evaluate preservedE0candidate andoriginalGEOQ before newmodelselection. For architecture work, require heldscene advantage over sameinformation concat/scalar first.",
+  "independent_generalization": false,
+  "production_default_changed": false,
+  "_archive_export": {
+    "source": "stopping_decision.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

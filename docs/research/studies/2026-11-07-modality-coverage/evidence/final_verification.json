@@ -1,0 +1,22 @@
+{
+  "final": true,
+  "scene_seed_files": 62,
+  "query_seed_rows": 32704,
+  "nms_sets_checked": 399888,
+  "explicit_bank_oracle_checks": 558,
+  "donor_xy_distance_quantiles": [
+    0.41231056256176585,
+    1.843908891458577,
+    6.113100686231171,
+    13.170041761513136,
+    34.854268031332985
+  ],
+  "previous_artifacts_unchanged": 332,
+  "user_diff_unchanged": true,
+  "test_accessed": false,
+  "generalization_claim": false,
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

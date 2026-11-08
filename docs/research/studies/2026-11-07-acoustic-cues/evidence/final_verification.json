@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "checks": {
+    "cue_pool": 31,
+    "coherence_pool": 31,
+    "raw_cue_pool": 31,
+    "query_screen": 31,
+    "paired_reference": 31,
+    "metric_scene_outputs": 496,
+    "metric_models": 80,
+    "screen_baseline_exact": [
+      {
+        "seed": 42,
+        "split": "train",
+        "scenes": 12
+      },
+      {
+        "seed": 42,
+        "split": "val",
+        "scenes": 8
+      },
+      {
+        "seed": 42,
+        "split": "extra",
+        "scenes": 11
+      },
+      {
+        "seed": 43,
+        "split": "train",
+        "scenes": 12
+      },
+      {
+        "seed": 43,
+        "split": "val",
+        "scenes": 8
+      },
+      {
+        "seed": 43,
+        "split": "extra",
+        "scenes": 11
+      }
+    ],
+    "baseline_query_seed_replays": 32704,
+    "raw_subset_hash_records": 49047,
+    "raw_paths_available": 761525,
+    "actual_initial_train_source_archived": true,
+    "late_raw_control_scenes": 4
+  },
+  "scope": "Completeartifactcounts, source/receipt hashes, queryIDs, candidateidentity, heldscenetraining, originalbaselinefullbankNMS/S/GEOQnumericalreplays, rawavailability/lineage andpriorpreservation. Knownruntimehashcaveat inMETHODS. Test observationsnotaccessed.",
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

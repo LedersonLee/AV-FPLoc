@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": {
+    "pilot_fits": 8,
+    "primary_fits": 80,
+    "inner_fits": 192,
+    "frontend_fits": 40,
+    "full_fits": 40,
+    "full_inner_fits": 72,
+    "original_objective_fits": 40,
+    "frontend_original_fits": 40,
+    "downstream_fits": 70,
+    "downstream_crossfit_fits": 70,
+    "downstream_full_fits": 50,
+    "all_neural_fit_epochs": 40,
+    "primary_pure_support_predictions": 496,
+    "frontend_pure_support_predictions": 248,
+    "full_val11_queries_per_seed": 5775,
+    "original_full_geoq_replay": 0.7181818181818181,
+    "preservation": true,
+    "checkpoint_replay_and_direction_invariance": true,
+    "calibration_ranking_unchanged": true,
+    "no_test_selected": true
+  },
+  "counts": {
+    "neural_fits": 512,
+    "utility_fits": 190
+  },
+  "limits": [
+    "Sceneheld modules do not remove historicalencoder exposure",
+    "RepeatedVal not independent generalization",
+    "Finite model/objective family, adaptiveexploration CIs descriptive",
+    "Frontend causal failure and candidate-level effect are distinct",
+    "Inner upstreamB2teacher not retrained for everyinnerfold"
+  ],
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

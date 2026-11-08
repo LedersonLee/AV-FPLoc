@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "supervised_fits": 1032,
+  "outer_and_full_fits": 968,
+  "inner_fits": 64,
+  "prediction_scene_files": 6088,
+  "studies": [
+    {
+      "study": "phase_a",
+      "fits": 120,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "phase_a_full",
+      "fits": 120,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "phase_a_raw",
+      "fits": 20,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "spatial_pilot",
+      "fits": 140,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "spatial_full",
+      "fits": 100,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_pilot",
+      "fits": 70,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "token_probe",
+      "fits": 30,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_full",
+      "fits": 40,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_retrain_donor",
+      "fits": 30,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_retrain_noaudio",
+      "fits": 30,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_queryonly",
+      "fits": 30,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "common_spatial_pilot",
+      "fits": 80,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "neural_capacity_full",
+      "fits": 10,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "early_stopping",
+      "fits": 20,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "reference_probe",
+      "fits": 96,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "reference_probe_full",
+      "fits": 32,
+      "frozen_evaluations": 0
+    },
+    {
+      "study": "common_counterfactual",
+      "fits": 0,
+      "frozen_evaluations": 80
+    }
+  ],
+  "report_links_passed": true,
+  "user_patch_preserved": true,
+  "test_accessed": false,
+  "scope": "All declared fits/predictions and selectors checked; nestedselection scene separation, directreferencehashes, priorverification records, report links. Doesnotassert universalabsence ofinformation.",
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

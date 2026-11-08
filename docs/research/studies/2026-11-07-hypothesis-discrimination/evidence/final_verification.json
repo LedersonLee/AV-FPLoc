@@ -1,0 +1,19 @@
+{
+  "seed_query_rows": 19930,
+  "unique_queries": 9965,
+  "scenes": 19,
+  "strict_metrics_recomputed": true,
+  "all_hypotheses_twenty_distinct": true,
+  "all_features_finite": true,
+  "geometry_hashes_checked": 31,
+  "frozen_model_feature_hashes_valid": true,
+  "prior_artifact_files_unchanged": 518,
+  "user_git_diff_unchanged": true,
+  "test_accessed": false,
+  "generalization_claim": false,
+  "interpretation": "All results reuse development scenes; goal evidence is empirical Top1 improvement and controlled discrimination/extraction analysis, not unseen-data validation",
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

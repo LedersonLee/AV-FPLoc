@@ -1,0 +1,72 @@
+{
+  "status": "frozen_before_new_held_outcomes",
+  "primary": "Scene-macro R@1m and30deg; compare fitted method versus existing GEOQ and same-feature concat. Multiple seeds42/43; scene-cluster paired bootstrap10000 draws.",
+  "scaling": [
+    "12x128",
+    "24x128",
+    "24x64"
+  ],
+  "queries": "128 evenly spaced source order; 64 subset of128 at alternating indices. No GT/performance selection.",
+  "tree_arms": [
+    "score_only",
+    "candidate_geometry",
+    "observed_geometry",
+    "GEOQ",
+    "observation_residual"
+  ],
+  "tree": {
+    "kind": "HistGradientBoostingRegressor",
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 100,
+    "l2_regularization": 10,
+    "learning_rate": 0.07,
+    "early_stopping": false
+  },
+  "neural_arms": [
+    "D0 additive late fusion",
+    "D1 same-feature concat",
+    "D2 acoustic-guided visual modulation",
+    "D3 candidate-relative acoustic modulation",
+    "D1 score-basis instead of geometry",
+    "capacity-only deterministic existing-score transforms"
+  ],
+  "neural": {
+    "base_dim": 78,
+    "visual_dim": 216,
+    "audio_dim": 432,
+    "projection": 32,
+    "head": [
+      96,
+      64,
+      1
+    ],
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "clip": 1,
+    "batch_queries": 64,
+    "epochs": [
+      1,
+      3,
+      5,
+      10,
+      20,
+      50
+    ],
+    "selection": "3 grouped folds within each training scale. Maximize scene-macro joint of candidate-choice with frozen threshold0; earliest epoch tie. Refit all scale training scenes at chosen epoch. All scalers fit inner training only."
+  },
+  "objective": "Predict candidate utility difference (joint success +0.5 fine position success) from candidate0; include unrecoverable queries.",
+  "new_head_threshold": 0,
+  "old_thresholds": "Original frozen GEOQ/E0 thresholds0 and.01 forseed42/43; historical TrainOOF exposure disclosed.",
+  "counterfactuals": "Frozen donor17 within scene on new A only; noaudio zeros newA; disabled interaction; recipient reference unchanged. Existing acoustic B2/S/proposals remain. Retrain D2 donor and noaudio at24x128 to distinguish OOD effects.",
+  "geometry_comparison": "S-only/candidateG/observedG/GEOQ/residual trees; neuralD1 geometry vs active score-basis control. Original B2 features retain some geometry in all arms.",
+  "visual_adaptation": "Train local visual residual adapter with identical self-conditioning vs observed audio conditioning, structural depth supervision and frozen original head. Separate feature adaptation from candidate reranking; expansion follows development/inner evidence.",
+  "held_policy": "Fit all prespecified models without newheld labels, freeze selected epochs and hashes, then evaluate11newhead-held. Baseline transfer is prespecified. Any further method chosen using this set becomes exploratory.",
+  "upstream_scope": "Teacher exposedTrain116/Val19; newheld is independent only of B2 and current head training. No independent wholepipeline claim.",
+  "test_accessed": false,
+  "_archive_export": {
+    "source": "EXPERIMENT_PROTOCOL.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

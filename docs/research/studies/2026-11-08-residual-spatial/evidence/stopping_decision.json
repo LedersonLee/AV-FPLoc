@@ -1,0 +1,44 @@
+{
+  "status": "bounded_falsification",
+  "reason": "Evidence value of further unmotivated architecture expansion is low; not resource exhaustion.",
+  "gate": "reference_gate_outcome.json",
+  "pilot_expansions": [
+    {
+      "branch": "R3 tree",
+      "pilot_pp": 0.228,
+      "full_pp": -0.32096
+    },
+    {
+      "branch": "angular ridge vs raw",
+      "pilot_pp": 0.3255,
+      "full_pp": -0.04697
+    },
+    {
+      "branch": "FP compact intermediate",
+      "pilot_pp": 0.390625,
+      "full_pp": -0.49318929074682816
+    }
+  ],
+  "checks": [
+    "Exact GEOQ replay",
+    "Representation loss and retained nullspace controls",
+    "Raw descriptor and full-token PCA alternatives",
+    "Capacity and donor/noaudio controls",
+    "Nested head early stopping",
+    "Two seeds and scene-cluster statistics",
+    "Full query confirmation of each weak pilot"
+  ],
+  "limitations": [
+    "No universal absence of residual information established.",
+    "Only 12 Train scenes; exploratory comparisons and historical upstream/threshold exposure.",
+    "Val repeatedly reused for development; Test unused.",
+    "No real DoA/elevation truth; planar synthetic validity is limited.",
+    "Visual adapter evidence inherited and audited; broad joint encoder training remains untested."
+  ],
+  "next_if_new_evidence": "Acquire independently unexposed scenes and physically grounded directional observations before testing new cross-modal mechanisms.",
+  "test_accessed": false,
+  "_archive_export": {
+    "source": "stopping_decision.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

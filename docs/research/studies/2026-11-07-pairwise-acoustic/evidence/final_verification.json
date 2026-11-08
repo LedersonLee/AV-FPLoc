@@ -1,0 +1,571 @@
+{
+  "passed": true,
+  "python_version": "3.10.22 (main, Oct  6 2026, 02:06:23) [GCC 12.2.0]",
+  "numpy_version": "1.24.4",
+  "sklearn_version": "1.5.2",
+  "torch_version": "2.4.1+cu124",
+  "model_fold_checks": 104,
+  "model_full_checks": 26,
+  "prediction_checks": [
+    {
+      "seed": 42,
+      "arm": "C0_matched",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C0_matched",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C0_matched",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C1_candidate",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C1_candidate",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C1_candidate",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C2_pair",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C2_pair",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C2_pair",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C3_agreement",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C3_agreement",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C3_agreement",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor1",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor1",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor1",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor2",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor2",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor2",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor3",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor3",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C4_donor3",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C5_basis",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C5_basis",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C5_basis",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "C2_scalar",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "C2_scalar",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "C2_scalar",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "P0_base",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "P0_base",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "P0_base",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "P1_cues",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "P1_cues",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "P1_cues",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "P0_broad",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "P0_broad",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "P0_broad",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 42,
+      "arm": "P1_broad",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 42,
+      "arm": "P1_broad",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 42,
+      "arm": "P1_broad",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C0_matched",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C0_matched",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C0_matched",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C1_candidate",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C1_candidate",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C1_candidate",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C2_pair",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C2_pair",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C2_pair",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C3_agreement",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C3_agreement",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C3_agreement",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor1",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor1",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor1",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor2",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor2",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor2",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor3",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor3",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C4_donor3",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C5_basis",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C5_basis",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C5_basis",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "C2_scalar",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "C2_scalar",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "C2_scalar",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "P0_base",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "P0_base",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "P0_base",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "P1_cues",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "P1_cues",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "P1_cues",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "P0_broad",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "P0_broad",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "P0_broad",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    },
+    {
+      "seed": 43,
+      "arm": "P1_broad",
+      "split": "train",
+      "scenes": 12,
+      "queries": 6387
+    },
+    {
+      "seed": 43,
+      "arm": "P1_broad",
+      "split": "val",
+      "scenes": 8,
+      "queries": 4190
+    },
+    {
+      "seed": 43,
+      "arm": "P1_broad",
+      "split": "extra",
+      "scenes": 11,
+      "queries": 5775
+    }
+  ],
+  "frozen_control_predictions": 30,
+  "repeat_renders": 160,
+  "repeat_poses": 40,
+  "repeat_feature_records": 200,
+  "additional_same_pose_domain_renders": 32,
+  "total_renders": 192,
+  "total_feature_records": 240,
+  "prior_artifacts_preserved": 4038,
+  "test_accessed": false,
+  "scope": "Nestedtrain/heldscene separation, fixedmodelbudgets, finitecompleteoriginal20predictions, sourcepreservation, repeat integrity. No claim of independentvalidation.",
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "phase": "B controlled hypothesis-level interaction",
+  "seeds": [
+    42,
+    43
+  ],
+  "folds": 4,
+  "queries_per_scene": 64,
+  "epochs": 40,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "width": 32,
+  "arms": [
+    "E0",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "global",
+    "donor_train",
+    "noaudio_train"
+  ],
+  "E5": "Immutable original B2 branch scores and GEOQ; not a new capacity-matched fit",
+  "primary_objective": "Localization probability mass over valid fixed20 hypotheses, equal visual/acoustic/fused losses; adapts existing localization objective to fixed candidate support. No new encoder training.",
+  "selection": "40epochs fixed across arms/seeds; initial fold0 seed42 pilot used solely to confirm feasibility. No Val selection.",
+  "capacity": "Identical active modules except routing; E4 residual addition vs others multiplicative modulation. Actual gradient activity to verify. Global limits cross-message to query embedding; own branch retains candidate evidence.",
+  "provenance": "Train12 outer sceneheld; nested B2 proposals for fitting, held B2 eval. Pure encoder upstream training/Val exposure persists. Val8/11 reused development. No independent fullpipeline generalization claim.",
+  "revisions_required": [
+    "Scalar-copy versus rich conditional evidence",
+    "Audio-independent visual proposal causal control",
+    "Strong GEOQ matched downstream",
+    "Objective/capacity and small-cohort sensitivity if indicated"
+  ],
+  "end_to_end_gate": "Require fixedcandidate improvement against strong GEOQ, not just pure V; otherwise report sufficient falsification and limits.",
+  "_archive_export": {
+    "source": "protocol.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

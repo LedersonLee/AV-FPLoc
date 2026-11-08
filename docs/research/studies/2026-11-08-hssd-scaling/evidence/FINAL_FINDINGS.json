@@ -1,0 +1,53 @@
+{
+  "completed_supervised_fits": 478,
+  "refits": 178,
+  "inner_fits": 300,
+  "seeds": [
+    42,
+    43
+  ],
+  "evaluation": {
+    "scenes": 11,
+    "unique_queries": 6072,
+    "development_scenes": 19,
+    "development_queries_per_scene": 128,
+    "scope": "Initial head-held scenes; reused exploratorily in followups. Visual teacher exposed, not pipeline-independent."
+  },
+  "supported": "Candidate geometry improves matched score-only discrimination across exposure/weighting controls.",
+  "geometry_primary_scene_weight_threshold0": {
+    "delta_joint_pp": 1.2177530878593987,
+    "ci95_pp": [
+      0.5098183286886252,
+      2.0507638877969296
+    ]
+  },
+  "geometry_secondary_legacy_threshold": {
+    "delta_joint_pp": 1.1200956240705768,
+    "ci95_pp": [
+      0.4756915918420667,
+      1.870789151123985
+    ]
+  },
+  "scaling_original_recipe": {
+    "delta_joint_pp": 0.21124774698859503,
+    "ci95_pp": [
+      -0.14724983845369224,
+      0.5243186742344335
+    ],
+    "conclusion": "No stable scaling gain established after original recipe restored."
+  },
+  "interaction_OOF_D2_minus_concat": {
+    "delta_joint_pp": -0.16288341599981965,
+    "ci95_pp": [
+      -0.4365802588978715,
+      0.10841033032116694
+    ]
+  },
+  "selection": "No newly trained model promoted as a confirmed improvement over existing GEOQ; E0 and ambiguity gate also not confirmed.",
+  "stopping_rationale": "Audit, actual feasibility, matched scaling, visual adaptation, interaction, geometry, subgroups and module evaluation complete. Positive pilot signal followed through full-query falsification, full-training expansion, OOF exposure restoration and original scene-weight/threshold reconstruction. Remaining independent generalization requires teacher-disjoint training or additional approved dense scenes; extra low-dimensional variants lack supporting evidence. Latest request allows negative outcomes.",
+  "test_observations_accessed": false,
+  "_archive_export": {
+    "source": "FINAL_FINDINGS.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

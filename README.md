@@ -15,6 +15,12 @@
 - Run both branches independently, then fuse their aligned scores.
 - Shared HSSD data: `/file2/jeongeon/AV-FPLoc/datasets/HSSD`.
 
+## Research records
+
+- [Research archive: 13 studies, findings, protocols, and evidence](docs/research/README.md)
+- [Current conclusions and later falsification](docs/research/current_findings.md)
+- These records describe experimental research outside the released two-branch package; they do not imply that all research methods are integrated into `src/avfploc`.
+
 ## Repository structure
 
 ```text

@@ -1,0 +1,20 @@
+{
+  "confirmation_seed_query_rows": 11550,
+  "unique_queries": 5775,
+  "scenes": 11,
+  "all_eleven_methods_strict_metrics_independently_recomputed": true,
+  "frozen_code_and_model_hashes_valid": true,
+  "split_disjoint_from_decoder_development_and_train": true,
+  "prior_artifacts_preserved": {
+    "astra_fusion_20261107_0200": 32,
+    "astra_fusion_v2_20261107_0225": 255
+  },
+  "original_git_diff_preserved": true,
+  "test_outcomes_accessed": false,
+  "scope": "Conditional fixed-encoder decoder confirmation; upstream vision used Val19",
+  "completion": "Bookkeeping and metric gates passed; scientific requirements additionally reviewed in completion_audit.md",
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

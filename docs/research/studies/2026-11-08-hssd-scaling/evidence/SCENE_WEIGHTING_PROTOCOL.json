@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-08T06:19:35.123082+00:00",
+  "trigger": "Original structural_evidence/train.py normalizes sample_weight per scene. Current unequal-query full training used query-equal loss; pilot128/scene was unaffected. Audit this separately from OOF restoration.",
+  "protocol": "Same OOF-aligned inputs and150tree/15leaf/l2=10/.07/minleaf100; score-only/GEOQ×12full/24full/24balanced×seed42/43. Equal total weight per scene, normalizedmeanweight1, sameasoriginal. Sortedscene order matches original loader.",
+  "threshold": "Allnewcontrolledhead decisions usefixed0. For12fullGEOQ check rawgain reconstruction and originalthreshold0/.01 decisions separately againstexistingbaseline; do not tune threshold.",
+  "scope": "Twelve additionalcompletedfits planned; exploratoryreused11/Dev19. No changes toNNstudy. This isolates tree scene weighting from earlier OOF-only control.",
+  "test_accessed": false,
+  "secondary_operating_point": "Also evaluate allweightedtrees with unchangedhistoricalGEOQseedthreshold0/.01 (namedlegacy_threshold), fixedbefore evaluation, no thresholdsearch. This aligns the fulloriginalGEOQrecipe across12/24data.",
+  "_archive_export": {
+    "source": "SCENE_WEIGHTING_PROTOCOL.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

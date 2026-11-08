@@ -1,0 +1,48 @@
+{
+  "modality_coverage_20261107_1700_preserved_files": 437,
+  "hypothesis_discrimination_20261107_1538_preserved_files": 332,
+  "user_working_diff_preserved": true,
+  "git_head": "6ebcf64c22f334542fd623cb3a21005b02a66331",
+  "seed42": {
+    "fixed_candidate_scenes": 31,
+    "nested_outer_training_scenes": 36,
+    "selected": "GEOQ",
+    "threshold": 0,
+    "model_sha256": "3211de3e4f1bd2be5e51b85cd5fd9f1068af621a4dcd7bc953086c108c43d2b5"
+  },
+  "seed43": {
+    "fixed_candidate_scenes": 31,
+    "nested_outer_training_scenes": 36,
+    "selected": "GEOQ",
+    "threshold": 0.01,
+    "model_sha256": "7228dc20f06c5e7693a36b4876a7755fa0ae630505310c907f6439d05f3ea27a"
+  },
+  "exact_frozen_B0_replay_rows": 19930,
+  "exact_selected_inference_rows": 19930,
+  "completed_model_arms": 34,
+  "seeds": [
+    42,
+    43
+  ],
+  "matched_B1_scenes_per_seed": 31,
+  "paired_bootstrap_draws": 10000,
+  "test_observations_accessed": false,
+  "independent_confirmation": false,
+  "figures_visually_reviewed": true,
+  "scope": "Completed exploratory research stage, not proof of universal information loss or independent generalization",
+  "deliverables": {
+    "A_information_audit": "INFORMATION_AUDIT.md / input_audit.json / signal_verification.json",
+    "B_fixed_candidate_capacity_matched": "final_evaluation.json /34arms / baseline_replay_seed*.json",
+    "C_interaction_vs_noninteraction": "GEO_constrained and additive / geometry-only / ScoreBasis",
+    "D_exchange": "matched_B1_analysis.json plus prior frozen exchange and current conditional donor/removal retraining; no end-to-end modality removal claimed",
+    "E_failures": "final_evaluation.json all required groups / case_attribution.json26cases",
+    "learning_objective": "joint+.5fine unchanged, input comparisons separate",
+    "validation": "72outer-adapter caches / nested12arms / Train-only final_selection / pretrained encoders not nested",
+    "reproducibility": "REPRODUCE.md / inference.py / final manifest",
+    "unresolved": "No independent scenes; no full waveform or real/sim furniture intervention; no universal absence claims"
+  },
+  "_archive_export": {
+    "source": "final_verification.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

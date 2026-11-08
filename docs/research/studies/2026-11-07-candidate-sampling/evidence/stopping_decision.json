@@ -1,0 +1,32 @@
+{
+  "reason": "Sufficient controlled falsification across sampling, diversity, warm curriculum, tolerance-objective factorial, donor anddomain contrasts; no strongGEOQ gain. Stop current registered negative-sampling study, not claim impossibility of future improvements.",
+  "max_new_arm_scene_mean_delta_vs_strong_GEOQ": {
+    "train": -0.016276041666666668,
+    "val": -0.013671875,
+    "extra": -0.011363636363636364
+  },
+  "adopt_new_encoder": false,
+  "end_to_end_gate": false,
+  "test_accessed": false,
+  "remaining_scientific_questions": [
+    "Longer preregistered curricula",
+    "Encoder feature cross-fitting/calibration",
+    "Independent scenes and matched reference domains"
+  ],
+  "resource_note": "Local resources freely authorized; stopping is evidence-based, not asserted GPU-budget exhaustion.",
+  "counts": {
+    "sampling_models": 50,
+    "balanced_models": 10,
+    "factorial_models": 30,
+    "warm_sampling_models": 10,
+    "downstream_heads": 210,
+    "sampling_bank_scenes": 62,
+    "balanced_bank_scenes": 62,
+    "factorial_bank_scenes": 62,
+    "new_domain_scene_embeddings": 216
+  },
+  "_archive_export": {
+    "source": "stopping_decision.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}

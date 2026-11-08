@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "full_prediction_files": 770,
+  "full_candidate_files": 22,
+  "models_frozen": 178,
+  "supervised_fits": 478,
+  "followup_stages": {
+    "expanded": {
+      "prediction_files": 1080,
+      "condition_checks": 3240
+    },
+    "oof": {
+      "prediction_files": 1080,
+      "condition_checks": 3240
+    },
+    "scene_balanced": {
+      "prediction_files": 360,
+      "condition_checks": 720
+    }
+  },
+  "recipe_checkpoint_replays": 264,
+  "original_GEOQ_scores_and_choices_exact": true,
+  "unique_queries": 6072,
+  "scenes": 11,
+  "report_links_valid": true,
+  "original_user_patch_unchanged": true,
+  "test_accessed": false,
+  "manifest_sha256": "8a437ae620fc4a72349cd318969f932196057b1d03e13f258f9808765a45652f",
+  "file_count": 12652,
+  "bytes": 11405323443,
+  "_archive_export": {
+    "source": "FINAL_VERIFICATION.json",
+    "selection": "All source JSON fields retained; machine paths parameterized."
+  }
+}
