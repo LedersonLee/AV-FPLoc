@@ -1,0 +1,13 @@
+{
+  "tests_passed": 41,
+  "export_exit_code": 0,
+  "audit_exit_code": 0,
+  "query_cases": 6,
+  "full_bank_score_cases": 605304,
+  "feature_mismatches": 0,
+  "spectrum_mismatches": 0,
+  "score_mismatches": 0,
+  "top20_mismatches": 0,
+  "source": "0c0f0eece4b1bcd6595dc420463684c668875710",
+  "test_accessed": false
+}

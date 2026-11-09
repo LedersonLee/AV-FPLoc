@@ -1,0 +1,96 @@
+{
+  "checkpoint_sha256": "88cd5514a935c3cf2ef7f404a58dd3bca494749fb732b03bbb18eadd3a61af40",
+  "upstream_checkpoint_sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d",
+  "packet_manifest_sha256": "7927a31e8fe32de1d369ac196f857893f4187460c22d60e0c4375c7c69553ed5",
+  "rows": [
+    {
+      "scene": "108736611_177263226",
+      "query": 16,
+      "candidates": 99612,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.21034894604235888,
+      "python_forward_open_paths": [
+        "/usr/local/lib/python3.10/site-packages/torch/backends/opt_einsum/__pycache__/__init__.cpython-310.pyc"
+      ],
+      "output_pose_shape": [
+        3
+      ]
+    },
+    {
+      "scene": "108736635_177263256",
+      "query": 24,
+      "candidates": 81684,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.10982984001748264,
+      "python_forward_open_paths": [],
+      "output_pose_shape": [
+        3
+      ]
+    },
+    {
+      "scene": "105515448_173104512",
+      "query": 8,
+      "candidates": 154764,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.12760736793279648,
+      "python_forward_open_paths": [],
+      "output_pose_shape": [
+        3
+      ]
+    },
+    {
+      "scene": "108294783_176710410",
+      "query": 16,
+      "candidates": 81720,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.10886192508041859,
+      "python_forward_open_paths": [],
+      "output_pose_shape": [
+        3
+      ]
+    },
+    {
+      "scene": "108294624_176710203",
+      "query": 24,
+      "candidates": 92880,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.10435170587152243,
+      "python_forward_open_paths": [],
+      "output_pose_shape": [
+        3
+      ]
+    },
+    {
+      "scene": "102344457",
+      "query": 24,
+      "candidates": 94644,
+      "raw_feature_bitwise_equal": true,
+      "spectrum_bitwise_equal": true,
+      "full_field_bitwise_equal": true,
+      "raw_top20_equal": true,
+      "decoded_observation_to_map_seconds": 0.10657027107663453,
+      "python_forward_open_paths": [],
+      "output_pose_shape": [
+        3
+      ]
+    }
+  ],
+  "scope": "one fixed first-query per six reused Val scenes, attention seed42; raw decoded RGB/body-frame RIR through frozen upstream, trainable adapters and full bank/MAP. Map cache, model load and image/wave disk decode excluded from timing. Concurrent authorized training; timings are observations not isolated cost benchmarks. Python audit hooks do not trace native library I/O.",
+  "dataset_boundary": "body-frame waveform materialized offline using schedule orientation; inference receives no world pose. Calibration feasibility for new physical recordings not established.",
+  "test_accessed": false
+}

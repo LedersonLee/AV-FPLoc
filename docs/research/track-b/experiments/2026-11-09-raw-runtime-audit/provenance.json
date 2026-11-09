@@ -1,0 +1,25 @@
+{
+  "code_sha": "0c0f0eece4b1bcd6595dc420463684c668875710",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "9426e302afb4a1c748071364c2dade24a27a75250c1797a96da579857eb58a11"
+    },
+    {
+      "git_copy": "audit.json",
+      "sha256": "b1ac77853cb039a4e9bcafc62af5378886508fc664cc5bedcbdfed5fc3e79b18"
+    },
+    {
+      "git_copy": "packet_manifest.json",
+      "sha256": "7927a31e8fe32de1d369ac196f857893f4187460c22d60e0c4375c7c69553ed5"
+    },
+    {
+      "git_copy": "packet_protocol.json",
+      "sha256": "7e3c250caa453a39f992ed2d2d6f75df193864e8092934ccbc393f8620244190"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "adb2ccfa8c073c4c9b3b4cbb27a79e2430bf337fd63061e6f3340ef5e9f8d86b"
+    }
+  ]
+}

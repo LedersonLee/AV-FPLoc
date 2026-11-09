@@ -1,0 +1,8 @@
+{
+  "selection": "first previously frozen query in each of six Val scenes; no outcome selection",
+  "role": "offline dataset assembly, not GT-free inference",
+  "alignment": "existing schedule world/base yaw used only to materialize ring-symmetric body-frame waveform; inference never receives these angles",
+  "limitation": "does not demonstrate calibration without metadata on an unaligned physical sensor",
+  "cache_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+  "test_accessed": false
+}

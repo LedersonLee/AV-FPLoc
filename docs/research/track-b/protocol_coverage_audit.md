@@ -39,14 +39,14 @@ Status: **overall objective incomplete**. This is a work-scope audit, not a new 
 | Section11 item | Evidence and scope |
 |---|---|
 | 1 full bank/index | Dense/structure tests plus actual bank profiling; current model scores exhaustive supplied bank |
-| 2 GT leakage | Existing inference signature and old runtime GT-key deletion check; one-query/full-bank foundation checkpoint audit passed; broader preprocessing coverage still limited |
+| 2 GT leakage | Existing inference signature and old runtime GT-key deletion check; one-query/full-bank foundation checkpoint audit passed; study26 adds six-scene raw-observation replay; offline schedule-based channel alignment is explicitly outside GT-free inference; broader physical calibration coverage remains limited |
 | 3 split integrity | Metadata family exclusion and cohort provenance; broader geometry near-duplicate/upstream exclusion unresolved |
 | 4 frame equivariance | Existing structural/interaction rigid transform tests; final dual-tower path explicitly verified for all three modes in35-test run |
 | 5 mic order/time origin | study15/17 calibration/raw-RIR audits and geometry tests; preserve same sensor contract |
 | 6 branch gradients | Foundation interaction tests and actual smoke/main branch gradient logs; initial zero new-head internal gradients intentionally activate later |
 | 7 chunk equivalence | Existing full/chunk and cached/uncached score tests; actual initial F1 replay1152cases zero mismatches |
 | 8 extraction | Existing diverse/support tests; independent-F1 D2 now uses Train-only two-fold scorers, hashed candidates and GT-free builder; M1 proposals remain |
-| 9 no RIR reference I/O | Old interaction runtime I/O audit; foundation scorer trace passed on one full-bank query; upstream feature preprocessing trace still separate |
+| 9 no RIR reference I/O | Old interaction runtime I/O audit; foundation scorer trace passed on one full-bank query; study26 replays raw decoded RGB/body-frame RIR through upstream/features/full-field in six first-query probes with bitwise equality; Python-only hooks do not capture native I/O |
 | 10 shuffle | Actual independent-fusion accuracy control plus model perturbation tests; changing scores alone not sufficient |
 | 11 new scene | Existing varied-map forward tests; explicit final-model new-map-size/orientation test now passes for all three modes |
 | 12 costs | Old cached scorer benchmark; complete final end-to-end benchmark pending |

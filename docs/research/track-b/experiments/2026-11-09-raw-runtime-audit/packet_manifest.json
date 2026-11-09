@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "108736611_177263226",
+    "query": 16,
+    "body_rir": "108736611_177263226_body_rir.npy",
+    "rgb": "108736611_177263226_rgb.png",
+    "body_rir_sha256": "8c1f8425ead2bf9e6068f79800e853d349b9f18860b5d5868c9a65a5f01cdaca",
+    "rgb_sha256": "d5fe12187b75bfc92a5b20220add1c4c397f1233a286af5cf808c2d32ab348ca",
+    "observed_source_sha256": "8c1f8425ead2bf9e6068f79800e853d349b9f18860b5d5868c9a65a5f01cdaca",
+    "sample_rate_hz": 48000
+  },
+  {
+    "scene": "108736635_177263256",
+    "query": 24,
+    "body_rir": "108736635_177263256_body_rir.npy",
+    "rgb": "108736635_177263256_rgb.png",
+    "body_rir_sha256": "c435fb74ab27e2112bcaa2277754af424e908ed531e2e98b76d76826af7c66ab",
+    "rgb_sha256": "02fa34df84b50c84fc5a0800c11f25c723790c22947585862bbf56b95e06e405",
+    "observed_source_sha256": "c435fb74ab27e2112bcaa2277754af424e908ed531e2e98b76d76826af7c66ab",
+    "sample_rate_hz": 48000
+  },
+  {
+    "scene": "105515448_173104512",
+    "query": 8,
+    "body_rir": "105515448_173104512_body_rir.npy",
+    "rgb": "105515448_173104512_rgb.png",
+    "body_rir_sha256": "91bd5936cc416e1df69d583d32735762671232cce9cc038b53b15faa58afdc38",
+    "rgb_sha256": "cfb27a7e5aabf42bfeaf95aaab848a17d3bc1c8998d1d08e18d81c863837681a",
+    "observed_source_sha256": "91bd5936cc416e1df69d583d32735762671232cce9cc038b53b15faa58afdc38",
+    "sample_rate_hz": 48000
+  },
+  {
+    "scene": "108294783_176710410",
+    "query": 16,
+    "body_rir": "108294783_176710410_body_rir.npy",
+    "rgb": "108294783_176710410_rgb.png",
+    "body_rir_sha256": "3babcb5505bb84f0e3e9bebee31e2f7b2d436df58c6dd7494be8a3c3484de201",
+    "rgb_sha256": "e131a6a1361e297589b4e40c6c386bb833f3a2a9908d64dddb666b6eacaf7192",
+    "observed_source_sha256": "3babcb5505bb84f0e3e9bebee31e2f7b2d436df58c6dd7494be8a3c3484de201",
+    "sample_rate_hz": 48000
+  },
+  {
+    "scene": "108294624_176710203",
+    "query": 24,
+    "body_rir": "108294624_176710203_body_rir.npy",
+    "rgb": "108294624_176710203_rgb.png",
+    "body_rir_sha256": "9e6fc387b868b73dc39ccecba761579b415dbc212aae62b238bfaa786f8b1ab3",
+    "rgb_sha256": "e61e7146d0c7187c2a76d6085321153ee6869f1bf568fd6b194e25e0ce97ee1b",
+    "observed_source_sha256": "9e6fc387b868b73dc39ccecba761579b415dbc212aae62b238bfaa786f8b1ab3",
+    "sample_rate_hz": 48000
+  },
+  {
+    "scene": "102344457",
+    "query": 24,
+    "body_rir": "102344457_body_rir.npy",
+    "rgb": "102344457_rgb.png",
+    "body_rir_sha256": "c1918eff0175c73e6facd9192370ff0097544c771e501ec8a48356a8dc8194a8",
+    "rgb_sha256": "9395af80787b120753244757b1c96b71248ddaf07cfc1d6e72546e573622f0ad",
+    "observed_source_sha256": "c1918eff0175c73e6facd9192370ff0097544c771e501ec8a48356a8dc8194a8",
+    "sample_rate_hz": 48000
+  }
+]
