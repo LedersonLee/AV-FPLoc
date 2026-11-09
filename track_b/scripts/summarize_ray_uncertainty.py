@@ -50,7 +50,7 @@ def main():
     protocols=[read(r/'protocol.json') for r in required];assert [p['condition'] for p in protocols]==CONDITIONS;scenes=protocols[0]['scenes'];assert len(scenes)==19 and len(set(scenes))==19
     assert all(not p['smoke'] and p['scenes']==scenes and p['seeds']==[42,43,44] and p['queries_per_scene']==64 for p in protocols)
     assert all(p['head_protocol_sha256']==protocols[0]['head_protocol_sha256'] and p['declared_protocol_sha256']==protocols[0]['declared_protocol_sha256'] for p in protocols)
-    summaries=[];contrasts=[];ray_summary=[];sources={};cohort=None
+    summaries=[];contrasts=[];transfers=[];secondary=[];ray_summary=[];sources={};cohort=None;normal_groups=None
     for condition,r in zip(CONDITIONS,required):
         rows=read(r/'predictions.json');expected=98496 if condition=='normal' else 54720
         assert len(rows)==expected==read(r/'validation.json')['records']
@@ -65,6 +65,17 @@ def main():
             if cohort is None:cohort=kk
             assert kk==cohort and all(sum(x['scene']==s and x['seed']==seed for x in rr)==64 for s in scenes for seed in [42,43,44])
             summaries.append(dict(condition=condition,arm=key[0],method=key[1],policy=key[2],queries=len(rr),**{m:float(np.mean([x[m] for x in rr])) for m in METRICS},reliability=reliability_statistics(rr)))
+        if condition=='normal':
+            normal_groups=groups
+            for arm in ['U1','U2','U3','U4']:
+                for method in ['visual','acoustic','fixed']:
+                    for metric in METRICS:
+                        secondary.append(dict(arm=arm,method=method,metric=metric,left='original_scales',right='primary',**paired_scene(groups[arm,method,'original_scales'],groups[arm,method,'primary'],scenes,metric)))
+        else:
+            for arm in ['U0','U1','U2','U3','U4']:
+                for method in ['visual','acoustic','fixed']:
+                    for metric in METRICS:
+                        transfers.append(dict(condition=condition,arm=arm,method=method,metric=metric,left=condition,right='normal',**paired_scene(groups[arm,method,'primary'],normal_groups[arm,method,'primary'],scenes,metric)))
         for method in ['visual','acoustic','fixed']:
             for control in ['U1','U2','U4','U0']:
                 for metric in METRICS:contrasts.append(dict(condition=condition,left='U3',right=control,method=method,metric=metric,**paired_scene(groups['U3',method,'primary'],groups[control,method,'primary'],scenes,metric)))
@@ -77,6 +88,6 @@ def main():
                 ray_summary.append(dict(condition=condition,arm=arm,modality=modality,strata=ray_stats(rr)))
         sources[condition]={f:sha(r/f) for f in ['protocol.json','predictions.json','summary.json','ray_records.pt','validation.json']}
     a.out.mkdir(parents=True,exist_ok=False)
-    for name,value in [('summary',summaries),('paired',contrasts),('ray_calibration',ray_summary),('validation',dict(code_sha=a.code_sha,conditions=CONDITIONS,scenes=scenes,query_seed_keys=len(cohort),source_hashes=sources,status='all declared conditions validated',evidence='Exploratory reused Val; uncorrected multiple comparisons'))]:write(a.out/f'{name}.json',value)
+    for name,value in [('summary',summaries),('paired',contrasts),('normal_shift_transfer',transfers),('secondary_scale_policy',secondary),('ray_calibration',ray_summary),('validation',dict(code_sha=a.code_sha,conditions=CONDITIONS,scenes=scenes,query_seed_keys=len(cohort),source_hashes=sources,status='all declared conditions validated',evidence='Exploratory reused Val; uncorrected multiple comparisons'))]:write(a.out/f'{name}.json',value)
     print('COMPLETE',len(summaries),len(contrasts),flush=True)
 if __name__=='__main__':main()
