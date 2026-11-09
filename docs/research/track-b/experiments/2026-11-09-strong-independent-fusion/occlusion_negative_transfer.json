@@ -1,0 +1,210 @@
+[
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 18.75,
+    "ci95": [
+      15.01519097222222,
+      22.395833333333336
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": -1.3393796601643164,
+    "ci95": [
+      -1.4737161907056968,
+      -1.194051679844658
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 3.559027777777777,
+    "ci95": [
+      1.2152777777777775,
+      6.163194444444445
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 0.7704749057690297,
+    "ci95": [
+      0.5422419910836543,
+      0.9857745911512108
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": -0.9548611111111112,
+    "ci95": [
+      -2.083333333333333,
+      0.26041666666666663
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 3.5321225714352393,
+    "ci95": [
+      2.492199872930844,
+      4.710125658247206
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": -2.864583333333333,
+    "ci95": [
+      -4.079861111111112,
+      -1.6493055555555556
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 7.396004506283336,
+    "ci95": [
+      5.8942481287651605,
+      8.943254720005724
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 18.663194444444443,
+    "ci95": [
+      15.798611111111107,
+      21.44097222222222
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": -1.2922439273032877,
+    "ci95": [
+      -1.4017741257945697,
+      -1.1788065036137898
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 3.472222222222222,
+    "ci95": [
+      1.8229166666666667,
+      5.208333333333334
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 0.3076410214934082,
+    "ci95": [
+      0.0830238043434089,
+      0.5216768984165453
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": -0.6076388888888892,
+    "ci95": [
+      -1.5625000000000004,
+      0.3472222222222219
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 3.2800306690235934,
+    "ci95": [
+      2.2466435291700892,
+      4.451553761131233
+    ],
+    "units": "nats"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": -3.0381944444444446,
+    "ci95": [
+      -4.6875,
+      -1.2152777777777781
+    ],
+    "units": "pp"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "left": "calibrated",
+    "right": "fixed",
+    "metric": "nll",
+    "delta": 6.606579709798097,
+    "ci95": [
+      5.197609336011939,
+      8.10372899679674
+    ],
+    "units": "nats"
+  }
+]

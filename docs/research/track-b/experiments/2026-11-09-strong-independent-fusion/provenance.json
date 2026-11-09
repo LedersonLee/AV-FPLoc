@@ -5,7 +5,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "cd1a5a68a2e35e738c09e024253decd380b2d03e804ab5f73a63b2681b8fbff9"
+      "sha256": "0879d3c8d79a5c22fac0df5dbb7c23250b146c7c4d9a9c1b5b8b2d7ea6b18158"
     },
     {
       "git_copy": "brightness_feature_manifest.json",
@@ -17,7 +17,7 @@
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "40518e319da3bd6a8e159afcc1f40a35a7f7491bcbc4b0207e4c6826f8b28e43"
+      "sha256": "c53099367340c098740e0f20462322c70cff9f6ad999aee6c756bc682d3d4673"
     },
     {
       "git_copy": "external_hashes.json",
@@ -30,6 +30,30 @@
     {
       "git_copy": "independent_fusion_anchor_lowlight_v1_selection.json",
       "sha256": "544ebbf36512442d158b49e1b76b166f7960a349ab2ee0414f30ad17751a7465"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion25_v1_protocol.json",
+      "sha256": "b58407f67f95afc6b6e8361aaebf31e3914a5c020c2e580d0744c53d2034bb4c"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion25_v1_summary.json",
+      "sha256": "a249e9d887630ed44296a7b642151a6d2fb0552aa2c2b544a6e836768bbca559"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion50_v1_protocol.json",
+      "sha256": "5756a7c7d2e5ae3f3580f929585da4335cede3fb0fc6807a88621904efd7b377"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion50_v1_summary.json",
+      "sha256": "2237e7537ea88fe89b8fcdca56bc362b01e9f2c1443c73a39a81384c6d1e77d3"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion75_v1_protocol.json",
+      "sha256": "ef432a3af6e5408fa09ed281283bda601b53db820bedbceb9ee30f8a47f619e7"
+    },
+    {
+      "git_copy": "independent_fusion_anchor_occlusion75_v1_summary.json",
+      "sha256": "1fbbf50b034d85004c1a4c0a82f1d38728d4229ccf40bc9b86563ffc8d34acd7"
     },
     {
       "git_copy": "independent_fusion_anchor_v1_protocol.json",
@@ -46,6 +70,30 @@
     {
       "git_copy": "independent_fusion_frozen_lowlight_v1_selection.json",
       "sha256": "888cd4fa411bed50928d0e5ffd5e65279404d21614eb818d8df803eaf81ef98d"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion25_v1_protocol.json",
+      "sha256": "a7157a310f6faeee96862c49c9f11f7b79fb88072c830aefd4cccd5edbb4dfb9"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion25_v1_summary.json",
+      "sha256": "45b0233b2b31de447bcff1c19094a7281e7e3a8525cf0e5bbcc51ad73b526e3b"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion50_v1_protocol.json",
+      "sha256": "4a10f2b9456d2f41aa8db4d8b09e25d1c89147150a4d5ba291716936244ffdda"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion50_v1_summary.json",
+      "sha256": "fbf7f5417a871023300763ada7e6f03494a8b43f07071582fd66ae11cbb34715"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion75_v1_protocol.json",
+      "sha256": "d8828fef783acf568933659fa4adc26850bb61857db777c8f61e713fd44c69a8"
+    },
+    {
+      "git_copy": "independent_fusion_frozen_occlusion75_v1_summary.json",
+      "sha256": "745a8473aaf3ac68152020a25ef0549f49a0b3836d4dca85026eabd8847c8f1f"
     },
     {
       "git_copy": "independent_fusion_frozen_v1_protocol.json",
@@ -80,8 +128,28 @@
       "sha256": "07f6c5423efd5af4453d9a7d9e4772eca706dcced2ea1ea2aaac9a951b8402e1"
     },
     {
+      "git_copy": "occlusion_curve.json",
+      "sha256": "c293e83ba27a25e520bc585b6b7b8ea7226d255e6593ada379c75c4c1608fe69"
+    },
+    {
+      "git_copy": "occlusion_curve.png",
+      "sha256": "24f7bf8ad736c622d9075f060e1d42df79e725877cdcef7fa2f063d1e932d86e"
+    },
+    {
+      "git_copy": "occlusion_external_hashes.json",
+      "sha256": "01dc298c36022f26d8c2ab05d33162f864341a2d26defaa42e5f5341ff22617a"
+    },
+    {
+      "git_copy": "occlusion_negative_transfer.json",
+      "sha256": "3463f463e2da5f529040de00e9b386e2db3a561ee706fcb87710af750a120a41"
+    },
+    {
+      "git_copy": "occlusion_paired_scene_bootstrap.json",
+      "sha256": "a8ee746bdec125d77d7f5ff03d4ac634df805cd80ccf19e35ed2ce9ff5ccd37b"
+    },
+    {
       "git_copy": "occlusion_validation.json",
-      "sha256": "d3d1208981f8482de9df666debcb27503e387de04986b745b65fe4da67b8e390"
+      "sha256": "dc72067b8a3d6418252d0757eb3c6b132cacfd4154236b55cab5800cd31182c9"
     },
     {
       "git_copy": "paired_brightness.json",
@@ -100,5 +168,6 @@
     "features_lowlight_v1.log": "8b55306f6f121013373f7a47d3be7889c8b1e274ddce58bf933e231a750a6d12",
     "features_lowlight_v2.log": "32f2e004c01ac4735ab6f7cd25b33e35236a2b4a795f1b73aa0b8f9c3b6541be"
   },
-  "occlusion_feature_source": "94ef80eda7a36f0b6cdd7a139cfca0006e774b4a"
+  "occlusion_feature_source": "94ef80eda7a36f0b6cdd7a139cfca0006e774b4a",
+  "occlusion_aggregation_source": "b5ff944ff758d4552ca347a3f647122c39f64d93"
 }

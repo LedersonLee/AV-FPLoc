@@ -73,3 +73,27 @@ Before evaluating any occluded images, fix three severities: full-height centere
 Motivation: brightness0.2 did not cause visual failure, so it cannot by itself validate the proposed interaction benefit under impaired vision. This curve tests the missing-visibility boundary; severity must not be chosen retrospectively to favor attention. Train data and the ongoing matched interaction fits remain unchanged. Feature extraction source SHA `94ef80eda7a36f0b6cdd7a139cfca0006e774b4a`. Results are pending; all three caches and any failed launch logs will be retained outside Git.
 
 Occlusion extraction batch completed with exit0: all three levels each have six scenes/384 query features (1,152 total). Feature manifests and protocols are archived. Six baseline evaluation jobs (levels25/50/75 × anchored/frozen visual), unchanged normal calibration, launched sequentially in observation session11021; results remain pending. Runtime SHA `105ae0f95a393a0c9cd22f79784e1bb65759e57e`. Reproduction uses the normal F1 evaluator with `--eval-visual-cache /results/features_occlusion25_v1 --selection-reference /results/independent_fusion_anchor_v1` and a distinct `independent_fusion_anchor_occlusion25_v1` output; repeat all declared levels/variants. `summarize_occlusion_curve` refuses to aggregate before every planned result exists.
+
+
+## Complete predeclared occlusion curve (supersedes pending status)
+
+All six batches completed, combined launcher exit0. Both visual variants and all three severities are reported; none selected based on outcome. Each batch reproduced the unchanged acoustic-only metrics in1,152 query-seed cases, total6,912 checks. Normal calibration selections remain byte-equivalent in parsed content. Source dependencies consumed by the evaluation match launcher source `105ae0f95a393a0c9cd22f79784e1bb65759e57e`; later checkout HEADs changed during unrelated additions and are not individually recorded. Aggregation source `b5ff944ff758d4552ca347a3f647122c39f64d93`.
+
+| Occlusion width | Anchored V Joint % | Anchored fusion Joint % | Frozen V Joint % | Frozen fusion Joint % | Acoustic Joint % |
+|---|---:|---:|---:|---:|---:|
+| 0% | 17.188 | 23.872 | 19.271 | 23.785 | 5.122 |
+| 25% | 2.865 | 8.681 | 4.167 | 8.594 | 5.122 |
+| 50% | 1.649 | 4.167 | 1.389 | 4.514 | 5.122 |
+| 75% | 0.521 | 2.257 | 0.087 | 2.083 | 5.122 |
+
+Observation: aligned audio helps relative to visual-only at each severity, but fixed fusion falls below acoustic-only under severe occlusion. At75%, anchored fusion−acoustic = −2.865 pp [95% scene CI −4.080,−1.649]; frozen = −3.038 pp [−4.688,−1.215]. Thus an always-dominant visual weight can cause negative transfer when visibility is lost. This demonstrates a failure boundary for fixed fusion; it does not prove a learned attention/gate solves it. The currently running matched models were not retrained or selected based on this curve.
+
+Coverage also collapses: anchored fusion diverse20 84.375→49.913→35.851→19.705%; raw20 61.892→31.858→20.486→12.153%. A discriminator cannot recover GT absent its selected set. At75% anchored fusion Fine is0.174%, frozen0%; do not frame the residual coarse success as precision.
+
+Normal-trained temperature0.25 worsens shifted nearest-grid NLL despite unchanged rankings: at75%, anchored calibrated−fixed is +7.396 nats [5.894,8.943], frozen +6.607 [5.198,8.104]. This is evidence of failed NLL transfer under this synthetic shift, not a substitute for an ECE analysis. It rejects assuming that a sharper normal-development posterior remains trustworthy under missing visual content.
+
+Interpretation: global dimming and removing central content probe different failure mechanisms. The former did not impair this foundation representation; the latter strongly impairs structural prediction. Black strips are synthetic out-of-distribution image content, not a physical occluder rendering; distinguish lost visual information from the black-mask appearance artifact. Generalization remains limited to six reused development scenes and this camera/representation. Next falsification: apply the exact curve to every matched model, then compare input-aware reliability mechanisms without selecting a favorable severity or injecting GT.
+
+![Complete occlusion curve](occlusion_curve.png)
+
+The figure shows three-seed, equal-scene means; paired scene uncertainty is in `occlusion_paired_scene_bootstrap.json` and `occlusion_negative_transfer.json`. The full observations and calibration files stay outside Git; hashes identify them. Reproduce aggregation with `python -m track_b.scripts.summarize_occlusion_curve --root <external-root> --out <new-output>`. Existing normal/brightness results are retained. Decision: retain strong F1 as a necessary baseline, reject any blanket robustness claim for fixed visual-dominant fusion or transferred normal temperature. Overall Track B remains unfinished; see the protocol coverage audit.

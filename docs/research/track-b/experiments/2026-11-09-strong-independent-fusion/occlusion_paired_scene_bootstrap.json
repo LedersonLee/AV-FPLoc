@@ -1,0 +1,1442 @@
+[
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -14.322916666666668,
+    "ci95_pp": [
+      -16.145833333333336,
+      -12.5
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -13.802083333333334,
+    "ci95_pp": [
+      -15.277777777777777,
+      -11.89236111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -0.78125,
+    "ci95_pp": [
+      -1.3020833333333335,
+      -0.26041666666666663
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -44.53125,
+    "ci95_pp": [
+      -46.18055555555555,
+      -42.79513888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -50.08680555555555,
+    "ci95_pp": [
+      -54.07986111111111,
+      -46.43880208333336
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.190972222222221,
+    "ci95_pp": [
+      -18.40277777777778,
+      -11.979166666666668
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -14.496527777777779,
+    "ci95_pp": [
+      -17.1875,
+      -11.284722222222221
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.5625000000000004,
+    "ci95_pp": [
+      -2.5173611111111116,
+      -0.6944444444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -30.03472222222222,
+    "ci95_pp": [
+      -33.33333333333333,
+      -28.038194444444446
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -34.46180555555555,
+    "ci95_pp": [
+      -36.45833333333333,
+      -32.55208333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.190972222222221,
+    "ci95_pp": [
+      -18.40277777777778,
+      -11.979166666666664
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -14.496527777777779,
+    "ci95_pp": [
+      -17.1875,
+      -11.197916666666664
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.5625000000000004,
+    "ci95_pp": [
+      -2.5173611111111116,
+      -0.6944444444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -30.03472222222222,
+    "ci95_pp": [
+      -33.33333333333333,
+      -28.038194444444446
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -34.46180555555555,
+    "ci95_pp": [
+      -36.37369791666667,
+      -32.55208333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.538194444444445,
+    "ci95_pp": [
+      -18.055555555555554,
+      -12.5
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -15.104166666666666,
+    "ci95_pp": [
+      -18.229166666666664,
+      -11.805555555555554
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -0.954861111111111,
+    "ci95_pp": [
+      -1.3020833333333335,
+      -0.6076388888888888
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -53.385416666666664,
+    "ci95_pp": [
+      -56.25,
+      -49.565972222222214
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -64.75694444444446,
+    "ci95_pp": [
+      -69.01041666666666,
+      -60.76388888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -19.704861111111114,
+    "ci95_pp": [
+      -23.003472222222225,
+      -16.145833333333336
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -19.18402777777778,
+    "ci95_pp": [
+      -22.65625,
+      -15.538194444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.996527777777778,
+    "ci95_pp": [
+      -2.864583333333333,
+      -1.3020833333333335
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -41.40625,
+    "ci95_pp": [
+      -45.13888888888889,
+      -36.89236111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -48.52430555555555,
+    "ci95_pp": [
+      -51.64930555555555,
+      -44.965277777777786
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -19.704861111111114,
+    "ci95_pp": [
+      -23.003472222222225,
+      -16.05902777777778
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -19.18402777777778,
+    "ci95_pp": [
+      -22.56944444444445,
+      -15.45138888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.996527777777778,
+    "ci95_pp": [
+      -2.864583333333333,
+      -1.3020833333333335
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -41.40625,
+    "ci95_pp": [
+      -45.13888888888889,
+      -36.63194444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -48.52430555555555,
+    "ci95_pp": [
+      -51.64930555555555,
+      -44.87847222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -16.666666666666664,
+    "ci95_pp": [
+      -18.75,
+      -13.975694444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -16.493055555555554,
+    "ci95_pp": [
+      -19.097222222222225,
+      -13.28125
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -0.954861111111111,
+    "ci95_pp": [
+      -1.3020833333333335,
+      -0.6076388888888888
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -59.982638888888886,
+    "ci95_pp": [
+      -62.93402777777778,
+      -56.94444444444444
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -73.78472222222221,
+    "ci95_pp": [
+      -77.43055555555554,
+      -70.13888888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -21.614583333333336,
+    "ci95_pp": [
+      -24.739583333333336,
+      -18.402777777777775
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -22.22222222222222,
+    "ci95_pp": [
+      -24.826388888888893,
+      -19.444444444444446
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.996527777777778,
+    "ci95_pp": [
+      -2.9513888888888893,
+      -1.128472222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -49.73958333333333,
+    "ci95_pp": [
+      -52.604166666666664,
+      -47.22222222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -64.67013888888889,
+    "ci95_pp": [
+      -66.92708333333331,
+      -62.67361111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -21.614583333333336,
+    "ci95_pp": [
+      -24.739583333333336,
+      -18.40277777777778
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -22.22222222222222,
+    "ci95_pp": [
+      -24.826388888888896,
+      -19.444444444444443
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.996527777777778,
+    "ci95_pp": [
+      -2.9513888888888893,
+      -1.128472222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -49.73958333333333,
+    "ci95_pp": [
+      -52.604166666666686,
+      -47.22222222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -64.67013888888889,
+    "ci95_pp": [
+      -66.92708333333334,
+      -62.673611111111114
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 0,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.104166666666666,
+    "ci95_pp": [
+      -19.444444444444446,
+      -11.11111111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -14.756944444444445,
+    "ci95_pp": [
+      -19.010416666666664,
+      -10.76388888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -0.8680555555555555,
+    "ci95_pp": [
+      -1.3888888888888888,
+      -0.43402777777777773
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -46.267361111111114,
+    "ci95_pp": [
+      -52.95138888888889,
+      -39.93055555555556
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -48.00347222222223,
+    "ci95_pp": [
+      -52.864583333333336,
+      -43.40277777777777
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.190972222222221,
+    "ci95_pp": [
+      -18.315972222222218,
+      -11.718749999999998
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -14.583333333333334,
+    "ci95_pp": [
+      -17.881944444444446,
+      -11.11111111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.8229166666666667,
+    "ci95_pp": [
+      -2.5173611111111107,
+      -0.9548611111111112
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -27.256944444444443,
+    "ci95_pp": [
+      -32.98611111111111,
+      -22.309027777777782
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -27.777777777777775,
+    "ci95_pp": [
+      -29.86111111111111,
+      -25.520833333333332
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -15.190972222222221,
+    "ci95_pp": [
+      -18.31597222222222,
+      -11.631944444444443
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -14.583333333333334,
+    "ci95_pp": [
+      -17.881944444444446,
+      -11.11111111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.8229166666666667,
+    "ci95_pp": [
+      -2.5173611111111107,
+      -0.9548611111111112
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -27.256944444444443,
+    "ci95_pp": [
+      -32.98611111111111,
+      -22.395833333333336
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 25,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -27.777777777777775,
+    "ci95_pp": [
+      -29.86111111111111,
+      -25.520833333333332
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -17.881944444444446,
+    "ci95_pp": [
+      -21.180555555555554,
+      -14.583333333333334
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -17.447916666666664,
+    "ci95_pp": [
+      -20.225694444444443,
+      -14.930555555555555
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.0416666666666665,
+    "ci95_pp": [
+      -1.6493055555555556,
+      -0.43402777777777773
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -55.12152777777778,
+    "ci95_pp": [
+      -61.63194444444445,
+      -49.045138888888886
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -63.10763888888889,
+    "ci95_pp": [
+      -67.53472222222223,
+      -58.76736111111111
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -19.270833333333336,
+    "ci95_pp": [
+      -21.961805555555554,
+      -16.059027777777775
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -18.923611111111114,
+    "ci95_pp": [
+      -22.048611111111114,
+      -15.538194444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.909722222222222,
+    "ci95_pp": [
+      -2.6909722222222223,
+      -1.0416666666666665
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -40.972222222222214,
+    "ci95_pp": [
+      -45.05208333333333,
+      -35.24305555555555
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -46.96180555555555,
+    "ci95_pp": [
+      -49.21875,
+      -44.53125
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -19.270833333333336,
+    "ci95_pp": [
+      -21.875,
+      -16.05902777777778
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -18.923611111111114,
+    "ci95_pp": [
+      -22.048611111111114,
+      -15.538194444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.909722222222222,
+    "ci95_pp": [
+      -2.6909722222222223,
+      -1.0416666666666665
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -40.972222222222214,
+    "ci95_pp": [
+      -45.05208333333333,
+      -35.24305555555555
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 50,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -46.96180555555555,
+    "ci95_pp": [
+      -49.21875000000001,
+      -44.44444444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "joint",
+    "shift_minus_normal_pp": -19.18402777777778,
+    "ci95_pp": [
+      -22.569444444444446,
+      -15.972222222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "r1",
+    "shift_minus_normal_pp": -18.923611111111114,
+    "ci95_pp": [
+      -21.701388888888886,
+      -16.579861111111114
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "fine",
+    "shift_minus_normal_pp": -1.0416666666666665,
+    "ci95_pp": [
+      -1.6493055555555556,
+      -0.43402777777777773
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -62.15277777777777,
+    "ci95_pp": [
+      -67.62152777777779,
+      -57.72569444444443
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "visual",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -72.8298611111111,
+    "ci95_pp": [
+      -76.21527777777777,
+      -70.57291666666666
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "joint",
+    "shift_minus_normal_pp": -21.701388888888886,
+    "ci95_pp": [
+      -24.305555555555554,
+      -19.09722222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "r1",
+    "shift_minus_normal_pp": -21.52777777777778,
+    "ci95_pp": [
+      -23.958333333333336,
+      -18.836805555555554
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "fine",
+    "shift_minus_normal_pp": -2.1701388888888884,
+    "ci95_pp": [
+      -2.864583333333333,
+      -1.2152777777777777
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -46.701388888888886,
+    "ci95_pp": [
+      -50.34722222222222,
+      -43.31597222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "fixed",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -61.63194444444445,
+    "ci95_pp": [
+      -63.71527777777778,
+      -58.94097222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "joint",
+    "shift_minus_normal_pp": -21.701388888888886,
+    "ci95_pp": [
+      -24.305555555555554,
+      -19.09722222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "r1",
+    "shift_minus_normal_pp": -21.52777777777778,
+    "ci95_pp": [
+      -23.958333333333336,
+      -18.836805555555554
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "fine",
+    "shift_minus_normal_pp": -2.1701388888888884,
+    "ci95_pp": [
+      -2.864583333333333,
+      -1.2152777777777777
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "raw20",
+    "shift_minus_normal_pp": -46.701388888888886,
+    "ci95_pp": [
+      -50.34722222222222,
+      -43.22916666666668
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "occlusion_percent": 75,
+    "method": "calibrated",
+    "metric": "diverse20",
+    "shift_minus_normal_pp": -61.63194444444445,
+    "ci95_pp": [
+      -63.71527777777779,
+      -59.02777777777778
+    ],
+    "unit": "six scenes; seeds averaged"
+  }
+]

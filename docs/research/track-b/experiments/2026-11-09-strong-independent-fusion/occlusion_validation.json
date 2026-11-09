@@ -23,8 +23,12 @@
       "seconds": 35.31206124369055
     }
   ],
-  "evaluation_status": "six runs scheduled, first live; no outcome claim",
+  "evaluation_status": "all six completed",
   "evaluation_observation_session": 11021,
   "evaluation_runtime_sha": "105ae0f95a393a0c9cd22f79784e1bb65759e57e",
-  "aggregation_requires": "All three levels and both visual variants, matching normal calibration, no severity selection"
+  "aggregation_requires": "All three levels and both visual variants, matching normal calibration, no severity selection",
+  "evaluation_exit_code": 0,
+  "acoustic_replay_cases": 6912,
+  "aggregation_source": "b5ff944ff758d4552ca347a3f647122c39f64d93",
+  "source_dependency_contents_verified": true
 }
