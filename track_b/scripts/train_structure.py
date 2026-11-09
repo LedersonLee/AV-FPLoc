@@ -93,7 +93,9 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
     ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);args=ap.parse_args()
-    if args.visual_cache:assert args.pretrained_dir is None, 'Old backbone checkpoints cannot initialize the foundation adapter'
+    if args.visual_cache and args.pretrained_dir:
+        prior_protocol=read(args.pretrained_dir/'protocol.json')
+        assert prior_protocol.get('visual_cache_protocol_sha256')==sha(args.visual_cache/'protocol.json'), 'Pretrained adapter must use the identical foundation cache'
     if args.pretrained_dir:assert args.aux_steps==0 and args.arm=='supervised', 'Matched continuation requires zero warmup and supervised loss'
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
@@ -107,7 +109,7 @@ def main():
     if args.visual_cache:
         foundation_protocol=read(args.visual_cache/'protocol.json');foundation_manifest=read(args.visual_cache/'manifest.json')
         assert foundation_protocol['data']==data_protocol and not foundation_protocol['smoke'] and len(foundation_manifest)==len(manifest)
-        protocol.update(init='fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder',visual_representation='frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space',visual_cache_protocol_sha256=sha(args.visual_cache/'protocol.json'),upstream=foundation_protocol,foundation_cost_included_in_training_seconds=False)
+        protocol.update(init=('archived foundation adapter, fresh AdamW' if args.pretrained_dir else 'fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder'),visual_representation='frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space',visual_cache_protocol_sha256=sha(args.visual_cache/'protocol.json'),upstream=foundation_protocol,foundation_cost_included_in_training_seconds=False)
     (args.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={}
     for part,ids in data_protocol['scenes'].items():
         scenes[part]=[scene_to_gpu(torch.load(args.cache/f'{s}.pt',weights_only=True)) for s in ids]
