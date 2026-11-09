@@ -8,7 +8,7 @@ from track_b.models.structure import StructureMatcher,visible_rays
 
 class Retrieval(nn.Module):
     def __init__(self,d=32):
-        super().__init__();self.q=nn.Linear(d,d);self.k=nn.Linear(d,d);self.v=nn.Linear(d,d);self.out=nn.Linear(d,d)
+        super().__init__();self.q=nn.Linear(d,d);self.k=nn.Linear(d,d,bias=False);self.v=nn.Linear(d,d);self.out=nn.Linear(d,d)
     def forward(self,q,tokens,attention):
         q=self.q(q);k=self.k(tokens);v=self.v(tokens)
         if attention:
