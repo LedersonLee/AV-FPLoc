@@ -61,6 +61,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
             if arm=='audio_shuffle':aa=model.acoustic(scene['spectrum'][(ids+1)%qcount].float())
             elif arm=='audio_zero':aa=model.acoustic(torch.zeros_like(spec))
             elif arm=='rgb_zero':va=model.visual(torch.zeros_like(rgb))
+            pred=va if mode=='visual' else aa
             s=scores(model,va,aa,fp,scene,mode);idx=s.argmax(-1);raw=s.topk(20,dim=-1).indices;logp=s.log_softmax(-1)
             for j,q in enumerate(ids.tolist()):
                 div=diverse_cpu(s[j].cpu().numpy(),cpu_poses) if diversity and arm=='normal' else []
