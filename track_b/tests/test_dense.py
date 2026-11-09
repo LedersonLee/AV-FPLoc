@@ -75,3 +75,10 @@ def test_ray_dense_chunk_gradient_and_zero_control():
     assert sum(float(x.grad.abs().sum()) for x in m.geometry_projection.parameters())>0
     z=RayDenseScorer(geometry='zero').eval();before=z(*args);args[-1][:,3:]=0
     torch.testing.assert_close(before,z(*args))
+
+
+def test_single_modality_isolation():
+    args=list(fixture());v=DenseScorer(mode='visual').eval();a=DenseScorer(mode='acoustic').eval()
+    sv=v(*args);sa=a(*args)
+    original_rgb=args[0];args[0]=torch.randn_like(args[0]);torch.testing.assert_close(sa,a(*args))
+    args[0]=original_rgb;args[1]=torch.randn_like(args[1]);torch.testing.assert_close(sv,v(*args))
