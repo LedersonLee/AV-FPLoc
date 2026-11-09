@@ -1,0 +1,30 @@
+{
+  "feature_batch_exit_code": 0,
+  "completed": [
+    {
+      "percent": 25,
+      "scenes": 6,
+      "queries": 384,
+      "cache_bytes": 50340958,
+      "seconds": 37.664215956116095
+    },
+    {
+      "percent": 50,
+      "scenes": 6,
+      "queries": 384,
+      "cache_bytes": 50340958,
+      "seconds": 35.42276862775907
+    },
+    {
+      "percent": 75,
+      "scenes": 6,
+      "queries": 384,
+      "cache_bytes": 50340958,
+      "seconds": 35.31206124369055
+    }
+  ],
+  "evaluation_status": "six runs scheduled, first live; no outcome claim",
+  "evaluation_observation_session": 11021,
+  "evaluation_runtime_sha": "105ae0f95a393a0c9cd22f79784e1bb65759e57e",
+  "aggregation_requires": "All three levels and both visual variants, matching normal calibration, no severity selection"
+}

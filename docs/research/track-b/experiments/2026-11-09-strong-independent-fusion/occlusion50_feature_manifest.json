@@ -1,0 +1,104 @@
+[
+  {
+    "scene": "108736611_177263226",
+    "split": "val",
+    "queries": 64,
+    "seconds": 6.4073808318935335,
+    "cache_bytes": 8390168,
+    "sha256": "f4265ecfb9de7ca994ce90993a55539b0c46ce13fca89d8680650d65ad0dd610",
+    "input_manifest_sha256": "132144e44e9f7b1b6843e88275dd3d0fa1e3b460d68a1f39cb386f25dfa99d8f",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  },
+  {
+    "scene": "108736635_177263256",
+    "split": "val",
+    "queries": 64,
+    "seconds": 5.813555944012478,
+    "cache_bytes": 8390168,
+    "sha256": "9afaaa7540b1956014e21498fb1787ab3be8a6ef4cefdd852dae70180a535842",
+    "input_manifest_sha256": "6da4d2c67c25013ccc52d01a666e6c7b8ce8cfcd56a5cbe2aad82125a026b35b",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  },
+  {
+    "scene": "105515448_173104512",
+    "split": "val",
+    "queries": 64,
+    "seconds": 5.793552343035117,
+    "cache_bytes": 8390168,
+    "sha256": "3790657a6e0cf22775fbe11d9b0608ce5e39c407c066fce4a636828e0b9f544c",
+    "input_manifest_sha256": "7ce8fa5c8ba04e07773d75b0cfb2233cbcaa05209a258a0da3f50be1978a3d93",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  },
+  {
+    "scene": "108294783_176710410",
+    "split": "val",
+    "queries": 64,
+    "seconds": 5.771735019981861,
+    "cache_bytes": 8390168,
+    "sha256": "d4f3836ff03eb4cd2e5774df7566d7705718e674ef096f88052b8c1a5e0dcbc2",
+    "input_manifest_sha256": "1e67d566716de0279f3da73b346ce2be916cbb94d396b44e8eccba0ad28cfe8c",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  },
+  {
+    "scene": "108294624_176710203",
+    "split": "val",
+    "queries": 64,
+    "seconds": 5.7807297660037875,
+    "cache_bytes": 8390168,
+    "sha256": "50abc4a2c5f1077f84bcca2f949a6cf847fbc3b7dfce7ca0da7078d71cf7b357",
+    "input_manifest_sha256": "7e490c5ba4c08d98a2864867be823ec5c009725205f8ef5a90347f6078cc4382",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  },
+  {
+    "scene": "102344457",
+    "split": "val",
+    "queries": 64,
+    "seconds": 5.855814722832292,
+    "cache_bytes": 8390118,
+    "sha256": "15c3a3e9aff64c9b46a75365e2dcd730e85a58cbcc9195e5bd020aefb17a985e",
+    "input_manifest_sha256": "cf44979d2ec04610c47e89c69d3d7c7a786bdb4311ea398afed253e602ba55c3",
+    "transformed_image_shapes": [
+      [
+        1,
+        3,
+        518,
+        686
+      ]
+    ]
+  }
+]
