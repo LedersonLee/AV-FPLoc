@@ -30,12 +30,20 @@ def main():
             results.append({'run':run,'method':mode,'FP-RIR ref required?':'no','New-scene training required?':'no','Raw Coverage@20':avg('raw20'),'Diverse Coverage@20':avg('diverse20'),
                             'MAP@1':avg('joint'),'SupportNMS@1':'NA','Disc@1':'NA','Visual-degraded@1':'NA','Furnished@1':avg('joint'),'NLL':'NA: stored nll is soft-target CE',
                             'new-scene setup s':'NA','storage MB':'NA','warm query ms':'see isolated diagnostic scope','peak VRAM':max(r['peak_vram_bytes'] for r in rs),'train GPUh':sum(r['training_seconds'] for r in rs)/3600})
+    for run,commit,scenes,queries,note in [
+        ('audit_v1','5449980 + dirty sources later committed as 55c4238',135,71467,'Metadata/path audit; waveform sample132; no model fit'),
+        ('smoke_v1','5449980 + dirty sources later committed as 55c4238',1,8,'Synthetic overfit only; 300 updates'),
+        ('diagnostic_v1','c268a2f3574e7ba82fe566e39c0803e4f6cf737c',7,112,'Frozen local pilot diagnostics and Python I/O trace'),
+        ('geometry_diagnostic_v1','c268a2f + dirty sources later committed as 2555b21',7,0,'FP boundary signature diagnostic only'),
+        ('full_bank_profile','71ad8ee',1,1,'Random-init full375156 candidate inference; no accuracy claim')]:
+        row=dict.fromkeys(fields,'NA');row.update(run_id=run,git_commit=commit,timestamp='2026-11-09 KST',method=run,dataset_version='HSSD or synthetic as noted',split_hash=sha(root/'audit_v1/split_manifest.json'),scene_count=scenes,train_query_count=queries,val_query_count=0,test_query_count=0,status='completed',note=note)
+        registry.append(row)
     for name,rows in [('experiment_registry.csv',registry),('results_master.csv',results)]:
         if rows:
             with (out/name).open('w') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     for name in ('summary','waveform_sample_qc'):
         if name=='summary':(out/'audit_summary.json').write_text(json.dumps(read(root/'audit_v1/summary.json'),indent=2))
-    for filename in ('smoke_v1.json','quantization_corrected.json','stage_identity_audit.json','geometry_diagnostic_v1.json'):
+    for filename in ('smoke_v1.json','quantization_corrected.json','stage_identity_audit.json','geometry_diagnostic_v1.json','full_bank_profile.json'):
         (out/filename).write_text(json.dumps(read(root/filename),indent=2))
     (out/'pilot_aggregate_results.json').write_text(json.dumps(summaries,indent=2))
     diag=read(root/'diagnostic_v1.json');compact={k:v for k,v in diag.items() if k not in ('rows','io_trace')};compact['io_trace']={k:v for k,v in diag['io_trace'].items() if k!='paths'}
