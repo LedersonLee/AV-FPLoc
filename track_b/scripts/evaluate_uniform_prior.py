@@ -16,7 +16,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--cache',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--code-sha',required=True);a=p.parse_args()
  protocol=read(a.cache/'protocol.json');manifest={r['scene']:r for r in read(a.cache/'manifest.json')};torch.set_num_threads(2);rows=[]
  for sid in protocol['scenes']['val']:
-  path=a.cache/f'{sid}.pt';assert sha(path)==manifest[sid]['sha256'];scene=torch.load(path,weights_only=True,map_location='cpu');poses=scene['candidates'][:,:3];n=len(poses)
+  path=a.cache/f'{sid}.pt';assert sha(path)==manifest[sid]['cache_sha256'];scene=torch.load(path,weights_only=True,map_location='cpu');poses=scene['candidates'][:,:3];n=len(poses)
   for q,gt in enumerate(scene['gt']):
    dist=(poses[:,:2]-gt[:2]).norm(dim=-1);dyaw=poses[:,2]-gt[2];yaw=torch.atan2(dyaw.sin(),dyaw.cos()).abs();ok=(dist<=1+1e-6)&(yaw<=math.pi/6+1e-6);k=int(ok.sum())
    rows.append(dict(scene=sid,query=scene['query_ids'][q],candidates=n,success_cells=k,joint=k/n,r1=float((dist<=1+1e-6).sum())/n,fine=float((dist<=.1+1e-6).sum())/n,random20=inclusion(n,k),nll=math.log(n),entropy=math.log(n),oracle_joint=float(k>0),oracle_fine=float((dist<=.1+1e-6).any())))
