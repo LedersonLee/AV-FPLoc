@@ -73,3 +73,5 @@ All131 scenes/8,384 feature observations verified;22 overlapping pilot tensors e
 [First cell completed results](first_cell_results.md):14,592 records verified; full19 fixed Joint27.166% vs visual20.285%, difference+6.880pp[4.907,8.991]. Raw20 falls and ECE worsens; neither scaling gain nor independent validation is established.
 
 [Uniform-pose baseline](uniform_prior.md): exact expected Joint0.4313%; first-cell acoustic exceeds it by3.8451pp[3.1780,4.5852]. This weak null does not replace learned map-only controls or independent validation.
+
+[Exact map duplication audit](map_duplicate_audit.md):131 input hashes verified; no exact footprint duplicates under translation, quarter-turns and reflection. Approximate/source-family/upstream independence remains unresolved.

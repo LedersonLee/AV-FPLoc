@@ -7,7 +7,7 @@ Status: **overall objective incomplete**. This is a work-scope audit, not a new 
 | Protocol item | Current authoritative evidence | Remaining work / limit |
 |---|---|---|
 | Stage0 workspace and routing | study15 audit_report, manifests and bank checks; repository AGENTS and canonical index | Later source additions must retain original exclusions and no Test access |
-| Scene-held-out split and upstream exposure | 16 Train/6 Val frozen cohort; all1408 source hashes/alignment checked in study17; larger metadata audit | Reused Val is not independent; near-duplicate geometry beyond known family IDs and upstream foundation exposure are not fully excluded |
+| Scene-held-out split and upstream exposure | 16 Train/6 Val frozen cohort; all1408 source hashes/alignment checked in study17; larger metadata audit; study27 exact transformed-footprint audit131 maps,0 duplicates | Reused Val is not independent; near-duplicate geometry beyond known family IDs and upstream foundation exposure are not fully excluded |
 | Bank/frame/rig QA | geometry/ray/dense tests and study15/17 actual cache audit | Numerical oracle Joint100% is not proof of fine accuracy or strict point-in-footprint validity for every future dataset |
 | V0 map-only/random prior | Study27 exact uniform prior on19Val/1,216queries: Joint0.4313%; first-cell acoustic−prior+3.8451pp[3.1780,4.5852] | Uniform null only; learned map-only/query-distribution priors and final selected model comparison remain |
 | V1/A1 full-bank scoring | study17 scratch visual/acoustic, study19 foundation visual | Full eligible training scale and final independent evaluation unfinished |

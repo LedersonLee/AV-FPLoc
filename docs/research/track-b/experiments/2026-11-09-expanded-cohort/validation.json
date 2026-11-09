@@ -55,5 +55,9 @@
   "uniform_prior_exit_code": 0,
   "uniform_prior_registration_exit_code": 0,
   "uniform_prior_query_keys": 1216,
-  "uniform_prior_combinatorial_checks": 495
+  "uniform_prior_combinatorial_checks": 495,
+  "map_duplicate_audit_exit_code": 0,
+  "map_duplicate_audit_scenes": 131,
+  "map_duplicate_groups": 0,
+  "map_duplicate_cross_split_groups": 0
 }
