@@ -22,6 +22,8 @@ def main():
                 fp_variant='binary free/unknown + boundary rays' if run=='pilot_rays_v1' else 'binary free/unknown + zero geometry' if run=='pilot_zero_v1' else 'binary free/unknown local patch',
                 grid_xy=.5,yaw_bins=12,encoder_regime='joint from scratch',pretrained_checkpoint_hash='none',parameter_count=r['parameter_count'],gpu='RTX4090',seed=r['seed'],train_steps=r['steps'],gpu_hours=r['training_seconds']/3600,
                 best_val_metric='not selected: final step fixed',test_metric='not evaluated',status='completed',note='Exploratory; train wall GPUh, not utilization; shared GPU; nll field is soft-target CE')
+            if run=='pilot_zero_v1':
+                row['status']='artifact-complete; process exit143; see completion_validation.json'
             registry.append(row)
         for mode in dict.fromkeys(r['mode'] for r in rr):
             rs=[r for r in rr if r['mode']==mode]
@@ -96,7 +98,7 @@ def main():
 - 작은 from-scratch feasibility 모델이다. UnLoc/B2+GEOQ의 강한 동조건 재현은 아직 없다. 과거 성능을 비교표에 옮기지 않았다.
 - Local visual/acoustic/concat/noninteraction/joint는 allocated parameter수52,324개가 같지만 활성 경로·연산량은 다르다. F3의 엄밀한 capacity-matched 비교로 주장하지 않는다.
 - Ray 대 zero는 동일 모듈/초기값/관측 순서/학습 step의 기하 입력 대조다. 추가 FP 정보 효과와 물리적 acoustic mechanism은 구분해야 한다.
-- Frozen/partial, variable camera intrinsics, late RIR, 직접파/후기파 개입, 시각 저하, furniture shift, calibration, full0.25m/36학습, 독립 Test, OOF discriminator는 미완료다.
+- Frozen/partial, variable camera intrinsics, late RIR, 직접파/후기파 재학습 대조, 시각 저하, furniture shift, calibration, full0.25m/36학습, 독립 Test, OOF discriminator는 미완료다.
 - `nll`로 저장된 필드는 실제로 soft-target cross entropy다. 이 보고서에서는 categorical NLL로 사용하지 않으며 정식 NLL은 NA다.
 - 0.5m/12bin pilot full bank의 fine oracle는12.5%; fine0%를 숨기지 않는다. 0.25m/36 audit의 fine upper bound는 별도 보고한다.
 - 일부 실행은 같은 GPU에서 겹쳤다. 학습 wall time 및 warm timing은 정확도 검증의 비용 기록이며 방법 간 최종 speed ranking이 아니다.

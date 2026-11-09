@@ -37,7 +37,7 @@ def main():
               if seed==42:
                 d=p-gt;dist=d[:,:2].norm(dim=-1);angle=torch.atan2(d[:,2].sin(),d[:,2].cos()).abs();ok=(dist<=1)&(angle<=math.pi/6+1e-6)
                 rows.append(dict(split=split,scene=sid,seed=seed,mode='uniform_random_expectation',query=qid,joint=float(ok.float().mean()),r1=float((dist<=1).float().mean()),fine=float((dist<=.1).float().mean()),raw20=None))
-            # Quantized random initial FP features: a diagnostic of local patch collisions.
+            # Quantized trained FP features: a diagnostic of local patch collisions.
             if seed==42:
               m=models[(seed,'joint')];rgb,rir,_,_=scene['data'][0];v,a,fp=m.encode(rgb,rir,scene['fp'])
               captured=[]
