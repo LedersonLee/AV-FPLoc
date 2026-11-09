@@ -37,3 +37,15 @@ def test_match_equals_explicit_squared_distance():
     m=StructureMatcher();o=torch.rand(3,16);fp=torch.rand(41,16);w=torch.rand(41,16)
     expected=-50*((o[:,None]-fp[None]).square()*w).sum(-1)/w.sum(-1)
     torch.testing.assert_close(m.match(o,fp,w),expected,atol=2e-5,rtol=2e-5)
+
+
+def test_rigid_map_frame_and_raw_geometry_control():
+    from track_b.data.geometry import rigid_transform
+    rgb,rir,fp,cal,p=fixture();spec=rir_spectrum(rir);fp=fp[:1]
+    p=torch.cat([p,torch.rand(len(p),16),torch.ones(len(p),16)],1);m=StructureMatcher().eval()
+    before=m(rgb,spec,fp,cal,p)
+    moved=p.clone();moved[:,:3]=torch.tensor(rigid_transform(p[:,:3].numpy(),.7,[3.,-2.]),dtype=torch.float32)
+    transformed={'origin':torch.tensor([3.,-2.]),'spacing':.25,'map_angle':.7}
+    torch.testing.assert_close(before,m(rgb,spec,fp,transformed,moved),atol=3e-5,rtol=1e-5)
+    raw=m(rgb,spec,fp,cal,p,geometry_residual=False)
+    torch.testing.assert_close(raw,m(rgb,spec,torch.zeros_like(fp),cal,p,geometry_residual=False))
