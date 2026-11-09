@@ -21,3 +21,6 @@ Audio19장면/1,216질의 생성 완료:clean preprocessing의bitwise 재현 불
 이후 occlusion25→occlusion50→occlusion75→brightness→audio_shuffle→audio_noise20을 순차 평가하는 실행을 시작했다(handle48041). 각 조건은19Val×3seed×64×5arms×3methods=54,720 primary 행이 예상된다. 출력 `eval_<condition>_v1`, 로그 동일명.log. 실행 source SHA는위ba040da, evaluator 구현은bf9a825에서 변경되지 않았다. 정상98,496행 중43,776개 secondary scale 진단은 열화 primary와 섞지 않는다. 정상 평가(handle98179)와 함께 실행하므로 측정 elapsed는 단독 GPU latency라고 부르지 않는다.
 
 재현은 위 evaluator 명령의 `--condition`과 새 `--out`만 각 사전 지정 조건으로 변경한다. 새 feature verifier는 기존 brightness 기본값을 유지하며, 가림에는 `--brightness 1 --center-occlusion 0.25/0.50/0.75`를 지정하고 기존6Val pilot 캐시를 입력한다. 현재 전체 조건의 효과/CI/negative-transfer 결론은 아직 없다.
+
+
+정상 조건 전체 평가 완료: 98,496 records, 29,184 ray records, U0 replay 10,944 checks 통과. evaluator source는 `bf9a825cf58f584e6803f5026977fc1b32c7aafb`. 가림 25%는 54,720개 고유 결과 및 유한값 검사를 통과했고, 15개 그룹의 요약 평균과 원시 결과의 재계산 값이 1e-9 이내로 일치했다. 가림 50%는 실행 중이며, 나머지 조건은 같은 순차 작업에서 이어진다.

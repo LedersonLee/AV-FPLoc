@@ -11,3 +11,6 @@ Ray 진단은각방향,visible/outside-FoV,5m이하/초과 범위의MAE/Laplace 
 첫새단위검사에서 상수float32 scale의std에반올림잔차가남아 Pearson을계산해NaN이발생했다(1passed/1failed). 상수판별을표준편차대신max−min 범위로수정했다. 재검증은전체51passed,기존autocast경고2개,1.96초. 실패를성공으로소급표시하지않으며변경은집계에만적용했다. 실행중모델/평가코드는수정하지않았다.
 
 재현: avfploc:cu124-clean, `python -m pytest -q -p no:cacheprovider track_b/tests`; 모든조건완료후 `python -m track_b.scripts.summarize_ray_uncertainty --root <study30-root> --out <new-output> --code-sha 8cef748f29a4b424119cdbf6056270096b713764`. 현재어떤효과/contrast도최종확정하지않았다.
+
+
+정상 대비 열화 변화(각 U0–U4 및 V/A/fixed)와 정상 조건 original-scales 대비 primary 차이를 기존 장면 paired bootstrap으로 집계한다. 결과에 따라 보정값을 선택하지 않는다. 관련 분석 단위/constant-scale 검사 2개 통과. 집계 source: `652dbbcbd12f10e69af6ac5e92feeec667f2ca34`.
