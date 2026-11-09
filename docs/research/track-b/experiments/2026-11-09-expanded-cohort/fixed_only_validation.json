@@ -1,0 +1,13 @@
+{
+  "rows_exact": 4608,
+  "unimodal_replay_checks": 2304,
+  "selection_empty": true,
+  "methods": [
+    "acoustic",
+    "fixed",
+    "fixed_audio_shuffle",
+    "visual"
+  ],
+  "reference_summary_sha256": "76c81141dd9075699d9a25b9f838d5a8455217ac1e6d5a065f6ad9ea579dbeec",
+  "run_summary_sha256": "909df6b72a473922c938ffe7c2ae11cd7e1346ebbfc6c3567101d4a82dfa1f5e"
+}

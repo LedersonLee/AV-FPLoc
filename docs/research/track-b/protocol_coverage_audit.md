@@ -23,7 +23,7 @@ Status: **overall objective incomplete**. This is a work-scope audit, not a new 
 | B2ref and external visual refs | Isolated historical UnLoc replay; B2 deployment storage metadata study18 | Same-grid fair B2/GEOQ accuracy/cost and primary-source external reference boundary review recorded in external_reference_review.md; full-paper/reproduction feasibility still incomplete; historical results not substituted |
 | Physical/material/furniture shifts | Selected1408 samples audited furnished_native_scene; materials/transmission flags reported | Compatible paired observations unavailable in current cohort; generation or verified alternative data still needed; Test clutter cannot be borrowed for selection |
 | Cross-dataset | No verified physically aligned second dataset | Conditional on valid data/calibration; no unsupported cross-dataset claim |
-| Full scale and independent final evaluation | Pilot/development results only | Study27 preflight freezes112Train/19Val×64queries and structural cache verification is complete with exact22-scene pilot overlap; upstream feature extraction running; scaled fitting/evaluation, method freeze and appropriately independent evaluation remain; do not unlock Test during design |
+| Full scale and independent final evaluation | Pilot/development results only | Study27 preflight freezes112Train/19Val×64queries and structural cache verification is complete with exact22-scene pilot overlap; upstream features completed/verified across131 scenes with exact22-scene pilot overlap; fixed2×2 scaling fits running, fixed-only evaluator replayed4,608 existing records exactly; scaled evaluation, method freeze and appropriately independent evaluation remain; do not unlock Test during design |
 
 ## Metrics, costs and artifacts
 

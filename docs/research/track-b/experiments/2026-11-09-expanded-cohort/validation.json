@@ -34,5 +34,9 @@
   "feature_scenes": 131,
   "feature_queries": 8384,
   "feature_pilot_exact_scenes": 22,
-  "scaling_runner_session": 19640
+  "scaling_runner_session": 19640,
+  "fixed_only_replay_exit_code": 0,
+  "fixed_only_verifier_exit_code": 0,
+  "fixed_only_exact_records": 4608,
+  "fixed_only_unimodal_checks": 2304
 }

@@ -1,0 +1,11 @@
+# Prespecified fusion evaluation replay
+
+2026-11-09. Completed implementation verification, not a new accuracy improvement. The scaling plan fixes visual/acoustic weights at0.85/0.15 and temperature1. The prior evaluator also selected calibration parameters from development data; an explicit `--fixed-only` path now excludes that selection while retaining visual-only, acoustic-only, fixed fusion and shuffled-audio controls.
+
+## Evidence
+
+On the previously evaluated16-Train/6-Val models, all4,608 per-query/method metric records are exactly equal to the corresponding recorded fixed arms. All2,304 unimodal replay checks passed. Selection is empty; the three evaluated weights0/0.85/1 and sole temperature1 serve the declared baselines, with no outcome-dependent selection. This checks compatibility of the new evaluator against existing evidence; it does not establish generalization or improve performance. The prior6 Val scenes remain reused/Exploratory. No Test data were accessed.
+
+Hypothesis: removing the unused calibration branch preserves declared fixed-arm outputs. Competing explanation: refactoring changes the actual fields, temperature or selection. The exact keyed equality check supports output preservation on this cohort. All matched keys, checkpoint hashes, cache-manifest hash and scene/seed lists are checked. No new model was fitted for this test; new baseline/ablation accuracy and statistical uncertainty are not applicable. Expanded19-scene runtime remains to be verified after those checkpoints finish.
+
+Evaluation source `d1e35c176c1a08ff2f4b1790d0cdff0f9605d24d`, checker source `5cf55cbde198607ffa7d4c2b9a6e49f567211c90`. Both exited0. Reproduce with `python -m track_b.scripts.independent_fusion --cache <structure/cache> --run <structure/supervised_v1> --visual-run <foundation/learned_fp_w1000_anchor1000_v1> --visual-cache <foundation/features_v1> --out <fresh-output> --fixed-only`; then `python -m track_b.scripts.verify_fixed_fusion_replay --run <fresh-output> --reference <foundation/independent_fusion_anchor_v1> --out <fresh-verification>`. Docker avfploc:cu124-clean, GPU, non-root/network-disabled; detailed outputs remain under external scale root fixed_only_replay_v1 and fixed_only_verification_v1. Protocol, aggregate and validation are copied here; raw predictions and weights are excluded from Git.

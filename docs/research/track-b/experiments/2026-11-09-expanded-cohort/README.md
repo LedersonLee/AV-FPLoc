@@ -65,3 +65,5 @@ Expanded visual-feature extraction started in session93487, externalfeatures_v1,
 ### Expanded feature gate and scaling launch
 
 All131 scenes/8,384 feature observations verified;22 overlapping pilot tensors exactly equal. See completed_feature_validation.json. The fixed2×2 runner is active (source5cf803681c2d144f3a620bc00c1ab6b841e48e7c);36 planned stage fits are not completed results. See scaling_protocol.md and scaling_runner_protocol.json. Encoder-regime experiment separately has9/9 frozen and1/9 partial fits complete at this snapshot; its final comparison still awaits all27 fits.
+
+[Fixed evaluation verification](fixed_evaluation.md):4,608 existing fixed-arm records reproduced exactly,2,304 unimodal checks passed, no calibration parameter selection. Expanded model evaluation remains pending.
