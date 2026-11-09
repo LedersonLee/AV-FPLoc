@@ -61,3 +61,8 @@ def test_training_regimes_after_pretraining():
         if regime=='frozen':assert active==1
         if regime!='joint':assert all(x.grad is None for b in (m.visual.conv,m.acoustic.conv,m.floorplan) for x in b.parameters())
         if regime=='partial':assert m.visual.head[-2].weight.grad.abs().sum()>0
+
+def test_structure_supports_double_precision_audit():
+ rgb,rir,fp,cal,p=fixture();p=torch.cat([p,torch.rand(len(p),16),torch.ones(len(p),16)],1).double();spec=rir_spectrum(rir).double();m=StructureMatcher().double().eval();cal={**cal,'origin':cal['origin'].double()}
+ with torch.no_grad():out=m(rgb.double(),spec,fp[:1].double(),cal,p)
+ assert out.dtype==torch.float64 and torch.isfinite(out).all()

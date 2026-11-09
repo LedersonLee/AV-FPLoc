@@ -52,7 +52,7 @@ class StructureMatcher(nn.Module):
 
     def fp_descriptors(self,feature,candidates,calibration):
         origin=calibration['origin']; spacing=calibration['spacing']
-        angle=torch.as_tensor(calibration.get('map_angle',0.),device=candidates.device);c,s=angle.cos(),angle.sin()
+        angle=torch.as_tensor(calibration.get('map_angle',0.),device=candidates.device,dtype=candidates.dtype);c,s=angle.cos(),angle.sin()
         rotation=torch.stack([torch.stack([c,-s]),torch.stack([s,c])])
         xy=(candidates[:,:2]-origin)@rotation;yaw=candidates[:,2]-angle
         dx=yaw.cos()[:,None]*self.stencil[:,0]-yaw.sin()[:,None]*self.stencil[:,1]
