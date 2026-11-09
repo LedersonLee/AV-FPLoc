@@ -69,3 +69,5 @@ Study22 final F1 evaluation source `6e6f3a5380b6b124ebfdb978b4c1978baad7c275`; n
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실험 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | Ray representation & joint learning / ray_joint_20261109 | 2026-11-09 | A | 완료·혼합/음성결과:228checkpoint·1542배열 재생 일치, fullbank2880+conditioned1728기록 검증. Chirp−raw +2.897pp; attention−concat +3.060pp이나 interaction-disabled 우위 미확정. 잔차가중 attention +2.181pp, anchor선택 악화. B2+GEOQ 미개선 및 fine 손해 보존. | Exploratory | [연구 보고서](track-a/experiments/2026-11-09-ray-joint/RESEARCH_REPORT.md) | 18f04ce (입력), 570df35 (결정성 수정), 338a449 (calibration), 6373431 (donor 수정), ff5601d (Transfer), 121fd73 (방향순열), 00502cb (최종 분석); 전체 실제 실행 SHA·소스 해시는 execution_receipts.json/source_inventory.json |
+
+| 30 | [Ray uncertainty diagnostic](track-b/experiments/2026-11-09-ray-uncertainty/README.md) | preflight 진행: 지정 F1·131장면 cache/feature 해시 및 원시 지표 일치. U0 14,592행 재현 불일치0; uncertainty 학습 미실행. | 2026-11-09 | Track B | Exploratory | audit/replay `96db20f075ded8f5c66234496c7b2dfbfb3741cf`; uncertainty fit UNRECORDED(미실행) |

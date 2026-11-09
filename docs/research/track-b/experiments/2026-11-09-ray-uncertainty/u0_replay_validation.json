@@ -1,0 +1,49 @@
+{
+  "code_sha": "96db20f075ded8f5c66234496c7b2dfbfb3741cf",
+  "rows": 14592,
+  "original_f1_rows": 3648,
+  "scenes": 19,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "metrics": [
+    "joint",
+    "r1",
+    "fine",
+    "raw20",
+    "diverse20",
+    "nll",
+    "entropy",
+    "raw5",
+    "raw10",
+    "strict_05_15",
+    "strict_02_10",
+    "normalized_entropy",
+    "true_grid_rank",
+    "true_grid_score_ties"
+  ],
+  "mismatches": [],
+  "max_abs_difference": {
+    "joint": 0,
+    "r1": 0,
+    "fine": 0,
+    "raw20": 0,
+    "diverse20": 0,
+    "nll": 0,
+    "entropy": 0,
+    "raw5": 0,
+    "raw10": 0,
+    "strict_05_15": 0,
+    "strict_02_10": 0,
+    "normalized_entropy": 0,
+    "true_grid_rank": 0,
+    "true_grid_score_ties": 0
+  },
+  "rtol": 1e-05,
+  "atol": 2e-05,
+  "reference_predictions_sha256": "219e78bdf68026ff8e4af5d18473502462f247fec8f29bee69eaefcdd471f53e",
+  "replay_predictions_sha256": "219e78bdf68026ff8e4af5d18473502462f247fec8f29bee69eaefcdd471f53e",
+  "scope": "Full cohort metric replay; no archived historical full-score arrays or selected indices to prove bitwise field/index equality"
+}

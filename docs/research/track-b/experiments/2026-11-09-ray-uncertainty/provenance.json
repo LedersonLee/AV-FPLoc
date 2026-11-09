@@ -1,0 +1,50 @@
+{
+  "code_sha": "96db20f075ded8f5c66234496c7b2dfbfb3741cf",
+  "source_prompt_sha256": "c7ac181ac814f8d1f7deb5c9d49e1a166f07eec667b3fd44d26288ade71cc246",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "bcf52c35b3dc2201bd04c98a1ed8e8d3c8d44ad55f04e08aabd5d1a586396777"
+    },
+    {
+      "git_copy": "decisions.md",
+      "sha256": "2809ab1eb29fd0fedfc4f86c7fa5634196657b573342bcf64ada7a8cab924ec6"
+    },
+    {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "c00ba2b4fc1764d5237a036a93dea4eb9afc2962dc402da340da7762913675f2"
+    },
+    {
+      "git_copy": "input_validation.json",
+      "sha256": "301543966551fadd9b795199078173dd9d765ad63e8725086c889e9dbce2d854"
+    },
+    {
+      "git_copy": "preflight_report.md",
+      "sha256": "fec7c9c0099ce163f0a809d64d65704863ae04b88c17d593d1dca31978d9881d"
+    },
+    {
+      "git_copy": "protocol.json",
+      "sha256": "b215a091a6da6c6807d72d82fb6f6cf020ddaa375897a1de4810456b375572fa"
+    },
+    {
+      "git_copy": "reproduction.md",
+      "sha256": "fdde6dfaaa2676d857889227a06671f0b3192f714e49333fad1ebff04451ade7"
+    },
+    {
+      "git_copy": "results.md",
+      "sha256": "5d6ac9f5d96e741bb789310798e5175bef4636b75b6f47f56d309f0b05c4b2f2"
+    },
+    {
+      "git_copy": "u0_replay_summary.json",
+      "sha256": "376e62654a41ee1dd682f62b83af048a8e076a893b202223db2bb25f5eaa340b"
+    },
+    {
+      "git_copy": "u0_replay_validation.json",
+      "sha256": "e5c0e417a78f578931ae025e38e813fe03bdf7e79c460e2ff6b80b262c639f44"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "e4806210bb35e05509c414d3a94b396cce41d7fe4c5a34a5c3096a0019597b9a"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+run_id,git_commit,status,note
+preflight_v1,96db20f075ded8f5c66234496c7b2dfbfb3741cf,completed,Input integrity only
+u0_replay_v1,96db20f075ded8f5c66234496c7b2dfbfb3741cf,completed,Full19Val three seeds no parameter selection

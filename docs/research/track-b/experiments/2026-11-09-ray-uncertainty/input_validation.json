@@ -1,0 +1,90 @@
+{
+  "code_sha": "96db20f075ded8f5c66234496c7b2dfbfb3741cf",
+  "status": "input integrity passed; GPU replay still required",
+  "checkpoints": {
+    "visual_42": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_visual_joint_attempt1/visual_42.pt",
+      "sha256": "efb88c7099290a16573ce8356b8b2d84e869fa61a474b7b9b40ecc4027a63c3a"
+    },
+    "visual_43": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_visual_joint_attempt1/visual_43.pt",
+      "sha256": "7fce74e8f2a23e8efc84e89a71049ae38c1edf59c4774e45124ac26c260e7e28"
+    },
+    "visual_44": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_visual_joint_attempt1/visual_44.pt",
+      "sha256": "3f040acc02411fe5fdfd31a7934202113339b6d285fbf875a9d901d14cd347c5"
+    },
+    "acoustic_42": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_acoustic_attempt1/acoustic_42.pt",
+      "sha256": "f5b89603cb7a654f2f5d5aafd2069a2f8e9f552619963b26c1548f867adbe9c4"
+    },
+    "acoustic_43": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_acoustic_attempt1/acoustic_43.pt",
+      "sha256": "0ddb7161bb89c8deff44595c5251636dd8afe88e60d9e2545f4d3eaf8d24dcb1"
+    },
+    "acoustic_44": {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/scaling_fits_v1/n112_budget1_acoustic_attempt1/acoustic_44.pt",
+      "sha256": "2bbacde451c3052fbe8127920490a8f63ece3d3d7cd83ccebdc755374806aae5"
+    }
+  },
+  "cache_checks": [
+    {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/cache_v1",
+      "scenes": 131,
+      "queries": 8384,
+      "hashes_match": true
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/features_v1",
+      "scenes": 131,
+      "queries": 8384,
+      "hashes_match": true
+    }
+  ],
+  "reference_summary": {
+    "visual": {
+      "joint": 0.21847587719298245,
+      "r1": 0.2382127192982456,
+      "fine": 0.015076754385964912,
+      "raw20": 0.6792763157894737,
+      "diverse20": 0.815515350877193,
+      "nll": 9.68863028117962,
+      "entropy": 10.495705296595892
+    },
+    "acoustic": {
+      "joint": 0.07044956140350878,
+      "r1": 0.11074561403508772,
+      "fine": 0.0021929824561403508,
+      "raw20": 0.29523026315789475,
+      "diverse20": 0.581140350877193,
+      "nll": 9.56980396362773,
+      "entropy": 10.057301285235505
+    },
+    "fixed_audio_shuffle": {
+      "joint": 0.10416666666666667,
+      "r1": 0.1299342105263158,
+      "fine": 0.005756578947368421,
+      "raw20": 0.32922149122807015,
+      "diverse20": 0.575109649122807,
+      "nll": 9.8297532241334,
+      "entropy": 10.538780924520994
+    },
+    "fixed": {
+      "joint": 0.34402412280701755,
+      "r1": 0.3665021929824561,
+      "fine": 0.030153508771929825,
+      "raw20": 0.7047697368421053,
+      "diverse20": 0.8966557017543859,
+      "nll": 9.463878732370702,
+      "entropy": 10.487120142369939
+    }
+  },
+  "protocol_hashes": {
+    "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/cache_v1/protocol.json": "7222586d45b1bbc2f67bf878b081a8b75282f0a6206bcef1ca4da25a8742b91b",
+    "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/features_v1/protocol.json": "32569e216e08f401a3fac02d5d13bc7e3874cce6fc4ffabd60dfd63199298d07",
+    "/home/jeongeonlee/track1/experiments/track_b_scale_20261109/n112_budget1_evaluation_v1/protocol.json": "ed88df2990a000c17c5b8fa1ed5eb195f199a975d2ab823cd29b7fb949566a6a"
+  },
+  "reference_predictions_sha256": "219e78bdf68026ff8e4af5d18473502462f247fec8f29bee69eaefcdd471f53e",
+  "test_accessed": false,
+  "scope": "Cached artifacts and per-query metric consistency; not raw-file rehash, full-field replay, or independent test"
+}

@@ -1,0 +1,83 @@
+{
+  "study_id": 30,
+  "status": "preflight; U0 replay running; no uncertainty fit",
+  "source_prompt_sha256": "c7ac181ac814f8d1f7deb5c9d49e1a166f07eec667b3fd44d26288ade71cc246",
+  "data_root": "/home/jeongeonlee/track1/experiments/track_b_scale_20261109",
+  "output_root": "/home/jeongeonlee/track1/experiments/track_b_uncertainty_20261109",
+  "baseline": "n112_budget1 independent F1",
+  "train_scenes": 112,
+  "val_scenes": 19,
+  "queries_per_scene": 64,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "grid_m": 0.25,
+  "yaw_bins": 36,
+  "ray_bins": 16,
+  "evidence": "Exploratory reused development; no Test access",
+  "training": {
+    "steps": 1000,
+    "batch": 32,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "sampling": "seeded uniform Train scene then uniform query sampling with replacement",
+    "selection": "scheduled final step only",
+    "augmentation": "none; clean Train only",
+    "loss": "mean visible-direction Laplace NLL for V plus mean all-direction Laplace NLL for A",
+    "frozen": "all upstream, local observation/mean-ray, FP, and modality log-scale parameters"
+  },
+  "head": {
+    "input": "frozen observation predictor penultimate128 feature plus ray sin/cos; no candidate/GT/IDs",
+    "architecture": "shared per-ray Linear130->32 GELU Linear32->1 per modality",
+    "scale": "clamp(softplus(raw)+0.001,max=1.0)",
+    "initial_scale": 0.1,
+    "units": "log1p(metres)/log(21)",
+    "basis": "bounded normalized targets; floor for numerical stability; verify Train range before smoke"
+  },
+  "controls": {
+    "U0": "unchanged squared-distance F1",
+    "U1": "constant scale per modality/seed from clean Train mean absolute residual, clamped to same range",
+    "U2": "inference-only mean of U3 scales over visible V directions / all A directions; broadcast",
+    "U3": "ray-wise learned scale",
+    "U4": "fixed seed20261109 permutation within visible V directions / all A directions; preserve relevant multiset"
+  },
+  "likelihood": {
+    "formula": "-weighted_mean(abs(fp_descriptor-mean)/b + log(2*b))",
+    "weight": "(.25+.75*candidate_hit) times visual FoV mask for V; all directions for A",
+    "target_hit_policy": "preserve original auxiliary loss: target_hit not a hard exclusion; unknown boundaries not physical wall labels",
+    "primary_scale": "raw normalized-ray Laplace likelihood; fixed temperature1 and V.85/A.15; original learned log-scales used only by preserved U0",
+    "scale_diagnostic": "predeclared clean-only secondary evaluation multiplying U1-U4 modality fields by frozen original modality exp(log_scale); no selection; report field spread",
+    "warning": "U0-vs-U3 also changes criterion/scale; not uncertainty-only causal contrast"
+  },
+  "conditions": [
+    "normal",
+    "central_occlusion25",
+    "central_occlusion50",
+    "central_occlusion75",
+    "brightness0.2",
+    "within_scene_audio_shuffle",
+    "body_RIR_additive_Gaussian_SNR20dB"
+  ],
+  "noise": {
+    "seed": 20261109,
+    "snr": "joint six-channel signal RMS before added noise, deterministic query-key PRNG; recompute standard RMS normalization/STFT/IPD",
+    "scope": "synthetic RIR perturbation, not recording noise through ESS deconvolution"
+  },
+  "contrasts": [
+    "U3-U1",
+    "U3-U2",
+    "U3-U4",
+    "U3-U0"
+  ],
+  "bootstrap": {
+    "unit": "scene; seeds averaged within scene",
+    "scenes": 19,
+    "draws": 10000,
+    "seed": 20261109
+  },
+  "gate": "No uncertainty smoke or fit until U0 full cohort replay passes; do not tune on Val outcomes",
+  "remaining": "Implement/test head and scorer, validate Train range, then one-seed small-Train smoke; all declared shifts must finish before inference of efficacy"
+}
