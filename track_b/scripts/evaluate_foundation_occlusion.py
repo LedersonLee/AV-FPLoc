@@ -6,7 +6,7 @@ import torch
 from track_b.models.foundation_interaction import FoundationInteractionMatcher
 from track_b.scripts.train_structure import scene_to_gpu,attach_visual_features
 from track_b.scripts.train_foundation_interaction import read,sha
-from track_b.eval.metrics import pose_statistics
+from track_b.eval.extended_metrics import extended_pose_statistics as pose_statistics,reliability_statistics
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--run',type=Path,required=True);ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--foundation',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();protocol=read(a.run/'protocol.json');assert len(read(a.run/'summary.json'))==9,'Await all matched fits';a.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2)
@@ -28,7 +28,8 @@ def main():
          if delta:mismatches.append(dict(mode=mode,seed=seed,scene=sid,query=row['query'],differences=delta))
      print('DONE',mode,seed,sid,flush=True)
    del model
- summary=[dict(mode=mode,occlusion_percent=level,**{k:float(np.mean([r[k] for r in rows if r['mode']==mode and r['occlusion_percent']==level])) for k in ['joint','r1','fine','raw20','diverse20','nll','entropy']}) for mode in protocol['modes'] for level in levels]
- for name,value in [('predictions',rows),('summary',summary),('normal_replay_mismatches',mismatches),('cached_scoring_cost',cost)]:(a.out/f'{name}.json').write_text(json.dumps(value,indent=2))
+ summary=[dict(mode=mode,occlusion_percent=level,**{k:float(np.mean([r[k] for r in rows if r['mode']==mode and r['occlusion_percent']==level])) for k in ['joint','r1','fine','raw5','raw10','raw20','diverse20','nll','entropy','strict_05_15','strict_02_10','normalized_entropy','translation_error_m','yaw_error_deg']}) for mode in protocol['modes'] for level in levels]
+ reliability=[dict(mode=mode,occlusion_percent=level,**reliability_statistics([r for r in rows if r['mode']==mode and r['occlusion_percent']==level])) for mode in protocol['modes'] for level in levels]
+ for name,value in [('reliability',reliability),('predictions',rows),('summary',summary),('normal_replay_mismatches',mismatches),('cached_scoring_cost',cost)]:(a.out/f'{name}.json').write_text(json.dumps(value,indent=2))
  print(json.dumps(summary));print('COMPLETE',flush=True)
 if __name__=='__main__':main()
