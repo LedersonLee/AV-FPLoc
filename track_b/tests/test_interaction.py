@@ -19,3 +19,15 @@ def test_separable_has_no_cross_modality_score_interaction():
  with torch.no_grad():
   f=m(rgb,spec,fp,cal,p);v=m(rgb.flip(0),spec,fp,cal,p);a=m(rgb,spec.flip(0),fp,cal,p);both=m(rgb.flip(0),spec.flip(0),fp,cal,p)
  torch.testing.assert_close(f+both,v+a,atol=3e-5,rtol=1e-5)
+
+def test_interaction_rigid_frame_and_new_map_without_labels():
+ import inspect
+ from track_b.data.geometry import rigid_transform
+ rgb,rir,fp,cal,p=fixture();spec=rir_spectrum(rir);fp=fp[:1];p=torch.cat([p,torch.rand(len(p),16),torch.ones(len(p),16)],1)
+ m=InteractionMatcher().eval();assert 'gt' not in inspect.signature(m.forward).parameters
+ with torch.no_grad():
+  before=m(rgb,spec,fp,cal,p);moved=p.clone();moved[:,:3]=torch.tensor(rigid_transform(p[:,:3].numpy(),.7,[3.,-2.]),dtype=torch.float32)
+  after=m(rgb,spec,fp,{'origin':torch.tensor([3.,-2.]),'spacing':.25,'map_angle':.7},moved)
+  torch.testing.assert_close(before,after,atol=3e-5,rtol=1e-5)
+  assert m(rgb,spec,torch.rand(1,2,17,23),cal,p).shape==before.shape
+  assert not torch.allclose(before,m(rgb,spec.flip(0),fp,cal,p),atol=1e-5,rtol=1e-5)
