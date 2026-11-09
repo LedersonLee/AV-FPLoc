@@ -1,0 +1,46 @@
+{
+  "code_sha": "cd35096d650ee209fd483c835d7c0d193d41b65e",
+  "registration_source": "3736eb4e95d08feda96f1ad4a54ceb333a5e3b05",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "a95ce6edf5857bfb36e943a73c9e6a41a4c33a73d1a66d1816d5c8d816178941"
+    },
+    {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "42998e3740ba04cf5894a1ddf7682ca9fb1dc9289763f47e8751d3c2fe37c849"
+    },
+    {
+      "git_copy": "external_hashes.json",
+      "sha256": "930e3d8407fcd4dfe2f306ec7fc05e2d436df40c5d5514a7c6b6dd682e0ebd4b"
+    },
+    {
+      "git_copy": "normal_replay_mismatches.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "git_copy": "paired.json",
+      "sha256": "4bc52f579265901195915cd6e17002e96cd295a80c25366ab443947cc7a6bd01"
+    },
+    {
+      "git_copy": "per_seed.json",
+      "sha256": "09195a2cd5eff0caea133677a80654eb1f7880113f77d08ad07c5620b3107172"
+    },
+    {
+      "git_copy": "position_invariance_audit.json",
+      "sha256": "3392412d2ac5b13e9dac184d671b2f29119e6730bc237e914f68143b379ff9f3"
+    },
+    {
+      "git_copy": "protocol.json",
+      "sha256": "b9254271abf9741d54650fc8a072f7209fdb34e2a73439b1b2208b367c319a47"
+    },
+    {
+      "git_copy": "summary.json",
+      "sha256": "260a1310c8c9ea08987099d566c511bbadc85f121955ff11c303d8f162cf9937"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "8667c6438c11288073c36e0d8d82e3f6094cc5d222127255e0a994a62f4078a9"
+    }
+  ]
+}

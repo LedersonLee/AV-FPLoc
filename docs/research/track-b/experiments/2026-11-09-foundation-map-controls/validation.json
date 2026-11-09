@@ -1,0 +1,9 @@
+{
+  "cases": 17280,
+  "normal_replay_cases": 3456,
+  "normal_replay_mismatches": 0,
+  "max_removed_field_spread": 1.1444091796875e-05,
+  "removed_field_semantics": "constant candidate evidence; residual GPU differences and tie selection are not meaningful spatial evidence",
+  "mean_log_bank_size": 11.496217237486784,
+  "tests": "39 suite passed before actual cached-path test addition; then both map intervention tests passed"
+}

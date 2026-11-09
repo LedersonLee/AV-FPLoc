@@ -3,7 +3,11 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "77bf6414e5ee4b754077173724652be7f106434dda26c71b3284843dff56681a"
+      "sha256": "9eea92be2e372c6885ebe45adba83a6f65f3839a31f3e849cf8eaa860ebf5e45"
+    },
+    {
+      "git_copy": "first_frozen_fit.json",
+      "sha256": "eef7be4fbba6ba83ebce9f1555eee01bc8f20397781913ca57295862d89e6ce5"
     },
     {
       "git_copy": "frozen_main_protocol.json",

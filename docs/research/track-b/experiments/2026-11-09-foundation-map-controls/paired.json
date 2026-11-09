@@ -1,0 +1,434 @@
+[
+  {
+    "mode": "attention",
+    "condition": "candidate_geometry_removed",
+    "metric": "joint",
+    "delta": -16.57986111111111,
+    "ci95": [
+      -20.399305555555554,
+      -13.194444444444445
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "candidate_geometry_removed",
+    "metric": "fine",
+    "delta": -0.6944444444444444,
+    "ci95": [
+      -1.128472222222222,
+      -0.26041666666666663
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "candidate_geometry_removed",
+    "metric": "nll",
+    "delta": 2.277326525085502,
+    "ci95": [
+      2.09340296106206,
+      2.397606276886331
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw90",
+    "metric": "joint",
+    "delta": -16.232638888888886,
+    "ci95": [
+      -19.87847222222222,
+      -13.194444444444445
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw90",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw90",
+    "metric": "nll",
+    "delta": 3.832717582583427,
+    "ci95": [
+      3.184520732197496,
+      4.488522884332471
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw180",
+    "metric": "joint",
+    "delta": -15.972222222222218,
+    "ci95": [
+      -19.965277777777775,
+      -12.673611111111112
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw180",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw180",
+    "metric": "nll",
+    "delta": 5.264965926193528,
+    "ci95": [
+      4.46317186165187,
+      5.97961630216903
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw_random",
+    "metric": "joint",
+    "delta": -13.628472222222221,
+    "ci95": [
+      -17.1875,
+      -11.197916666666664
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw_random",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "condition": "yaw_random",
+    "metric": "nll",
+    "delta": 3.5071960654523635,
+    "ci95": [
+      2.9908863537841373,
+      3.9810980914367566
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "candidate_geometry_removed",
+    "metric": "joint",
+    "delta": -18.142361111111114,
+    "ci95": [
+      -22.135416666666664,
+      -14.0625
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "candidate_geometry_removed",
+    "metric": "fine",
+    "delta": -1.3020833333333335,
+    "ci95": [
+      -1.9097222222222223,
+      -0.78125
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "candidate_geometry_removed",
+    "metric": "nll",
+    "delta": 2.2659774356418185,
+    "ci95": [
+      2.073784396466282,
+      2.3870613025087453
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw90",
+    "metric": "joint",
+    "delta": -17.795138888888886,
+    "ci95": [
+      -21.52777777777778,
+      -13.975694444444445
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw90",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw90",
+    "metric": "nll",
+    "delta": 3.7985738275779624,
+    "ci95": [
+      3.154625587579277,
+      4.45950614205665
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw180",
+    "metric": "joint",
+    "delta": -17.447916666666664,
+    "ci95": [
+      -21.354166666666664,
+      -13.628472222222223
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw180",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw180",
+    "metric": "nll",
+    "delta": 5.206423277656238,
+    "ci95": [
+      4.416404769238499,
+      5.909258751819531
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw_random",
+    "metric": "joint",
+    "delta": -14.409722222222223,
+    "ci95": [
+      -18.142361111111114,
+      -11.197916666666668
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw_random",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "condition": "yaw_random",
+    "metric": "nll",
+    "delta": 3.4680001458360086,
+    "ci95": [
+      2.9559542362888656,
+      3.947973144137197
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "candidate_geometry_removed",
+    "metric": "joint",
+    "delta": -15.451388888888888,
+    "ci95": [
+      -17.881944444444446,
+      -12.673611111111112
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "candidate_geometry_removed",
+    "metric": "fine",
+    "delta": -0.9548611111111112,
+    "ci95": [
+      -1.6493055555555556,
+      -0.5208333333333333
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "candidate_geometry_removed",
+    "metric": "nll",
+    "delta": 2.2948307912382817,
+    "ci95": [
+      2.095638803723786,
+      2.424889762368467
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw90",
+    "metric": "joint",
+    "delta": -14.930555555555555,
+    "ci95": [
+      -17.100694444444446,
+      -12.413194444444446
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw90",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw90",
+    "metric": "nll",
+    "delta": 3.9058698005974293,
+    "ci95": [
+      3.2336049220628205,
+      4.587177190515729
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw180",
+    "metric": "joint",
+    "delta": -14.84375,
+    "ci95": [
+      -17.447916666666664,
+      -11.979166666666668
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw180",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw180",
+    "metric": "nll",
+    "delta": 5.393277181933324,
+    "ci95": [
+      4.541904142333402,
+      6.124308015323348
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw_random",
+    "metric": "joint",
+    "delta": -12.5,
+    "ci95": [
+      -14.236111111111112,
+      -10.590277777777777
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw_random",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "condition": "yaw_random",
+    "metric": "nll",
+    "delta": 3.594432146598896,
+    "ci95": [
+      3.039327822211716,
+      4.08795875021153
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  }
+]

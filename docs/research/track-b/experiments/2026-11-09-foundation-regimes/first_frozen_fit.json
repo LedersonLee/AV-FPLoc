@@ -1,0 +1,70 @@
+{
+  "execution_code_sha": "062860067f82a5f6a0e6ce8411b5c43702ae0ab5",
+  "encoder_regime": "frozen",
+  "trainable_parameters": 27620,
+  "active_parameters": {
+    "log_scale": 1,
+    "acoustic_log_scale": 1,
+    "v_projection.weight": 2048,
+    "v_projection.bias": 32,
+    "a_projection.weight": 2048,
+    "a_projection.bias": 32,
+    "q_projection.weight": 1536,
+    "q_projection.bias": 32,
+    "v_retrieval.q.weight": 1024,
+    "v_retrieval.q.bias": 32,
+    "v_retrieval.k.weight": 1024,
+    "v_retrieval.v.weight": 1024,
+    "v_retrieval.v.bias": 32,
+    "v_retrieval.out.weight": 1024,
+    "v_retrieval.out.bias": 32,
+    "a_retrieval.q.weight": 1024,
+    "a_retrieval.q.bias": 32,
+    "a_retrieval.k.weight": 1024,
+    "a_retrieval.v.weight": 1024,
+    "a_retrieval.v.bias": 32,
+    "a_retrieval.out.weight": 1024,
+    "a_retrieval.out.bias": 32,
+    "gate.0.weight": 3072,
+    "gate.0.bias": 32,
+    "gate.2.weight": 32,
+    "gate.2.bias": 1,
+    "joint_head.0.weight": 10240,
+    "joint_head.0.bias": 64,
+    "joint_head.2.weight": 64,
+    "joint_head.2.bias": 1
+  },
+  "frozen_parameters_bitwise_unchanged": true,
+  "mode": "attention",
+  "seed": 42,
+  "parameters": 2834908,
+  "training_seconds": 268.5036789579317,
+  "peak_vram_bytes": 2091896832,
+  "val": {
+    "normal": {
+      "joint": 0.15104166666666666,
+      "r1": 0.17708333333333334,
+      "fine": 0.005208333333333333,
+      "raw20": 0.4739583333333333,
+      "nll": 9.227037269622087,
+      "entropy": 10.20370969424645,
+      "diverse20": 0.7552083333333334
+    },
+    "audio_shuffle": {
+      "joint": 0.049479166666666664,
+      "r1": 0.0703125,
+      "fine": 0.0026041666666666665,
+      "raw20": 0.19010416666666666,
+      "nll": 10.300728699813286,
+      "entropy": 10.295978459219137
+    },
+    "low_light": {
+      "joint": 0.15104166666666666,
+      "r1": 0.1796875,
+      "fine": 0.005208333333333333,
+      "raw20": 0.4635416666666667,
+      "nll": 9.248289893070856,
+      "entropy": 10.209457240998745
+    }
+  }
+}

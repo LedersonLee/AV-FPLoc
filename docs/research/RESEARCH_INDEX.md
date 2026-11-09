@@ -33,6 +33,7 @@
 | 22 | [Grid and mask sensitivity](track-b/experiments/2026-11-09-grid-sensitivity/README.md) | 독립 F1 평가 완료·혼합: .20m Joint24.39% 개선 CI가0포함; raw20 밀도효과/낮은 정밀도 확인. 배치교정 후3456건 재현. 최종 모델 검증 남음. | 2026-11-09 | Track B | Exploratory | `74e761a2a1584539daab0bb52d8942a7394a2beb` |
 | 23 | [OOF full-field discrimination](track-b/experiments/2026-11-09-oof-discrimination/README.md) | 30fits 완료·기하 추가 음성결과: diverse20 점수통계29.17% vs 기하24.48%, MAP23.87%. 후보 OOF분리·37검사 통과; 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | `0aedb2ad9cb4690501c7f8ff0e648630241f983b`; `e04336cb2fdbaa8ccde4d5d862840d85298e5490`; `a8cbe16bee26188c1dec6312ca9e780977dcf90e` |
 | 24 | [Foundation frozen/partial/joint](track-b/experiments/2026-11-09-foundation-regimes/README.md) | 진행 중: 동일초기화·고정가중치 보존38검사, 실데이터2-step 점검 통과. frozen/partial×3방식×3seed 신규18fits 시작; 기존joint9fits와 비교 예정. | 2026-11-09 | Track B | Exploratory | `062860067f82a5f6a0e6ce8411b5c43702ae0ab5`; smoke `b50f10d1afc71396024a30e821f3409f5a41199e` |
+| 25 | [Foundation map controls](track-b/experiments/2026-11-09-foundation-map-controls/README.md) | 완료:17,280건·정상재생 불일치0. 기하제거는 거의 균일장, 무작위 yaw attention3.13% vs 정상16.75%; 위치지표 불변인 방향치환 대조, 신규 기작 증거 아님. | 2026-11-09 | Track B | Exploratory | `cd35096d650ee209fd483c835d7c0d193d41b65e` |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

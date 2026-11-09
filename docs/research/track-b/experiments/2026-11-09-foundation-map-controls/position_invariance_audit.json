@@ -1,0 +1,26 @@
+[
+  {
+    "condition": "yaw90",
+    "cases": 3456,
+    "position_metrics_differences": {
+      "r1": 0,
+      "fine": 0
+    }
+  },
+  {
+    "condition": "yaw180",
+    "cases": 3456,
+    "position_metrics_differences": {
+      "r1": 0,
+      "fine": 0
+    }
+  },
+  {
+    "condition": "yaw_random",
+    "cases": 3456,
+    "position_metrics_differences": {
+      "r1": 0,
+      "fine": 0
+    }
+  }
+]

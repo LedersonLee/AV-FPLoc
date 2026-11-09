@@ -1,0 +1,16 @@
+{
+  "source_sha": "cd35096d650ee209fd483c835d7c0d193d41b65e",
+  "conditions": [
+    "normal",
+    "candidate_geometry_removed",
+    "yaw90",
+    "yaw180",
+    "yaw_random"
+  ],
+  "source_protocol_sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af",
+  "intervention": "cached map vectors only; observations/GT/candidate pose labels unchanged; removal replaces fp/acoustic_fp/q/weights with scene means; yaw controls shift all four vectors together within xy group",
+  "randomization": "seed20261109; independent nonzero uniform cyclic yaw-bin offset per xy; no GT; same offset for all queries/seeds/modes",
+  "scope": "destructive dependency controls, not training ablations or physical map perturbations",
+  "test_accessed": false,
+  "evidence": "Exploratory reused six development scenes"
+}
