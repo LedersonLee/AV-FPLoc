@@ -1,0 +1,85 @@
+{
+  "summary": [
+    {
+      "split": "train",
+      "mode": "acoustic",
+      "arm": "normal",
+      "joint": 0.08333333333333333,
+      "r1": 0.11458333333333333,
+      "raw20": 0.3697916666666667
+    },
+    {
+      "split": "train",
+      "mode": "joint",
+      "arm": "normal",
+      "joint": 0.19270833333333334,
+      "r1": 0.234375,
+      "raw20": 0.6041666666666666
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "arm": "normal",
+      "joint": 0.006944444444444444,
+      "r1": 0.020833333333333332,
+      "raw20": 0.08333333333333333
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "arm": "direct_only",
+      "joint": 0.0,
+      "r1": 0.0,
+      "raw20": 0.034722222222222224
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "arm": "direct_masked",
+      "joint": 0.020833333333333332,
+      "r1": 0.034722222222222224,
+      "raw20": 0.05555555555555555
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "arm": "late_only",
+      "joint": 0.0,
+      "r1": 0.0,
+      "raw20": 0.020833333333333332
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "arm": "normal",
+      "joint": 0.0,
+      "r1": 0.027777777777777776,
+      "raw20": 0.06944444444444445
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "arm": "direct_only",
+      "joint": 0.0,
+      "r1": 0.020833333333333332,
+      "raw20": 0.041666666666666664
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "arm": "direct_masked",
+      "joint": 0.006944444444444444,
+      "r1": 0.013888888888888888,
+      "raw20": 0.08333333333333333
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "arm": "late_only",
+      "joint": 0.0,
+      "r1": 0.0,
+      "raw20": 0.034722222222222224
+    }
+  ],
+  "limits": "Frozen intervention, no re-normalization after masking. Direct-only samples0:32; late-only7200:8192 (150\u2013170.7ms). Timing/gain shift may confound physical interpretation."
+}

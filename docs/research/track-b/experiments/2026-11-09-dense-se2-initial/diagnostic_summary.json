@@ -1,0 +1,215 @@
+{
+  "summary": [
+    {
+      "split": "train",
+      "mode": "visual",
+      "joint": 0.010416666666666666,
+      "r1": 0.046875,
+      "fine": 0.010416666666666666
+    },
+    {
+      "split": "train",
+      "mode": "acoustic",
+      "joint": 0.005208333333333333,
+      "r1": 0.03125,
+      "fine": 0.0
+    },
+    {
+      "split": "train",
+      "mode": "concat",
+      "joint": 0.010416666666666666,
+      "r1": 0.057291666666666664,
+      "fine": 0.010416666666666666
+    },
+    {
+      "split": "train",
+      "mode": "noninteraction",
+      "joint": 0.005208333333333333,
+      "r1": 0.041666666666666664,
+      "fine": 0.010416666666666666
+    },
+    {
+      "split": "train",
+      "mode": "joint",
+      "joint": 0.005208333333333333,
+      "r1": 0.041666666666666664,
+      "fine": 0.010416666666666666
+    },
+    {
+      "split": "train",
+      "mode": "fixed_fusion",
+      "joint": 0.010416666666666666,
+      "r1": 0.052083333333333336,
+      "fine": 0.010416666666666666
+    },
+    {
+      "split": "train",
+      "mode": "uniform_random_expectation",
+      "joint": 0.003937348812542041,
+      "r1": 0.018761245599307586,
+      "fine": 0.00015446576253452804
+    },
+    {
+      "split": "val",
+      "mode": "visual",
+      "joint": 0.006944444444444444,
+      "r1": 0.034722222222222224,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "joint": 0.0,
+      "r1": 0.013888888888888888,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "concat",
+      "joint": 0.0,
+      "r1": 0.006944444444444444,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "noninteraction",
+      "joint": 0.0,
+      "r1": 0.013888888888888888,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "joint": 0.0,
+      "r1": 0.006944444444444444,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "fixed_fusion",
+      "joint": 0.006944444444444444,
+      "r1": 0.027777777777777776,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "uniform_random_expectation",
+      "joint": 0.0032323710474884138,
+      "r1": 0.015602291057196757,
+      "fine": 0.00015027547002925226
+    }
+  ],
+  "collisions": [
+    {
+      "scene": "108736779_177263484",
+      "split": "train",
+      "poses": 12948,
+      "unique_fp_queries": 7606,
+      "largest_equal_group": 1867,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "103997970_171031287",
+      "split": "train",
+      "poses": 3576,
+      "unique_fp_queries": 2096,
+      "largest_equal_group": 703,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "106366104_174226332",
+      "split": "train",
+      "poses": 8232,
+      "unique_fp_queries": 6585,
+      "largest_equal_group": 609,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108294537_176710050",
+      "split": "train",
+      "poses": 15192,
+      "unique_fp_queries": 5196,
+      "largest_equal_group": 5128,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108736611_177263226",
+      "split": "val",
+      "poses": 8676,
+      "unique_fp_queries": 6066,
+      "largest_equal_group": 894,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108736635_177263256",
+      "split": "val",
+      "poses": 6948,
+      "unique_fp_queries": 3729,
+      "largest_equal_group": 1463,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "105515448_173104512",
+      "split": "val",
+      "poses": 13236,
+      "unique_fp_queries": 8652,
+      "largest_equal_group": 2137,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    }
+  ],
+  "timings": [
+    {
+      "scene": "108736779_177263484",
+      "poses": 12948,
+      "warm_ms": 13.634834601543844,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "103997970_171031287",
+      "poses": 3576,
+      "warm_ms": 3.829911886714399,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "106366104_174226332",
+      "poses": 8232,
+      "warm_ms": 9.023946104571223,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108294537_176710050",
+      "poses": 15192,
+      "warm_ms": 15.511805890128016,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108736611_177263226",
+      "poses": 8676,
+      "warm_ms": 8.96150660701096,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108736635_177263256",
+      "poses": 6948,
+      "warm_ms": 8.18392550572753,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "105515448_173104512",
+      "poses": 13236,
+      "warm_ms": 22.135240398347378,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    }
+  ],
+  "io_trace": {
+    "reference_reads": 0,
+    "observed_reads": 112
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "summary": [
+    {
+      "split": "train",
+      "mode": "visual",
+      "joint": 0.041666666666666664,
+      "r1": 0.057291666666666664,
+      "fine": 0.0
+    },
+    {
+      "split": "train",
+      "mode": "acoustic",
+      "joint": 0.13541666666666666,
+      "r1": 0.16666666666666666,
+      "fine": 0.015625
+    },
+    {
+      "split": "train",
+      "mode": "concat",
+      "joint": 0.036458333333333336,
+      "r1": 0.06770833333333333,
+      "fine": 0.005208333333333333
+    },
+    {
+      "split": "train",
+      "mode": "noninteraction",
+      "joint": 0.0625,
+      "r1": 0.109375,
+      "fine": 0.005208333333333333
+    },
+    {
+      "split": "train",
+      "mode": "joint",
+      "joint": 0.23958333333333334,
+      "r1": 0.2760416666666667,
+      "fine": 0.005208333333333333
+    },
+    {
+      "split": "train",
+      "mode": "fixed_fusion",
+      "joint": 0.08854166666666667,
+      "r1": 0.09895833333333333,
+      "fine": 0.005208333333333333
+    },
+    {
+      "split": "train",
+      "mode": "uniform_random_expectation",
+      "joint": 0.003937348812542041,
+      "r1": 0.018761245599307586,
+      "fine": 0.00015446576253452804
+    },
+    {
+      "split": "val",
+      "mode": "visual",
+      "joint": 0.0,
+      "r1": 0.020833333333333332,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "acoustic",
+      "joint": 0.0,
+      "r1": 0.006944444444444444,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "concat",
+      "joint": 0.0,
+      "r1": 0.020833333333333332,
+      "fine": 0.006944444444444444
+    },
+    {
+      "split": "val",
+      "mode": "noninteraction",
+      "joint": 0.0,
+      "r1": 0.0,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "joint",
+      "joint": 0.0,
+      "r1": 0.034722222222222224,
+      "fine": 0.006944444444444444
+    },
+    {
+      "split": "val",
+      "mode": "fixed_fusion",
+      "joint": 0.0,
+      "r1": 0.006944444444444444,
+      "fine": 0.0
+    },
+    {
+      "split": "val",
+      "mode": "uniform_random_expectation",
+      "joint": 0.0032323710474884138,
+      "r1": 0.015602291057196757,
+      "fine": 0.00015027547002925226
+    }
+  ],
+  "collisions": [
+    {
+      "scene": "108736779_177263484",
+      "split": "train",
+      "poses": 12948,
+      "unique_fp_queries": 7751,
+      "largest_equal_group": 1824,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "103997970_171031287",
+      "split": "train",
+      "poses": 3576,
+      "unique_fp_queries": 2091,
+      "largest_equal_group": 703,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "106366104_174226332",
+      "split": "train",
+      "poses": 8232,
+      "unique_fp_queries": 6636,
+      "largest_equal_group": 594,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108294537_176710050",
+      "split": "train",
+      "poses": 15192,
+      "unique_fp_queries": 5277,
+      "largest_equal_group": 5129,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108736611_177263226",
+      "split": "val",
+      "poses": 8676,
+      "unique_fp_queries": 6119,
+      "largest_equal_group": 874,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "108736635_177263256",
+      "split": "val",
+      "poses": 6948,
+      "unique_fp_queries": 3746,
+      "largest_equal_group": 1468,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    },
+    {
+      "scene": "105515448_173104512",
+      "split": "val",
+      "poses": 13236,
+      "unique_fp_queries": 8817,
+      "largest_equal_group": 2089,
+      "rounding_decimals": 5,
+      "interpretation": "Rounded FP queries only; near-equality does not prove exact prediction equivalence"
+    }
+  ],
+  "timings": [
+    {
+      "scene": "108736779_177263484",
+      "poses": 12948,
+      "warm_ms": 31.66155111975968,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "103997970_171031287",
+      "poses": 3576,
+      "warm_ms": 9.509986685588956,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "106366104_174226332",
+      "poses": 8232,
+      "warm_ms": 22.126707900315523,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108294537_176710050",
+      "poses": 15192,
+      "warm_ms": 33.03791917860508,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108736611_177263226",
+      "poses": 8676,
+      "warm_ms": 15.893028699792922,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "108736635_177263256",
+      "poses": 6948,
+      "warm_ms": 12.95877790544182,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    },
+    {
+      "scene": "105515448_173104512",
+      "poses": 13236,
+      "warm_ms": 24.129208689555526,
+      "scope": "RGB/RIR/FP encoders and exhaustive scorer; excludes file I/O, preprocessing and Top20"
+    }
+  ],
+  "io_trace": {
+    "reference_reads": 0,
+    "observed_reads": 112
+  }
+}

@@ -19,6 +19,8 @@
 | 13 | [HSSD 준비도·확대·학습 조건 복원](track-a/experiments/2026-11-08-hssd-scaling/README.md) | 135개 non-Test 장면 감사와478 fits. 후보 geometry의 matched 이득은 유지됐으나 기존 장면별 가중치 복원 후12→24 확대 이득은 불확실했다. | 2026-11-08 | Track A | Exploratory | UNRECORDED — 해당 study의 artifacts.json 소스 해시 참조 |
 | 14 | [Directional Evidence / Tri-branch Pilot](track-a/experiments/2026-11-09-directional-tribranch/README.md) | Coarse acoustic structure는 예측 가능하지만 GEOQ 대비 추가 joint/fine 이득은 미확인. 기존 B2 Top20 및 FP-RIR reference 의존이므로 Track A. | 2026-11-09 | Track A | Exploratory | UNRECORDED; base19c1bd02f6edc6758ee9b18675957a2d30b3aeed + provenance.json 외부 script hashes |
 
+| 15 | [독립 Dense SE(2) 초기 구현·실험](track-b/experiments/2026-11-09-dense-se2-initial/README.md) | track-b-dense-se2-initial-20261109: 데이터 감사·전체375,156후보 forward 검증 완료. 초기 모델의 개발셋 localization은 낮음; 42fits·대조·실패 분석 완료(성능 음성결과), 전체 protocol 미완료. | 2026-11-09 | Track B | Exploratory | 55c423833710efe6dd38dbcd58a6e18236ce6f9d (120step); c268a2f3574e7ba82fe566e39c0803e4f6cf737c (2000step); e45b12137c44b05ab9d4cb6b1ea1b54fb812665b geometry follow-up, provenance 참조 |
+
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 
 서로 다른 cohort의 절대 성능을 이 목록으로 순위 매기지 않는다. 최신 HSSD478 fits와 residual1032 fits 등은 내부 fold/refit을 포함하는 계산 횟수이며 독립적인 과학적 증거 수가 아니다.
@@ -26,7 +28,7 @@
 
 ## 누적 관리 규칙
 
-유일한 통합 RESEARCH_INDEX다. 이전 experiment_index.md를 rename했으며 중복 Index는 없다. 기존13개 결과는 의존성 확인 후 Track A로 이동했고14번째 로컬 Pilot도 Track A로 보관했다. Track B의 독립 Framework 실험은 아직 이 목록에 없다. 각 연구의 실패/중단/부정 결과를 보고서에서 보존한다. 신규 행은 고유 ID/실험명, 날짜, Primary Track, 상태, 핵심 발견, 증거 수준, 보고서 경로, 실제 실행 코드 Commit SHA를 포함한다.
+유일한 통합 RESEARCH_INDEX다. 이전 experiment_index.md를 rename했으며 중복 Index는 없다. 기존13개 결과는 의존성 확인 후 Track A로 이동했고14번째 로컬 Pilot도 Track A로 보관했다. Track B의 독립 Framework 초기 실험은15번에 기록했다. 각 연구의 실패/중단/부정 결과를 보고서에서 보존한다. 신규 행은 고유 ID/실험명, 날짜, Primary Track, 상태, 핵심 발견, 증거 수준, 보고서 경로, 실제 실행 코드 Commit SHA를 포함한다.
 
 기존 실행 코드는 외부 폴더이므로 정확한 실행 Git SHA 미기록은 UNRECORDED로 표시했다. artifacts.json/provenance.json의 소스 해시와 reproduction 문서를 참고한다. Docs SHA를 실행 SHA로 바꾸거나 해당 Docs Commit 자체의 Index에 삽입하지 않는다. Docs SHA는 최종 실행 보고에 기록한다.
 

@@ -7,3 +7,7 @@ FP-RIR Reference Bank 없이 전체 pose field를 직접 생성하는 독립적�
 기존 B2 Top20을 입력받는 ranker로 대체하지 않는다. 추론에 FP-RIR bank가 필요하면 Track B 요건을 충족하지 않는다. B2/GEOQ는 비교 baseline으로만 쓰며 핵심 pipeline에 종속시키지 않는다. GEOQ 원리 재사용 시 새 입력/후보로 재학습하고 출처·의존성을 기록한다. Track A 코드를 참고하더라도 독립적인 구현/평가 근거가 필요하다.
 
 **현재 이관된 Track B 실험은 없다.** 기존 Tri-branch Pilot은 [Track A](../track-a/experiments/2026-11-09-directional-tribranch/README.md)다. 새 실험은 `experiments/<YYYY-MM-DD-study-id>/`에 보관하고 [단일 Index](../RESEARCH_INDEX.md)에 등록한다. 비교 연구는 Primary Track 보고서를 참조하여 중복 생성하지 않는다. [공통 평가](../shared/evaluation-protocol/README.md)와 [템플릿](../templates/study.md)을 따른다.
+
+## 신규 실험
+
+- [2026-11-09 Dense SE(2) 초기 감사·학습·실패 분석](experiments/2026-11-09-dense-se2-initial/README.md): 독립 full-bank 구현 및 실제 검증. 초기 성능은 낮으며 전체 연구 프로토콜의 완료/성공을 의미하지 않는다.

@@ -1,0 +1,194 @@
+[
+  {
+    "a": "pilot_v1/joint",
+    "b": "pilot_v1/visual",
+    "metric": "joint",
+    "scene_count": 3,
+    "delta_pp": -0.6944444444444444,
+    "ci95_pp": [
+      -2.083333333333333,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_v1/joint",
+    "b": "pilot_v1/visual",
+    "metric": "raw20",
+    "scene_count": 3,
+    "delta_pp": -2.083333333333333,
+    "ci95_pp": [
+      -4.166666666666666,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_v1/joint",
+    "b": "pilot_v1/visual",
+    "metric": "r1",
+    "scene_count": 3,
+    "delta_pp": -2.7777777777777777,
+    "ci95_pp": [
+      -6.25,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_v1/joint",
+    "b": "pilot_v1/visual",
+    "metric": "fine",
+    "scene_count": 3,
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_long_v1/joint",
+    "b": "pilot_long_v1/visual",
+    "metric": "joint",
+    "scene_count": 3,
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_long_v1/joint",
+    "b": "pilot_long_v1/visual",
+    "metric": "raw20",
+    "scene_count": 3,
+    "delta_pp": 5.555555555555555,
+    "ci95_pp": [
+      2.083333333333333,
+      10.416666666666668
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_long_v1/joint",
+    "b": "pilot_long_v1/visual",
+    "metric": "r1",
+    "scene_count": 3,
+    "delta_pp": 1.3888888888888888,
+    "ci95_pp": [
+      0.0,
+      2.083333333333333
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_long_v1/joint",
+    "b": "pilot_long_v1/visual",
+    "metric": "fine",
+    "scene_count": 3,
+    "delta_pp": 0.6944444444444444,
+    "ci95_pp": [
+      0.0,
+      2.083333333333333
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/joint",
+    "b": "pilot_zero_v1/joint",
+    "metric": "joint",
+    "scene_count": 3,
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/joint",
+    "b": "pilot_zero_v1/joint",
+    "metric": "raw20",
+    "scene_count": 3,
+    "delta_pp": 3.472222222222222,
+    "ci95_pp": [
+      -2.083333333333333,
+      8.333333333333332
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/joint",
+    "b": "pilot_zero_v1/joint",
+    "metric": "r1",
+    "scene_count": 3,
+    "delta_pp": -2.7777777777777777,
+    "ci95_pp": [
+      -4.166666666666666,
+      -2.083333333333333
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/joint",
+    "b": "pilot_zero_v1/joint",
+    "metric": "fine",
+    "scene_count": 3,
+    "delta_pp": -0.6944444444444444,
+    "ci95_pp": [
+      -2.083333333333333,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/acoustic",
+    "b": "pilot_zero_v1/acoustic",
+    "metric": "joint",
+    "scene_count": 3,
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/acoustic",
+    "b": "pilot_zero_v1/acoustic",
+    "metric": "raw20",
+    "scene_count": 3,
+    "delta_pp": -4.861111111111112,
+    "ci95_pp": [
+      -8.333333333333332,
+      -2.083333333333333
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/acoustic",
+    "b": "pilot_zero_v1/acoustic",
+    "metric": "r1",
+    "scene_count": 3,
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      -4.166666666666666,
+      2.083333333333333
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  },
+  {
+    "a": "pilot_rays_v1/acoustic",
+    "b": "pilot_zero_v1/acoustic",
+    "metric": "fine",
+    "scene_count": 3,
+    "delta_pp": -0.6944444444444444,
+    "ci95_pp": [
+      -2.083333333333333,
+      0.0
+    ],
+    "warning": "Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction"
+  }
+]

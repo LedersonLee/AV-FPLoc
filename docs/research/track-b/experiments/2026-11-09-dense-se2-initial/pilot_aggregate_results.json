@@ -1,0 +1,1732 @@
+{
+  "pilot_v1": [
+    {
+      "mode": "visual",
+      "seed": 42,
+      "steps": 120,
+      "training_seconds": 2.5594855358358473,
+      "peak_vram_bytes": 117078016,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.350618700186411,
+        "entropy": 8.872905770937601
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.350618700186411,
+        "entropy": 8.872905770937601
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.350618700186411,
+        "entropy": 8.872905770937601
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 42,
+      "steps": 120,
+      "training_seconds": 2.3029555280227214,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.351279079914093,
+        "entropy": 8.948679069677988
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.348745008309683,
+        "entropy": 8.948679069677988
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.285009602705637,
+        "entropy": 8.974805196126303
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 42,
+      "steps": 120,
+      "training_seconds": 1.5318310360889882,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.404660483201345,
+        "entropy": 8.859202603499094
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.407581607500711,
+        "entropy": 8.859130183855692
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.347717523574829,
+        "entropy": 8.890742580095926
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 42,
+      "steps": 120,
+      "training_seconds": 1.5132610078435391,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.348367551962534,
+        "entropy": 8.87422502040863
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.349442640940348,
+        "entropy": 8.874220808347067
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.326377232869467,
+        "entropy": 8.88668825229009
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 42,
+      "steps": 120,
+      "training_seconds": 3.869510021060705,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.393945654233297,
+        "entropy": 8.830368479092916
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.394607643286387,
+        "entropy": 8.830349246660868
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.386942068735758,
+        "entropy": 8.83390869696935
+      }
+    },
+    {
+      "mode": "visual",
+      "seed": 43,
+      "steps": 120,
+      "training_seconds": 2.3832941020373255,
+      "peak_vram_bytes": 117327872,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.1651740471522,
+        "entropy": 8.94040354092916
+      },
+      "shuffle": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.1651740471522,
+        "entropy": 8.94040354092916
+      },
+      "zero": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.1651740471522,
+        "entropy": 8.94040354092916
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 43,
+      "steps": 120,
+      "training_seconds": 2.383653359953314,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.221148808797201,
+        "entropy": 8.920884688695272
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.21524574359258,
+        "entropy": 8.920884688695272
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.15858918428421,
+        "entropy": 8.965381622314453
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 43,
+      "steps": 120,
+      "training_seconds": 1.6650026869028807,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.189861138661703,
+        "entropy": 8.907014528910318
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.190424144268036,
+        "entropy": 8.907019913196564
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.17936646938324,
+        "entropy": 8.917872726917267
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 43,
+      "steps": 120,
+      "training_seconds": 1.5509549789130688,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.216716627279917,
+        "entropy": 8.88553120692571
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.217105031013489,
+        "entropy": 8.88552737236023
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.19173135360082,
+        "entropy": 8.906331976254782
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 43,
+      "steps": 120,
+      "training_seconds": 3.986453698016703,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.238838454087576,
+        "entropy": 8.879597703615824
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.240261534849802,
+        "entropy": 8.879606624444326
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.215669453144073,
+        "entropy": 8.897192418575287
+      }
+    },
+    {
+      "mode": "visual",
+      "seed": 44,
+      "steps": 120,
+      "training_seconds": 2.4498960939235985,
+      "peak_vram_bytes": 117327872,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.293684383233389,
+        "entropy": 8.866652349630991
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.293684383233389,
+        "entropy": 8.866652349630991
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.293684383233389,
+        "entropy": 8.866652349630991
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 44,
+      "steps": 120,
+      "training_seconds": 2.2224153999704868,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.231616059939066,
+        "entropy": 8.935548404852549
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.226854006449381,
+        "entropy": 8.935548404852549
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.11543850104014,
+        "entropy": 9.045272509256998
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 44,
+      "steps": 120,
+      "training_seconds": 1.5105218309909105,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.220056573549906,
+        "entropy": 8.895276745160421
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.220245579878489,
+        "entropy": 8.895261228084564
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.217861096064249,
+        "entropy": 8.896673003832499
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 44,
+      "steps": 120,
+      "training_seconds": 1.5377585820388049,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.217968622843424,
+        "entropy": 8.90957804520925
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.218059142430624,
+        "entropy": 8.909577091534933
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.212298234303793,
+        "entropy": 8.913885196050009
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 44,
+      "steps": 120,
+      "training_seconds": 3.726744669955224,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.25369401772817,
+        "entropy": 8.865254282951355
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.253565231959024,
+        "entropy": 8.865239580472311
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.251719852288565,
+        "entropy": 8.866548120975494
+      }
+    }
+  ],
+  "pilot_long_v1": [
+    {
+      "mode": "visual",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 38.11408691108227,
+      "peak_vram_bytes": 117078016,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.692472835381826,
+        "entropy": 8.395488023757935
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.692472835381826,
+        "entropy": 8.395488023757935
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.692472835381826,
+        "entropy": 8.395488023757935
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 37.52337679010816,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.14583333333333334,
+        "diverse20": 0.14583333333333334,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.743595153093338,
+        "entropy": 7.902770469586055
+      },
+      "shuffle": {
+        "joint": 0.020833333333333332,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.15868373711904,
+        "entropy": 7.902770469586055
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.472566614548365,
+        "entropy": 8.192166646321615
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 25.19134615501389,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.020833333333333332,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.34378014008204,
+        "entropy": 8.799472232659658
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.020833333333333332,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.359964032967886,
+        "entropy": 8.799492220083872
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.020833333333333332,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.378073791662851,
+        "entropy": 8.783969958623251
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 24.767727261874825,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.48824859658877,
+        "entropy": 8.339728007713953
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.43587464094162,
+        "entropy": 8.339685261249542
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 13.617149849732717,
+        "entropy": 7.56266404191653
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 62.28209208184853,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0625,
+        "fine": 0.0,
+        "raw20": 0.125,
+        "diverse20": 0.125,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.611714939276377,
+        "entropy": 7.422232806682587
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.440999070803324,
+        "entropy": 7.419429749250412
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.331262429555258,
+        "entropy": 8.762553930282593
+      }
+    },
+    {
+      "mode": "visual",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 42.72585204010829,
+      "peak_vram_bytes": 117327872,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.964742302894592,
+        "entropy": 8.32210224866867
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.964742302894592,
+        "entropy": 8.32210224866867
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.964742302894592,
+        "entropy": 8.32210224866867
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 53.62412475096062,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.987988779942194,
+        "entropy": 7.869783878326416
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.898593664169312,
+        "entropy": 7.869783878326416
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.249237457911173,
+        "entropy": 8.273512204488119
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 44.279678154038265,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.10416666666666667,
+        "diverse20": 0.14583333333333334,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.451241791248322,
+        "entropy": 8.213755309581757
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.338663876056671,
+        "entropy": 8.27298798163732
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 12.220398803551992,
+        "entropy": 7.844337234894435
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 39.948438581079245,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.611994912226995,
+        "entropy": 8.137665301561356
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.436164577802023,
+        "entropy": 8.142185558875402
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0625,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 14.746532450119654,
+        "entropy": 7.611532370249431
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 91.1028507470619,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.281576563914617,
+        "entropy": 7.4964925539679825
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.599517822265625,
+        "entropy": 7.48014833353227
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0625,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 12.8905129134655,
+        "entropy": 7.748236586650212
+      }
+    },
+    {
+      "mode": "visual",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 79.16928981500678,
+      "peak_vram_bytes": 117327872,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.744076838095983,
+        "entropy": 7.442660475770633
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.744076838095983,
+        "entropy": 7.442660475770633
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.744076838095983,
+        "entropy": 7.442660475770633
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 80.54351911507547,
+      "peak_vram_bytes": 117694464,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.004530996084213,
+        "entropy": 7.8950199981530504
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.882952829202017,
+        "entropy": 7.8950199981530504
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.445032894611359,
+        "entropy": 8.785948753356934
+      }
+    },
+    {
+      "mode": "concat",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 63.65102405892685,
+      "peak_vram_bytes": 123010048,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.323231021563211,
+        "entropy": 8.837993860244751
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.35008798042933,
+        "entropy": 8.841082870960236
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.59101516008377,
+        "entropy": 8.684357563654581
+      }
+    },
+    {
+      "mode": "noninteraction",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 39.739057494094595,
+      "peak_vram_bytes": 119242240,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.527650475502014,
+        "entropy": 8.189496497313181
+      },
+      "shuffle": {
+        "joint": 0.020833333333333332,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.869210481643677,
+        "entropy": 8.19809087117513
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 14.97054135799408,
+        "entropy": 7.526252170403798
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 87.88303796085529,
+      "peak_vram_bytes": 160809472,
+      "parameter_count": 52324,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.020833333333333332,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.328643868366877,
+        "entropy": 7.809267183144887
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.290498395760855,
+        "entropy": 7.76482676466306
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 14.119557191928228,
+        "entropy": 7.561589151620865
+      }
+    }
+  ],
+  "pilot_rays_v1": [
+    {
+      "mode": "acoustic",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 54.97775648185052,
+      "peak_vram_bytes": 130744832,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.52737882733345,
+        "entropy": 8.538934598366419
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.61096747716268,
+        "entropy": 8.538934598366419
+      },
+      "zero": {
+        "joint": 0.020833333333333332,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.717616220315298,
+        "entropy": 8.527106285095215
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 85.02463955199346,
+      "peak_vram_bytes": 174109696,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.10416666666666667,
+        "diverse20": 0.14583333333333334,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.409842520952225,
+        "entropy": 6.76118977367878
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 13.062976976235708,
+        "entropy": 6.701472833752632
+      },
+      "zero": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.125,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.605784257253012,
+        "entropy": 8.565467725197474
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 58.97479498106986,
+      "peak_vram_bytes": 130994688,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.667302429676056,
+        "entropy": 8.18461705247561
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.197812497615814,
+        "entropy": 8.18461705247561
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.494092007478079,
+        "entropy": 8.21481990814209
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 104.69306046213023,
+      "peak_vram_bytes": 174109696,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.10416666666666667,
+        "diverse20": 0.125,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.086624046166738,
+        "entropy": 7.337805127104123
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.125,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 12.116000274817148,
+        "entropy": 7.27169297883908
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 16.042460411787033,
+        "entropy": 6.946044743061066
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 84.83111882186495,
+      "peak_vram_bytes": 130994688,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.5579883257548,
+        "entropy": 8.134191463390986
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.32362911105156,
+        "entropy": 8.134191463390986
+      },
+      "zero": {
+        "joint": 0.020833333333333332,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 13.646150986353556,
+        "entropy": 7.267791906992595
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 97.89206118509173,
+      "peak_vram_bytes": 174109696,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.10416666666666667,
+        "diverse20": 0.125,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.203055530786514,
+        "entropy": 6.9516889949639635
+      },
+      "shuffle": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 13.982390562693277,
+        "entropy": 6.849518259366353
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 22.297318875789642,
+        "entropy": 5.501266986131668
+      }
+    }
+  ],
+  "pilot_zero_v1": [
+    {
+      "mode": "acoustic",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 88.94630591687746,
+      "peak_vram_bytes": 132579840,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.519589215517044,
+        "entropy": 8.098535845677057
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.750436007976532,
+        "entropy": 8.098535845677057
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.868482172489166,
+        "entropy": 8.084541956583658
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 42,
+      "steps": 2000,
+      "training_seconds": 105.40294563979842,
+      "peak_vram_bytes": 175944704,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.041666666666666664,
+        "fine": 0.020833333333333332,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.39408278465271,
+        "entropy": 7.733073542515437
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.397664745648703,
+        "entropy": 7.664900491635005
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.433222780625025,
+        "entropy": 7.996729691823323
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 80.6070319218561,
+      "peak_vram_bytes": 132829696,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.020833333333333332,
+        "raw20": 0.16666666666666666,
+        "diverse20": 0.1875,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.539688328901926,
+        "entropy": 8.625612537066141
+      },
+      "shuffle": {
+        "joint": 0.020833333333333332,
+        "r1": 0.041666666666666664,
+        "fine": 0.020833333333333332,
+        "raw20": 0.125,
+        "diverse20": 0.14583333333333334,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.541180034478506,
+        "entropy": 8.625612537066141
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.041666666666666664,
+        "diverse20": 0.041666666666666664,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.939131299654642,
+        "entropy": 8.228097279866537
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 43,
+      "steps": 2000,
+      "training_seconds": 91.07605041703209,
+      "peak_vram_bytes": 175944704,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.16666666666666666,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.100876023372015,
+        "entropy": 7.792861590782802
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0625,
+        "diverse20": 0.0625,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 11.439450939496359,
+        "entropy": 7.773595949014028
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.08333333333333333,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.460945626099905,
+        "entropy": 8.273725181818008
+      }
+    },
+    {
+      "mode": "acoustic",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 52.98872540704906,
+      "peak_vram_bytes": 132829696,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.296501656373342,
+        "entropy": 8.85680623849233
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.314344942569733,
+        "entropy": 8.85680623849233
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 9.504906177520752,
+        "entropy": 8.736985524495443
+      }
+    },
+    {
+      "mode": "joint",
+      "seed": 44,
+      "steps": 2000,
+      "training_seconds": 74.52762862388045,
+      "peak_vram_bytes": 175944704,
+      "parameter_count": 54436,
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.020833333333333332,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.125,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.122560848792395,
+        "entropy": 7.803494731585185
+      },
+      "shuffle": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "diverse20": 0.020833333333333332,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 10.757294019063314,
+        "entropy": 7.743093768755595
+      },
+      "zero": {
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.08333333333333333,
+        "diverse20": 0.10416666666666667,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.125,
+        "nll": 14.350337823232016,
+        "entropy": 7.505895723899205
+      }
+    }
+  ]
+}

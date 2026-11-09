@@ -1,0 +1,6 @@
+{
+  "metadata_only": true,
+  "missing_scene_metadata": [],
+  "cross_split_same_stage_template": [],
+  "limitation": "Distinct stage template IDs may still share geometry; no mesh near-duplicate proof."
+}

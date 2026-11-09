@@ -1,0 +1,10 @@
+{
+  "aggregate_recomputed_fits": 42,
+  "all_per_query_counts_valid": true,
+  "zero_process_exit_code": 143,
+  "zero_stdout_completion_marker": "COMPLETE",
+  "zero_checkpoint_replay": "verified",
+  "reason_for_143": "unknown; not inferred from complete artifact files",
+  "zero_replayed_query_model_pairs": 288,
+  "zero_replay_metric_mismatches": 0
+}

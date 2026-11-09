@@ -1,0 +1,47 @@
+{
+  "kind": "synthetic_8_query_overfit",
+  "seed": 42,
+  "history": [
+    {
+      "step": 0,
+      "loss": 5.124147891998291,
+      "exact_map": 0.0
+    },
+    {
+      "step": 50,
+      "loss": 0.48418742418289185,
+      "exact_map": 0.875
+    },
+    {
+      "step": 100,
+      "loss": 0.08105859160423279,
+      "exact_map": 1.0
+    },
+    {
+      "step": 150,
+      "loss": 0.0715799629688263,
+      "exact_map": 1.0
+    },
+    {
+      "step": 200,
+      "loss": 0.06747343391180038,
+      "exact_map": 1.0
+    },
+    {
+      "step": 250,
+      "loss": 0.06500819325447083,
+      "exact_map": 1.0
+    },
+    {
+      "step": 300,
+      "loss": 0.063898004591465,
+      "exact_map": 1.0
+    }
+  ],
+  "seconds": 1.2719418860506266,
+  "params": 52324,
+  "peak_vram_bytes": 28165632,
+  "device": "cuda",
+  "torch": "2.4.1+cu124",
+  "bank_size": 168
+}

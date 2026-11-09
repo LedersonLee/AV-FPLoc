@@ -1,0 +1,221 @@
+{
+  "code_commits": {
+    "pilot_v1": "55c423833710efe6dd38dbcd58a6e18236ce6f9d",
+    "pilot_long_v1": "c268a2f3574e7ba82fe566e39c0803e4f6cf737c",
+    "pilot_rays_v1": "e45b12137c44b05ab9d4cb6b1ea1b54fb812665b",
+    "pilot_zero_v1": "e45b12137c44b05ab9d4cb6b1ea1b54fb812665b"
+  },
+  "environment_image": "avfploc:cu124-clean",
+  "image_id": "sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318",
+  "audit_and_smoke_execution": "run-time HEAD UNRECORDED; task-start base19c1bd0 with concurrent migration5449980; then-uncommitted Track B sources subsequently committed as55c4238; no model checkpoint loaded",
+  "geometry_diagnostic_execution": "base c268a2f plus new ray diagnostic sources subsequently committed as 2555b21",
+  "external_json_hashes": {
+    "quantization_corrected.json": "2106d2eff4328dec89a168685c23d6eb108aef421c385226d06dc39d775be0b6",
+    "diagnostic_long_v1.json": "4467404de0e2e680af90023ea6b744885b30ebb6609b77b48b2b2986c8f7204d",
+    "stage_identity_audit.json": "f32db5688388e796e195b6140bf01c5b1324f2fb9ae1b8070ad67d05c7c41d0b",
+    "smoke_v1.json": "bd1966bbd93750f6881b90329bd92c4f9bd084810a8696444d2e5eba9fed664e",
+    "qualitative_v1.json": "c2bf6f7b5c4f38a7f8642b6a47d8826e94654f52c2b345131372f77d373dd96b",
+    "local_failure_analysis.json": "cf2256c2126b8a012d5da2ef5c4c8742d58e09f25301a95f6f2aa6f01daff634",
+    "zero_failure_analysis_replay.json": "a7d4e15f4e64721eb8721d8905a285918653957cad3724914676b78605aa4d07",
+    "rays_failure_analysis.json": "8301c4c08df26b38936c1235506c0f3621764234789615f9b8684e48baca5331",
+    "geometry_diagnostic_v1.json": "03140d29d5906f4fdf23ee216de21fc95987e8b66b09f8f667cba64dc7f2cff1",
+    "full_bank_profile.json": "d9fa119eb7f08c64a271a4ab5075c2f0d0efc7b35d8fb57aeb8e9a746c33a3d1",
+    "completion_validation.json": "21a7f37e380d35bba433095017b4e7936c75a361f25aa43ce51fc655b6ff78f4",
+    "pilot_v1/protocol.json": "f84c251deec67f2d87d38d919cdbeaf82ab226bb2684512d451abb6353c606bd",
+    "pilot_v1/joint_44.json": "ed4ccf7bea8e519424f9ea04a0c8911147d1f6197f653ebed895d91eaf361ee3",
+    "pilot_v1/concat_43.json": "e0398b5f72764231f727a2946245cc1bad8d4600408473b4c18726a0fb8be285",
+    "pilot_v1/concat_42.json": "410049d40011aa110be5aab2c58bbacedf9be39b6ec2b9ea1dac33a8a999cce9",
+    "pilot_v1/visual_43.json": "aa5014854e703051b8c5d6d9fe959b26a9e276b80fc33efc45570e0a10227edb",
+    "pilot_v1/concat_44.json": "e86696c97b75b43a3427ef0c60bad8809d806fdd9292a80680388b6a10b8570c",
+    "pilot_v1/acoustic_44.json": "77c0b0de0cb5f96c91b0d796004244a650b5f843302851ec6ececd278ace0c98",
+    "pilot_v1/joint_42.json": "4d2f34603badcf1d206705bc9279ea7ed3eb6b1f003dc1207df76128f0a40e75",
+    "pilot_v1/noninteraction_44.json": "9be222d2ed384ca887a7e757f6d3b1c83c9d4f1080048bef8ba86c264d9849a6",
+    "pilot_v1/visual_42.json": "c7cec555da0c7a21fbf74d603ddd9c2c704891713d741fb3099d1bbe32103faf",
+    "pilot_v1/acoustic_43.json": "9ae3f1ff17a64b0bf92b253ff88a6d283f5f1115108b6c500b20bc45a9d05a3a",
+    "pilot_v1/noninteraction_42.json": "494685496cee3434143b8672474c0f5fd95fb3ab57e90cb87048a7f3abcf0baa",
+    "pilot_v1/acoustic_42.json": "a08629f0f31866431e24e25d401446b55fc57ae8b0c5d04f6d23b5f6747c3f20",
+    "pilot_v1/summary.json": "07e36691dca572899b99f3d93fee22267be595c1f2b3e7845ca3e31e1cf86e1b",
+    "pilot_v1/noninteraction_43.json": "1bfe51dd696da6c548e5e6db2aba4c16b164f332f5358d2d8df8381a6e1d42fe",
+    "pilot_v1/visual_44.json": "d83aa1675ca39989b6fe7316255d624b5326d4ec4417c6df24465acf480c4822",
+    "pilot_v1/joint_43.json": "5254ff0038ffdce25e492c15c1d66905a17b35994e590cb665801c138ce3ce6d",
+    "pilot_long_v1/protocol.json": "c559bac369e599c95c824d446a3ce4be2dcb1e83eb2c74cce8cb5eac7bb7cdc4",
+    "pilot_long_v1/joint_44.json": "c86473f3f635bdb661e062548d0ed3afe86dae49ea0088df50020d86cf037ec7",
+    "pilot_long_v1/concat_43.json": "b89112cf716d0ad80c224eac9e9862dff45db8ad3e6e5830a0e6b7b1cacd965d",
+    "pilot_long_v1/concat_42.json": "efb7850805d916aefbc6aa2d24865e5967a8568fd9776415cec464a4ee158b7d",
+    "pilot_long_v1/visual_43.json": "362db62cf775e37ab322c3b16515d13b3703c53483fd73a4ceb4e66d54e5f50e",
+    "pilot_long_v1/concat_44.json": "3c0a6e553fb2fabdb8159538fe9b59ee0c153dc23518882bfa2bb1f7dc743112",
+    "pilot_long_v1/acoustic_44.json": "ce986c444dec4631a57e7c58deb5ddd2fcf23fb998e234821f9b75a27b5804da",
+    "pilot_long_v1/joint_42.json": "19da45890944e4c1328a3976d783e512bd51b162bb1668f7db4f96bed14fb39b",
+    "pilot_long_v1/noninteraction_44.json": "1799a328d8f86847afa9ddf878bfe5a8202d66cec81a3815f8f5918b4b59d601",
+    "pilot_long_v1/visual_42.json": "a288b090e1e833f9d388a4d0a4866484dad2b6f04a296f30c651b5e104707e6b",
+    "pilot_long_v1/acoustic_43.json": "3712c117312ca3d87d652e04951091c97f4e40c2668e42177f46795b588047a9",
+    "pilot_long_v1/noninteraction_42.json": "92a51536f4cb3c6a180242fc833bd2bf96679c676d8599c0c19c98376075d9e4",
+    "pilot_long_v1/acoustic_42.json": "db36b25f01d4e686495db30ad215227c971206bd452ca010113f358cde761b1b",
+    "pilot_long_v1/summary.json": "12df107a5b9ac821ae3679f0680a4522d78cd69f6acfc750305f1f50cff38e37",
+    "pilot_long_v1/noninteraction_43.json": "b3cd1692961db10176ee55b0e1d0a976cd3f00549008b9c78b7609525b2bd218",
+    "pilot_long_v1/visual_44.json": "c1f741d91e6f3220ce10f77eb3cbb3854b3454f6c8eb7312a10317448a780177",
+    "pilot_long_v1/joint_43.json": "b14cb169c894e1e0f209968376a8406fbfe5efdb207b817d56081d742a66b6f6",
+    "pilot_zero_v1/protocol.json": "8ff51ff8229d0f948ff95a50e59604c251ef96e0ac6d98b4fb914fe1be8d5484",
+    "pilot_zero_v1/joint_44.json": "dabe10c7616e3073dd394364c7cdb99772f540e6400492730fe98f59f6ad537a",
+    "pilot_zero_v1/acoustic_44.json": "1deb93f2c4a904a5ec02fb2def6af35548d682b8cfbcdc46c56eb03b3e040e14",
+    "pilot_zero_v1/joint_42.json": "125e373e0cbe1c37fffecc3848338386338c0ab02bcce17bcab1a373989cb045",
+    "pilot_zero_v1/acoustic_43.json": "5eaf5f6041b3631d1c3a7a9cc5ae03c6505d652500e583082ab3fa5d8b1e1146",
+    "pilot_zero_v1/acoustic_42.json": "cb6caf6ce035e3316719e2e0ca34e7f09e109b332a57a2ac9a7929b994064bf3",
+    "pilot_zero_v1/summary.json": "a15d610d8ce8b20878befe988d343f5f9c19baf4785af630a39ffd359c1f4646",
+    "pilot_zero_v1/joint_43.json": "b3c08091a2b2bad51a56b5e1135ec520e1dce8e9592f29aa9f954e22af2728d9",
+    "pilot_rays_v1/protocol.json": "4518fce39e878c32f83a00017840cb6b40ab8495254e957b4d508d58e2df2068",
+    "pilot_rays_v1/joint_44.json": "cc8347ef3839ec94f1bb7d504119e5bf8bfe23567aa6d72e89c17c3dbab23f26",
+    "pilot_rays_v1/acoustic_44.json": "64bd8bc6cb8f3116c693b1dd5cacfff7d6fa524cd2a6daba3b93a9be742a51e1",
+    "pilot_rays_v1/joint_42.json": "b8299d53222958fc75aaa3dbeebab8daecc1953b603a1bf4c976f7258680762b",
+    "pilot_rays_v1/acoustic_43.json": "a757e77a962a0d82adbf3aa48cc1a30bd2be5fa7ff90612af1e2c0a514a05319",
+    "pilot_rays_v1/acoustic_42.json": "bc8d321b0222612de03eaf57c8ca52820e9bcede927edf00083a7328a0231d7f",
+    "pilot_rays_v1/summary.json": "f3bdceb67558f58bda00a5e4d82259f2689f99da93b0b88710a06b40386e1ec6",
+    "pilot_rays_v1/joint_43.json": "6d2133d7001f423d4958867064bbe275d324d83ca48386151aac88e2d9d5ffc7"
+  },
+  "checkpoint_hashes": {
+    "pilot_v1/visual_42.pt": "159ab496429377aafc787fdb1d6be1b2ab3739a7b6c9b9c2cb39a7d3fd2dca69",
+    "pilot_v1/noninteraction_44.pt": "eddcef600cd7aa27c737cc4883ff8ccb2dd962574603ace684b31719ee8036ad",
+    "pilot_v1/joint_43.pt": "2949d01c398a282fc6ff0662f04a82e5361944a8f8bf46780c346681d075dac6",
+    "pilot_v1/concat_42.pt": "cc9cd4a83bbab9a7bcce96b69de680850623e4baa98893bb0e95533d1aa36119",
+    "pilot_v1/noninteraction_42.pt": "9aa37a33f89ef3d4d0bc3fc67cbc1d39127f55e77975bd259fbaea2e03a2ef06",
+    "pilot_v1/joint_44.pt": "60b44c53b06d4325bd33be096d0803e7e819a6e64be7f72b6ce72c7fb2f9ccc9",
+    "pilot_v1/joint_42.pt": "02ea1012e15f7c305c4a41924f06bd5cc6e8d9afe01537c9af06445891b61c1a",
+    "pilot_v1/visual_44.pt": "b4a96fa1e5fc881d8599281ba65c07d7d7cdaf3f387afda52bcbd36ab224a7d0",
+    "pilot_v1/acoustic_43.pt": "23d7cfd9be0af7d5656dd907f7e4cb9bdae804af540451f343fc8a5270a3a2af",
+    "pilot_v1/acoustic_42.pt": "88db6fdf53099c8ed5f350dc1dbeec40e78f53474e1ebd558613539de090f55d",
+    "pilot_v1/concat_44.pt": "cdb1a04ab2fe6fae023b1636d90946c287bbdff8aa31135c8d917e2ca29fa5d3",
+    "pilot_v1/noninteraction_43.pt": "41fcb1970bf7b0be9038d4a10649f0a2de854dfa4ff0f664e00bbd03e3f0f22c",
+    "pilot_v1/visual_43.pt": "725d4e01a1a54e8d68008e78fe92c4499cdbe7c750ee3bdd2fbac106daa84dc0",
+    "pilot_v1/concat_43.pt": "c50a371f39ce95c2fb6360392744f63c85f188545a4d5c1bd3933c209e8f8649",
+    "pilot_v1/acoustic_44.pt": "6c5598f8479052516f03f0aa4d823963b3d3cd718dfef9fc6152a8098e1e4770",
+    "pilot_long_v1/visual_42.pt": "bb8331a6667e98cfdde710e621a4bce4bda4b54dadfa6f5cbaa162598462fe04",
+    "pilot_long_v1/noninteraction_44.pt": "cfd8e8e7e2784f43d274c970ec14bed25f9dc7fee3a24ba5224a45f56e2daadf",
+    "pilot_long_v1/joint_43.pt": "f055ad8de4634cad7032814011f3206604cded131d06cea4730152a8685acc62",
+    "pilot_long_v1/concat_42.pt": "8b6d6d4a49138f6c342c2bcb5e610b0eeaa0e7dcee5585cb155537c34bb76884",
+    "pilot_long_v1/noninteraction_42.pt": "9534dea3fdcae0bab620c6bd4c50a856782f776c630168df9918d73990f965d6",
+    "pilot_long_v1/joint_44.pt": "dd23e0c0366c02c605a8121cbd5412bf62bc9321c17e34eb0198d5704cae8b99",
+    "pilot_long_v1/joint_42.pt": "c786e793b6aacd7ee756034c9696ea64c0b0bc762116feb160b5a99e44e1cd3c",
+    "pilot_long_v1/visual_44.pt": "cd58238fa25204417ee38b79700f37a8c4a3699e20cd14636701498288d84af8",
+    "pilot_long_v1/acoustic_43.pt": "9d526c140a51f2007054413dee168aa2c0d4ac7405aba353f0f8c60ec96af7db",
+    "pilot_long_v1/acoustic_42.pt": "866fd9df54b2e812fa61c4b06b14b6f63231acde48c04dabae9201165cb49baa",
+    "pilot_long_v1/concat_44.pt": "1b2fab28f821f58e20a1e7a60b5a96d1e4119c0504ca4b9a9c0a709a077f73b7",
+    "pilot_long_v1/noninteraction_43.pt": "d71a5288e823fb98c55ab85686beab1a84a307410739a8c0bdd74955fc1ad69d",
+    "pilot_long_v1/visual_43.pt": "07dc6bf5521d2b410c23ae170495469f4a4d4b2f51645333aa28c139ac8f44fb",
+    "pilot_long_v1/concat_43.pt": "f842373b0d1d56e558b1e552d8eff647756c726b6e2fc79034efb1693605b8d6",
+    "pilot_long_v1/acoustic_44.pt": "6a3ea9caefcb7b736bcf6efb451c198596fa74294ef80fecff44ffe6c9bd2ee3",
+    "pilot_zero_v1/joint_43.pt": "3bf5ed1f5396780e0048504ffc99893282e6383195414bf08891f4db7874ce6c",
+    "pilot_zero_v1/joint_44.pt": "0fec44b9cd2f938727e65b7f6a692f587ed29b6acc0bfe6d75d739586fd93bdb",
+    "pilot_zero_v1/joint_42.pt": "1d7c76f2902d703a312f2ec2774ecb407398114da74f8849fdd84cb506125e17",
+    "pilot_zero_v1/acoustic_43.pt": "5d60d65c7993dc5bbd841c983f553b39fae6ca82f99a99ba26550b39bb092046",
+    "pilot_zero_v1/acoustic_42.pt": "a2a9582c5626ae7c8dd3625a54e09410ab76669578823f00f1bc778fe72bbfd3",
+    "pilot_zero_v1/acoustic_44.pt": "88edf04dacc519a8a086c606d3e0ee64d7f680ecfee2e57bfbfa27134dba5805",
+    "pilot_rays_v1/joint_43.pt": "67dfc65a4c672dedca943812e4dca3fbc86f0cf919fca73a5514a2a2338e417a",
+    "pilot_rays_v1/joint_44.pt": "29f7deb043ed07611cce70fa5d4a761161e04de5acc8555acdbbbe3703e608fb",
+    "pilot_rays_v1/joint_42.pt": "b2f9961313b9cceec08d83e6619d9d88fe5add36e5937b774bf176eda7482acc",
+    "pilot_rays_v1/acoustic_43.pt": "dabbc4c7600025af6bccb047c83b0c8d2fa3c5e8680a73c51b772268264f38b1",
+    "pilot_rays_v1/acoustic_42.pt": "0b139baa88ba1e4c7b389a6708dc047bc1e97ad89163a2c2fb1dc16c9c83e51c",
+    "pilot_rays_v1/acoustic_44.pt": "dd24d707069fc2080abfb01ed45b260f0465a300073f4e0f9cbb3a0fcd027d48"
+  },
+  "audit_manifest_sha256": "b9351b5bbc35d4389517c9a84a0a95af0ae8db509253bb78db5f9833f779686e",
+  "audit_split_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+  "source_hashes": {
+    "track_b/__init__.py": "76ac03fbb666ad321c4ab5e63881da86f28ee8bcd93821e64c33f5fe2bad6abd",
+    "track_b/tests/test_geometry.py": "c0c005f2150aea7e3dc582fa0531706d54638da7b4f1d341dcf1cffa218c7ca0",
+    "track_b/tests/test_dense.py": "98a8854e58c34e5e4b12ee027767b8c4904adc34115a9f2392d6b3bc76dc9692",
+    "track_b/tests/test_rays.py": "da72dbc437bec3e47b4e3964656db0d9fc178c0fe83920556b48e8e6fa0ca35b",
+    "track_b/models/dense.py": "db208427f9dfa71582a302f577c4414fcccb64aebb4da732083c6750c84263a9",
+    "track_b/models/ray_dense.py": "8e6379cbd976041b6ccfda25073c292a98a236858689710f305943cddb4721bf",
+    "track_b/data/geometry.py": "0af018e7fe64b89b6bf0441fdb5ed3890be2bf1f16350d772a4a68bade7dd8be",
+    "track_b/data/rays.py": "feea2deebeba5137bba2158d5dbab0852caeddcbdeaf8b9ad8957a2bc07ae14a",
+    "track_b/scripts/smoke.py": "f33a571aadf409a708c800085459fe60c2149f7eb414d0bbd26168915218811c",
+    "track_b/scripts/profile_full_bank.py": "c3f0add6574fdc31adb504250a637a8d1129fba11fca79248c8dde9738197144",
+    "track_b/scripts/qualitative.py": "ad89b2a90037057129bb4f7443c347767f79dfd721417cb79b87a6d701d089ec",
+    "track_b/scripts/figure.py": "15de3d263a0580a70189364008269920f979280491a303180d792ca098144a1c",
+    "track_b/scripts/pilot.py": "96943865875d8fa73b82a25b070edde471625609b0565fa69406d0716a9286dd",
+    "track_b/scripts/geometry_diagnostic.py": "6c9c3d986c581f6bf2d559771bab553bb3efe7cdd80aca7a24b549a88560162b",
+    "track_b/scripts/report.py": "00f2482351896ab7b3fb80563db396bb75770fea5ec76a8915e5f1024a6f9f52",
+    "track_b/scripts/pilot_geometry.py": "ef954acffdf40e221ec711212d58e8d880532222001a71b21c928280a3082fe0",
+    "track_b/scripts/diagnose.py": "62fcceb3170a2965e4df9f0367c98c6acded3e1cf2a4ca12d6640a83ed746d74",
+    "track_b/scripts/failure_analysis.py": "f970c60567af7f7c64c2223eddba1f48d8d6f462daa20e8ba6a3d8b8c426fe54",
+    "track_b/scripts/audit_dataset.py": "a59bc87da113770abd9bdaadc2c636de6f171b712941a839a9c3b13eb5b18527"
+  },
+  "limitations": "Datasets and checkpoints remain external. Docker image tag alone does not guarantee clean-clone reproducibility; use pinned image ID and data hashes.",
+  "files": [
+    {
+      "git_copy": "audit_summary.json",
+      "sha256": "1532cfdd56c072851b9e8ada050b785ef626de55183dfee02ee262f4dcef1fe7"
+    },
+    {
+      "git_copy": "comparison.png",
+      "sha256": "abc50c84af816b516b578475266941202188c0527b6479316cebc61e55b64c0f"
+    },
+    {
+      "git_copy": "completion_validation.json",
+      "sha256": "21a7f37e380d35bba433095017b4e7936c75a361f25aa43ce51fc655b6ff78f4"
+    },
+    {
+      "git_copy": "diagnostic_long_v1_summary.json",
+      "sha256": "581b450a537c4d17d49896c4bd7b7744c998ec23e8ed596fd7f41084430789de"
+    },
+    {
+      "git_copy": "diagnostic_summary.json",
+      "sha256": "45684506c18e6586d830d5bb2b8488ee6ac47eb289ecd415c3e44c6f7a680d30"
+    },
+    {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "711984ef06d389eaa4290910f070fbfb43785958b1b5a15dcfd9df0b3f201c31"
+    },
+    {
+      "git_copy": "full_bank_profile.json",
+      "sha256": "d9fa119eb7f08c64a271a4ab5075c2f0d0efc7b35d8fb57aeb8e9a746c33a3d1"
+    },
+    {
+      "git_copy": "geometry_diagnostic_v1.json",
+      "sha256": "03140d29d5906f4fdf23ee216de21fc95987e8b66b09f8f667cba64dc7f2cff1"
+    },
+    {
+      "git_copy": "local_failure_analysis_summary.json",
+      "sha256": "d80fbc2ae785b94a3700a237fcbf2c77dcf96bfec5f4da6645585bc5db126c3a"
+    },
+    {
+      "git_copy": "paired_scene_bootstrap.json",
+      "sha256": "c942b48119a6af0cfab57e0f1308661bd06108c6cc787319d9d7e3cdf464adfc"
+    },
+    {
+      "git_copy": "pilot_aggregate_results.json",
+      "sha256": "9e625662371fddca6e60b4ae9284a6297fb2d85e81ed5077916aea9af1ed77a4"
+    },
+    {
+      "git_copy": "qualitative.json",
+      "sha256": "c2bf6f7b5c4f38a7f8642b6a47d8826e94654f52c2b345131372f77d373dd96b"
+    },
+    {
+      "git_copy": "qualitative.png",
+      "sha256": "65ebe36b288562855aa9d61327eb35d18b0c0e27f29ce22b250a1eb9e2b87abc"
+    },
+    {
+      "git_copy": "quantization_corrected.json",
+      "sha256": "2106d2eff4328dec89a168685c23d6eb108aef421c385226d06dc39d775be0b6"
+    },
+    {
+      "git_copy": "rays_failure_analysis_summary.json",
+      "sha256": "087050ffbfd803142f7bb026196bdce2e313c010403ba04ab508fbb2d68927aa"
+    },
+    {
+      "git_copy": "results_master.csv",
+      "sha256": "62d3aef882a0fa5b7b40c0708621c1fe0f40b0fa1e89750166874e581eba8693"
+    },
+    {
+      "git_copy": "smoke_v1.json",
+      "sha256": "bd1966bbd93750f6881b90329bd92c4f9bd084810a8696444d2e5eba9fed664e"
+    },
+    {
+      "git_copy": "stage_identity_audit.json",
+      "sha256": "f32db5688388e796e195b6140bf01c5b1324f2fb9ae1b8070ad67d05c7c41d0b"
+    },
+    {
+      "git_copy": "zero_failure_analysis_summary.json",
+      "sha256": "33e3fcf45ac7e44d90cf3c8d0dc2310fa9644fabb03a39a061adbdac9f55adfc"
+    }
+  ]
+}

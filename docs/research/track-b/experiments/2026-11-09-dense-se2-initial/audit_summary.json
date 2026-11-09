@@ -1,0 +1,22 @@
+{
+  "scenes": 135,
+  "queries": 71467,
+  "available": 71467,
+  "sampled_waveforms": 132,
+  "missing_rgb": 0,
+  "missing_rir": 0,
+  "alignment_failures": 0,
+  "out_of_footprint": 0,
+  "development_scenes": {
+    "train": 112,
+    "val": 19
+  },
+  "elapsed_s": 176.9037525653839,
+  "waveform_qc_pass": true,
+  "limitations": [
+    "Black mask combines wall/exterior/unknown; no physical-wall truth",
+    "Source-family prefix is conservative, geometry near-duplicates unresolved",
+    "One waveform per scene inspected",
+    "No pristine independent test evaluation"
+  ]
+}

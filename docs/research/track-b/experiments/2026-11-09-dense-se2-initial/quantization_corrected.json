@@ -1,0 +1,8 @@
+{
+  "note": "Numerical boundary correction: <=0.1m with 1e-6m tolerance; audit_v1 uses strict float <=.1",
+  "micro_fine_upper_bound": 0.5249835588453412,
+  "macro_fine_upper_bound": 0.5260699382290058,
+  "max_distance": 0.14142135623731153,
+  "query_count": 71467,
+  "scene_count": 135
+}

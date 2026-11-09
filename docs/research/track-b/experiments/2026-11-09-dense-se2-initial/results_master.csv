@@ -1,0 +1,15 @@
+run,method,FP-RIR ref required?,New-scene training required?,Raw Coverage@20,Diverse Coverage@20,MAP@1,SupportNMS@1,Disc@1,Visual-degraded@1,Furnished@1,NLL,new-scene setup s,storage MB,warm query ms,peak VRAM,train GPUh
+pilot_v1,visual,no,no,0.048611111111111105,0.08333333333333333,0.006944444444444444,NA,NA,NA,0.006944444444444444,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,117327872,0.0020535210366102144
+pilot_v1,acoustic,no,no,0.013888888888888888,0.048611111111111105,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,117694464,0.0019191734133184783
+pilot_v1,concat,no,no,0.027777777777777776,0.041666666666666664,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,123010048,0.0013075987649952166
+pilot_v1,noninteraction,no,no,0.041666666666666664,0.07638888888888888,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,119242240,0.0012783262691098368
+pilot_v1,joint,no,no,0.027777777777777776,0.04861111111111111,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,160809472,0.003217418996953509
+pilot_long_v1,visual,no,no,0.027777777777777776,0.05555555555555555,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,117327872,0.044447007990610375
+pilot_long_v1,acoustic,no,no,0.08333333333333333,0.10416666666666667,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,117694464,0.04769195018226229
+pilot_long_v1,concat,no,no,0.06944444444444445,0.0763888888888889,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,123010048,0.03697834676888306
+pilot_long_v1,noninteraction,no,no,0.0625,0.0763888888888889,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,119242240,0.029015339815846853
+pilot_long_v1,joint,no,no,0.08333333333333333,0.09027777777777778,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,160809472,0.0670188835527127
+pilot_rays_v1,acoustic,no,no,0.03472222222222222,0.05555555555555556,0.006944444444444444,NA,NA,NA,0.006944444444444444,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,130994688,0.05521768619021815
+pilot_rays_v1,joint,no,no,0.10416666666666667,0.13194444444444445,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,174109696,0.07989160033311539
+pilot_zero_v1,acoustic,no,no,0.08333333333333333,0.09027777777777778,0.006944444444444444,NA,NA,NA,0.006944444444444444,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,132829696,0.06181723979049517
+pilot_zero_v1,joint,no,no,0.06944444444444443,0.125,0.0,NA,NA,NA,0.0,NA: stored nll is soft-target CE,NA,NA,see isolated diagnostic scope,175944704,0.07527961796686415

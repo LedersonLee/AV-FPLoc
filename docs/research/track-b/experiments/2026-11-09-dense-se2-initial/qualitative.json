@@ -1,0 +1,50 @@
+[
+  {
+    "scene": "108736611_177263226",
+    "query": 16,
+    "mode": "visual",
+    "seed": 42,
+    "translation_m": 6.868042469024658,
+    "yaw_deg": 90.0
+  },
+  {
+    "scene": "108736611_177263226",
+    "query": 16,
+    "mode": "joint",
+    "seed": 42,
+    "translation_m": 2.2847321033477783,
+    "yaw_deg": 0.0
+  },
+  {
+    "scene": "108736635_177263256",
+    "query": 24,
+    "mode": "visual",
+    "seed": 42,
+    "translation_m": 7.151223659515381,
+    "yaw_deg": 119.99999237060547
+  },
+  {
+    "scene": "108736635_177263256",
+    "query": 24,
+    "mode": "joint",
+    "seed": 42,
+    "translation_m": 9.52575397491455,
+    "yaw_deg": 29.999998092651367
+  },
+  {
+    "scene": "105515448_173104512",
+    "query": 8,
+    "mode": "visual",
+    "seed": 42,
+    "translation_m": 4.884669780731201,
+    "yaw_deg": 180.0
+  },
+  {
+    "scene": "105515448_173104512",
+    "query": 8,
+    "mode": "joint",
+    "seed": 42,
+    "translation_m": 15.164432525634766,
+    "yaw_deg": 0.0
+  }
+]
