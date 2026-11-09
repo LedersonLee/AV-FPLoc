@@ -56,3 +56,6 @@ out['fullbank_downstream']=group(downstream,['arm'],['conditional_joint','repair
 out['fullbank_stratum_counts']=strata
 (P/'analysis.json').write_text(json.dumps(out,indent=2))
 print('Extended direction metrics, feature ablations, GT-free ambiguity strata and fullbank repair/harm complete.')
+
+out['ordinal_openness']=group(b,['model','condition'],['ordinal_accuracy','openness_accuracy'])
+(P/'analysis.json').write_text(json.dumps(out,indent=2))

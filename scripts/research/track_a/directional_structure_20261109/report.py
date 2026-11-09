@@ -46,7 +46,7 @@ table('Full bank',list(a['fullbank'].items()),[('joint','Joint %',100),('fine','
 table('Full bank / high visual ambiguity',[(k.split('/')[1],v) for k,v in a['fullbank_ambiguity'].items() if k.startswith('high/')],[('joint','Joint %',100),('top5','Top5 %',100),('top20','Top20 %',100)])
 table('Full bank / preservation',list(a['fullbank_downstream'].items()),[('conditional_joint','Conditional joint %',100),('repair','Repair %',100),('harm','Harm %',100),('visual_success_preservation','Visual preservation %',100)])
 table('Matched-budget GEOQ integration',list(a['integration'].items()),[('joint','Joint %',100),('fine','Fine %',100),('pair_accuracy','Pair %',100)])
-lines+=['E0는 기존GEOQ, E1은 V+structure, E2는 cosine+structure, E3는 기존156feature에 구조8+상대8을 추가한172feature GEOQ 재학습이다. E4로 donor/nuisance 동일용량 대조와 고정0.05score addition을 수행했다. 150iteration/15leaf/최소leaf100의 동일 설정이다. Matched 결합은 GEOQ 대비 joint−1.432%p CI[−2.962,−0.130]였다. 고정addition은 joint가 같고 미세한 fine 차이를 확정 개선으로 보지 않는다. 기존GEOQ를 유지한다.','',
+lines+=['E0는 기존GEOQ, E1은 V+structure, E2는 cosine+structure, E3는 기존156feature에 구조8+상대8을 추가한172feature GEOQ 재학습이다. E4는 direction-centered matching 대안이다. 별도로 donor/nuisance 동일용량 대조와 고정0.05score addition도 수행했다. 150iteration/15leaf/최소leaf100의 동일 설정이다. Matched 결합은 GEOQ 대비 joint−1.432%p CI[−2.962,−0.130]였다. 고정addition은 joint가 같고 미세한 fine 차이를 확정 개선으로 보지 않는다. 기존GEOQ를 유지한다.','',
 '추론에 사용할 수 없는 true4방향 geometry oracle도 fullbank joint51.11%, Top20 98.96%였다. 4방향 요약은 유일한 pose 식별에 불충분하며 예측 오차도 큰 추가 요인이다. Oracle은 진단용이고 추론에 넣지 않는다. Fullbank V+structure는 전체query에서 joint−2.409%p/fine−5.273%p였지만 후보 위치를 고정한 재정렬은 개선됐다. 구조 신호는 거친 mode 판별을 지원하지만 연속 pose peak를 움직이기에는 불충분하다는 해석과 일치한다.','',
 '![Fullbank fields](figures/structural_score_field.png)','![Localization comparison](figures/localization_ablation.png)','',
 '## 固定方法のTransfer11','']
@@ -67,5 +67,10 @@ lines+=['','## 가설 판정과 다음 반증 예측','',
 '전이 가설: 거친 acoustic 구조는 시각이 제안한 떨어진 mode 사이 선택에 유용하고, mode 내부 정밀 위치를 움직이면 harm이 증가한다. 새로운 미사용scene/실측RIR에서 visual 좌표 고정과 자유 재최적화를 사전등록하여 비교하면 반증 가능하다. 이번 결과를 미실시 실험의 결론으로 대체하지 않는다.','',
 '새 checkpoint73개를 생성했다(prediction24, uncertainty6, integration24, symmetric6, feature12, transfer1). 가중치·waveform·raw 예측은 로컬에 보존한다. 기존 연구·strong baseline·Track B는 변경하지 않는다. 실행 코드·hash와 재현 절차는 최종provenance/재현 문서로 추적한다. 최종 완료는 model replay·산출물manifest·요건감사·Docs/index 검증과 동기화 후 판정한다.']
 # Tables are generated directly from saved aggregates.
+table('Ordinal and ordinary openness accuracy',list(a['ordinal_openness'].items()),[('ordinal_accuracy','Ordinal %',100),('openness_accuracy','Ordinary openness %',100)])
+table('Candidate conditional metrics and margins',list(a['discrimination_extended'].items()),[('R1','R@1m %',100),('conditional_joint','Conditional joint %',100),('visual_success_preservation','Preservation %',100),('success_minus_failure_margin','Success-failure margin',1)])
+lines += ['','Signal audit: 1,536 query rows reuse 1,201 base RIRs. All 9,216 channel early peaks occur at sample 7. This is centered-source direct timing, not directional wall evidence.']
+sg=json.loads((P/'signal_audit.json').read_text()); ca=json.loads((P/'candidate_preparation.json').read_text())
+lines += ['','## 측정한 전처리 구간','',f"Raw descriptor/ECN audit wall: {sg['seconds']:.3f}s (1536query). PureV candidate preparation: {sum(r['seconds'] for r in ca['records']):.3f}s (12scene; cosine controls, IO, NMS included). Renderer generation and complete encoder/GEOQ end-to-end latency were not measured; no speedup claim."]
 (P/'RESEARCH_REPORT.md').write_text('\n'.join(lines)+'\n')
 print('Report tables written',len(lines))
