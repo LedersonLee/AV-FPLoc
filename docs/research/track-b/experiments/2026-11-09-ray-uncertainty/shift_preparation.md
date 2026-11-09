@@ -14,3 +14,5 @@ python -m track_b.scripts.cache_foundation_visual --root <HSSD> --cache <scale>/
 python -m track_b.scripts.cache_uncertainty_audio_noise --root <HSSD> --cache <scale>/cache_v1 --out <new-output> --code-sha 1c24188091148a53c513e441ed056cc949e5bf3d
 ```
 첫 명령은0.50/0.75도 각각 새로운 출력 폴더로 수행한다. avfploc:cu124-clean,network none,OMP_NUM_THREADS2,코드/입력 read-only mounts. 원본 RIR/RGB/큰 feature와 spectrum은 Git에 업로드하지 않는다. raw logs도 외부 실험 root에 보존한다.
+
+완료 갱신: 가림3개 조건과 audio noise의 입력 생성·hash 검증이 모두 완료됐다. 세 가림 조건의 기존6Val overlap은 정확히 일치했다. 실제 shift smoke와 전체 평가 실행은 [평가 진행](evaluation_progress.md)을 참조한다.

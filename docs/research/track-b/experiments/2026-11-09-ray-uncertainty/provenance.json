@@ -32,11 +32,11 @@
     },
     {
       "git_copy": "evaluation_progress.md",
-      "sha256": "cc830a2f376f80bbda77e6da7e06ab4d8e399a33b765d7560c07e5c880569b33"
+      "sha256": "9800ba35990aa12a5c54e345c0f980d78a2b5fb1099b74a71f6d40bfdd171be9"
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "a30fc3e96f67bc67580eef89bfd939b8e9c59dfbdfd3a4dd7861ce4a20911589"
+      "sha256": "8ae6514bb09a562e5d6e2f0ec9b55659ecf49344e535baf48e5525b77050c354"
     },
     {
       "git_copy": "implementation_validation.md",
@@ -49,6 +49,18 @@
     {
       "git_copy": "main_training_protocol.json",
       "sha256": "2553f0d948f07d4a1059dabbbb241c782c28d59517597d37278969666d569b2d"
+    },
+    {
+      "git_copy": "occlusion25_validation.json",
+      "sha256": "4678cebf1081ee02205b472ae17888e221a49fb6ef8222a75bb335a6f87c8a30"
+    },
+    {
+      "git_copy": "occlusion50_validation.json",
+      "sha256": "bee7cf12d9934fde129459d1d865ae1e7e01d774af50850d93ca973f0bac8173"
+    },
+    {
+      "git_copy": "occlusion75_validation.json",
+      "sha256": "3d8a97b0f3aa095c6dfe812b7b236707ceff0ae3782f4bd1b4d2f30958a2e155"
     },
     {
       "git_copy": "preflight_report.md",
@@ -68,7 +80,15 @@
     },
     {
       "git_copy": "shift_preparation.md",
-      "sha256": "8c50e23fcf0b709a7124d955e6d3776ac7ede2e867f4561610dd242aa73f6b4f"
+      "sha256": "31c8d5b156d4d2c023803ce02ae1baff22261fcbd8330409583b1933919cdb78"
+    },
+    {
+      "git_copy": "smoke_audio_noise20_validation.json",
+      "sha256": "592ff43c16a8e1636c22c653877c74dd50b230e2bd9da06fcd41ac13f29dde46"
+    },
+    {
+      "git_copy": "smoke_occlusion75_validation.json",
+      "sha256": "592ff43c16a8e1636c22c653877c74dd50b230e2bd9da06fcd41ac13f29dde46"
     },
     {
       "git_copy": "smoke_protocol.json",
@@ -96,11 +116,12 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "d580eacdc9d270cfbc63112cb8db3fe0f787cae6c34699e888e7287aa8ed019c"
+      "sha256": "b2bbae51b47067988dd89bb332c7ba50407935cbd94d6002338a3fe88a76ecf1"
     }
   ],
   "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
   "training_sha": "3caccd76fd46289f9301624255584fe0df490394",
   "audio_transform_sha": "1c24188091148a53c513e441ed056cc949e5bf3d",
-  "evaluator_sha": "bf9a825cf58f584e6803f5026977fc1b32c7aafb"
+  "evaluator_sha": "bf9a825cf58f584e6803f5026977fc1b32c7aafb",
+  "shift_execution_sha": "ba040da65e3cf3339a716e9dc8a6af07c1a488d7"
 }
