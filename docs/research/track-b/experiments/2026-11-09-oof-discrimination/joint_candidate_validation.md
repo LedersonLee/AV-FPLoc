@@ -47,3 +47,9 @@ python -m track_b.scripts.cache_discriminator_candidates --cache <structure>/cac
 이후 attention의2fold×3seed×1000step 본 학습을 순차 실행하기 시작했다. 출력 `joint_fold0_v1`, `joint_fold1_v1`; 로그 같은 이름.log; live handle79859. 실행 SHA `884864a35590bb259b34fd8c2e4e785fae9b16ca`. 밝기/aux/anchor/optimizer 설정은 smoke protocol과 같고 steps1000/seeds42,43,44로만 확장한다. source cohort는 기존16Train pilot; 원래6Val는 OOF 모델 학습·fold 평가에 사용하지 않는다. 주 확장 실험과 GPU를 공유하므로 학습 시간은 전용 GPU 효율 비교 근거가 아니다. 최종6fit/OOF 후보/판별기 비교는 아직 진행 중이다.
 
 재현은 `train_foundation_interaction`에 `--scene-fold <oof>/folds_v1/fold_<k>.json --visual-run <oof>/fold<k>_visual_joint_v1 --acoustic-run <oof>/fold<k>_acoustic_v1 --cache <structure>/cache --visual-cache <foundation>/features_v1 --lowlight-cache <oof>/features_lowlight_all_v1 --scene-residency cpu --steps 1000 --seeds 42 43 44 --modes attention --code-sha 884864a35590bb259b34fd8c2e4e785fae9b16ca --out <new-output>`를 사용하며 k=0,1을 순차 실행한다. 출력은 새 폴더여야 한다.
+
+## 후단 입력 모델 일관성 검사
+
+`523d0130e820f6695f243afafa8a1e246eb7f6f6`에서 판별기 학습 CLI에 `--fold-candidates <fold0> <fold1>` 및 `--development-candidates <dev>`를 추가했다. 기존 root 기반 기본 경로는 유지한다. 각 입력의 scorer와 upstream feature protocol SHA가 같고 두 fold의 학습 집합이 상대 held-fold 집합과 같아야 한다. 실행 protocol에는 실제 scorer를 기록해 M1 실행을 F1 backend로 잘못 표시하지 않는다. 기존 pilot의 질의 수1024/384 제약은 유지하므로 확장 규모에 자동 적용되는 코드는 아니다.
+
+음성 대조: 기존 F1 OOF 후보와 M1 development 후보를 섞으면 `Candidate scorer families differ`로 학습/출력 폴더 생성 전에 거부했다([검증](joint_mixed_scorer_validation.json)). 원래 F1 세 protocol은 새 scorer/source/complement 검사에 모두 통과했다. 전체 판별기를 재학습한 검증은 아니며, 실제 M1 OOF 후보가 완료된 뒤 정해진12개 classifier fit에서 긍정 경로를 검증한다. 예상 실패 원문은 외부 `mixed_scorer_guard_validation_v1/expected_failure.txt`에 보존했다.
