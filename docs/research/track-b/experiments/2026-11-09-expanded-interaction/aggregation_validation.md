@@ -17,3 +17,9 @@
 검증 출력 `provenance_registration_replay_v1`: 9개 fit의 학습 SHA와 checkpoint hash가 공식 역사적 registry와 모두 일치하고 aggregate도 기존과 동일했다. 음성 대조 `provenance_missing_negative_v1`: 역사적 registry 없이 실행하면 attention_42의 학습 SHA 누락으로 실패하고 registry 파일을 생성하지 않았다. 예상 실패 traceback을 외부 출력 폴더에 보존했다. 기존 `dynamic_cohort_registration_replay_v1`의 출처 한계 기록은 삭제하지 않는다.
 
 재현은 위 명령에서 집계 코드 SHA를 후속 SHA로 변경하고, `--historical-registry <repo>/docs/research/track-b/experiments/2026-11-09-foundation-interaction/experiment_registry.csv`를 추가한다. 신규 출력 폴더를 사용한다. 확장된 주 학습의 코드는 변경하지 않았다.
+
+## 본 학습 초기 상태의 추가 검증
+
+본 학습 `matched_v1/attention_42_initial.pt`를 사용한 19개 Val 장면, 1,216개 질의 replay 완료: Joint/R@1m/fine/raw20/NLL의 기준 F1 대비 허용 오차 초과가 0건이었다(`rtol=1e-5`, `atol=2e-5`). [검증 결과](main_initial42_validation.json). 실제 학습 SHA는 `c083c376631c3f6ed8d89daf9d3a9d93c350fd3b`, replay 실행 checkout SHA는 `1e74884e514a74135e2630879482fb6dc1fe5e61`이며 replay script SHA256은 `6c7291434f761402ac5d0e506e419016f14a32f27841e49b0c9432823ac7df22`이다. 무관한 Track A 두 파일의 기존 dirty 상태는 유지했으며 해당 파일은 replay 경로에서 사용하지 않았다.
+
+짧은 시험 실행과 본 학습 attention/concat의 seed42 초기 상태는 65개 tensor 모두 bitwise 동일했다([검증 결과](main_initial42_tensor_validation.json)). 저장 파일 해시는 직렬화 때문에 다를 수 있으므로 텐서 동일성과 구분했다. 이 결과는 아직 생성되지 않은 모든 seed/mode의 초기 상태를 증명하지 않으며, 최종 학습 성능에 대한 결론도 아니다. 상기 파일을 입력해 기존 `replay_initial_fusion` 명령을 새 출력 폴더에서 실행하면 재현할 수 있다.

@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "equal_tensor_count": 65,
+  "all_equal": true,
+  "files": {
+    "smoke_v1/attention_42_initial.pt": "5e7053a478f08730916ccad2dfcb17ddc63c789f844609d6673bdfd97c6ed4f7",
+    "matched_v1/attention_42_initial.pt": "5e7053a478f08730916ccad2dfcb17ddc63c789f844609d6673bdfd97c6ed4f7",
+    "matched_v1/concat_42_initial.pt": "c50c80efef142182f3e005093b5ccc03d967ccdf2c6aefc09ef15e0863c94c4d"
+  },
+  "scope": "Only currently available attention/concat main initializations and prior smoke; not all nine fits"
+}

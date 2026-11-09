@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "mode": "attention",
+  "queries": 1216,
+  "mismatches": [],
+  "initial_sha256": "5e7053a478f08730916ccad2dfcb17ddc63c789f844609d6673bdfd97c6ed4f7",
+  "reference_protocol_sha256": "ed88df2990a000c17c5b8fa1ed5eb195f199a975d2ab823cd29b7fb949566a6a",
+  "scope": "Full normal cohort metric replay for this seed/initialization; not bitwise score equality"
+}
