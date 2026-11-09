@@ -63,22 +63,22 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
             elif arm=='rgb_zero':va=model.visual(torch.zeros_like(rgb))
             s=scores(model,va,aa,fp,scene,mode);idx=s.argmax(-1);raw=s.topk(20,dim=-1).indices;logp=s.log_softmax(-1)
             for j,q in enumerate(ids.tolist()):
-                div=diverse_cpu(s[j].cpu().numpy(),cpu_poses) if diversity else []
+                div=diverse_cpu(s[j].cpu().numpy(),cpu_poses) if diversity and arm=='normal' else []
                 metric=dict(scene=scene['scene'],query=scene['query_ids'][q],arm=arm,joint=float(ok[j,idx[j]]),r1=float(dxy[j,idx[j]]<=1+1e-6),fine=float(dxy[j,idx[j]]<=.1+1e-6),
                             raw20=float(ok[j,raw[j]].any()),diverse20=float(ok[j,div].any()) if div else None,nll=float(-logp[j,nearest[j]]),entropy=float(-(logp[j].exp()*logp[j]).sum()),
-                            ray_mse=float(((pred[j]-scene['target'][q]).square()*mask).sum()/mask.sum()),
+                            oracle_joint=float(ok[j].any()),oracle_fine=float((dxy[j]<=.1+1e-6).any()),ray_mse=float(((pred[j]-scene['target'][q]).square()*mask).sum()/mask.sum()),
                             ray_mae_m=float(((torch.expm1(pred[j]*math.log(21))-torch.expm1(scene['target'][q]*math.log(21))).abs()*mask).sum()/mask.sum()))
                 rows.append(metric)
     summary={}
     for arm in sorted({r['arm'] for r in rows}):
-        rr=[r for r in rows if r['arm']==arm];summary[arm]={k:float(np.mean([r[k] for r in rr])) for k in ('joint','r1','fine','raw20','nll','entropy','ray_mse','ray_mae_m')}
-        summary[arm]['diverse20']=float(np.mean([r['diverse20'] for r in rr])) if diversity else None
+        rr=[r for r in rows if r['arm']==arm];summary[arm]={k:float(np.mean([r[k] for r in rr])) for k in ('joint','r1','fine','raw20','nll','entropy','ray_mse','ray_mae_m','oracle_joint','oracle_fine')}
+        summary[arm]['diverse20']=float(np.mean([r['diverse20'] for r in rr])) if diversity and arm=='normal' else None
     return dict(summary=summary,rows=rows,cost=cost)
 
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
-    ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
+    ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
     ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);args=ap.parse_args()
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
@@ -93,13 +93,14 @@ def main():
     print('DATA_READY',flush=True);mean_target=torch.cat([s['target'] for s in scenes['train']]).mean(0)
     prior=[]
     for s in scenes['val']:
-        prior.append(dict(scene=s['scene'],ray_mse=float((s['target']-mean_target).square().mean())))
+        error=(s['target']-mean_target).square();mask=visible_rays(s['hfov_deg'],device='cuda')
+        prior.append(dict(scene=s['scene'],acoustic_ray_mse=float(error.mean()),visual_ray_mse=float((error*mask).sum(-1).mean()/mask.sum())))
     (args.out/'constant_structure_prior.json').write_text(json.dumps(prior,indent=2));all_results=[]
     for seed in args.seeds:
       for mode in args.modes:
         torch.manual_seed(seed);rng=np.random.default_rng(seed);model=StructureMatcher().cuda();opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.0001)
         permutations={s['scene']:torch.tensor(rng.permutation(len(s['gt'])),device='cuda') for s in scenes['train']}
-        rng=np.random.default_rng(seed);history=[];start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
+        rng=np.random.default_rng(seed);history=[];aux_eval_seconds=0.;start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
         total=args.aux_steps+args.dense_steps
         for step in range(total):
             model.train();s=scenes['train'][int(rng.integers(len(scenes['train'])))];ids=torch.tensor(rng.integers(len(s['gt']),size=args.batch_size),device='cuda')
@@ -114,12 +115,14 @@ def main():
             if step%100==0 or step==total-1:
                 rec=dict(step=step,loss=float(loss),aux=float(aux),dense_ce=float(ce),elapsed_s=time.perf_counter()-start);history.append(rec);print(json.dumps(dict(seed=seed,mode=mode,**rec)),flush=True)
             if step+1==args.aux_steps and args.arm!='dense_only':
+                torch.cuda.synchronize();aux_start=time.perf_counter()
                 aux_eval=evaluate(model,scenes['val'],mode,False,interventions=False,diversity=False)
+                torch.cuda.synchronize();aux_eval_seconds+=time.perf_counter()-aux_start
                 (args.out/f'{mode}_{seed}_aux_eval.json').write_text(json.dumps(aux_eval,indent=2))
         torch.cuda.synchronize();train_seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(model.state_dict(),args.out/f'{mode}_{seed}.pt')
         train_eval=evaluate(model,scenes['train'],mode,True,interventions=False,diversity=False)
         val_eval=evaluate(model,scenes['val'],mode,True,interventions=True,diversity=True)
-        record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),train=train_eval,val=val_eval)
+        record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),train=train_eval,val=val_eval)
         (args.out/f'{mode}_{seed}.json').write_text(json.dumps(record,indent=2));aggregate={k:v for k,v in record.items() if k not in ('train','val','history')};aggregate.update(train=train_eval['summary'],val=val_eval['summary'])
         all_results.append(aggregate);(args.out/'summary.json').write_text(json.dumps(all_results,indent=2));print(json.dumps(aggregate),flush=True)
         del model,opt
