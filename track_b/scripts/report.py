@@ -53,15 +53,16 @@ def main():
     specs=[('pilot_v1','joint','pilot_v1','visual'),('pilot_long_v1','joint','pilot_long_v1','visual'),('pilot_rays_v1','joint','pilot_zero_v1','joint'),('pilot_rays_v1','acoustic','pilot_zero_v1','acoustic')]
     for a,am,b,bm in specs:
         if not all((root/r/f'{m}_{seed}.json').exists() for r,m in ((a,am),(b,bm)) for seed in (42,43,44)):continue
-        def values(run,mode):
+        def values(run,mode,metric):
             d={}
             for seed in (42,43,44):
                 for row in read(root/run/f'{mode}_{seed}.json')['predictions']:
-                    if row['intervention']=='normal':d.setdefault(row['scene'],[]).append(row['joint'])
+                    if row['intervention']=='normal':d.setdefault(row['scene'],[]).append(row[metric])
             return {s:np.mean(v) for s,v in d.items()}
-        av,bv=values(a,am),values(b,bm);delta=np.array([av[s]-bv[s] for s in sorted(av)]);rng=np.random.default_rng(42);boots=delta[rng.integers(0,len(delta),(10000,len(delta)))].mean(1)
-        comparisons.append(dict(a=f'{a}/{am}',b=f'{b}/{bm}',scene_count=len(delta),delta_joint_pp=float(delta.mean()*100),ci95_pp=(np.quantile(boots,[.025,.975])*100).tolist(),
-                                warning='Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction'))
+        for metric in ('joint','raw20','r1','fine'):
+            av,bv=values(a,am,metric),values(b,bm,metric);delta=np.array([av[s]-bv[s] for s in sorted(av)]);rng=np.random.default_rng(42);boots=delta[rng.integers(0,len(delta),(10000,len(delta)))].mean(1)
+            comparisons.append(dict(a=f'{a}/{am}',b=f'{b}/{bm}',metric=metric,scene_count=len(delta),delta_pp=float(delta.mean()*100),ci95_pp=(np.quantile(boots,[.025,.975])*100).tolist(),
+                                    warning='Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction'))
     (out/'paired_scene_bootstrap.json').write_text(json.dumps(comparisons,indent=2))
     provenance=dict(code_commits=source_commits,environment_image='avfploc:cu124-clean',image_id='sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318',
        audit_and_smoke_execution='base 5449980 plus then-uncommitted Track B sources subsequently committed as 55c4238; no model checkpoint loaded',
