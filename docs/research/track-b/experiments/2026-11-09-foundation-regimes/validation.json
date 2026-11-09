@@ -1,0 +1,17 @@
+{
+  "tests_passed": 38,
+  "smoke_exit_code": 0,
+  "planned_new_main_fits": 18,
+  "existing_joint_reference_fits": 9,
+  "main_status": "running; no final comparison",
+  "main_session": 55621,
+  "observed_docker": "08dd0bfc987c",
+  "main_code_sha": "062860067f82a5f6a0e6ce8411b5c43702ae0ab5",
+  "smoke_source": "b50f10d1afc71396024a30e821f3409f5a41199e",
+  "trainable_parameters": {
+    "frozen": 27620,
+    "partial": 33828,
+    "joint": 2834908
+  },
+  "test_accessed": false
+}

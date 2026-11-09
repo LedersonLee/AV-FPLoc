@@ -1,0 +1,80 @@
+[
+  {
+    "execution_code_sha": "b50f10d1afc71396024a30e821f3409f5a41199e",
+    "encoder_regime": "partial",
+    "trainable_parameters": 33828,
+    "active_parameters": {
+      "log_scale": 1,
+      "acoustic_log_scale": 1,
+      "visual.head.2.weight": 2048,
+      "visual.head.2.bias": 16,
+      "acoustic.head.2.weight": 2048,
+      "acoustic.head.2.bias": 16,
+      "fp_head.2.weight": 1024,
+      "fp_head.2.bias": 16,
+      "v_projection.weight": 2048,
+      "v_projection.bias": 32,
+      "a_projection.weight": 2048,
+      "a_projection.bias": 32,
+      "q_projection.weight": 1536,
+      "q_projection.bias": 32,
+      "v_retrieval.q.weight": 1024,
+      "v_retrieval.q.bias": 32,
+      "v_retrieval.k.weight": 1024,
+      "v_retrieval.v.weight": 1024,
+      "v_retrieval.v.bias": 32,
+      "v_retrieval.out.weight": 1024,
+      "v_retrieval.out.bias": 32,
+      "a_retrieval.q.weight": 1024,
+      "a_retrieval.q.bias": 32,
+      "a_retrieval.k.weight": 1024,
+      "a_retrieval.v.weight": 1024,
+      "a_retrieval.v.bias": 32,
+      "a_retrieval.out.weight": 1024,
+      "a_retrieval.out.bias": 32,
+      "gate.0.weight": 3072,
+      "gate.0.bias": 32,
+      "gate.2.weight": 32,
+      "gate.2.bias": 1,
+      "joint_head.0.weight": 10240,
+      "joint_head.0.bias": 64,
+      "joint_head.2.weight": 64,
+      "joint_head.2.bias": 1,
+      "acoustic_fp_head.2.weight": 1024,
+      "acoustic_fp_head.2.bias": 16
+    },
+    "frozen_parameters_bitwise_unchanged": true,
+    "mode": "attention",
+    "seed": 42,
+    "parameters": 2834908,
+    "training_seconds": 0.9337507199961692,
+    "peak_vram_bytes": 2272008704,
+    "val": {
+      "normal": {
+        "joint": 0.23177083333333334,
+        "r1": 0.2552083333333333,
+        "fine": 0.015625,
+        "raw20": 0.6119791666666666,
+        "nll": 9.59307019164165,
+        "entropy": 10.636740664641062,
+        "diverse20": 0.8359375
+      },
+      "audio_shuffle": {
+        "joint": 0.08854166666666667,
+        "r1": 0.09375,
+        "fine": 0.010416666666666666,
+        "raw20": 0.2838541666666667,
+        "nll": 9.97283893575271,
+        "entropy": 10.684658360977968
+      },
+      "low_light": {
+        "joint": 0.234375,
+        "r1": 0.2552083333333333,
+        "fine": 0.018229166666666668,
+        "raw20": 0.6171875,
+        "nll": 9.613608174026012,
+        "entropy": 10.640139423310757
+      }
+    }
+  }
+]

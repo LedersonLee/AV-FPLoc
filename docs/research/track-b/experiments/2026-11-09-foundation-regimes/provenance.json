@@ -1,0 +1,33 @@
+{
+  "code_sha": "062860067f82a5f6a0e6ce8411b5c43702ae0ab5",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "77bf6414e5ee4b754077173724652be7f106434dda26c71b3284843dff56681a"
+    },
+    {
+      "git_copy": "frozen_main_protocol.json",
+      "sha256": "330aa8567d9c7e8866f52e4de49861ae74104b8fb9f864656ea09e7b9a852994"
+    },
+    {
+      "git_copy": "frozen_smoke_protocol.json",
+      "sha256": "500900b0316e8645aa2243662893c567d4f254e77adcd48c664f2d79f6c4d23f"
+    },
+    {
+      "git_copy": "frozen_smoke_summary.json",
+      "sha256": "ca5aeb409e662fc31213b1192cc68d9c8f129571e026756c40f02ce88a1a67d8"
+    },
+    {
+      "git_copy": "partial_smoke_protocol.json",
+      "sha256": "1ce53e0fdec3555b9872a01cb9fa974e98479e4894824747d5f69ea953b0e8c6"
+    },
+    {
+      "git_copy": "partial_smoke_summary.json",
+      "sha256": "7b376c2d8dffac4ddaacda61fb238b5105fdf107758bb03139742a3e7e9a0ec1"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "f8891b4636e3f960c49134464b7999291556a439c60b71735462bac354b9e424"
+    }
+  ]
+}
