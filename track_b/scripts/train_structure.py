@@ -95,7 +95,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--scene-fold',type=Path);ap.add_argument('--train-scene-count',type=int);ap.add_argument('--scene-residency',choices=['gpu','cpu'],default='gpu');ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--scene-fold',type=Path);ap.add_argument('--train-scene-count',type=int);ap.add_argument('--save-initial-state',action='store_true');ap.add_argument('--code-sha',default='UNRECORDED');ap.add_argument('--scene-residency',choices=['gpu','cpu'],default='gpu');ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
     assert args.fp_anchor_weight>=0 and not (args.fixed_fp and args.fp_anchor_weight), 'FP anchor requires learned descriptors'
     if args.visual_cache and args.pretrained_dir:
         prior_protocol=read(args.pretrained_dir/'protocol.json')
@@ -144,6 +144,9 @@ def main():
       for mode in args.modes:
         torch.manual_seed(seed);rng=np.random.default_rng(seed);model=(FoundationStructureMatcher() if args.visual_cache else StructureMatcher()).cuda();opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.0001)
         if args.pretrained_dir:model.load_state_dict(torch.load(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt',weights_only=True))
+        initial_hash=None
+        if args.save_initial_state:
+            initial_path=args.out/f'{mode}_{seed}_initial.pt';torch.save(model.state_dict(),initial_path);initial_hash=sha(initial_path)
         permutations={s['scene']:torch.tensor(rng.permutation(len(s['gt'])),device='cuda') for s in scenes['train']}
         rng=np.random.default_rng(seed);history=[];aux_eval_seconds=0.;start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
         for _ in range(args.skip_sampling_steps):
@@ -174,7 +177,7 @@ def main():
         torch.cuda.synchronize();train_seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(model.state_dict(),args.out/f'{mode}_{seed}.pt')
         train_eval=evaluate(model,scenes['train'],mode,not args.fixed_fp,interventions=False,diversity=False)
         val_eval=evaluate(model,scenes['val'],mode,not args.fixed_fp,interventions=not bool(args.visual_cache),diversity=True)
-        record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),encoder_regime=args.regime,train=train_eval,val=val_eval)
+        record=dict(execution_code_sha=args.code_sha,initial_state_sha256=initial_hash,seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),encoder_regime=args.regime,train=train_eval,val=val_eval)
         (args.out/f'{mode}_{seed}.json').write_text(json.dumps(record,indent=2));aggregate={k:v for k,v in record.items() if k not in ('train','val','history')};aggregate.update(train=train_eval['summary'],val=val_eval['summary'])
         all_results.append(aggregate);(args.out/'summary.json').write_text(json.dumps(all_results,indent=2));print(json.dumps(aggregate),flush=True)
         del model,opt
