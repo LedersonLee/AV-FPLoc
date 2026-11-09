@@ -38,7 +38,7 @@ class DenseScorer(nn.Module):
             return t+torch.sin(p*f)*.1
         return pos(v),pos(a),self.floorplan(floorplan)
 
-    def score_chunk(self,v,a,fp,poses,calibration):
+    def candidate_query(self,fp,poses,calibration):
         origin=calibration['origin']; spacing=calibration['spacing']
         frame_angle=torch.as_tensor(calibration.get('map_angle',0.),device=poses.device)
         fc,fs=frame_angle.cos(),frame_angle.sin()
@@ -52,7 +52,10 @@ class DenseScorer(nn.Module):
         wh=torch.tensor([fp.shape[-1]-1,fp.shape[-2]-1],device=fp.device)
         grid=(pix/wh*2-1).unsqueeze(0).expand(fp.shape[0],-1,-1,-1)
         patch=F.grid_sample(fp,grid,align_corners=True,padding_mode='zeros').permute(0,2,3,1).flatten(2)
-        q=self.fp_query(patch)
+        return self.fp_query(patch)
+
+    def score_chunk(self,v,a,fp,poses,calibration):
+        q=self.candidate_query(fp,poses,calibration)
         if self.mode in ('concat','noninteraction'):
             vp=v.mean(1,keepdim=True).expand_as(q);ap=a.mean(1,keepdim=True).expand_as(q)
         else:

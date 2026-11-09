@@ -64,3 +64,14 @@ def test_masked_raster_full_field():
     assert field.shape==(2,2,2,6)
     assert torch.isneginf(field[:,~mask]).all()
     torch.testing.assert_close(field[:,mask].flatten(1),scores)
+
+
+def test_ray_dense_chunk_gradient_and_zero_control():
+    from track_b.models.ray_dense import RayDenseScorer
+    args=list(fixture());args[-1]=torch.cat([args[-1],torch.rand(len(args[-1]),32)],-1)
+    m=RayDenseScorer();a=m(*args,chunk_size=17);b=m(*args,chunk_size=99999)
+    torch.testing.assert_close(a,b,atol=3e-7,rtol=3e-6)
+    dense_loss(a,args[-1][:,:3],args[-1][[1,13],:3]).backward()
+    assert sum(float(x.grad.abs().sum()) for x in m.geometry_projection.parameters())>0
+    z=RayDenseScorer(geometry='zero').eval();before=z(*args);args[-1][:,3:]=0
+    torch.testing.assert_close(before,z(*args))
