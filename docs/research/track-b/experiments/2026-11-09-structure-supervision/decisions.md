@@ -14,7 +14,7 @@
 | E0 full dataset/frames/splits/bank | Prior135scene audit; new22scene hashed cache; fullbank checks | Physical extrinsics/unknown-wall completeness and runtime I/O audit |
 | E1 visual dense | Scratch CNN3seeds and isolated UnLoc | Strong trainable visual model under matched training/exposure |
 | E2 acoustic dense |3seeds, shuffle/zero/temporal/roll controls | map-only/geometry-removal on new cohort, material/furniture mismatch |
-| E3 independent calibrated F1 | Shared training additive baseline only | Independent V/A scores, grouped calibration, fixed fusion |
+| E3 independent calibrated F1 | Completed independent fixed8.941%, grouped-calibrated8.767%; actual fullbank3seeds | Stronger visual initialization and future frozen evaluation still needed |
 | E4 F2/F3 capacity controls | Old tiny pilot only | Current-cohort matched active-capacity concat/non-interaction |
 | E5 M1 true QKV interaction | Old tiny pilot only | Strong matched full-field interaction and ablations |
 | E6 optional alternatives | Structure prediction tested | M2/physics only if motivated; not all optional variants required |
@@ -27,3 +27,5 @@
 | Independent final evaluation | Not done | Freeze method/protocol before accessing unused evaluation |
 
 **Scientific stopping condition is not met.** This completed study does not complete the user's full goal. Follow-up should discriminate weak visual backbone/optimization from genuine benefit of interaction; maintain all negative baselines and avoid selecting the best seed/checkpoint from reused Val.
+
+9. Independent fixed fusion outperforms jointly trained additive fusion on reused development scenes. Grouped NLL calibration slightly lowers NLL but does not raise Joint. Retain both; use fixed F1 as the subsequent interaction comparator.

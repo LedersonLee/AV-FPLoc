@@ -58,3 +58,12 @@ python3 docs/research/tools/validate_archive.py
 Original logs and checkpoints remain external. First aggregation attempt failed because early protocols predated the encoder_regime field; fixed aggregation uses explicit joint default for these legacy runs. No model rerun or result overwrite was needed. Auxiliary diagnostics correction replays rather than overwrites original reports.
 
 Baseline inputs: `/work/external/checkouts/UnLoc`, `/data/UnLoc/evaluation_checkpoints/epoch020/model.ckpt`; external checkout base `3c7a301aa08049f6b1bb86f110e8e6e675e2300b`, preexisting dirty depth modules and DepthAnything submodule. The historical checkpoint is used only in isolated baseline evaluation.
+
+
+Independent fusion executes at code commit `99caa09` (full SHA in provenance), using the same Docker mounts:
+
+```text
+python -m track_b.scripts.independent_fusion --cache /out/cache --run /out/supervised_v1 --out /out/independent_fusion_v1
+```
+
+This does no network training. It sweeps15 weight/temperature combinations, selects calibration parameters without the target scene, and re-scores full banks for fixed/calibrated/shuffled conditions. External `sweep.json` and `predictions.json` are retained, not uploaded. No Test access. Fine accuracy is positional only, as in earlier experiments.

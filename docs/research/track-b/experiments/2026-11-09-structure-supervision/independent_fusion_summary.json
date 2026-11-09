@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "fixed": {
+      "joint": 0.08940972222222222,
+      "r1": 0.1232638888888889,
+      "fine": 0.003472222222222222,
+      "raw20": 0.3532986111111111,
+      "diverse20": 0.6197916666666666,
+      "nll": 9.845578987565306,
+      "entropy": 10.547847939034304
+    },
+    "calibrated": {
+      "joint": 0.0876736111111111,
+      "r1": 0.12586805555555555,
+      "fine": 0.003472222222222222,
+      "raw20": 0.3428819444444444,
+      "diverse20": 0.6032986111111112,
+      "nll": 9.778976129160988,
+      "entropy": 9.173327603273922
+    },
+    "calibrated_audio_shuffle": {
+      "joint": 0.030381944444444444,
+      "r1": 0.04861111111111111,
+      "fine": 0.0026041666666666665,
+      "raw20": 0.140625,
+      "diverse20": 0.2942708333333333,
+      "nll": 11.17487027330531,
+      "entropy": 9.197809738417467
+    }
+  },
+  "paired": [
+    {
+      "left": "calibrated",
+      "right": "fixed",
+      "delta_pp": -0.1736111111111112,
+      "ci95_pp": [
+        -0.5208333333333336,
+        0.0
+      ],
+      "unit": "scene, seeds averaged"
+    },
+    {
+      "left": "calibrated",
+      "right": "calibrated_audio_shuffle",
+      "delta_pp": 5.729166666666666,
+      "ci95_pp": [
+        3.9930555555555554,
+        7.725694444444444
+      ],
+      "unit": "scene, seeds averaged"
+    }
+  ],
+  "unimodal_replay_checks": 2304,
+  "selection": {
+    "108736611_177263226": {
+      "weight": 0.5,
+      "temperature": 1.0,
+      "calibration_nll": 9.651150027910868
+    },
+    "108736635_177263256": {
+      "weight": 0.85,
+      "temperature": 0.25,
+      "calibration_nll": 9.666626625756424
+    },
+    "105515448_173104512": {
+      "weight": 0.85,
+      "temperature": 0.25,
+      "calibration_nll": 9.509925066431363
+    },
+    "108294783_176710410": {
+      "weight": 0.5,
+      "temperature": 1.0,
+      "calibration_nll": 9.666963145136833
+    },
+    "108294624_176710203": {
+      "weight": 0.85,
+      "temperature": 0.25,
+      "calibration_nll": 9.649014986554782
+    },
+    "102344457": {
+      "weight": 0.85,
+      "temperature": 0.25,
+      "calibration_nll": 9.646886833012104
+    }
+  },
+  "comparisons_with_previous": [
+    {
+      "left": "independent_fixed",
+      "right": "supervised_visual",
+      "delta_pp": 6.857638888888889,
+      "ci95_pp": [
+        5.034722222222223,
+        8.420138888888888
+      ]
+    },
+    {
+      "left": "independent_fixed",
+      "right": "supervised_acoustic",
+      "delta_pp": 3.819444444444444,
+      "ci95_pp": [
+        1.736111111111111,
+        5.902777777777777
+      ]
+    },
+    {
+      "left": "independent_fixed",
+      "right": "supervised_fusion",
+      "delta_pp": 2.5173611111111107,
+      "ci95_pp": [
+        1.4756944444444442,
+        3.5590277777777777
+      ]
+    }
+  ]
+}

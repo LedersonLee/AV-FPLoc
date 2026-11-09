@@ -170,13 +170,18 @@
     "matched_frozen_v1/fusion_44.json": "0815ab822afdcb90c0efeea52d9c916bedc43f49a9ba75e25660bd63cc255527",
     "matched_frozen_v1/summary.json": "6db9e9452ee0a873d6d9ff2115804318d4da23adf320a5e65fa41a74234c5a82",
     "matched_frozen_v1/fusion_42.json": "4d1989682b10708fbe73cff688c9172e4a1388f6e48d97453f47cbe061a96188",
-    "matched_frozen_v1/fusion_43.pt": "135b5c50aa8df0bede4bc422f74e0340c6eb09e31cc20f3c4b88fb70ff25bf4d"
+    "matched_frozen_v1/fusion_43.pt": "135b5c50aa8df0bede4bc422f74e0340c6eb09e31cc20f3c4b88fb70ff25bf4d",
+    "independent_fusion_v1/protocol.json": "8c49d5a909bd4e7c21a52298b4b8dd2847ed0164dd98e69625ba6c19f8fed23f",
+    "independent_fusion_v1/sweep.json": "324105b05ddc81136c799252779b695bba9fa98f5351d7219afa6b7da109d81e",
+    "independent_fusion_v1/summary.json": "5eb4452d7f539d6834005ab3c6299406d0ae68dbfe57255fd1f0fa9b3eb311b4",
+    "independent_fusion_v1/predictions.json": "7ed50f7cf155c91d9a952bb711cff3267fc982d8bbce32000060e9dd32fab35d",
+    "independent_fusion_v1/selection.json": "456a81b8de7fa99eaddfa23396504c78f994b2b33669f25d8dfd6027e0f94807"
   },
   "image_id": "sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318",
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "1d5acabe43494d4dc8d1ff32cb51118edab2211479144a98e83c714c901c633f"
+      "sha256": "65a347c4520d2eaf82df563158216dfc765138a9ddc664a87d2a78bc2a0fc3fe"
     },
     {
       "git_copy": "aggregate.json",
@@ -192,7 +197,7 @@
     },
     {
       "git_copy": "decisions.md",
-      "sha256": "802bda53bdfa2f6963a564272ee53c3cfdfd708a4c7fc9371695a30000001b96"
+      "sha256": "40b139a76ad1c3789934f4ff14e91db9201a93a8c190e506f4eb185b3ce2b182"
     },
     {
       "git_copy": "experiment_registry.csv",
@@ -201,6 +206,14 @@
     {
       "git_copy": "extended_summary.json",
       "sha256": "682f454cdd80fd646d3c7d29b48dde7454dafb30fb49898831fe6579786032d4"
+    },
+    {
+      "git_copy": "independent_fusion_protocol.json",
+      "sha256": "8c49d5a909bd4e7c21a52298b4b8dd2847ed0164dd98e69625ba6c19f8fed23f"
+    },
+    {
+      "git_copy": "independent_fusion_summary.json",
+      "sha256": "ef4d3c273ff08d6d4e679e4b973a8c7267077997d87cf4b848e944c1432978ec"
     },
     {
       "git_copy": "paired_scene_bootstrap.json",
@@ -216,7 +229,7 @@
     },
     {
       "git_copy": "reproduction.md",
-      "sha256": "adb62cb7fa10d375070625b75f4e4a3243f5b3bdea4e8ec27beb414ab56c13fe"
+      "sha256": "64e7b3c948c1307e9c23b45731109d4bab777191f5dcc4fac3da63e9fc9eb8c7"
     },
     {
       "git_copy": "results_master.csv",
@@ -232,7 +245,7 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "0db42015986444a70876e374c7195a99fa4a919225d6bf969fbefb2c365a1f54"
+      "sha256": "2327f11a3b2542c78360699a5e153d7302d995991a66402ff6e206849d17d3f7"
     }
   ],
   "additional_code_commits": {
@@ -241,7 +254,8 @@
     "unloc_reference": "95135f96b8ea0ea6c66dd47e359b5e4c8d28fcfe",
     "extended": "7afe736ea40c93e30f71ad138164d3f1992aca29",
     "ray_correction": "fa22e8785fe88e592f28951e6d862a08c1105147",
-    "aggregation": "3b12d7a698e1643b3c54f1bf53ff3aeb28e1a6a4"
+    "aggregation": "3b12d7a698e1643b3c54f1bf53ff3aeb28e1a6a4",
+    "independent_fusion": "99caa0988a0c063fb9c9d2a9658ec0b3be143087"
   },
   "cache_execution_note": "Cache source pinned to committed implementation; startup runtime HEAD not independently captured. No claim that unrelated renderer modifications were clean.",
   "external_source_base": "UnLoc3c7a301aa08049f6b1bb86f110e8e6e675e2300b with preexisting dirty modules and submodule; exact module hashes in unloc_source.json"

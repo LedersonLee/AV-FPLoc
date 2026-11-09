@@ -23,7 +23,7 @@
 
 | 16 | [방향 구조와 Visual ambiguity](track-a/experiments/2026-11-09-directional-structure/README.md) | directional_structure_20261109: 완료·제한적 성공/음성결과 보존. 고정 visual 후보 재정렬 New12 +3.125pp, Transfer11 +3.267pp; cosine/GEOQ 우위는 미확인, fullbank fine 악화. | 2026-11-09 | Track A | Exploratory | d28ad93b3a0d65efd73da05e516b54274d84dc28; 실제 fit별 실행 SHA는 보고서 execution_receipts.json 참조 |
 
-| 17 | [구조 지도학습·동일 초기화 대조](track-b/experiments/2026-11-09-structure-supervision/README.md) | track-b-structure-supervision-20261109: 30fits 완료·혼합/음성결과. 동일 초기화 partial9.028% > joint6.163%, 보조지도 대 dense-only 이득 미확인; 강한 UnLoc 비교와 음향 개입·Support 실패 보존. 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | fb6900d (supervised), efcb0cb (controls), 38f76f6 (regimes), c20ce07 (matched); 전체 SHA는 experiment_registry.csv/provenance.json |
+| 17 | [구조 지도학습·동일 초기화 대조](track-b/experiments/2026-11-09-structure-supervision/README.md) | track-b-structure-supervision-20261109: 30fits 완료·혼합/음성결과. 동일 초기화 partial9.028% > joint6.163%, 보조지도 대 dense-only 이득 미확인; 독립 고정 fusion8.941%, NLL 보정의 정확도 이득 없음. 강한 UnLoc·Support 실패 보존. 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | fb6900d (supervised), efcb0cb (controls), 38f76f6 (regimes), c20ce07 (matched); 전체 SHA는 experiment_registry.csv/provenance.json |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

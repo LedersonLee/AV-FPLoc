@@ -13,5 +13,12 @@
     "44": false
   },
   "test_observations_accessed": false,
-  "full_protocol_complete": false
+  "full_protocol_complete": false,
+  "independent_fusion": {
+    "process_exit": 0,
+    "sweep_rows": 17280,
+    "calibration_scenes_excluded": 6,
+    "selection_independently_recomputed": true,
+    "unimodal_replay_cases": 2304
+  }
 }
