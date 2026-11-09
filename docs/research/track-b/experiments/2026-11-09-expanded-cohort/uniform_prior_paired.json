@@ -1,0 +1,194 @@
+[
+  {
+    "method": "visual",
+    "reference": "exact uniform random pose expectation",
+    "metric": "joint",
+    "delta": 19.85383359019183,
+    "ci95": [
+      17.094144480367813,
+      22.672455872040203
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "visual",
+    "reference": "exact uniform random pose expectation",
+    "metric": "r1",
+    "delta": 19.624193823773627,
+    "ci95": [
+      16.83693638900605,
+      22.5240473628028
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "visual",
+    "reference": "exact uniform random pose expectation",
+    "metric": "fine",
+    "delta": 1.26298721156317,
+    "ci95": [
+      0.9286962800943505,
+      1.5940955350440202
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "visual",
+    "reference": "exact uniform random pose expectation",
+    "metric": "nll",
+    "delta": -1.679551236639862,
+    "ci95": [
+      -1.7988966699535118,
+      -1.5419069481534187
+    ],
+    "units": "nats",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "acoustic",
+    "reference": "exact uniform random pose expectation",
+    "metric": "joint",
+    "delta": 3.8450616603672736,
+    "ci95": [
+      3.1779850946774824,
+      4.585172590687615
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "acoustic",
+    "reference": "exact uniform random pose expectation",
+    "metric": "r1",
+    "delta": 6.219588560615734,
+    "ci95": [
+      5.055923980449933,
+      7.4946365331568
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "acoustic",
+    "reference": "exact uniform random pose expectation",
+    "metric": "fine",
+    "delta": 0.13908370279123997,
+    "ci95": [
+      0.022230545144663612,
+      0.28027555891205325
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "acoustic",
+    "reference": "exact uniform random pose expectation",
+    "metric": "nll",
+    "delta": -1.2467879036486382,
+    "ci95": [
+      -1.371653867122479,
+      -1.1209113163157736
+    ],
+    "units": "nats",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed",
+    "reference": "exact uniform random pose expectation",
+    "metric": "joint",
+    "delta": 26.734316046332186,
+    "ci95": [
+      23.223415321562264,
+      30.625395059334156
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed",
+    "reference": "exact uniform random pose expectation",
+    "metric": "r1",
+    "delta": 27.765641192194686,
+    "ci95": [
+      24.344086109082124,
+      31.657820323513008
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed",
+    "reference": "exact uniform random pose expectation",
+    "metric": "fine",
+    "delta": 1.7289959834929944,
+    "ci95": [
+      1.2301055721084433,
+      2.228874913549833
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed",
+    "reference": "exact uniform random pose expectation",
+    "metric": "nll",
+    "delta": -1.8895346854809314,
+    "ci95": [
+      -2.0115340768276777,
+      -1.7572461791471312
+    ],
+    "units": "nats",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed_audio_shuffle",
+    "reference": "exact uniform random pose expectation",
+    "metric": "joint",
+    "delta": 9.38234236212166,
+    "ci95": [
+      7.915515659585196,
+      10.789469976321632
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed_audio_shuffle",
+    "reference": "exact uniform random pose expectation",
+    "metric": "r1",
+    "delta": 10.029895578159595,
+    "ci95": [
+      8.338373435135908,
+      11.66474294154675
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed_audio_shuffle",
+    "reference": "exact uniform random pose expectation",
+    "metric": "fine",
+    "delta": 0.5228556326158014,
+    "ci95": [
+      0.30328261626216635,
+      0.7729253229131464
+    ],
+    "units": "pp",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  },
+  {
+    "method": "fixed_audio_shuffle",
+    "reference": "exact uniform random pose expectation",
+    "metric": "nll",
+    "delta": -1.5066378820307655,
+    "ci95": [
+      -1.617366255634482,
+      -1.374846700534035
+    ],
+    "units": "nats",
+    "unit": "paired scene; fitted seeds averaged; no Monte Carlo randomness in prior"
+  }
+]

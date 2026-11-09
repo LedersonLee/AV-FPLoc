@@ -1,0 +1,32 @@
+{
+  "code_sha": "99b8cddfd70e279f6e1a011e62ba98bae2c4f633",
+  "cache_protocol_sha256": "7222586d45b1bbc2f67bf878b081a8b75282f0a6206bcef1ca4da25a8742b91b",
+  "cache_manifest_sha256": "41e5b136e914fd11f542105fcfff91f646e3a1b2ff6d07e70dfa16053edbc29f",
+  "scene_ids": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457",
+    "108736737_177263406",
+    "104862573_172226682",
+    "108294765_176710386",
+    "106366134_174226362",
+    "104348082_171512994",
+    "102344115",
+    "103997478_171030528",
+    "106879005_174887124",
+    "106366173_174226431",
+    "105515286_173104287",
+    "108294798_176710428",
+    "102344307",
+    "108736800_177263517"
+  ],
+  "queries": 1216,
+  "definition": "Uniform random pose among all bank cells; exact expectation. Random20 samples distinct cells without replacement; not score-tie topk or diverse-NMS.",
+  "gt_use": "evaluation only; no filtering or ranking",
+  "training": "none",
+  "evidence": "Exploratory reused development cohort",
+  "test_accessed": false
+}
