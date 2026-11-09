@@ -17,7 +17,7 @@ def main():
    registry.append(dict(run_id=f'{key}_{seed}',git_commit=commit,timestamp='2026-11-09',method=mode,dataset_version='HSSD observed positive_pairs_v1',split_hash=protocol['cache_protocol_sha256'],scene_count=22,train_query_count=1024,val_query_count=384,test_query_count=0,input_variant='RGB128x96+6ch-STFT-IPD16384samples',fp_variant='footprint+16rays+learned-residual',grid_xy=.25,yaw_bins=36,encoder_regime=protocol.get('encoder_regime','joint'),pretrained_checkpoint_hash=protocol.get('pretrained_sha256',{}).get(f'{mode}_{seed}','scratch-warmup'),parameter_count=rec['parameters'],flops_est='not measured',gpu='RTX4090',seed=seed,train_steps=protocol['aux_steps']+protocol['dense_steps'],gpu_hours=rec['training_seconds']/3600,best_val_metric='not selected; final step',test_metric='not measured',status='completed',note='Exploratory',checkpoint_sha256=sha(p/f'{mode}_{seed}.pt')))
  for name,data in [('results_master.csv',rows),('experiment_registry.csv',registry)]:
   with (a.out/name).open('w') as f:
-   w=csv.DictWriter(f,fieldnames=list(data[0]));w.writeheader();w.writerows(data)
+   w=csv.DictWriter(f,fieldnames=list(data[0]),lineterminator="\n");w.writeheader();w.writerows(data)
  rng=np.random.default_rng(20261109);ci=[]
  comparisons=[('supervised_v1/fusion','dense_only_v1/fusion'),('supervised_v1/fusion','shuffled_v1/fusion'),('supervised_v1/fusion','supervised_v1/visual'),('matched_partial_v1/fusion','matched_joint_v1/fusion'),('matched_frozen_v1/fusion','matched_joint_v1/fusion')]
  for left,right in comparisons:

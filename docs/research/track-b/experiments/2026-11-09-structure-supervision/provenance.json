@@ -196,7 +196,7 @@
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "faa5437c8425d89e56f2bbd67643db117971795f9308d1a13994acae213fce21"
+      "sha256": "c11ee9d48cb02796c0d315ecb5416be3a0c793a706f0b42f26bfbed26e3dc52f"
     },
     {
       "git_copy": "extended_summary.json",
@@ -220,7 +220,7 @@
     },
     {
       "git_copy": "results_master.csv",
-      "sha256": "9f89bd12cee6ec1d57c8903f3fad75f975a5a9b73d3251003536698455161895"
+      "sha256": "15ec50f5fb4bc688021c3cd033e2f00580f6f06d5816777f0b2fe3c55b94ed75"
     },
     {
       "git_copy": "unloc_source.json",
