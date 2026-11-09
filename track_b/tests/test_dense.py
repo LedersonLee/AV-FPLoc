@@ -54,3 +54,13 @@ def test_rigid_map_frame_equivariance():
     args[-1]=torch.tensor(rigid_transform(args[-1].numpy(),.7,[4.,-2.]),dtype=torch.float32)
     args[-2]={'origin':torch.tensor([4.,-2.]),'spacing':.25,'map_angle':.7}
     torch.testing.assert_close(s,m(*args),atol=3e-7,rtol=3e-6)
+
+
+def test_masked_raster_full_field():
+    from track_b.models.dense import rasterize
+    mask=torch.tensor([[True,False],[False,True]])
+    scores=torch.arange(24,dtype=torch.float32).reshape(2,12)
+    field=rasterize(scores,mask,6)
+    assert field.shape==(2,2,2,6)
+    assert torch.isneginf(field[:,~mask]).all()
+    torch.testing.assert_close(field[:,mask].flatten(1),scores)

@@ -88,3 +88,11 @@ def topk(scores,poses,k=20,radius=None,yaw_radius=math.pi/6):
         chosen.append(idx)
         if len(chosen)==min(k,len(poses)): break
     return torch.tensor(chosen,device=scores.device)
+
+
+def rasterize(scores,valid_xy,yaw_bins):
+    """Scatter valid-only scores to the full masked SE(2) field."""
+    if scores.shape[-1]!=int(valid_xy.sum())*yaw_bins:raise ValueError('Incomplete bank')
+    field=scores.new_full((*scores.shape[:-1],*valid_xy.shape,yaw_bins),-torch.inf)
+    field[...,valid_xy,:]=scores.reshape(*scores.shape[:-1],int(valid_xy.sum()),yaw_bins)
+    return field
