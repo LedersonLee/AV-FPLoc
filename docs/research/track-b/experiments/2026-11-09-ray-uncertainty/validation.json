@@ -2,9 +2,10 @@
   "input_integrity": "passed",
   "u0_replay": "passed 14592 rows/14 metrics; full-score equivalence tests pending",
   "head_tests": "5 analytical tests passed; full suite49 passed",
-  "smoke": "not started",
-  "fits": "not started",
+  "smoke": "passed actual seed42 first4 Train queries,2steps; experts unchanged",
+  "fits": "running 3 seeds,1000 updates",
   "source_prompt_sha256": "c7ac181ac814f8d1f7deb5c9d49e1a166f07eec667b3fd44d26288ade71cc246",
   "train_range": "112 scenes passed; target values only",
-  "implementation_code_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73"
+  "implementation_code_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
+  "training_source_sha": "3caccd76fd46289f9301624255584fe0df490394"
 }

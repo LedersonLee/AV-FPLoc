@@ -4,7 +4,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "ddcdc60f7f70b6f95309bb13e7a919ea580b49e862f817645670e1ea9192910e"
+      "sha256": "4c3374716c3193a4cec77a5f1f2142c0a830b7229b8d826838fd8e433e874cf2"
     },
     {
       "git_copy": "decisions.md",
@@ -12,7 +12,7 @@
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "5665bd140dded89d6eb5e08b12af6afd318d80d50685fd0d5fc2fb248651449c"
+      "sha256": "37f1b1bf3006ae1c6bb6d9eb496c7fd5a4e3b6e9e7dab3565913f1b081260c56"
     },
     {
       "git_copy": "implementation_validation.md",
@@ -21,6 +21,10 @@
     {
       "git_copy": "input_validation.json",
       "sha256": "301543966551fadd9b795199078173dd9d765ad63e8725086c889e9dbce2d854"
+    },
+    {
+      "git_copy": "main_training_protocol.json",
+      "sha256": "2553f0d948f07d4a1059dabbbb241c782c28d59517597d37278969666d569b2d"
     },
     {
       "git_copy": "preflight_report.md",
@@ -39,8 +43,20 @@
       "sha256": "0523eefa64c22b2805718cbab2cd869d1f53b6d04b423779382540d1e79d43f1"
     },
     {
+      "git_copy": "smoke_protocol.json",
+      "sha256": "219bbc801f7e93e516ff033eb08df07eae70e0b4774dc106aa146c58ca348d24"
+    },
+    {
+      "git_copy": "smoke_validation.json",
+      "sha256": "1db3af5fc546ab101e525ce6e97fa79d4bf644bf96d01da10e6d7c06f378f881"
+    },
+    {
       "git_copy": "train_range_validation.json",
       "sha256": "5f77bbb99df4808f850c53f2b6dd33adaf3551df5784c20685c863a176f883d9"
+    },
+    {
+      "git_copy": "training_progress.md",
+      "sha256": "4fece0c5d9bbce3f64d2bacc3963cb05886496732dae3eae40c22f78ae4c702e"
     },
     {
       "git_copy": "u0_replay_summary.json",
@@ -52,8 +68,9 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "95e182abe491f74025a8f47d7f8c86fa1ce4853a774e568e374423c0e6e9a68c"
+      "sha256": "fd16342d62356133c0700c1a1ff18a1e5febeb7081ba7bb13a50f92d6c85e068"
     }
   ],
-  "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73"
+  "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
+  "training_sha": "3caccd76fd46289f9301624255584fe0df490394"
 }

@@ -3,3 +3,5 @@ preflight_v1,96db20f075ded8f5c66234496c7b2dfbfb3741cf,completed,Input integrity 
 u0_replay_v1,96db20f075ded8f5c66234496c7b2dfbfb3741cf,completed,Full19Val three seeds no parameter selection
 head_analytical_tests,5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73,completed,5 analytical and49 total tests; no efficacy claim
 train_range_v1,5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73,completed,112Train target range only
+smoke_v1,3caccd76fd46289f9301624255584fe0df490394,completed,Actual frozen expert preservation and head update
+heads_v1,3caccd76fd46289f9301624255584fe0df490394,running,Three seeds1000 updates Train112 only

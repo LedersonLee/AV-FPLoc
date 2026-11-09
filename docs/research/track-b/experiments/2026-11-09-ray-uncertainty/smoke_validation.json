@@ -1,0 +1,57 @@
+{
+  "code_sha": "3caccd76fd46289f9301624255584fe0df490394",
+  "seed": 42,
+  "steps": 2,
+  "queries": 4,
+  "parameters_per_modality": 4225,
+  "constant_scales": {
+    "visual": 0.032871514558792114,
+    "acoustic": 0.12927138805389404
+  },
+  "history": [
+    {
+      "step": 0,
+      "loss": -1.6143165826797485,
+      "visual_nll": -1.288678765296936,
+      "acoustic_nll": -0.3256378471851349
+    },
+    {
+      "step": 1,
+      "loss": -1.6015598773956299,
+      "visual_nll": -1.289408802986145,
+      "acoustic_nll": -0.31215110421180725
+    }
+  ],
+  "train_only_diagnostics": {
+    "visual": {
+      "mae": 0.032871514558792114,
+      "ray_nll": -1.2856897115707397,
+      "fixed_ray_nll": -1.7220016717910767,
+      "mean_scale": 0.0992383360862732,
+      "min_scale": 0.09900148957967758,
+      "max_scale": 0.09981134533882141,
+      "coverage_b": 0.9000000357627869,
+      "coverage_90": 1.0
+    },
+    "acoustic": {
+      "mae": 0.12927138805389404,
+      "ray_nll": -0.3238767981529236,
+      "fixed_ray_nll": -0.3526941239833832,
+      "mean_scale": 0.10248984396457672,
+      "min_scale": 0.10187678784132004,
+      "max_scale": 0.10314133018255234,
+      "coverage_b": 0.546875,
+      "coverage_90": 0.859375
+    }
+  },
+  "expert_states_bitwise_unchanged": true,
+  "expert_checkpoint_files_unchanged": true,
+  "expert_gradients_absent": true,
+  "head_parameters_changed": true,
+  "extraction_seconds": 0.20964375394396484,
+  "extraction_peak_allocated": 48478208,
+  "head_training_seconds": 0.05267823813483119,
+  "head_peak_allocated": 46262784,
+  "checkpoint_sha256": "d07498715295c54e4dfb0ed6f87eeb4199327be4b184e661a1b15dd57f3b62ae",
+  "scope": "In-sample clean Train diagnostics, not held-out efficacy; allocated peak includes resident extracted features"
+}
