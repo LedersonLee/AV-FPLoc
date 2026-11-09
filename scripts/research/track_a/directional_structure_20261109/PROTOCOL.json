@@ -1,0 +1,101 @@
+{
+  "study": "directional_structure_20261109",
+  "track": "A",
+  "status": "active",
+  "source_commit": "5449980817e375f2155e39f0e436e56453c516d4",
+  "prior_study": "experiments/directional_tribranch_20261109",
+  "training_scenes": [
+    "102344250",
+    "102816615",
+    "102816852",
+    "102817200",
+    "103997940_171031257",
+    "104862513_172226580",
+    "104862621_172226772",
+    "106366248_174226527",
+    "106366434_174226881",
+    "106878945_174887058",
+    "108294846_176710506",
+    "108736689_177263340"
+  ],
+  "outer_folds": [
+    [
+      "102344250",
+      "102817200",
+      "104862621_172226772",
+      "106878945_174887058"
+    ],
+    [
+      "102816615",
+      "103997940_171031257",
+      "106366248_174226527",
+      "108294846_176710506"
+    ],
+    [
+      "102816852",
+      "104862513_172226580",
+      "106366434_174226881",
+      "108736689_177263340"
+    ]
+  ],
+  "transfer_scenes": [
+    "104348160_171513093",
+    "104348328_171513363",
+    "106365897_174225972",
+    "103997424_171030444",
+    "102815859",
+    "102817053",
+    "103997562_171030642",
+    "104348361_171513414",
+    "102344022",
+    "108736779_177263484",
+    "103997718_171030855"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "queries_per_scene": 128,
+  "body_bearings": {
+    "front": 0,
+    "left": 90,
+    "back": 180,
+    "right": -90
+  },
+  "world_offset_rule": "world logical yaw - body bearing; existing forwardXZ=(cosyaw,sinyaw), body-leftXZ=(sinyaw,-cosyaw)",
+  "targets": "existing median5 rays +/-20deg;10mcap; metric+log; near<3m, ordinal[<2,2..5,>=5] fixed physical cutoffs; openness>=3m",
+  "selection": "No outer architecture/epoch/threshold optimization. Reuse old predictors, add raw descriptors and cyclic augmentation as independent alternative. Inner scene OOF calibration/score scales; any later change recorded before execution.",
+  "ambiguity": "Visual-only score gap lower third of fit-scene offdiagonal pairs; pair XY separation>=1m and FP coarse log-depth L1 difference>=.15. Choose via V/FP only, retrospective good/bad labels.",
+  "candidates": "Both originalB2Top20 and independently pure-visual full-bank NMS20. No acoustic feature used in pureV extraction.",
+  "models": "Reuse originalECN ridge/embeddingridge/combinedridge/MLP; add raw descriptor ridge, single-channelrawridge, channelmeanrawridge, cyclic60deg augmentedECN ridge36outputs. No random model sweep.",
+  "controls": [
+    "prior",
+    "same-scene donor1/17/31",
+    "synchronized60deg rotation",
+    "fixed noncyclic channel permutation",
+    "singlechannel",
+    "channelmean",
+    "isotropic predicted directionmean",
+    "geometryprior",
+    "queryonly constantcandidate score"
+  ],
+  "metrics": [
+    "metricMAE/median/P90/perdirection",
+    "balancedaccuracy/AUROC/ordinal/rankcorrelation",
+    "sceneheld/repeat/rotation",
+    "ambiguouspair/rankingAUROC/GTsuccessrank/margin",
+    "joint/fine/repairharm/coverage/preservation",
+    "fullbankcost"
+  ],
+  "conditional_DE": "Prior directional observability and pair signal warrant bounded independent structural matching fields. Integration only if currentcrossfit matched/donor discrimination provides signal; use strong frozenGEOQ reference.",
+  "exposure": "New12 excluded oldacoustic/B2/GEOQTrain12; visualteacherTrain116 exposed; alreadyresearched, exploratory. Test untouched.",
+  "resource": "Local approved resources; Docker4CPU16GB; preserve other jobs. Cache reuse; no rawrender initially. No TrackB edits.",
+  "required_figures": [
+    "direction_gt_prediction",
+    "openness_confusion",
+    "scene_prediction",
+    "ambiguous_pose_pair",
+    "structural_score_field",
+    "localization_ablation"
+  ]
+}
