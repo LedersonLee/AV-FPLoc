@@ -1,0 +1,20 @@
+{
+  "code_sha": "bf032b52959e4eff7351df53a11338ebd40dc580",
+  "adapter_source_sha": "51155de889c375028e8d077b6e959f9a32c7b087",
+  "external_checkpoint_sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "a383a304b799e3e1b8eeca3da51c05351374681c613410449baa4ee362b32029"
+    },
+    {
+      "git_copy": "manifest.json",
+      "sha256": "2a3954dd6cdb0d8ca3fde7a4a0e195ac160308a241efaa9af33795c62ae07823"
+    },
+    {
+      "git_copy": "protocol.json",
+      "sha256": "1fae959c69a081f4c355ea455acb3dd1c6f48305d7a7bc380424d1df0235eeab"
+    }
+  ],
+  "full_cache_started_runtime_sha": "1610e0ff5eacae330942d461774ba75e0a4b4281"
+}

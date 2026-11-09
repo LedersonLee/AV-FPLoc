@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "completed matched comparison; overall protocol active",
   "interrupted_run": {
     "run": "matched_v1",
     "exit": 137,
@@ -12,19 +12,47 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "b216a8d3e87399b4d483ad87de31f07ea0e6317ed8824f156bcfafc55e29023e"
+      "sha256": "d091265fff88eb68c7b5d17f0eefdad63d3c07c46f0d9959db57aa43aa6bab6f"
+    },
+    {
+      "git_copy": "aggregate.json",
+      "sha256": "22ee3ef4d68bbc431c635f463cfd55f49511f8bd3e204c5175ed09f4a5ff8dbc"
+    },
+    {
+      "git_copy": "cache_benchmark.json",
+      "sha256": "b0028195a9fe115c192aac3551abb6590ca448891cf3fddcf0faa01089cdd37b"
+    },
+    {
+      "git_copy": "completion_receipt.json",
+      "sha256": "6848073f5185d94465b675d2342fbbf0802e5a286631d108fe46e2194232b610"
+    },
+    {
+      "git_copy": "deployment_storage_complete.json",
+      "sha256": "806351a987def812238e9bcb4dafe552f2eac38baccf311913b545fdd0c44af2"
     },
     {
       "git_copy": "deployment_storage_interim.json",
       "sha256": "ebb05bf8d3aa733ecaa0cfa64f5e69ea11f94172cca485886b492c36dd7d1070"
     },
     {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "7a4735e5a710a15e3ffdec3d707840f45bdbfecee4e1960563c467c120b35ba4"
+    },
+    {
       "git_copy": "fusion_photometric_cpu.json",
       "sha256": "53b631693b98894b88ee756d9dd6078889747352918b79def31a4640beeae2f2"
     },
     {
+      "git_copy": "fusion_photometric_gpu.json",
+      "sha256": "4bc09a4a23994b73c34f03851c5c3891a17faa750e06870678952cd1b8cfb74b"
+    },
+    {
       "git_copy": "initialization_partial.json",
       "sha256": "b9daada66a966ffaa977028ac5c1164f04828c83f63120a693a81bf4966519fe"
+    },
+    {
+      "git_copy": "initialization_validation.json",
+      "sha256": "f15f57b9bd67b73f1d31eaf72b3f6d06434fee5cbcc67aa32a3a70751e918b91"
     },
     {
       "git_copy": "interim_completed_runs.json",
@@ -37,6 +65,18 @@
     {
       "git_copy": "numeric_case_cpu_single.json",
       "sha256": "8c176eaabacb78096d7c99ab245b4fc627f3b89f55f2daf90ddc418cb8707bdf"
+    },
+    {
+      "git_copy": "numeric_case_gpu_batch8.json",
+      "sha256": "cb9297a034081364f0d807f94364fc87076d7d66ae1f9f30e709498dfddbd8b0"
+    },
+    {
+      "git_copy": "paired_scene_bootstrap.json",
+      "sha256": "b54991b6f0990368eff0384b98f710499cace7bfcef1e69aec51680e3652ab3e"
+    },
+    {
+      "git_copy": "per_seed_summary.json",
+      "sha256": "be555e0c6122d836d0d5ee88a78e540c87c53bcefc0eecb5a788164fd76420c8"
     },
     {
       "git_copy": "protocol.json",
@@ -77,6 +117,10 @@
     {
       "git_copy": "selected_conditions.json",
       "sha256": "e095d635c5ec56d223434fb0ca57877ab8878a8891937fd1c0d2f0f8aaf8181a"
+    },
+    {
+      "git_copy": "source_hashes.json",
+      "sha256": "80659bad8c68f8537a1ffc3d84dafc006b4b1ce2fdd44ac7ddb58d2e23a4f2cc"
     }
   ],
   "followup_sources": {
@@ -87,7 +131,8 @@
     "qualitative": "e58938fa6bc87880f0a1ce1adea5b305b6e5171f",
     "map_cache": "062913a2e3aa04b5868ab59ae967cd781e24c913",
     "benchmark_prepared_not_run": "a2457fbe1d11e3cd9770ddbeecd7184a871a8585",
-    "storage_audit_running": "a52b3f4daf429118d97c317abee72e87a7773fe0"
+    "storage_audit_running": "a52b3f4daf429118d97c317abee72e87a7773fe0",
+    "complete_registry_aggregation": "1610e0ff5eacae330942d461774ba75e0a4b4281"
   },
   "runtime_audit_initial_failure": {
     "source": "b2e69956bc3897673c056305f290c06ac6ea800a",
@@ -111,5 +156,13 @@
     "exit": 1,
     "reason": "float64 candidate versus float32 default map-angle rotation",
     "log_sha256": "d9acbf64337555937b699e6331f4d6e965eeb0e039f236457928afa56ff3849d"
+  },
+  "post_evaluation_runtime_head": "bf032b52959e4eff7351df53a11338ebd40dc580",
+  "external_completed_hashes": {
+    "cache_benchmark_v1.json": "b0028195a9fe115c192aac3551abb6590ca448891cf3fddcf0faa01089cdd37b",
+    "numeric_case_gpu_batch8.json": "cb9297a034081364f0d807f94364fc87076d7d66ae1f9f30e709498dfddbd8b0",
+    "deployment_storage.json": "806351a987def812238e9bcb4dafe552f2eac38baccf311913b545fdd0c44af2",
+    "fusion_photometric_gpu_v1/summary.json": "4bc09a4a23994b73c34f03851c5c3891a17faa750e06870678952cd1b8cfb74b",
+    "fusion_photometric_gpu_v1/predictions.json": "edd54eb584a80781d871d6752e768afc46607bc46696881df0158e39bfbb3c74"
   }
 }

@@ -1,6 +1,30 @@
 # Candidate-conditioned interaction: matched controls
 
-Study ID `track-b-matched-interaction-20261109`, 2026-11-09. **Status: running; first fit completed, comparison incomplete. Evidence: Exploratory.** This follows the [structure and independent fusion experiments](../2026-11-09-structure-supervision/README.md). Full Track B goal remains active.
+Study ID `track-b-matched-interaction-20261109`, 2026-11-09. **Status: nine-fit comparison complete, negative result; full research protocol continues. Evidence: Exploratory.** This follows the [structure and independent fusion experiments](../2026-11-09-structure-supervision/README.md). Full Track B goal remains active.
+
+## Completed matched comparison — authoritative current result
+
+All nine planned fits completed; actual container exit0. All initial state tensors are identical across the three modes within each seed, and each model has2,429,659 parameters. [Final registry](experiment_registry.csv), [all initializations](initialization_validation.json), [completion receipt](completion_receipt.json).
+
+| Model | Normal Joint | Low-light Joint | Fine (normal) | Raw20 | Diverse20 |
+|---|---:|---:|---:|---:|---:|
+| attention | 6.250% | 1.562% | 0.260% | 33.160% | 62.587% |
+| concat | 7.378% | 1.997% | 0.174% | 36.632% | 65.625% |
+| separable | 7.378% | 1.997% | 0.260% | 36.111% | 63.889% |
+
+Observation: attention−concat Joint is−1.128pp, scene95%CI[−2.778,+0.434]; attention−separable−1.128pp,[−2.691,+0.694]. In brightness×0.2, both differences are−0.434pp with CIs crossing0. No advantage of candidate attention over either matched-capacity control is established. This is a negative result under this initialization/learning schedule, not proof that all attention architectures are inferior. [Full paired CIs](paired_scene_bootstrap.json), [seed outcomes](per_seed_summary.json), [aggregate](aggregate.json).
+
+Interpretation and alternatives: the weak common visual encoder, optimization, limited six-scene development cohort, auxiliary structural bottleneck and uncalibrated scores can explain failure. Equal parameters, initialization and updates control some confounds; FLOPs/time are not exactly equal. Decision: retain these negative results, do not add more elaborate interaction solely for complexity, and investigate the stronger independently sourced visual representation. OOF discrimination, full shift/calibration/grid studies and unused final evaluation remain incomplete; the user's overall goal stays active.
+
+The independent fixed fusion baseline reproduces its original GPU metrics in all1,152 checked cases, with **zero mismatches**: normal Joint8.941%, dark1.215%; acoustic-only5.122% in both conditions. Attention has not surpassed this baseline either, but its capacity/training differs, so do not treat that comparison as a strict architecture intervention. [Same-GPU photometric results](fusion_photometric_gpu.json).
+
+The discrepant CPU/GPU case is now explained at the prediction level: GPU float32 ranks candidate14033 (4.038m error) over21033 (0.515m error) by only6.85×10⁻⁷; GPU float64 and both CPU precisions reverse that ordering with margin≈5.02×10⁻⁵. This is a precision-sensitive ranking, not a1m distance-threshold issue. [GPU numeric replay](numeric_case_gpu_batch8.json). Original float32 benchmark results remain unchanged; do not selectively replace a failed query with float64. No global numerical-stability claim follows from this one case.
+
+Map-cache benchmark completed on all three seed42 models and six maps, after training ended. Across-scene median of median tensor-input query latency: attention21.66ms, concat19.99ms, separable21.40ms. Learned map cache20.91–39.62MB; cached vs uncached score checks pass and all18 audited argmaxes match. Timings exclude file decoding, RIR normalization/STFT and geometric ray creation, so they are not end-to-end sensor latency. [Per-map timing/memory](cache_benchmark.json).
+
+All six isolated reference inventories completed. Existing reference files occupy12.37–33.36GB per scene, while overlap with the proposed0.25m XY bank is only5.42–6.51%. Four found dense schedules declare0.2m; two expected schedule paths are absent despite reference files existing. Proposed CPU candidate/ray setup is0.796–2.576s per scene (single-run scope). Different candidate/grid coverage prevents claiming a like-for-like savings ratio or accuracy–cost Pareto victory. Reference metadata traversal is not simulation time. [Completed inventory](deployment_storage_complete.json).
+
+Operational note: the original client handle returned143 while the underlying container and training PID remained live. The existing process was verified, logs reattached and `docker wait` returned0; it was not restarted. The earlier deliberately interrupted matched_v1 remains a separate retained run. The historical interim sections below describe earlier states and are superseded by this completed summary where they say an evaluation is pending.
 
 ## Hypothesis and competing explanations
 
@@ -149,3 +173,17 @@ Storage audit sourcea52b3f4 counts existing `.npy` file bytes and reads FP-role 
 Current implication: deployment storage can be measured, but directly reusing these reference arrays does not provide a same-candidate B2 baseline for the0.25m scorer. A fair comparison needs a verified common grid/mask and actual evaluation, or an explicit unavailable entry. Query-RIR generation/training storage is still required by Track B and is never counted as eliminated.
 
 The full storage traversal is still live and must be allowed to finish; keep its original process rather than restarting on a slow file-system poll. Reproduce the audit with `python3 -m track_b.scripts.audit_deployment_storage --root <HSSD> --cache <structure_cache> --out <fresh_output.json>`. The expected-path reference schedule probe initially encountered an absent file and was corrected to record absences rather than impute data; no observations or files were modified.
+
+
+Completed post-run commands, using the documented container mounts:
+
+```text
+python -m track_b.scripts.summarize_interaction --run /out/matched_v2 --out /out/aggregate_v1 --code-sha aa452ee78a75af31d8b426684a9c81f94ff00039
+python -m track_b.scripts.fusion_photometric --cache /prior/cache --run /prior/supervised_v1 --fusion-reference /prior/independent_fusion_v1 --out /out/fusion_photometric_gpu_v1 --device cuda
+python -m track_b.scripts.audit_numeric_case --cache /prior/cache --run /prior/supervised_v1 --out /out/numeric_case_gpu_batch8.json --device cuda --batch-size 8
+python -m track_b.scripts.benchmark_interaction_cache --cache /prior/cache --run /out/matched_v2 --out /out/cache_benchmark_v1.json
+```
+
+Raw per-query predictions/checkpoints/full score data remain local. Small summaries, failure records, figures and source hashes are the synchronized artifacts. The prepared foundation study has a separate report; its one-query smoke does not count as an additional localization fit here.
+
+Registry schema completion reran aggregation only into `aggregate_v2` at source1610e0f; models, predictions, paired CIs and source experiment SHA were unchanged. All required registry fields are explicit, including NA for unmeasured FLOPs/test and no validation checkpoint selection.

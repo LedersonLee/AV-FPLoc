@@ -1,0 +1,365 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "mode": "attention",
+      "scene": "108736611_177263226",
+      "candidates": 99612,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13945680,
+      "learned_map_cache_bytes": 25500672,
+      "map_setup_seconds": [
+        0.14006963302381337,
+        0.010530917905271053,
+        0.0104603071231395
+      ],
+      "warm_query_ms_mean": 22.17509859474376,
+      "warm_query_ms_median": 22.042133496142924,
+      "warm_query_ms_p95": 22.970276628620923,
+      "peak_allocated_bytes": 114116096,
+      "cache_uncached_max_score_difference": 7.62939453125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "attention",
+      "scene": "108736635_177263256",
+      "candidates": 81684,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 11435760,
+      "learned_map_cache_bytes": 20911104,
+      "map_setup_seconds": [
+        0.010327236959710717,
+        0.008329628966748714,
+        0.00825130520388484
+      ],
+      "warm_query_ms_mean": 18.07064868044108,
+      "warm_query_ms_median": 18.059152062050998,
+      "warm_query_ms_p95": 18.145946064032614,
+      "peak_allocated_bytes": 98928640,
+      "cache_uncached_max_score_difference": 7.62939453125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "attention",
+      "scene": "105515448_173104512",
+      "candidates": 154764,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 21666960,
+      "learned_map_cache_bytes": 39619584,
+      "map_setup_seconds": [
+        0.017822447000071406,
+        0.015418434049934149,
+        0.015473639126867056
+      ],
+      "warm_query_ms_mean": 34.18338029878214,
+      "warm_query_ms_median": 33.86664506979287,
+      "warm_query_ms_p95": 35.438264219556004,
+      "peak_allocated_bytes": 158301184,
+      "cache_uncached_max_score_difference": 3.814697265625e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "attention",
+      "scene": "108294783_176710410",
+      "candidates": 81720,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 11440800,
+      "learned_map_cache_bytes": 20920320,
+      "map_setup_seconds": [
+        0.010348401963710785,
+        0.008355207974091172,
+        0.008319095941260457
+      ],
+      "warm_query_ms_mean": 18.354288674890995,
+      "warm_query_ms_median": 18.063322524540126,
+      "warm_query_ms_p95": 19.397346605546776,
+      "peak_allocated_bytes": 99300864,
+      "cache_uncached_max_score_difference": 7.62939453125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "attention",
+      "scene": "108294624_176710203",
+      "candidates": 92880,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13003200,
+      "learned_map_cache_bytes": 23777280,
+      "map_setup_seconds": [
+        0.012732123024761677,
+        0.010146006941795349,
+        0.009802532847970724
+      ],
+      "warm_query_ms_mean": 22.86020127357915,
+      "warm_query_ms_median": 22.609511041082442,
+      "warm_query_ms_p95": 25.02842393005267,
+      "peak_allocated_bytes": 110946304,
+      "cache_uncached_max_score_difference": 1.52587890625e-05,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "attention",
+      "scene": "102344457",
+      "candidates": 94644,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13250160,
+      "learned_map_cache_bytes": 24228864,
+      "map_setup_seconds": [
+        0.011924994876608253,
+        0.009763134876266122,
+        0.009658666094765067
+      ],
+      "warm_query_ms_mean": 21.29870280623436,
+      "warm_query_ms_median": 21.282039466314018,
+      "warm_query_ms_p95": 21.4122403296642,
+      "peak_allocated_bytes": 111316992,
+      "cache_uncached_max_score_difference": 7.62939453125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "108736611_177263226",
+      "candidates": 99612,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 13945680,
+      "learned_map_cache_bytes": 25500672,
+      "map_setup_seconds": [
+        0.011363547993823886,
+        0.01016993005760014,
+        0.01016556192189455
+      ],
+      "warm_query_ms_mean": 21.33231208426878,
+      "warm_query_ms_median": 21.47543302271515,
+      "warm_query_ms_p95": 21.92245963960886,
+      "peak_allocated_bytes": 114032128,
+      "cache_uncached_max_score_difference": 3.814697265625e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "108736635_177263256",
+      "candidates": 81684,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 11435760,
+      "learned_map_cache_bytes": 20911104,
+      "map_setup_seconds": [
+        0.009397489950060844,
+        0.00838768994435668,
+        0.008323895977810025
+      ],
+      "warm_query_ms_mean": 16.983349109068513,
+      "warm_query_ms_median": 16.955052968114614,
+      "warm_query_ms_p95": 17.14577100938186,
+      "peak_allocated_bytes": 98928640,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "105515448_173104512",
+      "candidates": 154764,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 21666960,
+      "learned_map_cache_bytes": 39619584,
+      "map_setup_seconds": [
+        0.017153849825263023,
+        0.0159621590282768,
+        0.016014820197597146
+      ],
+      "warm_query_ms_mean": 32.292775716632605,
+      "warm_query_ms_median": 31.710679410025477,
+      "warm_query_ms_p95": 33.638544694986194,
+      "peak_allocated_bytes": 158301184,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "108294783_176710410",
+      "candidates": 81720,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 11440800,
+      "learned_map_cache_bytes": 20920320,
+      "map_setup_seconds": [
+        0.009358485927805305,
+        0.008341209962964058,
+        0.008267655037343502
+      ],
+      "warm_query_ms_mean": 16.8939326191321,
+      "warm_query_ms_median": 16.89394493587315,
+      "warm_query_ms_p95": 16.940978111233562,
+      "peak_allocated_bytes": 99300864,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "108294624_176710203",
+      "candidates": 92880,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 13003200,
+      "learned_map_cache_bytes": 23777280,
+      "map_setup_seconds": [
+        0.010609154123812914,
+        0.009565338958054781,
+        0.009457468055188656
+      ],
+      "warm_query_ms_mean": 20.042584266047925,
+      "warm_query_ms_median": 20.218295976519585,
+      "warm_query_ms_p95": 20.700801303610206,
+      "peak_allocated_bytes": 110946304,
+      "cache_uncached_max_score_difference": 3.337860107421875e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "concat",
+      "scene": "102344457",
+      "candidates": 94644,
+      "checkpoint_bytes": 9738724,
+      "candidate_input_bytes": 13250160,
+      "learned_map_cache_bytes": 24228864,
+      "map_setup_seconds": [
+        0.010806720005348325,
+        0.009776891907677054,
+        0.00971758202649653
+      ],
+      "warm_query_ms_mean": 19.779351935721934,
+      "warm_query_ms_median": 19.751781946979463,
+      "warm_query_ms_p95": 19.970952812582254,
+      "peak_allocated_bytes": 111316992,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "108736611_177263226",
+      "candidates": 99612,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13945680,
+      "learned_map_cache_bytes": 25500672,
+      "map_setup_seconds": [
+        0.011369553860276937,
+        0.010315445950254798,
+        0.010262699099257588
+      ],
+      "warm_query_ms_mean": 23.00070874625817,
+      "warm_query_ms_median": 22.696507046930492,
+      "warm_query_ms_p95": 23.704616585746408,
+      "peak_allocated_bytes": 114032128,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "108736635_177263256",
+      "candidates": 81684,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 11435760,
+      "learned_map_cache_bytes": 20911104,
+      "map_setup_seconds": [
+        0.010126620065420866,
+        0.008819428039714694,
+        0.008640463929623365
+      ],
+      "warm_query_ms_mean": 18.521319737192243,
+      "warm_query_ms_median": 18.497766461223364,
+      "warm_query_ms_p95": 18.605592229869217,
+      "peak_allocated_bytes": 98928640,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "105515448_173104512",
+      "candidates": 154764,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 21666960,
+      "learned_map_cache_bytes": 39619584,
+      "map_setup_seconds": [
+        0.01695199287496507,
+        0.015612800838425756,
+        0.015522602945566177
+      ],
+      "warm_query_ms_mean": 35.30146355042234,
+      "warm_query_ms_median": 34.77725794073194,
+      "warm_query_ms_p95": 36.74387502251193,
+      "peak_allocated_bytes": 158301184,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "108294783_176710410",
+      "candidates": 81720,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 11440800,
+      "learned_map_cache_bytes": 20920320,
+      "map_setup_seconds": [
+        0.009287392953410745,
+        0.008355310885235667,
+        0.00830488302744925
+      ],
+      "warm_query_ms_mean": 18.467552680522203,
+      "warm_query_ms_median": 18.47017148975283,
+      "warm_query_ms_p95": 18.532035825774074,
+      "peak_allocated_bytes": 99300864,
+      "cache_uncached_max_score_difference": 1.430511474609375e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "108294624_176710203",
+      "candidates": 92880,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13003200,
+      "learned_map_cache_bytes": 23777280,
+      "map_setup_seconds": [
+        0.01060307677835226,
+        0.009622718207538128,
+        0.009499592008069158
+      ],
+      "warm_query_ms_mean": 21.56805646372959,
+      "warm_query_ms_median": 21.27243543509394,
+      "warm_query_ms_p95": 22.664458071812987,
+      "peak_allocated_bytes": 110946304,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    },
+    {
+      "mode": "separable",
+      "scene": "102344457",
+      "candidates": 94644,
+      "checkpoint_bytes": 9738910,
+      "candidate_input_bytes": 13250160,
+      "learned_map_cache_bytes": 24228864,
+      "map_setup_seconds": [
+        0.011827435810118914,
+        0.010223157936707139,
+        0.010168998036533594
+      ],
+      "warm_query_ms_mean": 21.620542625896633,
+      "warm_query_ms_median": 21.52597054373473,
+      "warm_query_ms_p95": 22.237065201625228,
+      "peak_allocated_bytes": 111316992,
+      "cache_uncached_max_score_difference": 1.9073486328125e-06,
+      "cache_uncached_argmax_equal": true,
+      "scope": "CUDA synced;20 timed single queries after2 warmups; eight preprocessed observations cyclically reused; excludes disk decode/RIR normalization/STFT and geometric ray setup; no end-to-end sensor latency claim"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "training_code_sha": "aa452ee78a75af31d8b426684a9c81f94ff00039",
+  "training_container_exit": 0,
+  "initial_client_connection_exit": 143,
+  "connection_note": "Client handle terminated while docker container/PID remained running; verified then reattached logs and docker wait; NO duplicate/restarted training",
+  "completed_fits": 9,
+  "initial_states_all_equal_per_seed": true,
+  "aggregation_exit": 0,
+  "gpu_post_evaluations_exit": 0,
+  "storage_audit_exit": 0,
+  "post_evaluation_runtime_head": "bf032b52959e4eff7351df53a11338ebd40dc580",
+  "reconnected_log_sha256": "d26bdcb05e57e0dfe68ed97e3fdf309f671bfc54c84045c0903d46493651ac7e"
+}

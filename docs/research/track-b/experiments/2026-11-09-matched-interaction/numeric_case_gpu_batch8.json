@@ -1,0 +1,226 @@
+{
+  "scene": "108294783_176710410",
+  "query": 1298,
+  "seed": 44,
+  "scope": "one predeclared mismatch case; float64 uses stored float32 coordinates, not unrounded original labels",
+  "reports": [
+    {
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "batch_size": 8,
+      "target_batch_offset": 4,
+      "top5": [
+        {
+          "rank": 0,
+          "candidate": 14033,
+          "score": -0.41567233204841614,
+          "position_distance_native": 4.037635326385498,
+          "position_distance_float64": 4.037635440149088,
+          "yaw_degrees": 160.00003051757812,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -12.899999618530273,
+            -3.690000057220459,
+            5.061454772949219
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 1,
+          "candidate": 21033,
+          "score": -0.41567301750183105,
+          "position_distance_native": 0.5147815346717834,
+          "position_distance_float64": 0.5147815487324177,
+          "yaw_degrees": 0.0,
+          "position_pass_native": true,
+          "position_pass_float64": true,
+          "pose": [
+            -9.149999618530273,
+            -2.690000057220459,
+            1.5707963705062866
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 2,
+          "candidate": 21032,
+          "score": -0.4876454472541809,
+          "position_distance_native": 0.5147815346717834,
+          "position_distance_float64": 0.5147815487324177,
+          "yaw_degrees": 10.000005722045898,
+          "position_pass_native": true,
+          "position_pass_float64": true,
+          "pose": [
+            -9.149999618530273,
+            -2.690000057220459,
+            1.3962633609771729
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 3,
+          "candidate": 15689,
+          "score": -0.49028676748275757,
+          "position_distance_native": 4.011234283447266,
+          "position_distance_float64": 4.011234220460054,
+          "yaw_degrees": 160.00003051757812,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -12.899999618530273,
+            -3.440000057220459,
+            5.061454772949219
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 4,
+          "candidate": 7975,
+          "score": -0.4988722503185272,
+          "position_distance_native": 1.570031762123108,
+          "position_distance_float64": 1.5700317997354332,
+          "yaw_degrees": 100.00000762939453,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -8.649999618530273,
+            -4.690000057220459,
+            3.3161256313323975
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        }
+      ],
+      "top1_top2_margin": 6.854534149169922e-07
+    },
+    {
+      "dtype": "torch.float64",
+      "device": "cuda",
+      "batch_size": 8,
+      "target_batch_offset": 4,
+      "top5": [
+        {
+          "rank": 0,
+          "candidate": 21033,
+          "score": -0.41568576398674334,
+          "position_distance_native": 0.5147815487324177,
+          "position_distance_float64": 0.5147815487324177,
+          "yaw_degrees": 0.0,
+          "position_pass_native": true,
+          "position_pass_float64": true,
+          "pose": [
+            -9.149999618530273,
+            -2.690000057220459,
+            1.5707963705062866
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 1,
+          "candidate": 14033,
+          "score": -0.41573599049636406,
+          "position_distance_native": 4.037635440149088,
+          "position_distance_float64": 4.037635440149088,
+          "yaw_degrees": 160.00000581814157,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -12.899999618530273,
+            -3.690000057220459,
+            5.061454772949219
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 2,
+          "candidate": 21032,
+          "score": -0.4876889879266304,
+          "position_distance_native": 0.5147815487324177,
+          "position_distance_float64": 0.5147815487324177,
+          "yaw_degrees": 10.000004831734797,
+          "position_pass_native": true,
+          "position_pass_float64": true,
+          "pose": [
+            -9.149999618530273,
+            -2.690000057220459,
+            1.3962633609771729
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 3,
+          "candidate": 15689,
+          "score": -0.4903507183790625,
+          "position_distance_native": 4.011234220460054,
+          "position_distance_float64": 4.011234220460054,
+          "yaw_degrees": 160.00000581814157,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -12.899999618530273,
+            -3.440000057220459,
+            5.061454772949219
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        },
+        {
+          "rank": 4,
+          "candidate": 7975,
+          "score": -0.499031559591681,
+          "position_distance_native": 1.5700317997354332,
+          "position_distance_float64": 1.5700317997354332,
+          "yaw_degrees": 100.0000005060238,
+          "position_pass_native": false,
+          "position_pass_float64": false,
+          "pose": [
+            -8.649999618530273,
+            -4.690000057220459,
+            3.3161256313323975
+          ],
+          "gt": [
+            -8.899999618530273,
+            -3.140000104904175,
+            1.5707963705062866
+          ]
+        }
+      ],
+      "top1_top2_margin": 5.022650962072106e-05
+    }
+  ]
+}
