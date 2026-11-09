@@ -39,7 +39,7 @@
 
 | 28 | [Frozen score-scale/interaction controls](track-b/experiments/2026-11-09-frozen-score-controls/README.md) | 완료13,824건·정상/초기 재현 불일치0. 스케일 복원 Joint+2.34–2.78pp, 결합 제거+5.21–5.99pp; 둘 모두 초기F1 복원. NLL 개선과 위치성능 악화 공존; 새 결합 성공 아님. | 2026-11-09 | Track B | Exploratory | `d8ca9d8b836f1c7178ce07056faf3b9f96af9c2f` |
 
-| 29 | [Expanded matched interaction](track-b/experiments/2026-11-09-expanded-interaction/README.md) | 진행 중:112Train/19Val matched9모델 시작. CPU보관·43검사·전체데이터2-step 통과, 초기F1 1,216질의 재현 불일치0; 확대 밝기특징 검증. | 2026-11-09 | Track B | Exploratory | `c083c376631c3f6ed8d89daf9d3a9d93c350fd3b` |
+| 29 | [Expanded matched interaction](track-b/experiments/2026-11-09-expanded-interaction/README.md) | 진행 중:112Train/19Val matched9모델 시작. CPU보관·43검사·전체데이터2-step 통과, 초기F1 1,216질의 재현 불일치0; 확대 밝기특징 검증. | 2026-11-09 | Track B | Exploratory | `c083c376631c3f6ed8d89daf9d3a9d93c350fd3b`  집계 출처 검증: [기록](track-b/experiments/2026-11-09-expanded-interaction/aggregation_validation.md), 검증 코드 `cf6db637f4405a2678d9a7c3e35f3b2e3f8206da`. |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

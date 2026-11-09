@@ -9,3 +9,11 @@
 - 한계: 완료된 소규모 cohort에 대한 회귀 검증이다. 확장 실험의 모든 fit 완료/전체 질의 검증을 대신하지 않는다. 가설/데이터/평가/경쟁 설명은 같은 폴더 README를 따른다. 새로운 학습, ablation, 독립 Test 평가는 이번 집계 검증에 해당하지 않는다.
 
 재현: `python -m track_b.scripts.summarize_interaction --run <interaction-root>/foundation_matched_v1 --out <new-diagnostic-dir> --code-sha e250aa59a0a2207b7629c4ff17d176b453a83965 --expected-parameters 2834908` (기존 avfploc:cu124-clean 환경).
+
+## 후속 정정: 학습 출처 fallback 제거
+
+앞선 진단에서 확인한 provenance 위험을 `cf6db637f4405a2678d9a7c3e35f3b2e3f8206da`에서 수정했다. 집계 SHA는 별도 `aggregation_provenance.json`에 저장한다. 학습 SHA가 없는 과거 fit은 `--historical-registry`로 제공한 기존 기록의 checkpoint SHA256 일치를 확인한 뒤 해당 학습 SHA를 사용한다. 출처 충돌, 누락, 형식 오류는 거부한다. SHA 형식 검사가 실제 실행을 독립적으로 증명하는 것은 아니며, 기존 실행 기록과 체크포인트 대응에 의존한다.
+
+검증 출력 `provenance_registration_replay_v1`: 9개 fit의 학습 SHA와 checkpoint hash가 공식 역사적 registry와 모두 일치하고 aggregate도 기존과 동일했다. 음성 대조 `provenance_missing_negative_v1`: 역사적 registry 없이 실행하면 attention_42의 학습 SHA 누락으로 실패하고 registry 파일을 생성하지 않았다. 예상 실패 traceback을 외부 출력 폴더에 보존했다. 기존 `dynamic_cohort_registration_replay_v1`의 출처 한계 기록은 삭제하지 않는다.
+
+재현은 위 명령에서 집계 코드 SHA를 후속 SHA로 변경하고, `--historical-registry <repo>/docs/research/track-b/experiments/2026-11-09-foundation-interaction/experiment_registry.csv`를 추가한다. 신규 출력 폴더를 사용한다. 확장된 주 학습의 코드는 변경하지 않았다.
