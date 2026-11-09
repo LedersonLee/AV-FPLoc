@@ -15,3 +15,5 @@
 전체 `track_b/tests`: **44 passed, 2 기존 autocast deprecation warnings**, 1.80초. 재현: `avfploc:cu124-clean`, repo를 `/work:ro`로 mount, `PYTHONPATH=/work OMP_NUM_THREADS=2 python -m pytest -q -p no:cacheprovider track_b/tests`.
 
 실제 M1 후보, OOF 학습 분리, 분류기의 효과는 이 테스트로 검증되지 않는다. 다음 연결에서는 M1 full field에서 후보를 추출하고 동일 field를 이 함수에 전달해야 한다. 모든 locally trained precursor/interaction은 fold-Train만 사용해야 하며, 기존 전체 Train checkpoint를 OOF scorer로 재사용할 수 없다. GT는 특징과 후보 확정 이후 label/metric에만 사용한다. 경쟁 설명과 최종 성공 여부는 본 연구 README의 가설 및 실제 후속 평가로 판단한다. 본 단계는 구현 검증이라 dataset 성능 baseline/ablation/일반화 결론은 해당하지 않는다.
+
+문서 검증 정정: README에 후단 준비 링크를 추가한 직후 기존 문서 해시가 달라 archive 검사가 한 차례 실패했다. 원본 실험 파일 변경은 없으며 README의 문서 해시만 갱신한 뒤 재검증했다.
