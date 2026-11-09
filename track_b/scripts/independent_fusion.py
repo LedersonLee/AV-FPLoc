@@ -19,7 +19,7 @@ def main():
  protocol=read(a.run/'protocol.json');scene_ids=protocol['data']['scenes']['val'];seeds=protocol['seeds'];weights=[0.,.15,.5,.85,1.];temps=[.25,1.,4.]
  visual_run=a.visual_run or a.run
  if a.visual_run:
-  vp=read(visual_run/'protocol.json');assert vp['cache_protocol_sha256']==protocol['cache_protocol_sha256'];assert vp['visual_cache_protocol_sha256']==sha(a.visual_cache/'protocol.json');assert not vp.get('fixed_fp',False)
+  vp=read(visual_run/'protocol.json');assert vp['data']['scenes']==protocol['data']['scenes'] and vp['seeds']==protocol['seeds'], 'Independent modality models must share the effective training/evaluation cohort and seeds';assert vp['cache_protocol_sha256']==protocol['cache_protocol_sha256'];assert vp['visual_cache_protocol_sha256']==sha(a.visual_cache/'protocol.json');assert not vp.get('fixed_fp',False)
  setup=dict(evaluation_visual_cache_protocol_sha256=sha((a.eval_visual_cache or a.visual_cache)/'protocol.json') if a.visual_cache else None,calibration_reference_sha256=sha(a.selection_reference/'selection.json') if a.selection_reference else None,visual_weights=weights,temperatures=temps,selection='minimum nearest-grid NLL on other five development scenes, pooled seeds; tie in declared parameter order',fixed=dict(visual_weight=.85,temperature=1.),scene_ids=scene_ids,seeds=seeds,evidence='Exploratory: calibration-fold holdout only, reused Val, not full-pipeline independence',checkpoint_hashes={f'{m}_{s}':sha((visual_run if m=='visual' else a.run)/f'{m}_{s}.pt') for m in ('visual','acoustic') for s in seeds},cache_manifest_sha256=sha(a.cache/'manifest.json'))
  (a.out/'protocol.json').write_text(json.dumps(setup,indent=2));models={}
  for seed in seeds:
