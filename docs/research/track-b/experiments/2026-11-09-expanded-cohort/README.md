@@ -75,3 +75,7 @@ All131 scenes/8,384 feature observations verified;22 overlapping pilot tensors e
 [Uniform-pose baseline](uniform_prior.md): exact expected Joint0.4313%; first-cell acoustic exceeds it by3.8451pp[3.1780,4.5852]. This weak null does not replace learned map-only controls or independent validation.
 
 [Exact map duplication audit](map_duplicate_audit.md):131 input hashes verified; no exact footprint duplicates under translation, quarter-turns and reflection. Approximate/source-family/upstream independence remains unresolved.
+
+### Second scaling cell completed; evaluation running
+
+n16_budget7 completed9 stage fits; all cohorts,1,216 Val query keys/model, scheduled update counts, initial/checkpoint hashes and3 continuation initial states passed verification (second_cell_validation.json, exit0). n16_budget7_evaluation_v1 now runs fixed-only extended evaluation, session58704. Execution source content matches evaluator6946a9b and verifier73f8f18; checkout reference d7578fb3d3927305f25adb251c9a7941fdc6def5. No second-cell performance or factorial comparison is reported yet. The frozen runner has started n112_budget1_visual_aux. Training continues from source5cf803681c2d144f3a620bc00c1ab6b841e48e7c without changed settings.

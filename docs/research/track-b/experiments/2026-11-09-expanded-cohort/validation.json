@@ -59,5 +59,10 @@
   "map_duplicate_audit_exit_code": 0,
   "map_duplicate_audit_scenes": 131,
   "map_duplicate_groups": 0,
-  "map_duplicate_cross_split_groups": 0
+  "map_duplicate_cross_split_groups": 0,
+  "second_scaling_cell_completed_fits": 9,
+  "second_scaling_cell_verification_exit_code": 0,
+  "second_scaling_cell_evaluation_session": 58704,
+  "second_scaling_cell_evaluation_status": "running",
+  "expanded112_train_fits_started": true
 }
