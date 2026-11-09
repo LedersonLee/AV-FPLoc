@@ -8,6 +8,7 @@ from track_b.models.dense import dense_loss
 from track_b.train_regimes import set_regime
 from track_b.models.foundation import FoundationStructureMatcher
 from track_b.data.folds import validate_training_fold
+from track_b.data.scene_residency import SceneSequence
 
 
 def read(p):return json.loads(p.read_text())
@@ -93,7 +94,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--scene-fold',type=Path);ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--scene-fold',type=Path);ap.add_argument('--scene-residency',choices=['gpu','cpu'],default='gpu');ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
     assert args.fp_anchor_weight>=0 and not (args.fixed_fp and args.fp_anchor_weight), 'FP anchor requires learned descriptors'
     if args.visual_cache and args.pretrained_dir:
         prior_protocol=read(args.pretrained_dir/'protocol.json')
@@ -116,15 +117,18 @@ def main():
         foundation_protocol=read(args.visual_cache/'protocol.json');foundation_manifest=read(args.visual_cache/'manifest.json')
         assert foundation_protocol['data']==data_protocol and not foundation_protocol['smoke'] and len(foundation_manifest)==len(manifest)
         protocol.update(init=('archived foundation adapter, fresh AdamW' if args.pretrained_dir else 'fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder'),visual_representation='frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space',visual_cache_protocol_sha256=sha(args.visual_cache/'protocol.json'),upstream=foundation_protocol,foundation_cost_included_in_training_seconds=False)
+    protocol['scene_residency']=args.scene_residency
     (args.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={}
     for part,ids in effective_scenes.items():
-        scenes[part]=[scene_to_gpu(torch.load(args.cache/f'{s}.pt',weights_only=True)) for s in ids]
+        scenes[part]=[torch.load(args.cache/f'{s}.pt',weights_only=True,map_location='cpu') for s in ids]
+        if args.scene_residency=='gpu':scenes[part]=[scene_to_gpu(s) for s in scenes[part]]
     if args.visual_cache:
         feature_hashes={r['scene']:r['sha256'] for r in foundation_manifest}
         for part in scenes:
             for scene in scenes[part]:
                 path=args.visual_cache/f"{scene['scene']}.pt";assert sha(path)==feature_hashes[scene['scene']]
                 attach_visual_features(scene,torch.load(path,weights_only=True,map_location='cpu'))
+    if args.scene_residency=='cpu':scenes={part:SceneSequence(items) for part,items in scenes.items()}
     print('DATA_READY',flush=True);mean_target=torch.cat([s['target'] for s in scenes['train']]).mean(0)
     prior=[]
     for s in scenes['val']:
