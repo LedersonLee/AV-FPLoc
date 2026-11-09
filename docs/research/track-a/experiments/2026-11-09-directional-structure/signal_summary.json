@@ -1,0 +1,21 @@
+{
+  "query_rows": 1536,
+  "unique_base_rir_paths": 1201,
+  "early_peak_sample_counts": {
+    "7": 9216
+  },
+  "settings_variants": [
+    {
+      "diffraction": true,
+      "indirect_rays": 20000,
+      "materials": false,
+      "max_diffraction_order": 10,
+      "ray_depth": 50,
+      "ring_radius_m": 0.05,
+      "sample_rate_hz": 48000,
+      "source_rays": 512,
+      "transmission": false
+    }
+  ],
+  "scope": "Query yaw rolls can reuse base RIR; rows are not independent renders. Early peak does not identify wall echoes."
+}

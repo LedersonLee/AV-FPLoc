@@ -21,6 +21,8 @@
 
 | 15 | [독립 Dense SE(2) 초기 구현·실험](track-b/experiments/2026-11-09-dense-se2-initial/README.md) | track-b-dense-se2-initial-20261109: 데이터 감사·전체375,156후보 forward 검증 완료. 초기 모델의 개발셋 localization은 낮음; 42fits·대조·실패 분석 완료(성능 음성결과), 전체 protocol 미완료. | 2026-11-09 | Track B | Exploratory | 55c423833710efe6dd38dbcd58a6e18236ce6f9d (120step); c268a2f3574e7ba82fe566e39c0803e4f6cf737c (2000step); e45b12137c44b05ab9d4cb6b1ea1b54fb812665b geometry follow-up, provenance 참조 |
 
+| 16 | [방향 구조와 Visual ambiguity](track-a/experiments/2026-11-09-directional-structure/README.md) | directional_structure_20261109: 완료·제한적 성공/음성결과 보존. 고정 visual 후보 재정렬 New12 +3.125pp, Transfer11 +3.267pp; cosine/GEOQ 우위는 미확인, fullbank fine 악화. | 2026-11-09 | Track A | Exploratory | d28ad93b3a0d65efd73da05e516b54274d84dc28; 실제 fit별 실행 SHA는 보고서 execution_receipts.json 참조 |
+
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 
 서로 다른 cohort의 절대 성능을 이 목록으로 순위 매기지 않는다. 최신 HSSD478 fits와 residual1032 fits 등은 내부 fold/refit을 포함하는 계산 횟수이며 독립적인 과학적 증거 수가 아니다.

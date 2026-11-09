@@ -53,3 +53,7 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 ## 2026-11-09 Track A 후속: Directional Evidence / Tri-branch Pilot
 
 [후속 결과](track-a/experiments/2026-11-09-directional-tribranch/RESULTS.md)는 음향만으로 coarse near/far77.67%(prior62.00%)를 예측하지만 GEOQ 이후 추가 localization 이득을 확인하지 못했다. Attention joint +0.065pp는 불확실하고 fine -1.204pp이며, 실제 부분 음향 학습과 시각 어댑터·저학습률 내부 검증 후에도 B2+GEOQ를 유지했다.12개 reused/teacher-exposed scenes,2seeds의 탐색 결과다. 기존 B2 Top20/FP-RIR reference 의존 Pilot이므로 Track A이며 새 FP-RIR-free Track B의 검증 결과로 읽지 않는다. 이번 문서 이관으로 실험을 재실행하거나 기존 결론을 삭제하지 않았다.
+
+## 2026-11-09 Track A: Directional Structural Evidence
+
+[새 연구](track-a/experiments/2026-11-09-directional-structure/README.md)는 raw·ECN·frozen embedding·회전·donor·동일용량 비방향 대조와73새checkpoint를 검증했다. 고정 pureV후보 재정렬이 New12 joint +3.125pp, frozen Transfer11 +3.267pp로 개선됐다. 기존cosine/GEOQ보다 낮으며 fullbank fine은 악화됐다. 따라서 거친 방향 단서의 모호성 해소를 지지하지만 metric depth/DoA나 강한 baseline 대체는 입증하지 않는다. 모두 reused/teacher-exposed Exploratory이며 기존Test는 사용하지 않았다.

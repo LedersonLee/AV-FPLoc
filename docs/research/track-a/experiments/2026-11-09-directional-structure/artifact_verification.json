@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "prior_manifest_files": 3723,
+  "prior_manifest_sha256": "d68f2206553c1da69bfa0a010ed0154d49c983783023837519dd81e0bd364a80",
+  "candidate_cache_hashes": 69,
+  "raw_unique_files": 1201,
+  "original_runtime_diff_preserved": true,
+  "figure_dimensions": {
+    "ambiguous_pair_harm.png": [
+      2161,
+      920
+    ],
+    "ambiguous_pair_repair.png": [
+      2161,
+      920
+    ],
+    "direction_gt_prediction.png": [
+      1820,
+      1640
+    ],
+    "localization_ablation.png": [
+      2540,
+      920
+    ],
+    "openness_confusion.png": [
+      2540,
+      734
+    ],
+    "scene_prediction.png": [
+      2540,
+      920
+    ],
+    "structural_score_field.png": [
+      2540,
+      849
+    ]
+  },
+  "new_model_count": 73,
+  "model_replay_checks": 4287,
+  "scope": "Hashes/replay and explicit 23-scene allowlist; no claim of OS-wide access tracing. Test exclusion also inherited from preserved prior final_verification.json and scene protocol. TrackB is outside audited mutation scope."
+}

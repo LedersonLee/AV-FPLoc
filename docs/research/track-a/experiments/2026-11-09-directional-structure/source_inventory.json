@@ -1,0 +1,116 @@
+[
+  {
+    "path": "analyze.py",
+    "sha256": "b80b5bbbc5957fa703ffda2013ce1c224eeefc1cba8f7c63dc3e4b228ec19c15",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/analyze.py",
+    "repository_matches": true
+  },
+  {
+    "path": "audit_prior.py",
+    "sha256": "f7287f8059e9446e98af42919a494f3cf3b09a7ae5803bea98bc59161482a9ab",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/audit_prior.py",
+    "repository_matches": true
+  },
+  {
+    "path": "discrimination.py",
+    "sha256": "0456ed049de698cd7c430d30530c75633de4025ff5fc034d8609a4b763bae297",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/discrimination.py",
+    "repository_matches": true
+  },
+  {
+    "path": "environment_capture.py",
+    "sha256": "edfd87262268aeb5dfd03703f12031bca8c2245489075d6ec849be78005d635b",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/environment_capture.py",
+    "repository_matches": true
+  },
+  {
+    "path": "feature_ablation.py",
+    "sha256": "ef94339c1f0a40b0230977ddb4caa29d0351767904315b84b1e10a110eba71be",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/feature_ablation.py",
+    "repository_matches": true
+  },
+  {
+    "path": "figures.py",
+    "sha256": "7e9b2469635acf1f19a22f1151a01f93057595d9632f58b5b1203d9a4242ea31",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/figures.py",
+    "repository_matches": true
+  },
+  {
+    "path": "fullbank.py",
+    "sha256": "2a45eeacc58a286abbff8407d5fba4d4aad8d1339dafaac7fd297d052eede83e",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/fullbank.py",
+    "repository_matches": true
+  },
+  {
+    "path": "integration.py",
+    "sha256": "662cec67a7abf375082e6a8a109b4879c574ef5621b8367ab397a4012c37a5de",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/integration.py",
+    "repository_matches": true
+  },
+  {
+    "path": "oracle_diagnostic.py",
+    "sha256": "090789dd375f679b5601fd52e2549826e62f682e64e722e05c3990638ff1914e",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/oracle_diagnostic.py",
+    "repository_matches": true
+  },
+  {
+    "path": "prediction.py",
+    "sha256": "e5c02695658198b9f676d3ae2669c7e3221f291367decbd1ba57de36845028ca",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/prediction.py",
+    "repository_matches": true
+  },
+  {
+    "path": "prepare_candidates.py",
+    "sha256": "380dbea5a67b6a56f5ce00d1eb2281052a5dc90c11045709d29962150935fb2f",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/prepare_candidates.py",
+    "repository_matches": true
+  },
+  {
+    "path": "prepare_signal.py",
+    "sha256": "3e64b9e4e2e2682a81e0c24d4ba09251364fca5480989dfa1a7bfc8d5824d925",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/prepare_signal.py",
+    "repository_matches": true
+  },
+  {
+    "path": "repeat_diagnostic.py",
+    "sha256": "6661610b46b82020fc6c6285d691d6b5bd1d9f88f5193cffe19186a93e0d1a8c",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/repeat_diagnostic.py",
+    "repository_matches": true
+  },
+  {
+    "path": "report.py",
+    "sha256": "c753b12a321e8760bf2e0865931897d1b958618ff86c52e317331e972b33fb23",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/report.py",
+    "repository_matches": true
+  },
+  {
+    "path": "symmetric_control.py",
+    "sha256": "3154cfce711c27ded7b4537a5e46853bb1909afdb832c9aca716445270fc0eaa",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/symmetric_control.py",
+    "repository_matches": true
+  },
+  {
+    "path": "transfer.py",
+    "sha256": "c10a26c51c598678709761e760d43dcccf19de64e97dc04329994ecf9ca128d5",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/transfer.py",
+    "repository_matches": true
+  },
+  {
+    "path": "uncertainty.py",
+    "sha256": "4b086b66e2487d25f049815d852e72a4d0cf499d624c89ddb86064d711cf51cf",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/uncertainty.py",
+    "repository_matches": true
+  },
+  {
+    "path": "verify_artifacts.py",
+    "sha256": "0dfea130c9458a0458de88e06d4284dd4d18af82c32645a9a217ba66280088d0",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/verify_artifacts.py",
+    "repository_matches": true
+  },
+  {
+    "path": "verify_models.py",
+    "sha256": "064db1a57ba7314b1003f57fbdad696146b3b96c4a098b3a4e4e7d4da57fdfa0",
+    "repository_path": "scripts/research/track_a/directional_structure_20261109/verify_models.py",
+    "repository_matches": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "kind": "repair",
+    "scene": "102344250",
+    "fold": 0,
+    "query_index": 40,
+    "query_id": 626,
+    "visual_slot": 0,
+    "structural_slot": 3,
+    "visual_success": false,
+    "structural_success": true,
+    "visual_score_gap": 0.07781628626471315
+  },
+  {
+    "kind": "harm",
+    "scene": "102344250",
+    "fold": 0,
+    "query_index": 35,
+    "query_id": 580,
+    "visual_slot": 0,
+    "structural_slot": 2,
+    "visual_success": true,
+    "structural_success": false,
+    "visual_score_gap": 0.04943478477913965
+  }
+]
