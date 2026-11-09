@@ -46,13 +46,21 @@ s+='''
 
 Ordered raw channels outperform energy-sorted and isotropic controls trained with the same CNN. This supports useful spatial-channel information under the simulated microphone convention. It does not isolate IPD from amplitude or establish device-transfer robustness. A fixed channel permutation applied only at inference is a distribution shift, not the same causal test as retraining after removing identity. Donor/shuffle records are preserved. In joint models, `donor` means audio replaced with vision fixed; generic primary `donor17` rolls the complete joint prediction and must not be described as an audio-only intervention.
 
-Chirp improves mean ray MAE but its joint-recall contrast with raw includes zero. Fixed convolution adds no new scene information; it can change conditioning, spectral weighting and overlap. No frequency-specific mechanism is established without frequency-isolated controls. Attention improves naive late fusion, but not concat or equal-parameter interaction-disabled with decisive scene-level evidence; therefore attention-specific cross-modal benefit is unproven.
+On fixed candidates, chirp improves mean ray MAE but its joint-recall contrast with raw includes zero. The complete full-bank evaluation below changes the scope of this conclusion. Fixed convolution adds no new scene information; it can change conditioning, spectral weighting and overlap. No frequency-specific mechanism is established without frequency-isolated controls. Attention improves naive late fusion, but not concat or equal-parameter interaction-disabled with decisive scene-level evidence; therefore attention-specific cross-modal benefit is unproven.
 
 ### Same36-output model, fewer matching directions
 
 Holding the trained36ray model fixed separates matching-direction information from training capacity. Using all36 rather than4directions changes fixedcandidate joint recall by+1.758pp[0.423,3.092] for frozen embedding,+1.172pp[0.065,2.181] for chirp,+0.749pp[-0.358,1.823] for raw and+0.488pp[-0.456,1.497] for E/C/N. Gains beyond12directions are small and all corresponding intervals include zero. These reused exploratory comparisons support some value of broader angular sampling, not monotonic improvement with ray count.
 
 Training a36output model and evaluating only4/8/12outputs does not clearly outperform training the corresponding nativeK model. K8 is not an exact grid subset: predicted log rays are interpolated while target metric rays are interpolated before log; its comparison includes this declared numerical difference. See remaining_analysis.json for all contrasts.
+
+### Stronger directional falsification
+
+The registered direction-shuffled control is a one-bin(10degree) cyclic shift, not a random permutation. Neighboring rays are correlated, so a small effect under that control cannot establish direction invariance. A subsequent fixed GT-free random36direction permutation diagnostic([protocol](DIRECTION_PERMUTATION_PROTOCOL.md)) retains all ray values but destroys their angular assignment on fixedpureV Top20.
+
+Matched minus permuted joint recall is+1.335pp[0.586,2.116] for raw,+1.986pp[1.335,2.702] for chirp,+2.474pp[1.823,3.255] for embedding, and+0.814pp[-0.065,1.693] for jointattention. This supports usable directional assignment in the acoustic predictors under the current convention, without proving a physical causal cue or interaction mechanism. Full-bank results retain the registered10degree rotation; no random-permutation full-bank claim is made.
+
+RawK36 inference controls additionally yield matched52.799%, donor48.763%,10degree shift52.669%,channel permutation51.335%,isotropic input48.796%,energy-sorted input51.009%joint recall. These inference shifts differ from the trainedsorted/isotropic controls in the main table; both are preserved.
 
 ## Optimization and FOV alternatives
 
@@ -120,5 +128,61 @@ Results apply to simulated HSSD6channel RIRs, pooled STFT/frozen vision and thes
 ## Full-bank completion status
 
 Pending. Primary all-K/subset evaluation and Phase4 control evaluation are still running. This report does not close the study or authorize a success claim before their aggregation, final provenance and Docs synchronization.
+'''
+# Add complete primary full-bank results without hiding the earlier fixedcandidate conclusion.
+if (P/'fullbank_evaluation.json').exists():
+ remaining=json.loads((P/'remaining_analysis.json').read_text());fb=remaining['fullbank_evaluation.json'];s=s.replace('Under this frontend and budget, neither chirp convolution nor joint attention establishes an advantage over its strongest matched control.','On fixed visual candidates, chirp and attention gains over raw/concat remain uncertain. Full-bank evaluation subsequently finds chirp over raw and attention over concat gains, but attention does not clearly beat interaction-disabled and these ray methods remain below strong localization baselines.')
+ s=s[:s.index('## Full-bank completion status')]
+ s+='''## Full-bank localization: primary evaluation complete
+
+All576model-scene blocks are complete, yielding2880aggregate records across nativeK and36output subsets. The same20cmXY/10degree yaw bank is searched; scores are standardized over the full bank, not the fixed20candidates. Thus differences from fixedcandidate evaluation include both search space and score normalization, and cannot be attributed to candidate extraction alone.
+
+|36ray prediction|Joint%|Fine%|Top20 coverage%|
+|---|---:|---:|---:|
+'''
+ for key,v in fb.items():
+  if key.endswith('/36/36/visual_geometry'):s+=f"|{key.split('/36')[0]}|{100*v['joint']['mean']:.3f}|{100*v['fine']['mean']:.3f}|{100*v['top20']['mean']:.3f}|\n"
+ for key,v in remaining['fullbank_baselines'].items():s+=f"|Baseline {key}|{100*v['joint']['mean']:.3f}|{100*v['fine']['mean']:.3f}|{100*v['top20']['mean']:.3f}|\n"
+ s+='\n|Paired full-bank contrast|Joint delta(pp)|95%CI(pp)|\n|---|---:|---|\n'
+ for key,v in remaining['primary_fullbank_contrasts'].items():
+  x=v['joint'];s+=f"|{key}|{100*x['mean']:.3f}|[{100*x['ci95'][0]:.3f}, {100*x['ci95'][1]:.3f}]|\n"
+ s+='''
+**Updated interpretation:** Chirp's same-network intervention improves full-bank joint recall by2.897pp and fine by1.367pp[0.293,2.474] versus raw. Attention improves concat by3.060pp, but attention−interaction-disabled remains uncertain(+0.716pp[-0.391,1.790]). This establishes a task-specific relative gain for chirp and an attention-architecture gain over the chosen concat bottleneck in this reused cohort; it does not establish cross-modal information exchange as the cause or general superiority to stronger localization.
+
+The strongest new ray arm(frozen embedding) has+1.009pp[-2.311,4.590] joint versus visual, with fine−1.628pp[-2.832,-0.456]. Raw and attention both significantly reduce joint and fine versus visual under these exploratory intervals. Full-bank visual+cosine reaches67.708%joint and27.214%fine, versus51.204%/20.898%for embedding rays. B2+GEOQ's distinct historical support/ranking pipeline reaches75.977%joint on this cohort. These regressions prevent a successful framework-replacement claim.
+
+![Fixed versus fullbank](figures/fixed_vs_fullbank.png)
+
+The wider score field exposes false peaks that a visual shortlist filters out. Larger chirp/concat contrasts here may reflect global error-tail behavior and candidate-z normalization rather than a new source of information. A future discriminating study would hold normalization fixed while varying the search field and analyze false-peak geometry; that mechanism remains unverified. Fixedcandidate repairs alone do not justify full-bank deployment.
+
+'''
+ if (P/'fullbank_analysis.json').exists():
+  finalfb=json.loads((P/'fullbank_analysis.json').read_text());s+='## Full-bank conditioned matching\n\nAll96model-scene blocks and1728records are complete. Uniform metrics agree exactly with the independently evaluated primary implementation. Full-bank direction selection uses a visual Top1 anchor; it is distinct from fixed20pair Borda.\n\n|Prediction|Uniform joint%|Uncertainty joint%|Anchor-selection joint%|\n|---|---:|---:|---:|\n'
+  for model in ['acoustic/raw','acoustic/chirp','acoustic/embedding','joint/attention']:
+   vals=[100*finalfb['conditioned'][model+'/matched/'+method+'/visual_geometry']['joint']['mean'] for method in ['uniform','uncertainty','anchor_selection']];s+='|'+model+'|'+'|'.join(f'{x:.3f}' for x in vals)+'|\n'
+  s+='\nPaired changes, fine/coverage tradeoffs and donor/shuffle controls are retained in fullbank_analysis.json. Interpretation is finalized after inspecting those contrasts; no GT chose anchor directions.\n'
+ else:s+='## Remaining completion work\n\nFull-bank conditioned matching is still running. Its comparisons, final audit and final Docs synchronization remain required. This is not a completion claim.\n'
+
+if (P/'fullbank_analysis.json').exists():
+ s=s.replace('Full-bank evaluation pending; this is an interim report.','Completed controlled study; mixed findings and negative baseline comparisons retained.')
+ s=s.replace('Paired changes, fine/coverage tradeoffs and donor/shuffle controls are retained in fullbank_analysis.json. Interpretation is finalized after inspecting those contrasts; no GT chose anchor directions.','''Uncertainty weighting improves attention full-bank joint recall by2.181pp[1.302,3.027] and fine by1.270pp[0.521,2.051], while acoustic raw/chirp/embedding changes are small and their intervals include zero. Attention with weighting reaches45.638%joint/17.741%fine, still below visual50.195%/22.526%, fullbankvisual+cosine67.708%/27.214%, and the strong B2+GEOQ framework. A locally effective correction is not a superior localization pipeline.
+
+Anchor selection harms joint recall relative to uniform: raw−4.395pp[−6.478,−2.441], chirp−4.720pp[−6.445,−2.767], embedding−4.753pp[−5.794,−3.711], attention−3.678pp[−4.785,−2.701]. Fine recall also decreases for all four. The selected geometry differences can be large precisely where prediction errors or anchor errors are consequential. This is a plausible failure mechanism, not uniquely identified causality.
+
+Matched minus donated-audio uniform joint recall is+15.039pp[11.589,18.979] raw,+18.034pp[14.746,21.875] chirp,+21.029pp[17.806,24.089] embedding,+10.970pp[8.040,14.258] attention. Attention donor retains its original vision input. Thus query-specific acoustic evidence exists, but its usefulness does not guarantee an improvement over strong visual or FP-RIR baselines. The10degree rotation remains a weaker directional control; the separate fixedcandidate random-permutation test addresses that limitation.
+
+Paired fine/coverage tradeoffs and all control contrasts are retained in fullbank_analysis.json. No GT selected anchor directions.''')
+ s+='''
+## Conclusions and scientific stopping boundary
+
+**Observed:** More geometry directions greatly improve the oracle, while learned ray localization improves much less. Chirp beats raw in fullbank; attention beats the chosen concat but not clearly interaction-disabled; residual weighting helps fullbankattention. Geometry-difference anchor selection fails, and none of these new ray pipelines beats the strong B2+GEOQ baseline.
+
+**Supported interpretation:** A visual shortlist can conceal global false peaks; angular assignment carries useful acoustic information; globally unreliable direction outputs can hurt matching. The controlled interventions support these local statements under the specified frontend and reused cohorts.
+
+**Unverified causal hypotheses:** Chirp may improve conditioning/spectral weighting; uncertainty scales may suppress direction-dependent extrapolation errors; selecting large geometry differences may overemphasize poorly predicted rays. Alternative normalization, bottleneck capacity, frozen teacher priors and observation/model mismatch remain possible explanations. No physical reflection mechanism or cross-modal information-exchange advantage is proven.
+
+**Next discriminating research:** Separate bank normalization from candidate-space expansion, test query-specific direction reliability against global scales, and use a newly defined independent scene evaluation before promoting evidence level. No Test data was consumed to choose these proposals. Real-world/furniture/material/device shifts remain outside scope.
+
+All four experimental phases, required controls and bounded followups are complete. Scientific completion is based on coverage of the requested hypotheses and falsification tests, not on report creation or obtaining a positive result. The report does not claim the broader AV-FPLoc research program is complete. See [completion audit](completion_audit.json), [reproduction](REPRODUCE.md) and source/model inventories; final Docs synchronization is verified after committing and recorded separately to avoid a self-referential Docs SHA.
 '''
 (P/'RESEARCH_REPORT.md').write_text(s)

@@ -24,4 +24,15 @@ for kind in summary:
 prior=json.loads((W/'experiments/directional_structure_20261109/discrimination_results.json').read_text());baseline=[r for r in prior['records'] if r['arm'] in ['visual','cosine','visual_cosine','B2','GEOQ']];out['development_baselines']=summarize(baseline,['kind','arm'])
 for name,keys in [('fullbank_evaluation.json',['group','kind','trained_k','eval_k','method']),('conditioned_fullbank_results.json',['group','kind','control','method','fusion'])]:
  if (P/name).exists():out[name]=summarize(read(name)['records'],keys,['joint','fine','R1','top5','top20','repair','harm'])
+if 'fullbank_evaluation.json' in out:
+ fb=out['fullbank_evaluation.json'];out['primary_fullbank_contrasts']={}
+ for left,right in [('acoustic/chirp','acoustic/raw'),('joint/attention','joint/concat'),('joint/attention','joint/disabled')]:
+  out['primary_fullbank_contrasts'][left+' minus '+right]=difference(fb[left+'/36/36/visual_geometry'],fb[right+'/36/36/visual_geometry'])
+ priorfb=json.loads((W/'experiments/directional_structure_20261109/fullbank_results.json').read_text())['records'];bases=summarize([r for r in priorfb if r['arm'] in ['visual','cosine','visual_cosine']],['arm'],['joint','fine','R1','top5','top20']);out['fullbank_baselines']=bases
+ for model in ['acoustic/raw','acoustic/chirp','acoustic/embedding','joint/attention']:
+  out['primary_fullbank_contrasts'][model+' minus visual']=difference(fb[model+'/36/36/visual_geometry'],bases['visual'])
+if (P/'direction_permutation_results.json').exists():
+ perm=read('direction_permutation_results.json');out['direction_permutation']=summarize(perm['records'],['group','kind','method','fusion']);out['direction_permutation_contrasts']={}
+ for key,v in out['direction_permutation'].items():
+  group,kind,method,fusion=key.split('/');matched=ext['conditioned'][f'{group}/{kind}/matched/{method}/{fusion}'];out['direction_permutation_contrasts'][key+' matched-minus-permuted']=difference(matched,v)
 (P/'remaining_analysis.json').write_text(json.dumps(out,indent=2));print(json.dumps(out['transfer_contrasts'],indent=2))

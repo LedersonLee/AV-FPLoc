@@ -8,6 +8,8 @@ P=Path(__file__).resolve().parent;W=P.parent.parent
 
 def main():
  primary=json.loads((P/'fullbank_evaluation.json').read_text())['records'];cond=json.loads((P/'conditioned_fullbank_results.json').read_text())['records'];assert len(primary)==2880,len(primary);assert len(cond)==1728,len(cond);assert len(list((P/'fullbank').rglob('*.json')))==576;assert len(list((P/'conditioned_fullbank').rglob('*.json')))==96
+ assert len({tuple(r[k] for k in ['group','kind','seed','fold','trained_k','eval_k','scene','method']) for r in primary})==2880
+ assert len({tuple(r[k] for k in ['group','kind','seed','fold','scene','control','method','fusion']) for r in cond})==1728
  metrics=['joint','fine','R1','top5','top20','repair','harm','preservation'];s=summarize(primary,['group','kind','trained_k','eval_k','method'],metrics);c=summarize(cond,['group','kind','control','method','fusion'],metrics);contrasts={};conditioned={}
  for a,b in [('acoustic/chirp','acoustic/raw'),('joint/attention','joint/concat'),('joint/attention','joint/disabled'),('joint/attention','joint/acoustic'),('acoustic/raw','acoustic/isotropic'),('acoustic/raw','acoustic/sorted')]:
   for method in ['geometry','visual_geometry']:contrasts[a+' minus '+b+'/'+method]=difference(s[a+'/36/36/'+method],s[b+'/36/36/'+method])
