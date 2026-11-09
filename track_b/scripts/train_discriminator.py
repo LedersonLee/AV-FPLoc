@@ -18,15 +18,20 @@ def load(folder):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True)
     p.add_argument('--out',type=Path,required=True);p.add_argument('--code-sha',required=True)
+    p.add_argument('--fold-candidates',type=Path,nargs=2)
+    p.add_argument('--development-candidates',type=Path)
     args=p.parse_args();torch.set_num_threads(2)
-    folds=[args.root/f'fold{i}_candidates_v1' for i in (0,1)]
-    dev=args.root/'development_candidates_v1'
+    folds=args.fold_candidates or [args.root/f'fold{i}_candidates_v1' for i in (0,1)]
+    dev=args.development_candidates or args.root/'development_candidates_v1'
     protocols=[read(r/'protocol.json') for r in folds]; dp=read(dev/'protocol.json')
+    assert all(p['scorer']==dp['scorer'] for p in protocols), 'Candidate scorer families differ'
+    assert all(p['feature_protocol_sha256']==dp['feature_protocol_sha256'] for p in protocols), 'Candidate upstream feature sources differ'
     assert all(p['role']=='oof' for p in protocols) and dp['role']=='development'
     held=[set(p['candidate_scenes']) for p in protocols]
     assert not held[0]&held[1] and held[0]|held[1]==set(dp['training_scenes'])
     assert all(set(p['training_scenes']).isdisjoint(p['candidate_scenes']) for p in protocols)
     assert not (held[0]|held[1])&set(dp['candidate_scenes'])
+    assert all(set(protocols[i]['training_scenes'])==held[1-i] for i in (0,1)), 'Fold training does not match complement'
     args.out.mkdir(parents=True,exist_ok=False)
     setup=dict(code_sha=args.code_sha,steps=1000,batch_queries=32,lr=.001,weight_decay=.0001,
         loss='mean candidate BCE, all-negative queries retained',seeds=[42,43,44],
@@ -36,7 +41,7 @@ def main():
         selection='scheduled final step, no dev selection or early stopping',
         normalization='OOF training candidate feature mean/std only; std floor .001',
         protocol_hashes={str(r):sha(r/'protocol.json') for r in folds+[dev]},
-        limitation='independent F1 backend; half-Train proposals vs full-Train development scorer; reused Val; frozen upstream exposure uncertain',test_accessed=False)
+        scorer=dp['scorer'],limitation='Scorer-specific backend; half-Train proposals vs full-Train development scorer; reused Val; frozen upstream exposure uncertain',test_accessed=False)
     (args.out/'protocol.json').write_text(json.dumps(setup,indent=2))
     train=sum([load(r) for r in folds],[]); evaluation=load(dev)
     rows=[];registry=[]
