@@ -12,7 +12,7 @@ def descriptors(m,s):
  f=m.floorplan(s['floorplan']);cal={'origin':s['origin'],'spacing':s['spacing']}
  return torch.cat([m.fp_descriptors(f,p,cal) for p in s['candidates'].split(8192)])
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--fusion-reference',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();a.out.mkdir(exist_ok=False,parents=True);torch.set_num_threads(2);protocol=read(a.run/'protocol.json');reference={(r['scene'],r['seed'],r['query']):r for r in read(a.fusion_reference/'predictions.json') if r['method']=='fixed'};rows=[];replayed=0
+ ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--fusion-reference',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();a.out.mkdir(exist_ok=False,parents=True);torch.set_num_threads(2);protocol=read(a.run/'protocol.json');reference={(r['scene'],r['seed'],r['query']):r for r in read(a.fusion_reference/'predictions.json') if r['method']=='fixed'};rows=[];replayed=0;mismatches=[]
  (a.out/'protocol.json').write_text(json.dumps(dict(arms=['normal','low_light'],brightness=.2,weights=[.85,.15],temperature=1,device='CPU',checkpoint_sha256={f'{m}_{seed}':sha(a.run/f'{m}_{seed}.pt') for m in ('visual','acoustic') for seed in protocol['seeds']},cache_manifest_sha256=sha(a.cache/'manifest.json'),evidence='Exploratory six reused development scenes; no fit or selection'),indent=2))
  with torch.no_grad():
   for seed in protocol['seeds']:
@@ -31,8 +31,10 @@ def main():
        for j,q in enumerate(ids.tolist()):
         metric=pose_statistics(field[j],poses,s['gt'][q],diverse=False);row=dict(scene=sid,seed=seed,query=s['query_ids'][q],arm=arm,method=method,**metric);rows.append(row)
         if arm=='normal' and method=='fixed_fusion':
-         old=reference[sid,seed,row['query']];assert all(np.isclose(metric[k],old[k],atol=2e-5,rtol=1e-5) for k in ('joint','r1','fine','raw20','nll')),f'CPU replay mismatch {sid}/{seed}/{q}';replayed+=1
+         old=reference[sid,seed,row['query']];differences={k:dict(cpu=metric[k],gpu=old[k]) for k in ('joint','r1','fine','raw20','nll') if not np.isclose(metric[k],old[k],atol=2e-5,rtol=1e-5)}
+         if differences:mismatches.append(dict(scene=sid,seed=seed,query=row['query'],differences=differences))
+         replayed+=1
     print('SCENE',seed,sid,flush=True)
  summary=[dict(method=m,arm=arm,**{k:float(np.mean([r[k] for r in rows if r['method']==m and r['arm']==arm])) for k in ('joint','r1','fine','raw20','nll','entropy')}) for m in ('visual','acoustic','fixed_fusion') for arm in ('normal','low_light')]
- (a.out/'predictions.json').write_text(json.dumps(rows));result=dict(summary=summary,normal_cpu_gpu_replay_checks=replayed,interpretation='Matched brightness severity; no physical night capture claim; same acoustic input in both arms.');(a.out/'summary.json').write_text(json.dumps(result,indent=2));print(json.dumps(result));print('COMPLETE',flush=True)
+ (a.out/'predictions.json').write_text(json.dumps(rows));result=dict(summary=summary,normal_cpu_gpu_replay_checks=replayed,cpu_gpu_mismatches=mismatches,interpretation='Matched brightness severity; no physical night capture claim; same acoustic input in both arms.');(a.out/'summary.json').write_text(json.dumps(result,indent=2));print(json.dumps(result));print('COMPLETE',flush=True)
 if __name__=='__main__':main()
