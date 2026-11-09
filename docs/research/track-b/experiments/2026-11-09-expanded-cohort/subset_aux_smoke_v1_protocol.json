@@ -1,0 +1,178 @@
+{
+  "arm": "supervised",
+  "encoder_regime": "joint",
+  "modes": [
+    "visual"
+  ],
+  "seeds": [
+    42
+  ],
+  "aux_steps": 1,
+  "dense_steps": 0,
+  "batch_size": 8,
+  "cache_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+  "cache_manifest_sha256": "9c9d534906126b15d8fb9f72a7c23834207f52d4748ccd66082a2ec6ca217d38",
+  "data": {
+    "scenes": {
+      "train": [
+        "108736779_177263484",
+        "103997970_171031287",
+        "106366104_174226332",
+        "108294537_176710050",
+        "107734080_175999881",
+        "104348202_171513150",
+        "108736851_177263586",
+        "104348010_171512832"
+      ],
+      "val": [
+        "108736611_177263226",
+        "108736635_177263256",
+        "105515448_173104512",
+        "108294783_176710410",
+        "108294624_176710203",
+        "102344457"
+      ]
+    },
+    "queries_per_scene": 64,
+    "grid_m": 0.25,
+    "yaw_bins": 36,
+    "ray_bins": 16,
+    "ray_step_m": 0.1,
+    "max_range_m": 20.0,
+    "fp_spacing_m": 0.1,
+    "rgb_size": [
+      128,
+      96
+    ],
+    "rir_samples": 16384,
+    "sample_rate_hz": 48000,
+    "stft_nfft": 256,
+    "stft_hop": 32,
+    "spectral_channels": 18,
+    "spectral_cache_dtype": "float16",
+    "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+    "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+    "test_accessed": false,
+    "evidence": "Exploratory: previous development exposure remains",
+    "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+  },
+  "aux_weight": 10.0,
+  "fixed_fp": false,
+  "fp_anchor_weight": 0.0,
+  "lr": 0.0003,
+  "objective": "continuous FP boundary ray MSE + exact full-grid soft CE; labels are training-only",
+  "controls": "shuffled permutes target geometry within scene; dense_only uses all updates for dense loss without auxiliary term",
+  "metric": "NLL at nearest valid SE2 grid candidate; fine tolerance1e-6m",
+  "evidence": "Exploratory development; no test use",
+  "init": "fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder",
+  "training_scene_limit": 8,
+  "training_scene_selection": "prefix of frozen SHA256-ordered Train cohort; full Val unchanged",
+  "visual_representation": "frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space",
+  "visual_cache_protocol_sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2",
+  "upstream": {
+    "data": {
+      "scenes": {
+        "train": [
+          "108736779_177263484",
+          "103997970_171031287",
+          "106366104_174226332",
+          "108294537_176710050",
+          "107734080_175999881",
+          "104348202_171513150",
+          "108736851_177263586",
+          "104348010_171512832",
+          "105515430_173104494",
+          "108294870_176710551",
+          "104862639_172226823",
+          "104348028_171512877",
+          "102344250",
+          "103997541_171030615",
+          "106366410_174226806",
+          "102816786"
+        ],
+        "val": [
+          "108736611_177263226",
+          "108736635_177263256",
+          "105515448_173104512",
+          "108294783_176710410",
+          "108294624_176710203",
+          "102344457"
+        ]
+      },
+      "queries_per_scene": 64,
+      "grid_m": 0.25,
+      "yaw_bins": 36,
+      "ray_bins": 16,
+      "ray_step_m": 0.1,
+      "max_range_m": 20.0,
+      "fp_spacing_m": 0.1,
+      "rgb_size": [
+        128,
+        96
+      ],
+      "rir_samples": 16384,
+      "sample_rate_hz": 48000,
+      "stft_nfft": 256,
+      "stft_hop": 32,
+      "spectral_channels": 18,
+      "spectral_cache_dtype": "float16",
+      "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+      "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+      "test_accessed": false,
+      "evidence": "Exploratory: previous development exposure remains",
+      "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+    },
+    "selected_scenes": {
+      "train": [
+        "108736779_177263484",
+        "103997970_171031287",
+        "106366104_174226332",
+        "108294537_176710050",
+        "107734080_175999881",
+        "104348202_171513150",
+        "108736851_177263586",
+        "104348010_171512832",
+        "105515430_173104494",
+        "108294870_176710551",
+        "104862639_172226823",
+        "104348028_171512877",
+        "102344250",
+        "103997541_171030615",
+        "106366410_174226806",
+        "102816786"
+      ],
+      "val": [
+        "108736611_177263226",
+        "108736635_177263256",
+        "105515448_173104512",
+        "108294783_176710410",
+        "108294624_176710203",
+        "102344457"
+      ]
+    },
+    "smoke": false,
+    "device": "cuda",
+    "backbone": "DepthAnythingV2 ViT-L upstream metric Hypersim checkpoint; historical HSSD-trained UnLoc head NOT loaded",
+    "checkpoint_sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d",
+    "source_hashes": {
+      "depth_anything_v2/dinov2.py": "d22df8d0da44c8525ebed898fd9c33b3acfcda919a84d577cc2a08bfd3d50ac1",
+      "depth_anything_v2/dinov2_layers/__init__.py": "e3c28c7b775165b6844000eb69f44d104d6c3803ac7da5d59f6ac3ecfb46d9d8",
+      "depth_anything_v2/dinov2_layers/attention.py": "0d2410ce8b8b4499a6b0cdab939ae2bceab8971efd8660d999b0f3088f28cbf7",
+      "depth_anything_v2/dinov2_layers/block.py": "093266ea08084c7cce7b8ddd779ecfaaa13055735faa8a7d68b5924f385b395b",
+      "depth_anything_v2/dinov2_layers/drop_path.py": "949100aac4d9c19c9d65319dbd362886c5d46a72d7586ba4fd500e9f1d51570c",
+      "depth_anything_v2/dinov2_layers/layer_scale.py": "356817b5d1390737128cbcc03a5333fd3060b73beae478772282ccb851d0ef85",
+      "depth_anything_v2/dinov2_layers/mlp.py": "c18c5b3f021408597a473bb710070ec3fb3b39f5a2e42e88ae83ced425a608b5",
+      "depth_anything_v2/dinov2_layers/patch_embed.py": "b3f82e19926c9cfb63f10136aca5e8a723bde1ad62dae1d04f90d405f9439baf",
+      "depth_anything_v2/dinov2_layers/swiglu_ffn.py": "df81d9901240214edc1831ce1b77558dcd6227b29a2f000fc5f546df55d2d09a",
+      "depth_anything_v2/dpt.py": "7cc9a29b41d31e1628e5c8b8705e25ae95bc6490f779dbb695297ce2341566f5",
+      "depth_anything_v2/util/blocks.py": "351aa24b8af4bef923ebe3bed5e5e8503b08e39bf06ee045d6444a485a2036a8",
+      "depth_anything_v2/util/transform.py": "a97df1dbb687457a40c387fdc3482edee7ddc5c142c7d2735ca6235a8ae2885f"
+    },
+    "preprocessing": "upstream image2tensor: BGR->RGB, cubic resize shorter side518/multiple14, ImageNet normalization",
+    "features": "last DINOv2 block reshape=True, adaptive pool4x16, fp16 cache",
+    "training_boundary": "upstream encoder frozen; future adapter trainable; not full-foundation joint tuning",
+    "evidence": "Exploratory development; upstream HSSD asset-family exposure not independently excluded; no Test observations"
+  },
+  "foundation_cost_included_in_training_seconds": false,
+  "scene_residency": "cpu"
+}

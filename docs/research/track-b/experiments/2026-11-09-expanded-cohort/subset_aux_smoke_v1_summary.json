@@ -1,0 +1,44 @@
+[
+  {
+    "seed": 42,
+    "mode": "visual",
+    "arm": "supervised",
+    "training_and_aux_eval_seconds": 1.0731891870964319,
+    "training_seconds": 0.3747987081296742,
+    "aux_eval_seconds": 0.6983904789667577,
+    "peak_vram_bytes": 348108288,
+    "parameters": 2792297,
+    "trainable_parameters": 2792297,
+    "encoder_regime": "joint",
+    "train": {
+      "normal": {
+        "joint": 0.00390625,
+        "r1": 0.013671875,
+        "fine": 0.0,
+        "raw20": 0.02734375,
+        "nll": 12.409748708829284,
+        "entropy": 11.115414671599865,
+        "ray_mse": 0.041279885742511624,
+        "ray_mae_m": 2.0969058555201627,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.546875,
+        "diverse20": null
+      }
+    },
+    "val": {
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.015625,
+        "fine": 0.0,
+        "raw20": 0.0234375,
+        "nll": 12.029363249739012,
+        "entropy": 10.952015350262323,
+        "ray_mse": 0.03674352639291101,
+        "ray_mae_m": 1.8973621514936287,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.5286458333333334,
+        "diverse20": 0.049479166666666664
+      }
+    }
+  }
+]

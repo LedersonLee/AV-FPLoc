@@ -1,0 +1,15 @@
+{
+  "code_sha": "5cf803681c2d144f3a620bc00c1ab6b841e48e7c",
+  "plan_sha256": "4a66028cc0acf256036b411441fe8ee4e14246f054b017774aba81ee94477342",
+  "feature_verification_sha256": "e8663d8371e67ce77005633a3214b61a0a2f1b6404bd7f27a24a1baf1004a9cb",
+  "dependency_hashes": {
+    "scripts/train_structure.py": "ad608c02bc6804b7040f4f9244b2ca92d399dd663347e9c35c9c4f9cf815796e",
+    "models/structure.py": "784430149126d75928ab391afccc1364b9f676010ab0ee00c727c76d5da2c00a",
+    "models/foundation.py": "98badd7b4d732d882d1efddbda7b2ec202c59f7de5ed716ba1f2eb789bce4f30",
+    "models/dense.py": "db208427f9dfa71582a302f577c4414fcccb64aebb4da732083c6750c84263a9",
+    "train_regimes.py": "e0048b37b95d85f6139bfa3a1bf9fcaebe606bd2a2e85a3ace6f33c93dd09658",
+    "data/folds.py": "ee5cd961f8630bc18d06f203f08f005adc49b0258ea9fbdc220b7a5ee40ac6cd",
+    "data/scene_residency.py": "81da3559d5f192047d9dde302595792f18ea7285dfe646bb1162e40debd6583a",
+    "data/training_subset.py": "67974160a7a3ec5358c0d81be20c72366c010a7ae881b04ef3275d2cd1a366fd"
+  }
+}

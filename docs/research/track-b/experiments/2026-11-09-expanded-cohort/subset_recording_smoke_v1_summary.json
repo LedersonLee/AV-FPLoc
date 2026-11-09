@@ -1,0 +1,46 @@
+[
+  {
+    "execution_code_sha": "412e93458c9dcf04ff15b731c45323ff715765a7",
+    "initial_state_sha256": "896ef698916978d9e9d5c46bee9e20b616f548f37c66355c287610244b532a72",
+    "seed": 42,
+    "mode": "visual",
+    "arm": "supervised",
+    "training_and_aux_eval_seconds": 3.2484082558657974,
+    "training_seconds": 0.6384350850712508,
+    "aux_eval_seconds": 2.6099731707945466,
+    "peak_vram_bytes": 474719744,
+    "parameters": 2792297,
+    "trainable_parameters": 2792297,
+    "encoder_regime": "joint",
+    "train": {
+      "normal": {
+        "joint": 0.001953125,
+        "r1": 0.0078125,
+        "fine": 0.0,
+        "raw20": 0.025390625,
+        "nll": 12.423317041248083,
+        "entropy": 11.108822802081704,
+        "ray_mse": 0.041600029853270826,
+        "ray_mae_m": 2.104754964617314,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.546875,
+        "diverse20": null
+      }
+    },
+    "val": {
+      "normal": {
+        "joint": 0.0,
+        "r1": 0.018229166666666668,
+        "fine": 0.0,
+        "raw20": 0.020833333333333332,
+        "nll": 12.040556445717812,
+        "entropy": 10.944431744515896,
+        "ray_mse": 0.037067449611413394,
+        "ray_mae_m": 1.9055139052604015,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.5286458333333334,
+        "diverse20": 0.059895833333333336
+      }
+    }
+  }
+]

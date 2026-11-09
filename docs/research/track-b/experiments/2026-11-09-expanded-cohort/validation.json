@@ -1,5 +1,5 @@
 {
-  "tests_passed": 42,
+  "tests_passed": 43,
   "preflight_exit_code": 0,
   "cache_status": "completed and verified",
   "cache_session": 72407,
@@ -11,13 +11,28 @@
   "strict_bitwise_checker_exit_code": 1,
   "strict_failure_preserved": true,
   "numeric_diagnostic_exit_code": 0,
-  "expanded_training_started": false,
+  "expanded_training_started": true,
   "test_accessed": false,
   "cache_exit_code": 0,
   "cache_verification_exit_code": 0,
   "cache_scenes": 131,
   "cache_queries": 8384,
   "pilot_overlap_exact_scenes": 22,
-  "feature_status": "running",
-  "feature_session": 93487
+  "feature_status": "completed and verified",
+  "feature_session": 93487,
+  "subset_smokes_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "subset_continuation_checked": true,
+  "initial_checkpoint_hash_verified": true,
+  "scaling_plan_frozen": true,
+  "planned_scaling_fits": 36,
+  "scaling_models_started": true,
+  "feature_verification_exit_code": 0,
+  "feature_scenes": 131,
+  "feature_queries": 8384,
+  "feature_pilot_exact_scenes": 22,
+  "scaling_runner_session": 19640
 }

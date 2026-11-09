@@ -57,3 +57,11 @@ All source paths and hashes remain linked by this study and the canonical RESEAR
 The original cache job exited0. Verification source `04bbb38937c07a3f358c2ff1771f87e8c8482855` then exited0:131 distinct scenes,8,384 queries, all cached tensor/source metadata hashes and frozen query selection verified. All22 overlapping pilot scenes/1,408queries have exactly equal tensors and input manifests. Actual structural cache size8,998,272,856bytes. Observed-RIR sidecar hashes match input provenance; raw audio/RGB bytes were checked during construction and are not claimed reread by this verifier. completed_cache_validation.json and completed_cache_manifest.json preserve the results.
 
 Expanded visual-feature extraction started in session93487, externalfeatures_v1, using the same audited upstream checkpoint and per-image RGB hash checks. Code reference `4ef2221319d31beb113e316e1d2396e9e859b942` contains the unchanged extraction implementation; unrelated Track A commits were entering the shared checkout concurrently, so this reference identifies the source content rather than an exclusive Track B history. Source extraction file hash is recorded in provenance. Require all131 feature artifacts, query alignment and original22-scene feature comparisons before scaled fitting. No expanded model fit has started and no independent-Test claim follows.
+
+## Scaling protocol frozen
+
+[The2×2 scaling protocol](scaling_protocol.md) now fixes16/112 Train scenes crossed with1×/7× update budget, identical19-scene Val and36 planned stage fits.43 tests and three subset/continuation/recording smokes passed. No expanded model fit has started; feature validation remains the start gate.
+
+### Expanded feature gate and scaling launch
+
+All131 scenes/8,384 feature observations verified;22 overlapping pilot tensors exactly equal. See completed_feature_validation.json. The fixed2×2 runner is active (source5cf803681c2d144f3a620bc00c1ab6b841e48e7c);36 planned stage fits are not completed results. See scaling_protocol.md and scaling_runner_protocol.json. Encoder-regime experiment separately has9/9 frozen and1/9 partial fits complete at this snapshot; its final comparison still awaits all27 fits.
