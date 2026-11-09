@@ -11,14 +11,16 @@ from track_b.eval.metrics import pose_statistics
 def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--visual-run',type=Path);ap.add_argument('--visual-cache',type=Path);a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--visual-run',type=Path);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--eval-visual-cache',type=Path);ap.add_argument('--selection-reference',type=Path);a=ap.parse_args()
+ assert bool(a.eval_visual_cache)==bool(a.selection_reference)
+ if a.eval_visual_cache:assert a.visual_cache and read(a.eval_visual_cache/'protocol.json')['data']==read(a.visual_cache/'protocol.json')['data']
  assert bool(a.visual_run)==bool(a.visual_cache)
  a.out.mkdir(exist_ok=False,parents=True);torch.set_num_threads(2)
  protocol=read(a.run/'protocol.json');scene_ids=protocol['data']['scenes']['val'];seeds=protocol['seeds'];weights=[0.,.15,.5,.85,1.];temps=[.25,1.,4.]
  visual_run=a.visual_run or a.run
  if a.visual_run:
   vp=read(visual_run/'protocol.json');assert vp['cache_protocol_sha256']==protocol['cache_protocol_sha256'];assert vp['visual_cache_protocol_sha256']==sha(a.visual_cache/'protocol.json');assert not vp.get('fixed_fp',False)
- setup=dict(visual_weights=weights,temperatures=temps,selection='minimum nearest-grid NLL on other five development scenes, pooled seeds; tie in declared parameter order',fixed=dict(visual_weight=.85,temperature=1.),scene_ids=scene_ids,seeds=seeds,evidence='Exploratory: calibration-fold holdout only, reused Val, not full-pipeline independence',checkpoint_hashes={f'{m}_{s}':sha((visual_run if m=='visual' else a.run)/f'{m}_{s}.pt') for m in ('visual','acoustic') for s in seeds},cache_manifest_sha256=sha(a.cache/'manifest.json'))
+ setup=dict(evaluation_visual_cache_protocol_sha256=sha((a.eval_visual_cache or a.visual_cache)/'protocol.json') if a.visual_cache else None,calibration_reference_sha256=sha(a.selection_reference/'selection.json') if a.selection_reference else None,visual_weights=weights,temperatures=temps,selection='minimum nearest-grid NLL on other five development scenes, pooled seeds; tie in declared parameter order',fixed=dict(visual_weight=.85,temperature=1.),scene_ids=scene_ids,seeds=seeds,evidence='Exploratory: calibration-fold holdout only, reused Val, not full-pipeline independence',checkpoint_hashes={f'{m}_{s}':sha((visual_run if m=='visual' else a.run)/f'{m}_{s}.pt') for m in ('visual','acoustic') for s in seeds},cache_manifest_sha256=sha(a.cache/'manifest.json'))
  (a.out/'protocol.json').write_text(json.dumps(setup,indent=2));models={}
  for seed in seeds:
   models[seed]={}
@@ -27,7 +29,7 @@ def main():
  def load_scene(sid):
   scene=scene_to_gpu(torch.load(a.cache/f'{sid}.pt',weights_only=True))
   if a.visual_cache:
-   path=a.visual_cache/f'{sid}.pt';manifest={r['scene']:r['sha256'] for r in read(a.visual_cache/'manifest.json')};assert sha(path)==manifest[sid];attach_visual_features(scene,torch.load(path,weights_only=True))
+   feature_cache=a.eval_visual_cache or a.visual_cache;path=feature_cache/f'{sid}.pt';manifest={r['scene']:r['sha256'] for r in read(feature_cache/'manifest.json')};assert sha(path)==manifest[sid];attach_visual_features(scene,torch.load(path,weights_only=True))
   return scene
  rows=[];replay=[]
  with torch.no_grad():
@@ -46,7 +48,7 @@ def main():
        logits=combined/temp;logp=logits.log_softmax(-1);nll=-logp.gather(1,nearest[:,None])[:,0];entropy=-(logp.exp()*logp).sum(-1)
        for j,q in enumerate(ids.tolist()):
         rec=dict(scene=sid,seed=seed,query=scene['query_ids'][q],weight=weight,temperature=temp,joint=float(ok[j,top[j]]),r1=float(dist[j,top[j]]<=1+1e-6),fine=float(dist[j,top[j]]<=.1+1e-6),raw20=float(ok[j,raw[j]].any()),nll=float(nll[j]),entropy=float(entropy[j]));rows.append(rec)
-        if temp==1 and weight in (0,1):
+        if temp==1 and weight in (0,1) and not (weight==1 and a.eval_visual_cache):
          old=reference['visual' if weight==1 else 'acoustic'][rec['query']]
          assert all(np.isclose(old[k],rec[k],atol=1e-5,rtol=1e-5) for k in ('joint','r1','fine','raw20','nll'))
          replay.append((sid,seed,q,weight))
@@ -58,6 +60,9 @@ def main():
    for temp in temps:
     rr=[r for r in rows if r['scene']!=sid and r['weight']==weight and r['temperature']==temp];options.append(dict(weight=weight,temperature=temp,calibration_nll=float(np.mean([r['nll'] for r in rr]))))
   selected[sid]=min(options,key=lambda r:r['calibration_nll'])
+ if a.selection_reference:
+  ref=read(a.selection_reference/'protocol.json');assert ref['checkpoint_hashes']==setup['checkpoint_hashes'] and ref['scene_ids']==scene_ids
+  selected=read(a.selection_reference/'selection.json')
  (a.out/'selection.json').write_text(json.dumps(selected,indent=2));(a.out/'sweep.json').write_text(json.dumps(rows));final=[]
  with torch.no_grad():
   for sid in scene_ids:
