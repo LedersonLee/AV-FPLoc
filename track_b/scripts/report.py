@@ -67,6 +67,7 @@ def main():
        audit_and_smoke_execution='base 5449980 plus then-uncommitted Track B sources subsequently committed as 55c4238; no model checkpoint loaded',
        geometry_diagnostic_execution='base c268a2f plus new ray diagnostic sources subsequently committed as 2555b21',
        files={str(p.relative_to(root)):sha(p) for p in root.rglob('*.json') if p.name not in ('diagnostic_v1.json',) and 'audit_v1' not in str(p)},
+       checkpoint_hashes={str(p.relative_to(root)):sha(p) for p in root.rglob('*.pt')},
        audit_manifest_sha256=sha(root/'audit_v1/manifest.csv'),audit_split_sha256=sha(root/'audit_v1/split_manifest.json'),source_hashes={str(p):sha(p) for p in Path('track_b').rglob('*.py')},
        limitations='Datasets and checkpoints remain external. Docker image tag alone does not guarantee clean-clone reproducibility; use pinned image ID and data hashes.')
     (out/'provenance.json').write_text(json.dumps(provenance,indent=2))
