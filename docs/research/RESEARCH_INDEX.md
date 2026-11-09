@@ -28,6 +28,7 @@
 | 18 | [후보별 interaction·동용량 대조](track-b/experiments/2026-11-09-matched-interaction/README.md) | track-b-matched-interaction-20261109: 9fits 완료·음성결과. 동일 초기화·용량 attention6.25%, concat/separable7.38%; 우위 미확인. 수치 재생·캐시 비용·참조 bank 범위 감사 완료, 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | aa452ee78a75af31d8b426684a9c81f94ff00039 (수정 실행), 65a8236103d82de5b0c5ac3a68c2ff9dd1828b8c (중단) |
 
 | 19 | [독립 사전학습 시각 특징](track-b/experiments/2026-11-09-foundation-visual/README.md) | track-b-foundation-visual-20261109: 12fits 완료·혼합/음성결과. 동일 초기화 frozen19.27% > joint5.56%, NLL은 개선돼 정확도와 괴리. 손실/FP 대조 진행 중. | 2026-11-09 | Track B | Exploratory | bf032b52959e4eff7351df53a11338ebd40dc580 |
+| 20 | [Strong independent fusion](track-b/experiments/2026-11-09-strong-independent-fusion/README.md) | 완료·혼합: 강한 시각 대비 독립 결합 Joint +6.68pp; 밝기0.2에서도24.57%, 시각 자체 저하 없음. raw Top20 감소. | 2026-11-09 | Track B | Exploratory | `5aecaaa240b3a5bf4a0b0f3245e1dfdd19dc7303`; `1b20f6b4daac0d0019300c3380e224db41cdef36` |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

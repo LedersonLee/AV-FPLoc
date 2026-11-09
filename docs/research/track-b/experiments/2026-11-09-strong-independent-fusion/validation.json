@@ -1,0 +1,32 @@
+{
+  "runs": [
+    {
+      "run": "independent_fusion_anchor_v1",
+      "exit_code": 0,
+      "complete": true
+    },
+    {
+      "run": "independent_fusion_anchor_lowlight_v1",
+      "exit_code": 0,
+      "complete": true
+    },
+    {
+      "run": "independent_fusion_frozen_v1",
+      "exit_code": 0,
+      "complete": true
+    },
+    {
+      "run": "independent_fusion_frozen_lowlight_v1",
+      "exit_code": 0,
+      "complete": true
+    }
+  ],
+  "tests_passed": 29,
+  "normal_replay_cases": 4608,
+  "shift_acoustic_replay_cases": 2304,
+  "normal_and_shift_calibration_identical": true,
+  "feature_queries": 384,
+  "feature_scenes": 6,
+  "feature_seconds": 29.399404712487012,
+  "test_accessed": false
+}

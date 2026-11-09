@@ -1,0 +1,22 @@
+{
+  "independent_fusion_anchor_v1/protocol.json": "d520e505d0724c591fa4a9186ca9f104db9db91289cfd626b83a71406ee6abbf",
+  "independent_fusion_anchor_v1/sweep.json": "e3c7ac4bb7c06f2021531e21cd6db1228ae2d429a49534194cdb684db1ac9cc9",
+  "independent_fusion_anchor_v1/summary.json": "76c81141dd9075699d9a25b9f838d5a8455217ac1e6d5a065f6ad9ea579dbeec",
+  "independent_fusion_anchor_v1/predictions.json": "c1d9e0424231d9064cc9c4b5392e6c36a2434544941da4cfd09cc9ffd47491f7",
+  "independent_fusion_anchor_v1/selection.json": "544ebbf36512442d158b49e1b76b166f7960a349ab2ee0414f30ad17751a7465",
+  "independent_fusion_anchor_lowlight_v1/protocol.json": "cc9a5ab2401d5b28db76dd693ace77cc72850d852580043c87e940c8c8f700ca",
+  "independent_fusion_anchor_lowlight_v1/sweep.json": "3e96b3fdb6dc2ad390d49b36d9424b8832fd2e69e6d7a5960818fb686b0afd46",
+  "independent_fusion_anchor_lowlight_v1/summary.json": "c4640fc502f9cccb56a99df06ea2af53dc28098663cc1a87ab7ead00026c5d60",
+  "independent_fusion_anchor_lowlight_v1/predictions.json": "9365deb69b26fe2f834812a85b528b650d4e9a76836748393f719319d03b1e56",
+  "independent_fusion_anchor_lowlight_v1/selection.json": "544ebbf36512442d158b49e1b76b166f7960a349ab2ee0414f30ad17751a7465",
+  "independent_fusion_frozen_v1/protocol.json": "79794af7558933f649ef8c81c81a26c6de1663d8e1451716e6cd27e65239c660",
+  "independent_fusion_frozen_v1/sweep.json": "dc2ed3ed9a4575c18b97ccd0749eb18406462ff33b0c3d3900cbc4270ec52b2c",
+  "independent_fusion_frozen_v1/summary.json": "9e3fe7beff48194de2b4e35e3f3f6463efe57ce7a8c8aa381399704bb817d95e",
+  "independent_fusion_frozen_v1/predictions.json": "b93d557da4c7cbb11b102412639af734bbe14152bd7367e94500aa6ea8330b92",
+  "independent_fusion_frozen_v1/selection.json": "888cd4fa411bed50928d0e5ffd5e65279404d21614eb818d8df803eaf81ef98d",
+  "independent_fusion_frozen_lowlight_v1/protocol.json": "7680da6b660f147735ec53e9d6c6bccda5613aca3dd403afd187c93a975a669b",
+  "independent_fusion_frozen_lowlight_v1/sweep.json": "340a49fa7277c0cc179448d93eaf3f996bd2e9f1c1aa8bf60e77418e2b8c0bd3",
+  "independent_fusion_frozen_lowlight_v1/summary.json": "b6669c2eae1219f66074e56c3375aeff94d72c892bbbc8fa1b183368f5c5cbcd",
+  "independent_fusion_frozen_lowlight_v1/predictions.json": "6cf7c99176c03197848e0061fb7272b29a4b304d6b516fa5ca3a7f343953987c",
+  "independent_fusion_frozen_lowlight_v1/selection.json": "888cd4fa411bed50928d0e5ffd5e65279404d21614eb818d8df803eaf81ef98d"
+}

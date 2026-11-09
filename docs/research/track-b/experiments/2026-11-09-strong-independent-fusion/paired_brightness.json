@@ -1,0 +1,354 @@
+[
+  {
+    "variant": "anchor",
+    "method": "visual",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.8680555555555552,
+    "ci95_pp": [
+      -4.625929269271485e-16,
+      1.909722222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "visual",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": -1.445602896647339e-17,
+    "ci95_pp": [
+      -0.26041666666666663,
+      0.26041666666666663
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "visual",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 0.9548611111111124,
+    "ci95_pp": [
+      -1.5625000000000038,
+      3.645833333333337
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "visual",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": 0.08680555555555802,
+    "ci95_pp": [
+      -3.4722222222222188,
+      2.951388888888891
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "acoustic",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "acoustic",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "acoustic",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "acoustic",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "fixed",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.6944444444444433,
+    "ci95_pp": [
+      0.17361111111111094,
+      1.302083333333332
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "fixed",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": -0.17361111111111116,
+    "ci95_pp": [
+      -0.7812500000000002,
+      0.26041666666666663
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "fixed",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 0.08680555555555616,
+    "ci95_pp": [
+      -1.8229166666666647,
+      2.34375
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "fixed",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": -0.26041666666666485,
+    "ci95_pp": [
+      -1.3020833333333295,
+      0.5208333333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "calibrated",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.6944444444444433,
+    "ci95_pp": [
+      0.17361111111111094,
+      1.302083333333332
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "calibrated",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": -0.17361111111111116,
+    "ci95_pp": [
+      -0.7812500000000002,
+      0.26041666666666663
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "calibrated",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 0.08680555555555616,
+    "ci95_pp": [
+      -1.8229166666666647,
+      2.3437499999999982
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "anchor",
+    "method": "calibrated",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": -0.26041666666666485,
+    "ci95_pp": [
+      -1.3020833333333295,
+      0.5208333333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "visual",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.34722222222222165,
+    "ci95_pp": [
+      -2.517361111111112,
+      2.6909722222222223
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "visual",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": 0.26041666666666663,
+    "ci95_pp": [
+      -0.26041666666666663,
+      0.6944444444444445
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "visual",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": -1.475694444444442,
+    "ci95_pp": [
+      -3.3854166666666665,
+      1.0416666666666705
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "visual",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": -0.08680555555555616,
+    "ci95_pp": [
+      -1.475694444444444,
+      1.562499999999998
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "acoustic",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "acoustic",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "acoustic",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "acoustic",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "fixed",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.6944444444444452,
+    "ci95_pp": [
+      -0.3472222222222205,
+      1.6493055555555567
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "fixed",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": -0.17361111111111102,
+    "ci95_pp": [
+      -0.78125,
+      0.3472222222222224
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "fixed",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 1.3888888888888875,
+    "ci95_pp": [
+      0.7812499999999982,
+      1.909722222222221
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "fixed",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": -1.302083333333335,
+    "ci95_pp": [
+      -2.6909722222222268,
+      -0.08680555555555433
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "calibrated",
+    "metric": "joint",
+    "lowlight_minus_normal_pp": 0.6944444444444452,
+    "ci95_pp": [
+      -0.3472222222222205,
+      1.6493055555555567
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "calibrated",
+    "metric": "fine",
+    "lowlight_minus_normal_pp": -0.17361111111111102,
+    "ci95_pp": [
+      -0.78125,
+      0.3472222222222224
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "calibrated",
+    "metric": "raw20",
+    "lowlight_minus_normal_pp": 1.3888888888888875,
+    "ci95_pp": [
+      0.7812499999999982,
+      1.909722222222221
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "frozen",
+    "method": "calibrated",
+    "metric": "diverse20",
+    "lowlight_minus_normal_pp": -1.302083333333335,
+    "ci95_pp": [
+      -2.6909722222222268,
+      -0.08680555555555433
+    ],
+    "unit": "six scenes; seeds averaged"
+  }
+]

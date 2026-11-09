@@ -1,0 +1,32 @@
+{
+  "108736611_177263226": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.388777588307857
+  },
+  "108736635_177263256": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.428299562633038
+  },
+  "105515448_173104512": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.30114750266075
+  },
+  "108294783_176710410": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.277501514057318
+  },
+  "108294624_176710203": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.348806520303091
+  },
+  "102344457": {
+    "weight": 0.85,
+    "temperature": 0.25,
+    "calibration_nll": 8.424745146433512
+  }
+}

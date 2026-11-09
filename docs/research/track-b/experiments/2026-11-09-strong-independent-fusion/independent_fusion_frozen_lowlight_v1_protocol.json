@@ -1,0 +1,44 @@
+{
+  "evaluation_visual_cache_protocol_sha256": "928b23d8290fc35535dd52d0bb2e61286dc76b8b49d96b02f7bb2927436b385b",
+  "calibration_reference_sha256": "888cd4fa411bed50928d0e5ffd5e65279404d21614eb818d8df803eaf81ef98d",
+  "visual_weights": [
+    0.0,
+    0.15,
+    0.5,
+    0.85,
+    1.0
+  ],
+  "temperatures": [
+    0.25,
+    1.0,
+    4.0
+  ],
+  "selection": "minimum nearest-grid NLL on other five development scenes, pooled seeds; tie in declared parameter order",
+  "fixed": {
+    "visual_weight": 0.85,
+    "temperature": 1.0
+  },
+  "scene_ids": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "evidence": "Exploratory: calibration-fold holdout only, reused Val, not full-pipeline independence",
+  "checkpoint_hashes": {
+    "visual_42": "129f02121a6587299c0a1a20e9b852c18719d72c2138e308284f927d9813a43f",
+    "visual_43": "7df4b1e7e1f2737bb1479f7d5761a85c7feaa951a60e2dad368b15b096690c1f",
+    "visual_44": "54853335dedb10f6cc6a7750706d7dca85f34b3eb95d44129a9d57efc4707efc",
+    "acoustic_42": "1edf4639df3c49ab028917e15d96049b0984c8b1fb13f720e416ec4fa98c0eed",
+    "acoustic_43": "9df4418423658c5570f65b03751f4a7130268bf066033be7e7ce41f27ca8646d",
+    "acoustic_44": "df9ce0be3803bbd443535d10f22a492c37d046f734c12c4fbf2107bf2df205be"
+  },
+  "cache_manifest_sha256": "9c9d534906126b15d8fb9f72a7c23834207f52d4748ccd66082a2ec6ca217d38"
+}
