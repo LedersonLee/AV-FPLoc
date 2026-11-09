@@ -5,7 +5,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "879eb6f601ecf1ebff8bed9da975d9fa3073ae05dd9530c6d86205c42600dc40"
+      "sha256": "fe1b7aa0dc7414b257f74aeaf31a0a5254256d09a78c8207307933215c7b4805"
     },
     {
       "git_copy": "brightness_feature_manifest.json",
@@ -71,5 +71,6 @@
   "failed_execution_log_hashes": {
     "features_lowlight_v1.log": "8b55306f6f121013373f7a47d3be7889c8b1e274ddce58bf933e231a750a6d12",
     "features_lowlight_v2.log": "32f2e004c01ac4735ab6f7cd25b33e35236a2b4a795f1b73aa0b8f9c3b6541be"
-  }
+  },
+  "occlusion_feature_source": "94ef80eda7a36f0b6cdd7a139cfca0006e774b4a"
 }
