@@ -27,7 +27,7 @@
 
 | 18 | [후보별 interaction·동용량 대조](track-b/experiments/2026-11-09-matched-interaction/README.md) | track-b-matched-interaction-20261109: 9fits 완료·음성결과. 동일 초기화·용량 attention6.25%, concat/separable7.38%; 우위 미확인. 수치 재생·캐시 비용·참조 bank 범위 감사 완료, 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | aa452ee78a75af31d8b426684a9c81f94ff00039 (수정 실행), 65a8236103d82de5b0c5ac3a68c2ff9dd1828b8c (중단) |
 
-| 19 | [독립 사전학습 시각 특징](track-b/experiments/2026-11-09-foundation-visual/README.md) | track-b-foundation-visual-20261109: 학습 RGB1개 특징 추출 smoke 완료. 기존 HSSD head를 배제한 upstream 가중치 검증; localization 학습/평가 미실행. | 2026-11-09 | Track B | Exploratory | bf032b52959e4eff7351df53a11338ebd40dc580 |
+| 19 | [독립 사전학습 시각 특징](track-b/experiments/2026-11-09-foundation-visual/README.md) | track-b-foundation-visual-20261109: 12fits 완료·혼합/음성결과. 동일 초기화 frozen19.27% > joint5.56%, NLL은 개선돼 정확도와 괴리. 손실/FP 대조 진행 중. | 2026-11-09 | Track B | Exploratory | bf032b52959e4eff7351df53a11338ebd40dc580 |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 
@@ -41,3 +41,5 @@
 기존 실행 코드는 외부 폴더이므로 정확한 실행 Git SHA 미기록은 UNRECORDED로 표시했다. artifacts.json/provenance.json의 소스 해시와 reproduction 문서를 참고한다. Docs SHA를 실행 SHA로 바꾸거나 해당 Docs Commit 자체의 Index에 삽입하지 않는다. Docs SHA는 최종 실행 보고에 기록한다.
 
 기존 연구는 재사용·teacher 노출 등을 고려하여 보수적으로 Exploratory다. Development-validated/Independent-validated 승격에는 프로토콜과 독립성 근거가 필요하다. 성공 여부와 증거 수준은 별개다. Track 간 비교는 Primary Track에 보고서를 하나만 두고 다른 Track에서 링크한다.
+
+Study 19 follow-up: all 21 foundation fits complete; 2×2 FP/auxiliary control gives Joint 5.56/6.25/11.72/18.14%, below frozen 19.27%; mixed/negative, Exploratory reused development. Actual added training SHA `6874941298622eee18819fd48207fea8d5df2812`. Report: [foundation objective controls](track-b/experiments/2026-11-09-foundation-visual/README.md). Overall Track B ongoing.

@@ -5,16 +5,54 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "a383a304b799e3e1b8eeca3da51c05351374681c613410449baa4ee362b32029"
+      "sha256": "74409bdd0c5d06b3f6f36897ab93ea439aafe907f6d31eb4a10dcb7904398311"
+    },
+    {
+      "git_copy": "aggregate.json",
+      "sha256": "4f22b016096abde542148e57175af63c71737b91292c64c817cf7522a18a6443"
+    },
+    {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "e5da7d32a93096546042251b1bd7f308b1f3ea31e4604d034667f48944ec318a"
+    },
+    {
+      "git_copy": "external_hashes.json",
+      "sha256": "933ba43ac4e7c0737093210a30384eb625d0854fea0b2a2cee991d36a8be0272"
+    },
+    {
+      "git_copy": "feature_manifest_complete.json",
+      "sha256": "fdaf234fe51e905c2095d27a242a25978da25142ef98cd3dcbc26373aa7b468a"
+    },
+    {
+      "git_copy": "feature_protocol_complete.json",
+      "sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2"
     },
     {
       "git_copy": "manifest.json",
       "sha256": "2a3954dd6cdb0d8ca3fde7a4a0e195ac160308a241efaa9af33795c62ae07823"
     },
     {
+      "git_copy": "paired_scene_bootstrap.json",
+      "sha256": "30c602a3947a651ef1430639b6296469ba3e6423675f10305538b6339dc2c138"
+    },
+    {
+      "git_copy": "per_seed_summary.json",
+      "sha256": "2cf32eef3291eb9794944b931f8c1943f955cbefaddb0f8d6804f1ea78495cba"
+    },
+    {
       "git_copy": "protocol.json",
       "sha256": "1fae959c69a081f4c355ea455acb3dd1c6f48305d7a7bc380424d1df0235eeab"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "eb0ce5bac9389f4e1836a430df1710a01d0121d80e55cc904dd065ad066900d4"
     }
   ],
-  "full_cache_started_runtime_sha": "1610e0ff5eacae330942d461774ba75e0a4b4281"
+  "full_cache_started_runtime_sha": "1610e0ff5eacae330942d461774ba75e0a4b4281",
+  "training_sources": {
+    "initial": "d283a4bba368089f683655b562309461a1420fcb",
+    "matched": "2762c2fe2ae137319ca5d8391eaed9fdd29db3c6",
+    "aggregation": "4aa0d6c5e80987bb813316c1cdc1e625d12184a2",
+    "objective_controls": "6874941298622eee18819fd48207fea8d5df2812"
+  }
 }

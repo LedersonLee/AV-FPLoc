@@ -1,0 +1,24 @@
+{
+  "feature_extraction_exit": 0,
+  "initial_training_exit": 0,
+  "matched_controls_exit": 0,
+  "completed_fits": 21,
+  "feature_scenes": 22,
+  "feature_queries": 1408,
+  "feature_cache_bytes": 184583546,
+  "feature_extraction_seconds": 134.66490429150872,
+  "matched_pretrained_hashes_equal": true,
+  "pretrained_sha256": {
+    "visual_42": "9dd72274409d53234d4f04d8aace308088a7b5e4544f10dfa95db6617d133950",
+    "visual_43": "90e11c3621ef368809e2afbdab45ce90bb0429629c136e41e01efaf1d076689d",
+    "visual_44": "255ada6951492085fa663e14341c828d485dd32ca60a6a6abb9cd9e454406f84"
+  },
+  "functional_tests": 29,
+  "objective_controls_status": "running; not included in12fits",
+  "objective_controls": {
+    "status": "completed",
+    "exit_code": 0,
+    "complete_markers": 3,
+    "tests_passed": 29
+  }
+}

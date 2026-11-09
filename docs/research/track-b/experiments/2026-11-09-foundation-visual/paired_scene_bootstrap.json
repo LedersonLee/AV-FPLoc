@@ -1,0 +1,266 @@
+[
+  {
+    "left": "visual_supervised_v1",
+    "right": "scratch",
+    "metric": "joint",
+    "delta_pp": 3.125,
+    "ci95_pp": [
+      2.604166666666667,
+      3.559027777777778
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "visual_supervised_v1",
+    "right": "scratch",
+    "metric": "fine",
+    "delta_pp": -0.08680555555555555,
+    "ci95_pp": [
+      -0.26041666666666663,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "visual_supervised_v1",
+    "right": "scratch",
+    "metric": "raw20",
+    "delta_pp": 16.05902777777778,
+    "ci95_pp": [
+      13.628472222222223,
+      18.315972222222225
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_partial_v1",
+    "right": "matched_joint_v1",
+    "metric": "joint",
+    "delta_pp": 5.46875,
+    "ci95_pp": [
+      2.9513888888888893,
+      7.812500000000002
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_partial_v1",
+    "right": "matched_joint_v1",
+    "metric": "fine",
+    "delta_pp": 0.1736111111111111,
+    "ci95_pp": [
+      -0.1736111111111111,
+      0.43402777777777773
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_partial_v1",
+    "right": "matched_joint_v1",
+    "metric": "raw20",
+    "delta_pp": 12.586805555555557,
+    "ci95_pp": [
+      9.201388888888888,
+      15.711805555555557
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_frozen_v1",
+    "right": "matched_joint_v1",
+    "metric": "joint",
+    "delta_pp": 13.715277777777777,
+    "ci95_pp": [
+      10.243055555555557,
+      17.717013888888765
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_frozen_v1",
+    "right": "matched_joint_v1",
+    "metric": "fine",
+    "delta_pp": 0.8680555555555555,
+    "ci95_pp": [
+      0.43402777777777773,
+      1.3020833333333335
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "matched_frozen_v1",
+    "right": "matched_joint_v1",
+    "metric": "raw20",
+    "delta_pp": 27.95138888888889,
+    "ci95_pp": [
+      22.22222222222222,
+      35.15625
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w10_v1",
+    "right": "matched_joint_v1",
+    "metric": "joint",
+    "delta_pp": 0.6944444444444445,
+    "ci95_pp": [
+      -1.2152777777777777,
+      2.9513888888888884
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w10_v1",
+    "right": "matched_joint_v1",
+    "metric": "fine",
+    "delta_pp": -0.1736111111111111,
+    "ci95_pp": [
+      -0.3472222222222222,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w10_v1",
+    "right": "matched_joint_v1",
+    "metric": "raw20",
+    "delta_pp": -0.08680555555555433,
+    "ci95_pp": [
+      -3.2118055555555554,
+      3.125000000000002
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_joint_v1",
+    "metric": "joint",
+    "delta_pp": 6.163194444444445,
+    "ci95_pp": [
+      3.819444444444444,
+      8.680555555555557
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_joint_v1",
+    "metric": "fine",
+    "delta_pp": 0.3472222222222222,
+    "ci95_pp": [
+      0.0,
+      0.8680555555555556
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_joint_v1",
+    "metric": "raw20",
+    "delta_pp": 11.458333333333332,
+    "ci95_pp": [
+      6.857638888888889,
+      15.885416666666671
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "fixed_fp_w10_v1",
+    "metric": "joint",
+    "delta_pp": 11.89236111111111,
+    "ci95_pp": [
+      9.54861111111111,
+      14.496527777777779
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "fixed_fp_w10_v1",
+    "metric": "fine",
+    "delta_pp": 1.2152777777777777,
+    "ci95_pp": [
+      0.8680555555555556,
+      1.4756944444444446
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "fixed_fp_w10_v1",
+    "metric": "raw20",
+    "delta_pp": 25.17361111111111,
+    "ci95_pp": [
+      21.44097222222222,
+      28.559027777777786
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "joint",
+    "delta_pp": 6.423611111111112,
+    "ci95_pp": [
+      4.6875,
+      8.333333333333332
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "fine",
+    "delta_pp": 0.6944444444444445,
+    "ci95_pp": [
+      0.17361111111111108,
+      1.2152777777777777
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "fixed_fp_w1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "raw20",
+    "delta_pp": 13.628472222222221,
+    "ci95_pp": [
+      9.982638888888884,
+      17.361111111111107
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "joint",
+    "delta_pp": -7.552083333333333,
+    "ci95_pp": [
+      -10.329861111111112,
+      -4.513888888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "fine",
+    "delta_pp": -0.5208333333333333,
+    "ci95_pp": [
+      -1.128472222222222,
+      0.1736111111111112
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "raw20",
+    "delta_pp": -16.493055555555554,
+    "ci95_pp": [
+      -21.354166666666664,
+      -12.06597222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  }
+]
