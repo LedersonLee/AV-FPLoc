@@ -1,0 +1,1856 @@
+[
+  {
+    "variant": "baseline",
+    "method": "visual",
+    "ece": 0.16170999338121167,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.010165006618788337,
+        "accuracy": 0.171875
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.5431034482758621
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.6875
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7899305555555556
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.8171296296296297
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.828125
+      }
+    ],
+    "translation_median_m": 5.531380891799927,
+    "translation_p90_m": 11.976077270507815,
+    "yaw_median_deg": 84.99999237060547,
+    "yaw_p90_deg": 174.99998474121094
+  },
+  {
+    "variant": "baseline",
+    "method": "acoustic",
+    "ece": 0.020953551830138573,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1150,
+        "confidence": 0.030122519359397498,
+        "accuracy": 0.050434782608695654
+      },
+      {
+        "bin": 1,
+        "count": 2,
+        "confidence": 0.11030551418662071,
+        "accuracy": 0.5
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9051724137931034
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9201388888888888
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9322916666666666
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9444444444444444
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9487847222222222
+      }
+    ],
+    "translation_median_m": 5.456303596496582,
+    "translation_p90_m": 12.130430412292485,
+    "yaw_median_deg": 85.0,
+    "yaw_p90_deg": 160.00001525878906
+  },
+  {
+    "variant": "baseline",
+    "method": "fixed",
+    "ece": 0.2246933360862992,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.014021941691478586,
+        "accuracy": 0.2387152777777778
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.646551724137931
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.6979166666666667
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7621527777777778
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7719907407407407
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7612847222222222
+      }
+    ],
+    "translation_median_m": 4.309576988220215,
+    "translation_p90_m": 11.309376621246344,
+    "yaw_median_deg": 80.0,
+    "yaw_p90_deg": 170.00001525878906
+  },
+  {
+    "variant": "xy020",
+    "method": "visual",
+    "ece": 0.17099079975964235,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.010432811351468748,
+        "accuracy": 0.1814236111111111
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.4913793103448276
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.6875
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7795138888888888
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7974537037037037
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.8185763888888888
+      }
+    ],
+    "translation_median_m": 5.63515567779541,
+    "translation_p90_m": 11.825609493255625,
+    "yaw_median_deg": 80.00000762939453,
+    "yaw_p90_deg": 170.00001525878906
+  },
+  {
+    "variant": "xy020",
+    "method": "acoustic",
+    "ece": 0.018245359260617985,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1150,
+        "confidence": 0.030615453747222604,
+        "accuracy": 0.04869565217391304
+      },
+      {
+        "bin": 1,
+        "count": 2,
+        "confidence": 0.11321283876895905,
+        "accuracy": 0.0
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9310344827586207
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9409722222222222
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9375
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9479166666666666
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9513888888888888
+      }
+    ],
+    "translation_median_m": 5.60223126411438,
+    "translation_p90_m": 11.885411071777344,
+    "yaw_median_deg": 85.00000762939453,
+    "yaw_p90_deg": 165.0
+  },
+  {
+    "variant": "xy020",
+    "method": "fixed",
+    "ece": 0.22939572942737463,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.01452788168373647,
+        "accuracy": 0.2439236111111111
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.6379310344827587
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7013888888888888
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7604166666666666
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7638888888888888
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7560763888888888
+      }
+    ],
+    "translation_median_m": 4.214852333068848,
+    "translation_p90_m": 10.91608877182007,
+    "yaw_median_deg": 79.99999618530273,
+    "yaw_p90_deg": 170.00001525878906
+  },
+  {
+    "variant": "xy050",
+    "method": "visual",
+    "ece": 0.15056372920359234,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.010894604129741007,
+        "accuracy": 0.16145833333333334
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.5948275862068966
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7569444444444444
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.8177083333333334
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.8298611111111112
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.8385416666666666
+      }
+    ],
+    "translation_median_m": 5.584350109100342,
+    "translation_p90_m": 11.333930015563967,
+    "yaw_median_deg": 84.99999237060547,
+    "yaw_p90_deg": 174.99998474121094
+  },
+  {
+    "variant": "xy050",
+    "method": "acoustic",
+    "ece": 0.012933861265790058,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1148,
+        "confidence": 0.03193865786347123,
+        "accuracy": 0.04355400696864112
+      },
+      {
+        "bin": 1,
+        "count": 4,
+        "confidence": 0.10865314863622189,
+        "accuracy": 0.5
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9224137931034483
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9409722222222222
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9357638888888888
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9467592592592593
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9548611111111112
+      }
+    ],
+    "translation_median_m": 5.550674200057983,
+    "translation_p90_m": 12.012032508850101,
+    "yaw_median_deg": 89.99999237060547,
+    "yaw_p90_deg": 165.0
+  },
+  {
+    "variant": "xy050",
+    "method": "fixed",
+    "ece": 0.21526939352912045,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.014765328693101765,
+        "accuracy": 0.2300347222222222
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.6379310344827587
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7083333333333333
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7586805555555556
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7743055555555556
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7699652777777778
+      }
+    ],
+    "translation_median_m": 4.398294448852539,
+    "translation_p90_m": 11.182351684570312,
+    "yaw_median_deg": 80.0,
+    "yaw_p90_deg": 170.00001525878906
+  },
+  {
+    "variant": "yaw12",
+    "method": "visual",
+    "ece": 0.1475966644100279,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.012125557812194328,
+        "accuracy": 0.1597222222222222
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.6896551724137931
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7673611111111112
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.8125
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.8287037037037037
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.8402777777777778
+      }
+    ],
+    "translation_median_m": 5.706355571746826,
+    "translation_p90_m": 11.29785385131836,
+    "yaw_median_deg": 75.0,
+    "yaw_p90_deg": 165.00001525878906
+  },
+  {
+    "variant": "yaw12",
+    "method": "acoustic",
+    "ece": 0.014046595134762658,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1150,
+        "confidence": 0.034442854212273076,
+        "accuracy": 0.04782608695652174
+      },
+      {
+        "bin": 1,
+        "count": 2,
+        "confidence": 0.1045200303196907,
+        "accuracy": 0.5
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9051724137931034
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9166666666666666
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9357638888888888
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9467592592592593
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9513888888888888
+      }
+    ],
+    "translation_median_m": 5.55810022354126,
+    "translation_p90_m": 11.89798288345337,
+    "yaw_median_deg": 82.49999618530273,
+    "yaw_p90_deg": 165.0
+  },
+  {
+    "variant": "yaw12",
+    "method": "fixed",
+    "ece": 0.20899192010337073,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.016702524341073714,
+        "accuracy": 0.22569444444444445
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.6982758620689655
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7777777777777778
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7829861111111112
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7847222222222222
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7743055555555556
+      }
+    ],
+    "translation_median_m": 4.602983474731445,
+    "translation_p90_m": 11.248432350158696,
+    "yaw_median_deg": 75.0,
+    "yaw_p90_deg": 165.00001525878906
+  },
+  {
+    "variant": "yaw72",
+    "method": "visual",
+    "ece": 0.1674033897686766,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.009679943564656747,
+        "accuracy": 0.17708333333333334
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.5862068965517242
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.6944444444444444
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7760416666666666
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.8043981481481481
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.8229166666666666
+      }
+    ],
+    "translation_median_m": 5.46976900100708,
+    "translation_p90_m": 11.650806236267094,
+    "yaw_median_deg": 84.99998474121094,
+    "yaw_p90_deg": 174.99998474121094
+  },
+  {
+    "variant": "yaw72",
+    "method": "acoustic",
+    "ece": 0.015618503838696694,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1150,
+        "confidence": 0.02851862961061947,
+        "accuracy": 0.043478260869565216
+      },
+      {
+        "bin": 1,
+        "count": 2,
+        "confidence": 0.10552976280450821,
+        "accuracy": 0.5
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9224137931034483
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9548611111111112
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9479166666666666
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9537037037037037
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9557291666666666
+      }
+    ],
+    "translation_median_m": 5.521095514297485,
+    "translation_p90_m": 12.04055318832398,
+    "yaw_median_deg": 84.99999237060547,
+    "yaw_p90_deg": 160.00001525878906
+  },
+  {
+    "variant": "yaw72",
+    "method": "fixed",
+    "ece": 0.2271249274344882,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.013326461454400688,
+        "accuracy": 0.2404513888888889
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.6724137931034483
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7048611111111112
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7534722222222222
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7650462962962963
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7595486111111112
+      }
+    ],
+    "translation_median_m": 4.367035627365112,
+    "translation_p90_m": 11.386723804473878,
+    "yaw_median_deg": 79.99999237060547,
+    "yaw_p90_deg": 170.00001525878906
+  },
+  {
+    "variant": "eroded010",
+    "method": "visual",
+    "ece": 0.1666797976463891,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.01040353568694425,
+        "accuracy": 0.17708333333333334
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.5086206896551724
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.6875
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7777777777777778
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.8101851851851851
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.8229166666666666
+      }
+    ],
+    "translation_median_m": 5.514977931976318,
+    "translation_p90_m": 11.976077270507815,
+    "yaw_median_deg": 84.99999237060547,
+    "yaw_p90_deg": 174.99998474121094
+  },
+  {
+    "variant": "eroded010",
+    "method": "acoustic",
+    "ece": 0.02066931248676459,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1150,
+        "confidence": 0.030406888128541733,
+        "accuracy": 0.050434782608695654
+      },
+      {
+        "bin": 1,
+        "count": 2,
+        "confidence": 0.11051533371210098,
+        "accuracy": 0.5
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.9137931034482758
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.9236111111111112
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.9305555555555556
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.9444444444444444
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.9487847222222222
+      }
+    ],
+    "translation_median_m": 5.461683988571167,
+    "translation_p90_m": 12.089518356323245,
+    "yaw_median_deg": 85.0,
+    "yaw_p90_deg": 160.00001525878906
+  },
+  {
+    "variant": "eroded010",
+    "method": "fixed",
+    "ece": 0.2262228592525288,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 1152,
+        "confidence": 0.014228529636360085,
+        "accuracy": 0.2404513888888889
+      },
+      {
+        "bin": 1,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 7,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      },
+      {
+        "bin": 9,
+        "count": 0,
+        "confidence": null,
+        "accuracy": null
+      }
+    ],
+    "selective_risk": [
+      {
+        "requested_coverage": 0.1,
+        "count": 116,
+        "actual_coverage": 0.10069444444444445,
+        "risk": 0.646551724137931
+      },
+      {
+        "requested_coverage": 0.25,
+        "count": 288,
+        "actual_coverage": 0.25,
+        "risk": 0.7152777777777778
+      },
+      {
+        "requested_coverage": 0.5,
+        "count": 576,
+        "actual_coverage": 0.5,
+        "risk": 0.7638888888888888
+      },
+      {
+        "requested_coverage": 0.75,
+        "count": 864,
+        "actual_coverage": 0.75,
+        "risk": 0.7719907407407407
+      },
+      {
+        "requested_coverage": 1.0,
+        "count": 1152,
+        "actual_coverage": 1.0,
+        "risk": 0.7595486111111112
+      }
+    ],
+    "translation_median_m": 4.289958953857422,
+    "translation_p90_m": 11.309376621246344,
+    "yaw_median_deg": 80.0,
+    "yaw_p90_deg": 170.00001525878906
+  }
+]

@@ -1,0 +1,758 @@
+[
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "baseline",
+    "candidates": 99612,
+    "map_encoding_seconds": 0.05499940109439194
+  },
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "xy020",
+    "candidates": 156096,
+    "map_encoding_seconds": 0.024208754068240523
+  },
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "xy050",
+    "candidates": 26028,
+    "map_encoding_seconds": 0.004910540068522096
+  },
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "yaw12",
+    "candidates": 33204,
+    "map_encoding_seconds": 0.005152026889845729
+  },
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "yaw72",
+    "candidates": 199224,
+    "map_encoding_seconds": 0.02933504688553512
+  },
+  {
+    "seed": 42,
+    "scene": "108736611_177263226",
+    "variant": "eroded010",
+    "candidates": 90612,
+    "map_encoding_seconds": 0.00833013909868896
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "baseline",
+    "candidates": 81684,
+    "map_encoding_seconds": 0.010504293953999877
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "xy020",
+    "candidates": 128916,
+    "map_encoding_seconds": 0.01914896909147501
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "xy050",
+    "candidates": 20844,
+    "map_encoding_seconds": 0.0036418100353330374
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "yaw12",
+    "candidates": 27228,
+    "map_encoding_seconds": 0.004094991832971573
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "yaw72",
+    "candidates": 163368,
+    "map_encoding_seconds": 0.023861068999394774
+  },
+  {
+    "seed": 42,
+    "scene": "108736635_177263256",
+    "variant": "eroded010",
+    "candidates": 79560,
+    "map_encoding_seconds": 0.011700713075697422
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "baseline",
+    "candidates": 154764,
+    "map_encoding_seconds": 0.01964256912469864
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "xy020",
+    "candidates": 240804,
+    "map_encoding_seconds": 0.028799275867640972
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "xy050",
+    "candidates": 39708,
+    "map_encoding_seconds": 0.005106728058308363
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "yaw12",
+    "candidates": 51588,
+    "map_encoding_seconds": 0.008581625996157527
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "yaw72",
+    "candidates": 309528,
+    "map_encoding_seconds": 0.04481194005347788
+  },
+  {
+    "seed": 42,
+    "scene": "105515448_173104512",
+    "variant": "eroded010",
+    "candidates": 141984,
+    "map_encoding_seconds": 0.021665644831955433
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "baseline",
+    "candidates": 81720,
+    "map_encoding_seconds": 0.01315496419556439
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "xy020",
+    "candidates": 129780,
+    "map_encoding_seconds": 0.018778030993416905
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "xy050",
+    "candidates": 20412,
+    "map_encoding_seconds": 0.003920173039659858
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "yaw12",
+    "candidates": 27240,
+    "map_encoding_seconds": 0.004312844946980476
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "yaw72",
+    "candidates": 163440,
+    "map_encoding_seconds": 0.009462340967729688
+  },
+  {
+    "seed": 42,
+    "scene": "108294783_176710410",
+    "variant": "eroded010",
+    "candidates": 75096,
+    "map_encoding_seconds": 0.01166102197021246
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "baseline",
+    "candidates": 92880,
+    "map_encoding_seconds": 0.015536388149484992
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "xy020",
+    "candidates": 143568,
+    "map_encoding_seconds": 0.021171266911551356
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "xy050",
+    "candidates": 23472,
+    "map_encoding_seconds": 0.003875217167660594
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "yaw12",
+    "candidates": 30960,
+    "map_encoding_seconds": 0.004716719035059214
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "yaw72",
+    "candidates": 185760,
+    "map_encoding_seconds": 0.022578075993806124
+  },
+  {
+    "seed": 42,
+    "scene": "108294624_176710203",
+    "variant": "eroded010",
+    "candidates": 83304,
+    "map_encoding_seconds": 0.011308570858091116
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "baseline",
+    "candidates": 94644,
+    "map_encoding_seconds": 0.012864435091614723
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "xy020",
+    "candidates": 150480,
+    "map_encoding_seconds": 0.008740977151319385
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "xy050",
+    "candidates": 23724,
+    "map_encoding_seconds": 0.00325605901889503
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "yaw12",
+    "candidates": 31548,
+    "map_encoding_seconds": 0.00484318402595818
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "yaw72",
+    "candidates": 189288,
+    "map_encoding_seconds": 0.027408014051616192
+  },
+  {
+    "seed": 42,
+    "scene": "102344457",
+    "variant": "eroded010",
+    "candidates": 90576,
+    "map_encoding_seconds": 0.014279593946412206
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "baseline",
+    "candidates": 99612,
+    "map_encoding_seconds": 0.015450011938810349
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "xy020",
+    "candidates": 156096,
+    "map_encoding_seconds": 0.024335750145837665
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "xy050",
+    "candidates": 26028,
+    "map_encoding_seconds": 0.0024012939538806677
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "yaw12",
+    "candidates": 33204,
+    "map_encoding_seconds": 0.0028792459052056074
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "yaw72",
+    "candidates": 199224,
+    "map_encoding_seconds": 0.023568704025819898
+  },
+  {
+    "seed": 43,
+    "scene": "108736611_177263226",
+    "variant": "eroded010",
+    "candidates": 90612,
+    "map_encoding_seconds": 0.013111748965457082
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "baseline",
+    "candidates": 81684,
+    "map_encoding_seconds": 0.00588586088269949
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "xy020",
+    "candidates": 128916,
+    "map_encoding_seconds": 0.01770906406454742
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "xy050",
+    "candidates": 20844,
+    "map_encoding_seconds": 0.0018532909452915192
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "yaw12",
+    "candidates": 27228,
+    "map_encoding_seconds": 0.004501553950831294
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "yaw72",
+    "candidates": 163368,
+    "map_encoding_seconds": 0.021935072960332036
+  },
+  {
+    "seed": 43,
+    "scene": "108736635_177263256",
+    "variant": "eroded010",
+    "candidates": 79560,
+    "map_encoding_seconds": 0.01223922916688025
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "baseline",
+    "candidates": 154764,
+    "map_encoding_seconds": 0.008681248174980283
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "xy020",
+    "candidates": 240804,
+    "map_encoding_seconds": 0.02959079621359706
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "xy050",
+    "candidates": 39708,
+    "map_encoding_seconds": 0.006086908048018813
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "yaw12",
+    "candidates": 51588,
+    "map_encoding_seconds": 0.009199345950037241
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "yaw72",
+    "candidates": 309528,
+    "map_encoding_seconds": 0.04758919100277126
+  },
+  {
+    "seed": 43,
+    "scene": "105515448_173104512",
+    "variant": "eroded010",
+    "candidates": 141984,
+    "map_encoding_seconds": 0.022253423929214478
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "baseline",
+    "candidates": 81720,
+    "map_encoding_seconds": 0.010263571050018072
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "xy020",
+    "candidates": 129780,
+    "map_encoding_seconds": 0.0184697019867599
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "xy050",
+    "candidates": 20412,
+    "map_encoding_seconds": 0.0033533370587974787
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "yaw12",
+    "candidates": 27240,
+    "map_encoding_seconds": 0.005113250110298395
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "yaw72",
+    "candidates": 163440,
+    "map_encoding_seconds": 0.023465164937078953
+  },
+  {
+    "seed": 43,
+    "scene": "108294783_176710410",
+    "variant": "eroded010",
+    "candidates": 75096,
+    "map_encoding_seconds": 0.011774986982345581
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "baseline",
+    "candidates": 92880,
+    "map_encoding_seconds": 0.012146242894232273
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "xy020",
+    "candidates": 143568,
+    "map_encoding_seconds": 0.022051552077755332
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "xy050",
+    "candidates": 23472,
+    "map_encoding_seconds": 0.003316030837595463
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "yaw12",
+    "candidates": 30960,
+    "map_encoding_seconds": 0.004956557881087065
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "yaw72",
+    "candidates": 185760,
+    "map_encoding_seconds": 0.028951665852218866
+  },
+  {
+    "seed": 43,
+    "scene": "108294624_176710203",
+    "variant": "eroded010",
+    "candidates": 83304,
+    "map_encoding_seconds": 0.014002008829265833
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "baseline",
+    "candidates": 94644,
+    "map_encoding_seconds": 0.01401550299488008
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "xy020",
+    "candidates": 150480,
+    "map_encoding_seconds": 0.011245358968153596
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "xy050",
+    "candidates": 23724,
+    "map_encoding_seconds": 0.0018660689238458872
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "yaw12",
+    "candidates": 31548,
+    "map_encoding_seconds": 0.0041334598790854216
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "yaw72",
+    "candidates": 189288,
+    "map_encoding_seconds": 0.029234298039227724
+  },
+  {
+    "seed": 43,
+    "scene": "102344457",
+    "variant": "eroded010",
+    "candidates": 90576,
+    "map_encoding_seconds": 0.015343182953074574
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "baseline",
+    "candidates": 99612,
+    "map_encoding_seconds": 0.016041617142036557
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "xy020",
+    "candidates": 156096,
+    "map_encoding_seconds": 0.020331638865172863
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "xy050",
+    "candidates": 26028,
+    "map_encoding_seconds": 0.004330832976847887
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "yaw12",
+    "candidates": 33204,
+    "map_encoding_seconds": 0.004958276869729161
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "yaw72",
+    "candidates": 199224,
+    "map_encoding_seconds": 0.024888853076845407
+  },
+  {
+    "seed": 44,
+    "scene": "108736611_177263226",
+    "variant": "eroded010",
+    "candidates": 90612,
+    "map_encoding_seconds": 0.01470438321121037
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "baseline",
+    "candidates": 81684,
+    "map_encoding_seconds": 0.012222669087350368
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "xy020",
+    "candidates": 128916,
+    "map_encoding_seconds": 0.015945893013849854
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "xy050",
+    "candidates": 20844,
+    "map_encoding_seconds": 0.0037236229982227087
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "yaw12",
+    "candidates": 27228,
+    "map_encoding_seconds": 0.00490699615329504
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "yaw72",
+    "candidates": 163368,
+    "map_encoding_seconds": 0.0197184719145298
+  },
+  {
+    "seed": 44,
+    "scene": "108736635_177263256",
+    "variant": "eroded010",
+    "candidates": 79560,
+    "map_encoding_seconds": 0.012752729002386332
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "baseline",
+    "candidates": 154764,
+    "map_encoding_seconds": 0.023365484084933996
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "xy020",
+    "candidates": 240804,
+    "map_encoding_seconds": 0.03054142789915204
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "xy050",
+    "candidates": 39708,
+    "map_encoding_seconds": 0.005238579120486975
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "yaw12",
+    "candidates": 51588,
+    "map_encoding_seconds": 0.008553870022296906
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "yaw72",
+    "candidates": 309528,
+    "map_encoding_seconds": 0.03712266101501882
+  },
+  {
+    "seed": 44,
+    "scene": "105515448_173104512",
+    "variant": "eroded010",
+    "candidates": 141984,
+    "map_encoding_seconds": 0.021331712137907743
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "baseline",
+    "candidates": 81720,
+    "map_encoding_seconds": 0.012879265937954187
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "xy020",
+    "candidates": 129780,
+    "map_encoding_seconds": 0.007556732045486569
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "xy050",
+    "candidates": 20412,
+    "map_encoding_seconds": 0.0019501519855111837
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "yaw12",
+    "candidates": 27240,
+    "map_encoding_seconds": 0.004142669029533863
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "yaw72",
+    "candidates": 163440,
+    "map_encoding_seconds": 0.020185173023492098
+  },
+  {
+    "seed": 44,
+    "scene": "108294783_176710410",
+    "variant": "eroded010",
+    "candidates": 75096,
+    "map_encoding_seconds": 0.005170121090486646
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "baseline",
+    "candidates": 92880,
+    "map_encoding_seconds": 0.014642423018813133
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "xy020",
+    "candidates": 143568,
+    "map_encoding_seconds": 0.021996636874973774
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "xy050",
+    "candidates": 23472,
+    "map_encoding_seconds": 0.004019879968836904
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "yaw12",
+    "candidates": 30960,
+    "map_encoding_seconds": 0.0023829678539186716
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "yaw72",
+    "candidates": 185760,
+    "map_encoding_seconds": 0.022834128933027387
+  },
+  {
+    "seed": 44,
+    "scene": "108294624_176710203",
+    "variant": "eroded010",
+    "candidates": 83304,
+    "map_encoding_seconds": 0.011000196915119886
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "baseline",
+    "candidates": 94644,
+    "map_encoding_seconds": 0.011351912980899215
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "xy020",
+    "candidates": 150480,
+    "map_encoding_seconds": 0.023536975029855967
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "xy050",
+    "candidates": 23724,
+    "map_encoding_seconds": 0.004174017114564776
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "yaw12",
+    "candidates": 31548,
+    "map_encoding_seconds": 0.00485975993797183
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "yaw72",
+    "candidates": 189288,
+    "map_encoding_seconds": 0.030504320980980992
+  },
+  {
+    "seed": 44,
+    "scene": "102344457",
+    "variant": "eroded010",
+    "candidates": 90576,
+    "map_encoding_seconds": 0.015185573138296604
+  }
+]

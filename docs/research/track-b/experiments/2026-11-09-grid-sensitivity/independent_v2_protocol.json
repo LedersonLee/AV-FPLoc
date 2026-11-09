@@ -1,0 +1,79 @@
+{
+  "observation_encoding_batch": 8,
+  "grid_protocol": {
+    "variants": [
+      [
+        "baseline",
+        0.25,
+        36,
+        0.0
+      ],
+      [
+        "xy020",
+        0.2,
+        36,
+        0.0
+      ],
+      [
+        "xy050",
+        0.5,
+        36,
+        0.0
+      ],
+      [
+        "yaw12",
+        0.25,
+        12,
+        0.0
+      ],
+      [
+        "yaw72",
+        0.25,
+        72,
+        0.0
+      ],
+      [
+        "eroded010",
+        0.25,
+        36,
+        0.1
+      ]
+    ],
+    "scenes": [
+      "108736611_177263226",
+      "108736635_177263256",
+      "105515448_173104512",
+      "108294783_176710410",
+      "108294624_176710203",
+      "102344457"
+    ],
+    "reference_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+    "construction": "Same native footprint; map-origin anchored grid; optional clearance>=0.1m validity only; ray geometry uses unmodified map",
+    "ray_bins": 16,
+    "max_range_m": 20,
+    "ray_step_m": 0.1,
+    "observations": "none used to construct candidates; original cache loaded only for baseline equality assertion",
+    "test_accessed": false
+  },
+  "grid_manifest_sha256": "c043a4ee18adbf3235f9608ee7aa1feaf897837d38cf982cc477fd092ba96712",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "weights": [
+    0.85,
+    0.15
+  ],
+  "temperature": 1,
+  "checkpoint_hashes": {
+    "visual_42": "f8f15743a602ee50126a13bab08453a31a547b75b7d820c770810d8ab07216d2",
+    "visual_43": "4944ee4eb48aa7477d05814aa3fc1e131cdcdec5bf0d9e6820c93cceba6484d6",
+    "visual_44": "a1feb97065fadf86b5e8ba5cbabfd45b05eb16ad8b194392938400f0a7bc9898",
+    "acoustic_42": "1edf4639df3c49ab028917e15d96049b0984c8b1fb13f720e416ec4fa98c0eed",
+    "acoustic_43": "9df4418423658c5570f65b03751f4a7130268bf066033be7e7ce41f27ca8646d",
+    "acoustic_44": "df9ce0be3803bbd443535d10f22a492c37d046f734c12c4fbf2107bf2df205be"
+  },
+  "validity": "GT nearest raster cell in declared candidate validity; out-of-grid/invalid flagged, never clamped or dropped; separate all-query and valid-subset",
+  "evidence": "Exploratory six reused development scenes; fixed checkpoints and no calibration refit; no Test"
+}

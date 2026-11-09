@@ -1,0 +1,21 @@
+{
+  "v1_exit_code": 0,
+  "v1_baseline_mismatches": 563,
+  "v1_difference_keys": {
+    "nll": 563
+  },
+  "max_v1_baseline_nll_difference": 0.001251220703125,
+  "intervention": "observation encoding batch64 to8, otherwise same grids/weights/queries",
+  "v2_exit_code": 0,
+  "v2_baseline_replay_checks": 3456,
+  "v2_baseline_mismatches": 0,
+  "v1_to_v2_metric_change_counts": {
+    "joint": 0,
+    "r1": 0,
+    "fine": 0,
+    "raw20": 0,
+    "diverse20": 0,
+    "strict_05_15": 0,
+    "strict_02_10": 0
+  }
+}

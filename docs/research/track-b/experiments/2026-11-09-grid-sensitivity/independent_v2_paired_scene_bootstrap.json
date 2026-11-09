@@ -1,0 +1,302 @@
+[
+  {
+    "variant": "baseline",
+    "metric": "joint",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "baseline",
+    "metric": "fine",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "baseline",
+    "metric": "raw20",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "baseline",
+    "metric": "strict_05_15",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "baseline",
+    "metric": "strict_02_10",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy020",
+    "metric": "joint",
+    "delta_pp": 0.5208333333333338,
+    "ci95_pp": [
+      -0.4340277777777772,
+      1.3020833333333344
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy020",
+    "metric": "fine",
+    "delta_pp": 1.3020833333333335,
+    "ci95_pp": [
+      -5.782411586589356e-17,
+      2.2569444444444446
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy020",
+    "metric": "raw20",
+    "delta_pp": -2.6041666666666687,
+    "ci95_pp": [
+      -4.340277777777781,
+      -0.6076388888888895
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy020",
+    "metric": "strict_05_15",
+    "delta_pp": 0.7812499999999998,
+    "ci95_pp": [
+      -0.6076388888888888,
+      2.170138888888888
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy020",
+    "metric": "strict_02_10",
+    "delta_pp": 1.0416666666666665,
+    "ci95_pp": [
+      -0.5208333333333333,
+      2.604166666666667
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy050",
+    "metric": "joint",
+    "delta_pp": -0.8680555555555567,
+    "ci95_pp": [
+      -2.256944444444446,
+      0.5208333333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy050",
+    "metric": "fine",
+    "delta_pp": -0.607638888888889,
+    "ci95_pp": [
+      -1.1284722222222223,
+      0.17361111111111094
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy050",
+    "metric": "raw20",
+    "delta_pp": 7.465277777777778,
+    "ci95_pp": [
+      5.555555555555558,
+      9.72222222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy050",
+    "metric": "strict_05_15",
+    "delta_pp": -1.215277777777778,
+    "ci95_pp": [
+      -2.604166666666667,
+      0.17361111111111094
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "xy050",
+    "metric": "strict_02_10",
+    "delta_pp": -0.4340277777777776,
+    "ci95_pp": [
+      -1.996527777777778,
+      1.2152777777777783
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw12",
+    "metric": "joint",
+    "delta_pp": -1.3020833333333335,
+    "ci95_pp": [
+      -3.5590277777777777,
+      0.6944444444444448
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw12",
+    "metric": "fine",
+    "delta_pp": -0.2604166666666668,
+    "ci95_pp": [
+      -0.6944444444444445,
+      0.17361111111111108
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw12",
+    "metric": "raw20",
+    "delta_pp": 1.7361111111111105,
+    "ci95_pp": [
+      0.17361111111110866,
+      3.2986111111111107
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw12",
+    "metric": "strict_05_15",
+    "delta_pp": -0.1736111111111112,
+    "ci95_pp": [
+      -3.2118055555555545,
+      1.996527777777777
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw12",
+    "metric": "strict_02_10",
+    "delta_pp": -0.3472222222222223,
+    "ci95_pp": [
+      -1.736111111111111,
+      1.0416666666666665
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw72",
+    "metric": "joint",
+    "delta_pp": 0.17361111111111094,
+    "ci95_pp": [
+      -0.4340277777777776,
+      0.78125
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw72",
+    "metric": "fine",
+    "delta_pp": -0.08680555555555565,
+    "ci95_pp": [
+      -0.6076388888888892,
+      0.6076388888888888
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw72",
+    "metric": "raw20",
+    "delta_pp": -5.815972222222221,
+    "ci95_pp": [
+      -7.118055555555556,
+      -4.42708333333333
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw72",
+    "metric": "strict_05_15",
+    "delta_pp": 0.17361111111111144,
+    "ci95_pp": [
+      -0.6944444444444443,
+      1.2152777777777781
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "yaw72",
+    "metric": "strict_02_10",
+    "delta_pp": 0.26041666666666663,
+    "ci95_pp": [
+      -0.5208333333333333,
+      1.3020833333333335
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "eroded010",
+    "metric": "joint",
+    "delta_pp": 0.17361111111111094,
+    "ci95_pp": [
+      0.0,
+      0.3472222222222224
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "eroded010",
+    "metric": "fine",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "eroded010",
+    "metric": "raw20",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "eroded010",
+    "metric": "strict_05_15",
+    "delta_pp": 0.17361111111111144,
+    "ci95_pp": [
+      0.0,
+      0.3472222222222229
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "variant": "eroded010",
+    "metric": "strict_02_10",
+    "delta_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged"
+  }
+]

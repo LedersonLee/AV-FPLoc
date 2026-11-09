@@ -3,9 +3,14 @@
   "banks": 36,
   "scenes": 6,
   "exact_baseline_matches": 6,
-  "performance_evaluated": false,
+  "performance_evaluated": true,
   "test_accessed": false,
-  "evaluation_status": "running; no complete results",
-  "evaluation_source": "1f79b9d95e699cebd80374e09f69f3874522d532",
-  "observation_session": 42021
+  "evaluation_status": "completed independent_v2; zero baseline metric mismatches",
+  "evaluation_source": "6e6f3a5380b6b124ebfdb978b4c1978baad7c275",
+  "observation_session": 42021,
+  "exit_code_evaluation": 0,
+  "query_method_cases": 20736,
+  "baseline_replay_cases": 3456,
+  "baseline_replay_mismatches": 0,
+  "matched_model_grid_evaluated": false
 }
