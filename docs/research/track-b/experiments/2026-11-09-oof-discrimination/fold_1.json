@@ -1,0 +1,28 @@
+{
+  "role": "out_of_fold_train_scenes",
+  "source_cache_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+  "train": [
+    "106366104_174226332",
+    "104348202_171513150",
+    "108736851_177263586",
+    "104348010_171512832",
+    "105515430_173104494",
+    "104348028_171512877",
+    "103997541_171030615",
+    "106366410_174226806"
+  ],
+  "val": [
+    "108736779_177263484",
+    "103997970_171031287",
+    "108294537_176710050",
+    "107734080_175999881",
+    "108294870_176710551",
+    "104862639_172226823",
+    "102344250",
+    "102816786"
+  ],
+  "fold_id": 1,
+  "selection": "SHA256 source-family order, greedily balance scene counts; no outcomes",
+  "restriction": "Every locally trained scorer component must be fit on this fold Train only; final-step only; original Val untouched by fold construction",
+  "exposure_limit": "Upstream foundation pretraining not independently excluded; inherited development method selection remains"
+}

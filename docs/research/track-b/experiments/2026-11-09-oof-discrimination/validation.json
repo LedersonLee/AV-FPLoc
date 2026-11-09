@@ -1,0 +1,12 @@
+{
+  "tests_passed": 36,
+  "folds": 2,
+  "train_scenes_each": 8,
+  "held_scenes_each": 8,
+  "smoke_exit_code": 0,
+  "source": "0aedb2ad9cb4690501c7f8ff0e648630241f983b",
+  "planned_fits": 18,
+  "training_status": "running",
+  "candidate_generation_complete": false,
+  "discriminator_complete": false
+}

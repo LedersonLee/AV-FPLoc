@@ -1,0 +1,29 @@
+{
+  "code_sha": "0aedb2ad9cb4690501c7f8ff0e648630241f983b",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "3a3f2514bff441e1d7ffab6b8fa84ced13711a9dc2ca6e2959d02b024faad060"
+    },
+    {
+      "git_copy": "fold_0.json",
+      "sha256": "2a1a77081798c1cf0629476815715b6e5fe8bae907ad101247a8fb156dd8ab86"
+    },
+    {
+      "git_copy": "fold_1.json",
+      "sha256": "d5dd9942d143e5266a4d4880c1064a6c4a970afd3f4426a7481f85081ff6ce7d"
+    },
+    {
+      "git_copy": "smoke_protocol.json",
+      "sha256": "3f877bc5e42d660a26e9be8029f88849bfec21d17b428a27010420553e565415"
+    },
+    {
+      "git_copy": "smoke_summary.json",
+      "sha256": "89c49bec7dcbb62fe7c5ad54091bc2a017412302193789829bc983b9eeaa5dd0"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "430efc804d2006fc8eb3e547cb9548461602b5511f822e68471d3171a9c653b7"
+    }
+  ]
+}
