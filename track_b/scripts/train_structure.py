@@ -6,6 +6,7 @@ import torch
 from track_b.models.structure import StructureMatcher,auxiliary_loss,visible_rays
 from track_b.models.dense import dense_loss
 from track_b.train_regimes import set_regime
+from track_b.models.foundation import FoundationStructureMatcher
 
 
 def read(p):return json.loads(p.read_text())
@@ -15,8 +16,18 @@ def scene_to_gpu(scene):
     return {k:v.cuda() if isinstance(v,torch.Tensor) and k!='valid' else v for k,v in scene.items()}
 
 
+def visual_input(scene,ids):
+    return scene['visual_features'][ids].float() if 'visual_features' in scene else scene['rgb'][ids].float()/255
+
+
+def attach_visual_features(scene,package):
+    assert package['scene']==scene['scene'] and package['query_ids']==scene['query_ids'], 'Visual features/query IDs do not align'
+    x=package['visual_features'];assert x.shape==(len(scene['query_ids']),1024,4,16) and torch.isfinite(x).all()
+    scene['visual_features']=x.to(scene['rgb'].device)
+
+
 def observe(model,scene,ids,mode):
-    rgb=scene['rgb'][ids].float()/255;spectrum=scene['spectrum'][ids].float()
+    rgb=visual_input(scene,ids);spectrum=scene['spectrum'][ids].float()
     return model.observations(rgb,spectrum)
 
 
@@ -51,7 +62,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
         cost.append(dict(scene=scene['scene'],fp_encoding_ms=(time.perf_counter()-start)*1000,fp_cache_bytes=fp.numel()*fp.element_size(),candidates=len(fp)))
         poses=scene['candidates'][:,:3];cpu_poses=poses.cpu().numpy();qcount=len(scene['gt'])
         for ids in torch.arange(qcount,device='cuda').split(8):
-          rgb=scene['rgb'][ids].float()/255;spec=scene['spectrum'][ids].float();v,a=model.observations(rgb,spec)
+          rgb=visual_input(scene,ids);spec=scene['spectrum'][ids].float();v,a=model.observations(rgb,spec)
           pred=v if mode=='visual' else a;mask=visible_rays(scene['hfov_deg'],device='cuda') if mode=='visual' else torch.ones(16,device='cuda')
           gt=scene['gt'][ids];dxy=(poses[None,:,:2]-gt[:,None,:2]).square().sum(-1).sqrt()
           dyaw=torch.atan2(torch.sin(poses[None,:,2]-gt[:,None,2]),torch.cos(poses[None,:,2]-gt[:,None,2])).abs()
@@ -81,7 +92,8 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);args=ap.parse_args()
+    if args.visual_cache:assert args.pretrained_dir is None, 'Old backbone checkpoints cannot initialize the foundation adapter'
     if args.pretrained_dir:assert args.aux_steps==0 and args.arm=='supervised', 'Matched continuation requires zero warmup and supervised loss'
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
@@ -92,9 +104,19 @@ def main():
         metric='NLL at nearest valid SE2 grid candidate; fine tolerance1e-6m',evidence='Exploratory development; no test use',init='scratch, same seed for every mode/arm')
     if args.pretrained_dir:
         protocol.update(init='archived common pretrained weights, fresh AdamW for every regime',pretrained_sha256={f'{mode}_{seed}':sha(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt') for mode in args.modes for seed in args.seeds},skip_sampling_steps=args.skip_sampling_steps)
+    if args.visual_cache:
+        foundation_protocol=read(args.visual_cache/'protocol.json');foundation_manifest=read(args.visual_cache/'manifest.json')
+        assert foundation_protocol['data']==data_protocol and not foundation_protocol['smoke'] and len(foundation_manifest)==len(manifest)
+        protocol.update(init='fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder',visual_representation='frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space',visual_cache_protocol_sha256=sha(args.visual_cache/'protocol.json'),upstream=foundation_protocol,foundation_cost_included_in_training_seconds=False)
     (args.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={}
     for part,ids in data_protocol['scenes'].items():
         scenes[part]=[scene_to_gpu(torch.load(args.cache/f'{s}.pt',weights_only=True)) for s in ids]
+    if args.visual_cache:
+        feature_hashes={r['scene']:r['sha256'] for r in foundation_manifest}
+        for part in scenes:
+            for scene in scenes[part]:
+                path=args.visual_cache/f"{scene['scene']}.pt";assert sha(path)==feature_hashes[scene['scene']]
+                attach_visual_features(scene,torch.load(path,weights_only=True,map_location='cpu'))
     print('DATA_READY',flush=True);mean_target=torch.cat([s['target'] for s in scenes['train']]).mean(0)
     prior=[]
     for s in scenes['val']:
@@ -103,7 +125,7 @@ def main():
     (args.out/'constant_structure_prior.json').write_text(json.dumps(prior,indent=2));all_results=[]
     for seed in args.seeds:
       for mode in args.modes:
-        torch.manual_seed(seed);rng=np.random.default_rng(seed);model=StructureMatcher().cuda();opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.0001)
+        torch.manual_seed(seed);rng=np.random.default_rng(seed);model=(FoundationStructureMatcher() if args.visual_cache else StructureMatcher()).cuda();opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.0001)
         if args.pretrained_dir:model.load_state_dict(torch.load(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt',weights_only=True))
         permutations={s['scene']:torch.tensor(rng.permutation(len(s['gt'])),device='cuda') for s in scenes['train']}
         rng=np.random.default_rng(seed);history=[];aux_eval_seconds=0.;start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
@@ -133,7 +155,7 @@ def main():
                 (args.out/f'{mode}_{seed}_aux_eval.json').write_text(json.dumps(aux_eval,indent=2))
         torch.cuda.synchronize();train_seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(model.state_dict(),args.out/f'{mode}_{seed}.pt')
         train_eval=evaluate(model,scenes['train'],mode,True,interventions=False,diversity=False)
-        val_eval=evaluate(model,scenes['val'],mode,True,interventions=True,diversity=True)
+        val_eval=evaluate(model,scenes['val'],mode,True,interventions=not bool(args.visual_cache),diversity=True)
         record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),encoder_regime=args.regime,train=train_eval,val=val_eval)
         (args.out/f'{mode}_{seed}.json').write_text(json.dumps(record,indent=2));aggregate={k:v for k,v in record.items() if k not in ('train','val','history')};aggregate.update(train=train_eval['summary'],val=val_eval['summary'])
         all_results.append(aggregate);(args.out/'summary.json').write_text(json.dumps(all_results,indent=2));print(json.dumps(aggregate),flush=True)
