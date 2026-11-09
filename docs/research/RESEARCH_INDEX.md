@@ -35,6 +35,7 @@
 | 24 | [Foundation frozen/partial/joint](track-b/experiments/2026-11-09-foundation-regimes/README.md) | 진행 중: 동일초기화·고정가중치 보존38검사, 실데이터2-step 점검 통과. frozen/partial×3방식×3seed 신규18fits 시작; 기존joint9fits와 비교 예정. | 2026-11-09 | Track B | Exploratory | `062860067f82a5f6a0e6ce8411b5c43702ae0ab5`; smoke `b50f10d1afc71396024a30e821f3409f5a41199e` |
 | 25 | [Foundation map controls](track-b/experiments/2026-11-09-foundation-map-controls/README.md) | 완료:17,280건·정상재생 불일치0. 기하제거는 거의 균일장, 무작위 yaw attention3.13% vs 정상16.75%; 위치지표 불변인 방향치환 대조, 신규 기작 증거 아님. | 2026-11-09 | Track B | Exploratory | `cd35096d650ee209fd483c835d7c0d193d41b65e` |
 | 26 | [Raw observation runtime audit](track-b/experiments/2026-11-09-raw-runtime-audit/README.md) | 완료:6장면 고정질의, 원본 RGB/body-RIR→특징·605,304점수·Top20 비트일치. 41검사 통과; 오프라인 정렬/단일모델 표본·비격리 비용 한계 명시. | 2026-11-09 | Track B | Exploratory | `0c0f0eece4b1bcd6595dc420463684c668875710` |
+| 27 | [Expanded development cohort](track-b/experiments/2026-11-09-expanded-cohort/README.md) | 준비/생성 중:112Train·19Val·8,384질의 사전점검. CPU장면전송 짧은 대조 비트불일치(최대8.6e−8), GPU반복도 미세차이; 핵심 위치지표 차이0. 독립Test 아님. | 2026-11-09 | Track B | Exploratory | preflight `f70fe38bf674327afbc2764dfc93dc818d3cf962`; cache/stream `461cb6ea52dd76bec09acf3a2bb5be08f50139c6` |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

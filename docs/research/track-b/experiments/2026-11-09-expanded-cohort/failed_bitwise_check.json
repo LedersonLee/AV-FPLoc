@@ -1,0 +1,13 @@
+{
+  "parameter_bitwise_equal": false,
+  "max_parameter_difference": 8.568167686462402e-08,
+  "all_prediction_rows_equal": false,
+  "losses_and_gradients_equal": false,
+  "compared_train_queries": 1024,
+  "compared_val_queries": 384,
+  "scope": "same foundation visual seed42, one aux and one dense update, full16/6 cached cohort; no full-convergence equivalence claim",
+  "checkpoint_hashes": {
+    "gpu": "ae0bf2fb0c9bab2f62a9d5e2e54c332c5198507650fd15e76e8f4454b65dc985",
+    "cpu": "4ab9076fa375ded2ae590ed88af4718de0f4b190135ed102c215a09da77ff93e"
+  }
+}

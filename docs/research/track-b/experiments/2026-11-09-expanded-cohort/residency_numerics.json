@@ -1,0 +1,93 @@
+{
+  "comparisons": [
+    {
+      "reference": "gpu",
+      "other": "cpu",
+      "aux": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0,
+        "changed_tensor_count": 0,
+        "changed_tensor_maxima": {}
+      },
+      "final": {
+        "bitwise_equal": false,
+        "max_abs_difference": 8.568167686462402e-08,
+        "changed_tensor_count": 2,
+        "changed_tensor_maxima": {
+          "floorplan.0.weight": 1.4901161193847656e-08,
+          "floorplan.2.weight": 8.568167686462402e-08
+        }
+      },
+      "predictions": {
+        "train": {
+          "cases": 1024,
+          "metric_mismatch_counts": {
+            "joint": 0,
+            "r1": 0,
+            "fine": 0,
+            "raw20": 0,
+            "diverse20": 0
+          },
+          "max_nll_difference": 9.5367431640625e-07
+        },
+        "val": {
+          "cases": 384,
+          "metric_mismatch_counts": {
+            "joint": 0,
+            "r1": 0,
+            "fine": 0,
+            "raw20": 0,
+            "diverse20": 0
+          },
+          "max_nll_difference": 0.0
+        }
+      },
+      "max_loss_difference": 0.0
+    },
+    {
+      "reference": "gpu",
+      "other": "gpu_repeat",
+      "aux": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0,
+        "changed_tensor_count": 0,
+        "changed_tensor_maxima": {}
+      },
+      "final": {
+        "bitwise_equal": false,
+        "max_abs_difference": 2.2351741790771484e-08,
+        "changed_tensor_count": 2,
+        "changed_tensor_maxima": {
+          "floorplan.0.weight": 1.4901161193847656e-08,
+          "floorplan.2.weight": 2.2351741790771484e-08
+        }
+      },
+      "predictions": {
+        "train": {
+          "cases": 1024,
+          "metric_mismatch_counts": {
+            "joint": 0,
+            "r1": 0,
+            "fine": 0,
+            "raw20": 0,
+            "diverse20": 0
+          },
+          "max_nll_difference": 1.9073486328125e-06
+        },
+        "val": {
+          "cases": 384,
+          "metric_mismatch_counts": {
+            "joint": 0,
+            "r1": 0,
+            "fine": 0,
+            "raw20": 0,
+            "diverse20": 0
+          },
+          "max_nll_difference": 9.5367431640625e-07
+        }
+      },
+      "max_loss_difference": 0.0
+    }
+  ],
+  "interpretation": "Bitwise failure remains a failure; this diagnostic describes observed short-run numeric differences, not full-run deterministic equivalence."
+}

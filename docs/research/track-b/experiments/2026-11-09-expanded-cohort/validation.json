@@ -1,0 +1,16 @@
+{
+  "tests_passed": 42,
+  "preflight_exit_code": 0,
+  "cache_status": "running, incomplete",
+  "cache_session": 72407,
+  "residency_fit_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "strict_bitwise_checker_exit_code": 1,
+  "strict_failure_preserved": true,
+  "numeric_diagnostic_exit_code": 0,
+  "expanded_training_started": false,
+  "test_accessed": false
+}
