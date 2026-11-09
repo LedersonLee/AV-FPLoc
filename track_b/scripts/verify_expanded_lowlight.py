@@ -1,4 +1,4 @@
-"""Verify expanded brightness controls and exact overlap with the pilot."""
+"""Verify expanded photometric controls and exact overlap with the pilot."""
 import argparse,hashlib,json
 from pathlib import Path
 import torch
@@ -8,10 +8,11 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  p=argparse.ArgumentParser()
  for k in ['features','cache','pilot','out']:p.add_argument('--'+k,type=Path,required=True)
+ p.add_argument('--brightness',type=float,default=.2);p.add_argument('--center-occlusion',type=float,default=0.)
  p.add_argument('--split',choices=['val','all'],default='val');p.add_argument('--expected-scenes',type=int,default=19)
  a=p.parse_args();new=read(a.features/'protocol.json');old=read(a.pilot/'protocol.json');data=read(a.cache/'protocol.json');selected={'val':data['scenes']['val']} if a.split=='val' else data['scenes'];ids=[sid for values in selected.values() for sid in values]
  assert len(ids)==a.expected_scenes and new['data']==data and new['selected_scenes']==selected and not new['smoke']
- assert new['brightness']==old['brightness']==.2 and new.get('center_occlusion',0)==old.get('center_occlusion',0)==0
+ assert new['brightness']==old['brightness']==a.brightness and new.get('center_occlusion',0)==old.get('center_occlusion',0)==a.center_occlusion
  for key in ['checkpoint_sha256','source_hashes','preprocessing','features']:assert new[key]==old[key],key
  manifest=read(a.features/'manifest.json');assert len(manifest)==len(ids) and {r['scene'] for r in manifest}==set(ids)
  pilot={r['scene']:r for r in read(a.pilot/'manifest.json')};assert len(pilot)==6 and set(pilot)<=set(ids)
