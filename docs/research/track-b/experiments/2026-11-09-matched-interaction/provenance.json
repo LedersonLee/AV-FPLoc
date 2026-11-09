@@ -1,0 +1,26 @@
+{
+  "status": "running",
+  "interrupted_run": {
+    "run": "matched_v1",
+    "exit": 137,
+    "last_logged_step": 100,
+    "reason": "deliberate stop: key bias cancelled by attention softmax; remove in all controls",
+    "code_sha": "65a8236103d82de5b0c5ac3a68c2ff9dd1828b8c",
+    "log_sha256": "22339b9cb39bcacfd2d09fd444b42dd09b7dde828631c3c0d8a6a0ebc229b6e4"
+  },
+  "running_code_sha": "aa452ee78a75af31d8b426684a9c81f94ff00039",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "157971aafdcb89edc62f9c987d4051f190804d33f2aa595a42b4e8d26ca9037c"
+    },
+    {
+      "git_copy": "protocol.json",
+      "sha256": "9916ce696d1ec96095f55019c4b43c4389cca1d602e2781663a8ab30b14be6ce"
+    },
+    {
+      "git_copy": "prototype_profile.json",
+      "sha256": "9a469cbb78890c5c744df0ab5ab19531410036c8d2a14149a649b1811dcc97fc"
+    }
+  ]
+}

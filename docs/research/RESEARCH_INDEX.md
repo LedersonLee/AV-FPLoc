@@ -25,6 +25,8 @@
 
 | 17 | [구조 지도학습·동일 초기화 대조](track-b/experiments/2026-11-09-structure-supervision/README.md) | track-b-structure-supervision-20261109: 30fits 완료·혼합/음성결과. 동일 초기화 partial9.028% > joint6.163%, 보조지도 대 dense-only 이득 미확인; 독립 고정 fusion8.941%, NLL 보정의 정확도 이득 없음. 강한 UnLoc·Support 실패 보존. 전체 protocol 진행 중. | 2026-11-09 | Track B | Exploratory | fb6900d (supervised), efcb0cb (controls), 38f76f6 (regimes), c20ce07 (matched); 전체 SHA는 experiment_registry.csv/provenance.json |
 
+| 18 | [후보별 interaction·동용량 대조](track-b/experiments/2026-11-09-matched-interaction/README.md) | track-b-matched-interaction-20261109: 진행 중. 24tests·전체bank 역전파 확인; softmax에서 상쇄되는 bias를 발견해 첫 실행 중단·보존 후 수정 비교 실행. 정확도 결과 미확정. | 2026-11-09 | Track B | Exploratory | aa452ee78a75af31d8b426684a9c81f94ff00039 (수정 실행), 65a8236103d82de5b0c5ac3a68c2ff9dd1828b8c (중단) |
+
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 
 서로 다른 cohort의 절대 성능을 이 목록으로 순위 매기지 않는다. 최신 HSSD478 fits와 residual1032 fits 등은 내부 fold/refit을 포함하는 계산 횟수이며 독립적인 과학적 증거 수가 아니다.

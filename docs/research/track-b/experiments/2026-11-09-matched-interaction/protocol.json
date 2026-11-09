@@ -1,0 +1,81 @@
+{
+  "data": {
+    "scenes": {
+      "train": [
+        "108736779_177263484",
+        "103997970_171031287",
+        "106366104_174226332",
+        "108294537_176710050",
+        "107734080_175999881",
+        "104348202_171513150",
+        "108736851_177263586",
+        "104348010_171512832",
+        "105515430_173104494",
+        "108294870_176710551",
+        "104862639_172226823",
+        "104348028_171512877",
+        "102344250",
+        "103997541_171030615",
+        "106366410_174226806",
+        "102816786"
+      ],
+      "val": [
+        "108736611_177263226",
+        "108736635_177263256",
+        "105515448_173104512",
+        "108294783_176710410",
+        "108294624_176710203",
+        "102344457"
+      ]
+    },
+    "queries_per_scene": 64,
+    "grid_m": 0.25,
+    "yaw_bins": 36,
+    "ray_bins": 16,
+    "ray_step_m": 0.1,
+    "max_range_m": 20.0,
+    "fp_spacing_m": 0.1,
+    "rgb_size": [
+      128,
+      96
+    ],
+    "rir_samples": 16384,
+    "sample_rate_hz": 48000,
+    "stft_nfft": 256,
+    "stft_hop": 32,
+    "spectral_channels": 18,
+    "spectral_cache_dtype": "float16",
+    "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+    "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+    "test_accessed": false,
+    "evidence": "Exploratory: previous development exposure remains",
+    "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+  },
+  "steps": 1000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "modes": [
+    "attention",
+    "concat",
+    "separable"
+  ],
+  "batch": 8,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "aux_weight": 10,
+  "skip_sampling_steps": 1500,
+  "initialization": "same archived geometry-pretrained backbone per seed; same seeded new modules; fresh AdamW",
+  "pretrained_sha256": {
+    "42": "c8d088da5b418f8440c49368490be71bb881ea671d606bc53b812f046fe08d5a",
+    "43": "de77f170bac36c762281b5bac690bc6878449cc73435ce34a31074fd27ce1e5e",
+    "44": "43554e390f99382e694933238f6d7ca197105720d5b86d045aa9483aefbe3080"
+  },
+  "cache_manifest_sha256": "9c9d534906126b15d8fb9f72a7c23834207f52d4748ccd66082a2ec6ca217d38",
+  "input_controls": "within-scene cyclic audio shift; RGB brightness times0.2",
+  "selection": "final scheduled update only; no epoch selection",
+  "evidence": "Exploratory reused development scenes",
+  "cost": "equal parameter count and updates, not equal measured FLOPs; each mode uses all head parameters"
+}

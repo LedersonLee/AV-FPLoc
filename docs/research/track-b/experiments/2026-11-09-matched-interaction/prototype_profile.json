@@ -1,0 +1,59 @@
+[
+  {
+    "mode": "attention",
+    "parameters": 2429723,
+    "scene": "104348010_171512832",
+    "candidates": 231156,
+    "batch": 8,
+    "seconds": 0.749109870987013,
+    "peak_vram_bytes": 243123200,
+    "gradient_sums": {
+      "visual": 90.35307581722736,
+      "acoustic": 312.7218284420669,
+      "floorplan": 0.32832048810087144,
+      "visual_retrieval": 0.31623947848272943,
+      "acoustic_retrieval": 0.3597479042311613,
+      "joint_head": 0.3825781628183904
+    },
+    "loss": 15.203869819641113,
+    "scope": "one first-step full-bank backward; no warm steady-state or whole-cache claim"
+  },
+  {
+    "mode": "concat",
+    "parameters": 2429723,
+    "scene": "104348010_171512832",
+    "candidates": 231156,
+    "batch": 8,
+    "seconds": 0.47945141210220754,
+    "peak_vram_bytes": 242798592,
+    "gradient_sums": {
+      "visual": 90.35145272314548,
+      "acoustic": 312.23957432154566,
+      "floorplan": 0.3281992543488741,
+      "visual_retrieval": 0.1362927968148142,
+      "acoustic_retrieval": 0.149529199115932,
+      "joint_head": 0.3883130144677125
+    },
+    "loss": 15.202622413635254,
+    "scope": "one first-step full-bank backward; no warm steady-state or whole-cache claim"
+  },
+  {
+    "mode": "separable",
+    "parameters": 2429723,
+    "scene": "104348010_171512832",
+    "candidates": 231156,
+    "batch": 8,
+    "seconds": 0.4609878119081259,
+    "peak_vram_bytes": 257413120,
+    "gradient_sums": {
+      "visual": 90.34849955886602,
+      "acoustic": 311.4162860587239,
+      "floorplan": 0.32796622277237475,
+      "visual_retrieval": 0.006261793205339927,
+      "acoustic_retrieval": 0.14906044420786202,
+      "joint_head": 0.36965261821751483
+    },
+    "loss": 15.200516700744629,
+    "scope": "one first-step full-bank backward; no warm steady-state or whole-cache claim"
+  }
+]
