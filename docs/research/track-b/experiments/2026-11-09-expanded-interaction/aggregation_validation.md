@@ -23,3 +23,7 @@
 본 학습 `matched_v1/attention_42_initial.pt`를 사용한 19개 Val 장면, 1,216개 질의 replay 완료: Joint/R@1m/fine/raw20/NLL의 기준 F1 대비 허용 오차 초과가 0건이었다(`rtol=1e-5`, `atol=2e-5`). [검증 결과](main_initial42_validation.json). 실제 학습 SHA는 `c083c376631c3f6ed8d89daf9d3a9d93c350fd3b`, replay 실행 checkout SHA는 `1e74884e514a74135e2630879482fb6dc1fe5e61`이며 replay script SHA256은 `6c7291434f761402ac5d0e506e419016f14a32f27841e49b0c9432823ac7df22`이다. 무관한 Track A 두 파일의 기존 dirty 상태는 유지했으며 해당 파일은 replay 경로에서 사용하지 않았다.
 
 짧은 시험 실행과 본 학습 attention/concat의 seed42 초기 상태는 65개 tensor 모두 bitwise 동일했다([검증 결과](main_initial42_tensor_validation.json)). 저장 파일 해시는 직렬화 때문에 다를 수 있으므로 텐서 동일성과 구분했다. 이 결과는 아직 생성되지 않은 모든 seed/mode의 초기 상태를 증명하지 않으며, 최종 학습 성능에 대한 결론도 아니다. 상기 파일을 입력해 기존 `replay_initial_fusion` 명령을 새 출력 폴더에서 실행하면 재현할 수 있다.
+
+## 본 학습 seed43 초기 상태 검증
+
+`matched_v1/attention_43_initial.pt`도 동일한 19-Val/1,216-query 기준 F1 replay를 통과했다. Joint/R@1m/fine/raw20/NLL 허용 오차 초과0건([결과](main_initial43_validation.json)). 학습 SHA는 `c083c376631c3f6ed8d89daf9d3a9d93c350fd3b`, replay 실행 checkout은 `1c9195c9f9778cabb177815b290729a4d1ee970c`; replay script는 위 seed42 검증과 동일하다. 명령의 initial/out/seed를43에 대응하도록 변경해 실행했다. 기존 무관한 Track A dirty 파일 두 개는 보존하고 사용하지 않았다. 현재42·43 두 seed만 이 검증이 완료됐으며44 및 모든 mode의 초기 상태 검증은 최종 등록 시 별도 확인한다. 성능 비교나 독립 Test 검증으로 해석하지 않는다.
