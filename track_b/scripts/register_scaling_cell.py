@@ -7,9 +7,12 @@ from track_b.eval.extended_metrics import reliability_statistics
 def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
- p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--run',type=Path,required=True);p.add_argument('--pilot-cache',type=Path,required=True);p.add_argument('--condition',required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--run',type=Path,required=True);p.add_argument('--pilot-cache',type=Path,required=True);p.add_argument('--condition',required=True);p.add_argument('--fit-validation',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
  plan=read(a.root/'plan_v1/plan.json');condition=next(c for c in plan['conditions'] if c['name']==a.condition)
  setup=read(a.run/'protocol.json');summary=read(a.run/'summary.json');rows=read(a.run/'predictions.json')
+ verified=read(a.fit_validation/'validation.json');assert a.condition in verified['conditions']
+ hashes={f"{'visual' if r['stage']=='visual_joint' else 'acoustic'}_{r['seed']}":r['checkpoint_sha256'] for r in verified['rows'] if r['condition']==a.condition and r['stage'] in ['visual_joint','acoustic']}
+ assert setup['checkpoint_hashes']==hashes and len(hashes)==6
  assert setup['fixed_only'] and setup['extended_metrics'] and read(a.run/'selection.json')=={} and summary['selection']=={}
  assert setup['scene_ids']==condition['val_scenes'] and setup['seeds']==plan['seeds']
  assert setup['cache_manifest_sha256']==sha(a.root/'cache_v1/manifest.json')
