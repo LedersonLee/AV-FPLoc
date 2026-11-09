@@ -1,0 +1,11 @@
+{
+  "records": 2304,
+  "queries": 1152,
+  "metric_mismatches": 0,
+  "finite_feature_shape": [
+    20,
+    133
+  ],
+  "scope": "Development joint attention proposals only; no OOF discriminator fitting or classifier benefit",
+  "builder_code_sha": "af902d67d38abe42c3149f9bdc36e0b1eac2d76b"
+}

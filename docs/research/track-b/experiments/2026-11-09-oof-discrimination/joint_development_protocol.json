@@ -1,0 +1,40 @@
+{
+  "role": "development",
+  "scorer": "foundation interaction attention",
+  "training_scenes": [
+    "108736779_177263484",
+    "103997970_171031287",
+    "106366104_174226332",
+    "108294537_176710050",
+    "107734080_175999881",
+    "104348202_171513150",
+    "108736851_177263586",
+    "104348010_171512832",
+    "105515430_173104494",
+    "108294870_176710551",
+    "104862639_172226823",
+    "104348028_171512877",
+    "102344250",
+    "103997541_171030615",
+    "106366410_174226806",
+    "102816786"
+  ],
+  "candidate_scenes": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457"
+  ],
+  "visual_protocol_sha256": "da2ce6384b74931777957f96cb5e15335bf505796341474228590a1b7b202013",
+  "acoustic_protocol_sha256": "0e06a6abdbc38a4d980606056a107ff256b91fe800c479cfb5b7a131dddce178",
+  "feature_protocol_sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2",
+  "candidates": "raw20 torch.topk and diverse20 score-ordered 1m/30deg suppression",
+  "feature_dimension": 133,
+  "gt": "labels/metrics only, never feature or proposal input",
+  "upstream_exposure": "not ruled out; reused development method choices",
+  "test_accessed": false,
+  "interaction_protocol_sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af",
+  "posterior": "actual joint full field for proposals, support and posterior features"
+}
