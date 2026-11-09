@@ -12,5 +12,6 @@
   "evaluation_smoke": "passed54 rows,6U0 replay checks",
   "evaluation": "normal plus6 sequential shifts running",
   "audio_noise": "1216 clean spectra bitwise replay passed; generated hashes and SNR verified",
-  "runtime_audit": "passed one-query15 fields/cache rebuild/chunks; no Python opens, limited scope"
+  "runtime_audit": "passed one-query15 fields/cache rebuild/chunks; no Python opens, limited scope",
+  "aggregation": "implemented; full suite51 passed; incomplete7-condition set rejected; actual aggregate pending"
 }

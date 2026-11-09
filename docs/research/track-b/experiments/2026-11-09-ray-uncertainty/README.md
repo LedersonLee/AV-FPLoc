@@ -20,3 +20,5 @@ Train112/reused Val19×64, seeds42/43/44, .25m/36yaw,16rays. Frozen local means/
 [평가 진행](evaluation_progress.md):실제U0–U4 smoke 통과,정상조건전체평가실행중;audio noise1216질의검증완료.
 
 [추론 경로 점검](runtime_audit.md):실제checkpoint15개field비교 통과,정답/ID없는 입력과 제한된Python I/O 검사 완료.
+
+[집계 준비 검증](aggregation_preparation.md):전체조건완료gate와장면bootstrap/constant-scale분석검사통과.
