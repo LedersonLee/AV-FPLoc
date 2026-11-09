@@ -1,6 +1,6 @@
 {
   "input_integrity": "passed",
-  "u0_replay": "passed 14592 rows/14 metrics; full-score equivalence tests pending",
+  "u0_replay": "passed14592 rows/14metrics and10944 inline checks; historical full arrays unavailable; actual runtime audit limited to one query",
   "head_tests": "5 analytical tests passed; full suite49 passed",
   "smoke": "passed actual seed42 first4 Train queries,2steps; experts unchanged",
   "fits": "completed3 seeds,1000 updates,7168 Train queries; preservation/hash checks passed",
@@ -10,8 +10,13 @@
   "training_source_sha": "3caccd76fd46289f9301624255584fe0df490394",
   "shift_inputs": "all3 occlusion manifests verified with6 exact pilot overlaps each; noise1216 clean replay passed",
   "evaluation_smoke": "passed54 rows,6U0 replay checks",
-  "evaluation": "normal plus6 sequential shifts running",
+  "evaluation": "completed all7 conditions;426816 records;117 groups",
   "audio_noise": "1216 clean spectra bitwise replay passed; generated hashes and SNR verified",
   "runtime_audit": "passed one-query15 fields/cache rebuild/chunks; no Python opens, limited scope",
-  "aggregation": "implemented; full suite51 passed; incomplete7-condition set rejected; actual aggregate pending"
+  "aggregation": "aggregate_v2 passed full cohort, mean and reliability replay;994 primary/negative-transfer contrasts,990 transfer,132 scale-policy",
+  "completion": "completed; main hypothesis not supported; Exploratory",
+  "completed_date": "2026-11-10",
+  "aggregate_v1_correction": "code_sha argument typo; v2 corrected; numerical output bytes identical",
+  "final_regression": "GPU-visible:51 passed,2 existing autocast warnings; CPU-only:50 passed,1 CUDA skipped",
+  "completion_audit": "completion_audit.md"
 }

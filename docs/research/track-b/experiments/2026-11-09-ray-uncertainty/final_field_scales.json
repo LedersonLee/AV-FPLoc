@@ -1,0 +1,282 @@
+[
+  {
+    "condition": "normal",
+    "arm": "U0",
+    "visual": 2.949138766023935,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.18528250301107477,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "normal",
+    "arm": "U1",
+    "visual": 3.125743823942908,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.04021557926548113,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "normal",
+    "arm": "U2",
+    "visual": 3.215039151214194,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.03967009908834086,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "normal",
+    "arm": "U3",
+    "visual": 3.2230235692603806,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.039136943019816885,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "normal",
+    "arm": "U4",
+    "visual": 3.224840097080328,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.039514887457845614,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion25",
+    "arm": "U0",
+    "visual": 2.4917382819480016,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.21929422373714208,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion25",
+    "arm": "U1",
+    "visual": 2.734042928178321,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.045977185368892434,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion25",
+    "arm": "U2",
+    "visual": 2.3888897267088556,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.05338920431345066,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion25",
+    "arm": "U3",
+    "visual": 2.394003682786174,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.052689680758915024,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion25",
+    "arm": "U4",
+    "visual": 2.3928316911159637,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.05325455776049461,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion50",
+    "arm": "U0",
+    "visual": 2.5483017372653674,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.2144266529764584,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion50",
+    "arm": "U1",
+    "visual": 2.7254140036866854,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.04612275358728034,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion50",
+    "arm": "U2",
+    "visual": 2.2893499102802917,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.05571054085216147,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion50",
+    "arm": "U3",
+    "visual": 2.3045489036788545,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.05473491561854407,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion50",
+    "arm": "U4",
+    "visual": 2.3065044593000623,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.05524775510052431,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion75",
+    "arm": "U0",
+    "visual": 3.2531157513720945,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.16796937276684273,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion75",
+    "arm": "U1",
+    "visual": 3.518940660056838,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.035722000072980424,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion75",
+    "arm": "U2",
+    "visual": 2.771067224181535,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.046025921200534205,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion75",
+    "arm": "U3",
+    "visual": 2.784766522808033,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.04529618147465992,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "occlusion75",
+    "arm": "U4",
+    "visual": 2.7866969633063206,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.045727682336326486,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "brightness",
+    "arm": "U0",
+    "visual": 2.9188543499953914,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.18720489163728563,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "brightness",
+    "arm": "U1",
+    "visual": 3.115693816065527,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.04034529897231738,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "brightness",
+    "arm": "U2",
+    "visual": 3.22444112371784,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.039554427203963134,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "brightness",
+    "arm": "U3",
+    "visual": 3.2323828028318915,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.03902362358541188,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "brightness",
+    "arm": "U4",
+    "visual": 3.2342695792352685,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.039399682179803726,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_shuffle",
+    "arm": "U0",
+    "visual": 2.949138766023935,
+    "acoustic": 3.09640160301014,
+    "weighted_audio_to_visual_ratio": 0.18528250301107477,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_shuffle",
+    "arm": "U1",
+    "visual": 3.125743823942908,
+    "acoustic": 0.7123203915870634,
+    "weighted_audio_to_visual_ratio": 0.04021557926548113,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_shuffle",
+    "arm": "U2",
+    "visual": 3.215039151214194,
+    "acoustic": 0.7227318896421868,
+    "weighted_audio_to_visual_ratio": 0.03967009908834086,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_shuffle",
+    "arm": "U3",
+    "visual": 3.2230235692603806,
+    "acoustic": 0.7147893087627987,
+    "weighted_audio_to_visual_ratio": 0.039136943019816885,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_shuffle",
+    "arm": "U4",
+    "visual": 3.224840097080328,
+    "acoustic": 0.7220987631988368,
+    "weighted_audio_to_visual_ratio": 0.039514887457845614,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_noise20",
+    "arm": "U0",
+    "visual": 2.949138766023935,
+    "acoustic": 2.3799693267955853,
+    "weighted_audio_to_visual_ratio": 0.1424126229393457,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_noise20",
+    "arm": "U1",
+    "visual": 3.125743823942908,
+    "acoustic": 0.5853152095683312,
+    "weighted_audio_to_visual_ratio": 0.03304522864106424,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_noise20",
+    "arm": "U2",
+    "visual": 3.215039151214194,
+    "acoustic": 0.5025729560313681,
+    "weighted_audio_to_visual_ratio": 0.027585774546014984,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_noise20",
+    "arm": "U3",
+    "visual": 3.2230235692603806,
+    "acoustic": 0.5035773906305334,
+    "weighted_audio_to_visual_ratio": 0.027572432046147843,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  },
+  {
+    "condition": "audio_noise20",
+    "arm": "U4",
+    "visual": 3.224840097080328,
+    "acoustic": 0.5040531640182037,
+    "weighted_audio_to_visual_ratio": 0.027582936107959803,
+    "scope": "Mean query field standard deviation; ratio of means, not calibrated information"
+  }
+]

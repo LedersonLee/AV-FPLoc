@@ -1,24 +1,10 @@
 # Study 30 — 방향별 관측 불확실성 진단
 
-**상태: evaluation 진행 중. 3개 seed head 학습과 정상 조건 평가가 완료됐다. 가림 25%·50% 평가는 완료됐고 나머지 열화 조건은 순차 실행 중이다. 전체 조건 완료 전 효과 판정은 보류한다.** 기존 Study21/24/28의 음성 결과를 보존하고, 강한 Study27 F1을 독립 경로로 유지한다.
+**완료: 주 가설 지지 실패, Exploratory.** 정상 및 가림25/50/75%, brightness×0.2, audio shuffle, Gaussian20dB의 모든 U0–U4×V/A/fixed 평가를 완료했다. 정상 U3 Joint29.688%는 U0 34.402%보다 낮고, U2 대비 추가 pose 이득을 확인하지 못했다. 음향 열화의 U0 대비 개선은 고정 L1 대조에서도 나타나 방향별 uncertainty 고유 효과로 볼 수 없다. severe visual occlusion에서는 음향 단독 대비 negative transfer가 남는다.
 
-질문은 frozen ray mean에서 방향별 scale이 constant-L1/global scale보다 실제 pose matching과 열화 신뢰성에 유용한가이다. L2→L1 변경, 상대 모달리티 scale, FP supervision 근사, in-sample residual optimism을 경쟁 설명으로 구분한다. AVLoc의 구조 복제/새 attention/router/B2 후보 사용은 범위 밖이다.
+- [전체 결과·표·CI·실패와 한계](results.md)
+- [고정 protocol](protocol.json), [preflight](preflight_report.md), [최종 검증](validation.json)
+- [재현·source/checkpoint 출처](reproduction.md), [실행 registry](experiment_registry.csv)
+- [사전 결정 및 다음 Study 제안](decisions.md)
 
-- [사전 감사](preflight_report.md), [고정 실행 계획](protocol.json), [입력 검증](input_validation.json)
-- [결정 기록](decisions.md), [결과 상태](results.md), [재현](reproduction.md)
-
-Train112/reused Val19×64, seeds42/43/44, .25m/36yaw,16rays. Frozen local means/FP maps/scale/upstream. Train에서 작은 scale head만1000updates 학습할 계획이다. 기존 모델/checkpoint를 수정하지 않는다. protocol의 모든 U0–U4×V/A/fusion 및 declared shifts를 보고하며, 결과가 실패해도 조건을 선택적으로 삭제하지 않는다. Test를 사용하지 않는다.
-
-[구현 검증](implementation_validation.md): scale/Laplace 분석 검사5개 및 전체49개 통과, Train target 범위 확인. 실제 head 학습 smoke는 다음 단계다.
-
-[실제 학습 진행](training_progress.md):1seed/4query/2step smoke에서 원본 expert 보존과 head 업데이트 통과;3seed 본 학습 시작.
-
-최신 상태:3seed head 학습 완료·원본 expert 보존 통과. [fit 기록](completed_fit_summary.json). U0–U4 normal/shift 효과 검증은 다음 단계.
-
-[열화 조건 준비](shift_preparation.md):원본 RGB 가림3단계 및 body-RIR20dB 합성잡음 캐시 생성 중.
-
-[평가 진행](evaluation_progress.md):실제U0–U4 smoke 통과,정상조건전체평가실행중;audio noise1216질의검증완료.
-
-[추론 경로 점검](runtime_audit.md):실제checkpoint15개field비교 통과,정답/ID없는 입력과 제한된Python I/O 검사 완료.
-
-[집계 준비 검증](aggregation_preparation.md):전체조건완료gate와장면bootstrap/constant-scale분석검사통과.
+Train112/reused Val19×64, seeds42/43/44. Test 미사용. 기존 upstream/Val 노출과 반복 평가 때문에 독립 검증이 아니다. head1000updates 외 frozen F1을 보존했다. 이전 진행 문서들은 당시의 상태 기록이며, 최종 상태는 이 페이지와 results.md/validation.json을 따른다. 기존 Study21/24/28 실패를 덮어쓰지 않는다.

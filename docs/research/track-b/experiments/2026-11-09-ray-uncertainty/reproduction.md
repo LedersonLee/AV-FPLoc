@@ -30,3 +30,8 @@ python -m track_b.scripts.summarize_ray_uncertainty --root /results --out /resul
 ```
 
 위 집계 source의 전체 SHA는 provenance.json의 `aggregator_sha`를 따른다. 19개 장면을 재표집하며 seed/query를 장면 수로 세지 않는다. 최종 결과와 저장된 평가 요약의 일치 검사, 정상 대비 열화 paired 변화, 고정 scale-policy 보조 비교를 포함한다. 실행 이후의 검증 결과는 별도 기록한다.
+
+
+## 최종 집계 완료
+
+최종 산출물은 외부 root의 `aggregate_v2`이다. 앞선 `aggregate_v1`은 code_sha 인자 오기입 때문에 provenance 정정을 위해 보존 후 대체했다. 동일 source `8f2454a5ce50f0fff059dcc180da2d07057c1920`로 `--out /results/aggregate_v2`를 지정해 완료했고 수치 출력은 v1과 bytes 단위로 같다. 모든 평가 조건의 실행이 종료됐고117개 그룹과 원시 결과 재계산 검사가 통과했다. 재현 시에는 다른 새 출력 디렉터리를 사용한다.
