@@ -33,8 +33,8 @@ def main():
                             'MAP@1':avg('joint'),'SupportNMS@1':'NA','Disc@1':'NA','Visual-degraded@1':'NA','Furnished@1':avg('joint'),'NLL':'NA: stored nll is soft-target CE',
                             'new-scene setup s':'NA','storage MB':'NA','warm query ms':'see isolated diagnostic scope','peak VRAM':max(r['peak_vram_bytes'] for r in rs),'train GPUh':sum(r['training_seconds'] for r in rs)/3600})
     for run,commit,scenes,queries,note in [
-        ('audit_v1','5449980 + dirty sources later committed as 55c4238',135,71467,'Metadata/path audit; waveform sample132; no model fit'),
-        ('smoke_v1','5449980 + dirty sources later committed as 55c4238',1,8,'Synthetic overfit only; 300 updates'),
+        ('audit_v1','UNRECORDED run-time HEAD; task-start base19c1bd0 + dirty sources later committed as 55c4238',135,71467,'Metadata/path audit; waveform sample132; no model fit'),
+        ('smoke_v1','UNRECORDED run-time HEAD; task-start base19c1bd0 + dirty sources later committed as 55c4238',1,8,'Synthetic overfit only; 300 updates'),
         ('diagnostic_v1','c268a2f3574e7ba82fe566e39c0803e4f6cf737c',7,112,'Frozen local pilot diagnostics and Python I/O trace'),
         ('geometry_diagnostic_v1','c268a2f + dirty sources later committed as 2555b21',7,0,'FP boundary signature diagnostic only'),
         ('full_bank_profile','71ad8ee',1,1,'Random-init full375156 candidate inference; no accuracy claim')]:
@@ -67,7 +67,7 @@ def main():
                                     warning='Exploratory 3-scene resampling interval; no population guarantee or multiple-selection correction'))
     (out/'paired_scene_bootstrap.json').write_text(json.dumps(comparisons,indent=2))
     provenance=dict(code_commits=source_commits,environment_image='avfploc:cu124-clean',image_id='sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318',
-       audit_and_smoke_execution='base 5449980 plus then-uncommitted Track B sources subsequently committed as 55c4238; no model checkpoint loaded',
+       audit_and_smoke_execution='run-time HEAD UNRECORDED; task-start base19c1bd0 with concurrent migration5449980; then-uncommitted Track B sources subsequently committed as55c4238; no model checkpoint loaded',
        geometry_diagnostic_execution='base c268a2f plus new ray diagnostic sources subsequently committed as 2555b21',
        external_json_hashes={str(p.relative_to(root)):sha(p) for p in root.rglob('*.json') if p.name not in ('diagnostic_v1.json',) and 'audit_v1' not in str(p)},
        checkpoint_hashes={str(p.relative_to(root)):sha(p) for p in root.rglob('*.pt')},
