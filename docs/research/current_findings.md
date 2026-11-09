@@ -63,3 +63,5 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 [27개 matched 모델 비교](track-b/experiments/2026-11-09-foundation-regimes/completed_results.md)에서 frozen/partial도 초기 독립F1보다 Joint6.77–7.73%p 낮았다. 모든 초기 텐서와 고정 텐서 보존을 확인했으므로 인코더 변화만으로 저하를 설명할 수 없다. 새 결합부와 학습 가능한 점수 스케일은 여전히 바뀌므로 어느 쪽이 원인인지는 미검증이다. 이는16Train/6재사용Val의 Exploratory 결과이며, 규모 확대·독립평가·기작 성공을 뜻하지 않는다.
 
 [고정 모델의 점수 개입](track-b/experiments/2026-11-09-frozen-score-controls/completed_results.md)에서 초기 스케일 복원은 Joint2.34–2.78%p, 학습 게이트/잔차 제거는5.21–5.99%p를 회복했다. 둘을 복원하면 초기F1가 재현된다. 따라서 해당 고정 모델·재사용6장면에서는 두 변경 그룹이 모두 저하에 기여한다. NLL은 원래 결합 모델이 더 낮아 지표 간 tradeoff가 확인되지만, 학습 경로의 원인·물리 기작·일반화는 확정하지 않는다. 결합부 제거로 얻은 회복은 새로운 interaction의 성공이 아니다.
+
+[Track B 독립F1의 규모×학습량 비교](track-b/experiments/2026-11-09-expanded-cohort/completed_factorial_results.md)는36fits와19Val의4조건을 완료했다. 같은업데이트에서16→112장면은 Joint+7.24/+8.58%p를 보였지만, 업데이트만7배 늘리면16장면에서는−2.14%p,112장면에서는불확실했다. 이 nested cohort에서는 추가최적화보다 장면구성 확대가 유리했다는 근거이며, 장면수·내용다양성의 보편적인과효과나 M1결합성공·독립일반화를 증명하지 않는다.

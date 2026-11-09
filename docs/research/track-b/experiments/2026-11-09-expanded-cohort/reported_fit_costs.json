@@ -1,0 +1,26 @@
+[
+  {
+    "condition": "n16_budget1",
+    "stage_fits": 9,
+    "reported_training_seconds": 247.64128662040457,
+    "peak_allocated_bytes": 737844224
+  },
+  {
+    "condition": "n16_budget7",
+    "stage_fits": 9,
+    "reported_training_seconds": 1536.0889283712022,
+    "peak_allocated_bytes": 736807424
+  },
+  {
+    "condition": "n112_budget1",
+    "stage_fits": 9,
+    "reported_training_seconds": 189.72424903558567,
+    "peak_allocated_bytes": 1097687552
+  },
+  {
+    "condition": "n112_budget7",
+    "stage_fits": 9,
+    "reported_training_seconds": 1093.2156079823617,
+    "peak_allocated_bytes": 1098542592
+  }
+]

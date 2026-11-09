@@ -1,0 +1,55 @@
+{
+  "evaluation_visual_cache_protocol_sha256": "32569e216e08f401a3fac02d5d13bc7e3874cce6fc4ffabd60dfd63199298d07",
+  "calibration_reference_sha256": null,
+  "visual_weights": [
+    0.0,
+    0.85,
+    1.0
+  ],
+  "temperatures": [
+    1.0
+  ],
+  "selection": "none: prespecified fixed weights and temperature",
+  "fixed_only": true,
+  "extended_metrics": true,
+  "fixed": {
+    "visual_weight": 0.85,
+    "temperature": 1.0
+  },
+  "scene_ids": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457",
+    "108736737_177263406",
+    "104862573_172226682",
+    "108294765_176710386",
+    "106366134_174226362",
+    "104348082_171512994",
+    "102344115",
+    "103997478_171030528",
+    "106879005_174887124",
+    "106366173_174226431",
+    "105515286_173104287",
+    "108294798_176710428",
+    "102344307",
+    "108736800_177263517"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "evidence": "Exploratory: reused development scenes, not full-pipeline independence",
+  "checkpoint_hashes": {
+    "visual_42": "251d1a36219164ccc9daa875d7658e8228737747f1869843b6e91edd08d192f0",
+    "visual_43": "46cc0483fb0890abc277c7ae0de11dc62c8667281b05eaf2cfe74cbd40748319",
+    "visual_44": "7872ccaf0139a1d69119ee6c60ac29aa3148c681d04eedce7e70fba34ccee155",
+    "acoustic_42": "558fe44ed83b23884fcf437f9ad833860bc22bf7e55e7e84dd9a74d940fbdbfb",
+    "acoustic_43": "8083802dd83c79c289806106a9532ea5f2287522c5ca8469ea9017ea154c0b04",
+    "acoustic_44": "8ee9500c6b092605b61af7184a163063bfdc422f04be42c7325c65d661c72d56"
+  },
+  "cache_manifest_sha256": "41e5b136e914fd11f542105fcfff91f646e3a1b2ff6d07e70dfa16053edbc29f"
+}

@@ -1,3 +1,5 @@
+[Completed factorial results](completed_factorial_results.md): all36 fits/four evaluations verified. Scene expansion improves fixed-fusion Joint at matched updates; extra updates alone do not. Historical progress snapshots below are retained.
+
 # Expanded development cohort and scene-residency preparation
 
 2026-11-09. Track B, Exploratory. Status: preflight complete;131-scene structural cache generation/verification complete; expanded upstream visual feature extraction running; CPU scene-transfer implementation and three short fits complete. Strict bitwise equivalence check **failed and is retained**, with follow-up numeric diagnostics. No expanded-cohort training result or independent validation is claimed.

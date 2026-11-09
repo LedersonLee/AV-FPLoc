@@ -51,7 +51,7 @@
   "first_cell_records": 14592,
   "first_cell_unimodal_replay_checks": 7296,
   "incomplete_factorial_gate_rejection_verified": true,
-  "full_factorial_comparison_completed": false,
+  "full_factorial_comparison_completed": true,
   "uniform_prior_exit_code": 0,
   "uniform_prior_registration_exit_code": 0,
   "uniform_prior_query_keys": 1216,
@@ -75,5 +75,14 @@
   "final_scaling_cell_started": true,
   "third_scaling_cell_evaluation_exit_code": 0,
   "third_scaling_cell_registration_exit_code": 0,
-  "third_scaling_cell_records": 14592
+  "third_scaling_cell_records": 14592,
+  "scaling_models_status": "all36 stage fits complete",
+  "scaling_runner_exit_code": 0,
+  "all_cells_verification_exit_code": 0,
+  "all_cells_initial_weights_verified": true,
+  "fourth_scaling_cell_evaluation_exit_code": 0,
+  "fourth_scaling_cell_registration_exit_code": 0,
+  "factorial_comparison_exit_code": 0,
+  "total_evaluation_records": 58368,
+  "total_unimodal_replay_checks": 29184
 }

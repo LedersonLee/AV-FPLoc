@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    "n16_budget1",
+    "n16_budget7",
+    "n112_budget1",
+    "n112_budget7"
+  ],
+  "matched_records_per_cell": 14592,
+  "registries": {
+    "n16_budget1": "0c0204d36dc1aead7971618ed274d2bb2bd713336d7b87d69376c6ad9819d893",
+    "n16_budget7": "bdbed93c288c5fbbdf90835d1cc5130aee73faaf527f910dafc664c4fbdcde11",
+    "n112_budget1": "3e1f48be96c3a745dc365bc71107412f0a03248c12ad7581d9e3042b5e87a4ca",
+    "n112_budget7": "1a9dc8abf2a3c08925763b7766e03cce9280a07db256330f30ed208c9f712b9a"
+  },
+  "fit_validation_sha256": "a181372fc8a8c074411a3a543b4d211f66ed6338d4a0f31bd89aebfc7847afb9",
+  "plan_sha256": "4a66028cc0acf256036b411441fe8ee4e14246f054b017774aba81ee94477342",
+  "evidence": "Exploratory reused Val; no independent Test",
+  "test_accessed": false
+}
