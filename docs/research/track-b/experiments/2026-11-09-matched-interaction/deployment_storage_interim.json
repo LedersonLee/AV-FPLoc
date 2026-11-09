@@ -1,0 +1,76 @@
+{
+  "rows": [
+    {
+      "scene": "108736611_177263226",
+      "candidates": 99612,
+      "valid_xy": 2767,
+      "geometry_setup_seconds": 1.348858661018312,
+      "geometry_setup_scope": "CPU bank + boundary rays only; no encoder/RIR simulation; one run, no cold filesystem claim",
+      "expanded_candidate_float32_bytes": 13945680,
+      "raw_range_and_hit_arrays_bytes": 7968960,
+      "xy_fp_mask_bytes": 3410,
+      "floorplan_png_bytes": 7682,
+      "learned_descriptor_float32_bytes_per_encoder": 6375168,
+      "reference_groups": {
+        "positive_pairs_v1|canonical_map_extrusion": {
+          "positions": 60,
+          "npy_files": 240,
+          "npy_bytes": 166808688,
+          "missing_expected_yaws": 240,
+          "matched_positions": 4,
+          "matched_npy_bytes": 11282912
+        },
+        "dense_fp_bank_v1|canonical_map_extrusion": {
+          "positions": 4053,
+          "npy_files": 24318,
+          "npy_bytes": 17084034600,
+          "missing_expected_yaws": 0,
+          "matched_positions": 177,
+          "matched_npy_bytes": 746521200
+        }
+      },
+      "unique_reference_xy_matches": 180,
+      "xy_overlap_fraction": 0.06505240332490062,
+      "matching_tolerance": "rounded native X/Z to 4 decimals; yaw files counted, not loaded or independently waveform-verified",
+      "reference_metadata_inventory_seconds": 120.49554864200763,
+      "ordered_sidecar_sha256_digest": "2b72dd3840f6d7a9be3f35e5cd192ac6b71a582b39315d36bceab1b5241ecd7c"
+    },
+    {
+      "scene": "108736635_177263256",
+      "candidates": 81684,
+      "valid_xy": 2269,
+      "geometry_setup_seconds": 0.7958000658545643,
+      "geometry_setup_scope": "CPU bank + boundary rays only; no encoder/RIR simulation; one run, no cold filesystem claim",
+      "expanded_candidate_float32_bytes": 11435760,
+      "raw_range_and_hit_arrays_bytes": 6534720,
+      "xy_fp_mask_bytes": 2744,
+      "floorplan_png_bytes": 5708,
+      "learned_descriptor_float32_bytes_per_encoder": 5227776,
+      "reference_groups": {
+        "positive_pairs_v1|canonical_map_extrusion": {
+          "positions": 71,
+          "npy_files": 284,
+          "npy_bytes": 237582736,
+          "missing_expected_yaws": 284,
+          "matched_positions": 1,
+          "matched_npy_bytes": 3430688
+        },
+        "dense_fp_bank_v1|canonical_map_extrusion": {
+          "positions": 3413,
+          "npy_files": 20478,
+          "npy_bytes": 17016273456,
+          "missing_expected_yaws": 0,
+          "matched_positions": 139,
+          "matched_npy_bytes": 687863952
+        }
+      },
+      "unique_reference_xy_matches": 140,
+      "xy_overlap_fraction": 0.06170118995152049,
+      "matching_tolerance": "rounded native X/Z to 4 decimals; yaw files counted, not loaded or independently waveform-verified",
+      "reference_metadata_inventory_seconds": 95.72331359703094,
+      "ordered_sidecar_sha256_digest": "a8010659c233c6aee7552b48ed4a789be5aa2115cb5af7c4825aba2d05500dcb"
+    }
+  ],
+  "status": "running",
+  "limits": "Reference storage audit only; no FP-RIR used by proposed scorer; no matched B2 accuracy or historical generation time inferred."
+}

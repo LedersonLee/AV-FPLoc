@@ -134,3 +134,18 @@ Reproduce on CPU using sourcee58938f and the standard mounts:
 ```text
 python -m track_b.scripts.plot_interaction_cases --cache /prior/cache --run /out/matched_v2 --prior /prior --out /out/qualitative_seed42
 ```
+
+
+## Map-cache implementation and isolated storage audit (ongoing)
+
+Frozen-model `prepare_map` caches learned FP descriptors, candidate queries and hit weights; `forward_cached` reuses them while encoding each query once. Neither cache contains reference RIRs, labels or query identifiers. Training mode is rejected; invalidate caches whenever parameters/map/bank/calibration change. At source062913a, all three variants' cached vs uncached full candidate scores pass the declared3e-5/1e-5 tolerance with differing chunk sizes. The suite now passes27 tests. This refactor adds inference caching, not a new trained model, and does not alter the already-imported training process.
+
+A GPU benchmark runner (`benchmark_interaction_cache`, sourcea2457fb) is prepared to measure learned-map setup,20 single-query timings after2 warmups, memory and cached/uncached agreement. **It has not run yet**, to avoid simultaneous GPU load during training. It explicitly excludes file decode/RIR preprocessing and geometric ray setup; those must not be hidden inside an end-to-end latency claim. Complete sensor-to-pose timing and accuracy–cost Pareto remain outstanding.
+
+Storage audit sourcea52b3f4 counts existing `.npy` file bytes and reads FP-role sidecars only, without loading reference waveform payloads or feeding them to any proposed model. The first two completed scene inventories are retained as an explicitly running [partial snapshot](deployment_storage_interim.json). First scene existing dense0.2m references occupy17,084,034,600bytes plus166,808,688bytes of paired-position references. Proposed0.25m/36 candidate geometry occupies13,945,680bytes in expanded35float form; CPU candidate/ray setup took1.349s (one run). These are **different bank scopes**, not a measured like-for-like savings ratio.
+
+[Reference schedule audit](reference_grid_contract.json) shows the four found dense schedules use0.2m spacing and the same canonical map hashes as current inputs; two selected scenes lack that schedule at the expected path. This is not a global absence claim. First/second scene overlap with the proposed0.25m XY bank is only6.505%/6.170%, using4-decimal coordinate rounding for inventory membership. Existing positive-pair references use a different yaw schedule; the inventory's missing-six-yaw count for them is not automatically missing data under their own protocol. Do not conflate reference metadata traversal time with historical RIR generation time, and do not infer matched B2 accuracy from this storage audit.
+
+Current implication: deployment storage can be measured, but directly reusing these reference arrays does not provide a same-candidate B2 baseline for the0.25m scorer. A fair comparison needs a verified common grid/mask and actual evaluation, or an explicit unavailable entry. Query-RIR generation/training storage is still required by Track B and is never counted as eliminated.
+
+The full storage traversal is still live and must be allowed to finish; keep its original process rather than restarting on a slow file-system poll. Reproduce the audit with `python3 -m track_b.scripts.audit_deployment_storage --root <HSSD> --cache <structure_cache> --out <fresh_output.json>`. The expected-path reference schedule probe initially encountered an absent file and was corrected to record absences rather than impute data; no observations or files were modified.

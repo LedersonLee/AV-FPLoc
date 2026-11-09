@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "scene": "108736611_177263226",
+      "status": "found",
+      "schedule_sha256": "b514e95616fe3a1c7330a9b6a876757a437b1316a3b4a7b45864c1ba323efa03",
+      "version": "dense_fp_bank_v1",
+      "grid_spacing_m": 0.2,
+      "positions": 4053,
+      "physical_records": 24318,
+      "query_count": 0,
+      "namespace": "p3000000+ global evaluation grid; no GT injection",
+      "map_sha256": "2a18cd06d2f082178593601f7d2eb219a7fd4815850fe6b778bfa6695732317d",
+      "map_hash_matches_current": true,
+      "geometry": "canonical_map_extrusion",
+      "height_assumption": "semantic region floor_height + extrusion_height; known-height assumption, not a ceiling estimator"
+    },
+    {
+      "scene": "108736635_177263256",
+      "status": "found",
+      "schedule_sha256": "3d19ef5c2009b68f5be5fb084f42d0777d79a8da90a4006d9bf317d1ee4c47dc",
+      "version": "dense_fp_bank_v1",
+      "grid_spacing_m": 0.2,
+      "positions": 3413,
+      "physical_records": 20478,
+      "query_count": 0,
+      "namespace": "p3000000+ global evaluation grid; no GT injection",
+      "map_sha256": "cbacdeea1a608ef793d9774547e171675da0eda7b80048a1b25529148c131c7b",
+      "map_hash_matches_current": true,
+      "geometry": "canonical_map_extrusion",
+      "height_assumption": "semantic region floor_height + extrusion_height; known-height assumption, not a ceiling estimator"
+    },
+    {
+      "scene": "105515448_173104512",
+      "status": "schedule_absent_at_expected_path"
+    },
+    {
+      "scene": "108294783_176710410",
+      "status": "found",
+      "schedule_sha256": "45dc430f28f09680d7e931cff936ee44327648ff67d0679b6750ec760de0940a",
+      "version": "dense_fp_bank_v1",
+      "grid_spacing_m": 0.2,
+      "positions": 3315,
+      "physical_records": 19890,
+      "query_count": 0,
+      "namespace": "p3000000+ global evaluation grid; no GT injection",
+      "map_sha256": "c06db5efb49b3800001e0356fa0715c59a47b01ad5351875e2659e8a294ea700",
+      "map_hash_matches_current": true,
+      "geometry": "canonical_map_extrusion",
+      "height_assumption": "semantic region floor_height + extrusion_height; known-height assumption, not a ceiling estimator"
+    },
+    {
+      "scene": "108294624_176710203",
+      "status": "found",
+      "schedule_sha256": "440badc1f712d1e834024e4e73976d0b2a6cd7c0e638159b837f814ca3ecbc25",
+      "version": "dense_fp_bank_v1",
+      "grid_spacing_m": 0.2,
+      "positions": 3781,
+      "physical_records": 22686,
+      "query_count": 0,
+      "namespace": "p3000000+ global evaluation grid; no GT injection",
+      "map_sha256": "3fcbeb2b4446d8d1a04194b96b82305ef8ecb1b39a40e46b938e8096de181210",
+      "map_hash_matches_current": true,
+      "geometry": "canonical_map_extrusion",
+      "height_assumption": "semantic region floor_height + extrusion_height; known-height assumption, not a ceiling estimator"
+    },
+    {
+      "scene": "102344457",
+      "status": "schedule_absent_at_expected_path"
+    }
+  ],
+  "proposed_grid_spacing_m": 0.25,
+  "scope": "metadata only, selected six Val scenes, no reference waveform loaded; absent paths not imputed"
+}
