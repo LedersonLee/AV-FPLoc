@@ -67,3 +67,18 @@ Attention seed42 completed1,000 updates: Joint4.6875%, R@1m7.5521%, Fine0.2604%,
 The attention42 and concat42 **initial checkpoint tensors are exactly equal** across all state keys; further modes/seeds await initialization and the full post-run audit. [Partial verification](initialization_partial.json). Aggregator `track_b.scripts.summarize_interaction` refuses to publish a full result unless all nine fits and final update indices exist, every initial state matches its seed anchor, and parameter counts match.
 
 [Selected-condition audit](selected_conditions.json) checked all1,408 already-selected Train/Val observed sidecars: furnished_native_scene, materials=false, transmission=false throughout. No paired furnished/unfurnished/material-varied observation is represented in this cache. This is not an assertion of absence across the entire dataset. A top-level legacy catalog read during discovery described clutter conditions for a Test scene; these are metadata only and its observations were not opened or used. A broad filename listing was stopped because it was unnecessarily slow; it provided no robustness evaluation. Follow-up must obtain a suitable non-Test query-condition pair or state that physical shift remains unvalidated; it must not repurpose candidate FP-RIR references as the proposed observation pipeline.
+
+
+## Full-bank runtime and frame audit
+
+At audit source `23a398b`, CPU inference of the completed attention42 checkpoint on one development query scores all99,612 valid SE(2) candidates. Raster scattering has exactly99,612 finite entries. Removing GT/auxiliary target keys from the loaded scene does not change the output bit-for-bit. Only the selected observation-cache and checkpoint files are opened during loading; forward execution opens no observation/reference files. PyTorch lazily imports its `opt_einsum` bytecode, explicitly retained in the trace. [Actual runtime trace](runtime_audit.json). This proves the traced entrypoint for one real query/map, not an exhaustive audit of every pipeline entrypoint.
+
+First audit attempt at `b2e6995` stopped because its zero-file-open assertion classified that framework lazy import as unexpected. It did not find a reference loader; the initial failure log is retained externally as `runtime_audit.log`. Revised audit permits exactly that known framework bytecode path, records it, and still rejects all other forward file accesses; replay exits0. No performance values or training artifacts were altered.
+
+The test suite now has25 passing tests. Added interaction-specific tests verify joint rigid translation/rotation of map coordinates (tolerance3e-5 absolute/1e-5 relative), new raster sizes, and score changes under observed-audio swapping. This is coordinate-frame equivariance, not invariance to physically rotating the camera/microphone observation independently of the map. Physical orientation and real-world generalization remain separate requirements.
+
+Reproduce with the same container mounts, CPU-only (omit `--gpus`):
+
+```text
+python -m track_b.scripts.audit_interaction_runtime --scene /prior/cache/108736611_177263226.pt --checkpoint /out/matched_v2/attention_42.pt --out /out/runtime_audit_v2.json
+```

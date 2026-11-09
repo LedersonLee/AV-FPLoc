@@ -1,0 +1,22 @@
+{
+  "scene": "108736611_177263226",
+  "queries": 1,
+  "candidates": 99612,
+  "checkpoint_sha256": "7677102bd95d829aaee052b019304ded198e373446482c5b634200d122dde6a0",
+  "scene_cache_sha256": "74d8f6f5b9ad4b9acaac32e0f7d6b99104558e406f6be23b7416e115741ae333",
+  "label_removal_bitwise_equal": true,
+  "full_raster_finite_count": 99612,
+  "load_open_paths": [
+    "/prior/cache/108736611_177263226.pt",
+    "/out/matched_v2/attention_42.pt"
+  ],
+  "forward_open_paths": [
+    "/usr/local/lib/python3.10/site-packages/torch/backends/opt_einsum/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "framework_lazy_imports": [
+    "/usr/local/lib/python3.10/site-packages/torch/backends/opt_einsum/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "unexpected_forward_paths": [],
+  "forbidden_reference_paths": [],
+  "scope": "Actual completed attention checkpoint, one held-out development scene, one full-bank query, CPU audit; no observation/reference file opens after inputs loaded; explicit framework lazy import recorded. Broader entrypoints/other scenes not traced here."
+}

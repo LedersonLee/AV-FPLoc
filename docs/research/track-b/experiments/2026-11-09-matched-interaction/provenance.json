@@ -12,7 +12,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "a3ca25464be8b045bfbfb418d822ca412a8be5eea13778a464c6c699920749eb"
+      "sha256": "04e0c17b80b06d001b4af153d57f40b0bbf182ee2b1f023fbed5d140230fc683"
     },
     {
       "git_copy": "initialization_partial.json",
@@ -31,11 +31,22 @@
       "sha256": "9a469cbb78890c5c744df0ab5ab19531410036c8d2a14149a649b1811dcc97fc"
     },
     {
+      "git_copy": "runtime_audit.json",
+      "sha256": "1969a7cc46edf24659adf24684f052570ae754bd2b09c5284d39649efab56789"
+    },
+    {
       "git_copy": "selected_conditions.json",
       "sha256": "e095d635c5ec56d223434fb0ca57877ab8878a8891937fd1c0d2f0f8aaf8181a"
     }
   ],
   "followup_sources": {
-    "aggregation_and_condition_audit": "10f1db6575b00a93efdd16dcb7e7e5d0d6120bf1"
+    "aggregation_and_condition_audit": "10f1db6575b00a93efdd16dcb7e7e5d0d6120bf1",
+    "runtime_audit": "23a398bb1654551e5b56922964fc26905f69987d"
+  },
+  "runtime_audit_initial_failure": {
+    "source": "b2e69956bc3897673c056305f290c06ac6ea800a",
+    "exit": 1,
+    "log_sha256": "9671e72ee5b0b2220ffdb33617f07c703609239e26383feebdef78bc05c7e0a4",
+    "reason": "strict I/O assertion rejected framework opt_einsum lazy bytecode import; not a reference data access"
   }
 }
