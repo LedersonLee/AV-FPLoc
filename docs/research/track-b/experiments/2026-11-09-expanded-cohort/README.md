@@ -85,3 +85,5 @@ n16_budget7 completed9 stage fits; all cohorts,1,216 Val query keys/model, sched
 ### Third scaling cell complete; final cell training
 
 n112_budget1 completed9 stage fits and passed the same cohort/query/update/initial-state validation (third_cell_validation.json, exit0). Fixed-only extended evaluation n112_budget1_evaluation_v1 started, session34272. Execution reference01ad4694114a6973255e19c58bc093b4d8dcd9ea; training source remains5cf803681c2d144f3a620bc00c1ab6b841e48e7c. No third-cell performance is reported before completed registration. The frozen runner is now at n112_budget7_visual_aux; full factorial comparison remains gated until every cell is complete.
+
+[Third cell completed results](third_cell_results.md):112Train/budget1 fixed Joint34.402% vs visual21.848%, within-cell+12.555pp[10.115,15.159]; fine/raw20/diverse20 improve, ECE worsens.14,592 records verified. Final cell and factorial inference remain pending.

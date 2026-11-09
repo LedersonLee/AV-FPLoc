@@ -1,0 +1,1982 @@
+[
+  {
+    "stratum": "all19",
+    "method": "visual",
+    "scenes": 19,
+    "cases": 3648,
+    "mean": {
+      "joint": 0.21847587719298245,
+      "r1": 0.2382127192982456,
+      "fine": 0.015076754385964912,
+      "raw20": 0.6792763157894737,
+      "diverse20": 0.815515350877193,
+      "nll": 9.68863028117962,
+      "entropy": 10.495705296595892,
+      "raw5": 0.43667763157894735,
+      "raw10": 0.5633223684210527,
+      "strict_05_15": 0.15597587719298245,
+      "strict_02_10": 0.06030701754385965,
+      "normalized_entropy": 0.9286815242561021
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.21134868421052633,
+        "r1": 0.23026315789473684,
+        "fine": 0.01644736842105263,
+        "raw20": 0.6759868421052632,
+        "diverse20": 0.8108552631578947,
+        "nll": 9.62527574990925,
+        "entropy": 10.458921906195188,
+        "raw5": 0.42598684210526316,
+        "raw10": 0.5567434210526315,
+        "strict_05_15": 0.15625,
+        "strict_02_10": 0.05345394736842105,
+        "normalized_entropy": 0.9254385337235247
+      },
+      "43": {
+        "joint": 0.23190789473684212,
+        "r1": 0.25164473684210525,
+        "fine": 0.02138157894736842,
+        "raw20": 0.6932565789473685,
+        "diverse20": 0.8264802631578947,
+        "nll": 9.722950295005974,
+        "entropy": 10.512416173752985,
+        "raw5": 0.47039473684210525,
+        "raw10": 0.5830592105263158,
+        "strict_05_15": 0.16776315789473684,
+        "strict_02_10": 0.07319078947368421,
+        "normalized_entropy": 0.930154227749712
+      },
+      "44": {
+        "joint": 0.21217105263157895,
+        "r1": 0.23273026315789475,
+        "fine": 0.007401315789473684,
+        "raw20": 0.6685855263157895,
+        "diverse20": 0.8092105263157895,
+        "nll": 9.717664798623638,
+        "entropy": 10.5157778098395,
+        "raw5": 0.4136513157894737,
+        "raw10": 0.5501644736842105,
+        "strict_05_15": 0.14391447368421054,
+        "strict_02_10": 0.054276315789473686,
+        "normalized_entropy": 0.9304518112950695
+      }
+    },
+    "reliability": {
+      "ece": 0.2045202109651048,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 3648,
+          "confidence": 0.013955666227877628,
+          "accuracy": 0.21847587719298245
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 365,
+          "actual_coverage": 0.10005482456140351,
+          "risk": 0.7013698630136986
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 912,
+          "actual_coverage": 0.25,
+          "risk": 0.6666666666666667
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1824,
+          "actual_coverage": 0.5,
+          "risk": 0.7165570175438596
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 2736,
+          "actual_coverage": 0.75,
+          "risk": 0.756578947368421
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 3648,
+          "actual_coverage": 1.0,
+          "risk": 0.7815241228070176
+        }
+      ],
+      "translation_median_m": 4.619388580322266,
+      "translation_p90_m": 12.054674816131595,
+      "yaw_median_deg": 84.99999237060547,
+      "yaw_p90_deg": 174.99998474121094
+    }
+  },
+  {
+    "stratum": "all19",
+    "method": "acoustic",
+    "scenes": 19,
+    "cases": 3648,
+    "mean": {
+      "joint": 0.07044956140350878,
+      "r1": 0.11074561403508772,
+      "fine": 0.0021929824561403508,
+      "raw20": 0.29523026315789475,
+      "diverse20": 0.581140350877193,
+      "nll": 9.56980396362773,
+      "entropy": 10.057301285235505,
+      "raw5": 0.15899122807017543,
+      "raw10": 0.21710526315789475,
+      "strict_05_15": 0.027960526315789474,
+      "strict_02_10": 0.005482456140350877,
+      "normalized_entropy": 0.8899259457131732
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.07154605263157894,
+        "r1": 0.109375,
+        "fine": 0.0008223684210526315,
+        "raw20": 0.296875,
+        "diverse20": 0.5896381578947368,
+        "nll": 9.546371238012062,
+        "entropy": 10.040676618092938,
+        "raw5": 0.15625,
+        "raw10": 0.21875,
+        "strict_05_15": 0.027960526315789474,
+        "strict_02_10": 0.004934210526315789,
+        "normalized_entropy": 0.8884525888499608
+      },
+      "43": {
+        "joint": 0.0649671052631579,
+        "r1": 0.11595394736842106,
+        "fine": 0.004111842105263158,
+        "raw20": 0.29605263157894735,
+        "diverse20": 0.5797697368421053,
+        "nll": 9.583765580073782,
+        "entropy": 10.050731773439207,
+        "raw5": 0.16529605263157895,
+        "raw10": 0.22450657894736842,
+        "strict_05_15": 0.027960526315789474,
+        "strict_02_10": 0.008223684210526315,
+        "normalized_entropy": 0.8893073444572792
+      },
+      "44": {
+        "joint": 0.07483552631578948,
+        "r1": 0.1069078947368421,
+        "fine": 0.001644736842105263,
+        "raw20": 0.29276315789473684,
+        "diverse20": 0.5740131578947368,
+        "nll": 9.57927507279735,
+        "entropy": 10.080495464174371,
+        "raw5": 0.15542763157894737,
+        "raw10": 0.2080592105263158,
+        "strict_05_15": 0.027960526315789474,
+        "strict_02_10": 0.003289473684210526,
+        "normalized_entropy": 0.8920179038322796
+      }
+    },
+    "reliability": {
+      "ece": 0.03987069741011957,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 3615,
+          "confidence": 0.029827409253596105,
+          "accuracy": 0.06998616874135546
+        },
+        {
+          "bin": 1,
+          "count": 33,
+          "confidence": 0.1128973150343606,
+          "accuracy": 0.12121212121212122
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 365,
+          "actual_coverage": 0.10005482456140351,
+          "risk": 0.8438356164383561
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 912,
+          "actual_coverage": 0.25,
+          "risk": 0.881578947368421
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1824,
+          "actual_coverage": 0.5,
+          "risk": 0.9051535087719298
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 2736,
+          "actual_coverage": 0.75,
+          "risk": 0.9184941520467836
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 3648,
+          "actual_coverage": 1.0,
+          "risk": 0.9295504385964912
+        }
+      ],
+      "translation_median_m": 4.760512351989746,
+      "translation_p90_m": 12.433311462402344,
+      "yaw_median_deg": 89.99999237060547,
+      "yaw_p90_deg": 169.99998474121094
+    }
+  },
+  {
+    "stratum": "all19",
+    "method": "fixed",
+    "scenes": 19,
+    "cases": 3648,
+    "mean": {
+      "joint": 0.34402412280701755,
+      "r1": 0.3665021929824561,
+      "fine": 0.030153508771929825,
+      "raw20": 0.7047697368421053,
+      "diverse20": 0.8966557017543859,
+      "nll": 9.463878732370702,
+      "entropy": 10.487120142369939,
+      "raw5": 0.5200109649122807,
+      "raw10": 0.6058114035087719,
+      "strict_05_15": 0.2538377192982456,
+      "strict_02_10": 0.09320175438596491,
+      "normalized_entropy": 0.9279244834561584
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.3560855263157895,
+        "r1": 0.37993421052631576,
+        "fine": 0.027138157894736843,
+        "raw20": 0.7039473684210527,
+        "diverse20": 0.9037828947368421,
+        "nll": 9.398103801827682,
+        "entropy": 10.451331398989025,
+        "raw5": 0.5205592105263158,
+        "raw10": 0.602796052631579,
+        "strict_05_15": 0.2598684210526316,
+        "strict_02_10": 0.10115131578947369,
+        "normalized_entropy": 0.9247641167164984
+      },
+      "43": {
+        "joint": 0.34786184210526316,
+        "r1": 0.3675986842105263,
+        "fine": 0.03289473684210526,
+        "raw20": 0.7055921052631579,
+        "diverse20": 0.8955592105263158,
+        "nll": 9.499641273758913,
+        "entropy": 10.502486138751632,
+        "raw5": 0.5230263157894737,
+        "raw10": 0.6060855263157895,
+        "strict_05_15": 0.2524671052631579,
+        "strict_02_10": 0.08881578947368421,
+        "normalized_entropy": 0.9292730478689685
+      },
+      "44": {
+        "joint": 0.328125,
+        "r1": 0.3519736842105263,
+        "fine": 0.03042763157894737,
+        "raw20": 0.7047697368421053,
+        "diverse20": 0.890625,
+        "nll": 9.493891121525513,
+        "entropy": 10.507542889369162,
+        "raw5": 0.5164473684210527,
+        "raw10": 0.6085526315789473,
+        "strict_05_15": 0.24917763157894737,
+        "strict_02_10": 0.08963815789473684,
+        "normalized_entropy": 0.9297362857830084
+      }
+    },
+    "reliability": {
+      "ece": 0.3263287800186127,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 3648,
+          "confidence": 0.01769534278840486,
+          "accuracy": 0.34402412280701755
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 365,
+          "actual_coverage": 0.10005482456140351,
+          "risk": 0.589041095890411
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 912,
+          "actual_coverage": 0.25,
+          "risk": 0.5745614035087719
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1824,
+          "actual_coverage": 0.5,
+          "risk": 0.6129385964912281
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 2736,
+          "actual_coverage": 0.75,
+          "risk": 0.6483918128654971
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 3648,
+          "actual_coverage": 1.0,
+          "risk": 0.6559758771929824
+        }
+      ],
+      "translation_median_m": 2.610076427459717,
+      "translation_p90_m": 11.220115852355956,
+      "yaw_median_deg": 59.999996185302734,
+      "yaw_p90_deg": 170.00001525878906
+    }
+  },
+  {
+    "stratum": "all19",
+    "method": "fixed_audio_shuffle",
+    "scenes": 19,
+    "cases": 3648,
+    "mean": {
+      "joint": 0.10416666666666667,
+      "r1": 0.1299342105263158,
+      "fine": 0.005756578947368421,
+      "raw20": 0.32922149122807015,
+      "diverse20": 0.575109649122807,
+      "nll": 9.8297532241334,
+      "entropy": 10.538780924520994,
+      "raw5": 0.19188596491228072,
+      "raw10": 0.25685307017543857,
+      "strict_05_15": 0.05893640350877193,
+      "strict_02_10": 0.017543859649122806,
+      "normalized_entropy": 0.9325151491605258
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.12088815789473684,
+        "r1": 0.14473684210526316,
+        "fine": 0.008223684210526315,
+        "raw20": 0.36430921052631576,
+        "diverse20": 0.5904605263157895,
+        "nll": 9.76350059438693,
+        "entropy": 10.50476715360817,
+        "raw5": 0.21134868421052633,
+        "raw10": 0.27960526315789475,
+        "strict_05_15": 0.06743421052631579,
+        "strict_02_10": 0.022203947368421052,
+        "normalized_entropy": 0.9295093432135063
+      },
+      "43": {
+        "joint": 0.09375,
+        "r1": 0.12088815789473684,
+        "fine": 0.003289473684210526,
+        "raw20": 0.3034539473684211,
+        "diverse20": 0.5814144736842105,
+        "nll": 9.86092887465891,
+        "entropy": 10.554819342337156,
+        "raw5": 0.17927631578947367,
+        "raw10": 0.2393092105263158,
+        "strict_05_15": 0.04851973684210526,
+        "strict_02_10": 0.01069078947368421,
+        "normalized_entropy": 0.9339240201803896
+      },
+      "44": {
+        "joint": 0.09786184210526316,
+        "r1": 0.12417763157894737,
+        "fine": 0.005756578947368421,
+        "raw20": 0.3199013157894737,
+        "diverse20": 0.553453947368421,
+        "nll": 9.864830203354359,
+        "entropy": 10.556756277617655,
+        "raw5": 0.18503289473684212,
+        "raw10": 0.25164473684210525,
+        "strict_05_15": 0.06085526315789474,
+        "strict_02_10": 0.019736842105263157,
+        "normalized_entropy": 0.9341120840876816
+      }
+    },
+    "reliability": {
+      "ece": 0.08856889575952409,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 3648,
+          "confidence": 0.01559777090714258,
+          "accuracy": 0.10416666666666667
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 365,
+          "actual_coverage": 0.10005482456140351,
+          "risk": 0.8356164383561644
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 912,
+          "actual_coverage": 0.25,
+          "risk": 0.8377192982456141
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1824,
+          "actual_coverage": 0.5,
+          "risk": 0.8706140350877193
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 2736,
+          "actual_coverage": 0.75,
+          "risk": 0.8866959064327485
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 3648,
+          "actual_coverage": 1.0,
+          "risk": 0.8958333333333334
+        }
+      ],
+      "translation_median_m": 5.123717784881592,
+      "translation_p90_m": 12.238513183593751,
+      "yaw_median_deg": 89.99999237060547,
+      "yaw_p90_deg": 170.00001525878906
+    }
+  },
+  {
+    "stratum": "original6",
+    "method": "visual",
+    "scenes": 6,
+    "cases": 1152,
+    "mean": {
+      "joint": 0.20833333333333334,
+      "r1": 0.2230902777777778,
+      "fine": 0.013888888888888888,
+      "raw20": 0.6857638888888888,
+      "diverse20": 0.8177083333333334,
+      "nll": 9.849864426586363,
+      "entropy": 10.710833242370022,
+      "raw5": 0.4383680555555556,
+      "raw10": 0.5555555555555556,
+      "strict_05_15": 0.15538194444444445,
+      "strict_02_10": 0.0642361111111111,
+      "normalized_entropy": 0.9317139255093322
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.203125,
+        "r1": 0.21875,
+        "fine": 0.020833333333333332,
+        "raw20": 0.6875,
+        "diverse20": 0.8046875,
+        "nll": 9.78379604468743,
+        "entropy": 10.678165597220262,
+        "raw5": 0.4427083333333333,
+        "raw10": 0.5520833333333334,
+        "strict_05_15": 0.1640625,
+        "strict_02_10": 0.0546875,
+        "normalized_entropy": 0.9288740834538897
+      },
+      "43": {
+        "joint": 0.21875,
+        "r1": 0.23177083333333334,
+        "fine": 0.010416666666666666,
+        "raw20": 0.6901041666666666,
+        "diverse20": 0.8307291666666666,
+        "nll": 9.884874512751898,
+        "entropy": 10.727417074143887,
+        "raw5": 0.4739583333333333,
+        "raw10": 0.5833333333333334,
+        "strict_05_15": 0.16145833333333334,
+        "strict_02_10": 0.06510416666666667,
+        "normalized_entropy": 0.9331559981953834
+      },
+      "44": {
+        "joint": 0.203125,
+        "r1": 0.21875,
+        "fine": 0.010416666666666666,
+        "raw20": 0.6796875,
+        "diverse20": 0.8177083333333334,
+        "nll": 9.880922722319761,
+        "entropy": 10.72691705574592,
+        "raw5": 0.3984375,
+        "raw10": 0.53125,
+        "strict_05_15": 0.140625,
+        "strict_02_10": 0.07291666666666667,
+        "normalized_entropy": 0.9331116948787234
+      }
+    },
+    "reliability": {
+      "ece": 0.19831152749682388,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 1152,
+          "confidence": 0.01002180583650948,
+          "accuracy": 0.20833333333333334
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 116,
+          "actual_coverage": 0.10069444444444445,
+          "risk": 0.5431034482758621
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 288,
+          "actual_coverage": 0.25,
+          "risk": 0.6909722222222222
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 576,
+          "actual_coverage": 0.5,
+          "risk": 0.7621527777777778
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 864,
+          "actual_coverage": 0.75,
+          "risk": 0.7789351851851851
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 1152,
+          "actual_coverage": 1.0,
+          "risk": 0.7916666666666666
+        }
+      ],
+      "translation_median_m": 5.154486656188965,
+      "translation_p90_m": 11.321785068511968,
+      "yaw_median_deg": 84.99999237060547,
+      "yaw_p90_deg": 174.99998474121094
+    }
+  },
+  {
+    "stratum": "original6",
+    "method": "acoustic",
+    "scenes": 6,
+    "cases": 1152,
+    "mean": {
+      "joint": 0.05642361111111111,
+      "r1": 0.10590277777777778,
+      "fine": 0.003472222222222222,
+      "raw20": 0.2803819444444444,
+      "diverse20": 0.5633680555555556,
+      "nll": 9.729867918623818,
+      "entropy": 10.243109904229641,
+      "raw5": 0.1388888888888889,
+      "raw10": 0.1909722222222222,
+      "strict_05_15": 0.0234375,
+      "strict_02_10": 0.006076388888888889,
+      "normalized_entropy": 0.8910933541085433
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.046875,
+        "r1": 0.08854166666666667,
+        "fine": 0.0026041666666666665,
+        "raw20": 0.2630208333333333,
+        "diverse20": 0.5755208333333334,
+        "nll": 9.714832864701748,
+        "entropy": 10.224904231727123,
+        "raw5": 0.1328125,
+        "raw10": 0.19010416666666666,
+        "strict_05_15": 0.015625,
+        "strict_02_10": 0.0078125,
+        "normalized_entropy": 0.8895104819999963
+      },
+      "43": {
+        "joint": 0.049479166666666664,
+        "r1": 0.10677083333333333,
+        "fine": 0.0078125,
+        "raw20": 0.2890625,
+        "diverse20": 0.5572916666666666,
+        "nll": 9.751694536457459,
+        "entropy": 10.240595584114393,
+        "raw5": 0.1328125,
+        "raw10": 0.1875,
+        "strict_05_15": 0.028645833333333332,
+        "strict_02_10": 0.0078125,
+        "normalized_entropy": 0.8908646747222004
+      },
+      "44": {
+        "joint": 0.07291666666666667,
+        "r1": 0.12239583333333333,
+        "fine": 0.0,
+        "raw20": 0.2890625,
+        "diverse20": 0.5572916666666666,
+        "nll": 9.723076354712248,
+        "entropy": 10.263829896847406,
+        "raw5": 0.15104166666666666,
+        "raw10": 0.1953125,
+        "strict_05_15": 0.026041666666666668,
+        "strict_02_10": 0.0026041666666666665,
+        "normalized_entropy": 0.8929049056034333
+      }
+    },
+    "reliability": {
+      "ece": 0.03212857785830339,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 1152,
+          "confidence": 0.024295033252807723,
+          "accuracy": 0.05642361111111111
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 116,
+          "actual_coverage": 0.10069444444444445,
+          "risk": 0.9224137931034483
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 288,
+          "actual_coverage": 0.25,
+          "risk": 0.9340277777777778
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 576,
+          "actual_coverage": 0.5,
+          "risk": 0.9375
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 864,
+          "actual_coverage": 0.75,
+          "risk": 0.9375
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 1152,
+          "actual_coverage": 1.0,
+          "risk": 0.9435763888888888
+        }
+      ],
+      "translation_median_m": 5.341930389404297,
+      "translation_p90_m": 11.618537425994877,
+      "yaw_median_deg": 90.0,
+      "yaw_p90_deg": 169.99998474121094
+    }
+  },
+  {
+    "stratum": "original6",
+    "method": "fixed",
+    "scenes": 6,
+    "cases": 1152,
+    "mean": {
+      "joint": 0.3394097222222222,
+      "r1": 0.3628472222222222,
+      "fine": 0.036458333333333336,
+      "raw20": 0.7022569444444444,
+      "diverse20": 0.8993055555555556,
+      "nll": 9.623651996668842,
+      "entropy": 10.698516594866911,
+      "raw5": 0.5190972222222222,
+      "raw10": 0.6050347222222222,
+      "strict_05_15": 0.2534722222222222,
+      "strict_02_10": 0.09895833333333333,
+      "normalized_entropy": 0.9306524235834264
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.359375,
+        "r1": 0.3880208333333333,
+        "fine": 0.028645833333333332,
+        "raw20": 0.703125,
+        "diverse20": 0.9166666666666666,
+        "nll": 9.557239320129156,
+        "entropy": 10.666483563681444,
+        "raw5": 0.5208333333333334,
+        "raw10": 0.5963541666666666,
+        "strict_05_15": 0.28125,
+        "strict_02_10": 0.1015625,
+        "normalized_entropy": 0.9278666067734537
+      },
+      "43": {
+        "joint": 0.3333333333333333,
+        "r1": 0.3515625,
+        "fine": 0.0390625,
+        "raw20": 0.6979166666666666,
+        "diverse20": 0.890625,
+        "nll": 9.662154907981554,
+        "entropy": 10.714235800007978,
+        "raw5": 0.5,
+        "raw10": 0.5885416666666666,
+        "strict_05_15": 0.234375,
+        "strict_02_10": 0.08072916666666667,
+        "normalized_entropy": 0.9320188333702087
+      },
+      "44": {
+        "joint": 0.3255208333333333,
+        "r1": 0.3489583333333333,
+        "fine": 0.041666666666666664,
+        "raw20": 0.7057291666666666,
+        "diverse20": 0.890625,
+        "nll": 9.651561761895815,
+        "entropy": 10.714830420911312,
+        "raw5": 0.5364583333333334,
+        "raw10": 0.6302083333333334,
+        "strict_05_15": 0.24479166666666666,
+        "strict_02_10": 0.11458333333333333,
+        "normalized_entropy": 0.9320718306066164
+      }
+    },
+    "reliability": {
+      "ece": 0.32638564136343323,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 1152,
+          "confidence": 0.013024080858788997,
+          "accuracy": 0.3394097222222222
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 116,
+          "actual_coverage": 0.10069444444444445,
+          "risk": 0.5689655172413793
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 288,
+          "actual_coverage": 0.25,
+          "risk": 0.6354166666666667
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 576,
+          "actual_coverage": 0.5,
+          "risk": 0.6840277777777778
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 864,
+          "actual_coverage": 0.75,
+          "risk": 0.6828703703703703
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 1152,
+          "actual_coverage": 1.0,
+          "risk": 0.6605902777777778
+        }
+      ],
+      "translation_median_m": 2.9395986795425415,
+      "translation_p90_m": 10.70088758468628,
+      "yaw_median_deg": 70.0,
+      "yaw_p90_deg": 174.99998474121094
+    }
+  },
+  {
+    "stratum": "original6",
+    "method": "fixed_audio_shuffle",
+    "scenes": 6,
+    "cases": 1152,
+    "mean": {
+      "joint": 0.10503472222222222,
+      "r1": 0.12065972222222222,
+      "fine": 0.010416666666666666,
+      "raw20": 0.3272569444444444,
+      "diverse20": 0.5859375,
+      "nll": 9.974766343004173,
+      "entropy": 10.745245314306683,
+      "raw5": 0.1909722222222222,
+      "raw10": 0.2517361111111111,
+      "strict_05_15": 0.06944444444444445,
+      "strict_02_10": 0.019965277777777776,
+      "normalized_entropy": 0.9347202550542186
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.12239583333333333,
+        "r1": 0.140625,
+        "fine": 0.013020833333333334,
+        "raw20": 0.3697916666666667,
+        "diverse20": 0.5989583333333334,
+        "nll": 9.908434517681599,
+        "entropy": 10.715707644820213,
+        "raw5": 0.20572916666666666,
+        "raw10": 0.2708333333333333,
+        "strict_05_15": 0.08072916666666667,
+        "strict_02_10": 0.026041666666666668,
+        "normalized_entropy": 0.9321481987538016
+      },
+      "43": {
+        "joint": 0.0859375,
+        "r1": 0.1015625,
+        "fine": 0.005208333333333333,
+        "raw20": 0.2942708333333333,
+        "diverse20": 0.59375,
+        "nll": 10.01083105057478,
+        "entropy": 10.761122984190783,
+        "raw5": 0.171875,
+        "raw10": 0.23958333333333334,
+        "strict_05_15": 0.052083333333333336,
+        "strict_02_10": 0.013020833333333334,
+        "normalized_entropy": 0.9361012367027444
+      },
+      "44": {
+        "joint": 0.10677083333333333,
+        "r1": 0.11979166666666667,
+        "fine": 0.013020833333333334,
+        "raw20": 0.3177083333333333,
+        "diverse20": 0.5651041666666666,
+        "nll": 10.005033460756144,
+        "entropy": 10.758905313909054,
+        "raw5": 0.1953125,
+        "raw10": 0.24479166666666666,
+        "strict_05_15": 0.07552083333333333,
+        "strict_02_10": 0.020833333333333332,
+        "normalized_entropy": 0.9359113297061098
+      }
+    },
+    "reliability": {
+      "ece": 0.09345441839943508,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 1152,
+          "confidence": 0.01158030382278715,
+          "accuracy": 0.10503472222222222
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 116,
+          "actual_coverage": 0.10069444444444445,
+          "risk": 0.8017241379310345
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 288,
+          "actual_coverage": 0.25,
+          "risk": 0.8576388888888888
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 576,
+          "actual_coverage": 0.5,
+          "risk": 0.8836805555555556
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 864,
+          "actual_coverage": 0.75,
+          "risk": 0.8923611111111112
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 1152,
+          "actual_coverage": 1.0,
+          "risk": 0.8949652777777778
+        }
+      ],
+      "translation_median_m": 5.5241429805755615,
+      "translation_p90_m": 11.500434875488281,
+      "yaw_median_deg": 89.99999618530273,
+      "yaw_p90_deg": 170.00001525878906
+    }
+  },
+  {
+    "stratum": "added13",
+    "method": "visual",
+    "scenes": 13,
+    "cases": 2496,
+    "mean": {
+      "joint": 0.2231570512820513,
+      "r1": 0.24519230769230768,
+      "fine": 0.015625,
+      "raw20": 0.6762820512820513,
+      "diverse20": 0.8145032051282052,
+      "nll": 9.614214521761124,
+      "entropy": 10.39641547546937,
+      "raw5": 0.4358974358974359,
+      "raw10": 0.5669070512820513,
+      "strict_05_15": 0.15625,
+      "strict_02_10": 0.058493589743589744,
+      "normalized_entropy": 0.9272819544469189
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.21514423076923078,
+        "r1": 0.23557692307692307,
+        "fine": 0.014423076923076924,
+        "raw20": 0.6706730769230769,
+        "diverse20": 0.8137019230769231,
+        "nll": 9.552112536934706,
+        "entropy": 10.357732510337463,
+        "raw5": 0.4182692307692308,
+        "raw10": 0.5588942307692307,
+        "strict_05_15": 0.15264423076923078,
+        "strict_02_10": 0.052884615384615384,
+        "normalized_entropy": 0.9238528953864329
+      },
+      "43": {
+        "joint": 0.23798076923076922,
+        "r1": 0.2608173076923077,
+        "fine": 0.026442307692307692,
+        "raw20": 0.6947115384615384,
+        "diverse20": 0.8245192307692307,
+        "nll": 9.648216040661701,
+        "entropy": 10.413184988957186,
+        "raw5": 0.46875,
+        "raw10": 0.5829326923076923,
+        "strict_05_15": 0.17067307692307693,
+        "strict_02_10": 0.07692307692307693,
+        "normalized_entropy": 0.9287687952363253
+      },
+      "44": {
+        "joint": 0.21634615384615385,
+        "r1": 0.23918269230769232,
+        "fine": 0.006009615384615385,
+        "raw20": 0.6634615384615384,
+        "diverse20": 0.8052884615384616,
+        "nll": 9.642314987686964,
+        "entropy": 10.41832892711346,
+        "raw5": 0.4206730769230769,
+        "raw10": 0.5588942307692307,
+        "strict_05_15": 0.14543269230769232,
+        "strict_02_10": 0.04567307692307692,
+        "normalized_entropy": 0.9292241727179984
+      }
+    },
+    "reliability": {
+      "ece": 0.20738575718123453,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 2496,
+          "confidence": 0.015771294100816773,
+          "accuracy": 0.2231570512820513
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 250,
+          "actual_coverage": 0.10016025641025642,
+          "risk": 0.728
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 624,
+          "actual_coverage": 0.25,
+          "risk": 0.6666666666666667
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1248,
+          "actual_coverage": 0.5,
+          "risk": 0.7043269230769231
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 1872,
+          "actual_coverage": 0.75,
+          "risk": 0.7409188034188035
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 2496,
+          "actual_coverage": 1.0,
+          "risk": 0.7768429487179487
+        }
+      ],
+      "translation_median_m": 4.202974796295166,
+      "translation_p90_m": 12.510986804962158,
+      "yaw_median_deg": 84.9999771118164,
+      "yaw_p90_deg": 174.99998474121094
+    }
+  },
+  {
+    "stratum": "added13",
+    "method": "acoustic",
+    "scenes": 13,
+    "cases": 2496,
+    "mean": {
+      "joint": 0.07692307692307693,
+      "r1": 0.11298076923076923,
+      "fine": 0.0016025641025641025,
+      "raw20": 0.3020833333333333,
+      "diverse20": 0.5893429487179487,
+      "nll": 9.495928292091076,
+      "entropy": 9.971543461084366,
+      "raw5": 0.16826923076923078,
+      "raw10": 0.22916666666666666,
+      "strict_05_15": 0.030048076923076924,
+      "strict_02_10": 0.005208333333333333,
+      "normalized_entropy": 0.889387141838387
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.0829326923076923,
+        "r1": 0.11899038461538461,
+        "fine": 0.0,
+        "raw20": 0.3125,
+        "diverse20": 0.5961538461538461,
+        "nll": 9.468619718001438,
+        "entropy": 9.955648488723314,
+        "raw5": 0.16706730769230768,
+        "raw10": 0.23197115384615385,
+        "strict_05_15": 0.03365384615384615,
+        "strict_02_10": 0.003605769230769231,
+        "normalized_entropy": 0.8879643304730211
+      },
+      "43": {
+        "joint": 0.07211538461538461,
+        "r1": 0.1201923076923077,
+        "fine": 0.002403846153846154,
+        "raw20": 0.29927884615384615,
+        "diverse20": 0.5901442307692307,
+        "nll": 9.506259907896702,
+        "entropy": 9.96310232235835,
+        "raw5": 0.18028846153846154,
+        "raw10": 0.24158653846153846,
+        "strict_05_15": 0.027644230769230768,
+        "strict_02_10": 0.008413461538461538,
+        "normalized_entropy": 0.8885885766427002
+      },
+      "44": {
+        "joint": 0.07572115384615384,
+        "r1": 0.09975961538461539,
+        "fine": 0.002403846153846154,
+        "raw20": 0.29447115384615385,
+        "diverse20": 0.5817307692307693,
+        "nll": 9.512905250375088,
+        "entropy": 9.99587957217143,
+        "raw5": 0.15745192307692307,
+        "raw10": 0.21394230769230768,
+        "strict_05_15": 0.028846153846153848,
+        "strict_02_10": 0.003605769230769231,
+        "normalized_entropy": 0.8916085183994397
+      }
+    },
+    "reliability": {
+      "ece": 0.04344398335711165,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 2463,
+          "confidence": 0.032415024825219414,
+          "accuracy": 0.07632967925294357
+        },
+        {
+          "bin": 1,
+          "count": 33,
+          "confidence": 0.1128973150343606,
+          "accuracy": 0.12121212121212122
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 250,
+          "actual_coverage": 0.10016025641025642,
+          "risk": 0.8280000000000001
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 624,
+          "actual_coverage": 0.25,
+          "risk": 0.8701923076923077
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1248,
+          "actual_coverage": 0.5,
+          "risk": 0.891025641025641
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 1872,
+          "actual_coverage": 0.75,
+          "risk": 0.9102564102564102
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 2496,
+          "actual_coverage": 1.0,
+          "risk": 0.9230769230769231
+        }
+      ],
+      "translation_median_m": 4.471152305603027,
+      "translation_p90_m": 13.285094738006592,
+      "yaw_median_deg": 85.0,
+      "yaw_p90_deg": 169.99998474121094
+    }
+  },
+  {
+    "stratum": "added13",
+    "method": "fixed",
+    "scenes": 13,
+    "cases": 2496,
+    "mean": {
+      "joint": 0.34615384615384615,
+      "r1": 0.3681891025641026,
+      "fine": 0.027243589743589744,
+      "raw20": 0.7059294871794872,
+      "diverse20": 0.8954326923076923,
+      "nll": 9.390137225771563,
+      "entropy": 10.3895525489098,
+      "raw5": 0.5204326923076923,
+      "raw10": 0.6061698717948718,
+      "strict_05_15": 0.25400641025641024,
+      "strict_02_10": 0.09054487179487179,
+      "normalized_entropy": 0.92666543416665
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.3545673076923077,
+        "r1": 0.3762019230769231,
+        "fine": 0.026442307692307692,
+        "raw20": 0.7043269230769231,
+        "diverse20": 0.8978365384615384,
+        "nll": 9.324656639534693,
+        "entropy": 10.352030399900217,
+        "raw5": 0.5204326923076923,
+        "raw10": 0.6057692307692307,
+        "strict_05_15": 0.25,
+        "strict_02_10": 0.10096153846153846,
+        "normalized_entropy": 0.9233321982286726
+      },
+      "43": {
+        "joint": 0.3545673076923077,
+        "r1": 0.375,
+        "fine": 0.030048076923076924,
+        "raw20": 0.7091346153846154,
+        "diverse20": 0.8978365384615384,
+        "nll": 9.424634981040771,
+        "entropy": 10.404755525864088,
+        "raw5": 0.5336538461538461,
+        "raw10": 0.6141826923076923,
+        "strict_05_15": 0.2608173076923077,
+        "strict_02_10": 0.09254807692307693,
+        "normalized_entropy": 0.9280057622530111
+      },
+      "44": {
+        "joint": 0.3293269230769231,
+        "r1": 0.35336538461538464,
+        "fine": 0.025240384615384616,
+        "raw20": 0.7043269230769231,
+        "diverse20": 0.890625,
+        "nll": 9.42112005673922,
+        "entropy": 10.411871720965092,
+        "raw5": 0.5072115384615384,
+        "raw10": 0.5985576923076923,
+        "strict_05_15": 0.2512019230769231,
+        "strict_02_10": 0.078125,
+        "normalized_entropy": 0.928658342018266
+      }
+    },
+    "reliability": {
+      "ece": 0.3263025363210032,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 2496,
+          "confidence": 0.019851309832842955,
+          "accuracy": 0.34615384615384615
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 250,
+          "actual_coverage": 0.10016025641025642,
+          "risk": 0.616
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 624,
+          "actual_coverage": 0.25,
+          "risk": 0.5512820512820513
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1248,
+          "actual_coverage": 0.5,
+          "risk": 0.5993589743589743
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 1872,
+          "actual_coverage": 0.75,
+          "risk": 0.6266025641025641
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 2496,
+          "actual_coverage": 1.0,
+          "risk": 0.6538461538461539
+        }
+      ],
+      "translation_median_m": 2.4685442447662354,
+      "translation_p90_m": 11.480633735656738,
+      "yaw_median_deg": 55.000003814697266,
+      "yaw_p90_deg": 170.00001525878906
+    }
+  },
+  {
+    "stratum": "added13",
+    "method": "fixed_audio_shuffle",
+    "scenes": 13,
+    "cases": 2496,
+    "mean": {
+      "joint": 0.10376602564102565,
+      "r1": 0.13421474358974358,
+      "fine": 0.003605769230769231,
+      "raw20": 0.3301282051282051,
+      "diverse20": 0.5701121794871795,
+      "nll": 9.762824092346888,
+      "entropy": 10.44348966769683,
+      "raw5": 0.19230769230769232,
+      "raw10": 0.2592147435897436,
+      "strict_05_15": 0.054086538461538464,
+      "strict_02_10": 0.016426282051282052,
+      "normalized_entropy": 0.9314974079788214
+    },
+    "per_seed": {
+      "42": {
+        "joint": 0.1201923076923077,
+        "r1": 0.1466346153846154,
+        "fine": 0.006009615384615385,
+        "raw20": 0.36177884615384615,
+        "diverse20": 0.5865384615384616,
+        "nll": 9.696608014404774,
+        "entropy": 10.407410003817999,
+        "raw5": 0.21394230769230768,
+        "raw10": 0.28365384615384615,
+        "strict_05_15": 0.06129807692307692,
+        "strict_02_10": 0.020432692307692308,
+        "normalized_entropy": 0.9282914098872161
+      },
+      "43": {
+        "joint": 0.09735576923076923,
+        "r1": 0.12980769230769232,
+        "fine": 0.002403846153846154,
+        "raw20": 0.3076923076923077,
+        "diverse20": 0.5757211538461539,
+        "nll": 9.791743255005432,
+        "entropy": 10.459602276866253,
+        "raw5": 0.18269230769230768,
+        "raw10": 0.23918269230769232,
+        "strict_05_15": 0.046875,
+        "strict_02_10": 0.009615384615384616,
+        "normalized_entropy": 0.9329191510162256
+      },
+      "44": {
+        "joint": 0.09375,
+        "r1": 0.12620192307692307,
+        "fine": 0.002403846153846154,
+        "raw20": 0.32091346153846156,
+        "diverse20": 0.5480769230769231,
+        "nll": 9.800121007630459,
+        "entropy": 10.46345672240624,
+        "raw5": 0.18028846153846154,
+        "raw10": 0.2548076923076923,
+        "strict_05_15": 0.054086538461538464,
+        "strict_02_10": 0.019230769230769232,
+        "normalized_entropy": 0.9332816630330222
+      }
+    },
+    "reliability": {
+      "ece": 0.08631403915648825,
+      "bins": [
+        {
+          "bin": 0,
+          "count": 2496,
+          "confidence": 0.017451986484537392,
+          "accuracy": 0.10376602564102565
+        },
+        {
+          "bin": 1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 7,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 8,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin": 9,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ],
+      "selective_risk": [
+        {
+          "requested_coverage": 0.1,
+          "count": 250,
+          "actual_coverage": 0.10016025641025642,
+          "risk": 0.86
+        },
+        {
+          "requested_coverage": 0.25,
+          "count": 624,
+          "actual_coverage": 0.25,
+          "risk": 0.8493589743589743
+        },
+        {
+          "requested_coverage": 0.5,
+          "count": 1248,
+          "actual_coverage": 0.5,
+          "risk": 0.859775641025641
+        },
+        {
+          "requested_coverage": 0.75,
+          "count": 1872,
+          "actual_coverage": 0.75,
+          "risk": 0.8830128205128205
+        },
+        {
+          "requested_coverage": 1.0,
+          "count": 2496,
+          "actual_coverage": 1.0,
+          "risk": 0.8962339743589743
+        }
+      ],
+      "translation_median_m": 4.958452463150024,
+      "translation_p90_m": 12.61412763595581,
+      "yaw_median_deg": 85.00000762939453,
+      "yaw_p90_deg": 170.00001525878906
+    }
+  }
+]
