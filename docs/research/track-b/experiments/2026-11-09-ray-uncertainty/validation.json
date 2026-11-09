@@ -1,6 +1,6 @@
 {
   "input_integrity": "passed",
-  "u0_replay": "passed 14592 rows/15 metrics; full-score equivalence tests pending",
+  "u0_replay": "passed 14592 rows/14 metrics; full-score equivalence tests pending",
   "head_tests": "not implemented",
   "smoke": "not started",
   "fits": "not started",

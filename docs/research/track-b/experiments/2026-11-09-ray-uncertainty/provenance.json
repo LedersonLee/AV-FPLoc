@@ -20,7 +20,7 @@
     },
     {
       "git_copy": "preflight_report.md",
-      "sha256": "fec7c9c0099ce163f0a809d64d65704863ae04b88c17d593d1dca31978d9881d"
+      "sha256": "67eb3ac576af59d00ee4c99d4d915e7cafaf48df12ebd392b8ee5b386046aeb2"
     },
     {
       "git_copy": "protocol.json",
@@ -28,11 +28,11 @@
     },
     {
       "git_copy": "reproduction.md",
-      "sha256": "fdde6dfaaa2676d857889227a06671f0b3192f714e49333fad1ebff04451ade7"
+      "sha256": "9668ed3c386883ae021967fbd1c11c29234d17abf0058be7cc6d5e3ff0d14783"
     },
     {
       "git_copy": "results.md",
-      "sha256": "5d6ac9f5d96e741bb789310798e5175bef4636b75b6f47f56d309f0b05c4b2f2"
+      "sha256": "0523eefa64c22b2805718cbab2cd869d1f53b6d04b423779382540d1e79d43f1"
     },
     {
       "git_copy": "u0_replay_summary.json",
@@ -44,7 +44,7 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "e4806210bb35e05509c414d3a94b396cce41d7fe4c5a34a5c3096a0019597b9a"
+      "sha256": "6645b4da44da2b18a5c9259df62044a8032e3bc7891f7037f390de331fc1d462"
     }
   ]
 }

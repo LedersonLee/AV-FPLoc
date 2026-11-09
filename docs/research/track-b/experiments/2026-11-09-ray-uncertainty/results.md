@@ -1,10 +1,10 @@
 # 결과 — 아직 미측정
 
-입력 감사만 통과했다. 아래 모든 조건은 동일19개 재사용 Val 장면에서 평가할 예정이며, 본 연구 재추론 결과를 아직 확정하지 않았다.
+입력 감사와 U0 지표 재현이 통과했다. 아래 모든 조건은 동일19개 재사용 Val 장면에서 평가할 예정이며, U1–U4 재추론 결과는 아직 없다.
 
 | Arm | Normal | Occlusion25/50/75 | Brightness0.2 | Audio shuffle | RIR noise20dB | Ray calibration | Latency |
 |---|---|---|---|---|---|---|---|
-| U0 | replay 진행 중 | NA | NA | NA | NA | NA | NA |
+| U0 | 재현 통과; 아래 수치 | NA | NA | NA | NA | NA | NA |
 | U1 | NA | NA | NA | NA | NA | NA | NA |
 | U2 | NA | NA | NA | NA | NA | NA | NA |
 | U3 | NA | NA | NA | NA | NA | NA | NA |
@@ -14,4 +14,4 @@
 
 ## U0 재현 완료
 
-19장면×3seed×4방법의14,592행 전체가 원래 평가와 주요15지표에서 허용 오차 내 일치했다(불일치0). F1 자체는3,648행이며 Joint34.4024%, Fine3.0154%, raw20 70.4770%, diverse20 89.6656%, NLL9.463879이다. [검증](u0_replay_validation.json), [요약](u0_replay_summary.json). 이는 기존 기준선 재현이며 uncertainty의 효과는 아직 NA다. 역사적 full score 배열/선택 index의 bitwise 일치를 뜻하지 않는다.
+19장면×3seed×4방법의14,592행 전체가 원래 평가와 주요14지표에서 허용 오차 내 일치했다(불일치0). F1 자체는3,648행이며 Joint34.4024%, Fine3.0154%, raw20 70.4770%, diverse20 89.6656%, NLL9.463879이다. [검증](u0_replay_validation.json), [요약](u0_replay_summary.json). 이는 기존 기준선 재현이며 uncertainty의 효과는 아직 NA다. 역사적 full score 배열/선택 index의 bitwise 일치를 뜻하지 않는다.

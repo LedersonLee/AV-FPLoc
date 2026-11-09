@@ -8,10 +8,10 @@
 
 해석: 입력 경로를 임의 대체할 이유가 없다. 불확실성 유용성은 아직 미검증이며 정상 Train residual은 base expert의 in-sample 잔차라 낙관 편향 가능성이 있다. severe OOD scale 실패도 가능한 결과다.
 
-제한: 이번 CPU 감사는 cache/feature/checkpoint hash와 원시 평가 지표 일관성이다. 모든 원본 RGB/RIR 바이트를 새로 재해시한 감사나 모델 재추론을 대신하지 않는다. 새 U0 평가가 진행 중이며, 역사적 full score tensor/선택 index가 보존되지 않은 범위에서 bitwise 원본 field equality를 주장하지 않는다. 재현 지표와 새 cached/uncached score 동치 검사를 구분해야 한다.
+제한: 이번 CPU 감사는 cache/feature/checkpoint hash와 원시 평가 지표 일관성이다. 모든 원본 RGB/RIR 바이트를 새로 재해시한 감사나 모델 재추론을 대신하지 않는다. 새 U0 지표 재현은 완료됐으며, 역사적 full score tensor/선택 index가 보존되지 않은 범위에서 bitwise 원본 field equality를 주장하지 않는다. 재현 지표와 새 cached/uncached score 동치 검사를 구분해야 한다.
 
 참조 확인: 사용자 지정 OpenReview forum/PDF를 모두 요청했으나 접근 오류, 해당 ID 검색도 결과가 없었다. AVLoc 세부 설명은 사용자 제공 설계 배경으로만 취급하며 전문 검증/우월성 주장을 하지 않는다. 이는 제공된 수식의 로컬 실험을 막는 데이터 장애는 아니다.
 
 검증 코드 SHA:96db20f075ded8f5c66234496c7b2dfbfb3741cf. 같은 checkout에서 U0 evaluator 실행 시작(handle93759). 다음 gate는19장면×3seed 전부 원래 MAP/raw/diverse20/NLL 등 지표와 대조하고, 별도 score 동치 및 head tests를 통과하는 것이다.
 
-후속 확인: U0 실행 exit0. 14,592행/15지표의 원본 대응 재현에서 불일치0. 학습 시작 전 남은 것은 신규 scorer/head 구현 테스트와 Train-only smoke다.
+후속 확인: U0 실행 exit0. 14,592행/14지표의 원본 대응 재현에서 불일치0. 학습 시작 전 남은 것은 신규 scorer/head 구현 테스트와 Train-only smoke다.
