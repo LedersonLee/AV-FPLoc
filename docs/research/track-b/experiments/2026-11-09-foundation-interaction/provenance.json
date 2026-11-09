@@ -1,0 +1,34 @@
+{
+  "code_sha": "6285d4b89e127f5b71479c49071dcc96a2ff908c",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "bae19ba693ac6aafeebee787bd8f2182261231235d1b006c3e7acf3dfb690f31"
+    },
+    {
+      "git_copy": "decisions.md",
+      "sha256": "91ea99d8f5787b36c361e84ea984cc941246ffdd7d7a002fde363aa7aaf22348"
+    },
+    {
+      "git_copy": "initial_replay.json",
+      "sha256": "4b14505b45613c1f1978a78e521526b32447ea04f91b3f16381d4c6675e14849"
+    },
+    {
+      "git_copy": "main_protocol.json",
+      "sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af"
+    },
+    {
+      "git_copy": "smoke_protocol.json",
+      "sha256": "d0bad3b6679c88c41e921dd4ccdc1fd23d0e0db6181f842faaab351d7f72f9d4"
+    },
+    {
+      "git_copy": "smoke_summary.json",
+      "sha256": "519b336be7ce52999054101684e1da45faaa4d120b6927e798098927dac50a43"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "cad94305f4920358d57de1fea182a972e0e9087030deced300eed60998457903"
+    }
+  ],
+  "replay_source": "f0dfc3222b3b0a77225af2816cda24076dbab390"
+}

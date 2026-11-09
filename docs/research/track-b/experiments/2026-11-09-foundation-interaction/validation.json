@@ -1,0 +1,18 @@
+{
+  "tests_passed": 31,
+  "smoke_exit_code": 0,
+  "main_status": "running; not complete",
+  "main_code_sha": "6285d4b89e127f5b71479c49071dcc96a2ff908c",
+  "initial_replay": {
+    "exit_code": 0,
+    "cases": 1152,
+    "mismatches": 0
+  },
+  "main_live_observation": {
+    "container": "d0d4fbe4e1d2",
+    "mode": "attention",
+    "seed": 42,
+    "step": 400,
+    "status": "running"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "data": {
+    "scenes": {
+      "train": [
+        "108736779_177263484",
+        "103997970_171031287",
+        "106366104_174226332",
+        "108294537_176710050",
+        "107734080_175999881",
+        "104348202_171513150",
+        "108736851_177263586",
+        "104348010_171512832",
+        "105515430_173104494",
+        "108294870_176710551",
+        "104862639_172226823",
+        "104348028_171512877",
+        "102344250",
+        "103997541_171030615",
+        "106366410_174226806",
+        "102816786"
+      ],
+      "val": [
+        "108736611_177263226",
+        "108736635_177263256",
+        "105515448_173104512",
+        "108294783_176710410",
+        "108294624_176710203",
+        "102344457"
+      ]
+    },
+    "queries_per_scene": 64,
+    "grid_m": 0.25,
+    "yaw_bins": 36,
+    "ray_bins": 16,
+    "ray_step_m": 0.1,
+    "max_range_m": 20.0,
+    "fp_spacing_m": 0.1,
+    "rgb_size": [
+      128,
+      96
+    ],
+    "rir_samples": 16384,
+    "sample_rate_hz": 48000,
+    "stft_nfft": 256,
+    "stft_hop": 32,
+    "spectral_channels": 18,
+    "spectral_cache_dtype": "float16",
+    "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+    "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+    "test_accessed": false,
+    "evidence": "Exploratory: previous development exposure remains",
+    "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+  },
+  "steps": 2,
+  "seeds": [
+    42
+  ],
+  "modes": [
+    "attention"
+  ],
+  "batch": 8,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "visual_aux_weight": 1000,
+  "acoustic_aux_weight": 10,
+  "map_anchor_weight": 1000,
+  "skip_sampling_steps": 1500,
+  "initialization": "independent anchored visual and acoustic checkpoints; separate FP paths; zero final interaction outputs preserve exact F1; same seeded new modules and fresh AdamW",
+  "pretrained_sha256": {
+    "visual_42": "f8f15743a602ee50126a13bab08453a31a547b75b7d820c770810d8ab07216d2",
+    "acoustic_42": "1edf4639df3c49ab028917e15d96049b0984c8b1fb13f720e416ec4fa98c0eed"
+  },
+  "visual_cache_protocol_sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2",
+  "lowlight_cache_protocol_sha256": "928b23d8290fc35535dd52d0bb2e61286dc76b8b49d96b02f7bb2927436b385b",
+  "cache_manifest_sha256": "9c9d534906126b15d8fb9f72a7c23834207f52d4748ccd66082a2ec6ca217d38",
+  "input_controls": "within-scene cyclic audio shift; separately re-extracted RGB brightness0.2 features; no feature scaling",
+  "selection": "final scheduled update only; no epoch selection",
+  "evidence": "Exploratory reused development scenes",
+  "cost": "equal parameter count and updates, not equal measured FLOPs; each mode uses all head parameters"
+}

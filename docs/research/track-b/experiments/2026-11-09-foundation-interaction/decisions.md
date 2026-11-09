@@ -1,0 +1,7 @@
+# Decisions before nine-fit results
+
+- Replace scratch RGB features with the audited frozen upstream RGB representation plus trainable adapter because study19 isolates loss of useful visual structure and study20 establishes a stronger F1 baseline. This changes exposure/capacity versus older models; old/new comparisons are not causal attention tests.
+- Preserve two independently trained FP towers and score scales instead of forcing a shared FP initialization. Forcing sharing would erase the established independent baseline before assessing interaction. Equal-parameter attention/concat/separable arms all use the same two towers.
+- Zero only final gate/joint output layers to begin at exact F1. This intentionally delays gradients into their earlier layers until output updates; all required paths must become active thereafter. Do not count zero initial gradients as an inactive parameter bug without checking later updates.
+- Keep visual auxiliary/geometry weights1000 based on study19; retain acoustic auxiliary10 and anchor its map to its own initial map rather than raw geometry. This is one specified condition, not a search over validation-selected strengths. Additional independent training/control regimes remain part of the broader protocol.
+- Fixed 1,000 updates/three seeds, no epoch selection. Brightness0.2 is retained for comparability but does not qualify as a verified visual-degradation test for foundation features. Do not claim H-B2 from this condition alone.
