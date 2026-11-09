@@ -1,0 +1,8 @@
+{
+  "/results/fold0_visual_joint_v1/visual_42.pt": "34c21d135a703534d8e474c6aa33336a7fc9726d1b524b080ccc1e0f4acab34b",
+  "/results/fold0_acoustic_v1/acoustic_42.pt": "0a8546b9b3ad4137f7571c1683d1a17e95b1d3a27920414b353a3c069dfd3acd",
+  "/results/fold0_visual_joint_v1/visual_43.pt": "17eed49e61ef97dbcd1c85230402e64829095bbd90b60ea3dbb9f80e57bfee47",
+  "/results/fold0_acoustic_v1/acoustic_43.pt": "886d8ffa225dbc4bef9b210709fe79abe2f963602a05ba767a445ecb55594ab6",
+  "/results/fold0_visual_joint_v1/visual_44.pt": "acefab01e7a80e36999d36ac16b9712d311af82513afc841c386aeda5a22fccf",
+  "/results/fold0_acoustic_v1/acoustic_44.pt": "fda7e298313cd035483cda710301bed1509187c40446dc6fc8c325dba3d3110a"
+}

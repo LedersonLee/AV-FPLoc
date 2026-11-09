@@ -1,0 +1,74 @@
+[
+  {
+    "policy": "raw20",
+    "metric": "joint",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": -0.5208333333333333,
+    "ci95_pp": [
+      -3.0381944444444446,
+      1.649305555555557
+    ],
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "policy": "raw20",
+    "metric": "fine",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": -0.4340277777777778,
+    "ci95_pp": [
+      -1.2152777777777777,
+      0.1736111111111111
+    ],
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "policy": "raw20",
+    "metric": "r1",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": 0.08680555555555478,
+    "ci95_pp": [
+      -1.909722222222222,
+      2.0833333333333313
+    ],
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "policy": "diverse20",
+    "metric": "joint",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": -4.6875,
+    "ci95_pp": [
+      -6.944444444444444,
+      -2.34375
+    ],
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "policy": "diverse20",
+    "metric": "fine",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": -0.607638888888889,
+    "ci95_pp": [
+      -1.1284722222222223,
+      -0.0868055555555556
+    ],
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "policy": "diverse20",
+    "metric": "r1",
+    "left": "geometry",
+    "right": "score_statistics_only",
+    "delta_pp": -4.947916666666666,
+    "ci95_pp": [
+      -8.333333333333332,
+      -1.647135416666698
+    ],
+    "unit": "scene, seeds averaged"
+  }
+]

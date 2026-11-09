@@ -1,12 +1,20 @@
 {
-  "tests_passed": 36,
+  "tests_passed": 37,
   "folds": 2,
   "train_scenes_each": 8,
   "held_scenes_each": 8,
   "smoke_exit_code": 0,
   "source": "0aedb2ad9cb4690501c7f8ff0e648630241f983b",
   "planned_fits": 18,
-  "training_status": "running",
-  "candidate_generation_complete": false,
-  "discriminator_complete": false
+  "training_status": "completed all18 scorer and12 classifier fits",
+  "candidate_generation_complete": true,
+  "discriminator_complete": true,
+  "scorer_fits_completed": 18,
+  "discriminator_fits_completed": 12,
+  "exit_codes": {
+    "scorer_batch": 0,
+    "candidate_batch": 0,
+    "discriminator": 0,
+    "registration": 0
+  }
 }

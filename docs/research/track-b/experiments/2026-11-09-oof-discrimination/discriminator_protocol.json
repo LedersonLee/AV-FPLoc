@@ -1,0 +1,32 @@
+{
+  "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+  "steps": 1000,
+  "batch_queries": 32,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "loss": "mean candidate BCE, all-negative queries retained",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "policies": [
+    "raw20",
+    "diverse20"
+  ],
+  "arms": [
+    "geometry",
+    "score_statistics_only"
+  ],
+  "architecture": "133-64-32-1 GELU; input ablation zeroes first128 standardized dimensions",
+  "initialization": "same seed and sampling order for paired arms",
+  "selection": "scheduled final step, no dev selection or early stopping",
+  "normalization": "OOF training candidate feature mean/std only; std floor .001",
+  "protocol_hashes": {
+    "/results/fold0_candidates_v1": "d1b0ab3207f7f73a19f9aefb9cb452d02fc2db29085a80d001ee601adeeb7343",
+    "/results/fold1_candidates_v1": "c0f01c0048e85fedfa0f26c30e8eaf6a5a502edd122ec8169f143c77512dbd23",
+    "/results/development_candidates_v1": "96c0d899f465b6876762e144478d9e622a84108cb09bfb5cc1b90ec1c08dec5e"
+  },
+  "limitation": "independent F1 backend; half-Train proposals vs full-Train development scorer; reused Val; frozen upstream exposure uncertain",
+  "test_accessed": false
+}

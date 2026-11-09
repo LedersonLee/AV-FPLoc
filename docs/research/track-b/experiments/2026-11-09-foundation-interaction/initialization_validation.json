@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "attention",
+    "seed": 42,
+    "equal_to_anchor": true,
+    "sha256": "a3431e0a5e7202ed5c8cef52e03bd40d2117c332b6eee792ab3dac003afa2841"
+  },
+  {
+    "mode": "concat",
+    "seed": 42,
+    "equal_to_anchor": true,
+    "sha256": "eb1500cf6775cf84312dca4f926f7cb5390e8ed129d5a8ac471f7b9998fee396"
+  },
+  {
+    "mode": "separable",
+    "seed": 42,
+    "equal_to_anchor": true,
+    "sha256": "a8d9108cb754abb936ebbf0f8b9e64ca5bd323b51554c039af053e88969f9b5b"
+  },
+  {
+    "mode": "attention",
+    "seed": 43,
+    "equal_to_anchor": true,
+    "sha256": "7c6bf581678275d21a3ed995d75f77d122d746fd1e767c108d96da116d2c9faf"
+  },
+  {
+    "mode": "concat",
+    "seed": 43,
+    "equal_to_anchor": true,
+    "sha256": "f595271caa1ef8de4bc647bfaa1e7ec4c280a43c1084db203f706e028907187a"
+  },
+  {
+    "mode": "separable",
+    "seed": 43,
+    "equal_to_anchor": true,
+    "sha256": "ccd47599edcbbcfb8d4d836cd173802ccfe5a69892b3c1e173e5ee4765b7de75"
+  },
+  {
+    "mode": "attention",
+    "seed": 44,
+    "equal_to_anchor": true,
+    "sha256": "21b78adb49a1c86e389270a457fe65fa347518dfc5504c2826913321e07ffdfc"
+  },
+  {
+    "mode": "concat",
+    "seed": 44,
+    "equal_to_anchor": true,
+    "sha256": "eae08b3b7e8da6257ca1e1a909a6ee36e97acff577f9df86d659a0f7a1de5d62"
+  },
+  {
+    "mode": "separable",
+    "seed": 44,
+    "equal_to_anchor": true,
+    "sha256": "c68789ae73b6b19a33465564c3c37cad86d4c1b0a8a8d0a4b0ea361f798e232b"
+  }
+]

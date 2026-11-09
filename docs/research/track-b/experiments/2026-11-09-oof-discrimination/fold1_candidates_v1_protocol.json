@@ -1,0 +1,32 @@
+{
+  "role": "oof",
+  "scorer": "independent fixed V.85/A.15",
+  "training_scenes": [
+    "106366104_174226332",
+    "104348202_171513150",
+    "108736851_177263586",
+    "104348010_171512832",
+    "105515430_173104494",
+    "104348028_171512877",
+    "103997541_171030615",
+    "106366410_174226806"
+  ],
+  "candidate_scenes": [
+    "108736779_177263484",
+    "103997970_171031287",
+    "108294537_176710050",
+    "107734080_175999881",
+    "108294870_176710551",
+    "104862639_172226823",
+    "102344250",
+    "102816786"
+  ],
+  "visual_protocol_sha256": "dcc6d83f5a871c63c734a6a3f8fb2fa7b91421753bd485fb7e414e2e1fc0d53c",
+  "acoustic_protocol_sha256": "2b77873e0f17497aa5a8a3d4e6ee31216f400c621b1e4242bc5d9f55ced9f444",
+  "feature_protocol_sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2",
+  "candidates": "raw20 torch.topk and diverse20 score-ordered 1m/30deg suppression",
+  "feature_dimension": 133,
+  "gt": "labels/metrics only, never feature or proposal input",
+  "upstream_exposure": "not ruled out; reused development method choices",
+  "test_accessed": false
+}

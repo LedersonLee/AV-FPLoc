@@ -1,0 +1,722 @@
+[
+  {
+    "run_id": "raw20_geometry_42",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 42,
+    "policy": "raw20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 492,
+    "train_seconds": 0.6662211469374597,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7584525346755981
+      },
+      {
+        "step": 100,
+        "loss": 0.3401987552642822
+      },
+      {
+        "step": 200,
+        "loss": 0.49266284704208374
+      },
+      {
+        "step": 300,
+        "loss": 0.34046655893325806
+      },
+      {
+        "step": 400,
+        "loss": 0.3371473550796509
+      },
+      {
+        "step": 500,
+        "loss": 0.3669978082180023
+      },
+      {
+        "step": 600,
+        "loss": 0.3571142256259918
+      },
+      {
+        "step": 700,
+        "loss": 0.2388835847377777
+      },
+      {
+        "step": 800,
+        "loss": 0.2880028784275055
+      },
+      {
+        "step": 900,
+        "loss": 0.28832533955574036
+      },
+      {
+        "step": 999,
+        "loss": 0.31597211956977844
+      }
+    ],
+    "checkpoint_sha256": "6053eaf3f390a5cd1554f788d57c1d70c0e583f3c78b9a5bcdab85f6d9f92679"
+  },
+  {
+    "run_id": "raw20_score_statistics_only_42",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 42,
+    "policy": "raw20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 492,
+    "train_seconds": 0.6733480079565197,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7435824275016785
+      },
+      {
+        "step": 100,
+        "loss": 0.33615511655807495
+      },
+      {
+        "step": 200,
+        "loss": 0.4966631829738617
+      },
+      {
+        "step": 300,
+        "loss": 0.4508192539215088
+      },
+      {
+        "step": 400,
+        "loss": 0.3795244097709656
+      },
+      {
+        "step": 500,
+        "loss": 0.450944185256958
+      },
+      {
+        "step": 600,
+        "loss": 0.4296022355556488
+      },
+      {
+        "step": 700,
+        "loss": 0.31007999181747437
+      },
+      {
+        "step": 800,
+        "loss": 0.4633156359195709
+      },
+      {
+        "step": 900,
+        "loss": 0.43282437324523926
+      },
+      {
+        "step": 999,
+        "loss": 0.44736939668655396
+      }
+    ],
+    "checkpoint_sha256": "ed746d283246ce22389847e9bd88b0f636ebb1e7a964dc48d90348a63e0909fe"
+  },
+  {
+    "run_id": "diverse20_geometry_42",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 42,
+    "policy": "diverse20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 227,
+    "train_seconds": 0.6605665050446987,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7850487232208252
+      },
+      {
+        "step": 100,
+        "loss": 0.207408145070076
+      },
+      {
+        "step": 200,
+        "loss": 0.2020898312330246
+      },
+      {
+        "step": 300,
+        "loss": 0.18706804513931274
+      },
+      {
+        "step": 400,
+        "loss": 0.18083514273166656
+      },
+      {
+        "step": 500,
+        "loss": 0.18267501890659332
+      },
+      {
+        "step": 600,
+        "loss": 0.16878683865070343
+      },
+      {
+        "step": 700,
+        "loss": 0.14811447262763977
+      },
+      {
+        "step": 800,
+        "loss": 0.17102548480033875
+      },
+      {
+        "step": 900,
+        "loss": 0.1776149421930313
+      },
+      {
+        "step": 999,
+        "loss": 0.2002158910036087
+      }
+    ],
+    "checkpoint_sha256": "1ee88b0148d2ce51e868d04f2a983c91f1ef2b15cfbb119f1452d691809f3ca0"
+  },
+  {
+    "run_id": "diverse20_score_statistics_only_42",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 42,
+    "policy": "diverse20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 227,
+    "train_seconds": 0.6910543451085687,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7604349851608276
+      },
+      {
+        "step": 100,
+        "loss": 0.21584829688072205
+      },
+      {
+        "step": 200,
+        "loss": 0.20920857787132263
+      },
+      {
+        "step": 300,
+        "loss": 0.2048826664686203
+      },
+      {
+        "step": 400,
+        "loss": 0.1968483179807663
+      },
+      {
+        "step": 500,
+        "loss": 0.2028476893901825
+      },
+      {
+        "step": 600,
+        "loss": 0.18967357277870178
+      },
+      {
+        "step": 700,
+        "loss": 0.15849561989307404
+      },
+      {
+        "step": 800,
+        "loss": 0.19523660838603973
+      },
+      {
+        "step": 900,
+        "loss": 0.20630311965942383
+      },
+      {
+        "step": 999,
+        "loss": 0.23208698630332947
+      }
+    ],
+    "checkpoint_sha256": "b7770202eab2de37869ece542bfe05de17e4fbb23496a1248763495757fed495"
+  },
+  {
+    "run_id": "raw20_geometry_43",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 43,
+    "policy": "raw20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 462,
+    "train_seconds": 0.657569388160482,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7411906123161316
+      },
+      {
+        "step": 100,
+        "loss": 0.436745822429657
+      },
+      {
+        "step": 200,
+        "loss": 0.3241141438484192
+      },
+      {
+        "step": 300,
+        "loss": 0.3345484137535095
+      },
+      {
+        "step": 400,
+        "loss": 0.39716464281082153
+      },
+      {
+        "step": 500,
+        "loss": 0.4035581052303314
+      },
+      {
+        "step": 600,
+        "loss": 0.36591237783432007
+      },
+      {
+        "step": 700,
+        "loss": 0.32175782322883606
+      },
+      {
+        "step": 800,
+        "loss": 0.2537845969200134
+      },
+      {
+        "step": 900,
+        "loss": 0.25839710235595703
+      },
+      {
+        "step": 999,
+        "loss": 0.31772875785827637
+      }
+    ],
+    "checkpoint_sha256": "d9c65d4cd131db1cd53a764c6fb7b7eb71f51830c7c2b18ba63ef5ef08f2cf33"
+  },
+  {
+    "run_id": "raw20_score_statistics_only_43",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 43,
+    "policy": "raw20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 462,
+    "train_seconds": 0.6753637029323727,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7503125667572021
+      },
+      {
+        "step": 100,
+        "loss": 0.42315006256103516
+      },
+      {
+        "step": 200,
+        "loss": 0.39210107922554016
+      },
+      {
+        "step": 300,
+        "loss": 0.3561658263206482
+      },
+      {
+        "step": 400,
+        "loss": 0.45804572105407715
+      },
+      {
+        "step": 500,
+        "loss": 0.47885093092918396
+      },
+      {
+        "step": 600,
+        "loss": 0.47854501008987427
+      },
+      {
+        "step": 700,
+        "loss": 0.4493780732154846
+      },
+      {
+        "step": 800,
+        "loss": 0.35466331243515015
+      },
+      {
+        "step": 900,
+        "loss": 0.4352804124355316
+      },
+      {
+        "step": 999,
+        "loss": 0.39868709444999695
+      }
+    ],
+    "checkpoint_sha256": "308daab338f1738ff5742c79a54004a3856e022dd9d16f3a0d1d9dd3375dfb39"
+  },
+  {
+    "run_id": "diverse20_geometry_43",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 43,
+    "policy": "diverse20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 216,
+    "train_seconds": 0.6610903299879283,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7651768922805786
+      },
+      {
+        "step": 100,
+        "loss": 0.21590347588062286
+      },
+      {
+        "step": 200,
+        "loss": 0.17656174302101135
+      },
+      {
+        "step": 300,
+        "loss": 0.19270071387290955
+      },
+      {
+        "step": 400,
+        "loss": 0.20218074321746826
+      },
+      {
+        "step": 500,
+        "loss": 0.1944522261619568
+      },
+      {
+        "step": 600,
+        "loss": 0.16983617842197418
+      },
+      {
+        "step": 700,
+        "loss": 0.17023639380931854
+      },
+      {
+        "step": 800,
+        "loss": 0.18378692865371704
+      },
+      {
+        "step": 900,
+        "loss": 0.15556935966014862
+      },
+      {
+        "step": 999,
+        "loss": 0.18514910340309143
+      }
+    ],
+    "checkpoint_sha256": "5d73cd80ad7db4eeaaa7c22a93e04ab903dd259050f9c54a9eab45765a6590bf"
+  },
+  {
+    "run_id": "diverse20_score_statistics_only_43",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 43,
+    "policy": "diverse20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 216,
+    "train_seconds": 0.6720581830013543,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7758311033248901
+      },
+      {
+        "step": 100,
+        "loss": 0.22290746867656708
+      },
+      {
+        "step": 200,
+        "loss": 0.18479040265083313
+      },
+      {
+        "step": 300,
+        "loss": 0.20728588104248047
+      },
+      {
+        "step": 400,
+        "loss": 0.2168714553117752
+      },
+      {
+        "step": 500,
+        "loss": 0.20898480713367462
+      },
+      {
+        "step": 600,
+        "loss": 0.19638416171073914
+      },
+      {
+        "step": 700,
+        "loss": 0.18915273249149323
+      },
+      {
+        "step": 800,
+        "loss": 0.1982307732105255
+      },
+      {
+        "step": 900,
+        "loss": 0.1900024712085724
+      },
+      {
+        "step": 999,
+        "loss": 0.2062777280807495
+      }
+    ],
+    "checkpoint_sha256": "db37998cf0da5db389b1825144f0b35c76afa9dd02d53722fc81971eda690612"
+  },
+  {
+    "run_id": "raw20_geometry_44",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 44,
+    "policy": "raw20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 468,
+    "train_seconds": 0.6617929399944842,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7243903279304504
+      },
+      {
+        "step": 100,
+        "loss": 0.39914917945861816
+      },
+      {
+        "step": 200,
+        "loss": 0.27041763067245483
+      },
+      {
+        "step": 300,
+        "loss": 0.3284607529640198
+      },
+      {
+        "step": 400,
+        "loss": 0.3137286305427551
+      },
+      {
+        "step": 500,
+        "loss": 0.344813734292984
+      },
+      {
+        "step": 600,
+        "loss": 0.30503273010253906
+      },
+      {
+        "step": 700,
+        "loss": 0.2862001061439514
+      },
+      {
+        "step": 800,
+        "loss": 0.3124876320362091
+      },
+      {
+        "step": 900,
+        "loss": 0.23317289352416992
+      },
+      {
+        "step": 999,
+        "loss": 0.24935686588287354
+      }
+    ],
+    "checkpoint_sha256": "a5d370b6367d13af5f7827f80a5e5086be14234eaa1934027f76f547c5f34e43"
+  },
+  {
+    "run_id": "raw20_score_statistics_only_44",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 44,
+    "policy": "raw20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 468,
+    "train_seconds": 0.6765408688224852,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7262898683547974
+      },
+      {
+        "step": 100,
+        "loss": 0.43112048506736755
+      },
+      {
+        "step": 200,
+        "loss": 0.3303525149822235
+      },
+      {
+        "step": 300,
+        "loss": 0.3876653015613556
+      },
+      {
+        "step": 400,
+        "loss": 0.38225221633911133
+      },
+      {
+        "step": 500,
+        "loss": 0.39277440309524536
+      },
+      {
+        "step": 600,
+        "loss": 0.4416735768318176
+      },
+      {
+        "step": 700,
+        "loss": 0.43980640172958374
+      },
+      {
+        "step": 800,
+        "loss": 0.43419647216796875
+      },
+      {
+        "step": 900,
+        "loss": 0.36260560154914856
+      },
+      {
+        "step": 999,
+        "loss": 0.3551308512687683
+      }
+    ],
+    "checkpoint_sha256": "ffe26478a03be549f516c77605a83be970d959cc1bc5b407c5bbb9e8b09c1575"
+  },
+  {
+    "run_id": "diverse20_geometry_44",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 44,
+    "policy": "diverse20",
+    "arm": "geometry",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 224,
+    "train_seconds": 0.6681457150261849,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7446105480194092
+      },
+      {
+        "step": 100,
+        "loss": 0.21785470843315125
+      },
+      {
+        "step": 200,
+        "loss": 0.1651555597782135
+      },
+      {
+        "step": 300,
+        "loss": 0.18651846051216125
+      },
+      {
+        "step": 400,
+        "loss": 0.17208749055862427
+      },
+      {
+        "step": 500,
+        "loss": 0.1686231791973114
+      },
+      {
+        "step": 600,
+        "loss": 0.17104993760585785
+      },
+      {
+        "step": 700,
+        "loss": 0.14488783478736877
+      },
+      {
+        "step": 800,
+        "loss": 0.17235249280929565
+      },
+      {
+        "step": 900,
+        "loss": 0.1668061912059784
+      },
+      {
+        "step": 999,
+        "loss": 0.1736723929643631
+      }
+    ],
+    "checkpoint_sha256": "7ca853c930ee4784fad8e2656c52e05a1d01b2eaa3075b82ae1af9ce80668b61"
+  },
+  {
+    "run_id": "diverse20_score_statistics_only_44",
+    "code_sha": "a8cbe16bee26188c1dec6312ca9e780977dcf90e",
+    "seed": 44,
+    "policy": "diverse20",
+    "arm": "score_statistics_only",
+    "parameters": 10689,
+    "train_queries": 1024,
+    "dev_queries": 384,
+    "train_no_positive_queries": 224,
+    "train_seconds": 0.6770807860884815,
+    "device": "CPU",
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.7444702982902527
+      },
+      {
+        "step": 100,
+        "loss": 0.2350592166185379
+      },
+      {
+        "step": 200,
+        "loss": 0.18332859873771667
+      },
+      {
+        "step": 300,
+        "loss": 0.19269651174545288
+      },
+      {
+        "step": 400,
+        "loss": 0.1773909032344818
+      },
+      {
+        "step": 500,
+        "loss": 0.1941775232553482
+      },
+      {
+        "step": 600,
+        "loss": 0.18396759033203125
+      },
+      {
+        "step": 700,
+        "loss": 0.1723686158657074
+      },
+      {
+        "step": 800,
+        "loss": 0.18731284141540527
+      },
+      {
+        "step": 900,
+        "loss": 0.20230773091316223
+      },
+      {
+        "step": 999,
+        "loss": 0.2066626101732254
+      }
+    ],
+    "checkpoint_sha256": "4c4b93fe86b015fcad1d19e29684717979e1b7151e94f7f919d6a99b9e125868"
+  }
+]

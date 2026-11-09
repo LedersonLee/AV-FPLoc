@@ -1,6 +1,6 @@
 # Matched foundation interaction from a strong independent starting field
 
-Date: 2026-11-09. Track B. Status: smoke completed, nine-fit main comparison running. Evidence: Exploratory reused development. This study tests H-B2/H-B3 with stronger representations, and is not a declaration of interaction success.
+Date: 2026-11-09. Track B. Status: all nine main fits complete, interaction superiority not supported. [Completed comparison](completed_comparison.md) supersedes the retained progress snapshots below. Full declared occlusion evaluation is also complete; see completed comparison. Evidence: Exploratory reused development. This study tests H-B2/H-B3 with stronger representations, and is not a declaration of interaction success.
 
 ## Hypothesis, alternatives and design
 

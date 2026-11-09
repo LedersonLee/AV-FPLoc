@@ -1,19 +1,12 @@
 {
-  "tests_passed": 35,
+  "tests_passed": 37,
   "smoke_exit_code": 0,
-  "main_status": "resumed, running; not complete",
+  "main_status": "completed all nine fits; resumed batch exit0",
   "main_code_sha": "6285d4b89e127f5b71479c49071dcc96a2ff908c",
   "initial_replay": {
     "exit_code": 0,
     "cases": 1152,
     "mismatches": 0
-  },
-  "main_live_observation": {
-    "session": 98367,
-    "mode": "concat",
-    "seed": 42,
-    "step": 100,
-    "initial_tensor_equality_passed": true
   },
   "original_batch": {
     "exit_code": 1,
@@ -29,5 +22,26 @@
     "label_removal_bitwise_equal": true,
     "unexpected_forward_paths": 0,
     "source": "fbec4fbbae2e2350a5d82a53dc5bd3aafb15597e"
+  },
+  "main_completed_fits": 9,
+  "matched_initial_tensors_equal": true,
+  "occlusion": {
+    "exit_code": 0,
+    "cases": 13824,
+    "normal_replay_cases": 3456,
+    "mismatches": 0,
+    "levels": [
+      0,
+      25,
+      50,
+      75
+    ]
+  },
+  "historical_resume_observation": {
+    "session": 98367,
+    "mode": "concat",
+    "seed": 42,
+    "step": 100,
+    "initial_tensor_equality_passed": true
   }
 }

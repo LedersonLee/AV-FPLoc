@@ -3,11 +3,23 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "4e4b386d67b8054d0e32d16753e3bac2490e5b9b18df4db85ab34f7546ba83f0"
+      "sha256": "2d8e5692c567575b9d8c8e5a47a7e47b55930ff932a74c79ae2bc9ea50ebb319"
+    },
+    {
+      "git_copy": "aggregate.json",
+      "sha256": "039782202743b82dc19e27fb346ade3c9a1596dcc35ac1334492c131570bce61"
+    },
+    {
+      "git_copy": "completed_comparison.md",
+      "sha256": "11a99ab71e6d4cbbd8334b02b449788fd1afaa3c4049e0e3ba945cfb4db33583"
     },
     {
       "git_copy": "decisions.md",
       "sha256": "91ea99d8f5787b36c361e84ea984cc941246ffdd7d7a002fde363aa7aaf22348"
+    },
+    {
+      "git_copy": "experiment_registry.csv",
+      "sha256": "76b47b5351b9e1255c8ffef342358ce3b60d5d5d76e52c6d1f0cf686c040964f"
     },
     {
       "git_copy": "first_completed_fit.json",
@@ -22,8 +34,56 @@
       "sha256": "4b14505b45613c1f1978a78e521526b32447ea04f91b3f16381d4c6675e14849"
     },
     {
+      "git_copy": "initialization_validation.json",
+      "sha256": "72b3a6f7025a3cb7cc7cab4525a84eb7067b0586a37a307bf3d96344f682e4b1"
+    },
+    {
       "git_copy": "main_protocol.json",
       "sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af"
+    },
+    {
+      "git_copy": "occlusion_comparison.png",
+      "sha256": "82baeec8de6666ec310b55e352a51ec84eefdb9f24627cbfaf3cc88f6703cf5b"
+    },
+    {
+      "git_copy": "occlusion_controls.json",
+      "sha256": "7cfde80400ea4aed5dafc43f589bbb4ca7187a128e7cc46d76b5adb5c2128fa3"
+    },
+    {
+      "git_copy": "occlusion_external_hashes.json",
+      "sha256": "ecdb962725832bb8b9b7e643295fdcffa694bc3825c88098fb675a710f717588"
+    },
+    {
+      "git_copy": "occlusion_normal_replay_mismatches.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "git_copy": "occlusion_paired.json",
+      "sha256": "2ca2cf5e655f450e54950935d8c026280678b01c2db30cc23d4072b8ab2fc45d"
+    },
+    {
+      "git_copy": "occlusion_protocol.json",
+      "sha256": "2ea70db874d9432aed468c5d13fbc126b31438b7eb0542bbf75c97a29b39c5f4"
+    },
+    {
+      "git_copy": "occlusion_reliability.json",
+      "sha256": "c06ab6249c20f92f5ad6eb2ced7c64de0c46ad1d4eaa2615c76e9f846b7a74a8"
+    },
+    {
+      "git_copy": "occlusion_summary.json",
+      "sha256": "898eb0cd43403ba7f111b5a254eae3d63c02a0e02e90bfd2eae65455720bbdbd"
+    },
+    {
+      "git_copy": "paired_scene_bootstrap.json",
+      "sha256": "1ef21163ca3e130d54f1fd9a38736724505e0565503a9ea3e3dac614a8d23e85"
+    },
+    {
+      "git_copy": "paired_vs_initial_and_audio.json",
+      "sha256": "aa6340fc86447560d780826059bd6f561dfccadb581e49cde105f8f7da9e79f4"
+    },
+    {
+      "git_copy": "per_seed_summary.json",
+      "sha256": "6a6e648c3ccb8292c2f0debedf9c6dada5d396b8ca2e4a7d22788f5a4b2246ac"
     },
     {
       "git_copy": "smoke_protocol.json",
@@ -34,12 +94,17 @@
       "sha256": "519b336be7ce52999054101684e1da45faaa4d120b6927e798098927dac50a43"
     },
     {
+      "git_copy": "source_hashes.json",
+      "sha256": "1827b55d0e88977b08930501ed2ce2fcfd71e357a05e39a7f84c9d249f054823"
+    },
+    {
       "git_copy": "validation.json",
-      "sha256": "26442f40ba0be075a6d483da3906f6f8069d14aabf64c66433845fbfd87e1ed9"
+      "sha256": "3a1bc71db752f36f05c70bc851ae09190fac94f8e861f1366a854d59bbf50311"
     }
   ],
   "replay_source": "f0dfc3222b3b0a77225af2816cda24076dbab390",
   "resume_source": "18c0e3bf4297b9e0176ac3008710de06ec604da9",
   "first_completed_checkpoint_sha256": "88cd5514a935c3cf2ef7f404a58dd3bca494749fb732b03bbb18eadd3a61af40",
-  "runtime_audit_source": "fbec4fbbae2e2350a5d82a53dc5bd3aafb15597e"
+  "runtime_audit_source": "fbec4fbbae2e2350a5d82a53dc5bd3aafb15597e",
+  "completion_analysis_source": "61c0120980c81fa763ba2e78360b5374d628219c"
 }

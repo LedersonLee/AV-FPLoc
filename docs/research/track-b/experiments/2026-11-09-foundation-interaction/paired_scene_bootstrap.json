@@ -1,0 +1,314 @@
+[
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "concat",
+    "metric": "joint",
+    "delta": -1.4756944444444449,
+    "ci95": [
+      -3.211805555555556,
+      0.7812499999999993
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "concat",
+    "metric": "fine",
+    "delta": -0.6076388888888888,
+    "ci95": [
+      -1.041666666666667,
+      -0.17361111111111113
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "concat",
+    "metric": "raw20",
+    "delta": -0.08680555555555525,
+    "ci95": [
+      -1.649305555555557,
+      1.2152777777777781
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "concat",
+    "metric": "nll",
+    "delta": -0.011348991344372727,
+    "ci95": [
+      -0.023208324280049968,
+      -0.001109466370609861
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "separable",
+    "metric": "joint",
+    "delta": 1.2152777777777777,
+    "ci95": [
+      -0.8680555555555555,
+      3.5590277777777777
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "separable",
+    "metric": "fine",
+    "delta": -0.26041666666666663,
+    "ci95": [
+      -0.6076388888888891,
+      0.1736111111111111
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "separable",
+    "metric": "raw20",
+    "delta": 1.3888888888888904,
+    "ci95": [
+      -0.6076388888888857,
+      3.2986111111111125
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "normal",
+    "left": "attention",
+    "right": "separable",
+    "metric": "nll",
+    "delta": 0.017504345211717325,
+    "ci95": [
+      0.00010300013754083182,
+      0.03333579707476778
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "concat",
+    "metric": "joint",
+    "delta": -2.2569444444444446,
+    "ci95": [
+      -4.166666666666666,
+      0.08680555555555503
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "concat",
+    "metric": "fine",
+    "delta": -0.26041666666666663,
+    "ci95": [
+      -0.607638888888889,
+      0.1736111111111111
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "concat",
+    "metric": "raw20",
+    "delta": 0.08680555555555616,
+    "ci95": [
+      -1.3020833333333335,
+      1.562500000000001
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "concat",
+    "metric": "nll",
+    "delta": -0.009184761593739191,
+    "ci95": [
+      -0.020280808624293673,
+      0.000995070570045146
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "separable",
+    "metric": "joint",
+    "delta": 1.0416666666666659,
+    "ci95": [
+      -0.9548611111111117,
+      3.2986111111111107
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "separable",
+    "metric": "fine",
+    "delta": -0.1736111111111111,
+    "ci95": [
+      -0.6944444444444444,
+      0.34722222222222227
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "separable",
+    "metric": "raw20",
+    "delta": 1.8229166666666696,
+    "ci95": [
+      -0.347222222222221,
+      4.16666666666667
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "low_light",
+    "left": "attention",
+    "right": "separable",
+    "metric": "nll",
+    "delta": 0.017502969751755693,
+    "ci95": [
+      -0.00030306892262554896,
+      0.034084415270222955
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "concat",
+    "metric": "joint",
+    "delta": -1.2152777777777777,
+    "ci95": [
+      -1.5624999999999998,
+      -0.6944444444444443
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "concat",
+    "metric": "fine",
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "concat",
+    "metric": "raw20",
+    "delta": 0.26041666666666713,
+    "ci95": [
+      -1.1284722222222214,
+      1.4756944444444446
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "concat",
+    "metric": "nll",
+    "delta": -0.01528487561477565,
+    "ci95": [
+      -0.03704727399680389,
+      0.0032579215864343425
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "separable",
+    "metric": "joint",
+    "delta": -0.954861111111111,
+    "ci95": [
+      -2.083333333333333,
+      1.1564823173178712e-16
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "separable",
+    "metric": "fine",
+    "delta": 0.1736111111111111,
+    "ci95": [
+      0.0,
+      0.3472222222222222
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "separable",
+    "metric": "raw20",
+    "delta": -0.954861111111111,
+    "ci95": [
+      -2.2569444444444438,
+      0.3472222222222219
+    ],
+    "units": "percentage points",
+    "sampling": "six scenes, seeds averaged within scene"
+  },
+  {
+    "arm": "audio_shuffle",
+    "left": "attention",
+    "right": "separable",
+    "metric": "nll",
+    "delta": 0.0643931668665673,
+    "ci95": [
+      0.041008306874169044,
+      0.09578502923250139
+    ],
+    "units": "nats",
+    "sampling": "six scenes, seeds averaged within scene"
+  }
+]

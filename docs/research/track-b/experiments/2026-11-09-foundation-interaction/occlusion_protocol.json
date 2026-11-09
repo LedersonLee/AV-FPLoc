@@ -1,0 +1,23 @@
+{
+  "levels": [
+    0,
+    25,
+    50,
+    75
+  ],
+  "checkpoint_hashes": {
+    "attention_42": "88cd5514a935c3cf2ef7f404a58dd3bca494749fb732b03bbb18eadd3a61af40",
+    "attention_43": "4071f220038d163bc458aa7048827ee1356d3a9c2b51244ce8308528f960abba",
+    "attention_44": "2fc2b94b6c27560334fcd34d492226df327a0fa63691c51d55edeef939fcd2b1",
+    "concat_42": "975cea5c1af5a206749a672251d6a990d2a9a5fb3bd419253320fd50a48916c2",
+    "concat_43": "81d2700606e50424de13a076cfe314f7e58864c5f674d74a6c770c067499e9aa",
+    "concat_44": "3d4713a9b77389237fcbd3636f97eb42f0b0198d33e1b1cba3b4a4b221462901",
+    "separable_42": "593dba49ef195cf7b19689b1900423988070447c609022cb098223353036d27e",
+    "separable_43": "61272a9921ea9ba6e2ac920e903a4a47287a6a74d46a44d186a65648caf5a6ae",
+    "separable_44": "168b55e683ae73ad68e908405cbbb90566eb92c1fdd27628126e79bcdd06859a"
+  },
+  "method": "frozen completed checkpoint, cached learned dual-tower maps, full SE2 bank; no changed fusion or model parameters",
+  "test_accessed": false,
+  "evidence": "Exploratory reused development",
+  "source_protocol_sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af"
+}

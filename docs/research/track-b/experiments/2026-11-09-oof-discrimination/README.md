@@ -1,6 +1,6 @@
 # OOF full-field candidates and new discrimination — preparation
 
-Date2026-11-09. Track B. Status: folds and runtime smoke verified; fold scorers training; candidates/discriminator not yet complete. Evidence: Exploratory. This is a newly trained independent-F1 backend control, not a substitute for proving the proposed joint model or an independently validated Test result.
+Date2026-11-09. Track B. Status: 18 scorer fits, three candidate caches and 12 discriminator fits completed; mixed/negative geometry result. See [completed results](completed_results.md). Preparation narrative below is retained as the pre-execution plan. Evidence: Exploratory. This is a newly trained independent-F1 backend control, not a substitute for proving the proposed joint model or an independently validated Test result.
 
 ## Hypothesis and leakage boundary
 

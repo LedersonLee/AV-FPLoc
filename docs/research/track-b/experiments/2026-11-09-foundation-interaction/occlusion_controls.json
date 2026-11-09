@@ -1,0 +1,42 @@
+[
+  {
+    "level": 0,
+    "method": "fixed",
+    "joint": 0.2387152777777778
+  },
+  {
+    "level": 0,
+    "method": "acoustic",
+    "joint": 0.051215277777777776
+  },
+  {
+    "level": 25,
+    "method": "fixed",
+    "joint": 0.08680555555555555
+  },
+  {
+    "level": 25,
+    "method": "acoustic",
+    "joint": 0.051215277777777776
+  },
+  {
+    "level": 50,
+    "method": "fixed",
+    "joint": 0.041666666666666664
+  },
+  {
+    "level": 50,
+    "method": "acoustic",
+    "joint": 0.051215277777777776
+  },
+  {
+    "level": 75,
+    "method": "fixed",
+    "joint": 0.022569444444444444
+  },
+  {
+    "level": 75,
+    "method": "acoustic",
+    "joint": 0.051215277777777776
+  }
+]
