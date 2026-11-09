@@ -3,7 +3,7 @@
   "smoke_exit_code": 0,
   "planned_new_main_fits": 18,
   "existing_joint_reference_fits": 9,
-  "main_status": "running; no final comparison",
+  "main_status": "all27 complete; aggregate v2 verified",
   "main_session": 55621,
   "observed_docker": "08dd0bfc987c",
   "main_code_sha": "062860067f82a5f6a0e6ce8411b5c43702ae0ab5",
@@ -13,5 +13,18 @@
     "partial": 33828,
     "joint": 2834908
   },
-  "test_accessed": false
+  "test_accessed": false,
+  "completed_main_fits": 27,
+  "initial_state_equal_fits": 27,
+  "frozen_final_tensor_checks": {
+    "frozen": 35,
+    "partial": 27
+  },
+  "aggregation_v1_exit_code": 1,
+  "aggregation_v1_failure_preserved": true,
+  "aggregation_v2_exit_code": 0,
+  "initial_control_comparison_exit_codes": [
+    0,
+    0
+  ]
 }

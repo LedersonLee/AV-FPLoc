@@ -1,6 +1,6 @@
 # Foundation interaction: frozen/partial/joint encoder boundary control
 
-Date2026-11-09. Track B. Status:38 tests and both real-data smokes passed;18 full fits running. Evidence: Exploratory. No final main-regime result is claimed. Actual main source `062860067f82a5f6a0e6ce8411b5c43702ae0ab5`; smoke source `b50f10d1afc71396024a30e821f3409f5a41199e`.
+Date2026-11-09. Track B. Status:all27 fits completed and matched-state verification passed. Evidence: Exploratory. [Completed results](completed_results.md): frozen/partial did not rescue the joint-model regression. Actual main source `062860067f82a5f6a0e6ce8411b5c43702ae0ab5`; smoke source `b50f10d1afc71396024a30e821f3409f5a41199e`.
 
 ## Hypothesis and competing explanations
 
@@ -18,7 +18,7 @@ The separately sourced upstream RGB backbone remains frozen in every condition. 
 
 Loss remains full-field soft CE +1000 visual ray MSE +10 acoustic ray MSE +1000 dual-map anchor. The initial acoustic map anchor is computed from the same original model/map, with no query GT. Every fit compares every initial tensor against the corresponding archived joint initial state. The new training code asserts all frozen parameter tensors are bitwise unchanged after all updates. Aggregation independently compares serialized initial/final states, includes buffers and refuses partial batches. AdamW receives the same full parameter list; tensors with no gradients receive no optimizer update.
 
-## Runtime evidence and current result
+## Initial runtime evidence (historical)
 
 38 tests passed, including named-layer update boundaries, matched active counts across architectures and actual AdamW preservation of frozen parameters. Both real-data attention/seed42 smokes ran two updates and full six-scene evaluation, exit0. Initial states equal archived joint initialization; frozen parameters unchanged. Frozen smoke has zero precursor encoder gradients and nonzero new V/A retrieval gradients by update1. Partial smoke has nonzero last visual/acoustic descriptor gradients and frozen convolutional FP towers. FP residual heads are separately enabled; a zero tower gradient is expected and not evidence the entire FP path is frozen in partial mode.
 
@@ -41,3 +41,7 @@ Precursor/hash provenance is in frozen_main_protocol.json; partial protocol must
 ## First completed fit — not final regime evidence
 
 Frozen attention/seed42 completed1,000 updates with frozen weights bitwise unchanged. Joint15.104%, Fine.521%, raw20 47.396%, diverse20 75.521%, NLL9.22704. Same-seed joint reference was14.0625% Joint; initial independentF1 was22.6563%. A single seed does not establish a regime effect; it already shows that freezing these encoders does not automatically preserve the starting MAP accuracy. New heads and score scales still train. All other scheduled fits remain required, with no early-stopping decision from this result. Summary retained in first_frozen_fit.json.
+
+## Completed comparison supersedes progress snapshots
+
+All27 fits are complete. See completed_results.md for matched validation, quantitative uncertainty, preserved first-aggregation failure, checkpoint source provenance and mechanistic limits. The historical smoke/first-fit sections above are retained and are not the current completion status.

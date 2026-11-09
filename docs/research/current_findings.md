@@ -57,3 +57,7 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 ## 2026-11-09 Track A: Directional Structural Evidence
 
 [새 연구](track-a/experiments/2026-11-09-directional-structure/README.md)는 raw·ECN·frozen embedding·회전·donor·동일용량 비방향 대조와73새checkpoint를 검증했다. 고정 pureV후보 재정렬이 New12 joint +3.125pp, frozen Transfer11 +3.267pp로 개선됐다. 기존cosine/GEOQ보다 낮으며 fullbank fine은 악화됐다. 따라서 거친 방향 단서의 모호성 해소를 지지하지만 metric depth/DoA나 강한 baseline 대체는 입증하지 않는다. 모두 reused/teacher-exposed Exploratory이며 기존Test는 사용하지 않았다.
+
+## Track B 추가 근거 — 2026-11-09 encoder 업데이트 범위
+
+[27개 matched 모델 비교](track-b/experiments/2026-11-09-foundation-regimes/completed_results.md)에서 frozen/partial도 초기 독립F1보다 Joint6.77–7.73%p 낮았다. 모든 초기 텐서와 고정 텐서 보존을 확인했으므로 인코더 변화만으로 저하를 설명할 수 없다. 새 결합부와 학습 가능한 점수 스케일은 여전히 바뀌므로 어느 쪽이 원인인지는 미검증이다. 이는16Train/6재사용Val의 Exploratory 결과이며, 규모 확대·독립평가·기작 성공을 뜻하지 않는다.

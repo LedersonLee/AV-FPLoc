@@ -1,0 +1,7 @@
+{
+  "exit_code": 1,
+  "error": "KeyError: execution_code_sha in legacy joint record",
+  "execution_ref": "25b4ea9f202cc8b2facbfe0f91794ff6225d666f",
+  "no_results_emitted": true,
+  "preserved": true
+}
