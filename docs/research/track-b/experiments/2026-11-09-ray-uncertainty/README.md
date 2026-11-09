@@ -8,3 +8,5 @@
 - [결정 기록](decisions.md), [결과 상태](results.md), [재현](reproduction.md)
 
 Train112/reused Val19×64, seeds42/43/44, .25m/36yaw,16rays. Frozen local means/FP maps/scale/upstream. Train에서 작은 scale head만1000updates 학습할 계획이다. 기존 모델/checkpoint를 수정하지 않는다. protocol의 모든 U0–U4×V/A/fusion 및 declared shifts를 보고하며, 결과가 실패해도 조건을 선택적으로 삭제하지 않는다. Test를 사용하지 않는다.
+
+[구현 검증](implementation_validation.md): scale/Laplace 분석 검사5개 및 전체49개 통과, Train target 범위 확인. 실제 head 학습 smoke는 다음 단계다.

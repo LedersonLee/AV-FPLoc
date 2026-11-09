@@ -4,7 +4,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "bcf52c35b3dc2201bd04c98a1ed8e8d3c8d44ad55f04e08aabd5d1a586396777"
+      "sha256": "ddcdc60f7f70b6f95309bb13e7a919ea580b49e862f817645670e1ea9192910e"
     },
     {
       "git_copy": "decisions.md",
@@ -12,7 +12,11 @@
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "c00ba2b4fc1764d5237a036a93dea4eb9afc2962dc402da340da7762913675f2"
+      "sha256": "5665bd140dded89d6eb5e08b12af6afd318d80d50685fd0d5fc2fb248651449c"
+    },
+    {
+      "git_copy": "implementation_validation.md",
+      "sha256": "dda72b5fc50a449998b67451b7da0a5461cd7d6efbf10489cc6c3a0f54ce3155"
     },
     {
       "git_copy": "input_validation.json",
@@ -35,6 +39,10 @@
       "sha256": "0523eefa64c22b2805718cbab2cd869d1f53b6d04b423779382540d1e79d43f1"
     },
     {
+      "git_copy": "train_range_validation.json",
+      "sha256": "5f77bbb99df4808f850c53f2b6dd33adaf3551df5784c20685c863a176f883d9"
+    },
+    {
       "git_copy": "u0_replay_summary.json",
       "sha256": "376e62654a41ee1dd682f62b83af048a8e076a893b202223db2bb25f5eaa340b"
     },
@@ -44,7 +52,8 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "6645b4da44da2b18a5c9259df62044a8032e3bc7891f7037f390de331fc1d462"
+      "sha256": "95e182abe491f74025a8f47d7f8c86fa1ce4853a774e568e374423c0e6e9a68c"
     }
-  ]
+  ],
+  "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73"
 }

@@ -1,0 +1,13 @@
+{
+  "code_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
+  "scenes": 112,
+  "queries": 7168,
+  "ray_targets": 114688,
+  "normalized_target_min": 0.05988511070609093,
+  "normalized_target_max": 1.0,
+  "hit_count": 114633,
+  "scope": "Train target range only; not prediction residual/calibration; no Val or Test used",
+  "scale_floor": 0.001,
+  "scale_ceiling": 1.0,
+  "scale_initial": 0.1
+}
