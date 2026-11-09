@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "compared": [
+    "attention",
+    "concat"
+  ],
+  "all_tensors_identical": true,
+  "tensor_count": 58,
+  "scope": "partial initialization audit; remaining modes/seeds pending"
+}

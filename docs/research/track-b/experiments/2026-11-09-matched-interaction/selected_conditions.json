@@ -1,0 +1,322 @@
+{
+  "scope": "selected22 Train/Val scenes,1408 observed sidecars only; no new Test observations",
+  "conditions": [
+    {
+      "geometry": "furnished_native_scene",
+      "materials": false,
+      "transmission": false,
+      "count": 1408
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "108736779_177263484",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "e9024f1f8c7b9a86640e6a3412915d07eb7b24578a2522d65e17a617df862073"
+    },
+    {
+      "scene": "103997970_171031287",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "e5488bc8092b34b9526f963b03f1b36a895bd647c35a358fae55d216f4e90929"
+    },
+    {
+      "scene": "106366104_174226332",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "2bc84ec3878ddfbc99067ef9f4706e099bcc2ab5ed2013dd1247d00a6bac5989"
+    },
+    {
+      "scene": "108294537_176710050",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "c2d492548403a3e006cd7c850b5dacbc980087f99e1703898346defbdc822909"
+    },
+    {
+      "scene": "107734080_175999881",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "24c484bf08ef4e2c43e21b3487c90e82b8bef4a2447775661e77ecbc7019107d"
+    },
+    {
+      "scene": "104348202_171513150",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "2836e4e75ec932f3a1b11f241534e2eb8933aeacdb1c924e7e63dfcd32865d96"
+    },
+    {
+      "scene": "108736851_177263586",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "046b787e451c2409d28118949896a088ea969aa7442c3190be5153efe4fadcf6"
+    },
+    {
+      "scene": "104348010_171512832",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "91d979f2d0a0bc4ad981c084a893e56ec04bc44a161046f9f94312014f1fd979"
+    },
+    {
+      "scene": "105515430_173104494",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "f3a1c86023733fb6c60ff1165899e24f316e7db1a66c36d333bc4292db90a38c"
+    },
+    {
+      "scene": "108294870_176710551",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "1065ae76a737fbbc0270da45d6e64cc82eb19ba768be45b6eab7bc867653779e"
+    },
+    {
+      "scene": "104862639_172226823",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "eab7920f78b6ead8d1c70b654e876d859f0d4c228074c970593e7268ec1b0233"
+    },
+    {
+      "scene": "104348028_171512877",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "84371ef3c5bb2f0143d672c3f3c932c0c0529c2675679c550a5a5ef4558e42ca"
+    },
+    {
+      "scene": "102344250",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "464dff74d6f36482a324fec5ef4e5697e37f0cada8bde3a15ab03b8a391ee3bb"
+    },
+    {
+      "scene": "103997541_171030615",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "b5c045d1ba92fc728fd3318253d14f2ddcc4aed4752a3a0171a454b19871567b"
+    },
+    {
+      "scene": "106366410_174226806",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "13d5feef81ae8b6d1fb17479d6a1067548c49979214b561cdeb3c57c9cf19861"
+    },
+    {
+      "scene": "102816786",
+      "split": "train",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "15a19e243dfe3495cba00ba7e66749fda5149859973352fee42cc2ae25a1fe0e"
+    },
+    {
+      "scene": "108736611_177263226",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "0e95ae2ac6749c684f1f7f92eefd8b9a1910998b77051adb1d63ab0519780812"
+    },
+    {
+      "scene": "108736635_177263256",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "fca74739333f9ded5351ace02af15df40fb73daf8ee72eba852c86717f15d4e0"
+    },
+    {
+      "scene": "105515448_173104512",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "86840a94378d1caca9c2e38d181075668eff0965b84c5fd38ff4a0bebf3cb7df"
+    },
+    {
+      "scene": "108294783_176710410",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "943e58df34244e1cfc96e700a99291bfb8c9264c766fda1e827ff0f7c829f701"
+    },
+    {
+      "scene": "108294624_176710203",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "5f5ffcd1831fca8a4251840049176efd8fcd8991a12e7dbc9d8fa4b8f4cc180c"
+    },
+    {
+      "scene": "102344457",
+      "split": "val",
+      "queries": 64,
+      "conditions": [
+        {
+          "geometry": "furnished_native_scene",
+          "materials": false,
+          "transmission": false,
+          "count": 64
+        }
+      ],
+      "ordered_sidecar_hash_digest": "06ce1f9b8d12aee0c7effd1a1e3ac63179b01b30c404930b5470fda982d0af6d"
+    }
+  ],
+  "interpretation": "Furnished-native observations are used; no paired furnished/unfurnished or material-varied query condition in this selected cache. This is not a global dataset absence claim."
+}

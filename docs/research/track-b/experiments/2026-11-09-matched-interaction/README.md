@@ -1,6 +1,6 @@
 # Candidate-conditioned interaction: matched controls
 
-Study ID `track-b-matched-interaction-20261109`, 2026-11-09. **Status: running; no localization result yet. Evidence: Exploratory.** This follows the [structure and independent fusion experiments](../2026-11-09-structure-supervision/README.md). Full Track B goal remains active.
+Study ID `track-b-matched-interaction-20261109`, 2026-11-09. **Status: running; first fit completed, comparison incomplete. Evidence: Exploratory.** This follows the [structure and independent fusion experiments](../2026-11-09-structure-supervision/README.md). Full Track B goal remains active.
 
 ## Hypothesis and competing explanations
 
@@ -32,7 +32,7 @@ Original prototype profile (before removing key biases) used2,429,723 parameters
 
 `matched_v1` was deliberately stopped after detecting that each attention key bias cancels inside softmax. Those64 parameters did not contribute to the attention function but could contribute to the pooled controls. This undermined the intended active-capacity match. Logs and initial checkpoint are retained externally, no final checkpoint or accuracy is claimed. Last logged update index100 (at least101 updates); final exact step is unrecorded. Docker stop returned training process exit137. This was an intentional audit correction, not an OOM or convergence failure.
 
-Remove key biases in **all** variants; corrected source `aa452ee78a75af31d8b426684a9c81f94ff00039`. Start fresh `matched_v2` with a new output directory. Tests still pass. Nine completed fits and their localization outcomes are pending. No claim that attention is better is justified at this point.
+Remove key biases in **all** variants; corrected source `aa452ee78a75af31d8b426684a9c81f94ff00039`. Start fresh `matched_v2` with a new output directory. Tests still pass. Full nine-fit comparison is pending. No claim that attention is better is justified at this point.
 
 ## Evaluation and remaining tests
 
@@ -58,3 +58,12 @@ docker run --rm --network none --gpus 'device=0' \
 ```
 
 Use a fresh output directory for a deliberate reproduction. A running job must be observed, not restarted because a polling call times out. Initial aborted outputs must not be deleted or overwritten. Unrelated user renderer edits are preserved and excluded from commits.
+
+
+## Interim evidence (not the completed comparison)
+
+Attention seed42 completed1,000 updates: Joint4.6875%, R@1m7.5521%, Fine0.2604%, Raw20 32.8125%, Diverse20 59.8958%, NLL9.5015. Audio shuffle Joint3.125%; brightness×0.2 Joint1.3021%. Training275.724s; whole-cache peak allocated1,777,123,328bytes. These are one-seed results, not evidence for superiority or general inferiority. Other fits continue on the same live process. [Completed-run snapshot](interim_completed_runs.json).
+
+The attention42 and concat42 **initial checkpoint tensors are exactly equal** across all state keys; further modes/seeds await initialization and the full post-run audit. [Partial verification](initialization_partial.json). Aggregator `track_b.scripts.summarize_interaction` refuses to publish a full result unless all nine fits and final update indices exist, every initial state matches its seed anchor, and parameter counts match.
+
+[Selected-condition audit](selected_conditions.json) checked all1,408 already-selected Train/Val observed sidecars: furnished_native_scene, materials=false, transmission=false throughout. No paired furnished/unfurnished/material-varied observation is represented in this cache. This is not an assertion of absence across the entire dataset. A top-level legacy catalog read during discovery described clutter conditions for a Test scene; these are metadata only and its observations were not opened or used. A broad filename listing was stopped because it was unnecessarily slow; it provided no robustness evaluation. Follow-up must obtain a suitable non-Test query-condition pair or state that physical shift remains unvalidated; it must not repurpose candidate FP-RIR references as the proposed observation pipeline.
