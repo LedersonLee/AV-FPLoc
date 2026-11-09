@@ -92,7 +92,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');args=ap.parse_args()
     if args.visual_cache and args.pretrained_dir:
         prior_protocol=read(args.pretrained_dir/'protocol.json')
         assert prior_protocol.get('visual_cache_protocol_sha256')==sha(args.visual_cache/'protocol.json'), 'Pretrained adapter must use the identical foundation cache'
@@ -100,7 +100,7 @@ def main():
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
     protocol=dict(arm=args.arm,encoder_regime=args.regime,modes=args.modes,seeds=args.seeds,aux_steps=args.aux_steps,dense_steps=args.dense_steps,batch_size=args.batch_size,
-        cache_protocol_sha256=sha(args.cache/'protocol.json'),cache_manifest_sha256=sha(args.cache/'manifest.json'),data=data_protocol,aux_weight=10.,lr=.0003,
+        cache_protocol_sha256=sha(args.cache/'protocol.json'),cache_manifest_sha256=sha(args.cache/'manifest.json'),data=data_protocol,aux_weight=args.aux_weight,fixed_fp=args.fixed_fp,lr=.0003,
         objective='continuous FP boundary ray MSE + exact full-grid soft CE; labels are training-only',
         controls='shuffled permutes target geometry within scene; dense_only uses all updates for dense loss without auxiliary term',
         metric='NLL at nearest valid SE2 grid candidate; fine tolerance1e-6m',evidence='Exploratory development; no test use',init='scratch, same seed for every mode/arm')
@@ -143,12 +143,12 @@ def main():
             aux=auxiliary_loss(v,a,s['target'][target_ids],mode);opt.zero_grad()
             dense_phase=args.arm=='dense_only' or step>=args.aux_steps
             if dense_phase:
-                fp=full_descriptors(model,s,True);score=scores(model,v,a,fp,s,mode);ce=dense_loss(score,s['candidates'][:,:3],s['gt'][ids])
-                loss=ce+(10*aux if args.arm!='dense_only' else 0)
+                fp=full_descriptors(model,s,not args.fixed_fp);score=scores(model,v,a,fp,s,mode);ce=dense_loss(score,s['candidates'][:,:3],s['gt'][ids])
+                loss=ce+(args.aux_weight*aux if args.arm!='dense_only' else 0)
             else:ce=aux*0;loss=aux
             loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),5.);opt.step()
             if step%100==0 or step==total-1:
-                rec=dict(step=step,loss=float(loss),aux=float(aux),dense_ce=float(ce),elapsed_s=time.perf_counter()-start);history.append(rec);print(json.dumps(dict(seed=seed,mode=mode,**rec)),flush=True)
+                rec=dict(step=step,loss=float(loss),aux=float(aux),dense_ce=float(ce),elapsed_s=time.perf_counter()-start,gradient_l1={name:sum(float(p.grad.abs().sum()) for p in branch.parameters() if p.grad is not None) for name,branch in [('visual',model.visual),('acoustic',model.acoustic),('floorplan',model.floorplan),('fp_head',model.fp_head)]});history.append(rec);print(json.dumps(dict(seed=seed,mode=mode,**rec)),flush=True)
             if step+1==args.aux_steps and args.arm!='dense_only':
                 torch.save(model.state_dict(),args.out/f'{mode}_{seed}_pretrained.pt')
                 torch.cuda.synchronize();aux_start=time.perf_counter()
@@ -156,8 +156,8 @@ def main():
                 torch.cuda.synchronize();aux_eval_seconds+=time.perf_counter()-aux_start
                 (args.out/f'{mode}_{seed}_aux_eval.json').write_text(json.dumps(aux_eval,indent=2))
         torch.cuda.synchronize();train_seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(model.state_dict(),args.out/f'{mode}_{seed}.pt')
-        train_eval=evaluate(model,scenes['train'],mode,True,interventions=False,diversity=False)
-        val_eval=evaluate(model,scenes['val'],mode,True,interventions=not bool(args.visual_cache),diversity=True)
+        train_eval=evaluate(model,scenes['train'],mode,not args.fixed_fp,interventions=False,diversity=False)
+        val_eval=evaluate(model,scenes['val'],mode,not args.fixed_fp,interventions=not bool(args.visual_cache),diversity=True)
         record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),encoder_regime=args.regime,train=train_eval,val=val_eval)
         (args.out/f'{mode}_{seed}.json').write_text(json.dumps(record,indent=2));aggregate={k:v for k,v in record.items() if k not in ('train','val','history')};aggregate.update(train=train_eval['summary'],val=val_eval['summary'])
         all_results.append(aggregate);(args.out/'summary.json').write_text(json.dumps(all_results,indent=2));print(json.dumps(aggregate),flush=True)
