@@ -24,3 +24,5 @@ Audio19장면/1,216질의 생성 완료:clean preprocessing의bitwise 재현 불
 
 
 정상 조건 전체 평가 완료: 98,496 records, 29,184 ray records, U0 replay 10,944 checks 통과. evaluator source는 `bf9a825cf58f584e6803f5026977fc1b32c7aafb`. 가림 25%는 54,720개 고유 결과 및 유한값 검사를 통과했고, 15개 그룹의 요약 평균과 원시 결과의 재계산 값이 1e-9 이내로 일치했다. 가림 50%는 실행 중이며, 나머지 조건은 같은 순차 작업에서 이어진다.
+
+정상 조건의 98,496개 결과 키가 고유하고, 27개 그룹의 성능 평균(오차 <1e-9)과 전체 reliability 통계(ECE/bin/selective risk 포함)가 원시 결과 재계산과 일치함을 별도로 확인했다. 가림 50%도 54,720 records 및 29,184 ray records로 완료됐고, 가림 75% 평가가 시작됐다.

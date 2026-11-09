@@ -14,3 +14,5 @@ Ray 진단은각방향,visible/outside-FoV,5m이하/초과 범위의MAE/Laplace 
 
 
 정상 대비 열화 변화(각 U0–U4 및 V/A/fixed)와 정상 조건 original-scales 대비 primary 차이를 기존 장면 paired bootstrap으로 집계한다. 결과에 따라 보정값을 선택하지 않는다. 관련 분석 단위/constant-scale 검사 2개 통과. 집계 source: `652dbbcbd12f10e69af6ac5e92feeec667f2ca34`.
+
+최종 집계에 저장된 요약과 원시 결과 재계산의 일치 검사를 추가했다. 정상 조건 전체 27개 그룹에 직접 실행해 통과했다. 최종 source: `8f2454a5ce50f0fff059dcc180da2d07057c1920`.

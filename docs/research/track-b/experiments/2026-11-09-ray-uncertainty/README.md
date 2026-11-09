@@ -1,6 +1,6 @@
 # Study 30 — 방향별 관측 불확실성 진단
 
-**상태: evaluation 진행 중. 3개 seed head 학습과 정상 조건 평가가 완료됐다. 가림 25% 평가는 완료됐고 나머지 열화 조건은 순차 실행 중이다. 전체 조건 완료 전 효과 판정은 보류한다.** 기존 Study21/24/28의 음성 결과를 보존하고, 강한 Study27 F1을 독립 경로로 유지한다.
+**상태: evaluation 진행 중. 3개 seed head 학습과 정상 조건 평가가 완료됐다. 가림 25%·50% 평가는 완료됐고 나머지 열화 조건은 순차 실행 중이다. 전체 조건 완료 전 효과 판정은 보류한다.** 기존 Study21/24/28의 음성 결과를 보존하고, 강한 Study27 F1을 독립 경로로 유지한다.
 
 질문은 frozen ray mean에서 방향별 scale이 constant-L1/global scale보다 실제 pose matching과 열화 신뢰성에 유용한가이다. L2→L1 변경, 상대 모달리티 scale, FP supervision 근사, in-sample residual optimism을 경쟁 설명으로 구분한다. AVLoc의 구조 복제/새 attention/router/B2 후보 사용은 범위 밖이다.
 

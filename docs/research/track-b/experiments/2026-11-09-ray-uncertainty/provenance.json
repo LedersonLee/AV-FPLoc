@@ -4,7 +4,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "fb257cbf74c004715243d929dbd7760a35ceaabd4bcda59e33d6fc0fe2cbc2a3"
+      "sha256": "1531e29a1b9c54ea1acaebb72876acf7ed39c82a1b73b9e9d64f504e97785a2b"
     },
     {
       "git_copy": "aggregation_gate_validation.json",
@@ -12,7 +12,7 @@
     },
     {
       "git_copy": "aggregation_preparation.md",
-      "sha256": "c611aa3194ca78a9f415da40b251589e8c4f23f19ddffa1882a254096171d495"
+      "sha256": "7a013c3c9cf74685f2ab1d52a59f2f14138f78057c31aa0e22aa6801f0b8ee5f"
     },
     {
       "git_copy": "audio_noise_manifest.json",
@@ -40,11 +40,11 @@
     },
     {
       "git_copy": "evaluation_progress.md",
-      "sha256": "37297875fffed072bdab4f84db83bd63574ec6264af570c0629f356955a5d46f"
+      "sha256": "b0c0e916c883d9b706ed8664af5ef928d573acbebd39411f01ca7edc65b8ad82"
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "d2e1d2f2ed16ba9156a61605945456cd41494a6ddd64e1f80733d1b8fa6fdb69"
+      "sha256": "49e0030d1bbdee05aafcc6236cf0c9a5d6434e4f1fd193e928f3e5ce47c86b20"
     },
     {
       "git_copy": "implementation_validation.md",
@@ -141,5 +141,5 @@
   "evaluator_sha": "bf9a825cf58f584e6803f5026977fc1b32c7aafb",
   "shift_execution_sha": "ba040da65e3cf3339a716e9dc8a6af07c1a488d7",
   "runtime_audit_sha": "757a17af572e3239f5996f5062f7fec6ef819940",
-  "aggregator_sha": "652dbbcbd12f10e69af6ac5e92feeec667f2ca34"
+  "aggregator_sha": "8f2454a5ce50f0fff059dcc180da2d07057c1920"
 }
