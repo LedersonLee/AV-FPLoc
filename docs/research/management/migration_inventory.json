@@ -1,0 +1,1521 @@
+{
+  "base_commit": "19c1bd02f6edc6758ee9b18675957a2d30b3aeed",
+  "tracked_docs": [
+    {
+      "old_path": "docs/architecture.md",
+      "new_path": "docs/architecture.md",
+      "sha256_before": "23b7a8a8258412f1bc1346aa3c7b0af2919870100ff6455c5c3dbce85b454aac",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "23b7a8a8258412f1bc1346aa3c7b0af2919870100ff6455c5c3dbce85b454aac"
+    },
+    {
+      "old_path": "docs/collaborator_gibson_rir.md",
+      "new_path": "docs/collaborator_gibson_rir.md",
+      "sha256_before": "16cbe5ddce48cc0f1c06e80f842a70cf2a4e106a70e221547b273e8dbc55a354",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "16cbe5ddce48cc0f1c06e80f842a70cf2a4e106a70e221547b273e8dbc55a354"
+    },
+    {
+      "old_path": "docs/data_contracts.md",
+      "new_path": "docs/data_contracts.md",
+      "sha256_before": "7a319bd80c1272c72da37c2d19d06815fa006e4a988343eadd1acf983e3db87b",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "7a319bd80c1272c72da37c2d19d06815fa006e4a988343eadd1acf983e3db87b"
+    },
+    {
+      "old_path": "docs/decision_log.md",
+      "new_path": "docs/decision_log.md",
+      "sha256_before": "6a501f0a004c97c6002b8a6d69593b963c0f89ecdcf84cf726053d6a2946b829",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "6a501f0a004c97c6002b8a6d69593b963c0f89ecdcf84cf726053d6a2946b829"
+    },
+    {
+      "old_path": "docs/f3loc_baseline_facts.md",
+      "new_path": "docs/f3loc_baseline_facts.md",
+      "sha256_before": "a0f3cee106c59c1524aa8dd06034bd709675bdcf3e4aa8c4950999fe5086d1cf",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "a0f3cee106c59c1524aa8dd06034bd709675bdcf3e4aa8c4950999fe5086d1cf"
+    },
+    {
+      "old_path": "docs/f3loc_code_inventory.md",
+      "new_path": "docs/f3loc_code_inventory.md",
+      "sha256_before": "190fc7edc3d700dcd190f2b520fe009fb65d1ec7ea2e4812336632d2f9d27fc0",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "190fc7edc3d700dcd190f2b520fe009fb65d1ec7ea2e4812336632d2f9d27fc0"
+    },
+    {
+      "old_path": "docs/hssd_preprocessing.md",
+      "new_path": "docs/hssd_preprocessing.md",
+      "sha256_before": "acc48c5f4fa293e13af30b3efea78457d1abb8bd3c6824a0faa4eb5e1617639a",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "acc48c5f4fa293e13af30b3efea78457d1abb8bd3c6824a0faa4eb5e1617639a"
+    },
+    {
+      "old_path": "docs/hssd_preprocessing_sources.json",
+      "new_path": "docs/hssd_preprocessing_sources.json",
+      "sha256_before": "61047709445455327fb5f1189d310c6628871f1aa2cd0ccadc658cb2c7f54c09",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "61047709445455327fb5f1189d310c6628871f1aa2cd0ccadc658cb2c7f54c09"
+    },
+    {
+      "old_path": "docs/hssd_reproduction.md",
+      "new_path": "docs/hssd_reproduction.md",
+      "sha256_before": "6a6c5820f0857726b727a1493a87044e1136506bd5dfda4326be3d1493230d7c",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "6a6c5820f0857726b727a1493a87044e1136506bd5dfda4326be3d1493230d7c"
+    },
+    {
+      "old_path": "docs/migration_validation.md",
+      "new_path": "docs/migration_validation.md",
+      "sha256_before": "6cf90d801907d4ad31f08256c4101e3c66c664c0e868876582815faaf417add7",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "6cf90d801907d4ad31f08256c4101e3c66c664c0e868876582815faaf417add7"
+    },
+    {
+      "old_path": "docs/research/README.md",
+      "new_path": "docs/research/README.md",
+      "sha256_before": "a6bfa9f8047f7bc3ce95a3537f79b1a27f5f1c897863dc116d98590c0aaac596",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "f68f0cb85c7c202ef891b23d0bfee26e72872843262d5c2c32a476c26884c7ee"
+    },
+    {
+      "old_path": "docs/research/current_findings.md",
+      "new_path": "docs/research/current_findings.md",
+      "sha256_before": "1b7069738a727a904f0cc5fac127b2eac847b4ea4b847ffa86317e12df865689",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "426cf4dea9885c4d0a219f17898e511b0c2f10f1855c6c20f655b83279cf3597"
+    },
+    {
+      "old_path": "docs/research/evaluation_protocol.md",
+      "new_path": "docs/research/shared/evaluation-protocol/README.md",
+      "sha256_before": "f3532becab3d6e23e6ff9ef5b32f4fdefdac103a08cf457c6c6f76e3836542ea",
+      "action": "git mv",
+      "classification": "Shared evaluation",
+      "sha256_after": "6644f56c990845638f970ddd06259d77d12c4a714c1e5ee9c6ea8730ffc6e147"
+    },
+    {
+      "old_path": "docs/research/experiment_index.md",
+      "new_path": "docs/research/RESEARCH_INDEX.md",
+      "sha256_before": "5ffcfc8771a22495ad47b21e3e924d93d6ca17a305a568755a390bda406d7c1d",
+      "action": "git mv",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "87995704abd865bfa89c568a1320c3d83ba1a56a86171e74a5bc1e6c7a36b0a4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/README.md",
+      "sha256_before": "a9aae56d2b2c64123707a7679bc86c3bf4ba77a06eacf31238958554c80e21e5",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "7bc37478788da32ea0d96a091d4f8ff9f6bdfc2447a3c89175f1269cd05a9622"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/METHODS.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/METHODS.md",
+      "sha256_before": "093fea14b02ef45f5935db4c640286113ea0435f403b8c3815aeada04ddfd1a9",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "dba0a8607b61c6546f697d3117cbe20a9b2a9bfd3fd0d9225e3bae75a833e978"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/PROTOCOL.md",
+      "sha256_before": "bfe2ac8b0cac67ff2783bdd21c80bd06779a3e63d983e04aa9d2887af27aa2a3",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "0d50a58a15d2543010506b7e2966a4c35538e93ea760f407ca5f7f0c4011d81b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/REPRODUCE.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/REPRODUCE.md",
+      "sha256_before": "19fd16b2b81519cadf12699f0a63452293514f723eb3be266446f9086bd41d26",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "0661bd0fdef5690d576368f49a7ac69255656afae31691bf1fd519345b0636fa"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/execution_history.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/execution_history.md",
+      "sha256_before": "45d5ed15148df51fbaa7a9de723809a1642bbe8b34bc8a648c58f1ce80af7017",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "53a016ac95e663d46537ff65e371e0c24b4d89483f0d0afc58bbecac52d07f30"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/external_context.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/external_context.md",
+      "sha256_before": "c22cdb24c4f56d9301ba693a377a8edf4170364f104547c24214664acb38bb2a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "4dc610c339b36419ad7d2d86828f792bee457debe14e2b00ea354c43a8ed0f16"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/archive/next_action.md",
+      "sha256_before": "df8af98dd83dcecf1e7def098181daee93439562732827521678cd468a66e5e5",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "efb0f1056e89d540bd11af4f85e9424ae905b19a1ccd78d3549c99b118d9e784"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/artifacts.json",
+      "sha256_before": "952b665c1c20371a3789f97dc76fc6e59a1304e9365eadf0e5ecfc3b824dca3b",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "23cea8b24fea4303ebcfea2f486cd159fedbd56a10c3cc155c263e72d7e199be"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/evidence/final_verification.json",
+      "sha256_before": "59a1cdb0ec46541dd2985fdb3a6b722de4bf1a66df89fdf6657f29445dc69946",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "59a1cdb0ec46541dd2985fdb3a6b722de4bf1a66df89fdf6657f29445dc69946"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/evidence/metric_comparisons.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/evidence/metric_comparisons.json",
+      "sha256_before": "95b57aaa46ec9c8a7a938f4bc31560f21104329080449cdf69a1ca3153f07168",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "95b57aaa46ec9c8a7a938f4bc31560f21104329080449cdf69a1ca3153f07168"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/protocol.md",
+      "sha256_before": "ecee7ddb1c66f60396d1ef08c89e92e54e008c77ddf28c77870f012ad834dd67",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ecee7ddb1c66f60396d1ef08c89e92e54e008c77ddf28c77870f012ad834dd67"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/reproduction.md",
+      "sha256_before": "e7694aba4b26a612f527d78d3c011a7f6c7fbfcca6b8dbc9285eee0f501a4076",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "e7694aba4b26a612f527d78d3c011a7f6c7fbfcca6b8dbc9285eee0f501a4076"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-acoustic-cues/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-acoustic-cues/results.md",
+      "sha256_before": "fa655aa7a51c5ab09b13bf4976a1d7a5fb6c137acfbe7ed5d35878038b365864",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "41b4603f7dbbe2b35a7d9a8258e60a9bf6961cfc96e9073d9072d7edb51f4049"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/README.md",
+      "sha256_before": "ff487138f0fbaee41d8e7b62f369b9f0583bb1bcc05ece4e59911f6b63733362",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "90c2811ecd6f34a2746d78bb10609ca6d01667e8806f4a70053260f26fce763a"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/archive/PROTOCOL.md",
+      "sha256_before": "90ac28a9437926d9f2f1a06b67f6fed07c9c27d04d85b5ff8d6c25f434d8b62b",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ea7fdb995353eea38ffa06d97b657fc2dc2c68a01d5adea90eec1b14af784708"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/artifacts.json",
+      "sha256_before": "9bfe9621be6f7fa32e0c8b2eb8dfb284f5980db1c0a7bc09e2b4f4e14aaf8a65",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "e229d3bc608131803f692807bd64e3da45e46436d61adedfd4f938ff46c81312"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/evidence/domain_summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/evidence/domain_summary.json",
+      "sha256_before": "827500b26f63b9d6516bce5ae7dd7d1dfff2a63bffc54e8fac24ac05b3f60e9d",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "827500b26f63b9d6516bce5ae7dd7d1dfff2a63bffc54e8fac24ac05b3f60e9d"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/reproduction.md",
+      "sha256_before": "435a0ed9eaadb0b454a4a39a764caad760beed645a39288b66d653e13e7ce6c6",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "435a0ed9eaadb0b454a4a39a764caad760beed645a39288b66d653e13e7ce6c6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-alignment-discrimination/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-alignment-discrimination/results.md",
+      "sha256_before": "728f5e04afafc8f70f5af57e883e90bf70f9895edadef1da6e21bcaf57b6ae82",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ea57aaff5beff0da13bc79dcc7c03f7aa1182cc161b9a66692ccba80d862ecbd"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/README.md",
+      "sha256_before": "2415d7d6631eb290408409d9630e7b85fcbda3d38594e88dd28b2add3a943503",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "925083cf908aa82c5eb73eb48ca7f735eb6a766e536c72ffd0332719f82828a6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/archive/PROTOCOL.md",
+      "sha256_before": "02a882e2fd6d4948fe1c60709730f093bc3baae29fbecda199d9256936c5ad95",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "5aa3957f698fc4a7e3377b89900bf6821bf2849dd6177d6e2b346ee7eabf18ed"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/archive/historical_mining_README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/archive/historical_mining_README.md",
+      "sha256_before": "785aa2fb847447ba35a849de18a588ea8e2d4d938456d1d3307a89bf19637cf3",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "5b608c8b6d23b3e6dd395dd6bf74f1cb61e00a810e333528e03a5a50121298f7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/artifacts.json",
+      "sha256_before": "93f36cfbeaa046ad3f04445900dc75eaec26069e2d8fa5b6ffdf52b29e41f68b",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6abe66c997c2596bed431bda41978bd9f4b3c2d32ceab6ef42a563d64cb7a03b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/evidence/downstream_seed_summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/evidence/downstream_seed_summary.json",
+      "sha256_before": "a585311b0bb147f75c224f85d7b909ac9be391459100f0c5937c1c6d593fe7d4",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "a585311b0bb147f75c224f85d7b909ac9be391459100f0c5937c1c6d593fe7d4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/evidence/final_verification.json",
+      "sha256_before": "c0d9aae334eae15c386c3f6770e4fb690faa932b5f8884712388480f47b6d222",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "c0d9aae334eae15c386c3f6770e4fb690faa932b5f8884712388480f47b6d222"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/evidence/stopping_decision.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/evidence/stopping_decision.json",
+      "sha256_before": "d62a22065e2876b1e3367e154ec858cc8ab561287d4dad81ac4c0390a8fd1694",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "d62a22065e2876b1e3367e154ec858cc8ab561287d4dad81ac4c0390a8fd1694"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/reproduction.md",
+      "sha256_before": "a2649fff9f5d89f15248e03198cc3b30aad7557bff412dbbb203a504e16346fb",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "a2649fff9f5d89f15248e03198cc3b30aad7557bff412dbbb203a504e16346fb"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-candidate-sampling/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-candidate-sampling/results.md",
+      "sha256_before": "72d0a5b6ebb60e246f89f5df533ed6a936ef13f1753105366133574e7847d6ae",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3c948e94341ffdf9bd2b7142c7711388b0cf88fc372fae58a29a2242d79bf272"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/README.md",
+      "sha256_before": "a3f5cbb99c90d5a81906d1b60c092036fdc94e6820bb962ca62710780ba1b427",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "722721a479a14bbb436bbda151ee1575d155879e34794c3205633588e28fe69d"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/archive/failure_diagnosis.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/archive/failure_diagnosis.md",
+      "sha256_before": "0c67328d55f5e844f05cc4d14bccab09f4041c71e348520d9bf09d0e8c25466a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "8391febce2683633716c6f4827c980a578300a0ce43418c91265bba8d7bfe4a0"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/archive/fusion_system_audit.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/archive/fusion_system_audit.md",
+      "sha256_before": "27072363b7697d4622ad9729f252754583715279631e8fc2ee40ecab5085a67c",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "72d59da5b0e451a1dc2423003c63d6b7b599513ca38a94660a4933324a6aacf4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/archive/hypothesis_register.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/archive/hypothesis_register.md",
+      "sha256_before": "7567164a321c8a477646852c3ce2489dc6f83c631009d23ffe13d594e3d9ddce",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6a8d42082761c5f8b374a3157b7bcbca8cb77e16cca9875fe88cef7c57a92fb5"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/archive/research_goal.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/archive/research_goal.md",
+      "sha256_before": "8f8aca68740e9b84a45341fcc1d01bcbf0a4c1a6b2e619dda5fefd63c8e61b63",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "79f24787f0decd87943539757ba78f484f6a746a624aac3c785625772acad27f"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/archive/researcher_decisions.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/archive/researcher_decisions.md",
+      "sha256_before": "15ca5f66c65ff488663e57b26e4dfbb5f2e4e5c8680ad71f2d5079e305f762d9",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "b049a5b69263e8ddd29eeba93c41295f493dc596bcdbed83b0909741ac946aa6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/artifacts.json",
+      "sha256_before": "5a366889f368c801441d7503ac733d01d96c717a21313a8dc87bd6cdea8c2e09",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "b1688018f541cda8a4d04d9a688d365dbc209c2131721ae5fc9c7bab102d80c4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/evidence/analysis.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/evidence/analysis.json",
+      "sha256_before": "d3dfd78f2ec069185f54e332779fce113769bfdca3a2c6831f418e1bf865cbca",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "d3dfd78f2ec069185f54e332779fce113769bfdca3a2c6831f418e1bf865cbca"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/protocol.md",
+      "sha256_before": "d1bc93b0fdbba390e5b8c32759d705722f6d6f4ff756fdaf00a930860f974d98",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "d1bc93b0fdbba390e5b8c32759d705722f6d6f4ff756fdaf00a930860f974d98"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/reproduction.md",
+      "sha256_before": "dbafe1f3ab3dbff1c9763ed749668c3f292ff7a187a56fc5e4a6d673135e6af5",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "dbafe1f3ab3dbff1c9763ed749668c3f292ff7a187a56fc5e4a6d673135e6af5"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-audit/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-audit/results.md",
+      "sha256_before": "543849df99f222f66207e237d00dcfe5a6fe9d45e796b38cd09541993af5a429",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "bd6f45897c88cca71f3bb430c330213612c77cf92369ed0ae774a2e437b81d39"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/README.md",
+      "sha256_before": "67fa44829054f542037931c13f9dd75279cc7ecc0f29db8c0064ed4cce9b3abb",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "62863a58f90adca88cb5a951c646d99ffc8a2026b012855a4833c60e701e0ffe"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/archive/PROTOCOL.md",
+      "sha256_before": "a9e6d9a398cd8591ab7323d1b220c6ebf1ccb4bcb1609ec1380aa9063b8ad75d",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ace020f6b3793b5ba5222dc4a2de72d127f527e6be4eee9414644e5bd9d238d3"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/archive/completion_audit.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/archive/completion_audit.md",
+      "sha256_before": "95b318b1ac3fa3316f44786694694b488f682356226ed304e14ce973305f09d8",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6cb443ed53f84f772a7c7c46629d6cb7a4dc251b527eb9fd5619b5c759aea14f"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/archive/findings_checkpoint.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/archive/findings_checkpoint.md",
+      "sha256_before": "d93423f0f05887c294ae6855cfd025e2d607b21b8eb6fdad68c0baa01728bd9d",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "2a9bc6077db5ec0c5ce809850bc54e3dddcd417b2b10d5442d376d7fcd120949"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/archive/next_action.md",
+      "sha256_before": "ad4b45ef6ea747b1f3b2168398ce29718ae6fa9d5ca8eba0bf3856e0eaf4b674",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "e5d26a69fe790de9f1ee44c40705aeb788e85fa550b63c6dcf60057fabe80450"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/archive/reproduce.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/archive/reproduce.md",
+      "sha256_before": "9c85ca9cef8a708599707f1f5e3c28514d91897fb28372c9befdbef6004ebc70",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "65fec0abc82d2a5e6681862514067e88703f8d1964353ab26da24373c36a4b3d"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/artifacts.json",
+      "sha256_before": "30603529e75da8008ac65a9269cb53e7eb178a5ab76434e7e30229ccbe1b1aa6",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "48c6a94da0d275ebf36e885a8c6c7a4c38754aa0999c5d2bc3efa568ba9ffd86"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/evidence/confirmation_summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/evidence/confirmation_summary.json",
+      "sha256_before": "155bf790a3aafbad4290dc3f93293fe1284484939e0084a9087a3e0998d7a8d6",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "155bf790a3aafbad4290dc3f93293fe1284484939e0084a9087a3e0998d7a8d6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/evidence/final_verification.json",
+      "sha256_before": "867dbb0f45974f8a412de69f2f330ed4ba3da5737f5e24fc5655c4d631e3c396",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "867dbb0f45974f8a412de69f2f330ed4ba3da5737f5e24fc5655c4d631e3c396"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/reproduction.md",
+      "sha256_before": "ed6fc217879c5ef8115c92c0300bac3fb58210f7a3bd36c2978f08f3243045e2",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ed6fc217879c5ef8115c92c0300bac3fb58210f7a3bd36c2978f08f3243045e2"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-fusion-vs-posterior/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-fusion-vs-posterior/results.md",
+      "sha256_before": "6e9fd196e925cc5a93bed7c8dd97f2c3fe567df844e55dabcdbde0abdb9414cd",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "e31139d3943266127caf4c0b75d39f65fe75ae0f2a6a1de89a2ae65e8596ddbe"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/README.md",
+      "sha256_before": "a3145f489fd4494094d8f2bdd0e1f2008eb18bf4b6601d4dc7363c3349e8020c",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "0d73c6fb15599c1d43c0878d3cbbf62255080e26a58dc57ae828b9df2cbd45a6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/archive/INFORMATION_AUDIT.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/archive/INFORMATION_AUDIT.md",
+      "sha256_before": "3ad1f52735fc7aa482cdf17bf4b0017f4eca902c1b6c39cc02f949863e02d35f",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "21193c7c22bf4e28db8802ae9005f61fb09b5ccd0846c5e4587d3c664730a7cd"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/archive/PROTOCOL.md",
+      "sha256_before": "3f2008f19bfe3227d89b4cc0cf77d57982e4837a6cdd048ec7e027aa8c2dabb1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "68d326407502b29a23bc251b0df359c93258ff25577a9c442490c3786b908595"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/archive/REPRODUCE.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/archive/REPRODUCE.md",
+      "sha256_before": "29cc6c9558becf2fe709b512a51a8e6395e2a9684855d2a9574060201d5924d9",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "200c0a61aebdef4a40b960c1746a86d337d566dffd8d69f776b02c7fdfca370b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/archive/next_action.md",
+      "sha256_before": "ebbb5094d21cfca189ae32c208d741d5cc8c3e2f49e6339679b3133178f55d4a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "82b455edafada73ecb3749fbe85b5a4942c08f4e3d65a464097f473465b4cf39"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/artifacts.json",
+      "sha256_before": "d04bc373874e37d2eb75feb7b7a0cbeffa146ddfc27881fa40c66ee34d39fb80",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "f27446bc84dcca887af304b1cf2d4cd9aa34bc6f4ae27582ca755f65e8f772cc"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/evidence/final_evaluation.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/evidence/final_evaluation.json",
+      "sha256_before": "5d28954bfc84da0177f5e08990298dac0055d6239d3546af253b5673bd95d108",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "5d28954bfc84da0177f5e08990298dac0055d6239d3546af253b5673bd95d108"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/evidence/final_verification.json",
+      "sha256_before": "744553c141079752c7abeb6a79111a2d663b6eef6455d76aaa5ec89e1ce67df7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "744553c141079752c7abeb6a79111a2d663b6eef6455d76aaa5ec89e1ce67df7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/protocol.md",
+      "sha256_before": "77beda03fe500fb93e9286b1a48b00ec065d37f36801b55534e1697ba5424e65",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "77beda03fe500fb93e9286b1a48b00ec065d37f36801b55534e1697ba5424e65"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/reproduction.md",
+      "sha256_before": "233d628d520226de9213630f0414049a6151e6dfcd34cc21737a4b3b48716b8a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "233d628d520226de9213630f0414049a6151e6dfcd34cc21737a4b3b48716b8a"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-geometry-discrimination/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-geometry-discrimination/results.md",
+      "sha256_before": "99b737b511a6ac5d7293b1a685238858c73bf95f1c8cc4d58d376a55ec502b69",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "28d29d466d651ebcab09854c6d02ad07334824cf5fe6f86a9c83e123585c5210"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/README.md",
+      "sha256_before": "a093a2d9e19966d0fc44728bd99f8853d01ff0c76adde400f6feb15d434af051",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "26a045560315c2a94a13c64142e569f291fe94c1897830a18e2757c4260abf6d"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/archive/PROTOCOL.md",
+      "sha256_before": "8bad9721782f6750580dfe1425219ea00f93f4817872a5e672077e791c5bf32a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ea55fb20adea278f758948caf1d043eaeb2029a68c9b458f9fca3c75713e492a"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/archive/completion_audit.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/archive/completion_audit.md",
+      "sha256_before": "1da64f496ad529ac0822d73613d277bb3f81e7c03f10e57c62f0eacff5e8da1a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "638e615dfd7a65b60c4f8f3eb2f3884b0a57f6756ccaf3efe31c50ca44a9fa11"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/archive/next_action.md",
+      "sha256_before": "5ed924d66c8cae2930f3fb398796c99c96a5753a2086cd21f1e3a3a30df4db17",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "12f640218eae0d18a546e481ed0f4497506bd88be55159ede43f66587b80e636"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/archive/reproduce.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/archive/reproduce.md",
+      "sha256_before": "8a06454d8209dba2a90e7cde7abc5cc76428e2c11e7c777f15d3aa395c046436",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "c6aa3a2a0ea1668061177642989bbbeaf123ae00846028ec4cf11a581011f490"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/artifacts.json",
+      "sha256_before": "e171f8a81cfdf90bcea84c9e1fff862936b43fce46bdae546051f8e6357e7ef1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "8874076afb9b5ed985a0465f8c453a94259c8e879f58ba81f71f7d7ca60c6879"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/evidence/final_verification.json",
+      "sha256_before": "7282a28bf3136e6ac4b1d9fadbaf955bc89964b56b0e70cf24a85aed1dbb1f01",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "7282a28bf3136e6ac4b1d9fadbaf955bc89964b56b0e70cf24a85aed1dbb1f01"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/evidence/summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/evidence/summary.json",
+      "sha256_before": "d04e95aeb5e29e0030450608c5afc6e62a539a411be1eb2c0ab1bf1bebf13475",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "d04e95aeb5e29e0030450608c5afc6e62a539a411be1eb2c0ab1bf1bebf13475"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/reproduction.md",
+      "sha256_before": "13d584a8bcd7b588cbc9ec8cee3455f680e3f6e8a0af03e9b7782f99f9fd3ec1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "13d584a8bcd7b588cbc9ec8cee3455f680e3f6e8a0af03e9b7782f99f9fd3ec1"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-hypothesis-discrimination/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-hypothesis-discrimination/results.md",
+      "sha256_before": "73c77ab40e19245edbdf6b5f56587c81571b6ee02746bac362b00e6c7028b118",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "4734d2030e8ab91fc636d92213880b903d70cb1ca3b418c451383732c9c05752"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/README.md",
+      "sha256_before": "838a94ddc0b2bdf4469e971c7a471eade6fbddfb622ab50bd0045cb13acb4889",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "933b4f9d8e482eb85917e21ed04502a8dea2398c7621d633d206c8e66c4b3ba3"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/archive/PROTOCOL.md",
+      "sha256_before": "ca076756c1eab4584b45c4a790080ca9a790d51f3137c2ab3eb16d549e94d5e1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "58705afd20068d193c25d327bbe793562fd44374cef6badb3ab360f3c4b0f8df"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/archive/completion_audit.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/archive/completion_audit.md",
+      "sha256_before": "d98551b31fe98ed1be801784a328b41c23aa81def9b1eb5abd744eaaa8bb3571",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "27a67af341ffcd25a043ca402c5aef5220189441f122beb5ed9d89925f72662a"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/archive/next_action.md",
+      "sha256_before": "b51a1f084604edaf416ef71b546c79f90f3e1315816f24ea4e6928e2ed9dc7b0",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "b82fb54d7a9f85da020e8e019bdd6950391b633f56f85adfd58e3d9eec9986ae"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/archive/reproduce.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/archive/reproduce.md",
+      "sha256_before": "7d8da2b09464d92cdb31bc2ed81b6896e33727ad5b633f0a7b895579ca748499",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "da14cc6bc9d9299c47b92dabdf081b130246d1758055880e23a345cd533781f9"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/artifacts.json",
+      "sha256_before": "5aae6286584dcf237da94d15ec82cda103c64606f2d53e2d5b9c3f8c2ca197f5",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "24d4529b69e6b40c69c0f18b0178489a3e8fc51e54e6526ed9853bc4dbc3c5e3"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/evidence/final_verification.json",
+      "sha256_before": "c4c5344e4a774dcc6e17d382cd3ec0ea982c1ad456b365eb88f355d65bbaba10",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "c4c5344e4a774dcc6e17d382cd3ec0ea982c1ad456b365eb88f355d65bbaba10"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/evidence/summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/evidence/summary.json",
+      "sha256_before": "5a449b87db1961fc64bbf3663f798e46715b8ef393956a1ad744c7f3f8dd64f0",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "5a449b87db1961fc64bbf3663f798e46715b8ef393956a1ad744c7f3f8dd64f0"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/reproduction.md",
+      "sha256_before": "df3065e42814c39e07784ea074deddc8af43df900de20d72d2126b80e3910ee7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "df3065e42814c39e07784ea074deddc8af43df900de20d72d2126b80e3910ee7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-modality-coverage/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-modality-coverage/results.md",
+      "sha256_before": "dabe8d49b0470cc3fc22a4afa848065679ec89e33ddd9d58741f9f247e2da35b",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "280f04ff9c1d429950d58c12e6c4ca0c79f0d5297b3464970eac351ecc58ca30"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/README.md",
+      "sha256_before": "3281cc8e3e5791ffd7cd784c376b12677cfd319e5275ff29e28068375ffa8366",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "43505dbe66d578433002df1c0ec26b19c529c9fc4634d7588da70731ff62d4e1"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/archive/PROTOCOL.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/archive/PROTOCOL.md",
+      "sha256_before": "4aaa6220702e90cab9f15a1d159e9b1d756cf6fd0c325136e17ce362bc5a0756",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3e5021abf4638c493100010b02a65030a8c41e22adae21ec7c8bc890c47884da"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/archive/REPRODUCE.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/archive/REPRODUCE.md",
+      "sha256_before": "dd00ea04d88150a56fa1e44438de4ce0a1d7215021b20289c4843979ed01af00",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "fab141a0acb08d1ccaba8b826368379d1d7fa1a5573d11445f01768d57900ece"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/archive/next_action.md",
+      "sha256_before": "2f6ec5308c5a7d8e9425ed19b0160c1a58dc97c7b28ccff070bf893a600682e9",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "53d516aef7501c6bf79c9bd51bf4c7aa13aefadd36f1dd5a2eac54b911c65636"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/artifacts.json",
+      "sha256_before": "ad0abd05064520a96ba95f2402b473e30ab149d5dac38f32791e8dba043f1eb7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "747b3cd3be8381e19d968149e21889b1301cd203f107196f04c0232ed4f03ff2"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/evidence/final_verification.json",
+      "sha256_before": "dd36eac3a5f32a60fca0c4e4f967da8a086f4600247deac943b8d28f5f5599a7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "dd36eac3a5f32a60fca0c4e4f967da8a086f4600247deac943b8d28f5f5599a7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/evidence/paired_statistics.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/evidence/paired_statistics.json",
+      "sha256_before": "f1e770b3f4890b423226f027445eaa9cef5c7b0732d9f91b096218f2a44bd1a3",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "f1e770b3f4890b423226f027445eaa9cef5c7b0732d9f91b096218f2a44bd1a3"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/protocol.md",
+      "sha256_before": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e9fafe17019e012e37c3e69f328ee71ddae306baf4150a964c39bcac5843961"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/reproduction.md",
+      "sha256_before": "7904f212be79734a8e8be13eda49f2ea6d793f2a8284f4c517e394a0e35cd1b8",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "7904f212be79734a8e8be13eda49f2ea6d793f2a8284f4c517e394a0e35cd1b8"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-pairwise-acoustic/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-pairwise-acoustic/results.md",
+      "sha256_before": "8654f56c075725c209cc094eb7919adfdb718d4e72b4601fd87eae1b7d29ca02",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "babd8cdec3c99e886f48b0639ee05b11e82f72892dbaadc31181c3f397a4ebcb"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/README.md",
+      "sha256_before": "ed8c73c69666d4d26ffae6060751529b8ea8d555d4b5723309bca2520008ae64",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "53a1c3529b5d4dc01d4ac663ceecf725eb97c58d3326766b20454ca92ed40149"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/execution_events.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/execution_events.md",
+      "sha256_before": "5a46acdca982ed759bf51a48687653585d606d882859d72835156b6609be6c2f",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6871cbd2e9d871000113eb9c90914b62607756f96dba42e46db090933ff75902"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/failure_diagnosis.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/failure_diagnosis.md",
+      "sha256_before": "f6a2871efdb39d28e9779580d69fb164be8ff27423772bebce0d900d06e3c9d1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "8d62207eff7ab55c20270808a6426ef8059f223df30b2b2760f97f9f4d9de60b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/fusion_system_audit.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/fusion_system_audit.md",
+      "sha256_before": "9be1ed38245b4f407af04c775eb16f3dfe126e833bff70fa13c1d9dc84fa6d3e",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "e1bdb552da638193cbbfd853290dc92393a30c9101734745aff49c08775a7aff"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/hypothesis_register.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/hypothesis_register.md",
+      "sha256_before": "ae032d51319d37d316da9095289dd99cdb1c6e9961b3f89d8a163bb6d5b95d8e",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "2c0df7eb427029ae39afc5a5de5b29f744eef1b222a68648201fb015f3d3e402"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/iterations.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/iterations.md",
+      "sha256_before": "5c9b7c7d07046fdbadc64284342e5d3b36576566e3fd4b0fa71bf7babce16f50",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "a79b46c1d1134bc3a74f3530e5c79845b5b78a239b65b54b3381f4cbd186a881"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/next_action.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/next_action.md",
+      "sha256_before": "52fdb9002c848f9019e8c4d43032bfe2d577c118a69e31226eabb460a8fabf19",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "154fa71c4735c612a8e7e12c1233be8727a4e6cf44fd3c7cb08195fb80b75a24"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/reproduce.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/reproduce.md",
+      "sha256_before": "649f3bca2150dc2b00c0aa91a326ce0a0c782677ec8ddf3fe0d8add50dbfd97c",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3e09145f272de9f5f236476cb6209eb97babd25fb1ca32ffcb1947a0dc4590c2"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/research_goal.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/research_goal.md",
+      "sha256_before": "eeb82204b66b5a41083db85cac23570ac225214ec2812cc03261193518c6e514",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "25b0f3162186cd985e5b7b326108d3b8f37915479eb9af11aac4c8f6dca8b75e"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/archive/researcher_decisions.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/archive/researcher_decisions.md",
+      "sha256_before": "e28dfbcba7331c8a6f7f6880b6729651780c94cc344e1db4271a33f531830966",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "b67370d1f9d542c2138a680703c247c5b737f3717c4df430a7203fe69c026900"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/artifacts.json",
+      "sha256_before": "54e437a011edae5fa3fb6caf6d0ef3505e755a7236e53daa40a14180a070158e",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "62c5d4bafcb087c87ba4cb31eda9b7fd42412ccf418f0a5f50ea20aa0317ff91"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/evidence/final_summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/evidence/final_summary.json",
+      "sha256_before": "25cffda2ce92369aec7695e0919d5ae8cdbb79c81791fe52af9d7782ff618c03",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "25cffda2ce92369aec7695e0919d5ae8cdbb79c81791fe52af9d7782ff618c03"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/protocol.md",
+      "sha256_before": "0934468149b6d3203cf98c980e74ed5076922ff384a20eb3d1b69853ff3f8034",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "0934468149b6d3203cf98c980e74ed5076922ff384a20eb3d1b69853ff3f8034"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/reproduction.md",
+      "sha256_before": "89c5ca19944152a4a8de25a16333933021f2385b7c38a1ed220e8fac53f1b944",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "89c5ca19944152a4a8de25a16333933021f2385b7c38a1ed220e8fac53f1b944"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-07-support-refinement/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-07-support-refinement/results.md",
+      "sha256_before": "8ddfc640ff75a0428050a7e5fa2adc8de429517fad77ff3072a525bcaa1de220",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "f9f8a6e95818558c8db968f9c290b7ccb52472cdcb41f25aa1630046921607af"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/README.md",
+      "sha256_before": "3a7bdb1f134bd8fe6934f5b7985c6a116ac42f0f8e7c6f46607c20fbcc6edcdc",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "01933e238e5453703ea42ed8852d450552de441e9a328f8acd3cf2351f2df329"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/artifacts.json",
+      "sha256_before": "c767a991fa522d801626efb8fa8cb03a2e0c323e5b689224a9d599190957a4d1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "93af699c853056488843272d5803b5a4c6ffc13a7452f3afcbaaac2be979d68f"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/evidence/final_verification.json",
+      "sha256_before": "f63220f42a2a12efc4364c254fe182e06204351335bca9179ff77138440677b0",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "f63220f42a2a12efc4364c254fe182e06204351335bca9179ff77138440677b0"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/evidence/full_downstream_summary.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/evidence/full_downstream_summary.json",
+      "sha256_before": "90e4b268fb00c0fb52209ffcfb9665432079b306ca4e171e7e9bf263363454ac",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "90e4b268fb00c0fb52209ffcfb9665432079b306ca4e171e7e9bf263363454ac"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/evidence/protocol.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/evidence/protocol.json",
+      "sha256_before": "4c0a9001c8701548a46cb60783eef75af9a494839f193e57291b4034cdd4287b",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "4c0a9001c8701548a46cb60783eef75af9a494839f193e57291b4034cdd4287b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/evidence/stopping_decision.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/evidence/stopping_decision.json",
+      "sha256_before": "238e8c09cd4f31d03278b12c3fba339ad29210bada9ced54135e5b7aea3cbe38",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "238e8c09cd4f31d03278b12c3fba339ad29210bada9ced54135e5b7aea3cbe38"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/protocol.md",
+      "sha256_before": "cb103de959ffcc04da783cd6a171c8569b58a9a7b9e219c7a5537a69b0e868d1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "cb103de959ffcc04da783cd6a171c8569b58a9a7b9e219c7a5537a69b0e868d1"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/reproduction.md",
+      "sha256_before": "8206fcaf31104c3650f148495c93fcf2f778cfa5ff27c69a81f28da5f6aeeee7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "8206fcaf31104c3650f148495c93fcf2f778cfa5ff27c69a81f28da5f6aeeee7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-directional-interaction/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-directional-interaction/results.md",
+      "sha256_before": "a32abe72fcb27ad4a88dad054fa8420b80fab7caceef41d4f61167b42394582f",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3985adb266bfc2d4628705cefc4e1d462b4419430bcdf4c365a48c4c0e8d7d20"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/README.md",
+      "sha256_before": "67e545a8eb298292d01bb7bb73e3ac285514a97fe4f690ba26fe747274b4f856",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "9b7fc38ce94a2e76c067cdf3793fd826086b35ecbde27f973b5c31195ac593f4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/archive/HSSD_DATASET_AUDIT.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/archive/HSSD_DATASET_AUDIT.md",
+      "sha256_before": "d6e63120b4d83caee43930ceb6a3e859654e311f745d616542b9af553d781a13",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "2f4c32ce74f4bf8ea9a97cb949e52179ccb468e0b311366f5f9803ad3e34c0e8"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/archive/REPRODUCE.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/archive/REPRODUCE.md",
+      "sha256_before": "f047f707c0206c18e51198d82a1857084cfec6932c2811bb960f637bcfd42415",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "b84c1d20f1160a3cdb687ca0cb99fe2b8c7eee91341f2a8cd706dcef4ef8323b"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/artifacts.json",
+      "sha256_before": "baa869f75046032461c76aeb5015d41fbf700093e13f4d94bf204d9d5d2ce72c",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "682bc81c5a309fb49cd29cf57f4dc8638f69014aa4d172c7dfdb9bcbb0ca6cfb"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/EXPANDED_TRAINING_PROTOCOL.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/EXPANDED_TRAINING_PROTOCOL.json",
+      "sha256_before": "18bdecf07f1839130a2e13b93c8791096a98ba2838635711704915047231bfcd",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "18bdecf07f1839130a2e13b93c8791096a98ba2838635711704915047231bfcd"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/EXPERIMENT_PROTOCOL.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/EXPERIMENT_PROTOCOL.json",
+      "sha256_before": "6e88d80fb27af6525ad8d3afe2d4d551eddd206d835de8b50a1e4821920afceb",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6e88d80fb27af6525ad8d3afe2d4d551eddd206d835de8b50a1e4821920afceb"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/FINAL_FINDINGS.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/FINAL_FINDINGS.json",
+      "sha256_before": "fa816b2cee0a7c1a80be5e6c826c81dfbdd79b4b1617f2a9faaa41a198b560d7",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "fa816b2cee0a7c1a80be5e6c826c81dfbdd79b4b1617f2a9faaa41a198b560d7"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/FINAL_VERIFICATION.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/FINAL_VERIFICATION.json",
+      "sha256_before": "33fa884376c1b82df462a306f654a5b95af660b4ab8eeb0ad67f2be740f342da",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "33fa884376c1b82df462a306f654a5b95af660b4ab8eeb0ad67f2be740f342da"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/OOF_ALIGNMENT_PROTOCOL.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/OOF_ALIGNMENT_PROTOCOL.json",
+      "sha256_before": "1545017eae96dbe2769487de7050f7d9f8471250cac19a8b7a9796b87e6e3da1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "1545017eae96dbe2769487de7050f7d9f8471250cac19a8b7a9796b87e6e3da1"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/SCENE_WEIGHTING_PROTOCOL.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/SCENE_WEIGHTING_PROTOCOL.json",
+      "sha256_before": "302cc491fbb9899002a790b0ee5563c193d8ca916c6e9af317c013dcff669e05",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "302cc491fbb9899002a790b0ee5563c193d8ca916c6e9af317c013dcff669e05"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/full_query_results.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/full_query_results.json",
+      "sha256_before": "225fcd4430d490fc6fc44104254cd61a61cb2caccec5b300e35f8c95d4b7f0c2",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "225fcd4430d490fc6fc44104254cd61a61cb2caccec5b300e35f8c95d4b7f0c2"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/oof_results.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/oof_results.json",
+      "sha256_before": "ecd68bc9a9b46be26bd3ef9f8a6bbbaa3aac575f2eeadcc6e656a0a29cc26ebd",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "ecd68bc9a9b46be26bd3ef9f8a6bbbaa3aac575f2eeadcc6e656a0a29cc26ebd"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/recipe_control_results.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/recipe_control_results.json",
+      "sha256_before": "6370e0e98c9f365fd885080fbeab356170139c53467a9e4dc78c38a94e182031",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6370e0e98c9f365fd885080fbeab356170139c53467a9e4dc78c38a94e182031"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/evidence/split_protocol.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/evidence/split_protocol.json",
+      "sha256_before": "9419496feb4410dacfe040456234e97fd88563107ef6e918cf5431ac79bc71c3",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "9419496feb4410dacfe040456234e97fd88563107ef6e918cf5431ac79bc71c3"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/protocol.md",
+      "sha256_before": "254541cd19d1c99eedab64ac0a8e7b1315b7379ef15b2ef9a5fde9e3d70b443a",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "254541cd19d1c99eedab64ac0a8e7b1315b7379ef15b2ef9a5fde9e3d70b443a"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/reproduction.md",
+      "sha256_before": "64a662a749b04f81f4bbfedb7b344c7e5d95a9ee003cf8f9e9a771aa38c271e6",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "64a662a749b04f81f4bbfedb7b344c7e5d95a9ee003cf8f9e9a771aa38c271e6"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-hssd-scaling/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-hssd-scaling/results.md",
+      "sha256_before": "fc4b7eaf1162205a5626229b2ed65e8e83a5cea0f192161fd172008f09aa17bf",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "16ae5fbb25b89a22b47c5ccbf72d9de1bcbfd04160bda23de668e0683f19164d"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/README.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/README.md",
+      "sha256_before": "20b8d793d427bfebdaed9392a41e08dc14c893c9e42bf212a623bd5b321e422d",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "40ea54c46c7e4b491cd6e2b7e2817e6e1823db36e3e474b5552247c60eac4216"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/artifacts.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/artifacts.json",
+      "sha256_before": "ac9289b2f73f7a3d9d78640732fc71f35e728c3952bead657e4a59e4c24e35f6",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "c7a97e5616c1f2a63a1a12be2f7d73e7e0aedaf3c3107f9a27d4cf47f7c6eea0"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/evidence/final_verification.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/evidence/final_verification.json",
+      "sha256_before": "6991a45a447776aa15bcf6035bd1843cfe762157272b8f29437943f7b291c141",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "6991a45a447776aa15bcf6035bd1843cfe762157272b8f29437943f7b291c141"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/evidence/phase_a_full_analysis.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/evidence/phase_a_full_analysis.json",
+      "sha256_before": "97fffb8e6810883be01cb22c923f5502fbadcf14afe17f0c84bf0fa11f4606db",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "97fffb8e6810883be01cb22c923f5502fbadcf14afe17f0c84bf0fa11f4606db"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/evidence/protocol.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/evidence/protocol.json",
+      "sha256_before": "80e2d7f76bceccc51a4b0f1f6953ab8d56f4aa8b6c20a2ebcf98e94cf684e7cb",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "80e2d7f76bceccc51a4b0f1f6953ab8d56f4aa8b6c20a2ebcf98e94cf684e7cb"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/evidence/stopping_decision.json",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/evidence/stopping_decision.json",
+      "sha256_before": "3da708b32401f182b46b4227e64060730f7fa7df642c90fd995f60e9592af4ac",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3da708b32401f182b46b4227e64060730f7fa7df642c90fd995f60e9592af4ac"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/protocol.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/protocol.md",
+      "sha256_before": "cb103de959ffcc04da783cd6a171c8569b58a9a7b9e219c7a5537a69b0e868d1",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "cb103de959ffcc04da783cd6a171c8569b58a9a7b9e219c7a5537a69b0e868d1"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/reproduction.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/reproduction.md",
+      "sha256_before": "844193f94e854a16aca7198456c661182cd96ac47d65bb743349754fd581eef4",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "844193f94e854a16aca7198456c661182cd96ac47d65bb743349754fd581eef4"
+    },
+    {
+      "old_path": "docs/research/studies/2026-11-08-residual-spatial/results.md",
+      "new_path": "docs/research/track-a/experiments/2026-11-08-residual-spatial/results.md",
+      "sha256_before": "9c330fd4124e451d6b13d3c189ddddea91b1b65e5d91f03d50d4bb5ef42cab93",
+      "action": "git mv",
+      "classification": "Track A",
+      "sha256_after": "3278449b271e2ef4d687a18465f164061ff2cf1da201f85d2f94ba2dbddb85ea"
+    },
+    {
+      "old_path": "docs/research/templates/study.md",
+      "new_path": "docs/research/templates/study.md",
+      "sha256_before": "ee359eb0b374cb056208b206ceea290d4e60d98696dff5397f0001ab90e55feb",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "3e94908c6a0f68439f51fc60834cfe19e36fd5ff69a81dbc55ab6f9567d1e0f5"
+    },
+    {
+      "old_path": "docs/research/tools/export_local_studies.py",
+      "new_path": "docs/research/tools/export_local_studies.py",
+      "sha256_before": "61ce9f6e5fde2a58c7906ad5e3b2f12f51e1b5bccd50594ccc7df41d3ba58ae9",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "851319c062ac11ec3bb02063ee97534c8c470a487b57cc6d65edad7408d12ebb"
+    },
+    {
+      "old_path": "docs/research/tools/validate_archive.py",
+      "new_path": "docs/research/tools/validate_archive.py",
+      "sha256_before": "225402f8e0b0f50fa77b7a65b1e666ac97ea72c9a3b727094d96a11dd2f2ab0f",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "fd3ca546db212f2837c3d58ee46dc1840307784c4883af17fc258e8e400150e4"
+    },
+    {
+      "old_path": "docs/superpowers/plans/2026-07-11-initial-research-scaffold.md",
+      "new_path": "docs/superpowers/plans/2026-07-11-initial-research-scaffold.md",
+      "sha256_before": "bb5675bb49ed32aaaf4d385d6afe8364ad4843c1bea1a599ebb89be8c442b429",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "bb5675bb49ed32aaaf4d385d6afe8364ad4843c1bea1a599ebb89be8c442b429"
+    },
+    {
+      "old_path": "docs/superpowers/plans/2026-07-21-collaborative-gibson-rir-reproduction.md",
+      "new_path": "docs/superpowers/plans/2026-07-21-collaborative-gibson-rir-reproduction.md",
+      "sha256_before": "9a645bb0db3d6e05f8f5b6f8d19e274974243b65467f6dfa5523436083d15e72",
+      "action": "retain",
+      "classification": "Navigation/tool/background; not a new experiment",
+      "sha256_after": "9a645bb0db3d6e05f8f5b6f8d19e274974243b65467f6dfa5523436083d15e72"
+    }
+  ],
+  "classification_evidence": [
+    {
+      "study": "2026-11-07-acoustic-cues",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-acoustic-cues/results.md",
+      "dependency_evidence": "원래 B2/GEOQ는 보존했다. 다음 수치는 Train12 scene-held-out 또는 재사용 Val8/Val11 개발 결과다. Test와 신규 독립 scene은 사용하지 않았다. 표의 성공률은 %, 차이는 percentage point이다. 세부 수식·한계·실패 시도와 출처는 [METHODS.md](archive/METHODS.md)에 기록했다.\n48 kHz의 6채널 RIR, E/C/N 캐시, encoder 중간 표현과 최종128D embedding, 후보별 FP reference를 확인했다. E는 시간-주파수 상대 에너지, C는 **초기와 전체 구간**의 복소 coherency, N은 채널 공통 성분을 제거한 정규화 envelope이다. C의 두 번째 구간을 후기 구간으로 간주하던 해석은 사용할 수 없다.\nFP와 observation은 각각 단순화된 평면도와 furnished3D에서 얻어져 domain mismatch가 존재한다. 소스/배열 배치, 유한 시간창, 전처리 정규화와 renderer의 합성 응답이 해석을 제한한다. 단서의 세기만 크다고 정답 후보를 지지하는 것은 아니다."
+    },
+    {
+      "study": "2026-11-07-alignment-discrimination",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-alignment-discrimination/results.md",
+      "dependency_evidence": "**Distance reduction is not a sufficient success criterion.** Historical contrastive training improves acoustic retrieval relative to a reconstructed random initialization, while absolute same-pose cosine distance can increase. Positive-only consistency sharply contracts representations and weakens discrimination; tiny nonzero discriminative signals remain. Adding alignment to NCE sometimes improves acoustic retrieval relative to matched NCE continuation, but none of the tested matched downstream heads establishes an improvement over the existing strong GEOQ on the fixed cohort. Native-reference results are diagnostic, not deployable floorplan-only performance.\nThe actual pilot uses 6,387 Train12 query pairs and Val3 with 1,704 queries for checkpoint selection. Shared normalized 128D E/C/N encoder outputs are compared by dot product / temperature 0.07. Cross entropy selects the exact same-pose, same-yaw FP positive at slot 0 among eight candidates. There are four spatial-hard, two orientation-hard, and one spatial-random negatives; no in-batch or cross-scene negatives. Hard negatives already come from a frozen visual epoch-20 ray-likelihood model. Thus visually informed mining is existing functionality, not a newly invented improvement. Pose and scene metadata control pairing and mining, not neural inference input. Channel/yaw structure is retained; yaw invariance is not the objective.\nActual optimizer: AdamW 3e−4, weight decay 1e−4, batch 64, gradient clipping 1, BF16 and cosine schedule T_max=40. Training stopped at epoch 12; best was epoch 4, selected by Val3 loss. Epochs 5, 10 and 12 survive; no archived epoch-0 checkpoint was located. “Init” is reconstructed seed 42, not an authenticated historical pretraining checkpoint. The original best eight-candidate validatio"
+    },
+    {
+      "study": "2026-11-07-candidate-sampling",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-candidate-sampling/results.md",
+      "dependency_evidence": "> 역사적 연구 기록. 원본: `candidate_sampling_20261107_2337/RESEARCH_REPORT.html`. 원본 SHA256은 [산출물 목록](artifacts.json)에 있습니다.\n# 음향 후보 판별: 기존 근거와 통제 후속 실험\n**학습 negative와 실제 경쟁 후보의 차이는 크지만, candidate-aware sampling만으로 강한 GEOQ를 개선하지 못했다.** 100개 새 encoder와 210개 matched utility heads를 평가했다. Multi-positive 목표는 candidate-region exact 목표 대비 Train held-scene pooled Top1을 5.47pp 회복했지만, 같은 reference bank의 원래 sampling보다 여전히 4.36pp 낮았다. 이는 허용 범위 충돌의 일부 완화를 보여주며 최종 개선과 다르다."
+    },
+    {
+      "study": "2026-11-07-fusion-audit",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-fusion-audit/results.md",
+      "dependency_evidence": "> 역사적 연구 기록. 원본: `astra_fusion_20261107_0200/results_summary.md`. 원본 SHA256은 [산출물 목록](artifacts.json)에 있습니다.\n- **새 개입의 개선은 확인하지 못했다.** 기준 재현 후4개의 저비용 pilot을 수행했고 사전 조건을 통과한 후보가 없어 확인 실행0/1에서 중단했다. 테스트 데이터 접근·새 학습·가중치 수정 없음.\n- 동일한 Val3/1704 query, 동일 FP 후보/GT/시각·음향 특징, 동일 측정 함수. 이번 baseline은 동결 특징에서 점수와 융합을 재계산한 결과이며 RGB/RIR부터 전체 encoder를 다시 실행한 결과는 아니다."
+    },
+    {
+      "study": "2026-11-07-fusion-vs-posterior",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-fusion-vs-posterior/results.md",
+      "dependency_evidence": "> 역사적 연구 기록. 원본: `fusion_vs_posterior_20261107_1300/RESEARCH_REPORT.md`. 원본 SHA256은 [산출물 목록](artifacts.json)에 있습니다.\n# Fusion vs. Posterior Decision — 연구 결과\n고정된 B2 점수에서 support 후 국소 정밀화를 적용한 사전 지정 방법의 Val11 동시 성공률은 68.078% → 70.078%이다. 변화는 +2.000 pp, 장면 bootstrap95% CI [+1.258 pp, +2.839 pp]이다."
+    },
+    {
+      "study": "2026-11-07-geometry-discrimination",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-geometry-discrimination/results.md",
+      "dependency_evidence": "# AV-FPLoc: 후보 형상에 조건화한 hypothesis discrimination\n새 센서 관측이나 cross-attention 없이, **기존 후보 bank에 이미 있는 floorplan 형상으로 기존 multimodal 점수를 조건화**하면 강한52차원 Utility Ranker를 개선할 수 있었다. 모든 주 비교에서 B2의 동일20개 support/refined 후보, 점수, 학습목표와 tree 예산을 유지했다. 따라서 이번 이득은 candidate coverage 증가가 아니라 후보 선택의 개선이다.\n초기에는 compact visual residual이 새 matching evidence를 제공한다고 해석했다. 그러나 새 residual block에 다른 query를 넣고 재학습해도 이득이 남았다. 후보 형상만 사용한 GEO가 더 강했고, 같은104개 입력에서 score와 geometry 사이 tree interaction을 금지하자 이득이 사라졌다. 현재 지지되는 설명은 **후보 형상과 기존 점수의 결합을 ranker가 활용하지 못했다**는 것이다. 형상만으로 위치를 알 수 있다는 주장이 아니다. S와 B2 proposals에는 여전히 matched visual/acoustic 정보가 들어 있다."
+    },
+    {
+      "study": "2026-11-07-hypothesis-discrimination",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-hypothesis-discrimination/results.md",
+      "dependency_evidence": "같은20개 support/refinement 후보를 유지하면서 후보의 **첫 후보 대비 utility 이득**을 학습해 Top-1을 개선했다. Utility는 joint_success + 0.5×fine_success이며, 두 seed 모두 이 가중치를 Train 장면 OOF에서 선택했다. 후보 coverage 증가를 학습형 ranking 개선으로 혼동하지 않았다.\n## 후보 추출과 coverage\n원래 B2 epoch8 점수와 full-bank 후보를 고정했다. 세 추출기는 score NMS, Euclidean support NMS, connectivity-aware support NMS다. Support는 T=.05 점수 질량의0.4m/±10° 집계이며 NMS는1m/30° 이웃을 억제한다. 각 중심은 해당0.4m/10° 이웃의 원래 fusion score 최대점으로 정밀화한다. 정답은 후보 추출에 사용하지 않는다. 모든 후보는 기존의 알려진 scene 내 candidate bank에서 선택한다."
+    },
+    {
+      "study": "2026-11-07-modality-coverage",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-modality-coverage/results.md",
+      "dependency_evidence": "# AV-FPLoc: 관측 증거, 후보 coverage, 실제 판별의 분리\n이번 연구는 새 성능 최적화가 아니라 높은 Top-K coverage의 원인과 투자 우선순위를 검증했다. **관측 기반 acoustic 점수는 정보 없는 NMS보다 훨씬 높은 coverage를 제공한다. 그러나 그 후보를 실제 정답으로 선택하는 판별 격차가 크다.** Bank의 존재, Top-K 포함, Top-1 선택은 서로 다른 양이다. 아래 수치는 모두 반복 사용된 개발 데이터에 대한 탐색적 증거이며 새로운 일반화 성능이 아니다.\n- 기존 visual/acoustic 점수는 B2 exchange **후** branch였다. Transformer의 첫 블록 뒤 latent 평균 교환(route1), 두 번째 블록, 잔차 및 acoustic decoder adaptation을 거친다. Pure visual은 원래 캐시 mu/scale, pure acoustic은 원래 observed embedding으로 같은 frozen FP bank와 계산했다. Pure는 단일 모달 **추론**을 뜻한다. B2와 학습 목적/decoder가 일치하는 통제군은 아니다."
+    },
+    {
+      "study": "2026-11-07-pairwise-acoustic",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-pairwise-acoustic/results.md",
+      "dependency_evidence": "# AV-FPLoc: 반복 음향과 모호한 후보 쌍의 판별 가치\n**결론:** 시각적으로 모호한 후보를 구별하는 음향 정보는 확인됐지만, 이번 통제 실험에서는 GEOQ 이후의 재현 가능한 추가 localization 이득을 확인하지 못했다. Val11 pair accuracy는 visual 51.46%, pure acoustic embedding 76.02%, GEOQ 89.61%였다. 최종 joint는 GEOQ 71.818%, C3 71.714%(차이 −0.104pp, scene CI [−0.334,+0.114])였다. 같은 물리적 pose의 native/FP 차이도 반복 변동을 넘어서 남았다. 기존 GEOQ를 유지하며 reference 정합과 반복 신뢰도 검증을 우선한다.\n이번 연구는 동일 후보 20개에서 음향의 존재, 반복 안정성, GEOQ 이후 추가 가치, 최종 선택을 분리했다. 기존 B2/GEOQ 및 이전 산출물을 보존했으며 Test는 사용하지 않았다. 단순 cue 추가 이후 후보 상대 특징, 세 donor 재학습, frozen 제거, 쌍별 utility 학습, 반복 점수 평균화까지 후속 반증을 수행했다."
+    },
+    {
+      "study": "2026-11-07-support-refinement",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-07-support-refinement/results.md",
+      "dependency_evidence": "> 역사적 연구 기록. 원본: `astra_fusion_v2_20261107_0225/results_summary.md`. 원본 SHA256은 [산출물 목록](artifacts.json)에 있습니다.\n- **최종 후보는 강한 B2 기준보다 R@1m +1.659%p, 위치·방향 동시 성공률 +1.587%p를 기록했습니다.** 두 seed에서 개선됐고, seed 평균으로 검증 8개 장면 모두 동시 성공률이 올랐습니다.\n- 이전 로그를 검토한 뒤 더 강한 기준을 재현했습니다. 새 학습형 선택기 3종이 실패하자 후보 공간의 국소 지지도로 방향을 바꿨고, 발견한 정밀도 손실까지 후속 실험으로 보완했습니다. 첫 보고서나 실험 batch를 종료 조건으로 삼지 않았습니다."
+    },
+    {
+      "study": "2026-11-08-directional-interaction",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-08-directional-interaction/results.md",
+      "dependency_evidence": "# 후보별 음향 증거의 효용과 명시적 교환의 한계\n후보별 음향 증거를 제공하면 audio-conditioned visual 판별은 개선된다. 그러나 명시적 방향성 modulation이 같은 정보를 사용한 concat이나 단순 score 결합보다 유리하다는 근거는 확보되지 않았다. 실제 visual 중간 특징을 직접 보정하는 cross-attention도 올바른 audio에 특이적인 개선을 입증하지 못했다.\n전체 query 후속 검증에서 교환 없는 E0+GEOQ는 Val11 71.818%→72.260%(+0.442%p, scene 95% [+0.167,+0.678])로 개선됐고 Val8도 +0.453%p였다. 반면 Train scene OOF는 −0.110%p로 개선을 확인하지 못했다. 이를 개발셋상 후보 개선으로 보존하며 독립 일반화나 명시적 교환의 성과로 주장하지 않는다. 기존 encoder·B2·Support-NMS·GEOQ는 유지한다. 첫 실패 후 실제 visual-feature 교환, audio-free 후보 검증, scalar 대조, 내부 scene 교차검증, 전체 query 학습까지 후속 실험했다. 명시적 교환에 대한 결론은 이 구조·목적·데이터 범위의 재현 가능한 반증이며 모든 cross-modal 학습의 불가능성을 뜻하지 않는다."
+    },
+    {
+      "study": "2026-11-08-hssd-scaling",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-08-hssd-scaling/results.md",
+      "dependency_evidence": "# 장면 다양성, 정보 교환과 Geometry 기반 후보 판별\n**이번 실험에서 지지된 원리는 후보의 geometry에 맞게 기존 증거를 해석하는 것이다.** 초기 query-weight 학습에서는 데이터 확대 이득이 나타났지만, 기존의 장면별 동일 가중치까지 복원한 후속 실험에서는 신뢰구간이0을 포함했다. 데이터 확대 효과는 학습 방식에 민감했고, 총 query 고정 시 장면 수만 늘린 개선도 확인되지 않았다. A→V/concat/visual adapter의 추가 정보 전달 효과는 지지되지 않았다.\n새 HSSD 데이터셋 전체에 대한 zero-shot이나 완전히 새로운 공간의 일반화 증거가 아니다. **11개 평가는 B2/GEOQ/이번 head 학습에서 제외했으나 visual teacher에는 노출된 장면**이다. 기존 Val19는 재사용 development이며 Val8/Val11을 새 평가로 부르지 않는다. 기존 Test 입력·성능은 사용하지 않았다. Test ID 및 family 제외를 위한 행정 메타데이터만 확인했다."
+    },
+    {
+      "study": "2026-11-08-residual-spatial",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-08-residual-spatial/results.md",
+      "dependency_evidence": "**이번 범위에서 GEOQ를 넘어서는 재현 가능한 추가 판별 정보는 확립하지 못했다.** 이는 모든 잔여 정보의 부재를 증명하지 않는다. 작은 개선 신호를 전체 쿼리로 확장하고, 표현 손실·모델 용량·학습량·후보 참조 특징을 순차적으로 검증했다.\n전체 쿼리: Train 6,387 / Val8 4,190 / Val11 5,775. 작은 실험은 장면당 128개, 마지막 FP 중간 특징 pilot은 64개다. 모든 비교는 동일 B2 Support Top-20을 유지했다.\nGEOQ는 S26 + 후보 ray 요약26 + B2 관측 ray 요약26을 사용한다. R1/R2에는 관측 중간 특징, pure query–FP 임베딩 관계, 후보별 ray 잔차를 추가했다. FP 중간 토큰 비교는 별도 추출한 동결 CNN의 통계/투영 특징을 사용한다."
+    },
+    {
+      "study": "2026-11-09-directional-tribranch",
+      "track": "A",
+      "evidence_path": "track-a/experiments/2026-11-09-directional-tribranch/RESULTS.md",
+      "dependency_evidence": "**Decision: preserve B2+GEOQ. No new method passes joint improvement plus fine/visual preservation.** Acoustic-only coarse direction is observable, but additional localization value beyond the strong reference is not established.\n|fixed_fusion|69.401|67.708|27.214|\n|B2|73.307|72.103|24.740|"
+    }
+  ],
+  "imported_local_artifacts": [
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/AUDIT.md",
+      "git_copy": "AUDIT.md",
+      "sha256": "69a639ff93dfe7d3427fa9bf502f18e27f0a585e516eee8045d798272712c94f",
+      "bytes": 6893
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/A_FEASIBILITY.md",
+      "git_copy": "A_FEASIBILITY.md",
+      "sha256": "08338223572000d5177ed7b6d4290d369053cbf8a25f9087b665bc99adc24887",
+      "bytes": 4779
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/B_EXPERIMENT_MATRIX.md",
+      "git_copy": "B_EXPERIMENT_MATRIX.md",
+      "sha256": "6a3aa785c28901c77fb27f0410eb4be3073cd3a52faff8f42dc14ce03fce2da3",
+      "bytes": 4952
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/CORRECTIONS.md",
+      "git_copy": "CORRECTIONS.md",
+      "sha256": "2f51ed9f9d582cba72e042230b70f90c7f7d5cd43fa3db4d89ec8f3016fffbe7",
+      "bytes": 531
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/FOLLOWUP_PROTOCOL.md",
+      "git_copy": "FOLLOWUP_PROTOCOL.md",
+      "sha256": "2daa1540bbac3e12a6e2b4939b596326097c0c2168ecd78e32f623184c98068a",
+      "bytes": 827
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/IJCAI_ASSESSMENT.md",
+      "git_copy": "IJCAI_ASSESSMENT.md",
+      "sha256": "b8d193f7fc869ddc518361525eb37371f8ebb0c22227450ec777be58f6c72109",
+      "bytes": 2325
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/MECHANISM_AND_FALSIFICATION.md",
+      "git_copy": "MECHANISM_AND_FALSIFICATION.md",
+      "sha256": "c1b16ee885885fe51295922430cbd1944e1a0a117101e0ad3d1a60504fa66680",
+      "bytes": 3433
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/NEXT_ACTION.md",
+      "git_copy": "NEXT_ACTION.md",
+      "sha256": "465fca83e3bd29ff5f101591d3a56abceadafee5cea13962b6b8c8521846430f",
+      "bytes": 1654
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/PROTOCOL.json",
+      "git_copy": "PROTOCOL.json",
+      "sha256": "91d4cec045555dbc9a384aad79a110d2367f603c5e16b9fc9e24ea0ebdecf1cb",
+      "bytes": 5026
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/REPRODUCE.md",
+      "git_copy": "REPRODUCE.md",
+      "sha256": "5fcef36b8b011a0675a68dfa34a18bdd7f700400541818f87eabad4004405479",
+      "bytes": 3416
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/RESULTS.md",
+      "git_copy": "RESULTS.md",
+      "sha256": "1d41e29b5768e4ba4725638254a83ca5e9426c7286bc501944e75c101b22c8bc",
+      "bytes": 4869
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/USER_REQUEST.md",
+      "git_copy": "USER_REQUEST.md",
+      "sha256": "809f242714e15d4cab8c41cc49b7072cf7ef042039271a405a5ba7f010dbfd85",
+      "bytes": 19247
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/environment.json",
+      "git_copy": "environment.json",
+      "sha256": "60529d73061017a814772351cc08c9c26fb2b9ddc1fa33ac3e0b508537407b5c",
+      "bytes": 186
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/final_verification.json",
+      "git_copy": "final_verification.json",
+      "sha256": "f4ced5cef7bb70a548dc8b074ad853675ccba7116553a305d65f220561724c31",
+      "bytes": 605
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/method.pdf",
+      "git_copy": "method.pdf",
+      "sha256": "35e0b27e1b3f2763f65df8e6aacf4c35dc85c47cf6704e5332dfd9214af99261",
+      "bytes": 29308
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/method.png",
+      "git_copy": "method.png",
+      "sha256": "0b689f0eabf4df4888c5e5c8048f27df8d5e248404dfc5efa5e9c7af46f3613f",
+      "bytes": 178483
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/results.pdf",
+      "git_copy": "results.pdf",
+      "sha256": "1b16af0415ac2c23caeb863e03a991cf7ea6be3cbed9b8ec9002a4fc4d01818d",
+      "bytes": 22641
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/results.png",
+      "git_copy": "results.png",
+      "sha256": "209ed1dc53ca18778260b96fe18090bec614fa4881a7166302e1aa56937ab6e0",
+      "bytes": 136096
+    }
+  ]
+}

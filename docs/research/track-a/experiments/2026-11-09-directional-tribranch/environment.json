@@ -1,0 +1,9 @@
+{
+  "python": "3.10.22",
+  "torch": "2.4.1+cu124",
+  "cuda": "12.4",
+  "numpy": "1.24.4",
+  "sklearn": "1.5.2",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "device_total_memory": 25252724736
+}

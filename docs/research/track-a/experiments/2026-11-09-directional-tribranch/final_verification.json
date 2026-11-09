@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "files": 3723,
+  "bytes": 409814067,
+  "manifest_sha256": "d68f2206553c1da69bfa0a010ed0154d49c983783023837519dd81e0bd364a80",
+  "stage_A_models": 61,
+  "stage_B_models": 66,
+  "nested_states": 36,
+  "optimizer_fit_runs": 155,
+  "zero_update_final_states": 8,
+  "neural_forward_replays": 264,
+  "replay_max_abs": 0,
+  "original_diff_unchanged": true,
+  "selected_train_scenes": 23,
+  "test_family_overlap": 0,
+  "test_observations_accessed": false,
+  "source_hashes_verified": true,
+  "docker_image_id": "sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318"
+}

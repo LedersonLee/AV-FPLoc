@@ -1,0 +1,17 @@
+# Mechanism and falsification
+
+Observed coarse directional structure and incremental pose information are different hypotheses. Ridge succeeds on acoustic-only labels, synchronized rotation recovers the rotated target, and isotropic/donor controls are worse. This rejects “only global room size is represented” as a sufficient description on these data. It does not identify which echo corresponds to which physical wall.
+
+Cue-only ambiguous pairs beat donor, but a crossfit cue does not improve the same-budget156-feature conditional ranker and remains below original GEOQ. One explanation is duplicate geometry information already encoded in score statistics and visual/candidate rays. Another is weak calibration/correspondence of four-sector extents under multipath and furnished-vs-extruded-reference mismatch. These explanations are consistent with results, not independently identified causal mechanisms. A four-sector diagnostic oracle is not a deployable acoustic method.
+
+Equally informed concatenation, gating and attention offer no stable joint-and-fine benefit over the preserved GEOQ anchor. Attention's point estimate alone cannot justify novelty. Trained noaudio and noFP are *added-branch* controls: GEOQ retains audio/map context, and reference embeddings retain map information. Do not infer that audio or floorplans are globally unnecessary.
+
+Actual projection updates improve fit-scene utility and hurt held scenes. Three donor mappings sometimes improve F1/F2 rather than hurt them; this is consistent with suppressing a harmful learned residual, not proof that wrong audio is informative. Recipient FP references remain fixed and frozen GEOQ keeps recipient evidence. Interaction-disabled is OOD and supports only sensitivity conclusions.
+
+The10x lower acoustic learning-rate/inner-epoch followup chooses no update in4/6outerfold-seed settings perarm; the remaining short updates make the same selections for frozen and partial-acoustic models. This supports overfitting/poorly transferable residual corrections as a practical bottleneck, while failing to establish that broader joint encoder learning is impossible. No F3 is justified by this pilot.
+
+F2 audio/self/donor have nearly identical depth changes and no reliable observation-specific localization benefit. Complete-bank visual checks detect a small joint loss despite improved depthMAE. Thus mean ray regression error is an inadequate preservation proxy, and donor-trained controls plus full-bank visual checks are necessary before crediting A→V exchange.
+
+Limitations: only12reused teacher-exposed scenes,128queries/scene, coarse structural targets, original acoustic projection only, fixed strong baseline residual formulation, simplified reference geometry/materials, no actual microphone noise variation, no fresh teacher-unseen evaluation. A small null/negative pilot is not a universal impossibility result. Pair counts and repeated renders do not increase independent scene count. Exploratory confidence intervals do not correct method-selection bias.
+
+Transferable principle: a modality can predict a physically plausible target and beat shuffled observations while adding no useful decision information to a strong conditional reference. Require conditional benefit, matched active capacity, actual parameter updates, same-candidate accounting, and preservation of the existing modality before attributing improvement to interaction.

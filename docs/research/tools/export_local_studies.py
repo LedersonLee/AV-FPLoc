@@ -7,6 +7,8 @@ from pathlib import Path
 import hashlib,json,re,sys,os
 from urllib.parse import unquote
 from bs4 import BeautifulSoup,NavigableString,Doctype
+if (Path(__file__).resolve().parents[1]/'RESEARCH_INDEX.md').exists():
+ raise SystemExit('Legacy snapshot exporter disabled after Track migration; update the canonical RESEARCH_INDEX and Track reports without overwriting history.')
 ROOT=Path(sys.argv[1]).resolve();OUT=Path(__file__).resolve().parents[1];SRC=ROOT/'experiments'
 SPECS=[
 ('astra_fusion_20261107_0200','2026-11-07-fusion-audit','초기 fusion 감사','results_summary.md','저비용 gate·yaw 개입에서 강한 기준을 넘는 개선을 확인하지 못했다.','analysis.json'),

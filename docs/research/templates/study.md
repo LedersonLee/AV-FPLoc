@@ -1,8 +1,10 @@
 # 연구 제목
 
-- Study ID / 날짜 / 상태:
+- Study ID / 날짜 / Track / 상태(성공·실패·부정·중단):
+- 증거 수준(Exploratory / Development-validated / Independent-validated) 및 근거:
 - 선행 연구와 변경한 가설:
-- 코드 commit / source SHA256 / 실행 환경:
+- 실제 실험 코드 Commit SHA / dirty 상태·패치 또는 외부 source SHA256 / 실행 환경:
+- Docs Commit SHA는 이 템플릿/Index에 자체 삽입하지 않고 최종 실행 보고에 기록:
 
 ## 질문과 경쟁 설명
 

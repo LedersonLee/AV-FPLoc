@@ -4,21 +4,21 @@
 
 ## 1. 후보 geometry를 이용한 점수 해석은 일관적인 개선 근거가 있다
 
-[구조적 증거 연구](studies/2026-11-07-geometry-discrimination/results.md)는 후보 형상과 기존 multimodal 점수의 결합으로 ranking을 개선했다. Candidate-only 및 donor 대조 때문에 이를 새로운 관측 기반 physical structural consistency의 발견으로 해석하지 않는다. GEOQ는 이미 acoustic/fused score와 음향 영향을 받은 후보를 사용한다.
+[구조적 증거 연구](track-a/experiments/2026-11-07-geometry-discrimination/results.md)는 후보 형상과 기존 multimodal 점수의 결합으로 ranking을 개선했다. Candidate-only 및 donor 대조 때문에 이를 새로운 관측 기반 physical structural consistency의 발견으로 해석하지 않는다. GEOQ는 이미 acoustic/fused score와 음향 영향을 받은 후보를 사용한다.
 
-[HSSD 후속 연구](studies/2026-11-08-hssd-scaling/results.md)에서 OOF 입력과 장면별 동일 가중치를 맞춘24full GEOQ−score-only의 joint 차이는 **+1.218%p [95% CI +0.510,+2.051]**였다. 과거 threshold를 공통 적용한 보조 비교도 **+1.120%p [+0.476,+1.871]**였다. 두 시드 모두 양수다. 이는 기존 GEOQ보다 좋은 새 모델을 찾았다는 뜻이 아니다. [원수치](studies/2026-11-08-hssd-scaling/evidence/recipe_control_results.json)
+[HSSD 후속 연구](track-a/experiments/2026-11-08-hssd-scaling/results.md)에서 OOF 입력과 장면별 동일 가중치를 맞춘24full GEOQ−score-only의 joint 차이는 **+1.218%p [95% CI +0.510,+2.051]**였다. 과거 threshold를 공통 적용한 보조 비교도 **+1.120%p [+0.476,+1.871]**였다. 두 시드 모두 양수다. 이는 기존 GEOQ보다 좋은 새 모델을 찾았다는 뜻이 아니다. [원수치](track-a/experiments/2026-11-08-hssd-scaling/evidence/recipe_control_results.json)
 
 ## 2. 데이터 확대 이득은 학습 가중치에 민감하다
 
 HSSD의 OOF/query-weight 비교에서는12full→24full GEOQ가 **+0.506%p [+0.271,+0.742]**였다. 하지만 기존 장면별 가중치와 threshold를 복원하면 **+0.211%p [−0.147,+0.524]**로 불확실했다. 원본12full GEOQ의 점수와 선택을 정확히 재현한 뒤 비교한 결과다. 총 query를 고정한 장면 다양성 확대도 안정적인 이득을 확인하지 못했다.
 
-따라서 초기 pilot 및 확대 단계의 양의 결과를 삭제하지 않되, **학습 방식에 불변한 scaling 효과**라는 해석은 채택하지 않는다. 장면 수, 관측 수, 장면별 loss 가중치는 분리해서 비교해야 한다. [OOF 결과](studies/2026-11-08-hssd-scaling/evidence/oof_results.json) · [조건 복원 결과](studies/2026-11-08-hssd-scaling/evidence/recipe_control_results.json)
+따라서 초기 pilot 및 확대 단계의 양의 결과를 삭제하지 않되, **학습 방식에 불변한 scaling 효과**라는 해석은 채택하지 않는다. 장면 수, 관측 수, 장면별 loss 가중치는 분리해서 비교해야 한다. [OOF 결과](track-a/experiments/2026-11-08-hssd-scaling/evidence/oof_results.json) · [조건 복원 결과](track-a/experiments/2026-11-08-hssd-scaling/evidence/recipe_control_results.json)
 
 ## 3. 음향 정보의 유용성과 명시적 interaction의 필요성은 다르다
 
-[Modality coverage](studies/2026-11-07-modality-coverage/results.md)와 [pairwise 연구](studies/2026-11-07-pairwise-acoustic/results.md)는 음향이 시각적으로 모호한 후보를 구분하는 정보를 제공함을 지지한다. 높은 Top20 coverage는 정답 선택 성능과 다르다.
+[Modality coverage](track-a/experiments/2026-11-07-modality-coverage/results.md)와 [pairwise 연구](track-a/experiments/2026-11-07-pairwise-acoustic/results.md)는 음향이 시각적으로 모호한 후보를 구분하는 정보를 제공함을 지지한다. 높은 Top20 coverage는 정답 선택 성능과 다르다.
 
-[방향성 연구](studies/2026-11-08-directional-interaction/results.md)의 A→V는 일부 visual ranking을 개선했지만 동일 정보의 concat/scalar보다 안정적으로 우수하지 않았다. HSSD OOF24full에서도 D2−concat은 **−0.163%p [−0.437,+0.108]**였다. Matched−donor가 양수여도 gate-disabled 대비 이득은 확인되지 않았다. 올바른 audio에 의존한다는 것만으로 interaction 구조의 추가 기여가 입증되지는 않는다.
+[방향성 연구](track-a/experiments/2026-11-08-directional-interaction/results.md)의 A→V는 일부 visual ranking을 개선했지만 동일 정보의 concat/scalar보다 안정적으로 우수하지 않았다. HSSD OOF24full에서도 D2−concat은 **−0.163%p [−0.437,+0.108]**였다. Matched−donor가 양수여도 gate-disabled 대비 이득은 확인되지 않았다. 올바른 audio에 의존한다는 것만으로 interaction 구조의 추가 기여가 입증되지는 않는다.
 
 실제 visual residual adapter의 depth 품질 변화와 최종 pose 개선도 구분한다. 이번 비교에서는 acoustic-conditioned adapter의 최종 localization 우위를 확립하지 못했다. 모든 fine-tuning이나 모든 cross-modal 학습이 불가능하다는 결론은 아니다.
 
@@ -26,20 +26,20 @@ HSSD의 OOF/query-weight 비교에서는12full→24full GEOQ가 **+0.506%p [+0.2
 
 | 이전 관측 | 후속 검증과 현재 판정 |
 |---|---|
-| [v2 Support+refinement](studies/2026-11-07-support-refinement/results.md)가 B2보다 Val8 joint +1.587%p | [Fusion/posterior 분리](studies/2026-11-07-fusion-vs-posterior/results.md)에서 고정 decoder 개입으로 재검토. 학습형 gate 성공이나 pipeline 독립 일반화로 부르지 않는다. |
-| [Directional E0+GEOQ](studies/2026-11-08-directional-interaction/results.md)의 개발 Val11 +0.442%p | HSSD11의128query pilot +0.675%p 신호가 전체6,072query에서는 +0.345%p [−0.081,+0.821]. 확인 기준 실패, 새 강한 baseline으로 확정하지 않는다. |
-| [Residual R3 pilot](studies/2026-11-08-residual-spatial/results.md)의 +0.228pp | 전체query에서 −0.321pp. Pilot 신호를 확정 개선으로 보존하지 않는다. |
+| [v2 Support+refinement](track-a/experiments/2026-11-07-support-refinement/results.md)가 B2보다 Val8 joint +1.587%p | [Fusion/posterior 분리](track-a/experiments/2026-11-07-fusion-vs-posterior/results.md)에서 고정 decoder 개입으로 재검토. 학습형 gate 성공이나 pipeline 독립 일반화로 부르지 않는다. |
+| [Directional E0+GEOQ](track-a/experiments/2026-11-08-directional-interaction/results.md)의 개발 Val11 +0.442%p | HSSD11의128query pilot +0.675%p 신호가 전체6,072query에서는 +0.345%p [−0.081,+0.821]. 확인 기준 실패, 새 강한 baseline으로 확정하지 않는다. |
+| [Residual R3 pilot](track-a/experiments/2026-11-08-residual-spatial/results.md)의 +0.228pp | 전체query에서 −0.321pp. Pilot 신호를 확정 개선으로 보존하지 않는다. |
 | HSSD query-weight scaling 양의 결과 | 기존 scene-weight 복원 후 CI가0 포함. 데이터 다양성만의 효과라는 해석을 제한한다. |
 
 HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추가 탐색해 양의 결과를 만들지 않았다.
 
 ## 5. 음향의 물리적 해석에는 입력 계약이 필요하다
 
-[음향 단서 연구](studies/2026-11-07-acoustic-cues/results.md)의 시간/envelope와 초기 복소 채널 관계는 판별 정보를 가진다. 그러나 중앙 source·5cm ring·정규화 입력에서 절대 음량, 특정 반사 또는 정확한 DoA를 읽는다는 주장은 지지되지 않았다. C의 두 번째 구간은 late-only가 아니라 full window다.
+[음향 단서 연구](track-a/experiments/2026-11-07-acoustic-cues/results.md)의 시간/envelope와 초기 복소 채널 관계는 판별 정보를 가진다. 그러나 중앙 source·5cm ring·정규화 입력에서 절대 음량, 특정 반사 또는 정확한 DoA를 읽는다는 주장은 지지되지 않았다. C의 두 번째 구간은 late-only가 아니라 full window다.
 
-[Alignment 연구](studies/2026-11-07-alignment-discrimination/results.md)는 positive distance 감소가 negative와의 분리나 최종 pose 성공을 보장하지 않음을 보였다. [Sampling 연구](studies/2026-11-07-candidate-sampling/results.md)는 실제 경쟁 후보와 학습 negative의 차이를 확인했지만 sampling 변경만으로 GEOQ를 개선하지 못했다.
+[Alignment 연구](track-a/experiments/2026-11-07-alignment-discrimination/results.md)는 positive distance 감소가 negative와의 분리나 최종 pose 성공을 보장하지 않음을 보였다. [Sampling 연구](track-a/experiments/2026-11-07-candidate-sampling/results.md)는 실제 경쟁 후보와 학습 negative의 차이를 확인했지만 sampling 변경만으로 GEOQ를 개선하지 못했다.
 
-[Residual/spatial 연구](studies/2026-11-08-residual-spatial/results.md)의 좌표·Fourier·angular 대조는 수학적 정합과 실제 판별 향상을 구분한다. 10° 각도 격자가10° 물리 분해능을 뜻하지 않는다. HSSD FP acoustic reference는 실제 stage-only mesh가 아닌2D map extrusion이며 native furnished 관측과 수직구조 근사도 다르다.
+[Residual/spatial 연구](track-a/experiments/2026-11-08-residual-spatial/results.md)의 좌표·Fourier·angular 대조는 수학적 정합과 실제 판별 향상을 구분한다. 10° 각도 격자가10° 물리 분해능을 뜻하지 않는다. HSSD FP acoustic reference는 실제 stage-only mesh가 아닌2D map extrusion이며 native furnished 관측과 수직구조 근사도 다르다.
 
 ## 남은 질문과 후속 연구 조건
 
@@ -49,3 +49,7 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 - 48/96scene dense-bank 확대는 아직 수행하지 않았다. HSSD 감사에서 실제 준비된 자산 범위와 생성 비용을 확인했다.
 
 이 질문들은 가능한 다음 연구이며, 이 아카이브를 읽는 것만으로 실행 승인을 받은 것으로 해석하지 않는다.
+
+## 2026-11-09 Track A 후속: Directional Evidence / Tri-branch Pilot
+
+[후속 결과](track-a/experiments/2026-11-09-directional-tribranch/RESULTS.md)는 음향만으로 coarse near/far77.67%(prior62.00%)를 예측하지만 GEOQ 이후 추가 localization 이득을 확인하지 못했다. Attention joint +0.065pp는 불확실하고 fine -1.204pp이며, 실제 부분 음향 학습과 시각 어댑터·저학습률 내부 검증 후에도 B2+GEOQ를 유지했다.12개 reused/teacher-exposed scenes,2seeds의 탐색 결과다. 기존 B2 Top20/FP-RIR reference 의존 Pilot이므로 Track A이며 새 FP-RIR-free Track B의 검증 결과로 읽지 않는다. 이번 문서 이관으로 실험을 재실행하거나 기존 결론을 삭제하지 않았다.

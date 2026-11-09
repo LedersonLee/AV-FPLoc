@@ -1,0 +1,105 @@
+{
+  "training_scenes": [
+    "102344250",
+    "102816615",
+    "102816852",
+    "102817200",
+    "103997940_171031257",
+    "104862513_172226580",
+    "104862621_172226772",
+    "106366248_174226527",
+    "106366434_174226881",
+    "106878945_174887058",
+    "108294846_176710506",
+    "108736689_177263340"
+  ],
+  "outer_folds": [
+    [
+      "102344250",
+      "102817200",
+      "104862621_172226772",
+      "106878945_174887058"
+    ],
+    [
+      "102816615",
+      "103997940_171031257",
+      "106366248_174226527",
+      "108294846_176710506"
+    ],
+    [
+      "102816852",
+      "104862513_172226580",
+      "106366434_174226881",
+      "108736689_177263340"
+    ]
+  ],
+  "transfer_scenes": [
+    "104348160_171513093",
+    "104348328_171513363",
+    "106365897_174225972",
+    "103997424_171030444",
+    "102815859",
+    "102817053",
+    "103997562_171030642",
+    "104348361_171513414",
+    "102344022",
+    "108736779_177263484",
+    "103997718_171030855"
+  ],
+  "queries_per_scene": 128,
+  "seeds": [
+    42,
+    43
+  ],
+  "stage_A": {
+    "target": "Median five rays in sectors front0,left-90,back180,right90; source map logical bearing convention; range cap10m. First blocked structural footprint, NOT identified physical wall.",
+    "threshold_m": 3.0,
+    "models": [
+      "raw_ridge",
+      "embedding_ridge",
+      "combined_ridge",
+      "same-input MLP64"
+    ],
+    "controls": [
+      "fit_scene_mean_prior",
+      "donor_shift17",
+      "synchronized_microphone_roll",
+      "capacity_matched_nuisance"
+    ],
+    "label_use": "Query GT only for targets/diagnostics, never predictor input; candidate geometry only hypothesis-dependent.",
+    "selection": "Fit scene normalization only; fixed settings. Pair ambiguity: visual score gap below fit-scene lower tertile. Train-held-scene and donor relevance required for B2d.",
+    "conditioned_ranker": "Combined ridge predictions2-way scene crossfit inside each outer fit; same188columns tree base/cue/donor/nuisance,150iterations15leaves; threshold0.",
+    "B_cue_decision": "A mixed: heldscene label and ambiguouspair matched>donor signal supports a separateB2dtest, conditionedrankinggain unconfirmed. Combinedridge cue chosen a priori forconditionalhead, not bestouterMLP."
+  },
+  "stage_B": {
+    "proposals": "Unchanged existing B2 Support20, both seeds; no GT-filter",
+    "objective": "MSE candidate-relative joint+.5fine utility; all128queries/scene, equal scene counts +.01structural depth normalizedabsoluteerror +.01relative depth drift penalty in everyarm (constant forF0/F1)",
+    "epochs": 12,
+    "batch": 32,
+    "optimizer": "AdamW lr1e-3 frozen heads; acoustic projection lr1e-4; visual adapter lr1e-4; wd.01, gradient clip1",
+    "models": [
+      "F0_concat",
+      "F0_gate",
+      "F0_attention",
+      "F0_gate_cue",
+      "F0_noaudio",
+      "F0_noFP",
+      "F1_concat",
+      "F1_gate",
+      "F2_audio",
+      "F2_self",
+      "F2_donor"
+    ],
+    "F1": "Actual historical AcousticEncoder projection Linear+LayerNorm trainable for both observed and FP references, convolutional trunks and stream heads frozen.",
+    "F2": "F1 plus actual40x128 visual residual adapter through frozen mu head; preserve scale. Same-capacity self/donor-audio controls.",
+    "primary": "GEOQ strong reference + same-stage concat; report joint/fine Pareto, no outcome-based threshold sweep.",
+    "F3": "Conditional on credible outer train-scene improvement; StageB mandatory even ifAnegative",
+    "strong_initialization": "All neural heads initialized exactly at frozen existing GEOQ gains including historical seed threshold. Raw head output is bounded +/-0.5; subtracting candidate-0 yields residual bound +/-1. No outcome-based threshold sweep.",
+    "interface": "12visual tokens(11ray+1global),4acoustic tokens(query,reference,product,absdiff),1FP36ray token. Same Q/K/V/O weights and576input MLP across concat/gate/attention; all inputs shared. Noaudio/noFP remove only new branch input, existingGEOQ retains multimodal/reference info.",
+    "F2_donor": "Training batches within one scene, donorroll17withinbatch; eval donor1/17/31within128scene queries. Recipient references unchanged.",
+    "cue_contract": "Allscorers useFP40input:36ray+4deterministiccardinalgeometrybasis. F0_gate_cue replaces4redundantbasis with acoustic-only combinedridge predictions; outerfit predictions2innercrossfit, heldpredictionsouterfitmodel. Sameparams. This is conditionalcueintegration, not assumptionoflocalizationgain."
+  },
+  "exposure": "New12 excluded original B2/GEOQ/acoustic Train12, but visual teacher exposedTrain116. All scenes previously researched, NOT pristine validation; outer models exclude heldscenes. Outerfold architecture comparisons exploratory, fixed12epochs no outer epoch selection.",
+  "test_accessed": false,
+  "resource_plan": "Cache reuse, no new RIR. Preparation at most4CPU/16GB per runner, training4CPU/16GB. Stage B66fits (11arms*3folds*2seeds); optimization followup separately prespecified in FOLLOWUP_PROTOCOL.md."
+}

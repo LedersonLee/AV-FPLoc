@@ -1,0 +1,178 @@
+{
+  "source_root": "${WORKSPACE}/experiments/directional_tribranch_20261109",
+  "files": [
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/AUDIT.md",
+      "git_copy": "AUDIT.md",
+      "sha256": "69a639ff93dfe7d3427fa9bf502f18e27f0a585e516eee8045d798272712c94f",
+      "bytes": 6893
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/A_FEASIBILITY.md",
+      "git_copy": "A_FEASIBILITY.md",
+      "sha256": "08338223572000d5177ed7b6d4290d369053cbf8a25f9087b665bc99adc24887",
+      "bytes": 4779
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/B_EXPERIMENT_MATRIX.md",
+      "git_copy": "B_EXPERIMENT_MATRIX.md",
+      "sha256": "6a3aa785c28901c77fb27f0410eb4be3073cd3a52faff8f42dc14ce03fce2da3",
+      "bytes": 4952
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/CORRECTIONS.md",
+      "git_copy": "CORRECTIONS.md",
+      "sha256": "2f51ed9f9d582cba72e042230b70f90c7f7d5cd43fa3db4d89ec8f3016fffbe7",
+      "bytes": 531
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/FOLLOWUP_PROTOCOL.md",
+      "git_copy": "FOLLOWUP_PROTOCOL.md",
+      "sha256": "2daa1540bbac3e12a6e2b4939b596326097c0c2168ecd78e32f623184c98068a",
+      "bytes": 827
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/IJCAI_ASSESSMENT.md",
+      "git_copy": "IJCAI_ASSESSMENT.md",
+      "sha256": "b8d193f7fc869ddc518361525eb37371f8ebb0c22227450ec777be58f6c72109",
+      "bytes": 2325
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/MECHANISM_AND_FALSIFICATION.md",
+      "git_copy": "MECHANISM_AND_FALSIFICATION.md",
+      "sha256": "c1b16ee885885fe51295922430cbd1944e1a0a117101e0ad3d1a60504fa66680",
+      "bytes": 3433
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/NEXT_ACTION.md",
+      "git_copy": "NEXT_ACTION.md",
+      "sha256": "465fca83e3bd29ff5f101591d3a56abceadafee5cea13962b6b8c8521846430f",
+      "bytes": 1654
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/PROTOCOL.json",
+      "git_copy": "PROTOCOL.json",
+      "sha256": "91d4cec045555dbc9a384aad79a110d2367f603c5e16b9fc9e24ea0ebdecf1cb",
+      "bytes": 5026
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/REPRODUCE.md",
+      "git_copy": "REPRODUCE.md",
+      "sha256": "5fcef36b8b011a0675a68dfa34a18bdd7f700400541818f87eabad4004405479",
+      "bytes": 3416
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/RESULTS.md",
+      "git_copy": "RESULTS.md",
+      "sha256": "1d41e29b5768e4ba4725638254a83ca5e9426c7286bc501944e75c101b22c8bc",
+      "bytes": 4869
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/USER_REQUEST.md",
+      "git_copy": "USER_REQUEST.md",
+      "sha256": "809f242714e15d4cab8c41cc49b7072cf7ef042039271a405a5ba7f010dbfd85",
+      "bytes": 19247
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/environment.json",
+      "git_copy": "environment.json",
+      "sha256": "60529d73061017a814772351cc08c9c26fb2b9ddc1fa33ac3e0b508537407b5c",
+      "bytes": 186
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/final_verification.json",
+      "git_copy": "final_verification.json",
+      "sha256": "f4ced5cef7bb70a548dc8b074ad853675ccba7116553a305d65f220561724c31",
+      "bytes": 605
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/method.pdf",
+      "git_copy": "method.pdf",
+      "sha256": "35e0b27e1b3f2763f65df8e6aacf4c35dc85c47cf6704e5332dfd9214af99261",
+      "bytes": 29308
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/method.png",
+      "git_copy": "method.png",
+      "sha256": "0b689f0eabf4df4888c5e5c8048f27df8d5e248404dfc5efa5e9c7af46f3613f",
+      "bytes": 178483
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/results.pdf",
+      "git_copy": "results.pdf",
+      "sha256": "1b16af0415ac2c23caeb863e03a991cf7ea6be3cbed9b8ec9002a4fc4d01818d",
+      "bytes": 22641
+    },
+    {
+      "source": "${WORKSPACE}/experiments/directional_tribranch_20261109/results.png",
+      "git_copy": "results.png",
+      "sha256": "209ed1dc53ca18778260b96fe18090bec614fa4881a7166302e1aa56937ab6e0",
+      "bytes": 136096
+    }
+  ],
+  "external_code": [
+    {
+      "path": "a_followup.py",
+      "sha256": "00efa5a0db024ebdcbdb93c0af13669592d7054729ad859ce3cc27157c41bfa7"
+    },
+    {
+      "path": "analyze.py",
+      "sha256": "3d624acf0485d531e3b492a1b5f67d70fb1d39f7b4d519e1b473254e8885015e"
+    },
+    {
+      "path": "diagnostics.py",
+      "sha256": "1350664fb38fa3e54413e9d1cc7dc8472313d7ee925f47f605c54eebb595bf03"
+    },
+    {
+      "path": "environment.py",
+      "sha256": "f4581a74bc7cbe2e125dcc773fd3abd36940d12c5d350476715e3709de424ab9"
+    },
+    {
+      "path": "final_verify.py",
+      "sha256": "014490355b6455936e890fb758e16559cd7c67b49b80d32484344792a2860146"
+    },
+    {
+      "path": "models.py",
+      "sha256": "9044adcf46ba872013354fb3cdd7ce34454b37591c8c4adb6614fb013a5d78ec"
+    },
+    {
+      "path": "nested_followup.py",
+      "sha256": "a4c22fcfd42558c8f107807e8c54d51e819996283fad31e1ab85ab6bf124353f"
+    },
+    {
+      "path": "plot_results.py",
+      "sha256": "44dc2a10af17c4b1de1d7eff636c23e2394344385ca5d33ff229895b0a468246"
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "1c6c93c6207940ce1b938fe5a1f90db3acb3702b3a810eb9a5cb99103fe49783"
+    },
+    {
+      "path": "run.sh",
+      "sha256": "0e3d01650e2fe3ac78257cbdcf1f11e003cd64fc625b1cebdfc43ff5b1724f0a"
+    },
+    {
+      "path": "run_b_matrix.sh",
+      "sha256": "ab7f22effdb65e9bfd67c2754bae4307357e3a6d2ee75d53aaa26cf165dc98a6"
+    },
+    {
+      "path": "stage_a.py",
+      "sha256": "7872ecd7d7a49a4e302033bc310a96b99cc19e1ef64471e382eda53fc67cd768"
+    },
+    {
+      "path": "stage_b.py",
+      "sha256": "2b511a02428db81bd5ec2f8a75022347319ee55dcdbf1d0c2c8c8924d408ae05"
+    },
+    {
+      "path": "verify_and_visual.py",
+      "sha256": "5ed2fd6ffd1731f85e31dea13f7f44717bdc81b44926c9730f3f0f15882c9502"
+    },
+    {
+      "path": "write_reports.py",
+      "sha256": "cd6fdb935cb7b3032b1aa268bed8faa1d3e97622120d97cb016b0c0ca83b9cc6"
+    }
+  ],
+  "code_base_commit": "19c1bd02f6edc6758ee9b18675957a2d30b3aeed",
+  "executed_code_commit": "UNRECORDED: external uncommitted scripts; base SHA is not execution SHA",
+  "scope": "Markdown, four figures and small settings/verification only. Full checkpoints/logs remain local."
+}

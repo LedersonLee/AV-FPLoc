@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "instructions": [
+    {
+      "path": "/home/jeongeonlee/.codex/AGENTS.md",
+      "bytes": 4566,
+      "sha256": "a83047a7266afa11451f49d21d3f22d4554c8e24b822d18379b21dcb324389f8"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AGENTS.md",
+      "bytes": 644,
+      "sha256": "dea1011731ffacf909f37b226b405200296843c24acfbcad2e167ad2167cf972"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/AGENTS.md",
+      "bytes": 7467,
+      "sha256": "f9430bd4f957e8f4acf4a57aa3a6ab6da80116c346cf59b99c6268419c1337bf"
+    }
+  ],
+  "combined_bytes": 12677,
+  "default_limit_bytes": 32768,
+  "overrides_present": false,
+  "global_instruction_observed_in_current_chat": true,
+  "project_new_session_injection_tested": false,
+  "legacy_study_files_preserved_except_relative_links_and_copy_hashes": 146,
+  "index_rows": 14,
+  "duplicate_index": false,
+  "old_user_diff_sha256": "02ff3357f1cead0b70e2255c5f27eb15e325c161c6966ca1dbe06743fb1eabd3",
+  "new_training_or_experiments_run": false,
+  "tracked_documents_in_inventory": 165,
+  "tracked_paths_moved": 148,
+  "archive_verification": {
+    "legacy_studies": 13,
+    "git_copy_hashes": 94,
+    "source_hashes": 952,
+    "original_html_tables": 43,
+    "imported_artifact_hashes": 18,
+    "local_markdown_links": "passed"
+  },
+  "new_experiments_run": 0,
+  "whitespace_note": "Original USER_REQUEST.md retains two intentional Markdown hard-break spaces, byte-for-byte. diff --check passes with blank-at-eol disabled; no result text normalized.",
+  "staging_scope": "AGENTS.md and docs/research only; obvious credential-pattern scan passed"
+}

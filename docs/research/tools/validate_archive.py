@@ -17,7 +17,7 @@ def main():
    if url.startswith(('https://','http://','mailto:','#')):continue
    target=(f.parent/unquote(url.split('#')[0])).resolve()
    if not target.exists():errors.append(f'Broken link {f.relative_to(P)} -> {url}')
- for m in P.glob('studies/*/artifacts.json'):
+ for m in P.glob('track-a/experiments/*/artifacts.json'):
   r=json.loads(m.read_text())
   for e in r['source_files']:
    if e['git_copy']:
@@ -41,8 +41,13 @@ def main():
       for tr in table.find_all('tr'):
        cells=[re.sub(r'\s+',' ',c.get_text(' ',strip=True)).replace('|','\\|') for c in tr.find_all(['th','td'],recursive=False)]
        if cells and '| '+' | '.join(cells)+' |' not in md:errors.append(f'Table row mismatch: {src.name}: {cells}')
- assert len(list(P.glob('studies/*/artifacts.json')))==13
+ assert len(list(P.glob('track-a/experiments/*/artifacts.json')))==13
+ pilot_copies=0
+ for manifest in P.glob('track-*/experiments/*/provenance.json'):
+  for entry in json.loads(manifest.read_text())['files']:
+   target=manifest.parent/entry['git_copy'];pilot_copies+=1
+   if not target.exists() or sha(target)!=entry['sha256']:errors.append(f'Pilot copy hash mismatch: {target}')
  if errors:
   print('\n'.join(errors));raise SystemExit(1)
- print(f'PASS: 13 studies; {copies} Git copy hashes; {sources} source hashes; {tables} original HTML tables; JSON and local Markdown links valid.')
+ print(f'PASS: 13 studies; {copies} Git copy hashes; {sources} source hashes; {tables} original HTML tables; {pilot_copies} imported artifact hashes; JSON and local Markdown links valid.')
 if __name__=='__main__':main()
