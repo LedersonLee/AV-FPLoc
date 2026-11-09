@@ -6,7 +6,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "232550ff096dfd5c4adc4b8dbac9e6c9d5d0c3090acb68fea93e01da3665e3db"
+      "sha256": "7b18a3183b194f82fe50758c86c61cde84801630b7333052e8ad0478b1b1deae"
     },
     {
       "git_copy": "cache_protocol.json",
@@ -37,12 +37,32 @@
       "sha256": "57a61e6910d7b00ac78d9d3c6748d21a1057c623de20ab47a13a09cfd3b6a2d6"
     },
     {
+      "git_copy": "first_cell_evaluation_protocol.json",
+      "sha256": "3a40b2cf23394c1bd727cd36c9b802c4577be2e1a5535d45aa42382f25af2f02"
+    },
+    {
+      "git_copy": "first_cell_paired_results.json",
+      "sha256": "8328fa876e3fb91291af5ba78ab93ac975de267503b4ea661d242560f9438c9f"
+    },
+    {
+      "git_copy": "first_cell_results.md",
+      "sha256": "61ac016993bb6b9f06f18afa9a12c42746d118db031d413694c175e0d23d81a6"
+    },
+    {
+      "git_copy": "first_cell_stratified_results.json",
+      "sha256": "487651b19057768c60a105f5edf069c38737149f13ea450cba63535445223941"
+    },
+    {
       "git_copy": "first_cell_validation.json",
       "sha256": "ec07234a70868d3dbb873b8431e17792e0853d5a6d752b78979496e8fe9093f4"
     },
     {
       "git_copy": "first_cell_validation.md",
       "sha256": "6d7fead60d961d6219e00de30920f5cf955aa984d6ef7c15eb7b584bf4706106"
+    },
+    {
+      "git_copy": "first_cell_validation_results.json",
+      "sha256": "0c0204d36dc1aead7971618ed274d2bb2bd713336d7b87d69376c6ad9819d893"
     },
     {
       "git_copy": "fixed_evaluation.md",
@@ -122,7 +142,7 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "70d531a844a75174d9ad67e7675bf0b168a90cb11fa5b8c0a34e962d99c86316"
+      "sha256": "be2293d26875caec6c0ff926ac013051088612cdc2cc0940cb6f92fadde53eb6"
     }
   ],
   "cache_verifier_sha": "04bbb38937c07a3f358c2ff1771f87e8c8482855",
@@ -136,5 +156,6 @@
   "fixed_only_verifier_code_sha": "5cf55cbde198607ffa7d4c2b9a6e49f567211c90",
   "scaling_fit_verifier_source_sha": "73f8f18e68a15c51cdc21dc3b744805771476a66",
   "first_cell_verifier_execution_source_sha": "6946a9b60a8135c46ed3d40af7980d437f519894",
-  "extended_evaluation_source_sha": "6946a9b60a8135c46ed3d40af7980d437f519894"
+  "extended_evaluation_source_sha": "6946a9b60a8135c46ed3d40af7980d437f519894",
+  "first_cell_registrar_source_sha": "d208efaf6d403843783ff1c896988e6a50fdb836"
 }

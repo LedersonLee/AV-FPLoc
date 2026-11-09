@@ -69,3 +69,5 @@ All131 scenes/8,384 feature observations verified;22 overlapping pilot tensors e
 [Fixed evaluation verification](fixed_evaluation.md):4,608 existing fixed-arm records reproduced exactly,2,304 unimodal checks passed, no calibration parameter selection. Expanded model evaluation remains pending.
 
 [First cell provenance checks](first_cell_validation.md): n16_budget1 completed9/9 stage fits; validation passed and fixed-weight extended evaluation started. Other scaling cells continue; no full scaling conclusion yet.
+
+[First cell completed results](first_cell_results.md):14,592 records verified; full19 fixed Joint27.166% vs visual20.285%, difference+6.880pp[4.907,8.991]. Raw20 falls and ECE worsens; neither scaling gain nor independent validation is established.

@@ -42,7 +42,12 @@
   "first_scaling_cell_completed_fits": 9,
   "first_scaling_cell_verification_exit_code": 0,
   "first_scaling_cell_evaluation_session": 33530,
-  "first_scaling_cell_evaluation_status": "running",
+  "first_scaling_cell_evaluation_status": "completed artifacts verified",
   "extended_evaluator_pytest_passed": 43,
-  "unittest_discovered_zero_preserved": true
+  "unittest_discovered_zero_preserved": true,
+  "first_cell_observer_exit_code": 143,
+  "first_cell_observed_container_exit_code": 0,
+  "first_cell_registrar_exit_code": 0,
+  "first_cell_records": 14592,
+  "first_cell_unimodal_replay_checks": 7296
 }

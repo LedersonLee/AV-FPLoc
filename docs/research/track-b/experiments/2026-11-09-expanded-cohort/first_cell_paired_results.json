@@ -1,0 +1,704 @@
+[
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "joint",
+    "delta": 6.880482456140351,
+    "ci95": [
+      4.906798245614034,
+      8.991228070175438
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "r1",
+    "delta": 8.141447368421051,
+    "ci95": [
+      6.1951754385964914,
+      10.334429824561402
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "fine",
+    "delta": 0.4660087719298246,
+    "ci95": [
+      -0.16447368421052636,
+      1.0964912280701755
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "raw20",
+    "delta": -3.344298245614036,
+    "ci95": [
+      -5.674342105263156,
+      -0.9594298245614027
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "diverse20",
+    "delta": 3.6732456140350864,
+    "ci95": [
+      1.8640350877192982,
+      5.564692982456139
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "nll",
+    "delta": -0.20998344884106968,
+    "ci95": [
+      -0.24080906468198482,
+      -0.1793500311476616
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 22.88925438596491,
+    "ci95": [
+      19.24342105263158,
+      26.83730811403508
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "r1",
+    "delta": 21.546052631578945,
+    "ci95": [
+      17.763157894736846,
+      25.630482456140353
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "fine",
+    "delta": 1.5899122807017545,
+    "ci95": [
+      1.0416666666666665,
+      2.1655701754385963
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "raw20",
+    "delta": 40.89912280701754,
+    "ci95": [
+      36.5953947368421,
+      44.43530701754385
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "diverse20",
+    "delta": 41.06359649122807,
+    "ci95": [
+      37.22587719298246,
+      44.407894736842096
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "nll",
+    "delta": -0.6427467818322933,
+    "ci95": [
+      -0.7857113279238862,
+      -0.5006683240072771
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "joint",
+    "delta": 17.351973684210524,
+    "ci95": [
+      14.555921052631579,
+      20.614035087719298
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "r1",
+    "delta": 17.73574561403509,
+    "ci95": [
+      14.93969298245614,
+      20.99780701754386
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "fine",
+    "delta": 1.2061403508771928,
+    "ci95": [
+      0.712719298245614,
+      1.7269736842105265
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "raw20",
+    "delta": 29.742324561403503,
+    "ci95": [
+      27.110745614035086,
+      32.37390350877193
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "diverse20",
+    "delta": 28.01535087719298,
+    "ci95": [
+      25.38308662280701,
+      30.701754385964914
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "all19",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "nll",
+    "delta": -0.382896803450166,
+    "ci95": [
+      -0.42047644033701265,
+      -0.3449552077636645
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "joint",
+    "delta": 7.638888888888889,
+    "ci95": [
+      4.947916666666666,
+      10.329861111111112
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "r1",
+    "delta": 9.201388888888888,
+    "ci95": [
+      7.204861111111111,
+      11.54513888888889
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "fine",
+    "delta": 1.128472222222222,
+    "ci95": [
+      0.0,
+      2.2569444444444446
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "raw20",
+    "delta": -2.604166666666667,
+    "ci95": [
+      -3.993055555555558,
+      -0.6076388888888877
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "diverse20",
+    "delta": 2.604166666666667,
+    "ci95": [
+      0.5208333333333353,
+      4.861111111111108
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "nll",
+    "delta": -0.21842878353264616,
+    "ci95": [
+      -0.2443789703150593,
+      -0.19270120685299266
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 20.399305555555557,
+    "ci95": [
+      16.23263888888889,
+      24.392361111111114
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "r1",
+    "delta": 18.489583333333336,
+    "ci95": [
+      14.409722222222221,
+      22.309027777777782
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "fine",
+    "delta": 1.8229166666666667,
+    "ci95": [
+      0.6054687500000018,
+      3.0381944444444446
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "raw20",
+    "delta": 42.1875,
+    "ci95": [
+      39.93055555555555,
+      44.35980902777776
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "diverse20",
+    "delta": 44.53125,
+    "ci95": [
+      40.71180555555555,
+      48.35069444444444
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "nll",
+    "delta": -0.6287435591220856,
+    "ci95": [
+      -0.8132983802093401,
+      -0.44508713401026156
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "joint",
+    "delta": 16.319444444444446,
+    "ci95": [
+      12.586805555555555,
+      20.486111111111114
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "r1",
+    "delta": 17.447916666666664,
+    "ci95": [
+      14.409722222222221,
+      20.661892361111082
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "fine",
+    "delta": 1.388888888888889,
+    "ci95": [
+      0.3472222222222222,
+      2.4305555555555562
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "raw20",
+    "delta": 31.25,
+    "ci95": [
+      28.819444444444443,
+      33.767361111111114
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "diverse20",
+    "delta": 27.864583333333332,
+    "ci95": [
+      24.739583333333336,
+      30.989583333333325
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "original6",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "nll",
+    "delta": -0.37843265136082965,
+    "ci95": [
+      -0.43940017827683003,
+      -0.31327305568589087
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "joint",
+    "delta": 6.530448717948718,
+    "ci95": [
+      3.9262820512820498,
+      9.375
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "r1",
+    "delta": 7.65224358974359,
+    "ci95": [
+      5.128205128205128,
+      10.617988782051269
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "fine",
+    "delta": 0.16025641025641027,
+    "ci95": [
+      -0.5608974358974359,
+      0.8012820512820514
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "raw20",
+    "delta": -3.6858974358974366,
+    "ci95": [
+      -6.891025641025641,
+      -0.2403846153846154
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "diverse20",
+    "delta": 4.166666666666666,
+    "ci95": [
+      1.8028846153846139,
+      6.610576923076922
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "visual",
+    "metric": "nll",
+    "delta": -0.20608560206034207,
+    "ci95": [
+      -0.24912180123993966,
+      -0.16325028985261103
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "joint",
+    "delta": 24.03846153846154,
+    "ci95": [
+      19.190705128205128,
+      29.286858974358974
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "r1",
+    "delta": 22.956730769230766,
+    "ci95": [
+      17.908653846153843,
+      28.36538461538462
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "fine",
+    "delta": 1.4823717948717947,
+    "ci95": [
+      0.9214743589743591,
+      2.043269230769231
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "raw20",
+    "delta": 40.304487179487175,
+    "ci95": [
+      34.53525641025641,
+      45.3926282051282
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "diverse20",
+    "delta": 39.46314102564102,
+    "ci95": [
+      34.4941907051282,
+      43.70993589743589
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "acoustic",
+    "metric": "nll",
+    "delta": -0.649209807698543,
+    "ci95": [
+      -0.8380404276391248,
+      -0.4647215020054806
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "joint",
+    "delta": 17.82852564102564,
+    "ci95": [
+      14.022435897435898,
+      22.07532051282051
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "r1",
+    "delta": 17.868589743589748,
+    "ci95": [
+      14.062499999999996,
+      22.275641025641026
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "fine",
+    "delta": 1.1217948717948718,
+    "ci95": [
+      0.6009615384615385,
+      1.6826923076923077
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "raw20",
+    "delta": 29.046474358974354,
+    "ci95": [
+      25.520833333333336,
+      32.69230769230769
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "diverse20",
+    "delta": 28.084935897435898,
+    "ci95": [
+      24.519230769230766,
+      31.73076923076923
+    ],
+    "units": "pp",
+    "unit": "scene, seeds averaged"
+  },
+  {
+    "stratum": "added13",
+    "left": "fixed",
+    "right": "fixed_audio_shuffle",
+    "metric": "nll",
+    "delta": -0.384957181337552,
+    "ci95": [
+      -0.43260218669684264,
+      -0.3386406453230822
+    ],
+    "units": "nats",
+    "unit": "scene, seeds averaged"
+  }
+]
