@@ -1,0 +1,142 @@
+{
+  "status": "verified",
+  "checks": [
+    {
+      "requirement": "Phase0 implementation and AVLoc distinction; tensor/loss/score pipeline",
+      "status": "verified",
+      "evidence": [
+        "METHOD_AT_A_GLANCE.md",
+        "prepare_audio.py",
+        "train_acoustic.py",
+        "joint_models.py",
+        "attached AVLoc Sec3/Table2/supplement audio recipe; manually inspected"
+      ]
+    },
+    {
+      "requirement": "Phase1 common-source K4/8/12/36, subsets, smooth4 and angular coverage oracle",
+      "status": "verified",
+      "evidence": [
+        "oracle_results.json",
+        "oracle_summary.json",
+        "PHASE1_REPORT.md",
+        "oracle_capacity.py; source/subset equality asserted during execution"
+      ]
+    },
+    {
+      "requirement": "Phase2 all4representations\u00d74K\u00d72seeds\u00d73folds and12matchedcapacitychannel controls",
+      "status": "verified",
+      "evidence": [
+        "acoustic_fits.json96fits",
+        "control_fits.json12fits",
+        "pairedraw/chirpparameters,updates,split checks"
+      ]
+    },
+    {
+      "requirement": "Phase2 ray error and localization; nativeK and36outputsubsets; donor/permutation/isotropic",
+      "status": "verified",
+      "evidence": [
+        "candidate_evaluation.json:10800candidate/5400rayrecords",
+        "analysis.json",
+        "remaining_analysis.json"
+      ]
+    },
+    {
+      "requirement": "Phase3 independentV/A,late,concat,attention,interactiondisabled and optimization alternatives",
+      "status": "verified",
+      "evidence": [
+        "joint_fits.json30fits",
+        "architecture_verification.json",
+        "candidate_evaluation.json",
+        "joint_followup_fits.json24fits",
+        "fov_late_results.json",
+        "remaining_analysis.json"
+      ]
+    },
+    {
+      "requirement": "StrongB2+GEOQ and cosine references on samecohorts; distinctcandidateframeworkexplicit",
+      "status": "verified",
+      "evidence": [
+        "remaining_analysis.json development_baselines B2/GEOQ",
+        "extension_analysis.json transfer_baselines",
+        "RESEARCH_REPORT.md"
+      ]
+    },
+    {
+      "requirement": "Phase4 calibration before uncertainty interpretation and GT-free FP directionselection",
+      "status": "verified",
+      "evidence": [
+        "calibration_verification.json528checks",
+        "matching_verification.json:independentpair/anchorscalarchecks",
+        "candidate_conditioned.py selection_weights acceptsFPdifferencesonly"
+      ]
+    },
+    {
+      "requirement": "Phase4 fixedcandidateuniform/uncertainty/pair-selection and correctaudio-onlydonor/shuffle",
+      "status": "verified",
+      "evidence": [
+        "conditioned_candidate_results.json1728records",
+        "candidate_conditioned.py corrected donor",
+        "diagnostics/pre_joint_donor_correction preserved"
+      ]
+    },
+    {
+      "requirement": "Fullbankcomplete fullbank_evaluation.json",
+      "status": "verified",
+      "evidence": [
+        "fullbank_evaluation.json",
+        "expected 2880records"
+      ]
+    },
+    {
+      "requirement": "Fullbankcomplete conditioned_fullbank_results.json",
+      "status": "verified",
+      "evidence": [
+        "conditioned_fullbank_results.json",
+        "expected 1728records"
+      ]
+    },
+    {
+      "requirement": "Fullbankpairedanalysis and crossimplementationuniformreplay",
+      "status": "verified",
+      "evidence": [
+        "fullbank_analysis.json",
+        "analyze_fullbank.py"
+      ]
+    },
+    {
+      "requirement": "Input/checkpoint/sourceintegrity,strictsplit/noTestallowlist",
+      "status": "verified",
+      "evidence": [
+        "input_verification.json2944RIRs",
+        "checkpoint_verification.json228models1542arrays",
+        "PROTOCOL.json23training-source scenes",
+        "prepare_audio.py asserts train source split; Test IDs metadata only"
+      ]
+    },
+    {
+      "requirement": "Preservation of priorresults and originaluserchanges",
+      "status": "verified",
+      "evidence": [
+        "prior_preservation.json856files",
+        "originalruntime diffSHA; verifyagainbeforefinalcommit"
+      ]
+    },
+    {
+      "requirement": "Finalreport includesfullbankfindings,failures,mechanisms,limits and reproduction",
+      "status": "verified",
+      "evidence": [
+        "RESEARCH_REPORT.md",
+        "REPRODUCE.md",
+        "METHOD_AT_A_GLANCE.md"
+      ]
+    },
+    {
+      "requirement": "Final Docs files and index ready for safe synchronization",
+      "status": "verified",
+      "evidence": [
+        "Docs/index reviewed; archive validator and final normal push are verified externally after this local audit, with SHA outside the index."
+      ]
+    }
+  ],
+  "scope": "Artifact cardinality and explicit source/manual-evidence audit; passing one item does not substitute for unresolved requirements."
+}

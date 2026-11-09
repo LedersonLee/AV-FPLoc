@@ -14,19 +14,19 @@
     },
     {
       "path": "experiments/ray_joint_20261109/analyze_fullbank.py",
-      "sha256": "d81dfc281125c112236f9d5d8d18a06b995725b37dcf852e15ae6cd7c0b3059b",
+      "sha256": "1585cce0994e74a8ed77f539dde7667ab3ddaca28df60740baac2be25b7d9240",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/analyze_fullbank.py",
       "copy_equal": true
     },
     {
       "path": "experiments/ray_joint_20261109/analyze_remaining.py",
-      "sha256": "5d70df350102f6acb2ce66087d2f849f1b25f91607db28276d52caff8eeaeb0c",
+      "sha256": "514c59b4a709593f1d2164fb5d8e816b634a55dc7507ca7913a8b8a8cd60e893",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/analyze_remaining.py",
       "copy_equal": true
     },
     {
       "path": "experiments/ray_joint_20261109/build_report.py",
-      "sha256": "525c05b8ef78a7f9a1f4db0704128bdce6d3f4c4d7e170dceac240b9542c3643",
+      "sha256": "35dc4a265a340fad2b31f2ee85839c4410e1b24028a8122dc5fad53bf4aad86b",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/build_report.py",
       "copy_equal": true
     },
@@ -61,9 +61,21 @@
       "copy_equal": true
     },
     {
+      "path": "experiments/ray_joint_20261109/completion_audit.py",
+      "sha256": "6af4e3c41754b11d91c9fc2db74e6938063f07558a85e1a34fe3e615514d0bed",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/completion_audit.py",
+      "copy_equal": true
+    },
+    {
       "path": "experiments/ray_joint_20261109/conditioned_fullbank_shared.py",
       "sha256": "5205d006f1b61d0c11c4076df61c1f5db66014a5e9738312e66be7f83d8e44f3",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/conditioned_fullbank_shared.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/direction_permutation.py",
+      "sha256": "aa79137dadcd1562d1ea10f0158821fb279204ae389171485a6161a64b6da704",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/direction_permutation.py",
       "copy_equal": true
     },
     {
@@ -92,13 +104,13 @@
     },
     {
       "path": "experiments/ray_joint_20261109/export_docs.py",
-      "sha256": "afc7a329632623be34e53ad3e05b6d8f86017df5d67591d0a878fe17c5def872",
+      "sha256": "6f90f4aa243a0262c33fdd582db7545b1afafd4d43caa38c516c1d7f5b0155b6",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/export_docs.py",
       "copy_equal": true
     },
     {
       "path": "experiments/ray_joint_20261109/figures.py",
-      "sha256": "9e2c488feb51ca075a4a16ba6c9637904b6d49d007bad6688636b18c488572d6",
+      "sha256": "a6ee80040d0f11ad99d0b7bc812c07dd98d76b8938a8926e52e799d111157405",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/figures.py",
       "copy_equal": true
     },
@@ -164,7 +176,7 @@
     },
     {
       "path": "experiments/ray_joint_20261109/verify_inputs.py",
-      "sha256": "10f37acfd1a05ad532c482f479f392c6da83a9549cf9f32bc7fe945af267c9d7",
+      "sha256": "370fe218854ca792d924392af24978ce81b7788bc0b0cc84b3cbba3ebef9bb2c",
       "git_copy": "scripts/research/track_a/ray_joint_20261109/verify_inputs.py",
       "copy_equal": true
     },

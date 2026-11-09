@@ -1,16 +1,16 @@
 {
   "study": "ray_joint_20261109",
   "track": "A",
-  "status": "in progress; fullbank pending",
+  "status": "completed controlled study; mixed/negative findings",
   "files": [
     {
       "git_copy": "METHOD_AT_A_GLANCE.md",
-      "sha256": "b7c48f532368c246b954f8690b58dd1b1639f45127931a40538267911bb0e2ee",
+      "sha256": "50d15eba95f0b347d94da8fd28adce57aac03edb4a1de760a1e3cca8a7575f40",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/METHOD_AT_A_GLANCE.md"
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "7f41a622cf90d5d9ea7f7526cdbe8b4c2b024d4ba36da5489e4e9ec42ebcc2ef",
+      "sha256": "92c41dd39c7b0c7804114d851dd48e870f67f48cbcf0055fcf7da7b33fe7ce91",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/RESEARCH_REPORT.md"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "git_copy": "REPRODUCE.md",
-      "sha256": "d2d9485f3b9396805b8126c46bebb944f2dcff280f87882d40f3d5cf5b49febd",
+      "sha256": "dddf3b74315bc82e3a94a6c3cbcf4a253c3bf08471b0cf06f415f216bb7de54d",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/REPRODUCE.md"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "git_copy": "extension_analysis.json",
-      "sha256": "03e5c190bfeab8df30993f0ef7827af89ba4ebc1cfd4f13dd007f01cff1790b6",
+      "sha256": "5cfd029d7f3942f2d99693e5ec4fb1d53871743cafddec1e1e9a333d1dcdcd56",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/extension_analysis.json"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "git_copy": "source_inventory.json",
-      "sha256": "1a145a478482a5f0599b3e737f14a46173cb34ca5b01eb64b40a345b62b0a182",
+      "sha256": "b0c93c7420923b010cdce05688dda35eb276567d4f6472163062f0776485ce29",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/source_inventory.json"
     },
     {
@@ -140,8 +140,23 @@
     },
     {
       "git_copy": "remaining_analysis.json",
-      "sha256": "764f46f3aa05cc9bcc478dc97d325708368b6328821b8adf60cb25aa93f39883",
+      "sha256": "ad7232eef7761c27102b261bb60e0efd60ed3d1b7e53b02fc8d900208b8cd8f6",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/remaining_analysis.json"
+    },
+    {
+      "git_copy": "DIRECTION_PERMUTATION_PROTOCOL.md",
+      "sha256": "1d32c38200de4ee0d96bf072c0469a401a9ade67bbce9ea15743bab69be30455",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/DIRECTION_PERMUTATION_PROTOCOL.md"
+    },
+    {
+      "git_copy": "fullbank_analysis.json",
+      "sha256": "b31be652f3c5e22342a4e11cafee3061fd0519f5fa0bb3df4ff604fc53d443f7",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/fullbank_analysis.json"
+    },
+    {
+      "git_copy": "completion_audit.json",
+      "sha256": "20307ad9c7e95b540272ab7daf00fe13f58157ddb1bae10091bb03862a15976b",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/completion_audit.json"
     },
     {
       "git_copy": "figures/acoustic_representation.png",
@@ -150,8 +165,13 @@
     },
     {
       "git_copy": "figures/calibration.png",
-      "sha256": "e43f2c7dfac19f16781b59ab15c472868b3205caad7b669cd65d3feb2c32be94",
+      "sha256": "76f70680b9d874a3419456e98a52f9fcffeded894b0862e772a08cda851ec793",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/calibration.png"
+    },
+    {
+      "git_copy": "figures/fixed_vs_fullbank.png",
+      "sha256": "9d18aeafe2984e78d73f7f8b72e6197f3e967b2fe9855ccd0a9c047fffa17dcf",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/fixed_vs_fullbank.png"
     },
     {
       "git_copy": "figures/joint_contrasts.png",
@@ -180,7 +200,7 @@
     },
     {
       "git_copy": "README.md",
-      "sha256": "35ab60edb5d62f58dc5dcfb3ded0c65eec4a1d66acf87ee8e7ce3ba1139f7a89",
+      "sha256": "3da6ec5cf783cb537b94ede5ca849d6f091d928072081c0d06c88600bebfb67d",
       "source": "generated summary"
     }
   ],
