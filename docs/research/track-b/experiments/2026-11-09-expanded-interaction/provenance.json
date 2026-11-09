@@ -1,0 +1,41 @@
+{
+  "code_sha": "c083c376631c3f6ed8d89daf9d3a9d93c350fd3b",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "859d3ef3bf8a866e60e8f22ad5a8d93a6f26814fa6a3bb55a3126561abde88ff"
+    },
+    {
+      "git_copy": "expanded_smoke_protocol.json",
+      "sha256": "0aa3cd1f5c5c203accfed7d49fe0d1dcc78161ee351a66feca7c81a4932f96a7"
+    },
+    {
+      "git_copy": "expanded_smoke_summary.json",
+      "sha256": "89ed98fba04ea1534ccaba2218b417477c9a3213490787f374bd55198fa705e6"
+    },
+    {
+      "git_copy": "initial_replay_validation.json",
+      "sha256": "4b8733d4dc384a9d6588b8f0aafdf36c7fe9f37b40fd12857f9eed1cc7a9b0c6"
+    },
+    {
+      "git_copy": "lowlight_validation.json",
+      "sha256": "8c3a012667405c088e57c2b0fb8b1138c73dc0f5a3a057de9f7e080a0ecf1003"
+    },
+    {
+      "git_copy": "main_protocol.json",
+      "sha256": "55be8658b4849919aa89ffc215f33e2e07021e9adefa6ff53fcae6ce74012070"
+    },
+    {
+      "git_copy": "pilot_cpu_smoke_protocol.json",
+      "sha256": "1c98289adc6d21c52fd0f8ee82591af581a664eed689831f493846dfc6929c31"
+    },
+    {
+      "git_copy": "pilot_cpu_smoke_summary.json",
+      "sha256": "1550c471bac2ea125bfd7ac8f284cee64f58e7360dd9493bdb52dcb449b32315"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "2b3db5cab99ecbd263be4bf89cdc681a0ec36b5c3730c82898edde9baf0873c3"
+    }
+  ]
+}

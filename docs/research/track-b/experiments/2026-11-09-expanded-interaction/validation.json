@@ -1,0 +1,16 @@
+{
+  "tests_passed": 43,
+  "pilot_cpu_smoke_exit_code": 0,
+  "expanded_cpu_smoke_exit_code": 0,
+  "lowlight_verifier_exit_code": 0,
+  "lowlight_scenes": 19,
+  "lowlight_queries": 1216,
+  "pilot_exact_lowlight_scenes": 6,
+  "initial_metric_replay_queries": 1216,
+  "initial_metric_replay_mismatches": 0,
+  "main_status": "running",
+  "main_session": 39480,
+  "planned_fits": 9,
+  "planned_evaluation_records": 32832,
+  "test_accessed": false
+}
