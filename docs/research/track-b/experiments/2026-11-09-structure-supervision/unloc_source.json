@@ -1,0 +1,14 @@
+{
+  "checkpoint_sha256": "b9626c0f8b5411f365d6151e7a760b8e79fffe5e6ee2abced6caaa7705a1c36f",
+  "depth_anything_sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d",
+  "external_sources": {
+    "modules/depth_net.py": "95043ec0888f11cf28a3187b8f74db4ebbe518322ca09d29eec4bd6a3cf57b57",
+    "modules/depth_net_pl.py": "005a8be66d3d5472e8bb23888df1f39376e94319c1b39fd1c8312d6f09116aa0",
+    "modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "modules/network_utils.py": "cdca225f310e5415d475124d9c5e9f9895a59d7b7d0a376aeb292725ce5b20d6"
+  },
+  "exposure": "HSSD visual teacher Train116/Val19 exposure; development comparator, not pristine held-out",
+  "method": "UnLoc checkpoint, shared 0.25m/36 candidate bank; footprint boundary rays0.1m step/max100m; original clamped Laplace and unclamped control",
+  "main_pipeline_dependency": false,
+  "test_accessed": false
+}

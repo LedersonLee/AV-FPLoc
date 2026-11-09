@@ -1,0 +1,147 @@
+{
+  "summary": [
+    {
+      "mode": "acoustic",
+      "arm": "audio_shuffle",
+      "joint": 0.005208333333333333,
+      "r1": 0.026909722222222224,
+      "fine": 0.0,
+      "raw20": 0.030381944444444444,
+      "nll": 13.877391826361418
+    },
+    {
+      "mode": "acoustic",
+      "arm": "audio_zero",
+      "joint": 0.004340277777777778,
+      "r1": 0.027777777777777776,
+      "fine": 0.0,
+      "raw20": 0.03125,
+      "nll": 13.31859701871872
+    },
+    {
+      "mode": "acoustic",
+      "arm": "direct_masked",
+      "joint": 0.030381944444444444,
+      "r1": 0.059895833333333336,
+      "fine": 0.0008680555555555555,
+      "raw20": 0.17447916666666666,
+      "nll": 10.463168433970875
+    },
+    {
+      "mode": "acoustic",
+      "arm": "direct_only",
+      "joint": 0.005208333333333333,
+      "r1": 0.026041666666666668,
+      "fine": 0.0,
+      "raw20": 0.035590277777777776,
+      "nll": 15.086252080069649
+    },
+    {
+      "mode": "acoustic",
+      "arm": "late_only",
+      "joint": 0.006076388888888889,
+      "r1": 0.035590277777777776,
+      "fine": 0.0008680555555555555,
+      "raw20": 0.043402777777777776,
+      "nll": 12.168583611647287
+    },
+    {
+      "mode": "acoustic",
+      "arm": "normal",
+      "joint": 0.051215277777777776,
+      "r1": 0.08940972222222222,
+      "fine": 0.003472222222222222,
+      "raw20": 0.19270833333333334,
+      "nll": 10.220033838517136,
+      "diverse20": 0.4184027777777778,
+      "support_joint": 0.03993055555555555,
+      "support_r1": 0.07725694444444445,
+      "support_fine": 0.003472222222222222,
+      "support20": 0.3949652777777778
+    },
+    {
+      "mode": "acoustic",
+      "arm": "roll180",
+      "joint": 0.03125,
+      "r1": 0.0685763888888889,
+      "fine": 0.0008680555555555555,
+      "raw20": 0.1736111111111111,
+      "nll": 10.254949504716528,
+      "joint_against_unrotated_label": 0.004340277777777778
+    },
+    {
+      "mode": "fusion",
+      "arm": "audio_shuffle",
+      "joint": 0.028645833333333332,
+      "r1": 0.04079861111111111,
+      "fine": 0.0,
+      "raw20": 0.15538194444444445,
+      "nll": 10.16186837810609
+    },
+    {
+      "mode": "fusion",
+      "arm": "audio_zero",
+      "joint": 0.03125,
+      "r1": 0.0642361111111111,
+      "fine": 0.0,
+      "raw20": 0.1701388888888889,
+      "nll": 10.111775659438637
+    },
+    {
+      "mode": "fusion",
+      "arm": "direct_masked",
+      "joint": 0.06510416666666667,
+      "r1": 0.09114583333333333,
+      "fine": 0.001736111111111111,
+      "raw20": 0.3203125,
+      "nll": 9.787700780149963
+    },
+    {
+      "mode": "fusion",
+      "arm": "direct_only",
+      "joint": 0.03298611111111111,
+      "r1": 0.05381944444444445,
+      "fine": 0.0,
+      "raw20": 0.1527777777777778,
+      "nll": 10.170381418532795
+    },
+    {
+      "mode": "fusion",
+      "arm": "late_only",
+      "joint": 0.030381944444444444,
+      "r1": 0.058159722222222224,
+      "fine": 0.001736111111111111,
+      "raw20": 0.20225694444444445,
+      "nll": 10.086258809599611
+    },
+    {
+      "mode": "fusion",
+      "arm": "normal",
+      "joint": 0.0642361111111111,
+      "r1": 0.09895833333333333,
+      "fine": 0.0026041666666666665,
+      "raw20": 0.3394097222222222,
+      "nll": 9.75656496692035,
+      "diverse20": 0.5789930555555556,
+      "support_joint": 0.0625,
+      "support_r1": 0.0876736111111111,
+      "support_fine": 0.001736111111111111,
+      "support20": 0.5
+    },
+    {
+      "mode": "fusion",
+      "arm": "roll180",
+      "joint": 0.03125,
+      "r1": 0.059027777777777776,
+      "fine": 0.0008680555555555555,
+      "raw20": 0.18836805555555555,
+      "nll": 10.302269183927113
+    }
+  ],
+  "normal_replay_checks": 2304,
+  "normal_replay_mismatches": [],
+  "raw_waveforms_reloaded": 384,
+  "windows": "direct0:32; late7200:16384 samples (150\u2013341.3ms); original RMS retained, no renormalization",
+  "rotation": "3-mic cyclic permutation = 180deg rig yaw. Acoustic-only label rotates180deg; fusion keeps camera label and tests AV inconsistency.",
+  "support": "Full posterior disk1m/yaw30deg mass, 3x3x3 local maxima then NMS1m/30deg, tau1; no fitted threshold"
+}

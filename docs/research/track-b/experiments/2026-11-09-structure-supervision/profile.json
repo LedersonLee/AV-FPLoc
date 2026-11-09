@@ -1,0 +1,22 @@
+{
+  "scene": "104348010_171512832",
+  "candidates": 231156,
+  "batch": 8,
+  "steps": 5,
+  "seconds": 0.38434871193021536,
+  "peak_vram_bytes": 681462784,
+  "gradient_sums": {
+    "visual": 153.77492082118988,
+    "acoustic": 388.6953894197941,
+    "floorplan": 0.3934516890440136
+  },
+  "losses": [
+    15.193018913269043,
+    15.076051712036133,
+    14.934858322143555,
+    14.77103328704834,
+    14.60983657836914
+  ],
+  "parameter_count": 2402041,
+  "scope": "one largest training scene resident; full cache residency adds memory"
+}

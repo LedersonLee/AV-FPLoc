@@ -1,0 +1,17 @@
+{
+  "functional_tests": 22,
+  "matched_pretrained_hashes_equal": true,
+  "matched_pretrained_sha256": {
+    "fusion_42": "c8d088da5b418f8440c49368490be71bb881ea671d606bc53b812f046fe08d5a",
+    "fusion_43": "de77f170bac36c762281b5bac690bc6878449cc73435ce34a31074fd27ce1e5e",
+    "fusion_44": "43554e390f99382e694933238f6d7ca197105720d5b86d045aa9483aefbe3080"
+  },
+  "matched_process_exit": 0,
+  "old_frozen_partial_pretrained_bitwise_equal": {
+    "42": false,
+    "43": false,
+    "44": false
+  },
+  "test_observations_accessed": false,
+  "full_protocol_complete": false
+}

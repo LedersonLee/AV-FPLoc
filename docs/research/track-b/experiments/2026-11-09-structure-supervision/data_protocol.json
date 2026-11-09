@@ -1,0 +1,52 @@
+{
+  "scenes": {
+    "train": [
+      "108736779_177263484",
+      "103997970_171031287",
+      "106366104_174226332",
+      "108294537_176710050",
+      "107734080_175999881",
+      "104348202_171513150",
+      "108736851_177263586",
+      "104348010_171512832",
+      "105515430_173104494",
+      "108294870_176710551",
+      "104862639_172226823",
+      "104348028_171512877",
+      "102344250",
+      "103997541_171030615",
+      "106366410_174226806",
+      "102816786"
+    ],
+    "val": [
+      "108736611_177263226",
+      "108736635_177263256",
+      "105515448_173104512",
+      "108294783_176710410",
+      "108294624_176710203",
+      "102344457"
+    ]
+  },
+  "queries_per_scene": 64,
+  "grid_m": 0.25,
+  "yaw_bins": 36,
+  "ray_bins": 16,
+  "ray_step_m": 0.1,
+  "max_range_m": 20.0,
+  "fp_spacing_m": 0.1,
+  "rgb_size": [
+    128,
+    96
+  ],
+  "rir_samples": 16384,
+  "sample_rate_hz": 48000,
+  "stft_nfft": 256,
+  "stft_hop": 32,
+  "spectral_channels": 18,
+  "spectral_cache_dtype": "float16",
+  "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+  "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+  "test_accessed": false,
+  "evidence": "Exploratory: previous development exposure remains",
+  "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+}

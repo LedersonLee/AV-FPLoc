@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "clamped": {
+      "joint": 0.359375,
+      "r1": 0.3723958333333333,
+      "fine": 0.13802083333333334,
+      "raw20": 0.7135416666666666,
+      "diverse20": 0.7994791666666666,
+      "nll": 10.909584282159175,
+      "entropy": 11.486678415622668
+    },
+    "unclamped": {
+      "joint": 0.4296875,
+      "r1": 0.4479166666666667,
+      "fine": 0.15625,
+      "raw20": 0.7890625,
+      "diverse20": 0.8671875,
+      "nll": 7.810696233316745,
+      "entropy": 9.637538674506013
+    }
+  },
+  "timings": [
+    {
+      "scene": "108736611_177263226",
+      "candidates": 99612,
+      "geometry_setup_seconds": 0.2607784098945558,
+      "geometry_cache_bytes": 4382928,
+      "censored_fraction": 0.0
+    },
+    {
+      "scene": "108736635_177263256",
+      "candidates": 81684,
+      "geometry_setup_seconds": 0.2035742080770433,
+      "geometry_cache_bytes": 3594096,
+      "censored_fraction": 0.0
+    },
+    {
+      "scene": "105515448_173104512",
+      "candidates": 154764,
+      "geometry_setup_seconds": 0.5171655369922519,
+      "geometry_cache_bytes": 6809616,
+      "censored_fraction": 0.0
+    },
+    {
+      "scene": "108294783_176710410",
+      "candidates": 81720,
+      "geometry_setup_seconds": 0.20363608887419105,
+      "geometry_cache_bytes": 3595680,
+      "censored_fraction": 0.0
+    },
+    {
+      "scene": "108294624_176710203",
+      "candidates": 92880,
+      "geometry_setup_seconds": 0.2268017919268459,
+      "geometry_cache_bytes": 4086720,
+      "censored_fraction": 0.0
+    },
+    {
+      "scene": "102344457",
+      "candidates": 94644,
+      "geometry_setup_seconds": 0.22319988999515772,
+      "geometry_cache_bytes": 4164336,
+      "censored_fraction": 0.0
+    }
+  ]
+}

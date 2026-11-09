@@ -1,0 +1,79 @@
+{
+  "summary": [
+    {
+      "mode": "visual",
+      "arm": "normal",
+      "ray_mse": 0.014819192257770434,
+      "ray_mae_m": 1.2390141905505314
+    },
+    {
+      "mode": "visual",
+      "arm": "audio_shuffle",
+      "ray_mse": 0.014819192257770434,
+      "ray_mae_m": 1.2390141905505314
+    },
+    {
+      "mode": "visual",
+      "arm": "audio_zero",
+      "ray_mse": 0.014819192257770434,
+      "ray_mae_m": 1.2390141905505314
+    },
+    {
+      "mode": "visual",
+      "arm": "rgb_zero",
+      "ray_mse": 0.0487592308722166,
+      "ray_mae_m": 1.8976925725841687
+    },
+    {
+      "mode": "acoustic",
+      "arm": "normal",
+      "ray_mse": 0.03634515316601513,
+      "ray_mae_m": 2.0032980289155
+    },
+    {
+      "mode": "acoustic",
+      "arm": "audio_shuffle",
+      "ray_mse": 0.07369703798354345,
+      "ray_mae_m": 2.7704897491882243
+    },
+    {
+      "mode": "acoustic",
+      "arm": "audio_zero",
+      "ray_mse": 0.04476259410269753,
+      "ray_mae_m": 2.1662865026543536
+    },
+    {
+      "mode": "acoustic",
+      "arm": "rgb_zero",
+      "ray_mse": 0.03634515316601513,
+      "ray_mae_m": 2.0032980289155
+    },
+    {
+      "mode": "fusion",
+      "arm": "normal",
+      "ray_mse": 0.029240314485327365,
+      "ray_mae_m": 1.700430777337816
+    },
+    {
+      "mode": "fusion",
+      "arm": "audio_shuffle",
+      "ray_mse": 0.06400002748422493,
+      "ray_mae_m": 2.445398139405168
+    },
+    {
+      "mode": "fusion",
+      "arm": "audio_zero",
+      "ray_mse": 0.043097474674343376,
+      "ray_mae_m": 2.1086888460752866
+    },
+    {
+      "mode": "fusion",
+      "arm": "rgb_zero",
+      "ray_mse": 0.029240314485327365,
+      "ray_mae_m": 1.700430777337816
+    }
+  ],
+  "changed_rows": 5759,
+  "normal_mismatches": [],
+  "correction": "Original supervised_v1 non-normal ray error columns referenced normal predictions. Pose metrics and normal ray errors unaffected; originals preserved."
+}

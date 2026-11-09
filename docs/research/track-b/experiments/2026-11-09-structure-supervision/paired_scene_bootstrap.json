@@ -1,0 +1,92 @@
+[
+  {
+    "left": "supervised_v1/fusion",
+    "right": "dense_only_v1/fusion",
+    "delta_pp": 0.26041666666666663,
+    "ci95_pp": [
+      -1.215277777777778,
+      1.5646701388888578
+    ],
+    "scene_deltas_pp": [
+      2.604166666666667,
+      0.0,
+      1.0416666666666665,
+      -0.5208333333333333,
+      -3.125,
+      1.5625
+    ],
+    "unit": "six scenes; seeds averaged within each scene, not independent n"
+  },
+  {
+    "left": "supervised_v1/fusion",
+    "right": "shuffled_v1/fusion",
+    "delta_pp": 3.5590277777777777,
+    "ci95_pp": [
+      1.3020833333333335,
+      5.729166666666668
+    ],
+    "scene_deltas_pp": [
+      5.729166666666666,
+      1.0416666666666665,
+      4.6875,
+      2.604166666666667,
+      -0.5208333333333333,
+      7.8125
+    ],
+    "unit": "six scenes; seeds averaged within each scene, not independent n"
+  },
+  {
+    "left": "supervised_v1/fusion",
+    "right": "supervised_v1/visual",
+    "delta_pp": 4.340277777777779,
+    "ci95_pp": [
+      2.864583333333333,
+      5.815972222222221
+    ],
+    "scene_deltas_pp": [
+      5.208333333333334,
+      1.5625,
+      4.166666666666666,
+      5.208333333333334,
+      2.604166666666667,
+      7.291666666666667
+    ],
+    "unit": "six scenes; seeds averaged within each scene, not independent n"
+  },
+  {
+    "left": "matched_partial_v1/fusion",
+    "right": "matched_joint_v1/fusion",
+    "delta_pp": 2.864583333333333,
+    "ci95_pp": [
+      1.128472222222222,
+      4.600694444444444
+    ],
+    "scene_deltas_pp": [
+      4.6875,
+      0.0,
+      4.166666666666666,
+      2.604166666666667,
+      5.729166666666666,
+      0.0
+    ],
+    "unit": "six scenes; seeds averaged within each scene, not independent n"
+  },
+  {
+    "left": "matched_frozen_v1/fusion",
+    "right": "matched_joint_v1/fusion",
+    "delta_pp": 1.909722222222222,
+    "ci95_pp": [
+      0.26041666666666663,
+      3.819444444444444
+    ],
+    "scene_deltas_pp": [
+      -1.0416666666666665,
+      2.604166666666667,
+      3.125,
+      0.5208333333333333,
+      5.729166666666666,
+      0.5208333333333333
+    ],
+    "unit": "six scenes; seeds averaged within each scene, not independent n"
+  }
+]
