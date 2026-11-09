@@ -7,6 +7,7 @@ from track_b.models.structure import StructureMatcher,auxiliary_loss,visible_ray
 from track_b.models.dense import dense_loss
 from track_b.train_regimes import set_regime
 from track_b.models.foundation import FoundationStructureMatcher
+from track_b.data.folds import validate_training_fold
 
 
 def read(p):return json.loads(p.read_text())
@@ -92,7 +93,7 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--aux-weight',type=float,default=10.);ap.add_argument('--fixed-fp',action='store_true');ap.add_argument('--scene-fold',type=Path);ap.add_argument('--fp-anchor-weight',type=float,default=0.);args=ap.parse_args()
     assert args.fp_anchor_weight>=0 and not (args.fixed_fp and args.fp_anchor_weight), 'FP anchor requires learned descriptors'
     if args.visual_cache and args.pretrained_dir:
         prior_protocol=read(args.pretrained_dir/'protocol.json')
@@ -100,11 +101,15 @@ def main():
     if args.pretrained_dir:assert args.aux_steps==0 and args.arm=='supervised', 'Matched continuation requires zero warmup and supervised loss'
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
+    effective_scenes=validate_training_fold(data_protocol['scenes'],read(args.scene_fold),sha(args.cache/'protocol.json')) if args.scene_fold else data_protocol['scenes']
+    if args.scene_fold and args.pretrained_dir:
+        assert read(args.pretrained_dir/'protocol.json')['data']['scenes']==effective_scenes, 'Pretrained weights saw a different fold'
     protocol=dict(arm=args.arm,encoder_regime=args.regime,modes=args.modes,seeds=args.seeds,aux_steps=args.aux_steps,dense_steps=args.dense_steps,batch_size=args.batch_size,
         cache_protocol_sha256=sha(args.cache/'protocol.json'),cache_manifest_sha256=sha(args.cache/'manifest.json'),data=data_protocol,aux_weight=args.aux_weight,fixed_fp=args.fixed_fp,fp_anchor_weight=args.fp_anchor_weight,lr=.0003,
         objective='continuous FP boundary ray MSE + exact full-grid soft CE; labels are training-only',
         controls='shuffled permutes target geometry within scene; dense_only uses all updates for dense loss without auxiliary term',
         metric='NLL at nearest valid SE2 grid candidate; fine tolerance1e-6m',evidence='Exploratory development; no test use',init='scratch, same seed for every mode/arm')
+    if args.scene_fold:protocol.update(data={**data_protocol,'scenes':effective_scenes},scene_fold_sha256=sha(args.scene_fold),scene_fold=read(args.scene_fold))
     if args.pretrained_dir:
         protocol.update(init='archived common pretrained weights, fresh AdamW for every regime',pretrained_sha256={f'{mode}_{seed}':sha(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt') for mode in args.modes for seed in args.seeds},skip_sampling_steps=args.skip_sampling_steps)
     if args.visual_cache:
@@ -112,7 +117,7 @@ def main():
         assert foundation_protocol['data']==data_protocol and not foundation_protocol['smoke'] and len(foundation_manifest)==len(manifest)
         protocol.update(init=('archived foundation adapter, fresh AdamW' if args.pretrained_dir else 'fresh Track B adapter/FP weights, frozen separately sourced upstream RGB encoder'),visual_representation='frozen upstream foundation features + fresh trainable adapter; no photometric intervention in feature space',visual_cache_protocol_sha256=sha(args.visual_cache/'protocol.json'),upstream=foundation_protocol,foundation_cost_included_in_training_seconds=False)
     (args.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={}
-    for part,ids in data_protocol['scenes'].items():
+    for part,ids in effective_scenes.items():
         scenes[part]=[scene_to_gpu(torch.load(args.cache/f'{s}.pt',weights_only=True)) for s in ids]
     if args.visual_cache:
         feature_hashes={r['scene']:r['sha256'] for r in foundation_manifest}
