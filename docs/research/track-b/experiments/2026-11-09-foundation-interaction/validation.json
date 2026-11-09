@@ -1,7 +1,7 @@
 {
   "tests_passed": 31,
   "smoke_exit_code": 0,
-  "main_status": "running; not complete",
+  "main_status": "resumed, running; not complete",
   "main_code_sha": "6285d4b89e127f5b71479c49071dcc96a2ff908c",
   "initial_replay": {
     "exit_code": 0,
@@ -9,10 +9,17 @@
     "mismatches": 0
   },
   "main_live_observation": {
-    "container": "d0d4fbe4e1d2",
-    "mode": "attention",
+    "session": 98367,
+    "mode": "concat",
     "seed": 42,
-    "step": 400,
-    "status": "running"
-  }
+    "step": 100,
+    "initial_tensor_equality_passed": true
+  },
+  "original_batch": {
+    "exit_code": 1,
+    "failure": "CPU/CUDA mismatch in initial state equality check",
+    "completed_fits": 1,
+    "preserved_log_sha256": "d9b0039de838ff29956bdf347e1fba54437dfd1e96a1c4f373a382fdad82a999"
+  },
+  "resume_source": "18c0e3bf4297b9e0176ac3008710de06ec604da9"
 }

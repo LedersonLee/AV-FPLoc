@@ -41,3 +41,14 @@ References: [foundation representation controls](../2026-11-09-foundation-visual
 ## Actual initial-state replay completed
 
 Seed42 serialized initial model reproduced all 1,152 query/condition cases (normal, audio shuffle, brightness) against archived independent F1, with zero Joint/R@1m/Fine/raw20/NLL mismatches at declared numerical tolerance. Replay job exited0. This checks the actual full-grid initial state rather than relying only on the synthetic unit test. Replay source `f0dfc32` (full SHA in provenance). Main batch container `d0d4fbe4e1d2` was verified live at attention seed42 step400; evaluation outcomes are still pending.
+
+
+## Runtime interruption and verified resume (supersedes original live snapshot)
+
+The original batch exited1 after completing attention/seed42, when comparing the next model's CPU initial-state tensors with a checkpoint loaded to CUDA. This was a device mismatch in an initialization equality assertion, not a training-loss or data failure. Original `foundation_matched_v1.log`, complete attention weights/metrics and initial checkpoints were retained. The inspection helper itself was fixed to load the comparison checkpoint on CPU. The optimizer/loss/data schedule was not changed.
+
+Resume source SHA `18c0e3bf4297b9e0176ac3008710de06ec604da9` adds an explicit `--resume` path that checks the stored protocol for equality, skips only completed scheduled fits with all expected artifacts, and retains their existing results. Each newly completed fit records its actual execution SHA. The original attention/seed42 remains attributed to `6285d4b89e127f5b71479c49071dcc96a2ff908c`; the later fits are attributed to the resume source. Resume log `foundation_matched_v1_resume1.log` starts with `RESUME_SKIP_COMPLETED attention 42`; concat/seed42 has passed the exact initial-tensor comparison and reached update100. Observation session98367 is the resumed live handle. Do not rerun the completed first fit or merge the source identities into the Docs SHA.
+
+The first fit's scheduled final normal Joint is14.0625%, Fine0.5208%, raw20 47.1354%, NLL9.2144. Its serialized initial-state normal Joint was22.6563%, NLL9.5963 on the same seed. This is an unfavorable single-seed observation, not a final mode comparison or an independently validated effect. Other seeds and matched alternatives remain pending. `first_completed_fit.json` preserves this intermediate completed result without presenting it as the planned nine-fit aggregate.
+
+All declared occlusion conditions will also be applied to every completed model. `evaluate_foundation_occlusion` refuses to start until nine final checkpoints are recorded, uses the same cached full-bank scorer, and records normal-condition replay mismatches explicitly before shifted results are interpreted. Its implementation source is `0d05d1e9b05b4a36e6993c4b4225682175d85283`; it has not yet run on the incomplete main batch. Full protocol remains ongoing.
