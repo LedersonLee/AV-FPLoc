@@ -3,7 +3,7 @@ import torch
 from torch import nn
 class JointRay(nn.Module):
  def __init__(self,kind,k=36):
-  super().__init__();self.kind=kind;self.k=k;self.audio=nn.Sequential(nn.Conv2d(18,16,3,padding=1),nn.GroupNorm(4,16),nn.GELU(),nn.Conv2d(16,32,3,stride=2,padding=1),nn.GroupNorm(4,32),nn.GELU(),nn.AdaptiveAvgPool2d((4,4)));self.visual=nn.Linear(128,32);self.pos=nn.Parameter(torch.randn(1,56,32)*.02);self.ray=nn.Parameter(torch.randn(1,k,32)*.02);self.decoder=nn.Sequential(nn.Linear(32,64),nn.GELU(),nn.Linear(64,1))
+  super().__init__();self.kind=kind;self.k=k;self.audio=nn.Sequential(nn.Conv2d(18,16,3,padding=1),nn.GroupNorm(4,16),nn.GELU(),nn.Conv2d(16,32,3,stride=2,padding=1),nn.GroupNorm(4,32),nn.GELU(),nn.AvgPool2d(4,4));self.visual=nn.Linear(128,32);self.pos=nn.Parameter(torch.randn(1,56,32)*.02);self.ray=nn.Parameter(torch.randn(1,k,32)*.02);self.decoder=nn.Sequential(nn.Linear(32,64),nn.GELU(),nn.Linear(64,1))
   # Keep common token encoders and identical per-ray decoder. Concat bottleneck parameter budget approximates two transformer blocks.
   if kind=='concat':self.mixer=nn.Sequential(nn.Flatten(),nn.Linear(56*32,14),nn.GELU(),nn.Linear(14,32))
   else:self.mixer=nn.TransformerEncoder(nn.TransformerEncoderLayer(32,4,128,dropout=0,batch_first=True,norm_first=True),2,enable_nested_tensor=False)

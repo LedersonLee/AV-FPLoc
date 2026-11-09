@@ -10,7 +10,7 @@ class RayModel(nn.Module):
   super().__init__();self.kind=kind
   if kind in ['ecn','embedding']:
    self.encoder=nn.Sequential(nn.Linear(552 if kind=='ecn' else 128,128),nn.GELU(),nn.Linear(128,64),nn.GELU())
-  else:self.encoder=nn.Sequential(nn.Conv2d(18,16,3,padding=1),nn.GroupNorm(4,16),nn.GELU(),nn.Conv2d(16,32,3,stride=2,padding=1),nn.GroupNorm(4,32),nn.GELU(),nn.AdaptiveAvgPool2d((4,4)),nn.Flatten(),nn.Linear(512,64),nn.GELU())
+  else:self.encoder=nn.Sequential(nn.Conv2d(18,16,3,padding=1),nn.GroupNorm(4,16),nn.GELU(),nn.Conv2d(16,32,3,stride=2,padding=1),nn.GroupNorm(4,32),nn.GELU(),nn.AvgPool2d(4,4),nn.Flatten(),nn.Linear(512,64),nn.GELU())
   self.head=nn.Linear(64,k)
  def forward(self,x):return self.head(self.encoder(x))
 def tensor(x):return torch.as_tensor(x,dtype=torch.float32,device='cuda')
