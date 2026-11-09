@@ -11,8 +11,10 @@ def subset(pp,k):
  t=np.arange(k)*36/k;i=np.floor(t).astype(int);w=t-i;return pp[:,i]*(1-w)+pp[:,(i+1)%36]*w
 
 def main():
+ import argparse
+ ap=argparse.ArgumentParser();ap.add_argument('--followup',action='store_true');args=ap.parse_args()
  rows=[];rayrows=[]
- for group in ['acoustic','joint']:
+ for group in (['joint_followup'] if args.followup else ['acoustic','joint']):
   for receipt in sorted((P/group).glob('*/receipt.json')):
    r=json.loads(receipt.read_text());k=r.get('k',36);seed=r['seed'];fold=r['fold'];kind=r['kind']
    for sid in r['held_scenes']:
@@ -24,5 +26,5 @@ def main():
       pp=base if kk==k else subset(base,kk);target=represent(o['target'],f'raw{kk}');d=np.clip(np.expm1(pp),0,10);err=abs(d-target);ra=rankdata(pp,axis=1);rb=rankdata(target,axis=1);ra-=ra.mean(1,keepdims=True);rb-=rb.mean(1,keepdims=True);den=np.sqrt((ra*ra).sum(1)*(rb*rb).sum(1));corr=np.divide((ra*rb).sum(1),den,out=np.zeros(len(pp)),where=den>1e-12);rayrows.append(dict(group=group,kind=kind,trained_k=k,eval_k=kk,control=control,scene=sid,seed=seed,fold=fold,mae=float(err.mean()),median=float(np.median(err)),p90=float(np.quantile(err,.9)),rank=float(np.mean(corr)),direction_mae=err.mean(0).tolist()))
       g=np.log1p(represent(z['geometry'],f'raw{kk}'));score=-abs(g-pp[:,None]).mean(-1)
       for method,sc in [('geometry',score),('visual_geometry',.85*z['v']+.15*standard(score))]:rows.append(dict(group=group,kind=kind,trained_k=k,eval_k=kk,control=control,scene=sid,seed=seed,fold=fold,method=method,**measures(z,sc,mask['ambiguous_mask'],mask['high_ambiguity'],z['v'].argmax(1))))
- (P/'candidate_evaluation.json').write_text(json.dumps(dict(records=rows,ray_records=rayrows,scope='Completed receipts only; checkexpectedfitcounts beforefinal aggregation. FixedpureV proposals and fit-only thresholds reused. 36subset8 interpolates predictedlograys; native8target interpolatesmetricrays beforelog, declared difference.',test_accessed=False),indent=2));print('EVALUATED',len(rayrows),'ray records',len(rows),'candidate records')
+ (P/('candidate_followup_evaluation.json' if args.followup else 'candidate_evaluation.json')).write_text(json.dumps(dict(records=rows,ray_records=rayrows,scope='Completed receipts only; checkexpectedfitcounts beforefinal aggregation. FixedpureV proposals and fit-only thresholds reused. 36subset8 interpolates predictedlograys; native8target interpolatesmetricrays beforelog, declared difference.',test_accessed=False),indent=2));print('EVALUATED',len(rayrows),'ray records',len(rows),'candidate records')
 if __name__=='__main__':main()
