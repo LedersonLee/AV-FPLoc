@@ -1,0 +1,7 @@
+# Frozen transfer protocol before new-method Transfer11 scoring
+
+Transfer11 is reused teacher-exposed development, notindependentTest. Useall9primaryK36modelarms: acousticECN/embedding/raw/chirp; jointvision/acoustic/concat/attention/disabled; fixedlateconstructedafter. Do notselectonlybestNew12arm. Two seeds42/43, allNew12fit,40epochs×12batches=480updates (sametrainpasses; largerdatasetthanouter8). Fixed.85V/.15structure; noTransferthreshold/architecture/epoch tuning. Optimizationfollowups remainNew12diagnostics, nottransferselectedwinners.
+
+Savealltrainedmodelhashes/settings beforeproducingTransfer11predictions. New12outerheldresiduals providefit-onlydirectionalmeanabsoluteerror scales and90%intervalwidth, forK36raw/chirp/embedding/attention. ReuseGT-freepairthreshold/highambiguitycutcomputedfromallNew12visualscores. Candidatepairgeometryselection9directions asPhase4. Transferdiagnostic focusesfixedpureVproposals withpreservedcoordinates; fullbankmaincomparison isonNew12. Reportthatlimitationexplicitly.
+
+NoGTneededformethodscores; TransferGTonlyretrospectivelycomputeserrors/success. CompareV/cosine/Vcos andpriorB2/GEOQsamecohort/seeds. Freezeexistsbeforemetriccalculation. Do notrefitafterTransferresults.
