@@ -7,11 +7,12 @@ from track_b.models.structure import StructureMatcher
 from track_b.models.foundation import FoundationStructureMatcher
 from track_b.scripts.train_structure import scene_to_gpu,full_descriptors,scores,attach_visual_features,visual_input
 from track_b.eval.metrics import pose_statistics
+from track_b.eval.extended_metrics import extended_pose_statistics,reliability_statistics
 
 def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--visual-run',type=Path);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--eval-visual-cache',type=Path);ap.add_argument('--selection-reference',type=Path);ap.add_argument('--fixed-only',action='store_true',help='Evaluate declared V/A/fixed fusion and shuffle only; do not select calibration parameters');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--run',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--visual-run',type=Path);ap.add_argument('--visual-cache',type=Path);ap.add_argument('--eval-visual-cache',type=Path);ap.add_argument('--selection-reference',type=Path);ap.add_argument('--extended-metrics',action='store_true');ap.add_argument('--fixed-only',action='store_true',help='Evaluate declared V/A/fixed fusion and shuffle only; do not select calibration parameters');a=ap.parse_args()
  assert not (a.fixed_only and a.selection_reference), 'Fixed-only evaluation cannot use a calibration selection'
  assert bool(a.eval_visual_cache)==bool(a.selection_reference)
  if a.eval_visual_cache:assert a.visual_cache and read(a.eval_visual_cache/'protocol.json')['data']==read(a.visual_cache/'protocol.json')['data']
@@ -21,7 +22,7 @@ def main():
  visual_run=a.visual_run or a.run
  if a.visual_run:
   vp=read(visual_run/'protocol.json');assert vp['data']['scenes']==protocol['data']['scenes'] and vp['seeds']==protocol['seeds'], 'Independent modality models must share the effective training/evaluation cohort and seeds';assert vp['cache_protocol_sha256']==protocol['cache_protocol_sha256'];assert vp['visual_cache_protocol_sha256']==sha(a.visual_cache/'protocol.json');assert not vp.get('fixed_fp',False)
- setup=dict(evaluation_visual_cache_protocol_sha256=sha((a.eval_visual_cache or a.visual_cache)/'protocol.json') if a.visual_cache else None,calibration_reference_sha256=sha(a.selection_reference/'selection.json') if a.selection_reference else None,visual_weights=weights,temperatures=temps,selection='none: prespecified fixed weights and temperature' if a.fixed_only else 'minimum nearest-grid NLL on remaining development scenes, pooled seeds; tie in declared parameter order',fixed_only=a.fixed_only,fixed=dict(visual_weight=.85,temperature=1.),scene_ids=scene_ids,seeds=seeds,evidence='Exploratory: reused development scenes, not full-pipeline independence',checkpoint_hashes={f'{m}_{s}':sha((visual_run if m=='visual' else a.run)/f'{m}_{s}.pt') for m in ('visual','acoustic') for s in seeds},cache_manifest_sha256=sha(a.cache/'manifest.json'))
+ setup=dict(evaluation_visual_cache_protocol_sha256=sha((a.eval_visual_cache or a.visual_cache)/'protocol.json') if a.visual_cache else None,calibration_reference_sha256=sha(a.selection_reference/'selection.json') if a.selection_reference else None,visual_weights=weights,temperatures=temps,selection='none: prespecified fixed weights and temperature' if a.fixed_only else 'minimum nearest-grid NLL on remaining development scenes, pooled seeds; tie in declared parameter order',fixed_only=a.fixed_only,extended_metrics=a.extended_metrics,fixed=dict(visual_weight=.85,temperature=1.),scene_ids=scene_ids,seeds=seeds,evidence='Exploratory: reused development scenes, not full-pipeline independence',checkpoint_hashes={f'{m}_{s}':sha((visual_run if m=='visual' else a.run)/f'{m}_{s}.pt') for m in ('visual','acoustic') for s in seeds},cache_manifest_sha256=sha(a.cache/'manifest.json'))
  (a.out/'protocol.json').write_text(json.dumps(setup,indent=2));models={}
  for seed in seeds:
   models[seed]={}
@@ -76,9 +77,12 @@ def main():
      if not a.fixed_only:arms += [('calibrated',selected[sid]['weight'],selected[sid]['temperature'],af),('calibrated_audio_shuffle',selected[sid]['weight'],selected[sid]['temperature'],shf)]
      for method,weight,temp,field in arms:
       combined=(weight*vf+(1-weight)*field)/temp
-      for j,q in enumerate(ids.tolist()):final.append(dict(scene=sid,seed=seed,query=scene['query_ids'][q],method=method,**pose_statistics(combined[j],scene['candidates'][:,:3],scene['gt'][q],diverse=True)))
+      for j,q in enumerate(ids.tolist()):final.append(dict(scene=sid,seed=seed,query=scene['query_ids'][q],method=method,**(extended_pose_statistics if a.extended_metrics else pose_statistics)(combined[j],scene['candidates'][:,:3],scene['gt'][q],diverse=True)))
    print('FINAL',sid,flush=True)
  summary={method:{k:float(np.mean([r[k] for r in final if r['method']==method])) for k in ('joint','r1','fine','raw20','diverse20','nll','entropy')} for method in dict.fromkeys(r['method'] for r in final)}
+ if a.extended_metrics:
+  extended={method:dict(reliability=reliability_statistics([r for r in final if r['method']==method]),mean={k:float(np.mean([r[k] for r in final if r['method']==method])) for k in ['raw5','raw10','strict_05_15','strict_02_10','normalized_entropy','true_grid_rank','true_grid_score_ties']}) for method in summary}
+  (a.out/'extended_summary.json').write_text(json.dumps(extended,indent=2))
  rng=np.random.default_rng(20261109);paired=[]
  for left,right in [('calibrated','fixed'),('calibrated','calibrated_audio_shuffle'),('fixed','visual'),('calibrated','visual'),('fixed','fixed_audio_shuffle')]:
   if left not in summary or right not in summary:continue
