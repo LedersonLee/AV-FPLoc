@@ -81,7 +81,8 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);ap.add_argument('--pretrained-dir',type=Path);ap.add_argument('--skip-sampling-steps',type=int,default=0);args=ap.parse_args()
+    if args.pretrained_dir:assert args.aux_steps==0 and args.arm=='supervised', 'Matched continuation requires zero warmup and supervised loss'
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
     protocol=dict(arm=args.arm,encoder_regime=args.regime,modes=args.modes,seeds=args.seeds,aux_steps=args.aux_steps,dense_steps=args.dense_steps,batch_size=args.batch_size,
@@ -89,6 +90,8 @@ def main():
         objective='continuous FP boundary ray MSE + exact full-grid soft CE; labels are training-only',
         controls='shuffled permutes target geometry within scene; dense_only uses all updates for dense loss without auxiliary term',
         metric='NLL at nearest valid SE2 grid candidate; fine tolerance1e-6m',evidence='Exploratory development; no test use',init='scratch, same seed for every mode/arm')
+    if args.pretrained_dir:
+        protocol.update(init='archived common pretrained weights, fresh AdamW for every regime',pretrained_sha256={f'{mode}_{seed}':sha(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt') for mode in args.modes for seed in args.seeds},skip_sampling_steps=args.skip_sampling_steps)
     (args.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={}
     for part,ids in data_protocol['scenes'].items():
         scenes[part]=[scene_to_gpu(torch.load(args.cache/f'{s}.pt',weights_only=True)) for s in ids]
@@ -101,8 +104,11 @@ def main():
     for seed in args.seeds:
       for mode in args.modes:
         torch.manual_seed(seed);rng=np.random.default_rng(seed);model=StructureMatcher().cuda();opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.0001)
+        if args.pretrained_dir:model.load_state_dict(torch.load(args.pretrained_dir/f'{mode}_{seed}_pretrained.pt',weights_only=True))
         permutations={s['scene']:torch.tensor(rng.permutation(len(s['gt'])),device='cuda') for s in scenes['train']}
         rng=np.random.default_rng(seed);history=[];aux_eval_seconds=0.;start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
+        for _ in range(args.skip_sampling_steps):
+            skipped_scene=scenes['train'][int(rng.integers(len(scenes['train'])))];rng.integers(len(skipped_scene['gt']),size=args.batch_size)
         total=args.aux_steps+args.dense_steps
         for step in range(total):
             if (args.arm=='dense_only' and step==0) or (args.arm!='dense_only' and step==args.aux_steps):
