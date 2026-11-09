@@ -4,5 +4,8 @@
   "scenes": 6,
   "exact_baseline_matches": 6,
   "performance_evaluated": false,
-  "test_accessed": false
+  "test_accessed": false,
+  "evaluation_status": "running; no complete results",
+  "evaluation_source": "1f79b9d95e699cebd80374e09f69f3874522d532",
+  "observation_session": 42021
 }

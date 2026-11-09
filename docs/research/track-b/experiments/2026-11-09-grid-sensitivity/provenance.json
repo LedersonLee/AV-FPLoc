@@ -3,7 +3,11 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "c63cd011f77ea694017ebd9826c783ab71d070f76ea57700e8de87359c812168"
+      "sha256": "2c220aeca4ecaf8b1b6784b0222cb4ca4ff015e0b4c3c2a6826773b8c391d6a0"
+    },
+    {
+      "git_copy": "independent_evaluation_protocol.json",
+      "sha256": "09386a2788b383a98ff6f3241fafb5257641579b01d392c13c1201e0c0b29de9"
     },
     {
       "git_copy": "manifest.json",
@@ -15,7 +19,8 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "f63e5739291f14fdaca9a30915e7c2377cbc21efda59a91ff558df0e1f799ebc"
+      "sha256": "a44624f006d785b46289f540c259fe154f233a1c37d9d6b523edb04892901cfd"
     }
-  ]
+  ],
+  "evaluation_source": "1f79b9d95e699cebd80374e09f69f3874522d532"
 }
