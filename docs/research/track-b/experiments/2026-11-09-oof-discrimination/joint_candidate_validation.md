@@ -25,3 +25,13 @@ python -m track_b.scripts.cache_discriminator_candidates --cache <structure>/cac
 ```
 
 출력 원본: `/home/jeongeonlee/track1/experiments/track_b_oof_20261109/joint_development_candidates_v1`. 기존 산출물은 보존했다. 본 작업으로 학습 중인 확장 M1의 설정이나 모델은 변경되지 않았다.
+
+## 후속 OOF 학습 준비 — 진행 중
+
+분할 학습 지원 코드 `b26ad3c2ddb72399174442c78a16edd578cb5115`는 `train_foundation_interaction --scene-fold`를 추가한다. 기존 `validate_training_fold`로 원래 Train의 family-disjoint partition임을 확인하고, visual/acoustic precursor의 fold 명세와 정확히 일치해야 한다. 학습/평가 데이터는 이 분할로 제한하며, 입력 캐시 출처와 low-light 원본 데이터 protocol 검사는 유지한다. 분할 인자를 생략한 기존 경로는 유지했다. 전체 테스트44개 통과(기존 경고2개,1.81초). 실제 fold 학습 smoke 검증은 아직 남아 있다.
+
+기존 `folds_v1/fold_0.json`, `fold_1.json` 및 fold별 visual_joint/acoustic precursor를 재사용할 계획이다. 16Train pilot의 OOF M1을 완성하기 위한 작업이며, 현재112Train 확장 M1과 같은 규모의 판별기라고 주장하지 않는다. 8-scene fold scorer와16-scene development scorer의 학습 규모 차이는 기존 study23과 마찬가지로 한계다.
+
+밝기0.2 특징을 원래16Train/6Val 전체에 재추출하는 작업을 시작했다. 실행 SHA는 위 코드 SHA, 외부 출력 `track_b_oof_20261109/features_lowlight_all_v1`, 로그는 같은 root의 `features_lowlight_all_v1.log`, 실행 handle85566. 기존 raw observations를 읽고 frozen Hypersim ViT-L을 사용하며 Test는 읽지 않는다. 전체 완료/해시/기존6Val overlap 검증 전에는 fold 학습을 시작하지 않는다. 실행 중 상태이며 새로운 성능 결과가 아니다.
+
+재현: 기존 `cache_foundation_visual` 명령에서 `--cache <structure>/cache --brightness .2 --out <new-output-dir>`를 사용하고 split 기본값all을 유지한다. 원본 HSSD 경로/업스트림 source/checkpoint는 study19/본 작업의 기존 설정과 동일하다. CPU 보관 방식을 사용한2-step fold smoke 이후, attention에 한해2fold×3seed×1000step의 정해진 학습 및 OOF 후보 생성을 진행한다. 후단 비교는 기존 MAP/support/score-only/geometry를 유지하고 development 후보를 판별기 학습에 넣지 않는다.
