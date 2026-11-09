@@ -16,5 +16,10 @@
     "candidate_batch": 0,
     "discriminator": 0,
     "registration": 0
-  }
+  },
+  "head_runtime_exit_code": 0,
+  "head_runtime_models": 12,
+  "head_runtime_inferences": 4608,
+  "head_runtime_metric_mismatches": 0,
+  "head_runtime_scope": "cached feature head only; exact historical index not available"
 }

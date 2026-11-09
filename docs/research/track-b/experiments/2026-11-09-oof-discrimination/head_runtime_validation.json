@@ -1,0 +1,115 @@
+{
+  "code_sha": "30b735c32cacc432e9a96e5489e5c39643f59d95",
+  "fits": 12,
+  "query_decisions": 4608,
+  "input_signature": "(model, features, mean, std, arm)",
+  "candidate_hashes": {
+    "102344457_42.pt": "431201e00e2fa68d9a71d23e5c4e0598e1d626f4809bb45c4efeda85f766aaa2",
+    "102344457_43.pt": "ea9953f2956280118dd2d379e53b145892003a66fefc6f05cff31e787cf71cf9",
+    "102344457_44.pt": "c7e9ae514f643579f06ea3774c1aaf17d685f87d058540b92fbda146bd62ea45",
+    "105515448_173104512_42.pt": "89fab6427ae75690c8555e54eb12a0c4aee730f178c14e0cbd9eab010019bfb7",
+    "105515448_173104512_43.pt": "986c914c46e2d3f4b043f977dd21052d33ea11c38d27f755363a0184ef3cc439",
+    "105515448_173104512_44.pt": "4a92a98c32a6c39dc391c5d2491149c25893c9abe6d7030d934194711a07c7de",
+    "108294624_176710203_42.pt": "0670c55aa62c7ffaf34a81d6773a9378f2512f2ab62268c0b76e1fac15ffc99d",
+    "108294624_176710203_43.pt": "0e0d3ff5681d5559fc7b4f9e5ea54d99775b1c231a754d538bdd30a6c226bdfd",
+    "108294624_176710203_44.pt": "c4b8152941ce7fd86f40b531b108666faefda299fc507b9e86079342701f5710",
+    "108294783_176710410_42.pt": "fbc22405563d1d32a1e7e1e7143118e4e52a9292ab39568845297ce9d64f0a2c",
+    "108294783_176710410_43.pt": "c7194a84b685fe2cc953d2472a1bf05949b785f2e666d1c53296919f14c06e49",
+    "108294783_176710410_44.pt": "dc7ae0e3df42ea75a658037e7072ae19f0b8f1aac129454b1da47e626c64eb7a",
+    "108736611_177263226_42.pt": "0bc1403c6398024143be87611b7dbe6d6f61f18a8a81da7fa5a5c740e7c04c25",
+    "108736611_177263226_43.pt": "3fdfa563c30735a49198551e64722d47e7129043c61d111c206bdacdcacea1be",
+    "108736611_177263226_44.pt": "75fd7e4d2c87ed5d1f6e4c28d87db0b6c1d349d1f9374aca9a03230400da4471",
+    "108736635_177263256_42.pt": "db415e6cf3b68a50dae76fc16679a851cb23d47341cc3b6faae5fb2d8f085a37",
+    "108736635_177263256_43.pt": "5f438d2477656f1cb7e31f5aa4a6711d849d00a52ccbc1f0aa58012787a97c78",
+    "108736635_177263256_44.pt": "fb1ddcf02898285da880830dd3e25ac2ec7cb7e97910f4bdf21c99a191a6e02d"
+  },
+  "predictions_sha256": "ab81357db4892246db681d1c35fbccb7dc73eaba3aefc96c33e45db87612f888",
+  "audits": [
+    {
+      "run_id": "raw20_geometry_42",
+      "checkpoint_sha256": "6053eaf3f390a5cd1554f788d57c1d70c0e583f3c78b9a5bcdab85f6d9f92679",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "raw20_score_statistics_only_42",
+      "checkpoint_sha256": "ed746d283246ce22389847e9bd88b0f636ebb1e7a964dc48d90348a63e0909fe",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_geometry_42",
+      "checkpoint_sha256": "1ee88b0148d2ce51e868d04f2a983c91f1ef2b15cfbb119f1452d691809f3ca0",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_score_statistics_only_42",
+      "checkpoint_sha256": "b7770202eab2de37869ece542bfe05de17e4fbb23496a1248763495757fed495",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "raw20_geometry_43",
+      "checkpoint_sha256": "d9c65d4cd131db1cd53a764c6fb7b7eb71f51830c7c2b18ba63ef5ef08f2cf33",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "raw20_score_statistics_only_43",
+      "checkpoint_sha256": "308daab338f1738ff5742c79a54004a3856e022dd9d16f3a0d1d9dd3375dfb39",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_geometry_43",
+      "checkpoint_sha256": "5d73cd80ad7db4eeaaa7c22a93e04ab903dd259050f9c54a9eab45765a6590bf",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_score_statistics_only_43",
+      "checkpoint_sha256": "db37998cf0da5db389b1825144f0b35c76afa9dd02d53722fc81971eda690612",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "raw20_geometry_44",
+      "checkpoint_sha256": "a5d370b6367d13af5f7827f80a5e5086be14234eaa1934027f76f547c5f34e43",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "raw20_score_statistics_only_44",
+      "checkpoint_sha256": "ffe26478a03be549f516c77605a83be970d959cc1bc5b407c5bbb9e8b09c1575",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_geometry_44",
+      "checkpoint_sha256": "7ca853c930ee4784fad8e2656c52e05a1d01b2eaa3075b82ae1af9ce80668b61",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    },
+    {
+      "run_id": "diverse20_score_statistics_only_44",
+      "checkpoint_sha256": "4c4b93fe86b015fcad1d19e29684717979e1b7151e94f7f919d6a99b9e125868",
+      "queries": 384,
+      "python_open_calls": [],
+      "metric_mismatches": 0
+    }
+  ],
+  "scope": "Cached-feature discriminator head only; no raw observation or candidate builder replay; Python open hook does not trace native I/O",
+  "test_accessed": false
+}
