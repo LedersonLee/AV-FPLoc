@@ -66,10 +66,11 @@ def main():
     provenance=dict(code_commits=source_commits,environment_image='avfploc:cu124-clean',image_id='sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318',
        audit_and_smoke_execution='base 5449980 plus then-uncommitted Track B sources subsequently committed as 55c4238; no model checkpoint loaded',
        geometry_diagnostic_execution='base c268a2f plus new ray diagnostic sources subsequently committed as 2555b21',
-       files={str(p.relative_to(root)):sha(p) for p in root.rglob('*.json') if p.name not in ('diagnostic_v1.json',) and 'audit_v1' not in str(p)},
+       external_json_hashes={str(p.relative_to(root)):sha(p) for p in root.rglob('*.json') if p.name not in ('diagnostic_v1.json',) and 'audit_v1' not in str(p)},
        checkpoint_hashes={str(p.relative_to(root)):sha(p) for p in root.rglob('*.pt')},
        audit_manifest_sha256=sha(root/'audit_v1/manifest.csv'),audit_split_sha256=sha(root/'audit_v1/split_manifest.json'),source_hashes={str(p):sha(p) for p in Path('track_b').rglob('*.py')},
        limitations='Datasets and checkpoints remain external. Docker image tag alone does not guarantee clean-clone reproducibility; use pinned image ID and data hashes.')
+    provenance['files']=[dict(git_copy=p.name,sha256=sha(p)) for p in sorted(out.iterdir()) if p.is_file() and p.name!='provenance.json' and p.suffix in ('.json','.csv','.png')]
     (out/'provenance.json').write_text(json.dumps(provenance,indent=2))
     completed={k:len(v) for k,v in summaries.items()};(out/'results.md').write_text('''# Track B 초기 전체 후보 실험 결과
 
