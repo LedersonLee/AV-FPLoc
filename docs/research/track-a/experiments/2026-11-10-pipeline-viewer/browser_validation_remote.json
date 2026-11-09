@@ -1,0 +1,20 @@
+{
+  "url": "https://rawcdn.githack.com/LedersonLee/HTML-reports-2/f2cb4aaa2feb431ecacefef4cd018af6eaee577c/echoloc/av-fploc-track-a-pipeline/index.html",
+  "initial_query": "102344250/0",
+  "checks": [
+    "load gzip",
+    "yaw slice changes image",
+    "method/normalization/shared-range controls",
+    "GT overlay leaves final decision unchanged",
+    "candidate selector",
+    "candidate table click",
+    "candidate map click",
+    "seed43",
+    "failure filter",
+    "rapid next navigation consistency",
+    "cross-scene load",
+    "desktop render",
+    "390px mobile no horizontal overflow"
+  ],
+  "console_errors": []
+}

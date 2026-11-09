@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:8769",
+  "initial_query": "102344250/0",
+  "checks": [
+    "load gzip",
+    "yaw slice changes image",
+    "method/normalization/shared-range controls",
+    "GT overlay leaves final decision unchanged",
+    "candidate selector",
+    "candidate table click",
+    "candidate map click",
+    "seed43",
+    "failure filter",
+    "rapid next navigation consistency",
+    "desktop render",
+    "390px mobile no horizontal overflow"
+  ],
+  "console_errors": []
+}

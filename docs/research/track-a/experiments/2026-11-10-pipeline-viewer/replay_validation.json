@@ -1,0 +1,857 @@
+{
+  "queries": 58,
+  "scenes": 12,
+  "checks": [
+    {
+      "scene": "102344250",
+      "sample": 0,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.299535377500941e-05,
+      "saved_field_schema": {
+        "visual": 1.9072348109716586e-06,
+        "acoustic": 2.9791776712251306e-08
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1032,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.462505057251098e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102344250",
+      "sample": 1225,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.777053369869888e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102344250",
+      "sample": 1316,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.3941543744273623e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102344250",
+      "sample": 1357,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.804059675822536e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102344250",
+      "sample": 1370,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.203586058000198e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816615",
+      "sample": 16,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.610531317528199e-05,
+      "saved_field_schema": {
+        "visual": 9.529041840039554e-07,
+        "acoustic": 2.9790436228971373e-08
+      }
+    },
+    {
+      "scene": "102816615",
+      "sample": 91,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.8570254783951725e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816615",
+      "sample": 878,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 6.288849192609414e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816615",
+      "sample": 1014,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.488211044957225e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816852",
+      "sample": 16,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.6473368810150415e-05,
+      "saved_field_schema": {
+        "visual": 9.534238643027493e-07,
+        "acoustic": 2.9801175971400085e-08
+      }
+    },
+    {
+      "scene": "102816852",
+      "sample": 527,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.622158171285751e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816852",
+      "sample": 1038,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.1279173248319765e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102816852",
+      "sample": 1351,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.8059094820196435e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102817200",
+      "sample": 8,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.048351743386359e-05,
+      "saved_field_schema": {
+        "visual": 9.535884615274881e-07,
+        "acoustic": 2.9801233814019668e-08
+      }
+    },
+    {
+      "scene": "102817200",
+      "sample": 491,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.247911989125775e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102817200",
+      "sample": 818,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.2446502737696354e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "102817200",
+      "sample": 1118,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.07669888247797e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 0,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.718152669387244e-05,
+      "saved_field_schema": {
+        "visual": 1.9060969975726039e-06,
+        "acoustic": 2.980135072050416e-08
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 363,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.7929981492944584e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 398,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.2755949363270105e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 573,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.1984414105744605e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 937,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.869229251525109e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 1086,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.885654256364669e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 1433,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.892570402315055e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 16,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.086678957710866e-05,
+      "saved_field_schema": {
+        "visual": 1.7885558634134213e-06,
+        "acoustic": 2.9800256706735695e-08
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 631,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.6681673154580494e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 635,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.431847122021715e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 678,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.86435643458627e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 1268,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.819876482597962e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 16,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.608712171166873e-05,
+      "saved_field_schema": {
+        "visual": 3.8118565441891405e-06,
+        "acoustic": 2.978032676015374e-08
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 128,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.969056058046206e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 784,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.3010980771418517e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 1502,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.361370130079312e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 1579,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.080041205507424e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 8,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.433959006623246e-05,
+      "saved_field_schema": {
+        "visual": 9.212895193400072e-07,
+        "acoustic": 2.9782506683062593e-08
+      }
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 41,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.9008426324270715e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 435,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.123727554079416e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 1265,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.305545209681849e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 32,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.772867782709689e-05,
+      "saved_field_schema": {
+        "visual": 4.7682081749655936e-07,
+        "acoustic": 2.978645008422376e-08
+      }
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 413,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.122285091596317e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 918,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.628870291512044e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 1447,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.013681869203701e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 8,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.497891862431658e-05,
+      "saved_field_schema": {
+        "visual": 9.536352791883473e-07,
+        "acoustic": 2.9798637668498884e-08
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 151,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.636379218725395e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 411,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.834437676158598e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 1367,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.67387779796713e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 1427,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.499853559097877e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 16,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.69702338661382e-05,
+      "saved_field_schema": {
+        "visual": 1.907335480666461e-06,
+        "acoustic": 2.9792638134296112e-08
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 153,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.7755793840597036e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 619,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 3.773652635319369e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 678,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.437312769622892e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 1007,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 3.875266088393392e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 8,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 3.973933366996363e-05,
+      "saved_field_schema": {
+        "visual": 4.765706211884435e-07,
+        "acoustic": 2.9788906452665742e-08
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 110,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.034767403360284e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 478,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.988568741692845e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 758,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 4.1166584185958754e-05,
+      "saved_field_schema": null
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 850,
+      "seeds": [
+        42,
+        43
+      ],
+      "baseline_exact": true,
+      "support20_exact": true,
+      "centers20_exact": true,
+      "geoq_exact": true,
+      "quantization_max_error": 5.022390709352731e-05,
+      "saved_field_schema": null
+    }
+  ],
+  "training": false,
+  "rendering": false,
+  "test_accessed": false
+}

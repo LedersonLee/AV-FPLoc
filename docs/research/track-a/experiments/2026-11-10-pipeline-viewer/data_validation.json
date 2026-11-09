@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scenes": 12,
+  "queries": 58,
+  "seeds": [
+    42,
+    43
+  ],
+  "checks": 406,
+  "max_display_error": 6.288849192609414e-05,
+  "total_bytes": 102370965,
+  "files": 203,
+  "training": false,
+  "rendering": false,
+  "test_accessed": false
+}

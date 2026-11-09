@@ -71,3 +71,9 @@ Study22 final F1 evaluation source `6e6f3a5380b6b124ebfdb978b4c1978baad7c275`; n
 | Ray representation & joint learning / ray_joint_20261109 | 2026-11-09 | A | 완료·혼합/음성결과:228checkpoint·1542배열 재생 일치, fullbank2880+conditioned1728기록 검증. Chirp−raw +2.897pp; attention−concat +3.060pp이나 interaction-disabled 우위 미확정. 잔차가중 attention +2.181pp, anchor선택 악화. B2+GEOQ 미개선 및 fine 손해 보존. | Exploratory | [연구 보고서](track-a/experiments/2026-11-09-ray-joint/RESEARCH_REPORT.md) | 18f04ce (입력), 570df35 (결정성 수정), 338a449 (calibration), 6373431 (donor 수정), ff5601d (Transfer), 121fd73 (방향순열), 00502cb (최종 분석); 전체 실제 실행 SHA·소스 해시는 execution_receipts.json/source_inventory.json |
 
 | 30 | [Ray uncertainty diagnostic](track-b/experiments/2026-11-09-ray-uncertainty/README.md) | 완료·주 가설 지지 실패: 7조건/3seed. 정상 U3 Joint29.688% 대 U0 34.402%; U2 대비 추가 pose 이득 미확인, severe occlusion negative transfer 지속. 원본 F1 보존·전체 집계 검증. | 2026-11-09–10 | Track B | Exploratory | uncertainty fit `3caccd76fd46289f9301624255584fe0df490394`; evaluation `bf9a825cf58f584e6803f5026977fc1b32c7aafb`/`ba040da65e3cf3339a716e9dc8a6af07c1a488d7`; aggregation `8f2454a5ce50f0fff059dcc180da2d07057c1920` |
+
+## Track A 진단 도구 — pipeline_viewer_20261110
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 / HTML | 실제 실행 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| Interactive pipeline diagnostic / pipeline_viewer_20261110 | 2026-11-10 | A | 완료: New12 12장면·58질의·2seed의 frozen score/Support20/GEOQ 재생 불일치0. 무작위·실패5유형 포함; 공개 URL 브라우저 검증 통과. 신규 학습·렌더링·Test17 분석 없음. 독립 성능/feature-exchange 우위 주장 아님. | Exploratory (재사용 개발 진단) | [보고서](track-a/experiments/2026-11-10-pipeline-viewer/RESEARCH_REPORT.md) · [Interactive HTML](https://rawcdn.githack.com/LedersonLee/HTML-reports-2/f2cb4aaa2feb431ecacefef4cd018af6eaee577c/echoloc/av-fploc-track-a-pipeline/index.html) | b85258053b3e1d6763fc18c600a62ea4ea3f73ff (최종 exporter); 역사적 학습 SHA UNRECORDED·source/checkpoint hashes는 manifest 참조 |

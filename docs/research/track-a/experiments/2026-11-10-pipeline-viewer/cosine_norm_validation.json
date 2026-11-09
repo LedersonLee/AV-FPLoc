@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "102344250",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "102816615",
+    "reference_norm_max_error": 1.1920928955078125e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "102816852",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "102817200",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "103997940_171031257",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "104862513_172226580",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "104862621_172226772",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "106366248_174226527",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "106366434_174226881",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "106878945_174887058",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "108294846_176710506",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 1.1920928955078125e-07
+  },
+  {
+    "scene": "108736689_177263340",
+    "reference_norm_max_error": 1.7881393432617188e-07,
+    "observation_norm_max_error": 5.960464477539063e-08
+  }
+]

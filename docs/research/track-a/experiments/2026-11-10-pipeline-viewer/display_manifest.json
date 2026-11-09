@@ -1,0 +1,1545 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "split": "HSSD New12 reused development / original train scenes; visual teacher exposed; not independent Test",
+  "seeds": [
+    42,
+    43
+  ],
+  "scenes": [
+    {
+      "id": "102344250",
+      "xy_cells": 5583,
+      "poses": 200988,
+      "input_receipt_sha256": "a3d964ebfbb99ed446d0e10fe326c85c2da2ebda85a5ac0eda48032f5acb5d31"
+    },
+    {
+      "id": "102816615",
+      "xy_cells": 2725,
+      "poses": 98100,
+      "input_receipt_sha256": "9a10d5a95ffd51086d960ad308ee8a6aa4d5a05a3fc918b95f5e35f9aa428970"
+    },
+    {
+      "id": "102816852",
+      "xy_cells": 1997,
+      "poses": 71892,
+      "input_receipt_sha256": "3384f6ba412974cd794d8d44940baab97c6a781ca73accc62ee1c1a7a6359f8b"
+    },
+    {
+      "id": "102817200",
+      "xy_cells": 5055,
+      "poses": 181980,
+      "input_receipt_sha256": "17b4bbfceda8a52d4a6fdc5e232b9ed86f2376876533cb919f915380eb69c215"
+    },
+    {
+      "id": "103997940_171031257",
+      "xy_cells": 15074,
+      "poses": 542664,
+      "input_receipt_sha256": "784367c65e84ca075f915013cc9f9219661fe93ca94e27c4b7e19857c03fd010"
+    },
+    {
+      "id": "104862513_172226580",
+      "xy_cells": 3190,
+      "poses": 114840,
+      "input_receipt_sha256": "d9e8a568327400f0cb17c6723813e74aea56ebf22bbe0dba1646aa855e59625d"
+    },
+    {
+      "id": "104862621_172226772",
+      "xy_cells": 3672,
+      "poses": 132192,
+      "input_receipt_sha256": "5879fc3f69100d17f00dfd5bc94606c2185902fcd6a39739e8665492c34f5e46"
+    },
+    {
+      "id": "106366248_174226527",
+      "xy_cells": 1522,
+      "poses": 54792,
+      "input_receipt_sha256": "66e6283dfa50957d540638058afb64cab26d75430a5feb27b03ddbc346bb444c"
+    },
+    {
+      "id": "106366434_174226881",
+      "xy_cells": 4254,
+      "poses": 153144,
+      "input_receipt_sha256": "1434baae11350419841aaa2dd8dd9b1176dd9b73bea514b7c8a43ae1c8514485"
+    },
+    {
+      "id": "106878945_174887058",
+      "xy_cells": 2894,
+      "poses": 104184,
+      "input_receipt_sha256": "8cd91dcb5fcf549a2e705194a0be72d1c8f332ed0508731a802e3deb121a156d"
+    },
+    {
+      "id": "108294846_176710506",
+      "xy_cells": 6655,
+      "poses": 239580,
+      "input_receipt_sha256": "751fc953061d67c2f21fcaa4006a8e30debb42068e5570c0959aae5e109a4e69"
+    },
+    {
+      "id": "108736689_177263340",
+      "xy_cells": 744,
+      "poses": 26784,
+      "input_receipt_sha256": "e4e48fc63958a9fd436c8f160410b9704d4743773f478d0fb1d727bda3a11536"
+    }
+  ],
+  "queries": [
+    {
+      "scene": "102344250",
+      "sample": 0,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1032,
+      "index": 79,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1225,
+      "index": 97,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1316,
+      "index": 105,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1357,
+      "index": 107,
+      "reasons": [
+        "both-ambiguous: random"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102344250",
+      "sample": 1370,
+      "index": 108,
+      "reasons": [
+        "both-ambiguous: median GEOQ position error"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816615",
+      "sample": 16,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816615",
+      "sample": 91,
+      "index": 9,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired"
+        ],
+        "43": [
+          "visual-repaired"
+        ]
+      }
+    },
+    {
+      "scene": "102816615",
+      "sample": 878,
+      "index": 67,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816615",
+      "sample": 1014,
+      "index": 80,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816852",
+      "sample": 16,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816852",
+      "sample": 527,
+      "index": 39,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816852",
+      "sample": 1038,
+      "index": 78,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102816852",
+      "sample": 1351,
+      "index": 105,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102817200",
+      "sample": 8,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102817200",
+      "sample": 491,
+      "index": 33,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "102817200",
+      "sample": 818,
+      "index": 59,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired"
+        ],
+        "43": [
+          "visual-repaired"
+        ]
+      }
+    },
+    {
+      "scene": "102817200",
+      "sample": 1118,
+      "index": 87,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 0,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 363,
+      "index": 23,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 398,
+      "index": 28,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 573,
+      "index": 34,
+      "reasons": [
+        "missing-top20: median GEOQ position error"
+      ],
+      "tags": {
+        "42": [
+          "missing-top20",
+          "both-ambiguous"
+        ],
+        "43": [
+          "missing-top20",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 937,
+      "index": 58,
+      "reasons": [
+        "missing-top20: random"
+      ],
+      "tags": {
+        "42": [
+          "missing-top20",
+          "both-ambiguous"
+        ],
+        "43": [
+          "missing-top20",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 1086,
+      "index": 70,
+      "reasons": [
+        "geoq-selection-failure: random"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "103997940_171031257",
+      "sample": 1433,
+      "index": 103,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 16,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 631,
+      "index": 33,
+      "reasons": [
+        "visual-repaired: random"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 635,
+      "index": 34,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 678,
+      "index": 42,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862513_172226580",
+      "sample": 1268,
+      "index": 95,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 16,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 128,
+      "index": 10,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 784,
+      "index": 58,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 1502,
+      "index": 117,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "104862621_172226772",
+      "sample": 1579,
+      "index": 123,
+      "reasons": [
+        "geoq-selection-failure: median GEOQ position error"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 8,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 41,
+      "index": 3,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 435,
+      "index": 25,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366248_174226527",
+      "sample": 1265,
+      "index": 104,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 32,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 413,
+      "index": 17,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 918,
+      "index": 56,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106366434_174226881",
+      "sample": 1447,
+      "index": 107,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 8,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 151,
+      "index": 10,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 411,
+      "index": 19,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 1367,
+      "index": 105,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "106878945_174887058",
+      "sample": 1427,
+      "index": 110,
+      "reasons": [
+        "visual-harmed: median GEOQ position error"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 16,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 153,
+      "index": 15,
+      "reasons": [
+        "visual-harmed: random"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed"
+        ],
+        "43": [
+          "visual-harmed"
+        ]
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 619,
+      "index": 51,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-harmed",
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 678,
+      "index": 58,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108294846_176710506",
+      "sample": 1007,
+      "index": 75,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 8,
+      "index": 0,
+      "reasons": [
+        "saved-field replay anchor"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 110,
+      "index": 15,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "both-ambiguous"
+        ],
+        "43": [
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 478,
+      "index": 35,
+      "reasons": [
+        "visual-repaired: median GEOQ position error"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 758,
+      "index": 59,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ],
+        "43": [
+          "geoq-selection-failure",
+          "both-ambiguous"
+        ]
+      }
+    },
+    {
+      "scene": "108736689_177263340",
+      "sample": 850,
+      "index": 65,
+      "reasons": [
+        "uniform random (seed 20261110)"
+      ],
+      "tags": {
+        "42": [
+          "visual-repaired",
+          "both-ambiguous"
+        ],
+        "43": [
+          "visual-repaired",
+          "both-ambiguous"
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "study": "hssd_scaling_20261108_1332",
+    "b2": "mbt_remaining_suite_20261106/cap020/full_epoch8",
+    "support": "hypothesis_discrimination_20261107_1538",
+    "geoq": "structural_evidence_20261107_1730",
+    "export_sha256": "aeedf2679d7905896e841dd07f0075a2c4567c1600976e0e6f64a942007919b6",
+    "checkpoint_sha256": {
+      "42": "f4e8654a54713becc605dc7b8afed25f1b10df163fdd95fdd8f22cd2a3fefe51",
+      "43": "3779393492650058f956a7b38b722e781ce792b70b4da26e2d42abd5b6bb22ce"
+    },
+    "external_source_sha256": {
+      "hssd_scaling_20261108_1332/build_candidates.py": "07aa5c6d47d22335640202d4c172ee81c402e735fe9ba878060aedb6809f4788",
+      "fusion_vs_posterior_20261107_1300/study.py": "5116bbcac0693aecb5e58a38986f738ba0d3123207a2c6d97c184bbd955a768c",
+      "hypothesis_discrimination_20261107_1538/modes.py": "e1a65fd821991c91cf52f5873ce376d0684c6e541d33967f07b61a5c86a045a3",
+      "structural_evidence_20261107_1730/inference.py": "22ce81387de85fd91425070d5a99034e025f56711ee2c1df35223ca931e1e325",
+      "mbt_remaining_suite_20261106/model.py": "0ed133ad96988862de0ce26a8550c36d4f010942c0f6941bad976250bd16f162"
+    },
+    "code_commit": "b85258053b3e1d6763fc18c600a62ea4ea3f73ff",
+    "code_repository": "LedersonLee/AV-FPLoc (private)",
+    "runtime": "avfploc:cu124-clean; PyTorch frozen inference; historical external inputs required",
+    "ranker_sha256": {
+      "42": "3211de3e4f1bd2be5e51b85cd5fd9f1068af621a4dcd7bc953086c108c43d2b5",
+      "43": "7228dc20f06c5e7693a36b4876a7755fa0ae630505310c907f6439d05f3ea27a"
+    },
+    "historical_experiment_git_sha": "UNRECORDED: exact external inference source hashes above identify artifacts; viewer code commit is not the historical training commit"
+  },
+  "sampling": {
+    "seed": 20261110,
+    "source_queries": 1536,
+    "group_counts": {
+      "visual-repaired": 399,
+      "visual-harmed": 94,
+      "geoq-selection-failure": 347,
+      "missing-top20": 13,
+      "both-ambiguous": 1394
+    },
+    "selected": [
+      {
+        "scene": "102344250",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "102344250",
+        "index": 79,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102344250",
+        "index": 97,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102344250",
+        "index": 105,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102344250",
+        "index": 107,
+        "reasons": [
+          "both-ambiguous: random"
+        ]
+      },
+      {
+        "scene": "102344250",
+        "index": 108,
+        "reasons": [
+          "both-ambiguous: median GEOQ position error"
+        ]
+      },
+      {
+        "scene": "102816615",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "102816615",
+        "index": 9,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102816615",
+        "index": 67,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102816615",
+        "index": 80,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102816852",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "102816852",
+        "index": 39,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102816852",
+        "index": 78,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102816852",
+        "index": 105,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102817200",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "102817200",
+        "index": 33,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102817200",
+        "index": 59,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "102817200",
+        "index": 87,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 23,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 28,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 34,
+        "reasons": [
+          "missing-top20: median GEOQ position error"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 58,
+        "reasons": [
+          "missing-top20: random"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 70,
+        "reasons": [
+          "geoq-selection-failure: random"
+        ]
+      },
+      {
+        "scene": "103997940_171031257",
+        "index": 103,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862513_172226580",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "104862513_172226580",
+        "index": 33,
+        "reasons": [
+          "visual-repaired: random"
+        ]
+      },
+      {
+        "scene": "104862513_172226580",
+        "index": 34,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862513_172226580",
+        "index": 42,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862513_172226580",
+        "index": 95,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862621_172226772",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "104862621_172226772",
+        "index": 10,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862621_172226772",
+        "index": 58,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862621_172226772",
+        "index": 117,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "104862621_172226772",
+        "index": 123,
+        "reasons": [
+          "geoq-selection-failure: median GEOQ position error"
+        ]
+      },
+      {
+        "scene": "106366248_174226527",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "106366248_174226527",
+        "index": 3,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106366248_174226527",
+        "index": 25,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106366248_174226527",
+        "index": 104,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106366434_174226881",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "106366434_174226881",
+        "index": 17,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106366434_174226881",
+        "index": 56,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106366434_174226881",
+        "index": 107,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106878945_174887058",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "106878945_174887058",
+        "index": 10,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106878945_174887058",
+        "index": 19,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106878945_174887058",
+        "index": 105,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "106878945_174887058",
+        "index": 110,
+        "reasons": [
+          "visual-harmed: median GEOQ position error"
+        ]
+      },
+      {
+        "scene": "108294846_176710506",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "108294846_176710506",
+        "index": 15,
+        "reasons": [
+          "visual-harmed: random"
+        ]
+      },
+      {
+        "scene": "108294846_176710506",
+        "index": 51,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "108294846_176710506",
+        "index": 58,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "108294846_176710506",
+        "index": 75,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "108736689_177263340",
+        "index": 0,
+        "reasons": [
+          "saved-field replay anchor"
+        ]
+      },
+      {
+        "scene": "108736689_177263340",
+        "index": 15,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "108736689_177263340",
+        "index": 35,
+        "reasons": [
+          "visual-repaired: median GEOQ position error"
+        ]
+      },
+      {
+        "scene": "108736689_177263340",
+        "index": 59,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      },
+      {
+        "scene": "108736689_177263340",
+        "index": 65,
+        "reasons": [
+          "uniform random (seed 20261110)"
+        ]
+      }
+    ]
+  },
+  "score_units": "Uncalibrated score, NOT probability or likelihood",
+  "quantization": "Full XY x 36 yaw display fields; uint16 linear encoding, exact candidates stored separately. Each field records maximum reconstruction error.",
+  "no_exchange": "Unavailable: no matched trained no-exchange full field exported; no feature-exchange coverage claim.",
+  "license": "HSSD derived thumbnails/maps: CC BY-NC 4.0, https://3dlg-hcvc.github.io/hssd/; resized, metadata stripped; noncommercial research only."
+}

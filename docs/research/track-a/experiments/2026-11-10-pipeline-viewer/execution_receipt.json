@@ -1,0 +1,13 @@
+{
+  "code_commit": "b85258053b3e1d6763fc18c600a62ea4ea3f73ff",
+  "export_sha256": "aeedf2679d7905896e841dd07f0075a2c4567c1600976e0e6f64a942007919b6",
+  "scope": "New12 reused development",
+  "seeds": [
+    42,
+    43
+  ],
+  "new_training": false,
+  "new_rendering": false,
+  "test_accessed": false,
+  "unrelated_dirty_runtime_patch_sha256": "02ff3357f1cead0b70e2255c5f27eb15e325c161c6966ca1dbe06743fb1eabd3"
+}
