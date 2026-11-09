@@ -38,5 +38,11 @@
   "fixed_only_replay_exit_code": 0,
   "fixed_only_verifier_exit_code": 0,
   "fixed_only_exact_records": 4608,
-  "fixed_only_unimodal_checks": 2304
+  "fixed_only_unimodal_checks": 2304,
+  "first_scaling_cell_completed_fits": 9,
+  "first_scaling_cell_verification_exit_code": 0,
+  "first_scaling_cell_evaluation_session": 33530,
+  "first_scaling_cell_evaluation_status": "running",
+  "extended_evaluator_pytest_passed": 43,
+  "unittest_discovered_zero_preserved": true
 }
