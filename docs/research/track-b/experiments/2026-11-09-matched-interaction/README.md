@@ -114,3 +114,23 @@ python -m track_b.scripts.audit_numeric_case --cache /prior/cache --run /prior/s
 ```
 
 The later GPU audit must use `--device cuda --batch-size 8`, compare float32 and float64, and preserve all previous conflicting results. Until then, use CPU brightness comparisons as within-device evidence only.
+
+
+## Deterministic qualitative cases (seed42)
+
+Before plotting, define four categories using original GPU outcomes: fixed correct/attention wrong, attention correct/fixed wrong, both wrong with attention raw20 hit, and both wrong with attention raw20 miss. Choose the first scene/query in lexicographic order in each category; do not choose by image quality. Across384queries their counts are19,12,96,251 respectively; six additional queries have both methods correct and are outside these contrast categories. All four lexicographic choices happen to be scene102344457, so these illustrations are **not a scene-representative sample**. [Selection and CPU replay metrics](qualitative_seed42/selection.json).
+
+Each figure shows all four models' entire XY log-mass fields, raw20, diverse20, MAP and GT. Bottom plots show conditional yaw distributions at the nearest XY to GT; using GT to choose that plotting slice is a diagnostic, never an inference feature. Values are CPU single-query replays; the selected success/failure categories remain unchanged in these four cases. All four images were rendered and visually inspected. These are model score fields, not attention attribution maps or causal explanations.
+
+- [Independent fusion correct, attention wrong](qualitative_seed42/fixed_correct_attention_wrong.png): query580. The correct neighborhood is in attention raw20, but its MAP differs; independent fusion selects the correct pose.
+- [Attention correct, independent fusion wrong](qualitative_seed42/attention_correct_fixed_wrong.png): query49. This positive example is retained alongside counterexamples and does not imply an average advantage.
+- [Both wrong, raw20 includes a correct hypothesis](qualitative_seed42/both_wrong_attention_raw20_hit.png): query24. Coverage and final selection are distinct failure stages.
+- [Both wrong, raw20 misses a correct hypothesis](qualitative_seed42/both_wrong_attention_raw20_miss.png): query57. Attention's diverse20 includes a correct hypothesis even though raw20 does not; the two coverage definitions cannot be interchanged.
+
+Broad multi-room score mass is visible, but it does not prove that the observations are physically unidentifiable. Weak learned features can create the same pattern. No GT-out-of-bank illustration exists under the audited bank (zero cases); paired furniture-shift and physically identified false-echo examples are unavailable in this selected evaluation. Full protocol qualitative coverage remains incomplete for those categories.
+
+Reproduce on CPU using sourcee58938f and the standard mounts:
+
+```text
+python -m track_b.scripts.plot_interaction_cases --cache /prior/cache --run /out/matched_v2 --prior /prior --out /out/qualitative_seed42
+```

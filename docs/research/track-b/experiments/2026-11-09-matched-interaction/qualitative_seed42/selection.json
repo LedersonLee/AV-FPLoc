@@ -1,0 +1,341 @@
+{
+  "selection": "first scene/query in lexicographic order within each declared category, seed42 only; no image-quality selection",
+  "category_counts": {
+    "fixed_correct_attention_wrong": 19,
+    "attention_correct_fixed_wrong": 12,
+    "both_wrong_attention_raw20_hit": 96,
+    "both_wrong_attention_raw20_miss": 251
+  },
+  "cases": [
+    {
+      "category": "fixed_correct_attention_wrong",
+      "scene": "102344457",
+      "query": 580,
+      "selection_gpu_attention": {
+        "scene": "102344457",
+        "query": 580,
+        "arm": "normal",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 1.0,
+        "diverse20": 1.0,
+        "nll": 7.697762489318848,
+        "entropy": 10.161396026611328,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "selection_gpu_fixed": {
+        "scene": "102344457",
+        "seed": 42,
+        "query": 580,
+        "method": "fixed",
+        "joint": 1.0,
+        "r1": 1.0,
+        "fine": 0.0,
+        "raw20": 1.0,
+        "diverse20": 1.0,
+        "nll": 8.614678382873535,
+        "entropy": 10.653182983398438,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "cpu_metrics": {
+        "attention": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 7.697993278503418,
+          "entropy": 10.161486625671387,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "concat": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 7.960268974304199,
+          "entropy": 10.27003288269043,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "separable": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 7.888438701629639,
+          "entropy": 10.287627220153809,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "independent_fixed": {
+          "joint": 1.0,
+          "r1": 1.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 8.61474609375,
+          "entropy": 10.653200149536133,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        }
+      },
+      "image": "fixed_correct_attention_wrong.png"
+    },
+    {
+      "category": "attention_correct_fixed_wrong",
+      "scene": "102344457",
+      "query": 49,
+      "selection_gpu_attention": {
+        "scene": "102344457",
+        "query": 49,
+        "arm": "normal",
+        "joint": 1.0,
+        "r1": 1.0,
+        "fine": 0.0,
+        "raw20": 1.0,
+        "diverse20": 1.0,
+        "nll": 10.034282684326172,
+        "entropy": 10.338237762451172,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "selection_gpu_fixed": {
+        "scene": "102344457",
+        "seed": 42,
+        "query": 49,
+        "method": "fixed",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 1.0,
+        "nll": 11.134519577026367,
+        "entropy": 10.84607982635498,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "cpu_metrics": {
+        "attention": {
+          "joint": 1.0,
+          "r1": 1.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 10.03447437286377,
+          "entropy": 10.338253021240234,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "concat": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 1.0,
+          "nll": 11.0162353515625,
+          "entropy": 10.25412368774414,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "separable": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 10.552457809448242,
+          "entropy": 10.317259788513184,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "independent_fixed": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 1.0,
+          "nll": 11.134563446044922,
+          "entropy": 10.846068382263184,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        }
+      },
+      "image": "attention_correct_fixed_wrong.png"
+    },
+    {
+      "category": "both_wrong_attention_raw20_hit",
+      "scene": "102344457",
+      "query": 24,
+      "selection_gpu_attention": {
+        "scene": "102344457",
+        "query": 24,
+        "arm": "normal",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 1.0,
+        "diverse20": 1.0,
+        "nll": 10.32010269165039,
+        "entropy": 9.95999526977539,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "selection_gpu_fixed": {
+        "scene": "102344457",
+        "seed": 42,
+        "query": 24,
+        "method": "fixed",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "nll": 10.222772598266602,
+        "entropy": 10.484945297241211,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "cpu_metrics": {
+        "attention": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 10.320396423339844,
+          "entropy": 9.95995044708252,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "concat": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 10.883432388305664,
+          "entropy": 9.985353469848633,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "separable": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 1.0,
+          "diverse20": 1.0,
+          "nll": 10.411441802978516,
+          "entropy": 10.091766357421875,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "independent_fixed": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 0.0,
+          "nll": 10.22278118133545,
+          "entropy": 10.484977722167969,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        }
+      },
+      "image": "both_wrong_attention_raw20_hit.png"
+    },
+    {
+      "category": "both_wrong_attention_raw20_miss",
+      "scene": "102344457",
+      "query": 57,
+      "selection_gpu_attention": {
+        "scene": "102344457",
+        "query": 57,
+        "arm": "normal",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 1.0,
+        "nll": 9.833198547363281,
+        "entropy": 9.92052173614502,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "selection_gpu_fixed": {
+        "scene": "102344457",
+        "seed": 42,
+        "query": 57,
+        "method": "fixed",
+        "joint": 0.0,
+        "r1": 0.0,
+        "fine": 0.0,
+        "raw20": 0.0,
+        "diverse20": 0.0,
+        "nll": 9.55432415008545,
+        "entropy": 10.32052230834961,
+        "oracle_joint": 1.0,
+        "oracle_fine": 0.0
+      },
+      "cpu_metrics": {
+        "attention": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 1.0,
+          "nll": 9.833303451538086,
+          "entropy": 9.920469284057617,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "concat": {
+          "joint": 0.0,
+          "r1": 1.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 1.0,
+          "nll": 9.52932357788086,
+          "entropy": 9.601394653320312,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "separable": {
+          "joint": 0.0,
+          "r1": 1.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 1.0,
+          "nll": 9.689313888549805,
+          "entropy": 9.788455963134766,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        },
+        "independent_fixed": {
+          "joint": 0.0,
+          "r1": 0.0,
+          "fine": 0.0,
+          "raw20": 0.0,
+          "diverse20": 0.0,
+          "nll": 9.554353713989258,
+          "entropy": 10.320606231689453,
+          "oracle_joint": 1.0,
+          "oracle_fine": 0.0
+        }
+      },
+      "image": "both_wrong_attention_raw20_miss.png"
+    }
+  ],
+  "not_available": {
+    "GT_absent_bank": "0 under audited original bank",
+    "physical_furniture_shift": "no paired condition in selected observations",
+    "false_physical_echo": "not physically identified"
+  },
+  "limits": "Exploratory illustration, not performance evidence; CPU replay may differ from original GPU near ties; yaw plot uses GT solely to select diagnostic spatial slice."
+}
