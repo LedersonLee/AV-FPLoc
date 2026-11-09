@@ -63,6 +63,12 @@ Ordered raw channels outperform energy-sorted and isotropic controls trained wit
 
 Chirp improves mean ray MAE but its joint-recall contrast with raw includes zero. Fixed convolution adds no new scene information; it can change conditioning, spectral weighting and overlap. No frequency-specific mechanism is established without frequency-isolated controls. Attention improves naive late fusion, but not concat or equal-parameter interaction-disabled with decisive scene-level evidence; therefore attention-specific cross-modal benefit is unproven.
 
+### Same36-output model, fewer matching directions
+
+Holding the trained36ray model fixed separates matching-direction information from training capacity. Using all36 rather than4directions changes fixedcandidate joint recall by+1.758pp[0.423,3.092] for frozen embedding,+1.172pp[0.065,2.181] for chirp,+0.749pp[-0.358,1.823] for raw and+0.488pp[-0.456,1.497] for E/C/N. Gains beyond12directions are small and all corresponding intervals include zero. These reused exploratory comparisons support some value of broader angular sampling, not monotonic improvement with ray count.
+
+Training a36output model and evaluating only4/8/12outputs does not clearly outperform training the corresponding nativeK model. K8 is not an exact grid subset: predicted log rays are interpolated while target metric rays are interpolated before log; its comparison includes this declared numerical difference. See remaining_analysis.json for all contrasts.
+
 ## Optimization and FOV alternatives
 
 Quadrupling training updates to1280 lowers training loss without clear held localization improvement. Attention160−concat160 is+0.879pp[-0.033,1.855]; attention160−disabled160 is+0.130pp[-0.944,1.367]. A wider concat bottleneck uses more parameters and only320updates; it is a diagnostic of bottleneck capacity, not an equal-budget superiority comparison. These results weaken simple undertraining as the sole explanation, while leaving model/frontend capacity and representation alignment unresolved.
@@ -121,6 +127,8 @@ The first repair and harm in protocol scene/query order are retained without sel
 
 ![Transfer](figures/transfer.png)
 
+Transfer paired contrasts are chirp−raw+0.391pp[0,0.817], attention−concat+0.639pp[-0.391,1.598], attention−disabled−0.604pp[-1.527,0.178], and attention−acoustic−0.497pp[-1.101,0.036]. Thus these results do not establish a robust attention advantage.
+
 The frozen embedding remains the strongest new ray arm by mean, but below samecandidate visual+cosine and far below B2+GEOQ. The full strong-baseline gap is retained, not presented as a successful framework replacement. Transfer here is predictor-fit scene exclusion, not an independent untouched benchmark. No full-bank Transfer claim is made: the frozen Transfer protocol specifies fixedcandidate evaluation.
 
 ## Failures, corrections and preservation
@@ -133,7 +141,7 @@ The frozen embedding remains the strongest new ray arm by mean, but below sameca
 
 ## Reproducibility and unresolved limits
 
-All228checkpoints and1542stored prediction arrays replay exactly(max absolute error0), with matching receipt hashes, disjoint fit/held IDs and matching query IDs. Uniform Phase4 matches primary metrics exactly across1152comparisons; vectorized Spearman and pair scoring agree with independent implementations within2.23e-16. This verifies saved inference, not independent retraining. Source dependencies, container and local input hashes must accompany reproduction; caches/checkpoints are not uploaded. Clean-clone reproducibility without historical assets is not claimed.
+All228checkpoints and1542stored prediction arrays replay exactly(max absolute error0), with matching receipt hashes, disjoint fit/held IDs and matching query IDs. Uniform Phase4 matches primary metrics exactly across1152comparisons; vectorized Spearman and pair scoring agree with independent implementations within2.23e-16. An additional528checks recomputed every inner model normalization, OOF residual scale and held coverage; all matched exactly and excluded outer-held scenes. This verifies saved inference and calibration bookkeeping, not independent retraining. Source dependencies, container and local input hashes must accompany reproduction; caches/checkpoints are not uploaded. Clean-clone reproducibility without historical assets is not claimed.
 
 Results apply to simulated HSSD6channel RIRs, pooled STFT/frozen vision and these budgets. They do not establish real-world, furniture/material/device shift robustness, the full AVLoc Laplace/router method, or Track B performance. Reused cohorts and multiple exploratory comparisons constrain evidence level. Next informative research should target calibrated query/direction reliability and ray-prediction errors that alter pose ordering, rather than assuming more rays, chirp or attention will help. A new independent scene protocol is required before promoting conclusions.
 

@@ -10,7 +10,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "df5f1087c525a531681f9ee6698bcb42e4d8f5ce9d89e57056a132fc714dda13",
+      "sha256": "7f41a622cf90d5d9ea7f7526cdbe8b4c2b024d4ba36da5489e4e9ec42ebcc2ef",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/RESEARCH_REPORT.md"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "git_copy": "REPRODUCE.md",
-      "sha256": "f1223881b4a29b65168cc6528d0354329b28fa7a58030d48aed98c7a6623aa5e",
+      "sha256": "d2d9485f3b9396805b8126c46bebb944f2dcff280f87882d40f3d5cf5b49febd",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/REPRODUCE.md"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "git_copy": "extension_analysis.json",
-      "sha256": "3cfaaef3a94df73f0347e25acefae04d31290623d4b7e245228201f31b7038b9",
+      "sha256": "03e5c190bfeab8df30993f0ef7827af89ba4ebc1cfd4f13dd007f01cff1790b6",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/extension_analysis.json"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "git_copy": "source_inventory.json",
-      "sha256": "19013f2c654e617968fee25f620a253f38ae69518b2a7075042ce68ef8f1a623",
+      "sha256": "1a145a478482a5f0599b3e737f14a46173cb34ca5b01eb64b40a345b62b0a182",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/source_inventory.json"
     },
     {
@@ -127,6 +127,21 @@
       "git_copy": "prior_preservation.json",
       "sha256": "def285ae4b2047bf372ea0a78167a2998fea77e4a8f2d94a61afb2d6f7adb358",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/prior_preservation.json"
+    },
+    {
+      "git_copy": "calibration_verification.json",
+      "sha256": "00a0ca8c53af8380f53faa1c1920d9fa221c00eedc7743165545bb6d7434d827",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/calibration_verification.json"
+    },
+    {
+      "git_copy": "input_verification.json",
+      "sha256": "74cdce032295d27e7023820c4062bd14906d4c5e4d8d164678feec5ec216fece",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/input_verification.json"
+    },
+    {
+      "git_copy": "remaining_analysis.json",
+      "sha256": "764f46f3aa05cc9bcc478dc97d325708368b6328821b8adf60cb25aa93f39883",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/remaining_analysis.json"
     },
     {
       "git_copy": "figures/acoustic_representation.png",
@@ -160,7 +175,7 @@
     },
     {
       "git_copy": "figures/transfer.png",
-      "sha256": "00192160bcd675cddd9e9a237672d17482f1facf6615855079aaadda445df65a",
+      "sha256": "a4e0d019751b3b3cc2402e1901e908663395e04b79355368ab72f84fb26eac17",
       "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/transfer.png"
     },
     {

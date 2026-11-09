@@ -1,0 +1,10 @@
+{
+  "calibration_blocks": 24,
+  "inner_models": 48,
+  "checks": 528,
+  "normalization_fit_only": true,
+  "inner_validation_exactly_partitions_outer_fit": true,
+  "outer_held_excluded": true,
+  "recomputed_scales_exact": true,
+  "coverage_max_error": 0.0
+}
