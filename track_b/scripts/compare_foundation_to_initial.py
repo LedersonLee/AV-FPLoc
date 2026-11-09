@@ -20,6 +20,6 @@ def main():
    for metric in ['joint','fine','raw20','nll']:
     d=np.array([np.mean([r[metric]-control[r['seed'],r['scene'],r['query']][metric] for r in normal if r['scene']==s]) for s in rp['scene_ids']]);scale=1 if metric=='nll' else 100
     b=d[rng.integers(len(d),size=(10000,len(d)))].mean(1)*scale
-    result.append(dict(mode=mode,control=label,metric=metric,delta=float(d.mean()*scale),ci95=np.quantile(b,[.025,.975]).tolist(),units='nats' if metric=='nll' else 'percentage points',sampling='six paired scenes, seeds averaged'))
+    result.append(dict(mode=mode,control=label,metric=metric,delta=float(d.mean()*scale),ci95=np.quantile(b,[.025,.975]).tolist(),units='nats' if metric=='nll' else 'percentage points',sampling=f'{len(d)} paired scenes, seeds averaged'))
  (a.out/'paired.json').write_text(json.dumps(result,indent=2));print(json.dumps(result));print('COMPLETE')
 if __name__=='__main__':main()
