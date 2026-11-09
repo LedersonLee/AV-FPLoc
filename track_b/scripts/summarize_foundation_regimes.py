@@ -1,12 +1,13 @@
 """Require all27 matched fits before comparing encoder update boundaries."""
-import argparse,json,hashlib
+import argparse,json,hashlib,csv
 from pathlib import Path
 import numpy as np
 import torch
 
 def read(p):return json.loads(p.read_text())
 def main():
- p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--joint-registry',type=Path,required=True);a=p.parse_args()
+ registry={r['run_id']:r for r in csv.DictReader(a.joint_registry.open())};assert len(registry)==9
  paths={r:a.root/('foundation_matched_v1' if r=='joint' else f'foundation_{r}_v1') for r in ['joint','frozen','partial']}
  for path in paths.values():assert len(read(path/'summary.json'))==9,'Await all scheduled fits'
  a.out.mkdir(parents=True,exist_ok=False);allrows=[];validation=[];summary=[]
@@ -25,7 +26,17 @@ def main():
      active=set(rec['active_parameters']);frozen=[k for k in init if k not in active]
      assert all(torch.equal(init[k],state[k]) for k in frozen),'Frozen tensors differ after full fitting'
     else:frozen=[]
-    validation.append(dict(regime=regime,mode=mode,seed=seed,initial_equal=True,frozen_tensors_checked=len(frozen),execution_code_sha=rec['execution_code_sha'],checkpoint_sha256=hashlib.sha256((path/f'{mode}_{seed}.pt').read_bytes()).hexdigest()))
+    digest=hashlib.sha256((path/f'{mode}_{seed}.pt').read_bytes()).hexdigest()
+    if regime=='joint':
+     historical=registry[f'{mode}_{seed}'];assert historical['checkpoint_sha256']==digest and historical['encoder_regime']=='joint' and int(historical['train_steps'])==1000
+     source=historical['git_commit'];assert rec.get('execution_code_sha',source)==source
+    else:source=rec['execution_code_sha']
+    assert len(source)==40
+    reference_rows=read(paths['joint']/f'{mode}_{seed}.json')['val']['rows']
+    keys=lambda rows:[(r['scene'],r['query'],r['arm']) for r in rows]
+    assert len(keys(rec['val']['rows']))==len(set(keys(rec['val']['rows'])))==1152
+    assert set(keys(rec['val']['rows']))==set(keys(reference_rows))
+    validation.append(dict(regime=regime,mode=mode,seed=seed,initial_equal=True,frozen_tensors_checked=len(frozen),execution_code_sha=source,checkpoint_sha256=digest,trainable_parameters=rec.get('trainable_parameters',rec['parameters']),training_seconds=rec['training_seconds'],peak_vram_bytes=rec['peak_vram_bytes']))
     for arm,metrics in rec['val']['summary'].items():summary.append(dict(regime=regime,mode=mode,seed=seed,arm=arm,**metrics))
     allrows.extend([dict(regime=regime,mode=mode,seed=seed,**r) for r in rec['val']['rows']])
  rng=np.random.default_rng(20261109);paired=[];scenes=base['data']['scenes']['val']
@@ -36,5 +47,6 @@ def main():
      d=np.array([np.mean([r[metric] for r in allrows if r['regime']==left and r['mode']==mode and r['arm']==arm and r['scene']==s])-np.mean([r[metric] for r in allrows if r['regime']==right and r['mode']==mode and r['arm']==arm and r['scene']==s]) for s in scenes]);scale=1 if metric=='nll' else 100;b=d[rng.integers(len(d),size=(10000,len(d)))].mean(1)*scale
      paired.append(dict(mode=mode,left=left,right=right,arm=arm,metric=metric,delta=float(d.mean()*scale),ci95=np.quantile(b,[.025,.975]).tolist(),units='nats' if metric=='nll' else 'pp',unit='scene, seeds averaged'))
  for name,obj in [('per_seed',summary),('validation',validation),('paired',paired)]:(a.out/f'{name}.json').write_text(json.dumps(obj,indent=2))
+ (a.out/'provenance.json').write_text(json.dumps(dict(joint_registry_sha256=hashlib.sha256(a.joint_registry.read_bytes()).hexdigest(),registry_source='Historical checkpoint-keyed code provenance; missing legacy record field is not inferred from current HEAD',fits=len(validation)),indent=2))
  print('COMPLETE',flush=True)
 if __name__=='__main__':main()
