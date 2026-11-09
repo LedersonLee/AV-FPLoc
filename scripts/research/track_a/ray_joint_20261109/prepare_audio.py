@@ -20,9 +20,9 @@ def main():
   if (dest/'receipt.json').exists():receipts.append(json.loads((dest/'receipt.json').read_text()));continue
   start=time.time();o=np.load(OLD/'data'/sid/'observations.npz');entry=entries[sid];assert entry['split']=='train';schedule=R/entry['observation_schedule_path'];assert sha(schedule)==entry['observation_schedule_sha256'];q={v['sample_index']:v for v in json.loads(schedule.read_text())['queries']};rows={k:[] for k in ['ecn','embedding','raw','chirp','permuted','isotropic','sorted']};sources=[];es=[];cs=[];ns=[]
   for qid in o['query_ids']:
-   item=q[int(qid)];path=R/item['observed_rir_path'];raw=np.load(path).astype(float);assert raw.shape[0]==6 and raw.shape[1]>=4800;raw=np.roll(raw[:,:4800],item['channel_roll'],axis=0);assert item['channel_roll']==recipe(item['world_yaw_deg'])[1];e,c=extract(raw,config);n=envelope(raw);es.append(e);cs.append(c);ns.append(n);rows['ecn'].append(compressed(e,c,n));echo=signal.fftconvolve(raw,chirp[None],mode='full',axes=-1)[:,:4800];order=np.argsort((raw[:,103:]**2).sum(-1),kind='stable')
+   item=q[int(qid)];path=R/item['observed_rir_path'];raw=np.load(path).astype(float);assert raw.shape[0]==6 and raw.shape[1]>=359;original_samples=raw.shape[1];raw=np.pad(raw,((0,0),(0,max(0,4800-raw.shape[1]))));raw=np.roll(raw[:,:4800],item['channel_roll'],axis=0);assert item['channel_roll']==recipe(item['world_yaw_deg'])[1];e,c=extract(raw,config);n=envelope(raw);es.append(e);cs.append(c);ns.append(n);rows['ecn'].append(compressed(e,c,n));echo=signal.fftconvolve(raw,chirp[None],mode='full',axes=-1)[:,:4800];order=np.argsort((raw[:,103:]**2).sum(-1),kind='stable')
    for name,arr in [('raw',raw),('chirp',echo),('permuted',raw[[0,2,4,1,5,3]]),('isotropic',np.repeat(raw.mean(0,keepdims=True),6,axis=0)),('sorted',raw[order])]:rows[name].append(tokens(arr))
-   sources.append(dict(query_id=int(qid),sha256=sha(path),path=str(path),roll=item['channel_roll']))
+   sources.append(dict(query_id=int(qid),sha256=sha(path),path=str(path),roll=item['channel_roll'],original_samples=original_samples,zero_tail_samples=max(0,4800-original_samples)))
   with torch.inference_mode():
    for first in range(0,128,32):
     vals=[torch.tensor(np.array(v[first:first+32]),dtype=torch.float32,device='cuda') for v in [es,cs,ns]];rows['embedding'].extend(model(*vals).cpu().numpy())
