@@ -6,10 +6,10 @@ from oracle_capacity import represent
 from candidate_conditioned import pair_score
 from joint_models import JointRay
 sys.path.insert(0,'/workspace/experiments/directional_structure_20261109')
-from discrimination import standard,pairmask,measures
+from discrimination import standard,pairmask,measures,coarse
 P=Path('/output');PREV=Path('/workspace/experiments/directional_structure_20261109');OLD=Path('/workspace/experiments/directional_tribranch_20261109');PR=json.loads((P/'PROTOCOL.json').read_text())
 def load(s):
- z=dict(np.load(PREV/'candidates'/s/'pure_visual.npz'));z['v']=standard(z['vs']);z['a']=standard(z['acs']);z['geom']=np.log1p(represent(z['geometry'],'raw36'));return z
+ z=dict(np.load(PREV/'candidates'/s/'pure_visual.npz'));z['v']=standard(z['vs']);z['a']=standard(z['acs']);z['geom']=np.log1p(coarse(z['geometry']));return z
 
 def main():
  torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.2);freeze=json.loads((P/'transfer_frozen.json').read_text());assert len(freeze['models'])==18;fit=[load(s) for s in PR['training_scenes']];off=~np.eye(20,dtype=bool);cut=float(np.quantile(np.concatenate([abs(z['v'][:,:,None]-z['v'][:,None,:])[:,off].ravel() for z in fit]),1/3));highcut=float(np.quantile(np.concatenate([np.sort(z['v'],axis=1)[:,-1]-np.sort(z['v'],axis=1)[:,-2] for z in fit]),1/3));rows=[];baselines=[];rays=[]
@@ -22,7 +22,7 @@ def main():
   err=np.concatenate(errors);sigma=err.mean(0).clip(.02);q90=np.quantile(err,.9,axis=0);weights=1/sigma;weights/=weights.sum()
   if group=='joint' and kind=='attention':ck=torch.load(root/'model.pt',map_location='cpu',weights_only=False);model=JointRay(kind).cuda().eval();model.load_state_dict(ck['state'])
   for sid in PR['transfer_scenes']:
-   z=load(sid);g=z['geom'];pred=np.load(root/f'{sid}.npz');np.testing.assert_array_equal(pred['query_ids'],z['query_ids']);p=pred['prediction'];o=np.load(OLD/'data'/sid/'observations.npz');y=represent(o['target'],'raw36');e=abs(p-np.log1p(y));rays.append(dict(scene=sid,seed=seed,group=group,kind=kind,mae=float(abs(np.clip(np.expm1(p),0,10)-y).mean()),interval90_coverage=float((e<=q90).mean()),actual_log_error=float(e.mean()),predicted_log_error=float(sigma.mean())));sv=np.sort(z['v'],axis=1);mask=pairmask(z,cut);high=sv[:,-1]-sv[:,-2]<=highcut;scores=dict(uniform=-abs(g-p[:,None]).mean(-1));controls={'matched':p}
+   z=load(sid);g=np.log1p(represent(z['geometry'],'raw36'));pred=np.load(root/f'{sid}.npz');np.testing.assert_array_equal(pred['query_ids'],z['query_ids']);p=pred['prediction'];o=np.load(OLD/'data'/sid/'observations.npz');y=represent(o['target'],'raw36');e=abs(p-np.log1p(y));rays.append(dict(scene=sid,seed=seed,group=group,kind=kind,mae=float(abs(np.clip(np.expm1(p),0,10)-y).mean()),interval90_coverage=float((e<=q90).mean()),actual_log_error=float(e.mean()),predicted_log_error=float(sigma.mean())));sv=np.sort(z['v'],axis=1);mask=pairmask(z,cut);high=sv[:,-1]-sv[:,-2]<=highcut;scores=dict(uniform=-abs(g-p[:,None]).mean(-1));controls={'matched':p}
    if (group=='acoustic' and kind in ['raw','chirp','embedding']) or (group=='joint' and kind=='attention'):
     donor=np.roll(p,17,axis=0)
     if group=='joint':
