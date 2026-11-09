@@ -6,7 +6,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "1c9282fba5bed3850c3c760bd2f8727d3d2d118c9f6d67f1c8418a7669c341bc"
+      "sha256": "f9a073e2102c2128bb0be5a85fd27b08e45a74a712acd39fc193da567e226af6"
     },
     {
       "git_copy": "cache_protocol.json",
@@ -129,8 +129,28 @@
       "sha256": "69f360fa269d413402810632caf0a7a916d7032908ad4dc687feb68f2c1ed917"
     },
     {
+      "git_copy": "second_cell_evaluation_protocol.json",
+      "sha256": "4e42d1b80fc4c7fbfe491674114118aab589c85b7ab27af4a05e87cb9128bf59"
+    },
+    {
+      "git_copy": "second_cell_paired_results.json",
+      "sha256": "b0664818ec76960a2816b5dea835a4311e14005f68cdcd0efd505555abe7602d"
+    },
+    {
+      "git_copy": "second_cell_results.md",
+      "sha256": "5ef0054d1959a993a6d43e1bc865856b631104a90a806a12adb5b58e2d6ec8b0"
+    },
+    {
+      "git_copy": "second_cell_stratified_results.json",
+      "sha256": "89caf545a57e76f4fdd9110513ac64276e1b651bb0d4e72b0a33c5aba2044abf"
+    },
+    {
       "git_copy": "second_cell_validation.json",
       "sha256": "4209c3882e3384e6f66daa6e4e965e443c97e9bce98521d17627d9ca492ff8ce"
+    },
+    {
+      "git_copy": "second_cell_validation_results.json",
+      "sha256": "bdbed93c288c5fbbdf90835d1cc5130aee73faaf527f910dafc664c4fbdcde11"
     },
     {
       "git_copy": "subset_aux_smoke_v1_protocol.json",
@@ -178,7 +198,7 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "add6f62102d54912b39c372d00ff40ce928d72204b9471ef0b317f87dfcfb253"
+      "sha256": "09872cc23db9d15ca44080127ff08f8035fbe3b48db95c246bd746706cd53448"
     }
   ],
   "cache_verifier_sha": "04bbb38937c07a3f358c2ff1771f87e8c8482855",
@@ -198,5 +218,6 @@
   "uniform_prior_source_sha": "99b8cddfd70e279f6e1a011e62ba98bae2c4f633",
   "uniform_prior_registration_sha": "e8bbb00cdfe2d37cf06b9d426bc53cce9da73540",
   "map_duplicate_audit_source_sha": "d268cab16c74beed65f2f53bea0913d93ab5405b",
-  "second_cell_evaluation_execution_source_ref": "d7578fb3d3927305f25adb251c9a7941fdc6def5"
+  "second_cell_evaluation_execution_source_ref": "d7578fb3d3927305f25adb251c9a7941fdc6def5",
+  "second_cell_registration_execution_ref": "175e5d1a6fb89a630619ac1e86bbb3ae424928ca"
 }

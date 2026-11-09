@@ -63,6 +63,9 @@
   "second_scaling_cell_completed_fits": 9,
   "second_scaling_cell_verification_exit_code": 0,
   "second_scaling_cell_evaluation_session": 58704,
-  "second_scaling_cell_evaluation_status": "running",
-  "expanded112_train_fits_started": true
+  "second_scaling_cell_evaluation_status": "completed and verified",
+  "expanded112_train_fits_started": true,
+  "second_scaling_cell_evaluation_exit_code": 0,
+  "second_scaling_cell_registration_exit_code": 0,
+  "second_scaling_cell_records": 14592
 }
