@@ -60,11 +60,20 @@ def main():
         expected_groups={(arm,m,'primary') for arm in ['U0','U1','U2','U3','U4'] for m in ['visual','acoustic','fixed']}
         if condition=='normal':expected_groups|={(arm,m,'original_scales') for arm in ['U1','U2','U3','U4'] for m in ['visual','acoustic','fixed']}
         assert set(groups)==expected_groups
+        saved_summary=read(r/'summary.json')
+        saved={(x['arm'],x['method'],x['policy']):x for x in saved_summary}
+        assert len(saved)==len(saved_summary) and set(saved)==expected_groups
         for key,rr in groups.items():
             kk={(x['seed'],x['scene'],x['query']) for x in rr};assert len(rr)==len(kk)==3648
             if cohort is None:cohort=kk
             assert kk==cohort and all(sum(x['scene']==s and x['seed']==seed for x in rr)==64 for s in scenes for seed in [42,43,44])
-            summaries.append(dict(condition=condition,arm=key[0],method=key[1],policy=key[2],queries=len(rr),**{m:float(np.mean([x[m] for x in rr])) for m in METRICS},reliability=reliability_statistics(rr)))
+            means={m:float(np.mean([x[m] for x in rr])) for m in METRICS}
+            reliability=reliability_statistics(rr)
+            assert saved[key]['queries']==len(rr)
+            for metric,value in means.items():
+                assert np.isfinite(value) and abs(value-saved[key]['mean'][metric])<1e-9,(condition,key,metric)
+            assert reliability==saved[key]['reliability'],(condition,key,'reliability replay')
+            summaries.append(dict(condition=condition,arm=key[0],method=key[1],policy=key[2],queries=len(rr),**means,reliability=reliability))
         if condition=='normal':
             normal_groups=groups
             for arm in ['U1','U2','U3','U4']:
