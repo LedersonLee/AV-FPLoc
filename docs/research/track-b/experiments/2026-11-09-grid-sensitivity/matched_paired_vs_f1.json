@@ -1,0 +1,1172 @@
+[
+  {
+    "mode": "attention",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.118055555555556,
+    "ci95": [
+      -10.590277777777779,
+      -3.6458333333333335
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.4756944444444446,
+    "ci95": [
+      -2.2569444444444446,
+      -0.6944444444444445
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -12.065972222222223,
+    "ci95": [
+      -15.190972222222223,
+      -9.54861111111111
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.725694444444445,
+    "ci95": [
+      -9.635416666666668,
+      -5.815972222222221
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.36149934886230367,
+    "ci95": [
+      -0.38666022279196316,
+      -0.33680767317612964
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.465277777777778,
+    "ci95": [
+      -9.895833333333332,
+      -4.947916666666666
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.996527777777778,
+    "ci95": [
+      -2.604166666666667,
+      -1.3888888888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.197916666666668,
+    "ci95": [
+      -13.802083333333334,
+      -8.680555555555554
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.246527777777777,
+    "ci95": [
+      -9.98263888888889,
+      -6.597222222222222
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3616664678686195,
+    "ci95": [
+      -0.38420358589953846,
+      -0.33037713625364834
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -6.770833333333334,
+    "ci95": [
+      -8.333333333333332,
+      -5.121527777777779
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.5208333333333333,
+    "ci95": [
+      -1.2152777777777777,
+      -0.08680555555555555
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.979166666666668,
+    "ci95": [
+      -13.975694444444445,
+      -9.982638888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.680555555555557,
+    "ci95": [
+      -11.371527777777777,
+      -6.421440972222253
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.342136691013972,
+    "ci95": [
+      -0.3860965259373188,
+      -0.2922809359927972
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.03125,
+    "ci95": [
+      -8.76736111111111,
+      -5.208333333333334
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.954861111111111,
+    "ci95": [
+      -1.9097222222222223,
+      0.17361111111111113
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.54513888888889,
+    "ci95": [
+      -13.020833333333334,
+      -10.15625
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.159722222222223,
+    "ci95": [
+      -12.413194444444446,
+      -4.600694444444445
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.34149827270044225,
+    "ci95": [
+      -0.3660124287837081,
+      -0.3135566247834099
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -6.857638888888888,
+    "ci95": [
+      -10.069444444444443,
+      -3.6458333333333335
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.2152777777777777,
+    "ci95": [
+      -2.1701388888888884,
+      -0.3472222222222222
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -10.069444444444446,
+    "ci95": [
+      -12.847222222222223,
+      -7.291666666666667
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -6.857638888888888,
+    "ci95": [
+      -8.506944444444443,
+      -5.381944444444444
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3728274690608184,
+    "ci95": [
+      -0.3935134042468336,
+      -0.35195890027615756
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.031250000000002,
+    "ci95": [
+      -10.416666666666668,
+      -3.6458333333333335
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.4756944444444446,
+    "ci95": [
+      -2.2569444444444446,
+      -0.6944444444444444
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -12.239583333333332,
+    "ci95": [
+      -15.538194444444443,
+      -9.722222222222221
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.552083333333333,
+    "ci95": [
+      -9.461805555555557,
+      -5.642361111111112
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "attention",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3537111187146769,
+    "ci95": [
+      -0.38002801810701686,
+      -0.32722702167100376
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -5.642361111111111,
+    "ci95": [
+      -8.595920138888888,
+      -2.864583333333333
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.8680555555555556,
+    "ci95": [
+      -1.3888888888888888,
+      -0.3472222222222222
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.979166666666664,
+    "ci95": [
+      -14.756944444444445,
+      -9.895833333333332
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.8125,
+    "ci95": [
+      -9.201388888888888,
+      -6.857638888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.35015036207106376,
+    "ci95": [
+      -0.36739284669359523,
+      -0.33430349831986755
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -6.336805555555556,
+    "ci95": [
+      -8.854166666666668,
+      -3.732638888888889
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -2.083333333333333,
+    "ci95": [
+      -2.604166666666667,
+      -1.5625
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -12.326388888888888,
+    "ci95": [
+      -14.062499999999996,
+      -10.76388888888889
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.552083333333333,
+    "ci95": [
+      -9.461805555555557,
+      -5.815972222222221
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3531252381702264,
+    "ci95": [
+      -0.36951428072320097,
+      -0.3272548168897629
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.03125,
+    "ci95": [
+      -9.98263888888889,
+      -4.340277777777777
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.34722222222222227,
+    "ci95": [
+      -1.3888888888888888,
+      0.43402777777777773
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -10.329861111111112,
+    "ci95": [
+      -11.805555555555557,
+      -8.76736111111111
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.031250000000002,
+    "ci95": [
+      -9.114583333333332,
+      -5.46875
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3269063267442915,
+    "ci95": [
+      -0.36086953017446727,
+      -0.2867080308496952
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -5.902777777777779,
+    "ci95": [
+      -6.944444444444445,
+      -4.947916666666666
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.8680555555555556,
+    "ci95": [
+      -1.6493055555555556,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -9.461805555555554,
+    "ci95": [
+      -12.239583333333332,
+      -6.770833333333333
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -6.423611111111111,
+    "ci95": [
+      -8.76736111111111,
+      -4.340277777777777
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.33478546390930813,
+    "ci95": [
+      -0.35037748060292667,
+      -0.3141921820739905
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -6.076388888888888,
+    "ci95": [
+      -8.854166666666668,
+      -3.3854166666666665
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.8680555555555555,
+    "ci95": [
+      -1.3020833333333335,
+      -0.43402777777777773
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -10.677083333333332,
+    "ci95": [
+      -13.020833333333334,
+      -8.940972222222221
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.378472222222222,
+    "ci95": [
+      -9.375,
+      -6.076388888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3613964964946111,
+    "ci95": [
+      -0.38022300104300183,
+      -0.34601338787211305
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -5.729166666666666,
+    "ci95": [
+      -8.59375,
+      -2.9513888888888893
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.78125,
+    "ci95": [
+      -1.2152777777777777,
+      -0.3472222222222222
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.979166666666664,
+    "ci95": [
+      -14.756944444444443,
+      -9.895833333333332
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.8125,
+    "ci95": [
+      -9.201388888888888,
+      -6.857638888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "concat",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.33980059706502486,
+    "ci95": [
+      -0.3587039187757506,
+      -0.3215533416304323
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -8.333333333333332,
+    "ci95": [
+      -9.895833333333332,
+      -6.770833333333333
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.2152777777777777,
+    "ci95": [
+      -1.9097222222222223,
+      -0.6076388888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -13.45486111111111,
+    "ci95": [
+      -14.843749999999996,
+      -12.5
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.420138888888888,
+    "ci95": [
+      -10.416666666666668,
+      -6.163194444444445
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "baseline",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.379003681242466,
+    "ci95": [
+      -0.40091371287902194,
+      -0.35875321138236255
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.725694444444445,
+    "ci95": [
+      -9.027777777777779,
+      -6.423611111111112
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.7361111111111112,
+    "ci95": [
+      -2.1701388888888893,
+      -1.3888888888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -14.84375,
+    "ci95": [
+      -17.447916666666664,
+      -12.239583333333332
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.899305555555554,
+    "ci95": [
+      -10.590277777777777,
+      -5.555555555555555
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy020",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.37942124033967656,
+    "ci95": [
+      -0.4026773305920263,
+      -0.3518567966918151
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -9.722222222222223,
+    "ci95": [
+      -12.239583333333332,
+      -7.204861111111111
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -0.954861111111111,
+    "ci95": [
+      -2.3437499999999996,
+      0.0
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -12.586805555555557,
+    "ci95": [
+      -14.409722222222223,
+      -10.416666666666668
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.420138888888888,
+    "ci95": [
+      -10.677083333333332,
+      -6.25
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "xy050",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.35769159057074124,
+    "ci95": [
+      -0.3985701232320733,
+      -0.31247007764048046
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -9.288194444444446,
+    "ci95": [
+      -11.197916666666668,
+      -7.291666666666667
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.215277777777778,
+    "ci95": [
+      -1.9097222222222223,
+      -0.5208333333333333
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -11.805555555555554,
+    "ci95": [
+      -13.28125,
+      -9.98263888888889
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.59375,
+    "ci95": [
+      -11.631944444444443,
+      -5.729166666666666
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw12",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3595944332579772,
+    "ci95": [
+      -0.3834320083260536,
+      -0.3352132298880153
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -7.899305555555555,
+    "ci95": [
+      -9.982638888888888,
+      -5.815972222222223
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.0416666666666665,
+    "ci95": [
+      -1.7361111111111112,
+      -0.43402777777777773
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -12.413194444444443,
+    "ci95": [
+      -14.845920138888891,
+      -10.15625
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -7.8125,
+    "ci95": [
+      -10.243055555555554,
+      -5.208333333333334
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "yaw72",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.3915239146186246,
+    "ci95": [
+      -0.415751484533151,
+      -0.37619088631537223
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "joint",
+    "delta": -8.506944444444443,
+    "ci95": [
+      -10.15625,
+      -6.857638888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "fine",
+    "delta": -1.2152777777777777,
+    "ci95": [
+      -1.9097222222222223,
+      -0.6076388888888888
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "raw20",
+    "delta": -13.45486111111111,
+    "ci95": [
+      -14.843749999999996,
+      -12.5
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "diverse20",
+    "delta": -8.333333333333332,
+    "ci95": [
+      -10.416666666666668,
+      -6.163194444444444
+    ],
+    "units": "pp",
+    "unit": "scene; seeds averaged"
+  },
+  {
+    "mode": "separable",
+    "variant": "eroded010",
+    "control": "fixed independent F1",
+    "metric": "nll",
+    "delta": -0.36982431386907894,
+    "ci95": [
+      -0.39406917823685544,
+      -0.3474440222813024
+    ],
+    "units": "nats",
+    "unit": "scene; seeds averaged"
+  }
+]

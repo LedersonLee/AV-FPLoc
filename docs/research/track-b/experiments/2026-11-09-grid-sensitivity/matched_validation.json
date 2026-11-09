@@ -1,0 +1,7 @@
+{
+  "cases": 20736,
+  "normal_replay_cases": 3456,
+  "normal_replay_mismatches": 0,
+  "reference_query_keys_equal": true,
+  "reference_protocol_sha256": "82de465c738fb3ba998f45d1a383075dfc1b1336672301db56187adc79e48aed"
+}

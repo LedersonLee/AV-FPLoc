@@ -1,0 +1,75 @@
+{
+  "code_sha": "09fddf31d86c02f61551beb68678ed8721f25fbf",
+  "grid_protocol": {
+    "variants": [
+      [
+        "baseline",
+        0.25,
+        36,
+        0.0
+      ],
+      [
+        "xy020",
+        0.2,
+        36,
+        0.0
+      ],
+      [
+        "xy050",
+        0.5,
+        36,
+        0.0
+      ],
+      [
+        "yaw12",
+        0.25,
+        12,
+        0.0
+      ],
+      [
+        "yaw72",
+        0.25,
+        72,
+        0.0
+      ],
+      [
+        "eroded010",
+        0.25,
+        36,
+        0.1
+      ]
+    ],
+    "scenes": [
+      "108736611_177263226",
+      "108736635_177263256",
+      "105515448_173104512",
+      "108294783_176710410",
+      "108294624_176710203",
+      "102344457"
+    ],
+    "reference_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+    "construction": "Same native footprint; map-origin anchored grid; optional clearance>=0.1m validity only; ray geometry uses unmodified map",
+    "ray_bins": 16,
+    "max_range_m": 20,
+    "ray_step_m": 0.1,
+    "observations": "none used to construct candidates; original cache loaded only for baseline equality assertion",
+    "test_accessed": false
+  },
+  "training_protocol_sha256": "f4390204ede1d2f243b75b329c0a3b803bd0959d8cd3193e9c15c29fbbb192af",
+  "grid_manifest_sha256": "c043a4ee18adbf3235f9608ee7aa1feaf897837d38cf982cc477fd092ba96712",
+  "checkpoint_hashes": {
+    "attention_42": "88cd5514a935c3cf2ef7f404a58dd3bca494749fb732b03bbb18eadd3a61af40",
+    "attention_43": "4071f220038d163bc458aa7048827ee1356d3a9c2b51244ce8308528f960abba",
+    "attention_44": "2fc2b94b6c27560334fcd34d492226df327a0fa63691c51d55edeef939fcd2b1",
+    "concat_42": "975cea5c1af5a206749a672251d6a990d2a9a5fb3bd419253320fd50a48916c2",
+    "concat_43": "81d2700606e50424de13a076cfe314f7e58864c5f674d74a6c770c067499e9aa",
+    "concat_44": "3d4713a9b77389237fcbd3636f97eb42f0b0198d33e1b1cba3b4a4b221462901",
+    "separable_42": "593dba49ef195cf7b19689b1900423988070447c609022cb098223353036d27e",
+    "separable_43": "61272a9921ea9ba6e2ac920e903a4a47287a6a74d46a44d186a65648caf5a6ae",
+    "separable_44": "168b55e683ae73ad68e908405cbbb90566eb92c1fdd27628126e79bcdd06859a"
+  },
+  "observation_batch": 8,
+  "validity": "nearest raster cell in declared bank, never clamp/drop GT; all-query and valid-subset",
+  "evidence": "Exploratory reused development; all fixed conditions, no retraining/calibration/selection",
+  "test_accessed": false
+}

@@ -3,7 +3,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "de22ebf3c0b807be544149130877ac6582c97874c884608313a0cf88df726cef"
+      "sha256": "0ecb3f0d24d53c8925287d2ed07f90bc8c1dddd02676de0132e8555c88ec2377"
     },
     {
       "git_copy": "experiment_registry.csv",
@@ -50,6 +50,46 @@
       "sha256": "c043a4ee18adbf3235f9608ee7aa1feaf897837d38cf982cc477fd092ba96712"
     },
     {
+      "git_copy": "matched_baseline_replay_mismatches.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "git_copy": "matched_experiment_registry.csv",
+      "sha256": "a560246a441902cffc7b5b4e35023bb937c47345eaf434c7178ed30a927905fb"
+    },
+    {
+      "git_copy": "matched_external_hashes.json",
+      "sha256": "17dbfc965758deb8ccaadf2ad7e0d12aeebb306eb464452192c1642c8d418b64"
+    },
+    {
+      "git_copy": "matched_models.md",
+      "sha256": "8dd16cc341507f07ac71b2c9c33db400db9647760750245094828796956d3fad"
+    },
+    {
+      "git_copy": "matched_paired.json",
+      "sha256": "2734757d0100e27243d6cada22588ea118acd282518dd4d1470bbfb5e091a69d"
+    },
+    {
+      "git_copy": "matched_paired_vs_f1.json",
+      "sha256": "891f2c9af098d2e62659c1b7028aeab372b0559a5daf855f45c2dd601b25e43b"
+    },
+    {
+      "git_copy": "matched_protocol.json",
+      "sha256": "e91c356d848162dcad559c97ee246e73542d9d8a05f75e62266fdd0efed7f350"
+    },
+    {
+      "git_copy": "matched_reliability.json",
+      "sha256": "e9693cdba5d7e4010c45c29d82c121acf02467d668a1b9a6ff1be83aba256de4"
+    },
+    {
+      "git_copy": "matched_summary.json",
+      "sha256": "395e61139b38c6a3d82eb5e33e76e8a3434b376981729264ee40cca0ce026f74"
+    },
+    {
+      "git_copy": "matched_validation.json",
+      "sha256": "aaaf5af709f5d0b513938ef4a7fbb49ff678377735145e6a54a842a422ac0e76"
+    },
+    {
       "git_copy": "numerical_batching_control.json",
       "sha256": "53a125d57edd7c768114c66cf060dce97feabdfd69a98b13f1669287cd7a71f5"
     },
@@ -68,5 +108,7 @@
   ],
   "evaluation_source": "1f79b9d95e699cebd80374e09f69f3874522d532",
   "evaluation_v2_source": "6e6f3a5380b6b124ebfdb978b4c1978baad7c275",
-  "registry_source": "d82a1f9bba5390679d7088e9088034a5dcd16eaa"
+  "registry_source": "d82a1f9bba5390679d7088e9088034a5dcd16eaa",
+  "matched_evaluation_code_sha": "09fddf31d86c02f61551beb68678ed8721f25fbf",
+  "matched_registration_code_sha": "0016785503fb4463f0a3e926de6da5e21724a576"
 }

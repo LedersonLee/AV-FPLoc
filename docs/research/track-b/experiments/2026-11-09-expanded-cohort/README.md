@@ -1,6 +1,6 @@
 # Expanded development cohort and scene-residency preparation
 
-2026-11-09. Track B, Exploratory. Status: preflight complete;131-scene cache generation running; CPU scene-transfer implementation and three short fits complete. Strict bitwise equivalence check **failed and is retained**, with follow-up numeric diagnostics. No expanded-cohort training result or independent validation is claimed.
+2026-11-09. Track B, Exploratory. Status: preflight complete;131-scene structural cache generation/verification complete; expanded upstream visual feature extraction running; CPU scene-transfer implementation and three short fits complete. Strict bitwise equivalence check **failed and is retained**, with follow-up numeric diagnostics. No expanded-cohort training result or independent validation is claimed.
 
 ## Purpose and frozen dataset protocol
 
@@ -51,3 +51,9 @@ Cache: `python -m track_b.scripts.structure_cache --root /dataset --audit /audit
 Smokes: `python -m track_b.scripts.train_structure --cache /structure/cache --visual-cache /foundation/features_v1 --out <fresh-output> --modes visual --seeds 42 --aux-steps 1 --dense-steps 1 --aux-weight 1000 --fp-anchor-weight 1000 --scene-residency gpu` orcpu. Repeatgpu to a third directory. Check with `python -m track_b.scripts.check_scene_residency --root /results --out <new-json>` (observed exit1 preserved), then `python -m track_b.scripts.audit_residency_numerics --root /results --out <different-new-json>` (exit0 diagnostics). Existing GPU training ran concurrently; timings are not used to compare speed.
 
 All source paths and hashes remain linked by this study and the canonical RESEARCH_INDEX. No raw images/audio/spectra/weights are uploaded. Docs branchrefactor/hssd-two-branch-fusion. Clean-clone replay depends on external data/checkpoints. Overall research remains incomplete.
+
+## Structural cache completion (supersedes earlier live snapshot)
+
+The original cache job exited0. Verification source `04bbb38937c07a3f358c2ff1771f87e8c8482855` then exited0:131 distinct scenes,8,384 queries, all cached tensor/source metadata hashes and frozen query selection verified. All22 overlapping pilot scenes/1,408queries have exactly equal tensors and input manifests. Actual structural cache size8,998,272,856bytes. Observed-RIR sidecar hashes match input provenance; raw audio/RGB bytes were checked during construction and are not claimed reread by this verifier. completed_cache_validation.json and completed_cache_manifest.json preserve the results.
+
+Expanded visual-feature extraction started in session93487, externalfeatures_v1, using the same audited upstream checkpoint and per-image RGB hash checks. Code reference `4ef2221319d31beb113e316e1d2396e9e859b942` contains the unchanged extraction implementation; unrelated Track A commits were entering the shared checkout concurrently, so this reference identifies the source content rather than an exclusive Track B history. Source extraction file hash is recorded in provenance. Require all131 feature artifacts, query alignment and original22-scene feature comparisons before scaled fitting. No expanded model fit has started and no independent-Test claim follows.
