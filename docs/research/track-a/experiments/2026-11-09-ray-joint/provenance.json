@@ -1,0 +1,180 @@
+{
+  "study": "ray_joint_20261109",
+  "track": "A",
+  "status": "in progress; fullbank pending",
+  "files": [
+    {
+      "git_copy": "METHOD_AT_A_GLANCE.md",
+      "sha256": "b7c48f532368c246b954f8690b58dd1b1639f45127931a40538267911bb0e2ee",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/METHOD_AT_A_GLANCE.md"
+    },
+    {
+      "git_copy": "RESEARCH_REPORT.md",
+      "sha256": "df5f1087c525a531681f9ee6698bcb42e4d8f5ce9d89e57056a132fc714dda13",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/RESEARCH_REPORT.md"
+    },
+    {
+      "git_copy": "PHASE1_REPORT.md",
+      "sha256": "f9e4f70cb4ddbb80314cd317469f5d2577f4fb6453bcdd0deb574a6bb18e9eb8",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/PHASE1_REPORT.md"
+    },
+    {
+      "git_copy": "REPRODUCE.md",
+      "sha256": "f1223881b4a29b65168cc6528d0354329b28fa7a58030d48aed98c7a6623aa5e",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/REPRODUCE.md"
+    },
+    {
+      "git_copy": "PROTOCOL.json",
+      "sha256": "71f158e5187fa12c21769e76083721da1ac0cf5e0bc23878242ffbff39084892",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/PROTOCOL.json"
+    },
+    {
+      "git_copy": "LEARNING_PROTOCOL.md",
+      "sha256": "35b5eebc5842b1ca1a3d49d966c838cf2da80acf27ca2302e00fa2e516ce355e",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/LEARNING_PROTOCOL.md"
+    },
+    {
+      "git_copy": "JOINT_PROTOCOL.md",
+      "sha256": "c636ce44e3c75fe6df1dbbc5c1dd71295afee1fc4a8b493c5f587750fc91118f",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/JOINT_PROTOCOL.md"
+    },
+    {
+      "git_copy": "PHASE4_PROTOCOL.md",
+      "sha256": "f826f6fd802235517b23a49e667a2d87074351747103ef393978346779385f0d",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/PHASE4_PROTOCOL.md"
+    },
+    {
+      "git_copy": "OPTIMIZATION_FOLLOWUP.md",
+      "sha256": "9a7f7a89dd102bb84a6dfa4e31261726a16efaf0c48321922b8a83c7176f8818",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/OPTIMIZATION_FOLLOWUP.md"
+    },
+    {
+      "git_copy": "TRANSFER_PROTOCOL.md",
+      "sha256": "26f050f086d81c5901aa4a8e0ef9def33f15bcdf9db76208b4a7e40ed6bd9bd4",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/TRANSFER_PROTOCOL.md"
+    },
+    {
+      "git_copy": "FOV_LATE_PROTOCOL.md",
+      "sha256": "4091d8d538e4f404eeea8121f446545cb19f07b096a723a1aa791a3cd026f5ea",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/FOV_LATE_PROTOCOL.md"
+    },
+    {
+      "git_copy": "oracle_summary.json",
+      "sha256": "15c2e8c03397674d64c13bd483c1274e8b68ad5b80a6d4e5be58bc7bd0d34fcb",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/oracle_summary.json"
+    },
+    {
+      "git_copy": "analysis.json",
+      "sha256": "ee9195c1a67303b753dcc532b808f16426ccc21609936fc0c0a5af16699cb8fa",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/analysis.json"
+    },
+    {
+      "git_copy": "extension_analysis.json",
+      "sha256": "3cfaaef3a94df73f0347e25acefae04d31290623d4b7e245228201f31b7038b9",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/extension_analysis.json"
+    },
+    {
+      "git_copy": "followup_analysis.json",
+      "sha256": "34c290cf549b6234d5fd2f15dfb458a625b515dc90ad3a0848d32eac7d49045b",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/followup_analysis.json"
+    },
+    {
+      "git_copy": "architecture_verification.json",
+      "sha256": "0078da49469e1b0930177015dcc95c28c48eb62dd970d94c93113de1607aba99",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/architecture_verification.json"
+    },
+    {
+      "git_copy": "checkpoint_verification.json",
+      "sha256": "c4713ef29e2cbcd250bff8e436be67cf4c9f0e8abb7c299266e1d1393ea7e13c",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/checkpoint_verification.json"
+    },
+    {
+      "git_copy": "matching_verification.json",
+      "sha256": "a72aca6c80a3d81d3fcf02c4da7fd4e5d547b3c0aeb7b2f67b122ff19bf9e128",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/matching_verification.json"
+    },
+    {
+      "git_copy": "target_integrity.json",
+      "sha256": "c11d71c39f69a2b53a0b85c88fbb10467733760b35413936a31868dda319c802",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/target_integrity.json"
+    },
+    {
+      "git_copy": "case_examples.json",
+      "sha256": "0f1c48564af0697e1a263500b1f29678d3e12fb6e02477d1dbcf13b8889a8d8c",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/case_examples.json"
+    },
+    {
+      "git_copy": "environment.json",
+      "sha256": "93668939439ddd57b6fd8afeeed80c6d1384052a61923808e027a078d78cb020",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/environment.json"
+    },
+    {
+      "git_copy": "input_inventory.json",
+      "sha256": "ea3969699fdab778e7bb9809512856aca1d7ff07686e2d5222b2bc880e3d7669",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/input_inventory.json"
+    },
+    {
+      "git_copy": "source_inventory.json",
+      "sha256": "19013f2c654e617968fee25f620a253f38ae69518b2a7075042ce68ef8f1a623",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/source_inventory.json"
+    },
+    {
+      "git_copy": "execution_receipts.json",
+      "sha256": "a0cab6d6efb984363f7aabcb5446a5e4d07f6fba9b82703a44872e47b386c22a",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/execution_receipts.json"
+    },
+    {
+      "git_copy": "prior_preservation.json",
+      "sha256": "def285ae4b2047bf372ea0a78167a2998fea77e4a8f2d94a61afb2d6f7adb358",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/prior_preservation.json"
+    },
+    {
+      "git_copy": "figures/acoustic_representation.png",
+      "sha256": "80ad703b3169829b18bde0b31d13d99bb75943c3ec97e0f43e056176c1eda760",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/acoustic_representation.png"
+    },
+    {
+      "git_copy": "figures/calibration.png",
+      "sha256": "e43f2c7dfac19f16781b59ab15c472868b3205caad7b669cd65d3feb2c32be94",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/calibration.png"
+    },
+    {
+      "git_copy": "figures/joint_contrasts.png",
+      "sha256": "f35f5a5d9b72da16aa7da7b91f3e09bb7121484c16940cfc52bf781baaed96c0",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/joint_contrasts.png"
+    },
+    {
+      "git_copy": "figures/oracle_capacity.png",
+      "sha256": "1777d0074f8e14d9db21e60937c05a74200400ab34a6eb97a0ffb160b01f99e2",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/oracle_capacity.png"
+    },
+    {
+      "git_copy": "figures/pair_harm.png",
+      "sha256": "94ca40192d9ee37b386cd42b800871ef46974c43f4d925ec924d9f17ea7c85f3",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/pair_harm.png"
+    },
+    {
+      "git_copy": "figures/pair_repair.png",
+      "sha256": "d15c952791fb5c691c00818435b52d4dcd84701c6ab5757d338cb20ae6022b7e",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/pair_repair.png"
+    },
+    {
+      "git_copy": "figures/transfer.png",
+      "sha256": "00192160bcd675cddd9e9a237672d17482f1facf6615855079aaadda445df65a",
+      "source": "${WORKSPACE}/experiments/ray_joint_20261109/figures/transfer.png"
+    },
+    {
+      "git_copy": "README.md",
+      "sha256": "35ab60edb5d62f58dc5dcfb3ded0c65eec4a1d66acf87ee8e7ce3ba1139f7a89",
+      "source": "generated summary"
+    }
+  ],
+  "code": "See source_inventory.json and execution_receipts.json; docs commit is intentionally not self-referenced.",
+  "excluded": [
+    "weights",
+    "raw data",
+    "prediction arrays",
+    "raw logs",
+    "full attached manuscript/review"
+  ]
+}

@@ -59,3 +59,9 @@ Study 19 follow-up (2026-11-09): 24 fits completed, mixed/negative, Exploratory.
 [External primary-source reference review](track-b/external_reference_review.md): observation versus sequence and semantic-input differences recorded; full-paper/reproduction and broader audio novelty checks remain. Study22 first fixed-checkpoint grid evaluation preserved (superseded by completed v2 below), actual source `1f79b9d95e699cebd80374e09f69f3874522d532`.
 
 Study22 final F1 evaluation source `6e6f3a5380b6b124ebfdb978b4c1978baad7c275`; numerical first run preserved and final baseline replay has zero mismatches. Full Track B remains ongoing.
+
+## Track A 추가 연구 — ray_joint_20261109
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실험 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| Ray representation & joint learning / ray_joint_20261109 | 2026-11-09 | A | 진행 중:228checkpoint 재생·1542예측 배열 비트일치. 고정후보 chirp/attention 우위 미확정; FOV제한 late는 전방향 평균 손해를 줄이지만 acoustic-only 미개선. Fullbank 평가 진행 중. | Exploratory | [연구 보고서](track-a/experiments/2026-11-09-ray-joint/RESEARCH_REPORT.md) | 18f04ce (입력), 570df35 (결정성 수정), 338a449 (calibration), 6373431 (audio-only donor 수정), ff5601d (Transfer); 전체 실행 SHA·소스 해시는 해당 execution_receipts.json/source_inventory.json |

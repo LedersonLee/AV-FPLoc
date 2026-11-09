@@ -74,6 +74,14 @@ for model in ['acoustic/raw','acoustic/chirp','acoustic/embedding','joint/attent
 s+='''
 There is no clear fixedcandidate benefit from the proposed matching refinements. Geometry differences identify potentially informative directions, but not whether audio predicts those directions accurately. Selecting the largest geometric contrast can amplify prediction error; global residual weights may miss query-specific reliability. These are interpretations consistent with the negative result, not uniquely proven causes. Full-bank anchor selection is evaluated separately and must not be confused with all-pair Top20 Borda scoring.
 
+### Pair-selection case diagnostics
+
+The first repair and harm in protocol scene/query order are retained without selecting attractive examples. Scene102344250 query1229 changes3.9m error to0.1m; scene102816615 query1041 changes0m to1.72m and85degree yaw error. Selected directions for the two displayed choices are illustrative; the actual Borda rank uses all candidate pairs. They show why geometry contrast alone does not guarantee accurate acoustic evidence.
+
+![Repair](figures/pair_repair.png)
+
+![Harm](figures/pair_harm.png)
+
 ## Transfer11 (reused, teacher-exposed development)
 
 | Arm | Joint% | Fine% |

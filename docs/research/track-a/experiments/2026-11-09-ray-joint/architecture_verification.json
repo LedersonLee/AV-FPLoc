@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "joint_parameters": {
+    "vision": 42001,
+    "acoustic": 42001,
+    "concat": 42175,
+    "attention": 42001,
+    "disabled": 42001
+  },
+  "pool_equivalence": "exact CPU floating values on fixed16x16",
+  "unimodal_isolation": "other modality perturbation leaves output exactly unchanged",
+  "raw_chirp": "same RayModel CNN architecture",
+  "scope": "Architecture invariants only, not trained result validation"
+}

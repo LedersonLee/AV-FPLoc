@@ -1,0 +1,9 @@
+{
+  "uniform_metric_comparisons": 1152,
+  "uniform_max_error": 0.0,
+  "spearman_max_error": 2.220446049250313e-16,
+  "pair_score_max_error": 2.220446049250313e-16,
+  "anchor_equivalence_queries": 1536,
+  "anchor_score_scalar_checks": 64,
+  "scope": "Numerical metric and score checks; selection function accepts FP differences only. No retraining or Test access."
+}

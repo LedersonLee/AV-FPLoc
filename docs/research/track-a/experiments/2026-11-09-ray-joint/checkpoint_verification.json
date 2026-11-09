@@ -1,0 +1,2872 @@
+{
+  "checkpoints": 228,
+  "arrays": 1542,
+  "max_absolute_error": 0.0,
+  "split_disjoint": true,
+  "query_ids_equal": true,
+  "receipt_hashes_equal": true,
+  "records": [
+    {
+      "checkpoint": "acoustic/chirp_k12_seed42_fold0/model.pt",
+      "sha256": "c13900bcb31d74873882ccdef4a1d041f59af16eef4da067eb996e4ba16a9df4",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k12_seed42_fold1/model.pt",
+      "sha256": "87c114a72d4a945ddf976f1abb149cd3132ce97199338e3d02dc716339e82ee0",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k12_seed42_fold2/model.pt",
+      "sha256": "4dad518931ce2900a2f4c734d15fd8c7083fb71ea3e9f39130e4d1164a979957",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k12_seed43_fold0/model.pt",
+      "sha256": "5a3d8e84667b7b02d75d1c4063b81551bd6291eafdcb59d375027c804e11d306",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k12_seed43_fold1/model.pt",
+      "sha256": "a2cf49b97e0f9db297ef8d54928b37c350ed3c7bbdc0214f9b947750ae05d202",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k12_seed43_fold2/model.pt",
+      "sha256": "8e38166578c696b1326ad21897fd39ceb9eb74648ae619489b69ca867dfbb8e1",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed42_fold0/model.pt",
+      "sha256": "89b86725b16deb6961e59f472d3f385192282177772b4ac71c25fa8bbf795e29",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed42_fold1/model.pt",
+      "sha256": "7195ae19ddecdc289df1a258811a09c4a899223a59374576ab431a5be8eb5316",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed42_fold2/model.pt",
+      "sha256": "385159616820262eb164a3074ddc80a6f26ffb1be41d6f70ebce872fcf07398a",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed43_fold0/model.pt",
+      "sha256": "2c52431896cdcec3869c6063bc5092c2bbbec7d57c6bd84ed7623a444cd9ac73",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed43_fold1/model.pt",
+      "sha256": "4787a516250103f487d1f85150ab31ea863bb37162192526f1776c6d89a6ea03",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k36_seed43_fold2/model.pt",
+      "sha256": "6f37fd235d58daf9ec4ee2ad5b3ceceecab8e05caa2580a463ca3d5d41fcffb7",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed42_fold0/model.pt",
+      "sha256": "1b8a98aed915b9db7bbb2bf3f2cf24f758a0a95cf99a583ed10ed220e45e2bc1",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed42_fold1/model.pt",
+      "sha256": "a06d1c2baab561aefba54dd7d2e30b4a54c3a12e74dc92955d8c03fbd678f2f3",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed42_fold2/model.pt",
+      "sha256": "24e1e61ff5be43315afb4caa141ee47db6eddb3256c9d83a12bddab3640a6df4",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed43_fold0/model.pt",
+      "sha256": "240f2c2eb3a415779787e1525326fa6c6ddd61430e370f421cea704a19a9befd",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed43_fold1/model.pt",
+      "sha256": "5f2e6e87d9cfb849c1895a6947e7483f40afdac229833cde99788c2ce1eb31e0",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k4_seed43_fold2/model.pt",
+      "sha256": "6c82ecae0343df8855f8661e70b617b4acedc135b713624ca263dc4bd3f4be66",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed42_fold0/model.pt",
+      "sha256": "3cae39d60c2c4e09ecdb6e67b785f054db862e2a8b799a00195c890f4c02fd08",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed42_fold1/model.pt",
+      "sha256": "c2df872e4e2878e7b4916c79a8e74d7774d74aacd96909558f69bb014a6e95e7",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed42_fold2/model.pt",
+      "sha256": "c5984563718dcc86d94cc619f38b4b39e40e4f39e6a92ad81fb45b0840cb13df",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed43_fold0/model.pt",
+      "sha256": "be5e521dc429eea1eff19f101006248fe8c38c4a97bf4cc25678d034420c7d71",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed43_fold1/model.pt",
+      "sha256": "d675cb8bf677af9805118e6c33864e9127ab3ab74c1d64c2820c566780744aad",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/chirp_k8_seed43_fold2/model.pt",
+      "sha256": "931677ed3b2b5e7e9e95c10d6c0fdb5b22aaf9a319a344746fc98b37dd0257cc",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed42_fold0/model.pt",
+      "sha256": "ffce1d303c0ada3c7864aaa7470e86fd1a1ebe7cd7189917edf6f2036af7a05d",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed42_fold1/model.pt",
+      "sha256": "65a0a117b43cf6adeb0de408e1cf0c161360bf33cc33539655ec8cbc01bf8b2a",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed42_fold2/model.pt",
+      "sha256": "3f43741dbab354c1411153b0c05edbead9af5b0f4dc72e35c9ed1d8064b4add9",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed43_fold0/model.pt",
+      "sha256": "317533c81b8f40f5c94e94a1ef4b69b2f91a3dbd2910c3d36f5c12701cbe5abb",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed43_fold1/model.pt",
+      "sha256": "e59ac831f67cf896357b73d4d217e1ba21d6b3601e6186140b2a90f8098135b6",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k12_seed43_fold2/model.pt",
+      "sha256": "c47441e08f3b92d51d8c83f411ea70e1fddea4e31b8d84b92bc19a112ec67932",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed42_fold0/model.pt",
+      "sha256": "d1c22c2e1b1d7b3aeca4b5feab426b5154b062b2cdb8a68ab11c96df0771e220",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed42_fold1/model.pt",
+      "sha256": "0106f9861ed48231ed5754054675ad7446f9985e91cbb900201bd14c18f5e0db",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed42_fold2/model.pt",
+      "sha256": "d7d64b23fb4d13878a8fd5c387e750063e0f4391125523af13fc507efbb25225",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed43_fold0/model.pt",
+      "sha256": "17385ff6b9e44d5b57e1e1a7db58d45f8712f148e22d122433dc15843674a3c1",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed43_fold1/model.pt",
+      "sha256": "415ae7ce6fad8a65093fc6982f88fe4b02ea47d08c1a63de6150083a2e5759b0",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k36_seed43_fold2/model.pt",
+      "sha256": "d73881b12c1d54d93b2e95a73ca2ce09eeb237f53c4be6d672bed13978607ce3",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed42_fold0/model.pt",
+      "sha256": "590bdaf12b135e53082455c7dde9f29f51f7c5876d06d2e43a28a299aece1808",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed42_fold1/model.pt",
+      "sha256": "680ab70e4434b76db9da4f35fbf3895823a33d36b2dd9dcd7e5858dc5fdc0f2c",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed42_fold2/model.pt",
+      "sha256": "0d5946cfb44ecabbe995416747bfc41ed5f4df117e2ef6b1fd08b6bf20743a7e",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed43_fold0/model.pt",
+      "sha256": "fad1683ea1c18b22ecc7503b75bc11f60bf9926cb6c0321c1707500111114852",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed43_fold1/model.pt",
+      "sha256": "b2fe6c5c479d3f63e786b87d14db0e1412c8f592218089e41c49f89ed77cd666",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k4_seed43_fold2/model.pt",
+      "sha256": "d5f6bc13ab461bf5993bf5a81450cb86a23032ee63ff9d717bd301e83b4e80b3",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed42_fold0/model.pt",
+      "sha256": "41841ba681e91ec691f74b74c0c8df75ca5a38205206d24adfdd413a30e0ff3c",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed42_fold1/model.pt",
+      "sha256": "1b7072b1e0496acb6ee7054dd4a798971dc291c6f37da9cdc104c2117270bf1a",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed42_fold2/model.pt",
+      "sha256": "1ff6e5378f62f4592cdc5ae53f9b33e9f27392df86c96cf8dcbaafc276195ffa",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed43_fold0/model.pt",
+      "sha256": "e7f8bd481cbf9d395977736e7f9d106f83c1e558a8080cabc8217a288ecf2533",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed43_fold1/model.pt",
+      "sha256": "b7f7042e13f3328c99a2e5b97bb98bee100096d6263e76f90533d4c08629eb35",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/ecn_k8_seed43_fold2/model.pt",
+      "sha256": "a8be3aa68bc6d12ec6d8faeef6b2b79d0574990084ebca50778778f9ef235f9a",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed42_fold0/model.pt",
+      "sha256": "51c5289f09eb8ac6bfc981cbe6297a7fb282ab53c19a7133231616ce75c276e4",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed42_fold1/model.pt",
+      "sha256": "66eee53cd6afade9e5cefeb910a375ecb759279bf59400091ec79ddeaa308e1e",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed42_fold2/model.pt",
+      "sha256": "3af00408eae6ce441f64f76e1eee0b0fa1fcf87d99f6fcd28168000db9960b17",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed43_fold0/model.pt",
+      "sha256": "ad682225fa008edce5e32a5b9793d9929a6aa8851457007b548c1d24df2e15b8",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed43_fold1/model.pt",
+      "sha256": "c4380c63eaaa13f62b5882f94224526e1f9d2692046c2f69874b4e0d2ac86518",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k12_seed43_fold2/model.pt",
+      "sha256": "664ae0a8d33b68e8edc67a1071fddeffe2f56a3a85e558d3cb278ff1d49524eb",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed42_fold0/model.pt",
+      "sha256": "13831044abcc2c290472367294a3dcc782b15ef98cc046947a60fde87ae75a0a",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed42_fold1/model.pt",
+      "sha256": "572ce6c348938836f0cc5a71b0a4b2a5c458be617841353eefbf75b2b05bc197",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed42_fold2/model.pt",
+      "sha256": "e9c77bf53cf4d3e025fc992648f1d75a13b1584a9f590f50bace1aecbb636be0",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed43_fold0/model.pt",
+      "sha256": "996a91785ddc34a983c64374ba72e4da7957dd241aa301b5370a6fc8221a180f",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed43_fold1/model.pt",
+      "sha256": "83ed5e4f0b2e158e01859b0a8ffc47adb06e8cd21903ea0d1b0fb5424c0ab766",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k36_seed43_fold2/model.pt",
+      "sha256": "f32f0b2da3a712d92e91376787c8932ca40a0aee10e153cf8db11da2cf7b0161",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed42_fold0/model.pt",
+      "sha256": "d5f4870e541becb9b6bc211f969b50fff99ba30400ebcdf50898ab8e0fe9da5f",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed42_fold1/model.pt",
+      "sha256": "05a4358b3a45ccea864f2b3c81ae898830c51248b7c2f926a81c4882e3e7b4dd",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed42_fold2/model.pt",
+      "sha256": "cc56b449363f3022d3326e7158c5ca398cd419720507053edf9948772947843e",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed43_fold0/model.pt",
+      "sha256": "d0255446a9b3c4e07b1148ed6737c058909264e687db1cb7c0acc8a7888ac099",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed43_fold1/model.pt",
+      "sha256": "237a7b49af2b1fe3cd6f91ad9ca5c6fecf38f9401c6e3a6d04dd03e6733f5a61",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k4_seed43_fold2/model.pt",
+      "sha256": "b8e9747972e4afb82d73e5fbc2b3bac1139382000516f9022afc3ec096fa21f4",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed42_fold0/model.pt",
+      "sha256": "0d71f193992e52e1bc385ce901e4fc2dc2b6ac5c79cadeab00f34e11e23add3a",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed42_fold1/model.pt",
+      "sha256": "4b950f2f07e800e48bb6fd8c340f5599f3b0442c92189cb81cea7b4e758ce8df",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed42_fold2/model.pt",
+      "sha256": "ae622cc7c2803efbe3f50f16a694964b6edf840ba8b849434b7c7bda203569d1",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed43_fold0/model.pt",
+      "sha256": "6e70a043bdca2fc9c21e3d9a27d2d85ae5c35634047d4c00fe5500cbdc106c32",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed43_fold1/model.pt",
+      "sha256": "7f563a19e6cd771c6b0e324a466565e6dcb722f2fae62a13a65fde89a4460f94",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/embedding_k8_seed43_fold2/model.pt",
+      "sha256": "ea83117c42d32e9aebe48bda14a73036a6a9bf4dbb326345649c28029eaf6b73",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed42_fold0/model.pt",
+      "sha256": "fb0f65b90eb82fcd44c69e710e7132a668debd5afc493664c867e224d79fbcc4",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed42_fold1/model.pt",
+      "sha256": "a9c909a18ac0e29c9551faba60feea020a7cfa1ff88c5c369dbb7b55ec9dc9c3",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed42_fold2/model.pt",
+      "sha256": "6a7c13e051d08504e265fcba2fea82c4563c9379aaed7a97d41a82cd6452f5f8",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed43_fold0/model.pt",
+      "sha256": "ad437573c5f22b294ece00660dc17eb368260500a4a584cebbe5eae93b5f093f",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed43_fold1/model.pt",
+      "sha256": "3f0e76258a2f94429a7d0f73c83bbb414c206d6935897be6bcefb2c26d579c8f",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/isotropic_k36_seed43_fold2/model.pt",
+      "sha256": "b6589d03e908adf2339d437e6ff0ded593ed93b5f299cb192ec9770c382655fa",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed42_fold0/model.pt",
+      "sha256": "c48e519fa8c9e28c4d1c6437f277e12510941f0c7ba7c4d468f2cfe8a42f3112",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed42_fold1/model.pt",
+      "sha256": "4b242b6eac2185ce808a13a7e149d13ea0647a1124c3c0006af6211ee08fa931",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed42_fold2/model.pt",
+      "sha256": "6da9df253db71464361087d88e894d0706e156ebf406ed3c7eb27037dadd80a8",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed43_fold0/model.pt",
+      "sha256": "b3bbc9d664070988c35f80bf279fbe6fc3fe17a1326649da5ea86fb006aab71b",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed43_fold1/model.pt",
+      "sha256": "a0a3627c242edf22fb37bd5ce60c82dd7d14e416ff290910f2c51430f5310c52",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k12_seed43_fold2/model.pt",
+      "sha256": "b74968ee9902a8d11bd84b28fed55b106f82f4d4c55d930cc1dd5ff846682fa3",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed42_fold0/model.pt",
+      "sha256": "1f8bdc4ddadc375d2b15cd7a0bfc784604f8220fe8a7ac8b880c111a80ce83f7",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed42_fold1/model.pt",
+      "sha256": "7c458c0e08fcc46bce32ccaea871a29521275c8596bdc2ae5d0d997e9496bd2c",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed42_fold2/model.pt",
+      "sha256": "85dc5feaf5de356a32723efd474efdb610cdb3c67e04ea5d8dcf528a3d9d0686",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed43_fold0/model.pt",
+      "sha256": "f3848b9a2ee5007b75f77fa649b5b7961bf943ade2e3c6d0884e09ee178f66b9",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed43_fold1/model.pt",
+      "sha256": "b9df9b037e0bf1fb8361f9f7a3ee887e97b3cd36f946ad8e47f420f7f935f581",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k36_seed43_fold2/model.pt",
+      "sha256": "ef654e1efa87da0cf5b9c47f0d77f1f45f044139a2ece24e4f658ddcc398f0f2",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed42_fold0/model.pt",
+      "sha256": "8bf4e18fcc17204d546191c0db0f5525d347d0618d92271aa0d5a025c28b0e96",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed42_fold1/model.pt",
+      "sha256": "f74944c129d0bd87e3284e668a67ef1256de1db053ba8fe1929565212054f85e",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed42_fold2/model.pt",
+      "sha256": "48635da2e69d5cbaf09a8467ea02823f98591d9a46a962f0a222be1991525192",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed43_fold0/model.pt",
+      "sha256": "6bcb7e0fab5aeed2db4eea4136bb98856a5a4f52151b096e9aeec6ecf4e0f54d",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed43_fold1/model.pt",
+      "sha256": "9d25e29289c483c2d2e206eb8f012d3552f7086d2b4f267e894942318fe9dd93",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k4_seed43_fold2/model.pt",
+      "sha256": "4985dbf28b50b82461952db84c4de6baf5d32422433fcaed385b78703eef261d",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed42_fold0/model.pt",
+      "sha256": "c0d303f5646bd3869092ea94d8968ebdb9cf62d243353c72dd37e688d163ced8",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed42_fold1/model.pt",
+      "sha256": "924292ca67fc5ac4f8b51a6d8440de9113e3f01e2128aa5e9f9fab03731c3f10",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed42_fold2/model.pt",
+      "sha256": "8e3c67e8401160f7c4db2a991cb09777816f3ecbe114c658c16d5db4fa2283fa",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed43_fold0/model.pt",
+      "sha256": "69be77ea146531be28473579d01955857dd56dc2c08fee74506e93b91cf7c41e",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed43_fold1/model.pt",
+      "sha256": "a6eb9db26e0e2360eac936ff6b1af8fd4ca34029497365881add442bd03300fa",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/raw_k8_seed43_fold2/model.pt",
+      "sha256": "d022b0c7bf148ff6e00319d0aadafd2dc6b725dec5e6ceeb76ff02494e41b775",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed42_fold0/model.pt",
+      "sha256": "6e337cde41326b2ea5c1f181012fd1a805cf0e1e8dea6d9e522d223dfbfb31b8",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed42_fold1/model.pt",
+      "sha256": "02355dc9fc4389365e270359627cfdbac0fb958090a1352e7d458c1fc088e19c",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed42_fold2/model.pt",
+      "sha256": "243dae32bfb734e65aad761fceaf7cd2d3f5efba66dff575e2c96dc79d4c4a73",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed43_fold0/model.pt",
+      "sha256": "8fc9aedf7622201c47a25e0866755c1914ec01a096ee7658b231f15014fa09dc",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed43_fold1/model.pt",
+      "sha256": "8697ca7c8d8d12f3b6e86adfba4235ecad72b5de93f8ab77c9ae70576b5eeb78",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "acoustic/sorted_k36_seed43_fold2/model.pt",
+      "sha256": "3b1a27fac3456b43a9ad10fbcb4eb310f925e6db8f98a79fbed339c611038cc4",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold0/inner0.pt",
+      "sha256": "2e0e5acf80ec389f85d5263532da4e41c163baf174398f8d6531073ac3a177f2",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold0/inner1.pt",
+      "sha256": "4ef42608df77fa4165a485c90b55e007f2b003170d1ecd144ae2d34eb41b6a4a",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold1/inner0.pt",
+      "sha256": "66d3fef382b509a89c45b0125eada8ea5c325d9b70cd4c5e81cc63298187a7a1",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold1/inner1.pt",
+      "sha256": "444922eec483b7cf53f664e4d0cdab110feb28dabea8537d9d8a9006e255b1f5",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold2/inner0.pt",
+      "sha256": "4a7ce633a9f52218878f8810d90f9fc37e1d8db70dbc517beacc785340739ec7",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed42_fold2/inner1.pt",
+      "sha256": "f1b934b24425134f2aad4bfa451b9769c9cafeb685c2dd9d0c01e03d9c64a07f",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold0/inner0.pt",
+      "sha256": "363f71bfbb66f6aac83ab42c244a0c4e66223de8ae9b22df9dfda0fc4407fdbb",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold0/inner1.pt",
+      "sha256": "d52a615e6ea893b1548ce198c5eaca0abb7796a4fd364de8f304d2933e97ef03",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold1/inner0.pt",
+      "sha256": "db8f7bb98d20f589895c36c66630236528561008b71c234149e1dbad8cb4a475",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold1/inner1.pt",
+      "sha256": "c605c5392ed9af1422e8846796483c712d33a4fbcb308f597b53b6831b607816",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold2/inner0.pt",
+      "sha256": "f5d35a898460b3d1e03da812ace6359b89e87519b43a65e5f384da4113134350",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_chirp_seed43_fold2/inner1.pt",
+      "sha256": "06e1c8c66772c39b83424464f778586826264b6d97fd85693fc140517020f07f",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold0/inner0.pt",
+      "sha256": "1b62df3a3c6245629ed98c195611c673b8f24f87c4be2224fc782fce01d5e281",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold0/inner1.pt",
+      "sha256": "4f64c1534a23464ced6c31a2f5b40de5820946696b1e39376b2cd21181211b91",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold1/inner0.pt",
+      "sha256": "7852c48a492766b2385027aa0c6c418c0d52710a33a3118e8248e6093a58d683",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold1/inner1.pt",
+      "sha256": "fcd1e3ffaed0d7e889eca603219f4d92b1e1a613493f89b6d858afa734138a0f",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold2/inner0.pt",
+      "sha256": "95da6e378b0196e3227c4196896b193382dd4571f5ffb0d18401caff206c12f7",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed42_fold2/inner1.pt",
+      "sha256": "a235ae93b5e12a25b649442861f8541a17d2628211b8a7ff004781946dc64089",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold0/inner0.pt",
+      "sha256": "99142543f19f0d525b736f7782d1087195c9fcf338542400bc4ae6e0b6fbf890",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold0/inner1.pt",
+      "sha256": "1b5c6917db587bfe6f49ef5a209828b5533e414075e17ab4f6303f654dba894c",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold1/inner0.pt",
+      "sha256": "977b7abf2572a172b2b3168443dab1e3c70aeb51c430dd9b8f9cef6d49baf045",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold1/inner1.pt",
+      "sha256": "d4bc3d2163d3cdd20ef01c5803af096670b66b8ec054c3e625e128ecef77fbeb",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold2/inner0.pt",
+      "sha256": "48b74e15a86e67e875005c0e3d510f7c650ee6bf18b9912ce7c3d4fb5342e111",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_embedding_seed43_fold2/inner1.pt",
+      "sha256": "7b1c9a4486d09df72685d491f83477c26d1a27034827551831de01af86e64fe1",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold0/inner0.pt",
+      "sha256": "2ee956f0166610ec5f71fc0944343929d64d95dbeca0c4d993ff70bfad0dd927",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold0/inner1.pt",
+      "sha256": "bf67f077350560d529b891f3e55851e7a9d29f0a22e1f66ece3ec6fdd6c2e46f",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold1/inner0.pt",
+      "sha256": "0171599431a263ce8d657129d18b9f36b3a3134a5b7caa29a61fe115b7db24a1",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold1/inner1.pt",
+      "sha256": "dbd7fec103f8c73ccc92fba9d7853a4f1ff32d934efa70ef7961eaaa7950d5bb",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold2/inner0.pt",
+      "sha256": "835720ae576195ef8ce4db4b9061ed2527f7d88863c17c4e967b16d289f53def",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed42_fold2/inner1.pt",
+      "sha256": "2b2eb713e7e7863e97f9cf288e6997efe8dec7bba74e805ad477bbdd52bd35ae",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold0/inner0.pt",
+      "sha256": "363e892ce6b53beb2cc4357645797b600d0d3fa435792149c1dc5d7c41cb5042",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold0/inner1.pt",
+      "sha256": "1505e103cfab58d7399d3aa96d3383189eaf563b24d3fa3b3b1c9068e7a6a64a",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold1/inner0.pt",
+      "sha256": "88539d43c531204496396b0bf7fe63f01c515b6460edfc0b47403efb807cbbb1",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold1/inner1.pt",
+      "sha256": "d4f2b19363fc5121f1a3275062bc43cd47270bc3c2c71d4081d682ab270ae831",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold2/inner0.pt",
+      "sha256": "346225831fdab76f6bbab21f4e0472a171f00c7b5cd8363bc747f8abba93d41e",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/acoustic_raw_seed43_fold2/inner1.pt",
+      "sha256": "fe1937ae00f7acb9de0bc72de2eb55d41a31d991473ccc6563f8e96d13da80bf",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold0/inner0.pt",
+      "sha256": "edcf7d999b571621ad7ada2fcc4998f991562882b2a4c0d364bf0ac236af2b17",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold0/inner1.pt",
+      "sha256": "d87225661832ee85a41e61a341966bad945d06ec6c15f22593d408fa1db6419c",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold1/inner0.pt",
+      "sha256": "3c3f38dfacded53f052cbd0dd1dd19f80861da17f7b30a6ab91a182376eab892",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold1/inner1.pt",
+      "sha256": "c138fc46e2c252b32ca54048face01c62846fef01fc9d2093be6737b9675eb1b",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold2/inner0.pt",
+      "sha256": "aade628b1039350fbd087272a6cd1ab151d6475de9e601a52f8400fa4613bedf",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed42_fold2/inner1.pt",
+      "sha256": "4ade5357950b09f3c2da14f0b5ca63c5a4f944934010da6746c6303b06de77d9",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold0/inner0.pt",
+      "sha256": "963215aeda47b22159bff0a4bfbc273b4ad5f79b7981f7dc277fec0569c16e63",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold0/inner1.pt",
+      "sha256": "ee4c76f3b2eeb167ea45a374fa6d0589e52c6c7a7d0f1eb66be122652aed6cc5",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold1/inner0.pt",
+      "sha256": "a80904376cd98f709d71ba5106081c2b4f60ffc3d340c2d84277b199482c64f9",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold1/inner1.pt",
+      "sha256": "76f8763d460528d39b28a5180298f3b95077a71f4ce20d9f1c564fdcb4370521",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold2/inner0.pt",
+      "sha256": "59e2e4cb17c751513e70d83d7920d6e335e4dd674cdb4e9ae78ca102c74155e3",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "calibration/joint_attention_seed43_fold2/inner1.pt",
+      "sha256": "94f9c779d62eabc46745d849b8841424424f095ed1d8dcb6440f5777c82cd31e",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 4,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed42_fold0/model.pt",
+      "sha256": "efc2d097aa8c8fa3078c6aae760accf8cda85476a5bfb974d4d238a0b06865c0",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed42_fold1/model.pt",
+      "sha256": "9ce69b87f84b43e787a512d0360b5ead7dff271bdc56f8d60028697b112e9d0c",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed42_fold2/model.pt",
+      "sha256": "e3e5ed6e1f54afd9f5014f00f9bad9e9d28e60b7477a0b3edc69e7bf41a54c30",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed43_fold0/model.pt",
+      "sha256": "a860ce497a10e0e415883a46b7cfbb5c8020525ac338f60873751753d7a3a063",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed43_fold1/model.pt",
+      "sha256": "e4094e7478f2b19d195f3ebdc51f6c3c3fa59d87ddc3b0824b5521494596bffe",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/acoustic_seed43_fold2/model.pt",
+      "sha256": "deafe61b7cb4d40cab88d752cf6235e674f35f92191ad1e3ad97fba72592c0d2",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed42_fold0/model.pt",
+      "sha256": "65bdd68f5555c37de7e7b4d88152ebcea05a7ea73e316e4c914ebc063a50776a",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed42_fold1/model.pt",
+      "sha256": "44dd08de4eb8820819012e24aaa0390ad08097fa2814b2309171627b3ee8aa7a",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed42_fold2/model.pt",
+      "sha256": "96f07801a5759354a6e1afd275bcd444d3085e6acd800cb967a065624ce90973",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed43_fold0/model.pt",
+      "sha256": "bb8e8947c97d41857192bb6555f0f3267c293a09cf664ca5d790c60bd562292c",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed43_fold1/model.pt",
+      "sha256": "e51a799f4c412fa2b1f1524d1049dbdce7649772091f5ba80f405d13e00855ae",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/attention_seed43_fold2/model.pt",
+      "sha256": "2f354b6521c1f8038b66b317d719a23dd9c29eece38b6b1b9218fab63845b6b0",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed42_fold0/model.pt",
+      "sha256": "9e725368ed0687243f952f5af3088cf99100cc25bbf6b4e10983588a1b2e00c2",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed42_fold1/model.pt",
+      "sha256": "3e18d800cc79531e8091697e0a06ed8a4c913ab57de998ea66195e883ef59b98",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed42_fold2/model.pt",
+      "sha256": "73a9afa06abe9bd880680bd2c79d7e5fa00fa3aed2b3e8f815bd96ad9bc8329b",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed43_fold0/model.pt",
+      "sha256": "1488bf55a8e2a24901d5f4512478d931ed92add409f148dba447acd98a9c7add",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed43_fold1/model.pt",
+      "sha256": "510ccbcd1a7f0218321b208883bd8ac1e9bf77a46c3a9a4a3b94865685e70654",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/concat_seed43_fold2/model.pt",
+      "sha256": "cda487da81efca36f37c2a11a59fdaaf90016d61999f5405d7681f48e4193507",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed42_fold0/model.pt",
+      "sha256": "27f14c5e61cfb6c46cea57e51141e7097c545be1377646835d8fc807c9131955",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed42_fold1/model.pt",
+      "sha256": "83080a7f01552231eda40cc24deadcdc6e19667d1bc81f32430745c210c3ea9d",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed42_fold2/model.pt",
+      "sha256": "b628d4121a15b5c414f593981e43d081ec279211681369be85afd951ecf13c27",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed43_fold0/model.pt",
+      "sha256": "93679827c116537c5b8a924d79f7425c1e426645ad8e35d5c936c5f1bd41eb85",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed43_fold1/model.pt",
+      "sha256": "f512ce9fa122d52c01d6bb56514c9342ea0b6e5518fa4ff2ae80a7e9a1aab0a9",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/disabled_seed43_fold2/model.pt",
+      "sha256": "71ffb9026014739eb134b01eba6b1ae59f51c48677c514ba867cd7ae19859836",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed42_fold0/model.pt",
+      "sha256": "7f726f541145d8fb14ba6e32291770ec9a9a65ff65031f4153ab1be8c0a11c70",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed42_fold1/model.pt",
+      "sha256": "619b64af9ab92d03a069b179ced2fbf2b51d783430d86f2ea75d509bb0ee0ac4",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed42_fold2/model.pt",
+      "sha256": "a5d4c3ffe6f753c08215558e5ec8c07b51309261cc988ed3591ccb1352cb44e8",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed43_fold0/model.pt",
+      "sha256": "65a3d11a68ddb9fa928b561f0d187b4eaec7f4b64e4bb02ac3a40afc607e2bfc",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed43_fold1/model.pt",
+      "sha256": "085e597bad2137cb1202f3f858d6d1860ee2f76ab873445e62f84673fa229849",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint/vision_seed43_fold2/model.pt",
+      "sha256": "c4a0854e2094bcb3c22f9f01b9b41c9fcdf41988b7c432bbe16ca43264ed08c6",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed42_fold0/model.pt",
+      "sha256": "de9803e8229c46db9cb659b241f401cebfbbce8ec7589466ccfa147324df1d05",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed42_fold1/model.pt",
+      "sha256": "235351968015525b6d14b73856d3eb4da8134fa697ab8acd66c74f211dc0faae",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed42_fold2/model.pt",
+      "sha256": "72e0ffb91ba43472804b2ce30ecb70fe5421e9d63c4e1fea7c535b63934d5fb2",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed43_fold0/model.pt",
+      "sha256": "25e596a1e09c5f32158fcb54b2e03ba4a5fbfb8bb533b5ee279f4f347030e77f",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed43_fold1/model.pt",
+      "sha256": "0122d2c3bd8765e70fdebb3fe3627c9fe2ba5e4d16cd0d53fa0624d8b49d67be",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/attention_seed43_fold2/model.pt",
+      "sha256": "e5b1e2471bd46cf93a9e944a9675fd8353c72e5bc3bc24e5a01446346c00ccff",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed42_fold0/model.pt",
+      "sha256": "a3d4f129285348cf0a5d46b4fa044b5aba631347bd6709fcab0b399a2f25ef13",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed42_fold1/model.pt",
+      "sha256": "62437caf98d0674fbfe8fdfbd406fa8db91824533b95812b7e6640d2ae9a0a4f",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed42_fold2/model.pt",
+      "sha256": "3ca04416d52716218a03037454e4c1f430d04f327639329fc93e68b468da9a0d",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed43_fold0/model.pt",
+      "sha256": "f13eac38770de106fcadcf74fd6b0379f9ced5aae9d2cd1f027b0afba8c6cb2e",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed43_fold1/model.pt",
+      "sha256": "4a41935fbc9132c7217c5e774d61b3bcb6323838a3b498ea2304e618da62df86",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_seed43_fold2/model.pt",
+      "sha256": "3704655a3080ff70051f9431a2acf756a99a13b5f3cf8ad16d2ebdc2b283466f",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed42_fold0/model.pt",
+      "sha256": "44e87000904440aa46259c80186d3ffd70dcbdbc2112427dec9b32c4d0e3b7c3",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed42_fold1/model.pt",
+      "sha256": "fc524762e2f79858773e9b2754f6b7886ebaff058d6e7ab2fecd23a0fb325aaa",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed42_fold2/model.pt",
+      "sha256": "98e0d1cb97c91f798c90e3ea2de9f76d77b75fe4b41d2cde22b9ad70bf2d662a",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed43_fold0/model.pt",
+      "sha256": "5600dcce02309e5849f78d45529e544f5cbfcded6c69d78da3e06ee96f93a0ea",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed43_fold1/model.pt",
+      "sha256": "e5df56129997487df132f1f16377bd60341df049682cdca2526aab22cd9f303a",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/concat_wide_seed43_fold2/model.pt",
+      "sha256": "31865c1f5577f7d2457bb8c086b1bd28fd165d5ae7ef91939481a0442ba0b035",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed42_fold0/model.pt",
+      "sha256": "f76f93a6cce6378ca9804bc419147f0e174d81ace51ce6c447160201f5dd5fc9",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed42_fold1/model.pt",
+      "sha256": "6470cc88df0211d36f2d2444e6c7ad4c5cff5ee6a38061d12f774018a1f8bc24",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed42_fold2/model.pt",
+      "sha256": "7f7e92e2ad5964986e43e6205c2b6f75acc09ff038bf482a403015655d2d073f",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed43_fold0/model.pt",
+      "sha256": "64b873f969e9a972db6eec18b1e3d63fad5c1a9085e528d6e4a951fbb7376231",
+      "held_scenes": [
+        "102344250",
+        "102817200",
+        "104862621_172226772",
+        "106878945_174887058"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed43_fold1/model.pt",
+      "sha256": "bb761a88436eed6204e51e0277d325666d7ca095f9c235b0cf9b56d1f68d276a",
+      "held_scenes": [
+        "102816615",
+        "103997940_171031257",
+        "106366248_174226527",
+        "108294846_176710506"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "joint_followup/disabled_seed43_fold2/model.pt",
+      "sha256": "fa5715960e7068746321aadec800609c3b9a5c779da55c32ba42f40ff8cfa55f",
+      "held_scenes": [
+        "102816852",
+        "104862513_172226580",
+        "106366434_174226881",
+        "108736689_177263340"
+      ],
+      "arrays": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_chirp_seed42/model.pt",
+      "sha256": "feb9c6ed0b6880fae708533f00e7e74e58691bce6542563206119481b899b7b9",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_chirp_seed43/model.pt",
+      "sha256": "cf6aae62b119d2217df4ae2dbe7b4aef7b1621e1e1314b6e9dbb392f644e2448",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_ecn_seed42/model.pt",
+      "sha256": "23e7675f83eb2a21c4aadc4d181dd2de027f5cb1b8e8057a21d62acaa1cd339e",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_ecn_seed43/model.pt",
+      "sha256": "232e12a48d6a218c61c861b0564cac72505bfdb634aea881b23bb3654fb3dbc0",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_embedding_seed42/model.pt",
+      "sha256": "e8110b065740dc55b6401984035fe78e34dd18c1d426ed949fe1c15771b1a2f5",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_embedding_seed43/model.pt",
+      "sha256": "eec0ce2d5535dd4a30ff9b1beb0b3954c0c9f37e73f39f769227d79ca12b7cda",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_raw_seed42/model.pt",
+      "sha256": "891df901587d3b2e3d7d795d7df74b3b3478ce5ff720958b68ed8678b103ac6d",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/acoustic_raw_seed43/model.pt",
+      "sha256": "4dfa6699050216d3cf714bbc3fd229bc0c19a090c70bfd6620593767f5b7476f",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_acoustic_seed42/model.pt",
+      "sha256": "6712c5e13eb515651046ca26c1cdef3647ceaaa9aa624fe9c130f2e51bc40e3d",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_acoustic_seed43/model.pt",
+      "sha256": "6f1fa8f1bd24128200310bb1716a7823dbb83d345edcfb67c31109e49327c1df",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_attention_seed42/model.pt",
+      "sha256": "c58340e8a7c2e5a69236b6bfb4e1736dcd4a522d3405f64217bd72184d39a8a5",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_attention_seed43/model.pt",
+      "sha256": "b24e0e8662fd37dc4b18553453d384842fdd098b03f60b3792a7728e364eb968",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_concat_seed42/model.pt",
+      "sha256": "beeb147c1b97db9dd4626e4007777f429a2647df2c91fdf0e4ebdb5e1f76cb94",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_concat_seed43/model.pt",
+      "sha256": "0584ce4122d010c0bf068c6f934c3d613517bc8a5dc741f91333e63f74d6df9e",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_disabled_seed42/model.pt",
+      "sha256": "5403c3329c4b987de8258549dbe9ca261c659def04794158d750e20a1328713e",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_disabled_seed43/model.pt",
+      "sha256": "db2de38a844902220bbce6410be4a3676a3ca9ff6d528fb6eca065bc19f65a99",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_vision_seed42/model.pt",
+      "sha256": "a324cf31c1d492788e236244e0f4905551735ec47f43abb4411027cf57e998cf",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    },
+    {
+      "checkpoint": "transfer_models/joint_vision_seed43/model.pt",
+      "sha256": "3321c06e8c5a2155cf7c3122c1ac6bfa9e9c9819e2c7709b25b94f65cf16d186",
+      "held_scenes": [
+        "104348160_171513093",
+        "104348328_171513363",
+        "106365897_174225972",
+        "103997424_171030444",
+        "102815859",
+        "102817053",
+        "103997562_171030642",
+        "104348361_171513414",
+        "102344022",
+        "108736779_177263484",
+        "103997718_171030855"
+      ],
+      "arrays": 11,
+      "max_absolute_error": 0.0
+    }
+  ]
+}

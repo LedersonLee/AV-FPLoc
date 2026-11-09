@@ -1,0 +1,64 @@
+{
+  "training_scenes": [
+    "102344250",
+    "102816615",
+    "102816852",
+    "102817200",
+    "103997940_171031257",
+    "104862513_172226580",
+    "104862621_172226772",
+    "106366248_174226527",
+    "106366434_174226881",
+    "106878945_174887058",
+    "108294846_176710506",
+    "108736689_177263340"
+  ],
+  "transfer_scenes": [
+    "104348160_171513093",
+    "104348328_171513363",
+    "106365897_174225972",
+    "103997424_171030444",
+    "102815859",
+    "102817053",
+    "103997562_171030642",
+    "104348361_171513414",
+    "102344022",
+    "108736779_177263484",
+    "103997718_171030855"
+  ],
+  "outer_folds": [
+    [
+      "102344250",
+      "102817200",
+      "104862621_172226772",
+      "106878945_174887058"
+    ],
+    [
+      "102816615",
+      "103997940_171031257",
+      "106366248_174226527",
+      "108294846_176710506"
+    ],
+    [
+      "102816852",
+      "104862513_172226580",
+      "106366434_174226881",
+      "108736689_177263340"
+    ]
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "queries_per_scene": 128,
+  "study": "ray_joint_20261109",
+  "track": "A",
+  "status": "active",
+  "base_commit": "f70fe38bf674327afbc2764dfc93dc818d3cf962",
+  "oracle": "raw same36 source. K4/12 exact subsets; K8 periodic interpolation at45deg vs rounded36-grid subset separate. Body directions world offsets negative. Old smooth4 separate control. All same20cmXY/10degyaw bank and same pureVTop20. Fixed existing GTfree ambiguity masks.",
+  "phase2": "A0 ECN lightweight, A1 frozen128embedding, A2 sixchannel STFTtokens, A3 sameencoder chirpconvolved. K4/8/12/36 and 36subset controls. Pairedseed schedule and durations. Architecture/loss/budget frozen beforefits.",
+  "phase3": "Same visual/acoustic cached inputs and ray targets; vision/acoustic independent, fixedlate,concat,raytokenattention,interactiondisabled matchedparametercontrol. StrongGEOQ reference. No TrackB edits.",
+  "phase4": "Conditional on usable evidence; uniform, uncertainty calibrated on fit folds, GTfree pairgeometry difference directionweights; donor/shuffle. FixedpureV vsfullbank separate.",
+  "exposure": "New12 Transfer11 reused development, visualteacherexposed; noTest observations/results",
+  "excluded": "realworld/furniture/material/device shifts"
+}

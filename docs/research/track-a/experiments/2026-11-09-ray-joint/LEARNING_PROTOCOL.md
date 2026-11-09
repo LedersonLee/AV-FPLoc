@@ -1,0 +1,9 @@
+# Fixed acoustic learning protocol before fits
+
+Phase1 shows large oracle capacity beyond4rays; proceed with all fourK values without selectingK onheldscores. A0compressedECN552/A1frozenembedding128 use128→64hidden MLPs. A2raw andA3chirp share the exact18channelCNN→64→K architecture.18channels are6normalizedlogenergy+6adjacentIPDcos+6IPDsin, pooled32×32. This pooling/6channel extension is our controlledrepresentation, not exactAVLoc.
+
+Every arm sees the same100ms observation window and same query IDs; early0–2ms is excluded fromfeatures. RIR has4800samples fromemissionorigin. ECN end_ms=(4800−7)/48 relativefixedsample7. N uses the historical residual-envelope procedure truncated tosamewindow, pad7samples tocomplete24samplebin. Frozen128encoder keeps oldweights trained128ms, but receivesnew100msE/C/N; recordthe resultingdurationdomainshift. Alltraining usesNew12 outer8/4scene folds,seeds42/43,40epochs×8batches=320updates,batch128,AdamWlr1e−3,weightdecay1e−3,clipnorm1,log1p-rayMSE normalizedoverK. Noheldearlystopping orbestcheckpoint selection.
+
+Parameter counts differ for vector andCNNinputarms and are reported; raw/chirp are exactlymatched. K changes onlyoutputhead. AdditionalK36sameCNN trainedoncanonicalenergy-sortedchannels removesabsolutechannelidentity withmatchedcapacity;trainedisotropiccontrol measuresdirectionindependentroomprior. Heldrawpermutation/isotropic/sorted andsame-scenedonors separateinputevidence fromcapacity. Outputsubsets ofsame36model areevaluated separately. Do not claim chirppermutationcoverage fromrawpermutationoutputs.
+
+Phase3 must freeze its ownarchitecture/budget beforefits and preserve same inputs/loss acrossconcat/attention/disabledcontrol. RuntimeCPU4/16GB,torchGPUallocationcapped20% tocoexistwithotherjobs. ExistingTrackB andcheckpointsunmodified.

@@ -1,0 +1,168 @@
+{
+  "files": [
+    {
+      "path": "experiments/ray_joint_20261109/analyze.py",
+      "sha256": "fa5d0de534904dd46604797fc38cefde0d57d9017e783e05deb51d891c50d12d",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/analyze.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/analyze_extensions.py",
+      "sha256": "e3913ca3a0e1e717213a00a93c1cdf6410048a801b397dabd73f75f29455babb",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/analyze_extensions.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/build_report.py",
+      "sha256": "bcbb9996abe0fe8a51175a02967f027bd2bc7876e81e0a18002948b8f16369bb",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/build_report.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/calibrate.py",
+      "sha256": "ee4c678b2894966337baed0d59580430ac07e1d15e060f92c030bdc518ccf803",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/calibrate.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/candidate_conditioned.py",
+      "sha256": "c88888fb3785918c2bd4586aae5f4a99b00cbeafe00322dd34cd2e6247f43bfc",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/candidate_conditioned.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/capture_provenance.py",
+      "sha256": "4c691cce3a9e7d4ca839d945bcb8424cb401984f11e4310fe966b8d467b8fc47",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/capture_provenance.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/case_diagnostics.py",
+      "sha256": "1208cb2fb67c438a4a67c81fe819a02fc10e4fb3c659a681daaa44f8c09651ee",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/case_diagnostics.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/check_architecture.py",
+      "sha256": "02f0397ac2ed3baffaa5dfe0cdf961e9b0eda322a6a3f4670a64399c6ac7dc2b",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/check_architecture.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/conditioned_fullbank_shared.py",
+      "sha256": "5205d006f1b61d0c11c4076df61c1f5db66014a5e9738312e66be7f83d8e44f3",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/conditioned_fullbank_shared.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/environment_capture.py",
+      "sha256": "edfd87262268aeb5dfd03703f12031bca8c2245489075d6ec849be78005d635b",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/environment_capture.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/evaluate_candidates.py",
+      "sha256": "af18b154da572de05a6783ca7c5bce61182ebc4692efcc9e22ea2aa428082153",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/evaluate_candidates.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/evaluate_fullbank.py",
+      "sha256": "322c0cebdb9afdba6174ce0c92d56bafff316cffb884e9d4d7009047c9492d22",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/evaluate_fullbank.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/evaluate_transfer.py",
+      "sha256": "0146a5854604d299f5dfc6a39f768b2b6c9be6f308037b0b0b2607f88290adde",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/evaluate_transfer.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/export_docs.py",
+      "sha256": "cd8e7d3bc3ab58b4f4b8da766900ebfa0b9d9fb68547c8737ce0ec0814d52635",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/export_docs.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/figures.py",
+      "sha256": "2ce95fd3ff402a6e82ed2909e18ba4a89e5c704334cd22b8a6dba9b582ef6461",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/figures.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/fov_late.py",
+      "sha256": "b8c274c067653e3c0422964b6ca8320a9aa0ba8579f6638345d34e1bff4f4fec",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/fov_late.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/joint_models.py",
+      "sha256": "ab6e8d0c183e43b15f220c891011ae9168db22f138921272556dc5120333e7b4",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/joint_models.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/late_fusion.py",
+      "sha256": "b687967fc6af933e3e4557251c6e97251be94710de430ff5fc6ae847e706a40c",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/late_fusion.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/oracle_capacity.py",
+      "sha256": "c313dea798df0cd3c852f398e867d5d2c584bd69ce3b23a9a3a743dcfe2f560f",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/oracle_capacity.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/prepare_audio.py",
+      "sha256": "f55ef2adc2da2b4fd4c9be1f97b7b0b8b5858f754c2ad02f7da1ccf327e52293",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/prepare_audio.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/train_acoustic.py",
+      "sha256": "ab122190628ec4cf4b0343a048af9f28c7ad0a7324bae7696592168fd651f565",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/train_acoustic.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/train_joint.py",
+      "sha256": "2348ddfb6fdcac3f0dfe11cd09e89fdc66dec84981f596934a42fd900617be3c",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/train_joint.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/train_joint_followup.py",
+      "sha256": "b19e0420daab5560a744e602fca8f33d6a9f1de9e5931e0443a3d4259980222a",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/train_joint_followup.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/transfer_models.py",
+      "sha256": "4b82ac758c66ce22df4aa78752206447e911bfe0093ada72c2f367dceadf548f",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/transfer_models.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/verify_matching.py",
+      "sha256": "86bc1bfdf86024a49423d033ec7785dc4bed49ab354b471cda7aee41da163505",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/verify_matching.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/verify_replay.py",
+      "sha256": "61b44b66613305ee34108cc63a0823d14726d82d79ec58d4a59dfa5d3241e726",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/verify_replay.py",
+      "copy_equal": true
+    },
+    {
+      "path": "experiments/ray_joint_20261109/run.sh",
+      "sha256": "0e3d01650e2fe3ac78257cbdcf1f11e003cd64fc625b1cebdfc43ff5b1724f0a",
+      "git_copy": "scripts/research/track_a/ray_joint_20261109/run.sh",
+      "copy_equal": true
+    }
+  ],
+  "code_base": "f70fe38bf674327afbc2764dfc93dc818d3cf962",
+  "note": "Execution receipts record repository HEAD at execution; local script hashes identify exact external source. Concurrent Track B commits can appear in HEAD without changes to these scripts."
+}
