@@ -27,8 +27,8 @@ def main():
     for group,kind in [('acoustic','raw'),('acoustic','chirp'),('acoustic','embedding'),('joint','attention')]:
      dest=P/('conditioned_fullbank' if args.fullbank else 'conditioned_candidates')/f'{group}_{kind}_seed{seed}_fold{fold}';dest.mkdir(parents=True,exist_ok=True);receipt=dest/f'{sid}.json'
      if receipt.exists():records+=json.loads(receipt.read_text())['records'];continue
-     root=P/group/(f'{kind}_k36_seed{seed}_fold{fold}' if group=='acoustic' else f'{kind}_seed{seed}_fold{fold}');p=np.load(root/f'{sid}.npz')['prediction'];scales=np.load(P/'calibration'/f'{group}_{kind}_seed{seed}_fold{fold}'/'scales.npz');sigma=scales['sigma'];weights=1/sigma;weights/=weights.sum();rows=[];arrays={};start=time.time()
-     for control,pp in [('matched',p),('donor17',np.roll(p,17,axis=0)),('shuffled',np.roll(p,1,axis=1))]:
+     root=P/group/(f'{kind}_k36_seed{seed}_fold{fold}' if group=='acoustic' else f'{kind}_seed{seed}_fold{fold}');saved=np.load(root/f'{sid}.npz');p=saved['prediction'];donor=saved['donor'] if group=='joint' else np.roll(p,17,axis=0);scales=np.load(P/'calibration'/f'{group}_{kind}_seed{seed}_fold{fold}'/'scales.npz');sigma=scales['sigma'];weights=1/sigma;weights/=weights.sum();rows=[];arrays={};start=time.time()
+     for control,pp in [('matched',p),('donor17',donor),('shuffled',np.roll(p,1,axis=1))]:
       if not args.fullbank:
        scores=dict(uniform=-abs(g-pp[:,None]).mean(-1),uncertainty=-(abs(g-pp[:,None])*weights).sum(-1),pair_selection=pair_score(g,pp))
        for method,score in scores.items():

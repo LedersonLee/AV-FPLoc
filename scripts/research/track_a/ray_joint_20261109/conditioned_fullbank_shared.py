@@ -9,13 +9,13 @@ def main():
     for group,kind in [('acoustic','raw'),('acoustic','chirp'),('acoustic','embedding'),('joint','attention')]:
      dest=P/'conditioned_fullbank'/f'{group}_{kind}_seed{seed}_fold{fold}';dest.mkdir(parents=True,exist_ok=True);receipt=dest/f'{sid}.json'
      if receipt.exists():records+=json.loads(receipt.read_text())['records'];continue
-     root=P/group/(f'{kind}_k36_seed{seed}_fold{fold}' if group=='acoustic' else f'{kind}_seed{seed}_fold{fold}');pp=np.load(root/f'{sid}.npz')['prediction'];sigma=np.load(P/'calibration'/f'{group}_{kind}_seed{seed}_fold{fold}'/'scales.npz')['sigma'];weights=1/sigma;weights/=weights.sum();active.append(dict(seed=seed,group=group,kind=kind,dest=dest,receipt=receipt,p=pp,weights=weights,choices={},labels={}))
+     root=P/group/(f'{kind}_k36_seed{seed}_fold{fold}' if group=='acoustic' else f'{kind}_seed{seed}_fold{fold}');saved=np.load(root/f'{sid}.npz');pp=saved['prediction'];donor=saved['donor'] if group=='joint' else np.roll(pp,17,axis=0);sigma=np.load(P/'calibration'/f'{group}_{kind}_seed{seed}_fold{fold}'/'scales.npz')['sigma'];weights=1/sigma;weights/=weights.sum();active.append(dict(seed=seed,group=group,kind=kind,dest=dest,receipt=receipt,p=pp,donor=donor,weights=weights,choices={},labels={}))
    if not active:continue
    start=time.time();z=dict(np.load(PREV/'candidates'/sid/'pure_visual.npz'));o=np.load(OLD/'data'/sid/'observations.npz');bg=np.load(PREV/'candidates'/sid/'bank_geometry.npz');xy=bg['xy'];dep=bg['depth'];dense=dep[:,(np.arange(36)[:,None]+np.arange(36))%36].reshape(-1,36);bank=np.log1p(represent(dense,'raw36'));nb=cKDTree(xy).query_ball_tree(cKDTree(xy),1+1e-7);win=np.load(H/'inputs'/sid/'windows.npy').reshape(-1,11)
    for i in range(128):
     r,s=angular_rays(o['mu'][i].astype(float),o['scale'][i].astype(float));visual=standardized((-abs(win-r)/s).sum(-1)/40);anchor=int(z['indices'][i,z['vs'][i].argmax()]);w=selection_weights(abs(bank-bank[anchor]))
     for a in active:
-     for control,pp in [('matched',a['p'][i]),('donor17',a['p'][(i-17)%128]),('shuffled',np.roll(a['p'][i],1))]:
+     for control,pp in [('matched',a['p'][i]),('donor17',a['donor'][i]),('shuffled',np.roll(a['p'][i],1))]:
       e=abs(bank-pp);scores=dict(uniform=-e.mean(-1),uncertainty=-(e*a['weights']).sum(-1),anchor_selection=(w*(e[anchor]-e)).sum(-1))
       for method,score in scores.items():
        for fusion in ['geometry','visual_geometry']:
