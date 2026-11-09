@@ -17,3 +17,17 @@ def test_map_controls_preserve_positions_and_remove_candidate_variation():
     assert all(torch.equal(removed[k],removed[k][:1].expand_as(removed[k])) for k in ['fp','acoustic_fp','q','weight'])
     assert torch.equal(cache['fp'][:,0],torch.arange(72).float())
     with pytest.raises(AssertionError):intervene_map(cache,p.flip(0),'yaw90')
+
+def test_actual_cached_scorer_follows_map_permutation_and_removal():
+    from track_b.models.foundation_interaction import FoundationInteractionMatcher
+    torch.manual_seed(13)
+    p=torch.zeros(72,35);p[36:,0]=4;p[:,2]=torch.arange(36).repeat(2)*2*math.pi/36
+    cache={k:torch.rand(72,d) for k,d in [('fp',16),('acoustic_fp',16),('q',32),('weight',16)]};cache['hfov']=106.
+    model=FoundationInteractionMatcher().eval()
+    rgb=torch.randn(1,1024,4,16);spectrum=torch.randn(1,18,44,32)
+    with torch.no_grad():
+        normal=model.forward_cached(rgb,spectrum,cache)
+        shifted=model.forward_cached(rgb,spectrum,intervene_map(cache,p,'yaw90'))
+        removed=model.forward_cached(rgb,spectrum,intervene_map(cache,p,'candidate_geometry_removed'))
+    torch.testing.assert_close(shifted,normal.reshape(1,2,36).roll(-9,-1).reshape(1,72),atol=1e-5,rtol=1e-5)
+    torch.testing.assert_close(removed,removed[:,:1].expand_as(removed),atol=1e-5,rtol=1e-5)
