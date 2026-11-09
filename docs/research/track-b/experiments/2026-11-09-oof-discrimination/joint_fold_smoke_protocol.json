@@ -1,0 +1,103 @@
+{
+  "data": {
+    "scenes": {
+      "train": [
+        "108736779_177263484",
+        "103997970_171031287",
+        "108294537_176710050",
+        "107734080_175999881",
+        "108294870_176710551",
+        "104862639_172226823",
+        "102344250",
+        "102816786"
+      ],
+      "val": [
+        "106366104_174226332",
+        "104348202_171513150",
+        "108736851_177263586",
+        "104348010_171512832",
+        "105515430_173104494",
+        "104348028_171512877",
+        "103997541_171030615",
+        "106366410_174226806"
+      ]
+    },
+    "queries_per_scene": 64,
+    "grid_m": 0.25,
+    "yaw_bins": 36,
+    "ray_bins": 16,
+    "ray_step_m": 0.1,
+    "max_range_m": 20.0,
+    "fp_spacing_m": 0.1,
+    "rgb_size": [
+      128,
+      96
+    ],
+    "rir_samples": 16384,
+    "sample_rate_hz": 48000,
+    "stft_nfft": 256,
+    "stft_hop": 32,
+    "spectral_channels": 18,
+    "spectral_cache_dtype": "float16",
+    "split_source_sha256": "f4005163927feeeaefe767926032dc9096cf79513bae89b61c37beade4c4e9ed",
+    "selection": "SHA256 scene ordering then uniform schedule query subset before results",
+    "test_accessed": false,
+    "evidence": "Exploratory: previous development exposure remains",
+    "label_contract": "continuous GT ray target for loss/diagnosis only, never inference input"
+  },
+  "steps": 2,
+  "seeds": [
+    42
+  ],
+  "modes": [
+    "attention"
+  ],
+  "batch": 8,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "visual_aux_weight": 1000,
+  "acoustic_aux_weight": 10,
+  "map_anchor_weight": 1000,
+  "skip_sampling_steps": 1500,
+  "initialization": "independent anchored visual and acoustic checkpoints; separate FP paths; zero final interaction outputs preserve exact F1; same seeded new modules and fresh AdamW",
+  "pretrained_sha256": {
+    "visual_42": "34c21d135a703534d8e474c6aa33336a7fc9726d1b524b080ccc1e0f4acab34b",
+    "acoustic_42": "0a8546b9b3ad4137f7571c1683d1a17e95b1d3a27920414b353a3c069dfd3acd"
+  },
+  "visual_cache_protocol_sha256": "99ef2a8001a62ac93c0e5206375e85817f4bf573e0842655d95fe9ba11f8c3b2",
+  "lowlight_cache_protocol_sha256": "84eabfa15cba83f0a271acd2cffcea5ad64172b77b2b9d2dbdabad6e1277753b",
+  "cache_manifest_sha256": "9c9d534906126b15d8fb9f72a7c23834207f52d4748ccd66082a2ec6ca217d38",
+  "input_controls": "within-scene cyclic audio shift; separately re-extracted RGB brightness0.2 features; no feature scaling",
+  "selection": "final scheduled update only; no epoch selection",
+  "evidence": "Exploratory reused development scenes",
+  "cost": "equal parameter count and updates, not equal measured FLOPs; each mode uses all head parameters",
+  "scene_fold": {
+    "role": "out_of_fold_train_scenes",
+    "source_cache_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+    "train": [
+      "108736779_177263484",
+      "103997970_171031287",
+      "108294537_176710050",
+      "107734080_175999881",
+      "108294870_176710551",
+      "104862639_172226823",
+      "102344250",
+      "102816786"
+    ],
+    "val": [
+      "106366104_174226332",
+      "104348202_171513150",
+      "108736851_177263586",
+      "104348010_171512832",
+      "105515430_173104494",
+      "104348028_171512877",
+      "103997541_171030615",
+      "106366410_174226806"
+    ],
+    "fold_id": 0,
+    "selection": "SHA256 source-family order, greedily balance scene counts; no outcomes",
+    "restriction": "Every locally trained scorer component must be fit on this fold Train only; final-step only; original Val untouched by fold construction",
+    "exposure_limit": "Upstream foundation pretraining not independently excluded; inherited development method selection remains"
+  },
+  "scene_residency": "cpu"
+}

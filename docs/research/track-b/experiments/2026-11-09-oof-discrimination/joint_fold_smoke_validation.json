@@ -1,0 +1,15 @@
+{
+  "code_sha": "884864a35590bb259b34fd8c2e4e785fae9b16ca",
+  "steps": 2,
+  "held_fold_evaluation_rows": 1536,
+  "last_gradients": {
+    "visual": 805.0144775509834,
+    "acoustic": 20.103034334257245,
+    "visual_fp": 0.07188210752792656,
+    "acoustic_fp": 19.21232271194458,
+    "visual_attention": 0.0001613740241204198,
+    "acoustic_attention": 0.0001471664499064218
+  },
+  "status": "passed",
+  "scope": "2-step execution and active gradients; not trained accuracy evidence"
+}

@@ -35,3 +35,15 @@ python -m track_b.scripts.cache_discriminator_candidates --cache <structure>/cac
 밝기0.2 특징을 원래16Train/6Val 전체에 재추출하는 작업을 시작했다. 실행 SHA는 위 코드 SHA, 외부 출력 `track_b_oof_20261109/features_lowlight_all_v1`, 로그는 같은 root의 `features_lowlight_all_v1.log`, 실행 handle85566. 기존 raw observations를 읽고 frozen Hypersim ViT-L을 사용하며 Test는 읽지 않는다. 전체 완료/해시/기존6Val overlap 검증 전에는 fold 학습을 시작하지 않는다. 실행 중 상태이며 새로운 성능 결과가 아니다.
 
 재현: 기존 `cache_foundation_visual` 명령에서 `--cache <structure>/cache --brightness .2 --out <new-output-dir>`를 사용하고 split 기본값all을 유지한다. 원본 HSSD 경로/업스트림 source/checkpoint는 study19/본 작업의 기존 설정과 동일하다. CPU 보관 방식을 사용한2-step fold smoke 이후, attention에 한해2fold×3seed×1000step의 정해진 학습 및 OOF 후보 생성을 진행한다. 후단 비교는 기존 MAP/support/score-only/geometry를 유지하고 development 후보를 판별기 학습에 넣지 않는다.
+
+## OOF 실행 전 검증 완료와 본 학습 시작
+
+밝기 특징 추출은22개 장면/1,408개 질의 모두 완료했고, 파일/입력 manifest hash, query IDs, 유한한 tensor shape를 검증했다. 기존6Val 특징은 bitwise 동일했다([검증](joint_lowlight_validation.json)). 검증 코드 `884864a35590bb259b34fd8c2e4e785fae9b16ca`는 기존19Val 검증의 기본 동작을 유지하며 `--split all --expected-scenes 22`를 추가로 지원한다.
+
+음성 대조에서는 전체16Train precursor를 fold0에 주면 `Precursor fold mismatch`로 거부하고 protocol/체크포인트를 생성하지 않았다([기록](joint_precursor_negative_validation.json)). 예상 실패 traceback은 외부 `joint_wrong_precursor_negative_v1/expected_failure.txt`에 보존했다.
+
+올바른 fold0의8Train/8held-fold, attention42, CPU scene residency,2-step smoke가 완료됐다. 1,536 평가 행(8×64×3arms)과 두 번째 update에서 여섯 branch의 양수 gradient를 확인했다([설정](joint_fold_smoke_protocol.json), [검증](joint_fold_smoke_validation.json)). 이는 수렴/일반화 성공 증거가 아니다.
+
+이후 attention의2fold×3seed×1000step 본 학습을 순차 실행하기 시작했다. 출력 `joint_fold0_v1`, `joint_fold1_v1`; 로그 같은 이름.log; live handle79859. 실행 SHA `884864a35590bb259b34fd8c2e4e785fae9b16ca`. 밝기/aux/anchor/optimizer 설정은 smoke protocol과 같고 steps1000/seeds42,43,44로만 확장한다. source cohort는 기존16Train pilot; 원래6Val는 OOF 모델 학습·fold 평가에 사용하지 않는다. 주 확장 실험과 GPU를 공유하므로 학습 시간은 전용 GPU 효율 비교 근거가 아니다. 최종6fit/OOF 후보/판별기 비교는 아직 진행 중이다.
+
+재현은 `train_foundation_interaction`에 `--scene-fold <oof>/folds_v1/fold_<k>.json --visual-run <oof>/fold<k>_visual_joint_v1 --acoustic-run <oof>/fold<k>_acoustic_v1 --cache <structure>/cache --visual-cache <foundation>/features_v1 --lowlight-cache <oof>/features_lowlight_all_v1 --scene-residency cpu --steps 1000 --seeds 42 43 44 --modes attention --code-sha 884864a35590bb259b34fd8c2e4e785fae9b16ca --out <new-output>`를 사용하며 k=0,1을 순차 실행한다. 출력은 새 폴더여야 한다.

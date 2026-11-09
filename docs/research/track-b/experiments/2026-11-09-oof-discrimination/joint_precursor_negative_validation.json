@@ -1,0 +1,5 @@
+{
+  "rejected": true,
+  "reason": "Precursor fold mismatch",
+  "no_checkpoint_or_protocol_written": true
+}
