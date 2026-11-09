@@ -4,7 +4,15 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "d78bbe651d9b3d12597b82b2422381437791c1421b4537bf8cf2977a4d70cde7"
+      "sha256": "70b76e2da74a687ce64d8f4f2692a7ec3135027febf8b0257027e8b20802a372"
+    },
+    {
+      "git_copy": "audio_noise_manifest.json",
+      "sha256": "69910e93484ec3dae60682ca3caf90fd4d32f1c4d9fbfddf7abd11e16133985a"
+    },
+    {
+      "git_copy": "audio_noise_validation.json",
+      "sha256": "374206d4d1e5be54878672f8c57c75d2380acd5bb824641779f81f031cd8e7ed"
     },
     {
       "git_copy": "completed_fit_summary.json",
@@ -15,8 +23,20 @@
       "sha256": "2809ab1eb29fd0fedfc4f86c7fa5634196657b573342bcf64ada7a8cab924ec6"
     },
     {
+      "git_copy": "eval_smoke_protocol.json",
+      "sha256": "1a8813b75615a5fb1a4227bca76cfcc441e04c0510852ec25d59989047633f61"
+    },
+    {
+      "git_copy": "eval_smoke_validation.json",
+      "sha256": "16c3458792e07c926b7dffd70892ad60ec5063caf6cabf2b52ca935b2744eaca"
+    },
+    {
+      "git_copy": "evaluation_progress.md",
+      "sha256": "cc830a2f376f80bbda77e6da7e06ab4d8e399a33b765d7560c07e5c880569b33"
+    },
+    {
       "git_copy": "experiment_registry.csv",
-      "sha256": "37835b73ae73925f8ffae74c220237b84cdf0010c09b8aa8145cbfa4a1c3aa6c"
+      "sha256": "a30fc3e96f67bc67580eef89bfd939b8e9c59dfbdfd3a4dd7861ce4a20911589"
     },
     {
       "git_copy": "implementation_validation.md",
@@ -76,10 +96,11 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "797eb61b9c4134a538a9a4e3ccbacaed59ed819efc7fe3f0c0032dd0e9689a5f"
+      "sha256": "d580eacdc9d270cfbc63112cb8db3fe0f787cae6c34699e888e7287aa8ed019c"
     }
   ],
   "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
   "training_sha": "3caccd76fd46289f9301624255584fe0df490394",
-  "audio_transform_sha": "1c24188091148a53c513e441ed056cc949e5bf3d"
+  "audio_transform_sha": "1c24188091148a53c513e441ed056cc949e5bf3d",
+  "evaluator_sha": "bf9a825cf58f584e6803f5026977fc1b32c7aafb"
 }

@@ -16,3 +16,5 @@ Train112/reused Val19×64, seeds42/43/44, .25m/36yaw,16rays. Frozen local means/
 최신 상태:3seed head 학습 완료·원본 expert 보존 통과. [fit 기록](completed_fit_summary.json). U0–U4 normal/shift 효과 검증은 다음 단계.
 
 [열화 조건 준비](shift_preparation.md):원본 RGB 가림3단계 및 body-RIR20dB 합성잡음 캐시 생성 중.
+
+[평가 진행](evaluation_progress.md):실제U0–U4 smoke 통과,정상조건전체평가실행중;audio noise1216질의검증완료.

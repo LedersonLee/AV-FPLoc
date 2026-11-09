@@ -1,0 +1,29 @@
+{
+  "code_sha": "bf9a825cf58f584e6803f5026977fc1b32c7aafb",
+  "condition": "normal",
+  "smoke": true,
+  "scenes": [
+    "108736611_177263226"
+  ],
+  "seeds": [
+    42
+  ],
+  "queries_per_scene": 2,
+  "arms": [
+    "U0",
+    "U1",
+    "U2",
+    "U3",
+    "U4"
+  ],
+  "methods": [
+    "visual",
+    "acoustic",
+    "fixed"
+  ],
+  "secondary": "original frozen modality scales on Laplace fields, clean only",
+  "feature_protocol_sha256": "32569e216e08f401a3fac02d5d13bc7e3874cce6fc4ffabd60dfd63199298d07",
+  "head_protocol_sha256": "2553f0d948f07d4a1059dabbbb241c782c28d59517597d37278969666d569b2d",
+  "declared_protocol_sha256": "b215a091a6da6c6807d72d82fb6f6cf020ddaa375897a1de4810456b375572fa",
+  "test_accessed": false
+}
