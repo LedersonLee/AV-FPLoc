@@ -35,4 +35,10 @@ if (P/'direction_permutation_results.json').exists():
  perm=read('direction_permutation_results.json');out['direction_permutation']=summarize(perm['records'],['group','kind','method','fusion']);out['direction_permutation_contrasts']={}
  for key,v in out['direction_permutation'].items():
   group,kind,method,fusion=key.split('/');matched=ext['conditioned'][f'{group}/{kind}/matched/{method}/{fusion}'];out['direction_permutation_contrasts'][key+' matched-minus-permuted']=difference(matched,v)
+framework=[]
+for sid in json.loads((P/'PROTOCOL.json').read_text())['training_scenes']:
+ for seed in [42,43]:
+  b=np.load(W/'experiments/directional_tribranch_20261109/data'/sid/f'candidates_seed{seed}.npz')['baseline_labels']
+  for n,name in [(3,'B2'),(5,'GEOQ')]:framework.append(dict(scene=sid,seed=seed,arm=name,joint=float(b[:,n,1].mean()),fine=float(b[:,n,2].mean()),R1=float(b[:,n,0].mean())))
+out['development_framework_baselines']=summarize(framework,['arm'])
 (P/'remaining_analysis.json').write_text(json.dumps(out,indent=2));print(json.dumps(out['transfer_contrasts'],indent=2))
