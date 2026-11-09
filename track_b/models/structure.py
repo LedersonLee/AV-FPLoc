@@ -50,7 +50,7 @@ class StructureMatcher(nn.Module):
 
     def observations(self,rgb,spectrum):return self.visual(rgb),self.acoustic(spectrum)
 
-    def fp_descriptors(self,feature,candidates,calibration):
+    def fp_descriptors(self,feature,candidates,calibration,head=None):
         origin=calibration['origin']; spacing=calibration['spacing']
         angle=torch.as_tensor(calibration.get('map_angle',0.),device=candidates.device,dtype=candidates.dtype);c,s=angle.cos(),angle.sin()
         rotation=torch.stack([torch.stack([c,-s]),torch.stack([s,c])])
@@ -62,13 +62,13 @@ class StructureMatcher(nn.Module):
         grid=(2*pix/wh-1)[None]
         patch=F.grid_sample(feature,grid,align_corners=True).permute(0,2,3,1).flatten(2)[0]
         geom=candidates[:,3:]
-        residual=.15*torch.tanh(self.fp_head(torch.cat([patch,geom],-1)))
+        residual=.15*torch.tanh((self.fp_head if head is None else head)(torch.cat([patch,geom],-1)))
         return geom[:,:16]+residual
 
-    def match(self,observed,fp,weight):
+    def match(self,observed,fp,weight,log_scale=None):
         # Algebraic exact sum of squared differences, without B x N x D tensor.
         error=observed.square()@weight.T+(fp.square()*weight).sum(-1)[None]-2*observed@(fp*weight).T
-        return -self.log_scale.clamp(0,8).exp()*error/weight.sum(-1).clamp_min(1)[None]
+        return -(self.log_scale if log_scale is None else log_scale).clamp(0,8).exp()*error/weight.sum(-1).clamp_min(1)[None]
 
     def forward(self,rgb,spectrum,floorplan,calibration,candidate_grid,chunk_size=8192,mode='fusion',geometry_residual=True):
         if mode not in ('visual','acoustic','fusion'):raise ValueError(mode)

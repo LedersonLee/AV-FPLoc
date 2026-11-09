@@ -1,0 +1,67 @@
+"""Common-initialization full-bank attention/concat/separable training comparison."""
+import argparse,hashlib,json,time
+from pathlib import Path
+import numpy as np
+import torch
+from track_b.models.foundation_interaction import FoundationInteractionMatcher
+from track_b.models.foundation import FoundationStructureMatcher
+from track_b.models.structure import StructureMatcher,visible_rays
+from track_b.models.structure import auxiliary_loss
+from track_b.models.dense import dense_loss
+from track_b.scripts.train_structure import scene_to_gpu,attach_visual_features,visual_input
+from track_b.eval.metrics import pose_statistics
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def read(p):return json.loads(p.read_text())
+def predict(m,s,ids,arm='normal',aux=False):
+ rgb=visual_input(s,ids);spec=s['spectrum'][ids].float()
+ if arm=='audio_shuffle':spec=s['spectrum'][(ids+1)%len(s['gt'])].float()
+ elif arm=='low_light':rgb=s['lowlight_features'][ids].float()
+ return m(rgb,spec,s['floorplan'],{'origin':s['origin'],'spacing':s['spacing'],'hfov_deg':s['hfov_deg']},s['candidates'],return_aux=aux)
+def evaluate(m,scenes):
+ m.eval();rows=[];cost=[]
+ with torch.no_grad():
+  for s in scenes:
+   for ids in torch.arange(len(s['gt']),device='cuda').split(8):
+    for arm in ('normal','audio_shuffle','low_light'):
+     torch.cuda.synchronize();start=time.perf_counter();field=predict(m,s,ids,arm);torch.cuda.synchronize();cost.append(dict(scene=s['scene'],arm=arm,queries=len(ids),seconds=time.perf_counter()-start))
+     for j,q in enumerate(ids.tolist()):rows.append(dict(scene=s['scene'],query=s['query_ids'][q],arm=arm,**pose_statistics(field[j],s['candidates'][:,:3],s['gt'][q],diverse=arm=='normal')))
+ summary={arm:{k:float(np.mean([r[k] for r in rows if r['arm']==arm])) for k in ('joint','r1','fine','raw20','nll','entropy')} for arm in ('normal','audio_shuffle','low_light')};summary['normal']['diverse20']=float(np.mean([r['diverse20'] for r in rows if r['arm']=='normal']))
+ return dict(summary=summary,rows=rows,cost=cost)
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--visual-run',type=Path,required=True);ap.add_argument('--acoustic-run',type=Path,required=True);ap.add_argument('--visual-cache',type=Path,required=True);ap.add_argument('--lowlight-cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--steps',type=int,default=1000);ap.add_argument('--seeds',type=int,nargs='+',default=[42,43,44]);ap.add_argument('--modes',nargs='+',default=['attention','concat','separable']);a=ap.parse_args();a.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.backends.cudnn.benchmark=False;torch.cuda.set_per_process_memory_fraction(.5)
+ data=read(a.cache/'protocol.json');protocol=dict(data=data,steps=a.steps,seeds=a.seeds,modes=a.modes,batch=8,lr=.0003,weight_decay=.0001,visual_aux_weight=1000,acoustic_aux_weight=10,map_anchor_weight=1000,skip_sampling_steps=1500,initialization='independent anchored visual and acoustic checkpoints; separate FP paths; zero final interaction outputs preserve exact F1; same seeded new modules and fresh AdamW',pretrained_sha256={f'{mode}_{seed}':sha(run/f'{mode}_{seed}.pt') for mode,run in [('visual',a.visual_run),('acoustic',a.acoustic_run)] for seed in a.seeds},visual_cache_protocol_sha256=sha(a.visual_cache/'protocol.json'),lowlight_cache_protocol_sha256=sha(a.lowlight_cache/'protocol.json'),cache_manifest_sha256=sha(a.cache/'manifest.json'),input_controls='within-scene cyclic audio shift; separately re-extracted RGB brightness0.2 features; no feature scaling',selection='final scheduled update only; no epoch selection',evidence='Exploratory reused development scenes',cost='equal parameter count and updates, not equal measured FLOPs; each mode uses all head parameters')
+ assert read(a.visual_run/'protocol.json')['cache_protocol_sha256']==sha(a.cache/'protocol.json')
+ assert read(a.acoustic_run/'protocol.json')['cache_protocol_sha256']==sha(a.cache/'protocol.json')
+ assert read(a.visual_run/'protocol.json')['visual_cache_protocol_sha256']==sha(a.visual_cache/'protocol.json')
+ assert read(a.lowlight_cache/'protocol.json')['data']==data and read(a.lowlight_cache/'protocol.json')['brightness']==.2
+ (a.out/'protocol.json').write_text(json.dumps(protocol,indent=2));scenes={part:[scene_to_gpu(torch.load(a.cache/f'{sid}.pt',weights_only=True)) for sid in ids] for part,ids in data['scenes'].items()};results=[]
+ for part in scenes:
+  for scene in scenes[part]:
+   path=a.visual_cache/f"{scene['scene']}.pt";manifest={x['scene']:x['sha256'] for x in read(a.visual_cache/'manifest.json')};assert sha(path)==manifest[scene['scene']];attach_visual_features(scene,torch.load(path,weights_only=True))
+   if part=='val':
+    path=a.lowlight_cache/f"{scene['scene']}.pt";manifest={x['scene']:x['sha256'] for x in read(a.lowlight_cache/'manifest.json')};assert sha(path)==manifest[scene['scene']];package=torch.load(path,weights_only=True);assert package['query_ids']==scene['query_ids'];scene['lowlight_features']=package['visual_features'].cuda()
+ for seed in a.seeds:
+  for mode in a.modes:
+   torch.manual_seed(seed);m=FoundationInteractionMatcher(mode).cuda()
+   vm=FoundationStructureMatcher().cuda();vm.load_state_dict(torch.load(a.visual_run/f'visual_{seed}.pt',weights_only=True));am=StructureMatcher().cuda();am.load_state_dict(torch.load(a.acoustic_run/f'acoustic_{seed}.pt',weights_only=True));m.initialize_independent(vm,am);del vm,am
+   with torch.no_grad():
+    for scene in scenes['train']:
+     cal={'origin':scene['origin'],'spacing':scene['spacing']};_,anchor=m.map_descriptors(scene['floorplan'],cal,scene['candidates']);scene['acoustic_anchor']=anchor.detach()
+   initial={k:v.detach().cpu() for k,v in m.state_dict().items()}
+   initial_path=a.out/f'{a.modes[0]}_{seed}_initial.pt'
+   if initial_path.exists():
+    previous=torch.load(initial_path,weights_only=True);assert all(torch.equal(initial[k],previous[k]) for k in initial)
+   del initial
+   opt=torch.optim.AdamW(m.parameters(),lr=.0003,weight_decay=.0001);rng=np.random.default_rng(seed)
+   for _ in range(1500):s=scenes['train'][int(rng.integers(len(scenes['train'])))];rng.integers(len(s['gt']),size=8)
+   # Serialized initial state records identical initialization across modes.
+   torch.save(m.state_dict(),a.out/f'{mode}_{seed}_initial.pt');history=[];torch.cuda.reset_peak_memory_stats();torch.cuda.synchronize();start=time.perf_counter()
+   for step in range(a.steps):
+    m.train();s=scenes['train'][int(rng.integers(len(scenes['train'])))];ids=torch.tensor(rng.integers(len(s['gt']),size=8),device='cuda');opt.zero_grad();field,v,au=predict(m,s,ids,aux=True);ce=dense_loss(field,s['candidates'][:,:3],s['gt'][ids]);mask=visible_rays(s['hfov_deg'],device='cuda');vl=((v-s['target'][ids]).square()*mask).sum(-1).mean()/mask.sum();al=(au-s['target'][ids]).square().mean();aux=1000*vl+10*al
+    vf,af=m.map_descriptors(s['floorplan'],{'origin':s['origin'],'spacing':s['spacing']},s['candidates']);anchor=(vf-s['candidates'][:,3:19]).square().mean()+(af-s['acoustic_anchor']).square().mean();loss=ce+aux+1000*anchor;loss.backward();torch.nn.utils.clip_grad_norm_(m.parameters(),5.);opt.step()
+    if step%100==0 or step==a.steps-1:
+     row=dict(step=step,loss=float(loss),dense_ce=float(ce),aux=float(aux),visual_aux=float(vl),acoustic_aux=float(al),map_anchor=float(anchor),gradient_l1={name:sum(float(p.grad.abs().sum()) for p in branch.parameters() if p.grad is not None) for name,branch in [('visual',m.visual),('acoustic',m.acoustic),('visual_fp',m.floorplan),('acoustic_fp',m.acoustic_floorplan),('visual_attention',m.v_retrieval),('acoustic_attention',m.a_retrieval)]},elapsed_seconds=time.perf_counter()-start);history.append(row);print(json.dumps(dict(mode=mode,seed=seed,**row)),flush=True)
+   torch.cuda.synchronize();seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(m.state_dict(),a.out/f'{mode}_{seed}.pt');evaluation=evaluate(m,scenes['val']);rec=dict(mode=mode,seed=seed,parameters=sum(p.numel() for p in m.parameters()),training_seconds=seconds,peak_vram_bytes=peak,history=history,val=evaluation);(a.out/f'{mode}_{seed}.json').write_text(json.dumps(rec,indent=2));results.append({k:v for k,v in rec.items() if k not in ('history','val')}|{'val':evaluation['summary']});(a.out/'summary.json').write_text(json.dumps(results,indent=2));print(json.dumps(results[-1]),flush=True);del m,opt,field,v,au,loss,ce,aux,vf,af,anchor,vl,al;torch.cuda.empty_cache()
+ print('COMPLETE',flush=True)
+if __name__=='__main__':main()

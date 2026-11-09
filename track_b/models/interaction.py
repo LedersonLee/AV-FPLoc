@@ -46,9 +46,9 @@ class InteractionMatcher(StructureMatcher):
         fp=self.fp_descriptors(feature,candidates,cal);q=self.q_projection(torch.cat([fp,candidates[:,3:]],-1))
         weight=.25+.75*candidates[:,19:35]
         return self.score_context(v,a,vt,at,fp,q,weight,cal.get('hfov_deg',106.2602))
-    def score_context(self,v,a,vt,at,fp,q,weight,hfov):
+    def score_context(self,v,a,vt,at,fp,q,weight,hfov,acoustic_fp=None,acoustic_scale=None):
         vp=self.v_retrieval(q,vt,self.mode=='attention');ap=self.a_retrieval(q,at,self.mode=='attention');qq=q[None].expand(len(v),-1,-1)
-        sv=self.match(v,fp,weight*visible_rays(hfov,device=v.device));sa=self.match(a,fp,weight)
+        sv=self.match(v,fp,weight*visible_rays(hfov,device=v.device));sa=self.match(a,fp if acoustic_fp is None else acoustic_fp,weight,log_scale=acoustic_scale)
         if self.mode=='separable':
             # Sum of visual-only and acoustic-only functions conditional on the map.
             jv=self.joint_head(torch.cat([qq,vp,vp,vp.square(),vp.abs()],-1)).squeeze(-1)
