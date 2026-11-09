@@ -1,0 +1,9 @@
+# Joint learning freeze before fits
+
+UseK36, selected from representation-capacity question rather than learned held scores; Phase2 already covers4/8/12/36. SharedrawSTFT18×32×32 and frozenvisual40×128 are the inputs. These are frozenvisualfeatures but trainableacousticCNN/tokenprojection/jointmixer/raydecoder; not fullRGBbackbonefine-tuning and not exactAVLoc reproduction.
+
+Comparevision-only,acoustic-only,late(.5/.5of independently trainedpredictions),concat,attention,interaction-disabled. All train againstidentical36log-rayMSE, sameNew12scene folds/seeds40epochs/320updates. Sharedtokenencoders: acoustic2conv/4×4pool→16tokens32dim;visual128→32→40tokens. Addlearnedpositions and36raytokens. Shareddecoder32→64→1. Attention2blocks/4heads/FF128/dropout0. Concatflatten56×32→14→32, broadcastto36raytokens thenidenticaldecoder; bottleneck chosenanalyticallytoapproximateattentionparameterbudget, actualcountsreported. NoFOVclaim forlearnedomnidirectionalvisionrayhead; itcanlearnpriorsoutsideFOV.
+
+Interaction-disabledusesidenticalattentionparameters, butcomputesmaskedvision-only/acoustic-onlyforwardsandaveragespredictions; neitherbranchattendstoothermodality. This hasidenticalparametersandupdatesbutroughlydoubleattentioncompute, reportedexplicitly. Pureunimodalheadsusecorrespondingmask;unusedencoderparametersareexcludedfromactivecapacityclaims. Compareactualcountsandtimings, not nominalonly.
+
+Noheldearlystopping orseedselection. Existingcosine/B2/GEOQ retainedasstrongreferences. Attentioncontributionrequiresbeatingconcatanddisabledcontrol inlocalization, notonlyrayloss. Calibrateduncertaintywillbeestimatedfromfit-scene residualsplitsbeforePhase4, notclaimedfrompredictionsalone.
