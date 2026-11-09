@@ -18,6 +18,10 @@ def main():
  initial_rows={(r['seed'],r['scene'],r['query']):r for r in read(a.reference/'predictions.json') if r['method']=='fixed'}
  assert read(a.reference/'protocol.json')['checkpoint_hashes']==protocol['pretrained_sha256']
  setup=dict(source_sha=a.code_sha,conditions=conditions,source_protocol_sha256=sha(a.run/'protocol.json'),smoke=a.smoke,intervention='initial_scales restores visual/acoustic log scales; zero_interaction zeroes final gate and joint-head weights/bias to yield gate1/residual0; both combines these interventions',scope='post-hoc inference interventions on frozen-encoder fits, not retraining or physical-mechanism proof',test_accessed=False,evidence='Exploratory reused six development scenes')
+ assert sha(a.cache/'manifest.json')==protocol['cache_manifest_sha256']
+ assert sha(a.features/'protocol.json')==protocol['visual_cache_protocol_sha256']
+ setup['checkpoint_hashes']={f'{mode}_{seed}_{kind}':sha(a.run/(f'{mode}_{seed}'+('_initial' if kind=='initial' else '')+'.pt')) for mode in protocol['modes'] for seed in protocol['seeds'] for kind in ['initial','final']}
+ setup['reference_protocol_sha256']=sha(a.reference/'protocol.json')
  (a.out/'protocol.json').write_text(json.dumps(setup,indent=2));rows=[];replay=[];initial_replay=[]
  manifest={r['scene']:r['sha256'] for r in read(a.features/'manifest.json')}
  for mode in (protocol['modes'][:1] if a.smoke else protocol['modes']):
@@ -53,7 +57,7 @@ def main():
   for condition in conditions:
    rr=[r for r in rows if r['mode']==mode and r['condition']==condition]
    summary.append(dict(mode=mode,condition=condition,**{k:float(np.mean([r[k] for r in rr])) for k in ['joint','r1','fine','raw20','diverse20','nll','strict_05_15','strict_02_10']}))
-   if condition=='normal':continue
+   if condition=='normal' or a.smoke:continue
    for metric in ['joint','fine','nll']:
     d=np.array([np.mean([r[metric] for r in rr if r['scene']==s])-np.mean([r[metric] for r in rows if r['mode']==mode and r['condition']=='normal' and r['scene']==s]) for s in protocol['data']['scenes']['val']]);scale=1 if metric=='nll' else 100;b=d[rng.integers(len(d),size=(10000,len(d)))].mean(1)*scale
     paired.append(dict(mode=mode,condition=condition,metric=metric,delta=float(d.mean()*scale),ci95=np.quantile(b,[.025,.975]).tolist(),units='nats' if metric=='nll' else 'pp',unit='scene, seeds averaged'))
