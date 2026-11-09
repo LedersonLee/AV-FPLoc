@@ -1,0 +1,21 @@
+{
+  "code_sha": "74e761a2a1584539daab0bb52d8942a7394a2beb",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "c63cd011f77ea694017ebd9826c783ab71d070f76ea57700e8de87359c812168"
+    },
+    {
+      "git_copy": "manifest.json",
+      "sha256": "c043a4ee18adbf3235f9608ee7aa1feaf897837d38cf982cc477fd092ba96712"
+    },
+    {
+      "git_copy": "protocol.json",
+      "sha256": "792384e46b03de6ea040fbe3c8dab836a69946bcb0cf68ed272714b84322fd66"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "f63e5739291f14fdaca9a30915e7c2377cbc21efda59a91ff558df0e1f799ebc"
+    }
+  ]
+}

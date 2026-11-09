@@ -1,0 +1,24 @@
+{
+  "foundation_features_sha256": "7d65c77648f139eead88db8cecd1ef2d7307f9c556fa678e0414f98497d2cdc8",
+  "scene": "102344457",
+  "queries": 1,
+  "candidates": 94644,
+  "checkpoint_sha256": "88cd5514a935c3cf2ef7f404a58dd3bca494749fb732b03bbb18eadd3a61af40",
+  "scene_cache_sha256": "a9fb23fc14ab04f397e92983145733ae9505a8b297874c75040a5a2d3625d4d0",
+  "label_removal_bitwise_equal": true,
+  "full_raster_finite_count": 94644,
+  "load_open_paths": [
+    "/structure/cache/102344457.pt",
+    "/foundation/features_v1/102344457.pt",
+    "/results/foundation_matched_v1/attention_42.pt"
+  ],
+  "forward_open_paths": [
+    "/usr/local/lib/python3.10/site-packages/torch/backends/opt_einsum/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "framework_lazy_imports": [
+    "/usr/local/lib/python3.10/site-packages/torch/backends/opt_einsum/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "unexpected_forward_paths": [],
+  "forbidden_reference_paths": [],
+  "scope": "Actual completed attention checkpoint, one held-out development scene, one full-bank query, CPU audit; foundation extraction is separately sourced and not included in this inference trace; no observation/reference file opens after inputs loaded; explicit framework lazy import recorded. Broader entrypoints/other scenes not traced here."
+}

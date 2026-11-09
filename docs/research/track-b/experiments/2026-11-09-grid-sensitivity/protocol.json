@@ -1,0 +1,55 @@
+{
+  "variants": [
+    [
+      "baseline",
+      0.25,
+      36,
+      0.0
+    ],
+    [
+      "xy020",
+      0.2,
+      36,
+      0.0
+    ],
+    [
+      "xy050",
+      0.5,
+      36,
+      0.0
+    ],
+    [
+      "yaw12",
+      0.25,
+      12,
+      0.0
+    ],
+    [
+      "yaw72",
+      0.25,
+      72,
+      0.0
+    ],
+    [
+      "eroded010",
+      0.25,
+      36,
+      0.1
+    ]
+  ],
+  "scenes": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457"
+  ],
+  "reference_protocol_sha256": "7e90f8415950ac083c0ac66d335f395aec7eea5614c759a35731d29b54650cf1",
+  "construction": "Same native footprint; map-origin anchored grid; optional clearance>=0.1m validity only; ray geometry uses unmodified map",
+  "ray_bins": 16,
+  "max_range_m": 20,
+  "ray_step_m": 0.1,
+  "observations": "none used to construct candidates; original cache loaded only for baseline equality assertion",
+  "test_accessed": false
+}

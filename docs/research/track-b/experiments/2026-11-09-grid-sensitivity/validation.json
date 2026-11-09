@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "banks": 36,
+  "scenes": 6,
+  "exact_baseline_matches": 6,
+  "performance_evaluated": false,
+  "test_accessed": false
+}

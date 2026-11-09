@@ -28,7 +28,7 @@ Status: **overall objective incomplete**. This is a work-scope audit, not a new 
 ## Metrics, costs and artifacts
 
 - Available: Joint≤1m/30°, R@1m, fine≤.1m, raw20/diverse20, nearest-grid NLL, entropy, scene bootstrap and three-seed baselines. These do not substitute for the other required metrics.
-- Newly implemented, not yet measured on final models: raw5/10, strict(.5m,15°)/(.2m,10°), continuous translation/yaw median/p90, nearest-grid rank/ties, normalized entropy, prediction-centered posterior support confidence, ECE and selective risk. Source `track_b/eval/extended_metrics.py`; 34 tests passed including wrap, GT-independent confidence, singleton/tied-rank and calibration-bin edges. Its use is wired into the pending full matched occlusion evaluation. No numeric results inferred from tests.
+- Newly implemented, not yet measured on final models: raw5/10, strict(.5m,15°)/(.2m,10°), continuous translation/yaw median/p90, nearest-grid rank/ties, normalized entropy, prediction-centered posterior support confidence, ECE and selective risk. Source `track_b/eval/extended_metrics.py`; 35 tests passed including wrap, GT-independent confidence, singleton/tied-rank and calibration-bin edges. Its use is wired into the pending full matched occlusion evaluation. No numeric results inferred from tests.
 - Reliability confidence is posterior mass in a region centered at the model's MAP pose; GT appears only in scoring correctness. This region probability is a discretized confidence diagnostic, not a certified continuous-pose probability. Rank uses nearest valid grid target and reports score ties; nearest-grid mapping must not hide out-of-bank labels.
 - Costs: weak-model cached scoring/map setup and observed existing reference storage audited in study18. Foundation extraction cache costs recorded in study19/20. Raw RIR read/preprocessing, upstream RGB encoding, full scoring, candidate extraction/discrimination, cold/warm latency, full training GPUh and same-bank B2 deployment amortization remain unassembled. No end-to-end Pareto claim is supported.
 - Results registries and reproduction/provenance live per study and are linked by the single RESEARCH_INDEX.md. Do not create a second experiment index. Final consolidated results table with all mandatory columns, final_report and hypothesis falsification report are not complete; unavailable entries must be NA.
@@ -39,16 +39,16 @@ Status: **overall objective incomplete**. This is a work-scope audit, not a new 
 | Section11 item | Evidence and scope |
 |---|---|
 | 1 full bank/index | Dense/structure tests plus actual bank profiling; current model scores exhaustive supplied bank |
-| 2 GT leakage | Existing inference signature and old runtime GT-key deletion check; repeat runtime audit on final foundation pipeline |
+| 2 GT leakage | Existing inference signature and old runtime GT-key deletion check; one-query/full-bank foundation checkpoint audit passed; broader preprocessing coverage still limited |
 | 3 split integrity | Metadata family exclusion and cohort provenance; broader geometry near-duplicate/upstream exclusion unresolved |
-| 4 frame equivariance | Existing structural/interaction rigid transform tests; explicitly exercise final dual-tower foundation path before final claim |
+| 4 frame equivariance | Existing structural/interaction rigid transform tests; final dual-tower path explicitly verified for all three modes in35-test run |
 | 5 mic order/time origin | study15/17 calibration/raw-RIR audits and geometry tests; preserve same sensor contract |
 | 6 branch gradients | Foundation interaction tests and actual smoke/main branch gradient logs; initial zero new-head internal gradients intentionally activate later |
 | 7 chunk equivalence | Existing full/chunk and cached/uncached score tests; actual initial F1 replay1152cases zero mismatches |
 | 8 extraction | Existing diverse/support tests; future D2 candidate provenance still requires OOF audit |
-| 9 no RIR reference I/O | Old interaction runtime I/O audit; repeat on final foundation model/feature preprocessing |
+| 9 no RIR reference I/O | Old interaction runtime I/O audit; foundation scorer trace passed on one full-bank query; upstream feature preprocessing trace still separate |
 | 10 shuffle | Actual independent-fusion accuracy control plus model perturbation tests; changing scores alone not sufficient |
-| 11 new scene | Existing varied-map forward tests; exact final-model new-map-size/orientation test pending |
+| 11 new scene | Existing varied-map forward tests; explicit final-model new-map-size/orientation test now passes for all three modes |
 | 12 costs | Old cached scorer benchmark; complete final end-to-end benchmark pending |
 
 No completion gate is inferred from the aggregate test count. Next immediate dependencies are the complete nine-fit comparison and declared occlusion curve; downstream OOF discrimination, scale, physical-shift feasibility, precise metrics and costs remain within the original goal.
