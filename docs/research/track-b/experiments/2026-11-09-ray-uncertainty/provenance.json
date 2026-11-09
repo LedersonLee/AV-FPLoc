@@ -4,7 +4,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "37b3cff9d223513e3ec7fdb58800a1d9857993f258e98a8824989a0f05471574"
+      "sha256": "d78bbe651d9b3d12597b82b2422381437791c1421b4537bf8cf2977a4d70cde7"
     },
     {
       "git_copy": "completed_fit_summary.json",
@@ -16,7 +16,7 @@
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "6a64448e41ab9681620cc00d4f8ac0615c410ea68e975753b14017c18677eb83"
+      "sha256": "37835b73ae73925f8ffae74c220237b84cdf0010c09b8aa8145cbfa4a1c3aa6c"
     },
     {
       "git_copy": "implementation_validation.md",
@@ -47,6 +47,10 @@
       "sha256": "0523eefa64c22b2805718cbab2cd869d1f53b6d04b423779382540d1e79d43f1"
     },
     {
+      "git_copy": "shift_preparation.md",
+      "sha256": "8c50e23fcf0b709a7124d955e6d3776ac7ede2e867f4561610dd242aa73f6b4f"
+    },
+    {
       "git_copy": "smoke_protocol.json",
       "sha256": "219bbc801f7e93e516ff033eb08df07eae70e0b4774dc106aa146c58ca348d24"
     },
@@ -72,9 +76,10 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "f154c5a4b878884c6f6561351a659d789651652c26dec2cd7f4be74af878a4ea"
+      "sha256": "797eb61b9c4134a538a9a4e3ccbacaed59ed819efc7fe3f0c0032dd0e9689a5f"
     }
   ],
   "implementation_sha": "5f0fb177cce1b2726f67f9e6f3ad65a6e733ae73",
-  "training_sha": "3caccd76fd46289f9301624255584fe0df490394"
+  "training_sha": "3caccd76fd46289f9301624255584fe0df490394",
+  "audio_transform_sha": "1c24188091148a53c513e441ed056cc949e5bf3d"
 }

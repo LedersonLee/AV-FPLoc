@@ -14,3 +14,5 @@ Train112/reused Val19×64, seeds42/43/44, .25m/36yaw,16rays. Frozen local means/
 [실제 학습 진행](training_progress.md):1seed/4query/2step smoke에서 원본 expert 보존과 head 업데이트 통과;3seed 본 학습 시작.
 
 최신 상태:3seed head 학습 완료·원본 expert 보존 통과. [fit 기록](completed_fit_summary.json). U0–U4 normal/shift 효과 검증은 다음 단계.
+
+[열화 조건 준비](shift_preparation.md):원본 RGB 가림3단계 및 body-RIR20dB 합성잡음 캐시 생성 중.
