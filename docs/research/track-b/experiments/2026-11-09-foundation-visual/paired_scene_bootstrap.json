@@ -262,5 +262,104 @@
       -12.06597222222222
     ],
     "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "joint",
+    "delta_pp": 5.46875,
+    "ci95_pp": [
+      3.993055555555556,
+      6.857638888888889
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "fine",
+    "delta_pp": 0.43402777777777773,
+    "ci95_pp": [
+      -0.26041666666666674,
+      1.0416666666666665
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "learned_fp_w1000_v1",
+    "metric": "raw20",
+    "delta_pp": 14.23611111111111,
+    "ci95_pp": [
+      9.635416666666664,
+      19.01041666666667
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "fixed_fp_w1000_v1",
+    "metric": "joint",
+    "delta_pp": -0.9548611111111114,
+    "ci95_pp": [
+      -2.8645833333333344,
+      0.6944444444444448
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "fixed_fp_w1000_v1",
+    "metric": "fine",
+    "delta_pp": -0.26041666666666663,
+    "ci95_pp": [
+      -0.4340277777777779,
+      -0.08680555555555555
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "fixed_fp_w1000_v1",
+    "metric": "raw20",
+    "delta_pp": 0.6076388888888895,
+    "ci95_pp": [
+      -0.6944444444444493,
+      1.9097222222222192
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "joint",
+    "delta_pp": -2.083333333333334,
+    "ci95_pp": [
+      -4.774305555555556,
+      0.26041666666666624
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "fine",
+    "delta_pp": -0.08680555555555551,
+    "ci95_pp": [
+      -0.5208333333333333,
+      0.3472222222222222
+    ],
+    "unit": "six scenes; seeds averaged"
+  },
+  {
+    "left": "learned_fp_w1000_anchor1000_v1",
+    "right": "matched_frozen_v1",
+    "metric": "raw20",
+    "delta_pp": -2.2569444444444438,
+    "ci95_pp": [
+      -7.204861111111116,
+      2.083333333333337
+    ],
+    "unit": "six scenes; seeds averaged"
   }
 ]

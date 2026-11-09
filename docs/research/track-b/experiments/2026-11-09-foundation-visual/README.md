@@ -74,3 +74,32 @@ The strongest trainable-FP control remains below frozen-adapter/FP Joint 19.271%
 Actual control training source: `6874941298622eee18819fd48207fea8d5df2812`; aggregation source: `4aa0d6c5e80987bb813316c1cdc1e625d12184a2`. Reproduce the three additional arms with the preceding matched-joint command, distinct output directories, and respectively `--fixed-fp --aux-weight 10`, `--aux-weight 1000`, `--fixed-fp --aux-weight 1000`. Aggregate with `track_b.scripts.summarize_foundation` and `--controls-code 6874941298622eee18819fd48207fea8d5df2812`. The 29 Track B tests pass after these changes. Timing fields are recorded implementation timers, not complete pipeline throughput; feature extraction and final evaluation are excluded.
 
 Next discriminating analysis: evaluate each learned-FP checkpoint with its own versus raw geometry, and quantify FP descriptor drift. This separates visual adapter changes from inference-time map changes without retraining or touching Test. Then build independently trained fusion and capacity-matched interaction controls around the preserved visual signal; the overall Track B goal remains in progress.
+
+
+## Inference-only descriptor swap: completed
+
+Four regimes × three seeds × two descriptor variants evaluated on the same 384 development queries per seed. Original scoring configurations reproduced all 4,608 cases for Joint/R@1m/Fine/raw20/NLL within the declared numerical tolerance. No fit, checkpoint selection or Test access. The intervention preserves visual weights and score scale; only candidate FP descriptors change. Full predictions remain outside Git.
+
+| Checkpoint training | Learned FP Joint % | Raw geometry Joint % | Raw minus learned pp (95% six-scene CI) |
+|---|---:|---:|---|
+| Frozen adapter/FP | 19.271 | 19.531 | +0.260 [-0.434, 1.128] |
+| Joint, auxiliary 10 | 5.556 | 4.340 | −1.215 [-3.038, 0.608] |
+| Joint, auxiliary 1000 | 11.719 | 17.969 | +6.250 [5.122, 7.378] |
+| Fixed-FP training, auxiliary 1000 | 17.795 | 18.142 | +0.347 [0.087, 0.694] |
+
+Visible-ray normalized FP RMSE from raw geometry, averaged across seed/map: frozen and fixed 0.001224 (initial random residual), joint/10 0.077572, joint/1000 0.048693. Under strong visual supervision, replacing learned descriptors alone improves localization: this directly supports an inference-time map-representation contribution to the loss. Under weak visual supervision, raw replacement does not rescue accuracy; observation adaptation is also implicated. The latter is an interpretation, not a clean visual-only training intervention. Geometry may be an imperfect target for furnished observations, so geometric consistency is a regularizer hypothesis rather than universal physical truth.
+
+Reproduce: `python -m track_b.scripts.foundation_descriptor_swap --root /results --cache /cache --out /results/descriptor_swap_v1` with the same read-only input mounts and GPU environment. Actual source SHA: fde1de84a95354a2d4ea2638f66c503edb762efa. See `descriptor_swap_protocol.json`, `descriptor_swap_summary.json` and `descriptor_swap_descriptor_drift.json`.
+
+Follow-up registered before results: keep FP trainable and add mean squared normalized descriptor deviation from raw geometry at weight 1000, alongside visual auxiliary weight 1000. Same three seeds, initial states, optimizer and 1,000-update sampling schedule. This tests preserving learned FP capacity with an anchor instead of disabling that branch. Acoustic remains unused in this visual diagnostic. Source 195b6066f4108caeab8a8149c9304439e4ac3d66; separate output `learned_fp_w1000_anchor1000_v1`.
+
+
+## Completed trainable FP anchor control (24 total foundation fits)
+
+All three seed runs completed, batch exit 0, same initial weights and schedule. Anchor loss is the full candidate-bank mean squared difference between learned normalized FP descriptors and raw geometry across all 16 rays; weight 1000, no GT used in this regularizer. Visual auxiliary weight remains 1000. Both visual adapter and FP encoder/head remain trainable; acoustic is intentionally unused by this diagnostic.
+
+Joint 17.188%, R@1m 18.403%, Fine 0.955%, raw Top20 64.583%, diverse Top20 82.031%, NLL 9.80094, visible ray MAE 0.47026 m. Relative to unanchored learned FP/1000: Joint +5.469 pp [95% paired scene CI 3.993, 6.858]. Versus fixed-FP/1000: −0.955 pp [-2.865, 0.694]. Versus frozen adapter/FP: −2.083 pp [-4.774, 0.260]. Lack of a significant difference is not equivalence. Fine remains below 1%; do not claim fine localization success.
+
+Final logged FP encoder and head gradient sums are nonzero for every seed. Final sampled training-bank anchor MSE is 3.27e-6–4.93e-6. This gradient and loss evidence establishes active constrained FP learning, not successful full tri-modal joint training. The inference swap and retraining intervention jointly support excessive FP descriptor drift as a recoverable component of the current objective failure; visual preservation and map consistency remain distinct requirements. Stronger development performance does not establish H-B2 cross-modal interaction or independent generalization.
+
+Actual training SHA: 195b6066f4108caeab8a8149c9304439e4ac3d66. Aggregator SHA: d26e1e784d8d54611131f31f8c423dfcf1cf8334. Reproduce the previous learned FP/1000 command with `--fp-anchor-weight 1000` and a new output directory. Aggregator additionally accepts `--anchor-code 195b6066f4108caeab8a8149c9304439e4ac3d66`. All 29 existing Track B tests pass after implementation; end-to-end evidence is the three complete training/evaluation records and verified nonzero FP gradients. No Test observations accessed. Next: independent fusion and matched interaction using the stronger visual initialization, retaining frozen and constrained trainable alternatives and full-bank inference.

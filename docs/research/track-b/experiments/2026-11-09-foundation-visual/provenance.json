@@ -5,19 +5,31 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "74409bdd0c5d06b3f6f36897ab93ea439aafe907f6d31eb4a10dcb7904398311"
+      "sha256": "6c0a9636266fbe8da161a181a333005c649f7df5498284a15abcea20d19ec515"
     },
     {
       "git_copy": "aggregate.json",
-      "sha256": "4f22b016096abde542148e57175af63c71737b91292c64c817cf7522a18a6443"
+      "sha256": "cc222c36c57ab02c0010a07229aaf7c66546d029add583a4d3626d49f4b69949"
+    },
+    {
+      "git_copy": "descriptor_swap_descriptor_drift.json",
+      "sha256": "7d63175b5a9554e67b9322b7d5b9aa0e5e278f8afaee192ba0198788618c445f"
+    },
+    {
+      "git_copy": "descriptor_swap_protocol.json",
+      "sha256": "0e6db83ebd387d2003a6d1d98c59118b9ecc11c1add4914ae5fe3afb5e93b347"
+    },
+    {
+      "git_copy": "descriptor_swap_summary.json",
+      "sha256": "3a8fa0960b8f9ad84aa04fd37f181ed98324bc7481176dff8e158f29231bdee3"
     },
     {
       "git_copy": "experiment_registry.csv",
-      "sha256": "e5da7d32a93096546042251b1bd7f308b1f3ea31e4604d034667f48944ec318a"
+      "sha256": "5ec794cdc8566c59af939fad42327e38c5fae910a4b044b8c384d5dff902099f"
     },
     {
       "git_copy": "external_hashes.json",
-      "sha256": "933ba43ac4e7c0737093210a30384eb625d0854fea0b2a2cee991d36a8be0272"
+      "sha256": "f1f93bdfdd46b0e6486550a41fac28f7a8874e1a95519cda64245bce84efa976"
     },
     {
       "git_copy": "feature_manifest_complete.json",
@@ -33,11 +45,11 @@
     },
     {
       "git_copy": "paired_scene_bootstrap.json",
-      "sha256": "30c602a3947a651ef1430639b6296469ba3e6423675f10305538b6339dc2c138"
+      "sha256": "aebce6f04d3f90dbf0275641d9bdf2bddd8a2913ede548438c62a1c14840121d"
     },
     {
       "git_copy": "per_seed_summary.json",
-      "sha256": "2cf32eef3291eb9794944b931f8c1943f955cbefaddb0f8d6804f1ea78495cba"
+      "sha256": "9a4d631ef8faebee02357963c8519e616862cb13b0cbedaf0a342d01a963b566"
     },
     {
       "git_copy": "protocol.json",
@@ -45,14 +57,16 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "eb0ce5bac9389f4e1836a430df1710a01d0121d80e55cc904dd065ad066900d4"
+      "sha256": "809866816969f433a09fcf47e0cd29da2ee1acb9a5daa222e00b0cf92a29525f"
     }
   ],
   "full_cache_started_runtime_sha": "1610e0ff5eacae330942d461774ba75e0a4b4281",
   "training_sources": {
     "initial": "d283a4bba368089f683655b562309461a1420fcb",
     "matched": "2762c2fe2ae137319ca5d8391eaed9fdd29db3c6",
-    "aggregation": "4aa0d6c5e80987bb813316c1cdc1e625d12184a2",
-    "objective_controls": "6874941298622eee18819fd48207fea8d5df2812"
-  }
+    "aggregation": "d26e1e784d8d54611131f31f8c423dfcf1cf8334",
+    "objective_controls": "6874941298622eee18819fd48207fea8d5df2812",
+    "anchor": "195b6066f4108caeab8a8149c9304439e4ac3d66"
+  },
+  "descriptor_swap_source": "fde1de84a95354a2d4ea2638f66c503edb762efa"
 }

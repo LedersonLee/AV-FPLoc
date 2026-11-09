@@ -1,0 +1,30 @@
+{
+  "runs": [
+    "matched_frozen_v1",
+    "matched_joint_v1",
+    "learned_fp_w1000_v1",
+    "fixed_fp_w1000_v1"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "intervention": "same frozen visual checkpoint; only candidate FP descriptor switches raw versus learned",
+  "test_accessed": false,
+  "evidence": "Exploratory reused development; six scenes; no training or selection",
+  "checkpoint_hashes": {
+    "matched_frozen_v1/42": "129f02121a6587299c0a1a20e9b852c18719d72c2138e308284f927d9813a43f",
+    "matched_frozen_v1/43": "7df4b1e7e1f2737bb1479f7d5761a85c7feaa951a60e2dad368b15b096690c1f",
+    "matched_frozen_v1/44": "54853335dedb10f6cc6a7750706d7dca85f34b3eb95d44129a9d57efc4707efc",
+    "matched_joint_v1/42": "93423291cf377fcab857bfc4cdeace3ad9604cb45af639dc96f3fbcc5c0eab14",
+    "matched_joint_v1/43": "d78951cf0974c4089efdf5cc85991931ae8a51ac3db9ee9ef963d1574c6a5f41",
+    "matched_joint_v1/44": "b77157d410689b2ff1ee08b5a83bb51d18143017667ce97e0d05af1db6467b11",
+    "learned_fp_w1000_v1/42": "640a84c858e99294cb6abbc625f4d61688f701ad2528ddc5cbdf6307dd75f8db",
+    "learned_fp_w1000_v1/43": "35fcbdb1c318b04e5823467b7878fd656addee0e2e7af15c65226d8f1fb6cd4c",
+    "learned_fp_w1000_v1/44": "e4f49f92a73382e79dba3190aa32e618a95114b58cdb991d70b29e0954da511b",
+    "fixed_fp_w1000_v1/42": "03e110ffae03dfb7ff3dfeb510c38bf8bd27b47edcc038d3e48a8f5582a4ce84",
+    "fixed_fp_w1000_v1/43": "f3e55fdcd9d896c9a4b7a429740fa219bf2b75e954d94119dcf7966cedf4caa1",
+    "fixed_fp_w1000_v1/44": "f061d655d2f5ccc29aa9f3b3cfad43d959989db98c8a78a7c95cea47dc9dcac6"
+  }
+}

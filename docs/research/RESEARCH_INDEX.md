@@ -43,3 +43,5 @@
 기존 연구는 재사용·teacher 노출 등을 고려하여 보수적으로 Exploratory다. Development-validated/Independent-validated 승격에는 프로토콜과 독립성 근거가 필요하다. 성공 여부와 증거 수준은 별개다. Track 간 비교는 Primary Track에 보고서를 하나만 두고 다른 Track에서 링크한다.
 
 Study 19 follow-up: all 21 foundation fits complete; 2×2 FP/auxiliary control gives Joint 5.56/6.25/11.72/18.14%, below frozen 19.27%; mixed/negative, Exploratory reused development. Actual added training SHA `6874941298622eee18819fd48207fea8d5df2812`. Report: [foundation objective controls](track-b/experiments/2026-11-09-foundation-visual/README.md). Overall Track B ongoing.
+
+Study 19 follow-up (2026-11-09): 24 fits completed, mixed/negative, Exploratory. Same-weight FP swap +6.25 pp [5.12,7.38]; trainable FP anchor reaches Joint17.19%, +5.47 pp [3.99,6.86] versus unanchored, without beating frozen19.27%. Actual training SHA 195b6066f4108caeab8a8149c9304439e4ac3d66; inference source fde1de84a95354a2d4ea2638f66c503edb762efa. [Report](track-b/experiments/2026-11-09-foundation-visual/README.md). Full Track B ongoing.

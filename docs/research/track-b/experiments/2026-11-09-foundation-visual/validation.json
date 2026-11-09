@@ -2,7 +2,7 @@
   "feature_extraction_exit": 0,
   "initial_training_exit": 0,
   "matched_controls_exit": 0,
-  "completed_fits": 21,
+  "completed_fits": 24,
   "feature_scenes": 22,
   "feature_queries": 1408,
   "feature_cache_bytes": 184583546,
@@ -20,5 +20,47 @@
     "exit_code": 0,
     "complete_markers": 3,
     "tests_passed": 29
+  },
+  "descriptor_swap": {
+    "exit_code": 0,
+    "replay_cases": 4608
+  },
+  "anchor": {
+    "exit_code": 0,
+    "completed_seeds": [
+      42,
+      43,
+      44
+    ],
+    "tests_passed": 29,
+    "fp_gradients": [
+      {
+        "seed": 42,
+        "final": {
+          "visual": 917.8143988847733,
+          "acoustic": 0,
+          "floorplan": 0.07527947169728577,
+          "fp_head": 0.44557527266442776
+        }
+      },
+      {
+        "seed": 43,
+        "final": {
+          "visual": 1143.9553455114365,
+          "acoustic": 0,
+          "floorplan": 0.16307048010639846,
+          "fp_head": 1.9202647432684898
+        }
+      },
+      {
+        "seed": 44,
+        "final": {
+          "visual": 1158.5131120681763,
+          "acoustic": 0,
+          "floorplan": 0.22291065100580454,
+          "fp_head": 1.2017562203109264
+        }
+      }
+    ]
   }
 }
