@@ -1,0 +1,335 @@
+[
+  {
+    "code_sha": "3caccd76fd46289f9301624255584fe0df490394",
+    "seed": 42,
+    "steps": 1000,
+    "queries": 7168,
+    "parameters_per_modality": 4225,
+    "constant_scales": {
+      "visual": 0.030177012085914612,
+      "acoustic": 0.11498989909887314
+    },
+    "history": [
+      {
+        "step": 0,
+        "loss": -1.7685331106185913,
+        "visual_nll": -1.2845112085342407,
+        "acoustic_nll": -0.4840219020843506
+      },
+      {
+        "step": 100,
+        "loss": -1.9189605712890625,
+        "visual_nll": -1.5107414722442627,
+        "acoustic_nll": -0.4082190990447998
+      },
+      {
+        "step": 200,
+        "loss": -2.485936164855957,
+        "visual_nll": -1.9722540378570557,
+        "acoustic_nll": -0.5136822462081909
+      },
+      {
+        "step": 300,
+        "loss": -2.1875290870666504,
+        "visual_nll": -1.6155468225479126,
+        "acoustic_nll": -0.5719823837280273
+      },
+      {
+        "step": 400,
+        "loss": -2.510230302810669,
+        "visual_nll": -1.9207693338394165,
+        "acoustic_nll": -0.5894609689712524
+      },
+      {
+        "step": 500,
+        "loss": -2.47456955909729,
+        "visual_nll": -2.0285744667053223,
+        "acoustic_nll": -0.445995032787323
+      },
+      {
+        "step": 600,
+        "loss": -2.4518113136291504,
+        "visual_nll": -1.954888105392456,
+        "acoustic_nll": -0.4969232976436615
+      },
+      {
+        "step": 700,
+        "loss": -2.492985248565674,
+        "visual_nll": -1.9503333568572998,
+        "acoustic_nll": -0.5426520109176636
+      },
+      {
+        "step": 800,
+        "loss": -2.468082904815674,
+        "visual_nll": -1.9948539733886719,
+        "acoustic_nll": -0.4732288718223572
+      },
+      {
+        "step": 900,
+        "loss": -2.717146396636963,
+        "visual_nll": -2.1430091857910156,
+        "acoustic_nll": -0.5741373300552368
+      },
+      {
+        "step": 999,
+        "loss": -2.667189836502075,
+        "visual_nll": -1.904425859451294,
+        "acoustic_nll": -0.7627639770507812
+      }
+    ],
+    "train_only_diagnostics": {
+      "visual": {
+        "mae": 0.030177010223269463,
+        "ray_nll": -1.8385180234909058,
+        "fixed_ray_nll": -1.8075276613235474,
+        "mean_scale": 0.03016161546111107,
+        "min_scale": 0.016174759715795517,
+        "max_scale": 0.0685286894440651,
+        "coverage_b": 0.6484375,
+        "coverage_90": 0.9242466688156128
+      },
+      "acoustic": {
+        "mae": 0.11498989909887314,
+        "ray_nll": -0.49368274211883545,
+        "fixed_ray_nll": -0.4697638154029846,
+        "mean_scale": 0.11444724351167679,
+        "min_scale": 0.053810205310583115,
+        "max_scale": 0.2738588750362396,
+        "coverage_b": 0.5867484211921692,
+        "coverage_90": 0.9353986978530884
+      }
+    },
+    "expert_states_bitwise_unchanged": true,
+    "expert_checkpoint_files_unchanged": true,
+    "expert_gradients_absent": true,
+    "head_parameters_changed": true,
+    "extraction_seconds": 10.1838520381134,
+    "extraction_peak_allocated": 76332032,
+    "head_training_seconds": 1.2139726299792528,
+    "head_peak_allocated": 61542912,
+    "checkpoint_sha256": "299a3dc588eeb626670d7cb1c7e660f4c79cc857571361ef601ad4adf9a371f4",
+    "scope": "In-sample clean Train diagnostics, not held-out efficacy; allocated peak includes resident extracted features"
+  },
+  {
+    "code_sha": "3caccd76fd46289f9301624255584fe0df490394",
+    "seed": 43,
+    "steps": 1000,
+    "queries": 7168,
+    "parameters_per_modality": 4225,
+    "constant_scales": {
+      "visual": 0.0288375411182642,
+      "acoustic": 0.11244607716798782
+    },
+    "history": [
+      {
+        "step": 0,
+        "loss": -2.082304000854492,
+        "visual_nll": -1.3977978229522705,
+        "acoustic_nll": -0.6845061779022217
+      },
+      {
+        "step": 100,
+        "loss": -2.4669888019561768,
+        "visual_nll": -1.9212146997451782,
+        "acoustic_nll": -0.5457741022109985
+      },
+      {
+        "step": 200,
+        "loss": -2.176236629486084,
+        "visual_nll": -1.8300998210906982,
+        "acoustic_nll": -0.34613674879074097
+      },
+      {
+        "step": 300,
+        "loss": -2.7720091342926025,
+        "visual_nll": -2.1049411296844482,
+        "acoustic_nll": -0.6670679450035095
+      },
+      {
+        "step": 400,
+        "loss": -2.7333264350891113,
+        "visual_nll": -2.1105828285217285,
+        "acoustic_nll": -0.6227434873580933
+      },
+      {
+        "step": 500,
+        "loss": -2.376173734664917,
+        "visual_nll": -1.855177640914917,
+        "acoustic_nll": -0.52099609375
+      },
+      {
+        "step": 600,
+        "loss": -2.112596273422241,
+        "visual_nll": -1.695908546447754,
+        "acoustic_nll": -0.4166877865791321
+      },
+      {
+        "step": 700,
+        "loss": -2.7560629844665527,
+        "visual_nll": -2.079819679260254,
+        "acoustic_nll": -0.6762433052062988
+      },
+      {
+        "step": 800,
+        "loss": -2.5082108974456787,
+        "visual_nll": -2.0543875694274902,
+        "acoustic_nll": -0.4538232982158661
+      },
+      {
+        "step": 900,
+        "loss": -2.5096075534820557,
+        "visual_nll": -1.9774271249771118,
+        "acoustic_nll": -0.5321803689002991
+      },
+      {
+        "step": 999,
+        "loss": -2.4755280017852783,
+        "visual_nll": -1.892394781112671,
+        "acoustic_nll": -0.5831332206726074
+      }
+    ],
+    "train_only_diagnostics": {
+      "visual": {
+        "mae": 0.0288375373929739,
+        "ray_nll": -1.8884397745132446,
+        "fixed_ray_nll": -1.8529301881790161,
+        "mean_scale": 0.03137201443314552,
+        "min_scale": 0.01393334660679102,
+        "max_scale": 0.07721652835607529,
+        "coverage_b": 0.6942522525787354,
+        "coverage_90": 0.931835949420929
+      },
+      "acoustic": {
+        "mae": 0.11244607716798782,
+        "ray_nll": -0.5083798170089722,
+        "fixed_ray_nll": -0.4921344816684723,
+        "mean_scale": 0.11473304033279419,
+        "min_scale": 0.06139800325036049,
+        "max_scale": 0.4550343155860901,
+        "coverage_b": 0.5955113172531128,
+        "coverage_90": 0.9426792860031128
+      }
+    },
+    "expert_states_bitwise_unchanged": true,
+    "expert_checkpoint_files_unchanged": true,
+    "expert_gradients_absent": true,
+    "head_parameters_changed": true,
+    "extraction_seconds": 9.428483469877392,
+    "extraction_peak_allocated": 86851072,
+    "head_training_seconds": 1.272198915015906,
+    "head_peak_allocated": 63378432,
+    "checkpoint_sha256": "2e15b18902a70248a51122b53826f9cf45f902ecbb8ec6d62cf2eb0857413abf",
+    "scope": "In-sample clean Train diagnostics, not held-out efficacy; allocated peak includes resident extracted features"
+  },
+  {
+    "code_sha": "3caccd76fd46289f9301624255584fe0df490394",
+    "seed": 44,
+    "steps": 1000,
+    "queries": 7168,
+    "parameters_per_modality": 4225,
+    "constant_scales": {
+      "visual": 0.02965312823653221,
+      "acoustic": 0.10612910240888596
+    },
+    "history": [
+      {
+        "step": 0,
+        "loss": -1.722856044769287,
+        "visual_nll": -1.3174607753753662,
+        "acoustic_nll": -0.4053952097892761
+      },
+      {
+        "step": 100,
+        "loss": -1.900086760520935,
+        "visual_nll": -1.5628111362457275,
+        "acoustic_nll": -0.3372756242752075
+      },
+      {
+        "step": 200,
+        "loss": -2.521310806274414,
+        "visual_nll": -1.813198447227478,
+        "acoustic_nll": -0.708112359046936
+      },
+      {
+        "step": 300,
+        "loss": -2.3053934574127197,
+        "visual_nll": -1.8180710077285767,
+        "acoustic_nll": -0.4873223900794983
+      },
+      {
+        "step": 400,
+        "loss": -2.084258556365967,
+        "visual_nll": -1.5200233459472656,
+        "acoustic_nll": -0.564235270023346
+      },
+      {
+        "step": 500,
+        "loss": -2.3663828372955322,
+        "visual_nll": -1.9600379467010498,
+        "acoustic_nll": -0.4063448905944824
+      },
+      {
+        "step": 600,
+        "loss": -2.2360496520996094,
+        "visual_nll": -1.665320634841919,
+        "acoustic_nll": -0.57072913646698
+      },
+      {
+        "step": 700,
+        "loss": -2.487212896347046,
+        "visual_nll": -1.918189287185669,
+        "acoustic_nll": -0.569023609161377
+      },
+      {
+        "step": 800,
+        "loss": -2.6601779460906982,
+        "visual_nll": -2.046658992767334,
+        "acoustic_nll": -0.6135188937187195
+      },
+      {
+        "step": 900,
+        "loss": -2.60385799407959,
+        "visual_nll": -1.999945878982544,
+        "acoustic_nll": -0.6039120554924011
+      },
+      {
+        "step": 999,
+        "loss": -2.6280744075775146,
+        "visual_nll": -2.021915912628174,
+        "acoustic_nll": -0.606158435344696
+      }
+    ],
+    "train_only_diagnostics": {
+      "visual": {
+        "mae": 0.029653126373887062,
+        "ray_nll": -1.8575783967971802,
+        "fixed_ray_nll": -1.825040578842163,
+        "mean_scale": 0.029995692893862724,
+        "min_scale": 0.014650766737759113,
+        "max_scale": 0.07454065978527069,
+        "coverage_b": 0.6535435318946838,
+        "coverage_90": 0.9224888682365417
+      },
+      "acoustic": {
+        "mae": 0.10612910240888596,
+        "ray_nll": -0.5680138468742371,
+        "fixed_ray_nll": -0.5499517917633057,
+        "mean_scale": 0.10673938691616058,
+        "min_scale": 0.04808492958545685,
+        "max_scale": 0.20745550096035004,
+        "coverage_b": 0.5955113172531128,
+        "coverage_90": 0.9354074001312256
+      }
+    },
+    "expert_states_bitwise_unchanged": true,
+    "expert_checkpoint_files_unchanged": true,
+    "expert_gradients_absent": true,
+    "head_parameters_changed": true,
+    "extraction_seconds": 6.384494428057224,
+    "extraction_peak_allocated": 86851072,
+    "head_training_seconds": 1.2435149550437927,
+    "head_peak_allocated": 63378432,
+    "checkpoint_sha256": "252e8cf2052ca3308359c3b1be6b8d68faf73300df856475afbfd706c6c97750",
+    "scope": "In-sample clean Train diagnostics, not held-out efficacy; allocated peak includes resident extracted features"
+  }
+]
