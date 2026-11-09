@@ -12,7 +12,11 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "04e0c17b80b06d001b4af153d57f40b0bbf182ee2b1f023fbed5d140230fc683"
+      "sha256": "351e9590d2b49d3013b3e621c0004cd81ae7f2d5632725e97d38064632d8c239"
+    },
+    {
+      "git_copy": "fusion_photometric_cpu.json",
+      "sha256": "53b631693b98894b88ee756d9dd6078889747352918b79def31a4640beeae2f2"
     },
     {
       "git_copy": "initialization_partial.json",
@@ -41,12 +45,24 @@
   ],
   "followup_sources": {
     "aggregation_and_condition_audit": "10f1db6575b00a93efdd16dcb7e7e5d0d6120bf1",
-    "runtime_audit": "23a398bb1654551e5b56922964fc26905f69987d"
+    "runtime_audit": "23a398bb1654551e5b56922964fc26905f69987d",
+    "photometric_cpu": "bb68791334939cb4600337a6a6f2c4e62c55ea9a"
   },
   "runtime_audit_initial_failure": {
     "source": "b2e69956bc3897673c056305f290c06ac6ea800a",
     "exit": 1,
     "log_sha256": "9671e72ee5b0b2220ffdb33617f07c703609239e26383feebdef78bc05c7e0a4",
     "reason": "strict I/O assertion rejected framework opt_einsum lazy bytecode import; not a reference data access"
+  },
+  "photometric_initial_failure": {
+    "source": "4855c410a9d2a3528372ffd78abb9669dbdb13fb",
+    "exit": 1,
+    "log_sha256": "318ec2bd93f1598df7e30ad4c0a6f3981f5e8ffb04cc8a96ba13dec2618b2377",
+    "reason": "CPU-GPU normal NLL replay discrepancy; later complete audit preserves deviations"
+  },
+  "photometric_external_hashes": {
+    "protocol.json": "d986421e27450e87014a5886959957845c455616c8102f64ec5b3db7a20f7554",
+    "summary.json": "d86abac07c4e98be2c5589bae7c6f8fd8d219eb36487fd71bde88574460fedd7",
+    "predictions.json": "6a5859ede3bc8a62aa030a45fb9b4e4af8bc52073727bd87fac87f4e2bce73dc"
   }
 }

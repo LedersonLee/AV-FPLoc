@@ -82,3 +82,18 @@ Reproduce with the same container mounts, CPU-only (omit `--gpus`):
 ```text
 python -m track_b.scripts.audit_interaction_runtime --scene /prior/cache/108736611_177263226.pt --checkpoint /out/matched_v2/attention_42.pt --out /out/runtime_audit_v2.json
 ```
+
+
+## Independent fusion brightness control (CPU, same-device replay pending)
+
+To match brightness×0.2 in the interaction evaluation, freeze the separately trained visual/acoustic checkpoints and evaluate the existing0.85/0.15 fixed fusion on the same six scenes/three seeds, without calibration or learning. CPU normal→dark Joint: visual2.083→0.087%, acoustic5.122→5.122%, fixed fusion9.028→1.215%. Dark fusion is worse than acoustic-only, demonstrating negative transfer under this specified photometric perturbation. This does not establish physical night-domain robustness or a benefit from the learned attention gate. [All metrics, mismatches and paired scene CIs](fusion_photometric_cpu.json).
+
+CPU vs prior GPU normal replay checks1,152 query-model cases. There are160 NLL differences beyond atol2e-5/rtol1e-5 (maximum absolute0.00075245nats) and one Joint/R@1m discrepancy (scene108294783_176710410, seed44, query1298). Consequently CPU fixed fusion9.028% differs from original GPU8.941% by one query-seed success; no silent replacement of the GPU result. The numeric cause (near-tied scores versus a decision boundary) remains unresolved. Use within-CPU comparisons here; same-GPU photometric replay is required before final interaction comparison.
+
+Initial `fusion_photometric_v1` at source4855c41 exited1 on the first NLL replay mismatch; no full evaluation result claimed. Its log is retained. Revised sourcebb68791 runs the complete audit and reports every discrepancy instead of hiding it; `fusion_photometric_v2` exits0. This computation used two CPU threads and no GPU while training was running; training wall times are not claimed as controlled standalone timing benchmarks.
+
+The subsequent device-selectable runner at3370937 is prepared for a fresh `--device cuda` output after ongoing training, so its timing is not disturbed by competing GPU evaluation. This GPU replay has **not** yet been executed. Completed CPU command used the standard mounts and no `--gpus`:
+
+```text
+python -m track_b.scripts.fusion_photometric --cache /prior/cache --run /prior/supervised_v1 --fusion-reference /prior/independent_fusion_v1 --out /out/fusion_photometric_v2
+```
