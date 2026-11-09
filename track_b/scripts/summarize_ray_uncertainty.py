@@ -31,10 +31,10 @@ def ray_stats(records):
     for name,mask in masks.items():
         ee=error[mask];bb=b[mask]
         if not len(ee):out.append(dict(stratum=name,count=0));continue
-        correlation=float(np.corrcoef(ee,bb)[0,1]) if ee.std()>1e-12 and bb.std()>1e-12 else None
+        correlation=float(np.corrcoef(ee,bb)[0,1]) if np.ptp(ee)>1e-12 and np.ptp(bb)>1e-12 else None
         bins=[]
         # Equal-frequency diagnostic; no parameters are calibrated/refit.
-        chunks=np.array_split(np.argsort(bb,kind='stable'),10) if bb.std()>1e-12 else [np.arange(len(bb))]
+        chunks=np.array_split(np.argsort(bb,kind='stable'),10) if np.ptp(bb)>1e-12 else [np.arange(len(bb))]
         for ids in chunks:
             if len(ids):bins.append(dict(count=len(ids),mean_scale=float(bb[ids].mean()),mean_error=float(ee[ids].mean())))
         out.append(dict(stratum=name,count=len(ee),mae=float(ee.mean()),nll=float((ee/bb+np.log(2*bb)).mean()),mean_scale=float(bb.mean()),pearson_scale_error=correlation,coverage={str(q):float((ee<=-bb*np.log(1-q)).mean()) for q in [.5,.8,.9,.95]},scale_error_bins=bins,scope='Outside-FoV V and individual invisible directions are unsupported diagnostics, not likelihood contributions'))
@@ -47,7 +47,7 @@ def main():
     # Fail before creating output if any full result is missing/incomplete.
     for r in required:
         for f in ['protocol.json','predictions.json','summary.json','ray_records.pt','validation.json','timing.json','field_spreads.json']:assert (r/f).is_file(),f'Await complete declared evaluations: {r.name}/{f}'
-    protocols=[read(r/'protocol.json') for r in required];scenes=protocols[0]['scenes'];assert len(scenes)==19 and len(set(scenes))==19
+    protocols=[read(r/'protocol.json') for r in required];assert [p['condition'] for p in protocols]==CONDITIONS;scenes=protocols[0]['scenes'];assert len(scenes)==19 and len(set(scenes))==19
     assert all(not p['smoke'] and p['scenes']==scenes and p['seeds']==[42,43,44] and p['queries_per_scene']==64 for p in protocols)
     assert all(p['head_protocol_sha256']==protocols[0]['head_protocol_sha256'] and p['declared_protocol_sha256']==protocols[0]['declared_protocol_sha256'] for p in protocols)
     summaries=[];contrasts=[];ray_summary=[];sources={};cohort=None
