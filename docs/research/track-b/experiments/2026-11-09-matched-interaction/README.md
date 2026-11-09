@@ -97,3 +97,20 @@ The subsequent device-selectable runner at3370937 is prepared for a fresh `--dev
 ```text
 python -m track_b.scripts.fusion_photometric --cache /prior/cache --run /prior/supervised_v1 --fusion-reference /prior/independent_fusion_v1 --out /out/fusion_photometric_v2
 ```
+
+
+## Numerical disagreement investigation and first-seed completion
+
+The predeclared mismatch case uses scene108294783_176710410/seed44/query1298. On CPU, both float32 and float64 select candidate21033 at distance0.51478155m, yaw error0°. Thus a CPU1m threshold-rounding explanation is ruled out for that selected pose. Candidate14033 is second, distance4.03764m; the score margin is only about5×10⁻⁵. CPU batch1 and the original batch8 both retain the same ordering. [Single-query computation](numeric_case_cpu_single.json), [original batch-size computation](numeric_case_cpu_batch8.json). This suggests sensitivity of near-tied rankings, but GPU candidate identities/full precision replay remain pending, so the CPU/GPU cause is not yet proven. Float64 uses the serialized float32 coordinates/weights promoted to double; it does not recover pre-serialization coordinates.
+
+The first double-precision attempt exited1 because map-angle rotation defaulted to float32. At source524aceb, rotation inherits candidate dtype. This preserves the float32 training path and permits double-precision diagnosis; no existing checkpoint/results were overwritten or training restarted. The failed log remains external. The suite now passes26 tests, including a complete double-precision structure forward. Runtime source for the still-running comparison remains its originalaa452ee; subsequent audit code does not retroactively become its experiment code SHA.
+
+Seed42 now has all three completed fits: attention Joint4.6875%, concat4.6875%, separable5.9896%; brightness×0.2 Joint1.3021%,2.0833%,2.3438%. This remains only the first seed, not the registered three-seed comparison. The [interim snapshot](interim_completed_runs.json) records actual completed runs, and later seeds continue in the original process. No early stopping or model selection was performed from these interim values.
+
+CPU diagnosis command (same mounts, no GPU):
+
+```text
+python -m track_b.scripts.audit_numeric_case --cache /prior/cache --run /prior/supervised_v1 --out /out/numeric_case_cpu_batch8.json --batch-size 8
+```
+
+The later GPU audit must use `--device cuda --batch-size 8`, compare float32 and float64, and preserve all previous conflicting results. Until then, use CPU brightness comparisons as within-device evidence only.

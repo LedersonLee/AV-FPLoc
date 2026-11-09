@@ -12,7 +12,7 @@
   "files": [
     {
       "git_copy": "README.md",
-      "sha256": "351e9590d2b49d3013b3e621c0004cd81ae7f2d5632725e97d38064632d8c239"
+      "sha256": "dc3413531989f9ca5ffe1e1cd10a890d43c145067bff35eea450d83a9a31fb45"
     },
     {
       "git_copy": "fusion_photometric_cpu.json",
@@ -24,7 +24,15 @@
     },
     {
       "git_copy": "interim_completed_runs.json",
-      "sha256": "03ae44438c881f712f2299ffacf07414f6a38f0d0588c5941085839814504e61"
+      "sha256": "8b0bd05ab978a22d6eae909fdddcf6334ec380a0389e8d6ca06439c2438d05a9"
+    },
+    {
+      "git_copy": "numeric_case_cpu_batch8.json",
+      "sha256": "7f14a92d37250aa2e37d78a0d1e208c2cf8cbff3934b9eb86fc66372ccfc2de0"
+    },
+    {
+      "git_copy": "numeric_case_cpu_single.json",
+      "sha256": "8c176eaabacb78096d7c99ab245b4fc627f3b89f55f2daf90ddc418cb8707bdf"
     },
     {
       "git_copy": "protocol.json",
@@ -46,7 +54,8 @@
   "followup_sources": {
     "aggregation_and_condition_audit": "10f1db6575b00a93efdd16dcb7e7e5d0d6120bf1",
     "runtime_audit": "23a398bb1654551e5b56922964fc26905f69987d",
-    "photometric_cpu": "bb68791334939cb4600337a6a6f2c4e62c55ea9a"
+    "photometric_cpu": "bb68791334939cb4600337a6a6f2c4e62c55ea9a",
+    "numeric_case_cpu": "4d1a0519acf30e3cb84ffa0c49dfd142a068de5e"
   },
   "runtime_audit_initial_failure": {
     "source": "b2e69956bc3897673c056305f290c06ac6ea800a",
@@ -64,5 +73,11 @@
     "protocol.json": "d986421e27450e87014a5886959957845c455616c8102f64ec5b3db7a20f7554",
     "summary.json": "d86abac07c4e98be2c5589bae7c6f8fd8d219eb36487fd71bde88574460fedd7",
     "predictions.json": "6a5859ede3bc8a62aa030a45fb9b4e4af8bc52073727bd87fac87f4e2bce73dc"
+  },
+  "numeric_initial_failure": {
+    "source": "ead147136f8701e7c0495fb9081d64241baa7e34",
+    "exit": 1,
+    "reason": "float64 candidate versus float32 default map-angle rotation",
+    "log_sha256": "d9acbf64337555937b699e6331f4d6e965eeb0e039f236457928afa56ff3849d"
   }
 }
