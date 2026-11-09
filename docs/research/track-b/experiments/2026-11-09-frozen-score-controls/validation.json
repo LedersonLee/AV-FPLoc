@@ -1,0 +1,10 @@
+{
+  "smoke_exit_code": 0,
+  "smoke_records": 32,
+  "normal_replay_mismatches": 0,
+  "initial_replay_mismatches": 0,
+  "full_status": "running",
+  "full_session": 16172,
+  "planned_records": 13824,
+  "test_accessed": false
+}

@@ -1,0 +1,29 @@
+{
+  "code_sha": "d8ca9d8b836f1c7178ce07056faf3b9f96af9c2f",
+  "files": [
+    {
+      "git_copy": "README.md",
+      "sha256": "8a59e7dd94e3bfbedd51dab0f27f0a940c6780a211b5d05c1aa741583ed8b7f2"
+    },
+    {
+      "git_copy": "smoke_initial_replay_mismatches.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "git_copy": "smoke_normal_replay_mismatches.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "git_copy": "smoke_protocol.json",
+      "sha256": "313d92457171b7d99d391f0a8fefc28b008bcfd93267ec9862eb7ae3fa9f9ad4"
+    },
+    {
+      "git_copy": "smoke_summary.json",
+      "sha256": "ade772858324eb25f9e0ba7a751f3f2c43745b77a2c6639d657e680fbdc02ceb"
+    },
+    {
+      "git_copy": "validation.json",
+      "sha256": "e675afd577b094027cb3e3002380f981efdb86f2a58cde71c7a5e4beb94b6c4e"
+    }
+  ]
+}
