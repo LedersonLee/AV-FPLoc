@@ -1,0 +1,7 @@
+{
+  "expected_rejection": true,
+  "exit_code": 1,
+  "no_result_directory": true,
+  "reason": "Only one of four cells verified; comparison intentionally refused",
+  "source_sha": "518f033995cd40ef353021e893278ab4dea2a9dc"
+}

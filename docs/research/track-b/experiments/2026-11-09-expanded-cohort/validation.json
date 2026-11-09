@@ -49,5 +49,7 @@
   "first_cell_observed_container_exit_code": 0,
   "first_cell_registrar_exit_code": 0,
   "first_cell_records": 14592,
-  "first_cell_unimodal_replay_checks": 7296
+  "first_cell_unimodal_replay_checks": 7296,
+  "incomplete_factorial_gate_rejection_verified": true,
+  "full_factorial_comparison_completed": false
 }

@@ -33,6 +33,10 @@
       "sha256": "48de00dd779f7d718b15f479f464cd4685408e2f6ee6d148e481d72cd57da226"
     },
     {
+      "git_copy": "factorial_gate_probe.json",
+      "sha256": "2f3ebb090b0e1e304765a2ec8a0d43ec3292c14f6c86beb59ee172c81a2b9e0e"
+    },
+    {
       "git_copy": "failed_bitwise_check.json",
       "sha256": "57a61e6910d7b00ac78d9d3c6748d21a1057c623de20ab47a13a09cfd3b6a2d6"
     },
@@ -110,7 +114,7 @@
     },
     {
       "git_copy": "scaling_protocol.md",
-      "sha256": "dc2729e67c29f530428e95c06ab03d829d0ca74bbe2564a87b052ed45a00b9ea"
+      "sha256": "fc4ca42b949a2ed991f536c3b0764374cbaacb3ff66e4d7cf81f546c9dea47d2"
     },
     {
       "git_copy": "scaling_runner_protocol.json",
@@ -142,7 +146,7 @@
     },
     {
       "git_copy": "validation.json",
-      "sha256": "be2293d26875caec6c0ff926ac013051088612cdc2cc0940cb6f92fadde53eb6"
+      "sha256": "8a3b57aa86c82e3228de1599d4b7b4bca87cfecb1bf6bfc98e224ccc9792d126"
     }
   ],
   "cache_verifier_sha": "04bbb38937c07a3f358c2ff1771f87e8c8482855",
@@ -157,5 +161,6 @@
   "scaling_fit_verifier_source_sha": "73f8f18e68a15c51cdc21dc3b744805771476a66",
   "first_cell_verifier_execution_source_sha": "6946a9b60a8135c46ed3d40af7980d437f519894",
   "extended_evaluation_source_sha": "6946a9b60a8135c46ed3d40af7980d437f519894",
-  "first_cell_registrar_source_sha": "d208efaf6d403843783ff1c896988e6a50fdb836"
+  "first_cell_registrar_source_sha": "d208efaf6d403843783ff1c896988e6a50fdb836",
+  "factorial_comparison_code_sha": "518f033995cd40ef353021e893278ab4dea2a9dc"
 }
