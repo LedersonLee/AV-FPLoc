@@ -37,7 +37,7 @@
 | 26 | [Raw observation runtime audit](track-b/experiments/2026-11-09-raw-runtime-audit/README.md) | 완료:6장면 고정질의, 원본 RGB/body-RIR→특징·605,304점수·Top20 비트일치. 41검사 통과; 오프라인 정렬/단일모델 표본·비격리 비용 한계 명시. | 2026-11-09 | Track B | Exploratory | `0c0f0eece4b1bcd6595dc420463684c668875710` |
 | 27 | [Expanded development cohort](track-b/experiments/2026-11-09-expanded-cohort/README.md) | 112Train·19Val·8,384질의 구조캐시 생성·검증 완료, 기존22장면 텐서 동일. 시각특징131장면 검증·기존22장면 정확 일치. 동일Val19의 장면수×학습량2×2·36단계 중 세조건27단계 완료·검증;112장면/7배 학습 진행·세번째 F1 Joint34.40%/V21.85%, Val19 F1 Joint 기본27.17%/7배25.03%(조건간 추론 보류), 각조건 raw20/ECE 악화; uniform Joint0.43%·지도131개 정확중복0; 고정가중치 평가4,608기록 정확 재현;43검사/부분집합 이어학습 점검 통과. CPU장면전송 짧은 대조 비트불일치(최대8.6e−8), GPU반복도 미세차이; 핵심 위치지표 차이0. 독립Test 아님. | 2026-11-09 | Track B | Exploratory | preflight `f70fe38bf674327afbc2764dfc93dc818d3cf962`; cache/stream `461cb6ea52dd76bec09acf3a2bb5be08f50139c6`; scaling `5cf803681c2d144f3a620bc00c1ab6b841e48e7c`; uniform `99b8cddfd70e279f6e1a011e62ba98bae2c4f633`; map audit `d268cab16c74beed65f2f53bea0913d93ab5405b` |
 
-| 28 | [Frozen score-scale/interaction controls](track-b/experiments/2026-11-09-frozen-score-controls/README.md) | 진행 중: 고정인코더9모델의 점수스케일 복원×게이트/잔차 제거4조건. 실데이터32건 점검·정상/초기F1 재현 불일치0; 전체13,824건 평가 시작. | 2026-11-09 | Track B | Exploratory | `d8ca9d8b836f1c7178ce07056faf3b9f96af9c2f` |
+| 28 | [Frozen score-scale/interaction controls](track-b/experiments/2026-11-09-frozen-score-controls/README.md) | 완료13,824건·정상/초기 재현 불일치0. 스케일 복원 Joint+2.34–2.78pp, 결합 제거+5.21–5.99pp; 둘 모두 초기F1 복원. NLL 개선과 위치성능 악화 공존; 새 결합 성공 아님. | 2026-11-09 | Track B | Exploratory | `d8ca9d8b836f1c7178ce07056faf3b9f96af9c2f` |
 
 [현재 결론과 반증 관계](current_findings.md) · [공통 평가 원칙](shared/evaluation-protocol/README.md)
 

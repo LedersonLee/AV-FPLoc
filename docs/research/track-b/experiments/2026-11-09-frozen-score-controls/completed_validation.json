@@ -1,0 +1,16 @@
+{
+  "rows": 13824,
+  "matched_queries_per_mode_condition": 1152,
+  "normal_replays": 3456,
+  "initial_replays": 3456,
+  "replay_mismatches": 0,
+  "protocol_sha256": "35c115b45933049e35c567158962c820bd055657feecccdc9fa701f170e5c71a",
+  "predictions_sha256": "d3145319591f58c252fc1241271246aa6ccd113b098d6800555ff629a586bda1",
+  "conditions": [
+    "normal",
+    "initial_scales",
+    "zero_interaction",
+    "both"
+  ],
+  "test_accessed": false
+}

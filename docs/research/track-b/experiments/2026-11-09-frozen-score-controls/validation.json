@@ -3,8 +3,13 @@
   "smoke_records": 32,
   "normal_replay_mismatches": 0,
   "initial_replay_mismatches": 0,
-  "full_status": "running",
+  "full_status": "completed and independently registered",
   "full_session": 16172,
   "planned_records": 13824,
-  "test_accessed": false
+  "test_accessed": false,
+  "full_exit_code": 0,
+  "registration_exit_code": 0,
+  "completed_records": 13824,
+  "normal_replay_checks": 3456,
+  "initial_replay_checks": 3456
 }

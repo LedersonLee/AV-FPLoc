@@ -1,0 +1,36 @@
+{
+  "source_sha": "d8ca9d8b836f1c7178ce07056faf3b9f96af9c2f",
+  "conditions": [
+    "normal",
+    "initial_scales",
+    "zero_interaction",
+    "both"
+  ],
+  "source_protocol_sha256": "330aa8567d9c7e8866f52e4de49861ae74104b8fb9f864656ea09e7b9a852994",
+  "smoke": false,
+  "intervention": "initial_scales restores visual/acoustic log scales; zero_interaction zeroes final gate and joint-head weights/bias to yield gate1/residual0; both combines these interventions",
+  "scope": "post-hoc inference interventions on frozen-encoder fits, not retraining or physical-mechanism proof",
+  "test_accessed": false,
+  "evidence": "Exploratory reused six development scenes",
+  "checkpoint_hashes": {
+    "attention_42_initial": "a3431e0a5e7202ed5c8cef52e03bd40d2117c332b6eee792ab3dac003afa2841",
+    "attention_42_final": "1e02842be701b740ace4dc6f4883f629af420e74d4404101e0f12f526dff1ecc",
+    "attention_43_initial": "7c6bf581678275d21a3ed995d75f77d122d746fd1e767c108d96da116d2c9faf",
+    "attention_43_final": "900cb244e9e04a5092ed3a64319cbc0bc9605eaf7aea62972eb928368d7fd752",
+    "attention_44_initial": "21b78adb49a1c86e389270a457fe65fa347518dfc5504c2826913321e07ffdfc",
+    "attention_44_final": "bb3f55fd659a2cc3840f4496bc9b8fc1dc8338eb03d943a0dc6d11c3197b1d24",
+    "concat_42_initial": "eb1500cf6775cf84312dca4f926f7cb5390e8ed129d5a8ac471f7b9998fee396",
+    "concat_42_final": "588bcf679831d16d5b03857137123945e0dfe540f47bff5e253cd07172903e3e",
+    "concat_43_initial": "f595271caa1ef8de4bc647bfaa1e7ec4c280a43c1084db203f706e028907187a",
+    "concat_43_final": "4ecef43b7eec30c5df83731d4338dedf368b99c1b988b2dab2bc75669871c266",
+    "concat_44_initial": "eae08b3b7e8da6257ca1e1a909a6ee36e97acff577f9df86d659a0f7a1de5d62",
+    "concat_44_final": "df6a46b8f6a72dad90d2b0375cd25468cd8ad671158039f6d6f3815c6b7a673b",
+    "separable_42_initial": "a8d9108cb754abb936ebbf0f8b9e64ca5bd323b51554c039af053e88969f9b5b",
+    "separable_42_final": "59e8fae78a1e2daf8a71f96b488798ef3c7ded977b97e4952e43d54d791635d6",
+    "separable_43_initial": "ccd47599edcbbcfb8d4d836cd173802ccfe5a69892b3c1e173e5ee4765b7de75",
+    "separable_43_final": "7b80baa93d81327f53133c2943cf08b6b59fd6285e94f5fdf567786e82e1028e",
+    "separable_44_initial": "c68789ae73b6b19a33465564c3c37cad86d4c1b0a8a8d0a4b0ea361f798e232b",
+    "separable_44_final": "e2b734ac01fc15062c6343fb4bd3a2a9f895d48dca7d9e6713a877addb2330cf"
+  },
+  "reference_protocol_sha256": "d520e505d0724c591fa4a9186ca9f104db9db91289cfd626b83a71406ee6abbf"
+}

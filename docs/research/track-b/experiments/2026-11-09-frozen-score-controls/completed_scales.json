@@ -1,0 +1,218 @@
+[
+  {
+    "mode": "attention",
+    "seed": 42,
+    "initial": {
+      "log_scale": {
+        "raw": 4.118583679199219,
+        "effective": 61.47211456298828
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237791538238525,
+        "effective": 69.2547378540039
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.135860919952393,
+        "effective": 62.54341125488281
+      },
+      "acoustic_log_scale": {
+        "raw": 4.551537990570068,
+        "effective": 94.77806091308594
+      }
+    }
+  },
+  {
+    "mode": "attention",
+    "seed": 43,
+    "initial": {
+      "log_scale": {
+        "raw": 4.110098361968994,
+        "effective": 60.95271301269531
+      },
+      "acoustic_log_scale": {
+        "raw": 4.239006996154785,
+        "effective": 69.3389663696289
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.115135669708252,
+        "effective": 61.26052474975586
+      },
+      "acoustic_log_scale": {
+        "raw": 4.553648948669434,
+        "effective": 94.97834777832031
+      }
+    }
+  },
+  {
+    "mode": "attention",
+    "seed": 44,
+    "initial": {
+      "log_scale": {
+        "raw": 4.1200971603393555,
+        "effective": 61.565223693847656
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237818241119385,
+        "effective": 69.25658416748047
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.143733024597168,
+        "effective": 63.03770446777344
+      },
+      "acoustic_log_scale": {
+        "raw": 4.551242351531982,
+        "effective": 94.75004577636719
+      }
+    }
+  },
+  {
+    "mode": "concat",
+    "seed": 42,
+    "initial": {
+      "log_scale": {
+        "raw": 4.118583679199219,
+        "effective": 61.47211456298828
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237791538238525,
+        "effective": 69.2547378540039
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.137764930725098,
+        "effective": 62.6626091003418
+      },
+      "acoustic_log_scale": {
+        "raw": 4.552579879760742,
+        "effective": 94.87686157226562
+      }
+    }
+  },
+  {
+    "mode": "concat",
+    "seed": 43,
+    "initial": {
+      "log_scale": {
+        "raw": 4.110098361968994,
+        "effective": 60.95271301269531
+      },
+      "acoustic_log_scale": {
+        "raw": 4.239006996154785,
+        "effective": 69.3389663696289
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.114950180053711,
+        "effective": 61.24916076660156
+      },
+      "acoustic_log_scale": {
+        "raw": 4.55408239364624,
+        "effective": 95.01952362060547
+      }
+    }
+  },
+  {
+    "mode": "concat",
+    "seed": 44,
+    "initial": {
+      "log_scale": {
+        "raw": 4.1200971603393555,
+        "effective": 61.565223693847656
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237818241119385,
+        "effective": 69.25658416748047
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.144411563873291,
+        "effective": 63.08049392700195
+      },
+      "acoustic_log_scale": {
+        "raw": 4.552452087402344,
+        "effective": 94.86473846435547
+      }
+    }
+  },
+  {
+    "mode": "separable",
+    "seed": 42,
+    "initial": {
+      "log_scale": {
+        "raw": 4.118583679199219,
+        "effective": 61.47211456298828
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237791538238525,
+        "effective": 69.2547378540039
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.1378560066223145,
+        "effective": 62.66831588745117
+      },
+      "acoustic_log_scale": {
+        "raw": 4.552484512329102,
+        "effective": 94.86781311035156
+      }
+    }
+  },
+  {
+    "mode": "separable",
+    "seed": 43,
+    "initial": {
+      "log_scale": {
+        "raw": 4.110098361968994,
+        "effective": 60.95271301269531
+      },
+      "acoustic_log_scale": {
+        "raw": 4.239006996154785,
+        "effective": 69.3389663696289
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.1137614250183105,
+        "effective": 61.176395416259766
+      },
+      "acoustic_log_scale": {
+        "raw": 4.5532684326171875,
+        "effective": 94.94221496582031
+      }
+    }
+  },
+  {
+    "mode": "separable",
+    "seed": 44,
+    "initial": {
+      "log_scale": {
+        "raw": 4.1200971603393555,
+        "effective": 61.565223693847656
+      },
+      "acoustic_log_scale": {
+        "raw": 4.237818241119385,
+        "effective": 69.25658416748047
+      }
+    },
+    "final": {
+      "log_scale": {
+        "raw": 4.143706798553467,
+        "effective": 63.03605270385742
+      },
+      "acoustic_log_scale": {
+        "raw": 4.55237340927124,
+        "effective": 94.8572769165039
+      }
+    }
+  }
+]
