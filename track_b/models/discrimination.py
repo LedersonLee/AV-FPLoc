@@ -9,8 +9,14 @@ from torch import nn
 
 
 def candidate_features(v, a, candidates, visual_fp, acoustic_fp, visual_score,
-                       acoustic_score, indices, visible):
-    fused = .85 * visual_score + .15 * acoustic_score
+                       acoustic_score, indices, visible, *, score_field=None):
+    # The posterior must come from the same full scorer that generated proposals.
+    # None preserves the historical independent-F1 backend exactly.
+    fused = .85 * visual_score + .15 * acoustic_score if score_field is None else score_field
+    if fused.shape != visual_score.shape or fused.ndim != 1 or len(fused) != len(candidates):
+        raise ValueError("Expected one full-field score per candidate")
+    if not torch.isfinite(fused).all():
+        raise ValueError("Valid candidate scores must be finite")
     logp = fused.log_softmax(-1)
     pose = candidates[:, :3]
     delta = pose[indices, None] - pose[None]
