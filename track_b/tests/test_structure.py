@@ -49,3 +49,15 @@ def test_rigid_map_frame_and_raw_geometry_control():
     torch.testing.assert_close(before,m(rgb,spec,fp,transformed,moved),atol=3e-5,rtol=1e-5)
     raw=m(rgb,spec,fp,cal,p,geometry_residual=False)
     torch.testing.assert_close(raw,m(rgb,spec,torch.zeros_like(fp),cal,p,geometry_residual=False))
+
+
+def test_training_regimes_after_pretraining():
+    from track_b.train_regimes import set_regime
+    rgb,rir,fp,cal,p=fixture();spec=rir_spectrum(rir);fp=fp[:1];p=torch.cat([p,torch.rand(len(p),16),torch.ones(len(p),16)],1)
+    for regime in ('frozen','partial','joint'):
+        m=StructureMatcher();active=set_regime(m,regime)
+        loss=-m(rgb,spec,fp,cal,p).log_softmax(-1)[:,1].mean();loss.backward()
+        assert m.log_scale.grad is not None
+        if regime=='frozen':assert active==1
+        if regime!='joint':assert all(x.grad is None for b in (m.visual.conv,m.acoustic.conv,m.floorplan) for x in b.parameters())
+        if regime=='partial':assert m.visual.head[-2].weight.grad.abs().sum()>0

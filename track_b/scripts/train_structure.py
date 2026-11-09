@@ -5,6 +5,7 @@ import numpy as np
 import torch
 from track_b.models.structure import StructureMatcher,auxiliary_loss,visible_rays
 from track_b.models.dense import dense_loss
+from track_b.train_regimes import set_regime
 
 
 def read(p):return json.loads(p.read_text())
@@ -80,10 +81,10 @@ def evaluate(model,scenes,mode,residual,interventions=True,diversity=True):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--cache',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--modes',nargs='+',default=['visual','acoustic','fusion'],choices=['visual','acoustic','fusion']);ap.add_argument('--seeds',nargs='+',type=int,default=[42,43,44]);ap.add_argument('--arm',choices=['supervised','shuffled','dense_only'],default='supervised')
-    ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);args=ap.parse_args()
+    ap.add_argument('--regime',choices=['frozen','partial','joint'],default='joint');ap.add_argument('--aux-steps',type=int,default=1500);ap.add_argument('--dense-steps',type=int,default=1000);ap.add_argument('--batch-size',type=int,default=8);args=ap.parse_args()
     args.out.mkdir(parents=True,exist_ok=False);torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.4);torch.backends.cudnn.benchmark=False
     data_protocol=read(args.cache/'protocol.json');manifest=read(args.cache/'manifest.json');assert len(manifest)==sum(map(len,data_protocol['scenes'].values())),'Cache incomplete'
-    protocol=dict(arm=args.arm,modes=args.modes,seeds=args.seeds,aux_steps=args.aux_steps,dense_steps=args.dense_steps,batch_size=args.batch_size,
+    protocol=dict(arm=args.arm,encoder_regime=args.regime,modes=args.modes,seeds=args.seeds,aux_steps=args.aux_steps,dense_steps=args.dense_steps,batch_size=args.batch_size,
         cache_protocol_sha256=sha(args.cache/'protocol.json'),cache_manifest_sha256=sha(args.cache/'manifest.json'),data=data_protocol,aux_weight=10.,lr=.0003,
         objective='continuous FP boundary ray MSE + exact full-grid soft CE; labels are training-only',
         controls='shuffled permutes target geometry within scene; dense_only uses all updates for dense loss without auxiliary term',
@@ -104,6 +105,9 @@ def main():
         rng=np.random.default_rng(seed);history=[];aux_eval_seconds=0.;start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
         total=args.aux_steps+args.dense_steps
         for step in range(total):
+            if (args.arm=='dense_only' and step==0) or (args.arm!='dense_only' and step==args.aux_steps):
+                active=set_regime(model,args.regime)
+                print(json.dumps(dict(mode=mode,seed=seed,regime=args.regime,trainable_parameters=active)),flush=True)
             model.train();s=scenes['train'][int(rng.integers(len(scenes['train'])))];ids=torch.tensor(rng.integers(len(s['gt']),size=args.batch_size),device='cuda')
             v,a=observe(model,s,ids,mode);target_ids=permutations[s['scene']][ids] if args.arm=='shuffled' else ids
             aux=auxiliary_loss(v,a,s['target'][target_ids],mode);opt.zero_grad()
@@ -116,6 +120,7 @@ def main():
             if step%100==0 or step==total-1:
                 rec=dict(step=step,loss=float(loss),aux=float(aux),dense_ce=float(ce),elapsed_s=time.perf_counter()-start);history.append(rec);print(json.dumps(dict(seed=seed,mode=mode,**rec)),flush=True)
             if step+1==args.aux_steps and args.arm!='dense_only':
+                torch.save(model.state_dict(),args.out/f'{mode}_{seed}_pretrained.pt')
                 torch.cuda.synchronize();aux_start=time.perf_counter()
                 aux_eval=evaluate(model,scenes['val'],mode,False,interventions=False,diversity=False)
                 torch.cuda.synchronize();aux_eval_seconds+=time.perf_counter()-aux_start
@@ -123,7 +128,7 @@ def main():
         torch.cuda.synchronize();train_seconds=time.perf_counter()-start;peak=torch.cuda.max_memory_allocated();torch.save(model.state_dict(),args.out/f'{mode}_{seed}.pt')
         train_eval=evaluate(model,scenes['train'],mode,True,interventions=False,diversity=False)
         val_eval=evaluate(model,scenes['val'],mode,True,interventions=True,diversity=True)
-        record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),train=train_eval,val=val_eval)
+        record=dict(seed=seed,mode=mode,arm=args.arm,history=history,training_and_aux_eval_seconds=train_seconds,training_seconds=train_seconds-aux_eval_seconds,aux_eval_seconds=aux_eval_seconds,peak_vram_bytes=peak,parameters=sum(p.numel() for p in model.parameters()),trainable_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),encoder_regime=args.regime,train=train_eval,val=val_eval)
         (args.out/f'{mode}_{seed}.json').write_text(json.dumps(record,indent=2));aggregate={k:v for k,v in record.items() if k not in ('train','val','history')};aggregate.update(train=train_eval['summary'],val=val_eval['summary'])
         all_results.append(aggregate);(args.out/'summary.json').write_text(json.dumps(all_results,indent=2));print(json.dumps(aggregate),flush=True)
         del model,opt
