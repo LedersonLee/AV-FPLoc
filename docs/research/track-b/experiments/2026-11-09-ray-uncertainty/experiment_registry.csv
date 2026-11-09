@@ -10,3 +10,4 @@ audio_noise20_v1,1c24188091148a53c513e441ed056cc949e5bf3d,completed,Observed bod
 eval_smoke_v1,bf9a825cf58f584e6803f5026977fc1b32c7aafb,completed,54 metric rows and6U0 replay checks
 eval_normal_v1,bf9a825cf58f584e6803f5026977fc1b32c7aafb,running,Full19Val three seeds primary and prespecified scale diagnostic
 shift_evaluations_v1,ba040da65e3cf3339a716e9dc8a6af07c1a488d7,running,Six prescribed conditions after input and smoke verification
+runtime_audit_v1,757a17af572e3239f5996f5062f7fec6ef819940,completed,One-query15 field comparisons and limited Python I/O timing audit

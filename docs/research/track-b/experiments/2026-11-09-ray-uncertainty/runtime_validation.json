@@ -1,0 +1,201 @@
+{
+  "code_sha": "757a17af572e3239f5996f5062f7fec6ef819940",
+  "scene": "108736611_177263226",
+  "seed": 42,
+  "query_position": 0,
+  "candidates": 99612,
+  "checks": [
+    {
+      "arm": "U0",
+      "method": "visual",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U0",
+      "method": "acoustic",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U0",
+      "method": "fixed",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U1",
+      "method": "visual",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U1",
+      "method": "acoustic",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U1",
+      "method": "fixed",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U2",
+      "method": "visual",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U2",
+      "method": "acoustic",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U2",
+      "method": "fixed",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U3",
+      "method": "visual",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U3",
+      "method": "acoustic",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U3",
+      "method": "fixed",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U4",
+      "method": "visual",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U4",
+      "method": "acoustic",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    },
+    {
+      "arm": "U4",
+      "method": "fixed",
+      "max_abs": 0.0,
+      "allclose": true,
+      "argmax_equal": true,
+      "top_score_ties": 1
+    }
+  ],
+  "python_open_events": [],
+  "audio_shuffle_max_field_change": 0.23998546600341797,
+  "scale_permutation_max_field_change": 0.04192686080932617,
+  "map_setup_seconds": 0.13608669908717275,
+  "timing": {
+    "U0": {
+      "repetitions": 5,
+      "warmup": 2,
+      "milliseconds": [
+        0.5471301265060902,
+        0.5211618263274431,
+        0.5172761157155037,
+        0.5195699632167816,
+        0.53202616982162
+      ],
+      "median_ms": 0.5211618263274431,
+      "peak_allocated_bytes": 155998208
+    },
+    "U1": {
+      "repetitions": 5,
+      "warmup": 2,
+      "milliseconds": [
+        7.793554803356528,
+        7.465251022949815,
+        7.38033396191895,
+        7.878993870690465,
+        7.182479836046696
+      ],
+      "median_ms": 7.465251022949815,
+      "peak_allocated_bytes": 155012096
+    },
+    "U2": {
+      "repetitions": 5,
+      "warmup": 2,
+      "milliseconds": [
+        7.599106058478355,
+        7.558839861303568,
+        9.317310992628336,
+        6.024559028446674,
+        8.18540994077921
+      ],
+      "median_ms": 7.599106058478355,
+      "peak_allocated_bytes": 155012096
+    },
+    "U3": {
+      "repetitions": 5,
+      "warmup": 2,
+      "milliseconds": [
+        8.087634108960629,
+        6.5126558765769005,
+        6.9338008761405945,
+        7.6385620050132275,
+        6.841385969892144
+      ],
+      "median_ms": 6.9338008761405945,
+      "peak_allocated_bytes": 155012096
+    },
+    "U4": {
+      "repetitions": 5,
+      "warmup": 2,
+      "milliseconds": [
+        8.125524036586285,
+        9.410643950104713,
+        8.009620942175388,
+        6.956638069823384,
+        7.957549998536706
+      ],
+      "median_ms": 8.009620942175388,
+      "peak_allocated_bytes": 155012096
+    }
+  },
+  "scope": "One reused Val query/seed; cached foundation observations, maps and models preloaded. No GT/target/IDs in scoring. Python open hooks only, not native/syscall tracing. Timing includes local encoders, scales and field scoring; excludes raw RGB/RIR, upstream features, loading, Top20/metrics and maps; concurrent GPU evaluations."
+}
