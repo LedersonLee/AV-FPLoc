@@ -31,3 +31,12 @@ def test_interaction_rigid_frame_and_new_map_without_labels():
   torch.testing.assert_close(before,after,atol=3e-5,rtol=1e-5)
   assert m(rgb,spec,torch.rand(1,2,17,23),cal,p).shape==before.shape
   assert not torch.allclose(before,m(rgb,spec.flip(0),fp,cal,p),atol=1e-5,rtol=1e-5)
+
+def test_frozen_map_cache_preserves_all_candidate_scores():
+ rgb,rir,fp,cal,p=fixture();spec=rir_spectrum(rir);fp=fp[:1];p=torch.cat([p,torch.rand(len(p),16),torch.ones(len(p),16)],1)
+ for mode in ('attention','concat','separable'):
+  m=InteractionMatcher(mode).eval()
+  with torch.no_grad():
+   plain=m(rgb,spec,fp,cal,p,chunk_size=17);cache=m.prepare_map(fp,cal,p,chunk_size=13);cached=m.forward_cached(rgb,spec,cache,chunk_size=19)
+  torch.testing.assert_close(plain,cached,atol=3e-5,rtol=1e-5)
+  assert set(cache)=={'fp','q','weight','hfov'} and len(cache['fp'])==len(p)

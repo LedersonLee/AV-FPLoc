@@ -28,7 +28,7 @@ class InteractionMatcher(StructureMatcher):
         self.v_retrieval=Retrieval(d);self.a_retrieval=Retrieval(d)
         self.gate=nn.Sequential(nn.Linear(3*d,32),nn.GELU(),nn.Linear(32,1))
         self.joint_head=nn.Sequential(nn.Linear(5*d,64),nn.GELU(),nn.Linear(64,1))
-    def encode(self,rgb,spectrum,floorplan):
+    def encode_observations(self,rgb,spectrum):
         vc=self.visual.conv(rgb);ac=self.acoustic.conv(spectrum)
         v=self.visual.head(F.adaptive_avg_pool2d(vc,self.visual.pooled).flatten(1));a=self.acoustic.head(F.adaptive_avg_pool2d(ac,self.acoustic.pooled).flatten(1))
         vt=self.v_projection(F.adaptive_avg_pool2d(vc,(1,16)).flatten(2).transpose(1,2))
@@ -39,11 +39,16 @@ class InteractionMatcher(StructureMatcher):
         ap=torch.stack(torch.meshgrid(torch.linspace(-1,1,4,device=rgb.device),torch.linspace(-1,1,16,device=rgb.device),indexing='ij'),-1).reshape(-1,2)
         vt=vt+.1*torch.sin(vp*frequency)
         at=at+.1*(torch.sin(ap[:,:1]*frequency)+torch.cos(ap[:,1:]*frequency))
-        return v,a,vt,at,self.floorplan(floorplan)
+        return v,a,vt,at
+    def encode(self,rgb,spectrum,floorplan):
+        return (*self.encode_observations(rgb,spectrum),self.floorplan(floorplan))
     def score_chunk(self,v,a,vt,at,feature,candidates,cal):
         fp=self.fp_descriptors(feature,candidates,cal);q=self.q_projection(torch.cat([fp,candidates[:,3:]],-1))
+        weight=.25+.75*candidates[:,19:35]
+        return self.score_context(v,a,vt,at,fp,q,weight,cal.get('hfov_deg',106.2602))
+    def score_context(self,v,a,vt,at,fp,q,weight,hfov):
         vp=self.v_retrieval(q,vt,self.mode=='attention');ap=self.a_retrieval(q,at,self.mode=='attention');qq=q[None].expand(len(v),-1,-1)
-        weight=.25+.75*candidates[:,19:35];sv=self.match(v,fp,weight*visible_rays(cal.get('hfov_deg',106.2602),device=v.device));sa=self.match(a,fp,weight)
+        sv=self.match(v,fp,weight*visible_rays(hfov,device=v.device));sa=self.match(a,fp,weight)
         if self.mode=='separable':
             # Sum of visual-only and acoustic-only functions conditional on the map.
             jv=self.joint_head(torch.cat([qq,vp,vp,vp.square(),vp.abs()],-1)).squeeze(-1)
@@ -61,3 +66,22 @@ class InteractionMatcher(StructureMatcher):
             else:parts.append(compute(v,a,vt,at,feature,p))
         field=torch.cat(parts,-1)
         return (field,v,a) if return_aux else field
+
+    @torch.no_grad()
+    def prepare_map(self,floorplan,cal,candidates,chunk_size=2048):
+        """Frozen-model inference cache: learned FP descriptors/queries, never RIRs.
+
+        Invalidate after changing model parameters, map, candidate bank or calibration.
+        """
+        if self.training:raise RuntimeError('Map cache requires eval mode')
+        feature=self.floorplan(floorplan);fp=torch.cat([self.fp_descriptors(feature,p,cal) for p in candidates.split(chunk_size)])
+        q=self.q_projection(torch.cat([fp,candidates[:,3:]],-1));weight=.25+.75*candidates[:,19:35]
+        return dict(fp=fp,q=q,weight=weight,hfov=cal.get('hfov_deg',106.2602))
+    @torch.no_grad()
+    def forward_cached(self,rgb,spectrum,cache,chunk_size=2048):
+        if self.training:raise RuntimeError('Cached inference requires eval mode')
+        v,a,vt,at=self.encode_observations(rgb,spectrum);fields=[]
+        for start in range(0,len(cache['fp']),chunk_size):
+            part=slice(start,start+chunk_size)
+            fields.append(self.score_context(v,a,vt,at,cache['fp'][part],cache['q'][part],cache['weight'][part],cache['hfov']))
+        return torch.cat(fields,-1)
