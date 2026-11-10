@@ -1,0 +1,14 @@
+{
+  "code_sha": "1e9b5b9ecf6f185f483486a26f7e339809d5a8bd",
+  "part": "development_holdout",
+  "scenes": 19,
+  "frozen_checkpoints": 39,
+  "representation_scene_condition_checks": 684,
+  "query_pose_metric_checks": 109440,
+  "identical_visual_predictions_across_arms_and_input_conditions": true,
+  "summary_rows_match_saved_metrics": true,
+  "cache_hashes_match": true,
+  "freeze_sha256": "b18860247fff8f60e776ee7b3304e2bbcdcd0585776d96790aa6e3b1f72858fa",
+  "evaluation_summary_sha256": "f5c6322a8ac999c40dee366cb2282d0673dc3ad766fef1fb5b9a282986d5b24f",
+  "limits": "Does not independently regenerate every score field/NLL or prove acoustic identifiability; separate raw inference replay covers two development probes"
+}

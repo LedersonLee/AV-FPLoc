@@ -21,3 +21,5 @@
 The frozen holdout reproduces the directional failure and absence of a clear geometry-pretraining gain. All different-position shuffle, probabilistic calibration, phase ablation, localization entropy, per-family values and paired transfer intervals are in [aggregate](development_heldout_summary.json). No model or threshold changes follow these results.
 
 Actual cache source45e4ce0; evaluation6907b72. Source abbreviations resolve in this repository; frozen weights are identified separately in [method freeze](method_freeze.json).
+
+Independent saved-output verification: all39 frozen checkpoint hashes and19 cache hashes match;684 representation scene/condition records recompute MAE/RMSE/probability normalization/NLL from saved arrays;109,440 query metric records recompute pose errors and recall from saved candidate indices. Visual predictions match across all acoustic arms, and summary rows match saved metrics. [Verification](development_verification.json), source `1e9b5b9ecf6f185f483486a26f7e339809d5a8bd`. This does not independently regenerate every score field or establish identifiability.
