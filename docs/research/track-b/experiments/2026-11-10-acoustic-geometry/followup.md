@@ -1,6 +1,6 @@
 # Transfer and physical intervention follow-up
 
-2026-11-10, Study31, Track B. Inner-development evidence is Exploratory. All negative outcomes retained. The full study is active pending frozen held-out evaluation.
+2026-11-10, Study31, Track B. Inner-development evidence is Exploratory. All negative outcomes retained. This follow-up documents development findings; the completed official evaluation is reported separately in [official results](official_results.md).
 
 ## Hypothesis and result
 
@@ -30,14 +30,14 @@ See [paired results](pair_results.md).16 inner-val families,8 predeclared unifor
 
 Renderer settings:48kHz,6 omni microphones at5cm radius, centre source,20000 indirect rays,depth50,512 source rays,diffraction max order10,default materials,transmission disabled. No pose snapping. Native stage/config/helper hashes and loaded object counts are checked. Fresh repeats are not bit-identical, so waveform change alone cannot identify furniture effects. Furnished poses were originally selected under furnished navigability; results are conditional on that selection. No real-world invariance claim is justified.
 
-## Provenance, failures and pending evaluation
+## Provenance, failures and evaluation freeze
 
 Transfer training `f6e9d922df2b5df31c976a6da363fb1193ee4920`; summary `334695c1d7787e64c28fb475de9659c499dedf96`; runtime `c55c0ae93f7a72517765fbda3364fc084f0ad3c0`; strata `d992c2cdf811c4da898eed19b0579dddfac5adee`; phase contrast `b241e0a50d03f7b3aeb94e7ae30ede63aa5abafc`. Native pairs source `16ec5114d323dbd56decc5e7687da639ecaa470c`; opening renderer `8ee29be225f83f9a0786e08201fefa9379eeda98`. Raw data/checkpoints remain external under the study output root. Code base has two unrelated dirty Gibson files excluded from every commit; none is imported here.
 
 Failed CPU smoke `pair_smoke_v1` stopped at image entrypoint user setup before Python. An earlier Habitat import without the established libstdc++ preload failed with invalid free; the corrected CPU launcher passed. `pair_smoke_v2` and `opening_smoke_v1` passed. The one-scene pair evaluator smoke had an overly broad evidence label, corrected to dynamic cohort counts before the full run. No failed artifacts were overwritten.
 
-[Method freeze](method_freeze.json) records39 actual checkpoint hashes before held-out performance.19 historical development scenes retain previous upstream/study exposure. Official17 Test families have zero overlap with the development split, but3 prior observed directories and earlier visual Test use/upstream Hypersim asset-family exposure are not fully excluded. Fresh acoustic rendering does not erase those facts. Evaluate every fixed arm/seed, without adjusting epochs, architecture or thresholds. Current completion is not claimed.
+[Method freeze](method_freeze.json) records39 actual checkpoint hashes before held-out performance.19 historical development scenes retain previous upstream/study exposure. Official17 Test families have zero overlap with the development split, but3 prior observed directories and earlier visual Test use/upstream Hypersim asset-family exposure are not fully excluded. Fresh acoustic rendering does not erase those facts. Evaluate every fixed arm/seed, without adjusting epochs, architecture or thresholds. The frozen evaluation subsequently completed; see [final conclusion](conclusion.md).
 
 Geometry-conditioned cross-modal matching remains a possible research direction, not a conclusion compelled by these results. The present bottleneck could be target masking, weak angular identifiability, frontend/architecture or learning budget; the failed transfer alone cannot identify which. A subsequent architecture study should require angular countercontrols and equal-budget localization gains before claiming useful structural matching.
 
-Validation update: all7 geometry target/model/transfer/opening-control unit checks pass in the training container. Frozen19-scene holdout outputs and completed physical controls are linked from the main report. Official observation rendering remains active; its completion marker gates feature preparation and frozen evaluation, and failed/interrupted generation cannot silently pass that gate.
+Validation update: all7 geometry target/model/transfer/opening-control unit checks pass in the training container. Frozen19-scene holdout outputs and completed physical controls are linked from the main report. Official observation rendering subsequently completed; its completion marker gated feature preparation and frozen evaluation.

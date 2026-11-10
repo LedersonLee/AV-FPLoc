@@ -1,0 +1,146 @@
+{
+  "official_targets_v1": {
+    "protocol": {
+      "scenes": {
+        "official_test": [
+          "104862687_172226883",
+          "105515151_173104068",
+          "107734119_175999932",
+          "105515184_173104128",
+          "102816114",
+          "108736884_177263634",
+          "104862417_172226382",
+          "105515403_173104449",
+          "102816066",
+          "102816216",
+          "103997994_171031320",
+          "103997586_171030666",
+          "102344280",
+          "108736656_177263304",
+          "107734017_175999794",
+          "107734176_176000019",
+          "105515301_173104305"
+        ]
+      },
+      "code_sha": "689915c776f3e136c87031bec8dc45725b190655",
+      "cohort_sha256": "7222586d45b1bbc2f67bf878b081a8b75282f0a6206bcef1ca4da25a8742b91b",
+      "directions": 36,
+      "max_range_m": 20.0,
+      "queries_per_scene": 64,
+      "normal_y_abs_max": 0.15,
+      "supervision": "first vertical architectural stage intersection at receiver height; no furniture; no semantic outer closure",
+      "limitations": "Architectural stage may contain fixed built-ins; vertical-surface proxy, not semantic wall classification. Door/window holes remain openings. Beyond-range/no-hit masked. Stage hit past first canonical blocked boundary by >0.20m is conservatively masked (indoor-scope/disagreement filter); map boundary never supplies target depth.",
+      "official_test_accessed": true,
+      "evidence": "Scene-disjoint official Test after method freeze; historical Test scene exposure/upstream asset-family independence not fully excluded",
+      "selection": "all official Test scenes and uniform64 queries, fixed before labels/results; no method selection",
+      "method_freeze_sha256": "b18860247fff8f60e776ee7b3304e2bbcdcd0585776d96790aa6e3b1f72858fa"
+    },
+    "protocol_sha256": "10ef531f9ed44863aa4798c7423262e869f59a1f257a3e12e1cb955df928d370",
+    "complete_marker": "689915c776f3e136c87031bec8dc45725b190655"
+  },
+  "official_pairs_v1": {
+    "protocol": {
+      "code_sha": "689915c776f3e136c87031bec8dc45725b190655",
+      "scenes": [
+        "104862687_172226883",
+        "105515151_173104068",
+        "107734119_175999932",
+        "105515184_173104128",
+        "102816114",
+        "108736884_177263634",
+        "104862417_172226382",
+        "105515403_173104449",
+        "102816066",
+        "102816216",
+        "103997994_171031320",
+        "103997586_171030666",
+        "102344280",
+        "108736656_177263304",
+        "107734017_175999794",
+        "107734176_176000019",
+        "105515301_173104305"
+      ],
+      "part": "official_test",
+      "queries_per_scene": 64,
+      "selection": "one variant per source family in frozen order; uniform query indices before pair results",
+      "targets_protocol_sha256": "10ef531f9ed44863aa4798c7423262e869f59a1f257a3e12e1cb955df928d370",
+      "method_freeze_sha256": "b18860247fff8f60e776ee7b3304e2bbcdcd0585776d96790aa6e3b1f72858fa",
+      "geometry": "same native stage, with all original object instances or with zero object instances",
+      "acoustics": {
+        "gpu_device_id": -1,
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "source_receiver": "exact captured centre,6 omni microphones at radius0.05m;48kHz; original stored base heading",
+      "default_materials": true,
+      "transmission": false,
+      "cpu_only": true,
+      "repeat": "fresh simulator furnished repeat of first selected query in each scene; detects numerical/render variability",
+      "helper_hashes": {
+        "hssd_positive_pairs.py": "f35c9817757e74093105b961c434fe8e38143860823513768a931323c445816d",
+        "render_hssd_paired_rirs.py": "73cffaf440f1fad1a6ac4b828ab63ec7c4079efbce6177e891f35d31c039a296",
+        "render_hssd_exp4_ring_rirs.py": "3f58bf6f361d76d4dff3b8b85bf05370a747740d6fcfa114d128a848f1c55904",
+        "render_hssd_ring_symmetry_smoke.py": "6c71d397ac138f0c28edef435edc7e347b952e6de9ff7a50d4dbecc8dfee184d",
+        "hssd_cpu_rir_contract.py": "7bbb548a5cf0fc14fcfbb2da00cbb9cb0b9e9f0b02b1e8fe7914665e49fd9578"
+      }
+    },
+    "protocol_sha256": "3f73cad7a77de08d8a7c9ed0fd625db97c95061b189a73bce70911ad574a6d69",
+    "complete_marker": "689915c776f3e136c87031bec8dc45725b190655"
+  },
+  "official_cache_v1": {
+    "protocol": {
+      "code_sha": "45e4ce0",
+      "part": "official_test",
+      "scenes": [
+        "104862687_172226883",
+        "105515151_173104068",
+        "107734119_175999932",
+        "105515184_173104128",
+        "102816114",
+        "108736884_177263634",
+        "104862417_172226382",
+        "105515403_173104449",
+        "102816066",
+        "102816216",
+        "103997994_171031320",
+        "103997586_171030666",
+        "102344280",
+        "108736656_177263304",
+        "107734017_175999794",
+        "107734176_176000019",
+        "105515301_173104305"
+      ],
+      "freeze_sha256": "b18860247fff8f60e776ee7b3304e2bbcdcd0585776d96790aa6e3b1f72858fa",
+      "targets_manifest_sha256": "a1702608126d3d579bdd168d0605f68c7ecdf472a33dbb185384dc8f5476069b",
+      "pairs_manifest_sha256": "ea24e382454d690483563ea32e76936f565c5e9d39f496aab95aec92bb43029c",
+      "inference": "RGB/body-aligned RIR/known map only; GT and structural depth are evaluation-only",
+      "upstream_checkpoint_sha256": "6f82ff2bc543ac02ddff4aa31fa363676a8305dd3ccf04e80e2af115a044cb6d"
+    },
+    "protocol_sha256": "9dc339cfff307bec8e2edef894b4c41cfadeb54b6f41dee9073a487abdc4067a",
+    "complete_marker": "45e4ce0"
+  },
+  "official_evaluation_v1": {
+    "protocol": {
+      "code_sha": "6907b72",
+      "cache_protocol_sha256": "9dc339cfff307bec8e2edef894b4c41cfadeb54b6f41dee9073a487abdc4067a",
+      "freeze_sha256": "b18860247fff8f60e776ee7b3304e2bbcdcd0585776d96790aa6e3b1f72858fa",
+      "part": "official_test",
+      "evidence": "19 development holdout scenes previously reused upstream/other studies. Three official Test observed scene directories already exist; prior visual Test usage and upstream Hypersim asset-family overlap are not fully excluded, so no blanket pristine/full-pipeline independent claim. Fresh raw acoustic rendering does not itself erase scene exposure.",
+      "policy": "all frozen models; identical metrics and no fitting"
+    },
+    "protocol_sha256": "7788cd80dda4eff3c2de62327f3045d51c18137af162f15fda6e9bd959652de6",
+    "complete_marker": "6907b72"
+  },
+  "source_shas": {
+    "targets_and_renderer": "689915c776f3e136c87031bec8dc45725b190655",
+    "cache": "45e4ce043fe494bfdaf4e3e59de97623381eeac3",
+    "evaluation": "6907b7280588582e2b3cfd85aaf41e61f08e6256",
+    "verification": "1e9b5b9ecf6f185f483486a26f7e339809d5a8bd",
+    "report": "3ee938b8daffa2229d1b06993993f62ddb1e6d1d"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "scenes": 17,
+  "records": 2193,
+  "all_waveform_hashes_match": true,
+  "all_expected_counts_match": true,
+  "render_source_sha": "689915c776f3e136c87031bec8dc45725b190655",
+  "pair_manifest_sha256": "ea24e382454d690483563ea32e76936f565c5e9d39f496aab95aec92bb43029c",
+  "pair_protocol_sha256": "3f73cad7a77de08d8a7c9ed0fd625db97c95061b189a73bce70911ad574a6d69",
+  "per_scene": [
+    {
+      "scene": "104862687_172226883",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "105515151_173104068",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "107734119_175999932",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "105515184_173104128",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "102816114",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "108736884_177263634",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "104862417_172226382",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "105515403_173104449",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "102816066",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "102816216",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "103997994_171031320",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "103997586_171030666",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "102344280",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "108736656_177263304",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "107734017_175999794",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "107734176_176000019",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    },
+    {
+      "scene": "105515301_173104305",
+      "furnished": 64,
+      "stage_only": 64,
+      "furnished_repeat": 1
+    }
+  ]
+}

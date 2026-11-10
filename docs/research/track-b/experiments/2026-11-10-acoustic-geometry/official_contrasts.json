@@ -1,0 +1,528 @@
+{
+  "code_sha": "3ee938b",
+  "evaluation_summary_sha256": "44416859f2967c468dc571ad5e17ad745012c09dab8c07e2b7463f7aaf51e208",
+  "evidence": "19 development holdout scenes previously reused upstream/other studies. Three official Test observed scene directories already exist; prior visual Test usage and upstream Hypersim asset-family overlap are not fully excluded, so no blanket pristine/full-pipeline independent claim. Fresh raw acoustic rendering does not itself erase scene exposure.",
+  "uncertainty": "10,000 source-family paired bootstrap draws after seed averaging; uncorrected intervals",
+  "contrasts": [
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.3059001296174293,
+      "ci95": [
+        0.25791579917365426,
+        0.3596723594501907
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "scalarized_minus_normal",
+      "mean": -0.0020289304209690252,
+      "ci95": [
+        -0.004930326868506047,
+        0.0008696608099283984
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.006495319160760587,
+      "ci95": [
+        0.0007188511245390471,
+        0.01230827727738546
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.19565561705944587,
+      "ci95": [
+        0.14879979678228789,
+        0.2546015103658041
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "stage_only_minus_furnished",
+      "mean": 0.08509498717738133,
+      "ci95": [
+        0.061749481278307296,
+        0.10949130514088802
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.23897009971095068,
+      "ci95": [
+        0.19577258018886343,
+        0.2894797138723673
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "scalarized_minus_normal",
+      "mean": -0.0022447272843005525,
+      "ci95": [
+        -0.004005560395764343,
+        -0.00031990227746025784
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.0021885212729958665,
+      "ci95": [
+        -0.00137678945765778,
+        0.006427610913912411
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.14356087235843434,
+      "ci95": [
+        0.08075844978584965,
+        0.2172689467668532
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "stage_only_minus_furnished",
+      "mean": 0.1032031330407835,
+      "ci95": [
+        0.060619242693863686,
+        0.15648360871801198
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.26313514569226426,
+      "ci95": [
+        0.22328044590996757,
+        0.3072414778611238
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "scalarized_minus_normal",
+      "mean": 0.000297513662600028,
+      "ci95": [
+        -0.0008273003732457265,
+        0.0015598678705738725
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.002235971245111147,
+      "ci95": [
+        -2.1579686333203637e-05,
+        0.004749968414213095
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.16420711956772147,
+      "ci95": [
+        0.11683947087502942,
+        0.2155078579982121
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.05295330402897851,
+      "ci95": [
+        0.04097255164501712,
+        0.06659466852160055
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "stage_only_minus_furnished",
+      "mean": 0.08986212693008715,
+      "ci95": [
+        0.05815064433742969,
+        0.1255551736728817
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.12001248200734459,
+      "ci95": [
+        0.0953459356345382,
+        0.14546740715410195
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "scalarized_minus_normal",
+      "mean": 0.0002742678511376257,
+      "ci95": [
+        -0.0005980360741708752,
+        0.001187538691595429
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.001032878370846006,
+      "ci95": [
+        -0.0007143441952911124,
+        0.002839715808045601
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "train_median_minus_normal",
+      "mean": -0.007251711452708538,
+      "ci95": [
+        -0.0736258304586598,
+        0.06722755309413454
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.04080740844502165,
+      "ci95": [
+        0.031109059032271878,
+        0.05039034742935029
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "furnished",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "stage_only_minus_furnished",
+      "mean": -0.013706658400741308,
+      "ci95": [
+        -0.03384081166164554,
+        0.007544683124504718
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.21036784789141483,
+      "ci95": [
+        0.1602689883288216,
+        0.2628941824038823
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "scalarized_minus_normal",
+      "mean": -0.0028802530438292433,
+      "ci95": [
+        -0.005339101249096462,
+        -0.0003768829154033208
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.0039946962805355295,
+      "ci95": [
+        -0.0009123887501510829,
+        0.008898885051409414
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.11056062988206453,
+      "ci95": [
+        0.058736600303182424,
+        0.17062739519511952
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.05901259300755514,
+      "ci95": [
+        0.024897535934167662,
+        0.10494137651780067
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "scalarized_minus_normal",
+      "mean": -0.0014303875904457678,
+      "ci95": [
+        -0.0025466062274633722,
+        -0.00023769274646165598
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.0014251026452756091,
+      "ci95": [
+        -0.0009991652240940389,
+        0.004017114639282204
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.04035773931765084,
+      "ci95": [
+        0.005074559941011256,
+        0.08982570405099899
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.19793441248875043,
+      "ci95": [
+        0.16598956678427904,
+        0.23314403015024526
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "scalarized_minus_normal",
+      "mean": -0.00018893036187859463,
+      "ci95": [
+        -0.0011924142931021287,
+        0.000823050678945103
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.0011299778433407446,
+      "ci95": [
+        -0.0008661413309620532,
+        0.003140566746393888
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.0743449926376343,
+      "ci95": [
+        0.014337365183175795,
+        0.13109551311707965
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.05595870812733971,
+      "ci95": [
+        0.04168860491584331,
+        0.06896851407546627
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal",
+      "mean": 0.08944348961699243,
+      "ci95": [
+        0.06855946779251097,
+        0.11027390565357958
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "scalarized_minus_normal",
+      "mean": 4.33010213515599e-05,
+      "ci95": [
+        -0.0007558905026492199,
+        0.0008141037295847157
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "rotated180_minus_normal",
+      "mean": 0.0004999567480648657,
+      "ci95": [
+        -0.001094138622283949,
+        0.002024010349722526
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "train_median_minus_normal",
+      "mean": 0.006454946948032771,
+      "ci95": [
+        -0.047636187602491914,
+        0.0672670664740544
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    },
+    {
+      "input_condition": "stage_only",
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.03353443332746919,
+      "ci95": [
+        0.02148783312124369,
+        0.04464259936529051
+      ],
+      "independent_families": 17,
+      "scenes": 17
+    }
+  ]
+}

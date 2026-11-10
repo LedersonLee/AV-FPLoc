@@ -1,6 +1,10 @@
 # Learned Acoustic Structural Geometry — Study 31
 
-2026-11-10. Status:18 representation and21 transfer fits completed. Directional-geometry and beneficial transfer hypotheses are not supported on inner validation. Physical paired controls completed; held-out evaluation remains active. Primary Track B. Evidence: Exploratory until independent evaluation is justified.
+2026-11-10. **Completed:18 representation fits,21 transfer fits, native physical controls,19-scene development holdout and17-scene official Test evaluation.** The initial directional-geometry and beneficial-pretraining hypotheses are not supported. Primary Track B; evidence remains Exploratory because historical/upstream exposure is not fully excluded. No model or threshold was changed after the recorded freeze.
+
+[Final scientific conclusion](conclusion.md) · [Official Test tables](official_results.md) · [Completion audit](completion_audit.md) · [Reproduction](reproduction.md)
+
+Official furnished Test: Echo/Spatial regression MAE1.535/1.567m. Spatial different-position RIR shuffle adds.263m, but scalarizing output changes MAE by only.00030m and180° rotation by.00224m. Fusion joint: legacy34.835%,same-capacity scratch25.613%,total-update-matched scratch29.075%,frozen23.468%,fine-tuned25.766%,joint25.153%. Range-scale evidence exists; useful directional structural reconstruction and a pretraining localization gain are not established.
 
 ## Question and competing explanations
 
@@ -23,7 +27,7 @@ Existing FP/Observed positive pairs change native furnished geometry to canonica
 
 ## Split and evaluation plan
 
-Repartition the112 non-Test training scenes by fixed salted SHA256 **source-family** ordering:95 train /17 inner validation (16 held-out source families). Retain19 historical validation scenes as final **development test** after method freeze, with their previous exposure explicitly retained. At the initial split audit no official Test observation was opened. Following the recorded method freeze, new official Test observations are being generated for evaluation. Same-family split exclusion is asserted. This supplies scene-disjoint development, not independent generalization; genuinely untouched official Test coverage must be audited separately before a final independent claim.64 uniformly scheduled queries per scene; source-family bootstrap after averaging seeds and same-family variants (inner validation17 scenes /16 families; final development19/19), seeds42/43/44. Query headings are not independent scenes.
+Repartition the112 non-Test training scenes by fixed salted SHA256 **source-family** ordering:95 train /17 inner validation (16 held-out source families). Retain19 historical validation scenes as final **development test** after method freeze, with their previous exposure explicitly retained. At the initial split audit no official Test observation was opened. Following the recorded method freeze, new official Test observations were generated and evaluated without changing models. Same-family split exclusion is asserted. This supplies scene-disjoint development, not independent generalization; genuinely untouched official Test coverage must be audited separately before a final independent claim.64 uniformly scheduled queries per scene; source-family bootstrap after averaging seeds and same-family variants (inner validation17 scenes /16 families; final development19/19), seeds42/43/44. Query headings are not independent scenes.
 
 Phase A: Echo-Net-style6-channel CNN and spatial encoder, regression and categorical depth heads; fixed update budgets and parameter/time reporting. Phase B: different-position same-scene shuffle, train-prior baseline, phase ablation and furniture pairs where genuinely available. Phase C: existing acoustic branch, same-capacity scratch, geometry-frozen, geometry-fine-tuned, joint auxiliary training in the unchanged scoring/candidate pipeline. Report MAE/RMSE/correlation/NLL/calibration, R@1m/joint1m30°/fine0.1m/posterior ambiguity, costs and uncertainty. Existing strong visual/fixed fusion is mandatory; incompatible cohort numbers are not transplanted.
 
@@ -31,7 +35,7 @@ Phase A: Echo-Net-style6-channel CNN and spatial encoder, regression and categor
 
 Code: `track_b/acoustic_geometry/`; local output `/home/jeongeonlee/track1/experiments/acoustic_geometry_20261110`. Stage preparation uses installed `echoloc/floorplan-geometry:py311` (trimesh5.1.1); training environment planned `avfploc:cu124-clean`. Existing two GPU server processes are preserved. Raw data/weights/logs stay outside Git. Actual source SHA is recorded by each execution, then in the canonical index.
 
-Environment probes found host Python has no torch/trimesh and training container lacks trimesh; use separate installed geometry/training images. First fixture test collection from parent directory failed because PYTHONPATH was absent; rerun with repository PYTHONPATH. These are setup failures, not experimental model outcomes. Current model results and directional counterevidence are in [results](results.md). Furniture invariance remains unsupported; inner-validation transfer gains were not observed. Overall objective remains active.
+Environment probes found host Python has no torch/trimesh and training container lacks trimesh; use separate installed geometry/training images. First fixture test collection from parent directory failed because PYTHONPATH was absent; rerun with repository PYTHONPATH. These are setup failures, not experimental model outcomes. Current model results and directional counterevidence are in [results](results.md). Furniture invariance remains unsupported; inner-validation transfer gains were not observed. The completed evaluation and scientific closure are recorded in the final conclusion.
 
 ## Preflight update
 
@@ -39,7 +43,7 @@ Environment probes found host Python has no torch/trimesh and training container
 
 Echo adaptation:6→32/64/64 CNN with kernels8/4/3,512 latent,32×9 seed and two1D up-convolutions to36 directions. Spatial:18-channel CNN, ordered4×8 frequency/time tokens, sinusoidal-bearing query cross-attention; this distinguishes early/late token positions but does not identify individual physical echoes. Categorical heads have80 bins over0–20m and two-bin soft-label cross entropy; regression uses masked log1p absolute error. They share exact encoder initialization per seed; parameters501,089/503,696 for Echo,101,345/111,536 for Spatial. Architecture comparisons differ in frontend/time window and capacity; no attribution to phase alone without the phase-zero control.
 
-Completed primary run:12 fits (2 encoders×2 heads×seeds42/43/44),1,500 fixed Adam updates, batch16 with scene-balanced sampling, lr1e-4, weight decay5e-4; final step only. Input prep hashes every observed waveform and sidecar. Cached v1 features contain historical v2 labels, which the trainer **always replaces** using hash-verified v3 targets and exact pose/query-ID checks. Historical19-scene development evaluation stays unopened until method freeze.
+Completed primary run:12 fits (2 encoders×2 heads×seeds42/43/44),1,500 fixed Adam updates, batch16 with scene-balanced sampling, lr1e-4, weight decay5e-4; final step only. Input prep hashes every observed waveform and sidecar. Cached v1 features contain historical v2 labels, which the trainer **always replaces** using hash-verified v3 targets and exact pose/query-ID checks. Historical19-scene development evaluation was opened only after method freeze, and is now completed.
 
 Failure history is preserved in `<study-root>/targets_v1.log`, `targets_v2`, `qa_v1`, `smoke_v1.log`. Source-family leakage guard stopped the first split before learning. No performance-based tuning has occurred. Missing host packages were handled using installed containers without modifying shared environments.
 
@@ -51,6 +55,6 @@ Failure history is preserved in `<study-root>/targets_v1.log`, `targets_v2`, `qa
 
 See [follow-up report](followup.md), [transfer table](transfer_results.md), [paired comparisons](pair_results.md), [runtime replay](transfer_runtime.json), and [frozen evaluation contract](method_freeze.json). The frozen contract includes39 checkpoints and17 official Test scenes; historical scene/upstream exposure prevents a blanket independent-validation claim.
 
-[Completed19-scene frozen development holdout](development_heldout.md) confirms the directional and transfer limitations. Official17-scene fresh observation generation is still running; no official performance result is claimed yet.
+[Completed19-scene frozen development holdout](development_heldout.md) confirms the directional and transfer limitations. Official17-scene fresh observation generation and frozen evaluation are complete; see the final tables and verification records.
 
-[Requirement audit and outstanding official evaluation](completion_audit.md) records the full scope and closure gate.
+[Completed requirement audit](completion_audit.md) records the full scope and closure gate.
