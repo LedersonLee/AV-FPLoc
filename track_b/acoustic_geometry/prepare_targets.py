@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 import time
 import numpy as np
-import trimesh
 from .targets import intersect_segments
 
 
@@ -22,6 +21,7 @@ def sha(path):
 
 
 def main():
+    import trimesh
     p=argparse.ArgumentParser()
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--cohort', type=Path, required=True)
