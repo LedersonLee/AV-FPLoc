@@ -49,10 +49,13 @@ class GeometryNet(nn.Module):
             self.decoder=nn.Sequential(nn.Linear(64,128),nn.GELU(),nn.Linear(128,out))
         self.register_buffer('centres',(torch.arange(bins)+.5)*20/bins)
     def forward(self,x):
-        z=self.encoder(x)
-        if self.architecture=='echo':raw=self.decoder(self.seed(z).reshape(len(x),32,9)).transpose(1,2)
+        return self.decode(self.encoder(x))
+
+    def decode(self,z):
+        batch=len(z)
+        if self.architecture=='echo':raw=self.decoder(self.seed(z).reshape(batch,32,9)).transpose(1,2)
         else:
-            q=self.query(self.bearings)[None].expand(len(x),-1,-1)
+            q=self.query(self.bearings)[None].expand(batch,-1,-1)
             v,_=self.attention(q,z,z,need_weights=False)
             raw=self.decoder(v+q)
         if self.head_kind=='regression':return 20*raw[...,0].sigmoid(),None
