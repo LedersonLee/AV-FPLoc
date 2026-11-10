@@ -30,11 +30,19 @@ def metrics(mean,logits,y,mask,centres):
 def main():
     p=argparse.ArgumentParser()
     for k in ['root','study','pairs','out']:p.add_argument('--'+k,type=Path,required=True)
+    p.add_argument('--opening-pairs',type=Path)
     p.add_argument('--code-sha',required=True);a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True);torch.set_num_threads(2)
     assert (a.pairs/'COMPLETE').exists();pc=read(a.pairs/'protocol.json');manifest=read(a.pairs/'manifest.json')
+    opening=[]
+    if a.opening_pairs:
+        assert (a.opening_pairs/'COMPLETE').exists()
+        opening=read(a.opening_pairs/'manifest.json')
+        assert read(a.opening_pairs/'protocol.json')['scenes']==pc['scenes']
+    conditions=['historical_furnished','furnished','stage_only','furnished_repeat']+(['opening_preserved'] if opening else [])
+    comparisons=[('furnished','stage_only'),('historical_furnished','furnished'),('furnished_repeat','furnished')]+([('furnished','opening_preserved'),('opening_preserved','stage_only')] if opening else [])
     records={};target_manifest={r['scene']:r for r in read(a.study/'targets_v3/manifest.json')}
-    for r in manifest:
-        path=a.pairs/r['file'];assert sha(path)==r['sha256']
+    for r in manifest+opening:
+        path=(a.opening_pairs if r['variant']=='opening_preserved' else a.pairs)/r['file'];assert sha(path)==r['sha256']
         assert r['stage_sha256']==target_manifest[r['scene']]['stage_sha256']
         key=(r['scene'],r['variant'],r['query_index']);assert key not in records;records[key]=r
     corpus=[];wave_checks=[]
@@ -45,7 +53,7 @@ def main():
         package=dict(scene=scene,indices=indices,query_ids=[refs[i]['query_id'] for i in indices],
                      depth=torch.from_numpy(z['depth'][indices]),mask=torch.from_numpy(z['mask'][indices]),conditions={})
         normalized={}
-        for condition in ['historical_furnished','furnished','stage_only','furnished_repeat']:
+        for condition in conditions:
             selected=indices[:1] if condition=='furnished_repeat' else indices
             echo=[];spatial=[];legacy=[];norm=[]
             for i in selected:
@@ -53,16 +61,17 @@ def main():
                 if condition=='historical_furnished':
                     path=a.root/q['rir_path'];side=read(path.with_suffix('.json'));assert sha(path)==side['rir_sha256']
                 else:
-                    r=records[(scene,condition,i)];path=a.pairs/r['file']
+                    r=records[(scene,condition,i)];path=(a.opening_pairs if condition=='opening_preserved' else a.pairs)/r['file']
                     assert r['query_id']==q['query_id'] and r['world_yaw_deg']==q['world_yaw_deg']
                     assert r['base_acoustic_yaw_deg']==q['base_acoustic_yaw_deg']
                     assert np.allclose(r['centre_xyz_m'],q['centre_xyz_m']) and r['source_xyz_m']==r['centre_xyz_m']
-                    assert r['loaded_objects']==0 if condition=='stage_only' else r['loaded_objects']>0
+                    assert r['loaded_objects']==0 if condition=='stage_only' else r['loaded_objects']>=0
+                    if condition in ['furnished','furnished_repeat']:assert r['loaded_objects']>0
                 body=canonical_rir(np.load(path),q['world_yaw_deg'],q['base_acoustic_yaw_deg']).copy()
                 e,s=features(torch.from_numpy(body)[None]);echo.append(e[0]);spatial.append(s[0]);legacy.append(audio_features(body)[0]);norm.append(normalized_waveform(body))
             package['conditions'][condition]=dict(echo=torch.stack(echo).half(),spatial=torch.stack(spatial).half(),legacy=torch.stack(legacy))
             normalized[condition]=np.stack(norm)
-        for left,right in [('furnished','stage_only'),('historical_furnished','furnished'),('furnished_repeat','furnished')]:
+        for left,right in comparisons:
             x=normalized[left];y=normalized[right][:len(x)]
             wave_checks.append(dict(scene=scene,left=left,right=right,normalized_l2=float(np.sqrt(np.mean((x-y)**2))),samples=len(x)))
         torch.save(package,a.out/f'{scene}_features.pt');corpus.append(package)
@@ -78,7 +87,7 @@ def main():
                     values=metrics(m,l,s['depth'][:n],s['mask'][:n],model.centres)
                     rows.append(dict(scene=s['scene'],architecture=record['architecture'],head=record['head'],seed=record['seed'],condition=condition,queries=n,**values))
                     predicted[condition]=m
-            for left,right in [('furnished','stage_only'),('historical_furnished','furnished'),('furnished_repeat','furnished')]:
+            for left,right in comparisons:
                 x=predicted[left];y=predicted[right][:len(x)]
                 prediction_changes.append(dict(scene=s['scene'],architecture=record['architecture'],head=record['head'],seed=record['seed'],left=left,right=right,
                     mean_absolute_prediction_change_m=float((x-y).abs().mean())))
@@ -91,12 +100,13 @@ def main():
     summary=[dict(architecture=k[0],head=k[1],condition=k[2],metric=k[3],**paired(v)) for k,v in means.items()]
     contrasts=[]
     for arch,head in sorted({k[:2] for k in means}):
-        for left,right in [('furnished','stage_only'),('historical_furnished','furnished')]:
+        for left,right in comparisons:
+            if left=='furnished_repeat':continue
             for metric in ['mae','rmse','nll']:
                 if (arch,head,left,metric) not in means:continue
                 l=means[(arch,head,left,metric)];r=means[(arch,head,right,metric)]
                 contrasts.append(dict(architecture=arch,head=head,left=left,right=right,metric=metric,**paired({s:l[s]-r[s] for s in l})))
-    result=dict(code_sha=a.code_sha,pair_protocol_sha256=sha(a.pairs/'protocol.json'),pair_manifest_sha256=sha(a.pairs/'manifest.json'),
+    result=dict(code_sha=a.code_sha,opening_manifest_sha256=sha(a.opening_pairs/'manifest.json') if opening else None,pair_protocol_sha256=sha(a.pairs/'protocol.json'),pair_manifest_sha256=sha(a.pairs/'manifest.json'),
         scenes=len(corpus),pairs=sum(len(s['indices']) for s in corpus),validation='all raw hashes, original target stage hashes, poses, headings, source geometry and checkpoint hashes checked',
         evidence=f"Exploratory{len(corpus)} development families,{pc['queries_per_scene']} furnished-selected poses each; default material simulation; no real-world or furniture-invariance claim",
         summary=summary,contrasts=contrasts,per_scene=rows,prediction_changes=prediction_changes,waveform_checks=wave_checks,checkpoints=checks)
