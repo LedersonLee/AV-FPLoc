@@ -48,7 +48,7 @@ def evaluate(model,scenes,device,phase_zero=False):
             l=torch.cat(logits);lp=l.log_softmax(-1);p=lp.exp()
             label=(target*model.bins/20).long().clamp(0,model.bins-1)
             row['categorical_nll']=float(-lp.gather(-1,label[...,None])[...,0][mask].mean())
-            cdf=p.cumsum(-1);observed=(model.centres[None,None]>=target[...,None]).float()
+            cdf=p.cumsum(-1);observed=(model.centres.cpu()[None,None]>=target[...,None]).float()
             row['crps_m']=float(((cdf-observed).square().sum(-1)*20/model.bins)[mask].mean())
             lo=(cdf<.05).sum(-1).clamp_max(model.bins-1)*20/model.bins
             hi=((cdf<.95).sum(-1).clamp_max(model.bins-1)+1)*20/model.bins
