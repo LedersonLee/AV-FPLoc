@@ -31,7 +31,10 @@ def main():
     original=read(a.cohort)['scenes']
     # Selection solely by scene ID, before new target metrics/model results.
     order=sorted(original['train'], key=lambda s:hashlib.sha256(('acoustic-geometry-v1:'+s).encode()).hexdigest())
-    splits={'train':order[16:], 'val':order[:16], 'development_test':original['val']}
+    family_order=sorted({s.split('_')[0] for s in order}, key=lambda s:hashlib.sha256(('acoustic-geometry-family-v1:'+s).encode()).hexdigest())
+    val_families=set(family_order[:16])
+    splits={'train':[s for s in order if s.split('_')[0] not in val_families],
+            'val':[s for s in order if s.split('_')[0] in val_families], 'development_test':original['val']}
     families=[{s.split('_')[0] for s in v} for v in splits.values()]
     assert all(not families[i]&families[j] for i in range(3) for j in range(i))
     protocol=dict(scenes=splits, code_sha=a.code_sha, cohort_sha256=sha(a.cohort),
