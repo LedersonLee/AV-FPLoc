@@ -13,12 +13,33 @@ import numpy as np
 from .prepare_targets import read,sha
 
 
+def preserve_openings(original,registry_path,directory):
+    """Keep explicitly opening-class templates; remove other object instances.
+
+    This is an auditable folder-based control, not a claim that every remaining
+    removed object is movable furniture (fixed fixtures may also be removed).
+    """
+    registry=read(registry_path)
+    opening_handles={Path(p).name.replace('.object_config.json','') for p in registry['objects']['paths']['.json'] if '/openings/' in p}
+    altered=dict(original);altered['object_instances']=[o for o in original['object_instances'] if Path(o['template_name']).name in opening_handles]
+    directory.mkdir(exist_ok=False,parents=True)
+    instance=directory/'opening_preserved.scene_instance.json';instance.write_text(json.dumps(altered,indent=2))
+    for section in ['stages','objects']:
+        for suffix,paths in registry[section]['paths'].items():
+            registry[section]['paths'][suffix]=[str((registry_path.parent/p).resolve()) for p in paths]
+    registry['scene_instances']['paths']={'.json':[str(instance)]}
+    registry['semantic_scene_descriptor_instances']={k:str((registry_path.parent/v).resolve()) for k,v in registry.get('semantic_scene_descriptor_instances',{}).items()}
+    reg=directory/'dataset.scene_dataset_config.json';reg.write_text(json.dumps(registry,indent=2))
+    return instance,reg,len(altered['object_instances'])
+
+
 def main():
     p=argparse.ArgumentParser()
     for k in ['root','targets','out']:p.add_argument('--'+k,type=Path,required=True)
     p.add_argument('--code-sha',required=True);p.add_argument('--scene-limit',type=int)
     p.add_argument('--queries',type=int,default=8);p.add_argument('--threads',type=int,default=2)
     p.add_argument('--part',choices=['val','official_test'],default='val')
+    p.add_argument('--opening-preserved-only',action='store_true')
     a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True)
     source=a.root/'source/hssd-hab';helper=a.root/'RIR/tools/positive_pairs_v1'
     sys.path.insert(0,str(helper))
@@ -42,6 +63,7 @@ def main():
         default_materials=True,transmission=False,cpu_only=True,
         repeat='fresh simulator furnished repeat of first selected query in each scene; detects numerical/render variability',
         helper_hashes={f:sha(helper/f) for f in ['hssd_positive_pairs.py','render_hssd_paired_rirs.py','render_hssd_exp4_ring_rirs.py','render_hssd_ring_symmetry_smoke.py','hssd_cpu_rir_contract.py']})
+    if a.opening_preserved_only:config.update(geometry='native stage plus all original objects whose template config is in objects/openings; other object instances removed, including possible fixed fixtures',repeat='none; paired against existing fresh furnished and stage-only runs')
     (a.out/'protocol.json').write_text(json.dumps(config,indent=2));records=[]
     for scene in scenes:
         refs=read(a.targets/f'{scene}_queries.json')
@@ -50,14 +72,16 @@ def main():
         original=read(scene_path);assert original['stage_instance']=={'template_name':'stages/'+scene}
         registry=a.root/f'RIR/Geometry/{scene}/furnished.scene_dataset_config.json'
         if not registry.exists():registry,_=furnished_registry(a.out,source,scene)
-        for variant in ['furnished','stage_only','furnished_repeat']:
+        variants=['opening_preserved'] if a.opening_preserved_only else ['furnished','stage_only','furnished_repeat']
+        for variant in variants:
             geometry=stage_path if variant=='stage_only' else scene_path
             actual_registry=None if variant=='stage_only' else registry
+            expected=0 if variant=='stage_only' else len(original['object_instances'])
+            if variant=='opening_preserved':geometry,actual_registry,expected=preserve_openings(original,registry,a.out/scene/'configuration')
             start=time.perf_counter();sim=None
             try:
                 sim=make_geometry_simulator(geometry,actual_registry)
                 objects=sim.get_rigid_object_manager().get_num_objects()
-                expected=0 if variant=='stage_only' else len(original['object_instances'])
                 assert objects==expected,(scene,variant,objects,expected)
                 sim.seed(42)  # Habitat RNG; not asserted to control SoundSpaces internal RNG.
                 sensor=_add_audio_sensor(sim,settings)
@@ -71,7 +95,7 @@ def main():
                         centre_xyz_m=q['centre_xyz_m'],source_xyz_m=q['centre_xyz_m'],world_yaw_deg=q['world_yaw_deg'],
                         base_acoustic_yaw_deg=q['base_acoustic_yaw_deg'],original_rir_path=q['rir_path'],
                         file=str(path.relative_to(a.out)),sha256=sha(path),shape=list(rir.shape),loaded_objects=objects,
-                        stage_sha256=sha(stage_path),scene_config_sha256=sha(scene_path),registry_sha256=sha(registry) if actual_registry else None,
+                        stage_sha256=sha(stage_path),scene_config_sha256=sha(scene_path),render_geometry_sha256=sha(geometry),registry_sha256=sha(actual_registry) if actual_registry else None,
                         elapsed_since_sim_start_s=time.perf_counter()-start)
                     records.append(record);(a.out/'manifest.json').write_text(json.dumps(records,indent=2))
                     print(json.dumps(record),flush=True)
