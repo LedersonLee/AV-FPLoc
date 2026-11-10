@@ -1,0 +1,214 @@
+{
+  "code_sha": "b241e0a50d03f7b3aeb94e7ae30ede63aa5abafc",
+  "validation": "same IDs, seeds, optimizer settings, update count, data and GT hashes; only declared phase-zero intervention differs",
+  "summary": [
+    {
+      "head": "regression",
+      "condition": "normal",
+      "metric": "mae",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.04735298703114192,
+      "ci95": [
+        0.03470431948080659,
+        0.0631811193500956
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "regression",
+      "condition": "normal",
+      "metric": "rmse",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.047507324566443764,
+      "ci95": [
+        0.03430594134454926,
+        0.06092933993786573
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "regression",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.03126562357328179,
+      "ci95": [
+        -0.04387572812187125,
+        -0.02089634607089537
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.024234304825464882,
+      "ci95": [
+        -0.03836425480743249,
+        -0.010483202710747722
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.000853641579548519,
+      "ci95": [
+        -0.01962235880394777,
+        0.01822887637342015
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.0167135258442091,
+      "ci95": [
+        0.005305754856210433,
+        0.02916947080348014
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "mae",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.0374239906668663,
+      "ci95": [
+        0.026311594620347024,
+        0.0490370665366451
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "rmse",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.028980294863382976,
+      "ci95": [
+        0.02033784116307894,
+        0.03852789358546336
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.03701744658877503,
+      "ci95": [
+        -0.04614328119249017,
+        -0.02892972415599396
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "categorical_nll",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.01903402805328369,
+      "ci95": [
+        0.0147153007487456,
+        0.023379687095681827
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "crps_m",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.020064057782292366,
+      "ci95": [
+        0.016141747093449035,
+        0.02410552257982393
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.008338694771130879,
+      "ci95": [
+        0.0008315548300743103,
+        0.016406804447372747
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.005429113904635112,
+      "ci95": [
+        -0.0007146025697390234,
+        0.011695279118915398
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "contrast": "phase_zero_minus_full",
+      "mean": 0.0027420353903793242,
+      "ci95": [
+        -0.005706973379992907,
+        0.011146207687666226
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "categorical_nll",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.008940142889817555,
+      "ci95": [
+        -0.015604443786044916,
+        -0.003077709985276069
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "crps_m",
+      "contrast": "phase_zero_minus_full",
+      "mean": -0.003405556082725525,
+      "ci95": [
+        -0.006852550494174162,
+        -0.00012738993391394704
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    }
+  ]
+}

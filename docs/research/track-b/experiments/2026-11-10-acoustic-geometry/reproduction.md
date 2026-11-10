@@ -34,7 +34,7 @@ Completed fixed-budget primary training, after complete inputs and runner smoke:
 python -m track_b.acoustic_geometry.train --features /results/features_v1 --targets /results/targets_v3 --out /results/representation_v1 --steps 1500 --seeds 42 43 44 --code-sha 13f18b028b35d694c8e0adee4d138d46fecf9d00
 ```
 
-All output names must be new. Do not overwrite failed attempts. Fixed checkpoint selection uses final scheduled updates, with no evaluation on historical Val19 yet. Configuration, per-step training curve, per-scene metrics, per-query distributions and checkpoint checksums are written by the runner. Actual run status supersedes this prepared command and must be verified before claiming results.
+All output names must be new. Do not overwrite failed attempts. Fixed checkpoint selection uses final scheduled updates, with no historical Val19 evaluation during training or selection. Configuration, per-step training curve, per-scene metrics, per-query distributions and checkpoint checksums are written by the runner. Actual run status supersedes this prepared command and must be verified before claiming results.
 
 ## Completed follow-up executions
 
@@ -47,4 +47,22 @@ python -m track_b.acoustic_geometry.directional_diagnostic --run /results/repres
 python -m track_b.acoustic_geometry.figures --root /data --targets /results/targets_v3 --run /results/representation_v1 --out /results/figures_v1
 ```
 
-Figures source `ed5c17a4a85a14fc20c480411838d7568339a87a`. Summaries/diagnostic used host Python3 and NumPy; rendered figures used the training image. Primary and phase-zero `COMPLETE` markers and registries confirm all18 fits. Failure directories are preserved. No19-scene holdout waveform feature cache has been prepared yet.
+Figures source `ed5c17a4a85a14fc20c480411838d7568339a87a`. Summaries/diagnostic used host Python3 and NumPy; rendered figures used the training image. Primary and phase-zero `COMPLETE` markers and registries confirm all18 fits. Failure directories are preserved. This was the status at the primary-report checkpoint; subsequent frozen holdout preparation is recorded below.
+
+## Transfer and physical follow-up executions
+
+The `/scale` mount is the read-only `track_b_scale_20261109` output. The `/results` mount is this study output. Use fresh output names; these commands document executed runs, not permission to overwrite them.
+
+```bash
+python -m track_b.acoustic_geometry.transfer --study /results --scale /scale --targets /results/targets_v3 --out /results/transfer_v1 --code-sha f6e9d922df2b5df31c976a6da363fb1193ee4920
+python -m track_b.acoustic_geometry.summarize_transfer --run /results/transfer_v1 --out /results/transfer_summary_v1 --code-sha 334695c1d7787e64c28fb475de9659c499dedf96
+python -m track_b.acoustic_geometry.render_pairs --root /data --targets /results/targets_v3 --out /results/pairs_v1 --code-sha 16ec5114d323dbd56decc5e7687da639ecaa470c
+python -m track_b.acoustic_geometry.render_pairs --root /data --targets /results/targets_v3 --out /results/opening_pairs_v1 --queries 8 --opening-preserved-only --code-sha 8ee29be225f83f9a0786e08201fefa9379eeda98
+python -m track_b.acoustic_geometry.evaluate_pairs --root /data --study /results --pairs /results/pairs_v1 --opening-pairs /results/opening_pairs_v1 --out /results/pair_evaluation_openings_v1 --code-sha 4d36bc4
+python -m track_b.acoustic_geometry.heldout_cache --root /data --study /results --scale /scale --targets /results/targets_v3 --freeze /results/method_freeze_v1.json --out /results/development_heldout_cache_v1 --part development_holdout --code-sha 45e4ce0
+python -m track_b.acoustic_geometry.evaluate_heldout --study /results --cache /results/development_heldout_cache_v1 --freeze /results/method_freeze_v1.json --out /results/development_heldout_v1 --code-sha 6907b72
+```
+
+CPU native rendering uses `track1-soundspaces-echoloc:latest`, image digest `sha256:c2907a52a8d425fc853beaa8c2fb202b577538acaee7f512b9cee9a5b8d26fc1`, explicit `--entrypoint /usr/bin/nice`, arguments `-n 15 /opt/conda/envs/soundspaces/bin/python`, `--runtime runc --network none --cpus 4 --memory 8g --user <uid>:<gid>`. Environment: `PYTHONPATH=/work`, `CUDA_VISIBLE_DEVICES=-1`, `NVIDIA_VISIBLE_DEVICES=void`, `EGL_PLATFORM=surfaceless`, `LIBGL_ALWAYS_SOFTWARE=1`, `LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6`, thread limits `OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=LP_NUM_THREADS=1`, `MESA_GLTHREAD=false`, `PYTHONDONTWRITEBYTECODE=1`, `MESA_SHADER_CACHE_DISABLE=true`, `HABITAT_SIM_LOG=MAGNUM_LOG=quiet`. Repository and dataset mounts are read-only; only new external study output is writable. Protocols hash every imported rendering helper. Declared source commit identifies relevant imported code even when later unrelated research commits are present.
+
+Training and frozen GPU evaluation use `avfploc:cu124-clean`, device0, read-only repo and dataset, existing GPU services preserved. Frozen inference has no optimizer. Original and fresh inputs keep their distinct condition labels.

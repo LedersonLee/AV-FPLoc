@@ -1,0 +1,255 @@
+{
+  "frozen_at_utc": "2026-11-10T02:42:34.797955+00:00",
+  "status": "method and weights frozen before held-out model evaluation",
+  "checkpoints": [
+    {
+      "run": "representation_v1",
+      "model": "echo_regression_42",
+      "sha256": "3276bc6a75a719c0727887c15d88b34be02ccc0a9ffec3dc9523cd19458b239e"
+    },
+    {
+      "run": "representation_v1",
+      "model": "echo_regression_43",
+      "sha256": "b13a8e83a3fa2093b8857415f15dd5ef0987dd2ee310bf9f20c9af081b47cbca"
+    },
+    {
+      "run": "representation_v1",
+      "model": "echo_regression_44",
+      "sha256": "12311c8e1982b3b0f55bc246eb5b4f8a3700cd6d2fb9e196a0382605ae259585"
+    },
+    {
+      "run": "representation_v1",
+      "model": "echo_categorical_42",
+      "sha256": "f670a3ca470895ab7929eff62be91a715b7e873e57d8be3e6598357f646e2108"
+    },
+    {
+      "run": "representation_v1",
+      "model": "echo_categorical_43",
+      "sha256": "778f3464ee68aeb22adb71ea2f491d30cc10157ee118f9499ab998f219c72a17"
+    },
+    {
+      "run": "representation_v1",
+      "model": "echo_categorical_44",
+      "sha256": "1004a31dad6fddbd566f68e4e8129e4bb2a744a89742c4f077a347665216af7e"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_regression_42",
+      "sha256": "f61588ad931cb750ec1f357908815d330b092d98d0dc93637126d001869aff4b"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_regression_43",
+      "sha256": "2312fb9736b2980968f0aa25b241f02b3c54e8f2626bfc42ba8d1ef3e0b670d7"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_regression_44",
+      "sha256": "054ca1c6367431709e7a39bffdabb9f309b87f2fd495393e7e5ed28c83eff641"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_categorical_42",
+      "sha256": "2bcc0f8e0b0a7d0c0e19df7d937a5699ce2fb11f2279ebae524bfd984dc0e4ff"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_categorical_43",
+      "sha256": "e7b07f8b8b42fc4ba84d4cbe8e561019f1ad330a70535f701f634fc92d77e441"
+    },
+    {
+      "run": "representation_v1",
+      "model": "spatial_categorical_44",
+      "sha256": "140e4b23ca262e549a7da1d6de37e81d9b4e7990d6c8a29a142db570edd5b05f"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_regression_42",
+      "sha256": "8e8721eff26eb4a9d1abd4c18ee23e18fa18f13a43e97545b8befb258e25cff5"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_regression_43",
+      "sha256": "b241f57f9721f14fdb2349c3ab8cc1012bbb8b6cca5cc7e1bad9ec57f84614a4"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_regression_44",
+      "sha256": "806c7619221289bb71bb3aa0c96ae1fd160755118fe504bc4ec4ccc34b7bbf2f"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_categorical_42",
+      "sha256": "30e7552e1493d2d0b0ce052a5cf9ef3193e04ef48c38d9249bc9319848d0132d"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_categorical_43",
+      "sha256": "65752ab5c99c86c2d42b23210a518689f3722637b2908a3efbc2e84a93fb34e0"
+    },
+    {
+      "run": "phase_zero_v1",
+      "model": "spatial_categorical_44",
+      "sha256": "758675f715bf2d9062d9c12bbd0c3f4de105a5471d6ad96d11541ff43e2c6feb"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "visual_42",
+      "sha256": "7c72f4f3795324e63ad5e3e0de8e7546be0c364c3d5463e0d8aa3d29acca4a40"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "legacy_42",
+      "sha256": "85c3d08058300d88acf422acc6ef6d15f866d0c12d7d2fb8cd81ca372a30a280"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_42",
+      "sha256": "4e9a001ee18a840622385cf8989dbafc0a9d6e347d502ff6b16eb3e87eaa6364"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_total_42",
+      "sha256": "a5290f3177191b615885e1b2a9784eb6f82e7de4c346b8c736f5153b5268a3c0"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "frozen_42",
+      "sha256": "987579f845fd06d8ca2d4bd44597d62ff79cc4384c2f35f38ced6c5b519878a7"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "finetuned_42",
+      "sha256": "2bda4f589a07ba438b75f6214b9fa32ab47ae1b7ac23ce9758a58b8a3fec356c"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "joint_42",
+      "sha256": "5829613fb0415e7eb98cbb34dd9e0676f0f42e4f67f8b6f7422d0d00b35b6f2c"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "visual_43",
+      "sha256": "1d5807c170551abc514607f23f0149d13633a7691d25039586dc852163cd3783"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "legacy_43",
+      "sha256": "b90c18fe3d45e1f3265eeb20a09691881d787fc0a20d36934851a4b6ed125f51"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_43",
+      "sha256": "a105a427f2aa64133e1cc57c6fd595d7a89e37b60e85927329944352b8ce10a1"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_total_43",
+      "sha256": "53bf9e02062033cfc3f4d7af42cba09505a7458a8e6e286bb42e3a9cb1bae317"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "frozen_43",
+      "sha256": "2e81d5c7268d49df2799082540c0883f97eccfbb275398765e9d8746d033f382"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "finetuned_43",
+      "sha256": "4116c78479f54cae7cf1be824d584cb0c000178b16f2f0e159a1ad274419529c"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "joint_43",
+      "sha256": "1044f82fb7706cd3bbf043b8e33203b0e3cdd5605a71e1c89711402a79e5cd8f"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "visual_44",
+      "sha256": "7d10a0d2fbdc2229812b67e544a26a3df7eac5405b655405c9cc3ac624354d36"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "legacy_44",
+      "sha256": "a1b6f27a1cbf9bddf56cbc109a8676d78db755127626b7188a4e86ac254eea9a"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_44",
+      "sha256": "4242a8ba7b322634319de1a0d5d9604223dd9882a8ff2de8adb47359461da84e"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "scratch_total_44",
+      "sha256": "11a85e602f9cbccbe9c7047a04f57152e43261953f63c20ec33108c500aff34a"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "frozen_44",
+      "sha256": "5aa8d01ed8eb7ec09e0c5f6fa5501ed88972d226d6db16c606cb86b7161f5ff0"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "finetuned_44",
+      "sha256": "2e5017ff96d5b940ceb51d020ef0f71089422612f5141ad3251fd14d83c85200"
+    },
+    {
+      "run": "transfer_v1",
+      "model": "joint_44",
+      "sha256": "85b1160c9466e296530e182c851041571f3744de6ed1bebe2507930a883f939a"
+    }
+  ],
+  "development_holdout": [
+    "108736611_177263226",
+    "108736635_177263256",
+    "105515448_173104512",
+    "108294783_176710410",
+    "108294624_176710203",
+    "102344457",
+    "108736737_177263406",
+    "104862573_172226682",
+    "108294765_176710386",
+    "106366134_174226362",
+    "104348082_171512994",
+    "102344115",
+    "103997478_171030528",
+    "106879005_174887124",
+    "106366173_174226431",
+    "105515286_173104287",
+    "108294798_176710428",
+    "102344307",
+    "108736800_177263517"
+  ],
+  "official_test": [
+    "104862687_172226883",
+    "105515151_173104068",
+    "107734119_175999932",
+    "105515184_173104128",
+    "102816114",
+    "108736884_177263634",
+    "104862417_172226382",
+    "105515403_173104449",
+    "102816066",
+    "102816216",
+    "103997994_171031320",
+    "103997586_171030666",
+    "102344280",
+    "108736656_177263304",
+    "107734017_175999794",
+    "107734176_176000019",
+    "105515301_173104305"
+  ],
+  "official_split_sha256": "af1f5ded1e3cc8286b7f6fc4155f39761b0afc12c04c33313ea43f40705f2dc8",
+  "queries_per_scene": 64,
+  "source_family_overlap": 0,
+  "geometry_target": "same native vertical stage intersection at receiver height;36 bearings;20m max; mask no-hit and first canonical boundary disagreement>0.20m",
+  "pose_metrics": "R@1m; joint1m30degrees; fine0.1m; nearest-grid NLL; rawTop20; entropy; no threshold tuning",
+  "model_policy": "evaluate all registered arms/seeds; no held-out-based checkpoint, threshold, architecture or hyperparameter changes",
+  "input_policy": "same official schedules and uniformly spaced query IDs as development; fresh native furnished/stage-only RIR pairs on all17 official Test scenes; no canonical-extrusion substitute",
+  "historical_exposure": "19 development holdout scenes previously reused upstream/other studies. Three official Test observed scene directories already exist; prior visual Test usage and upstream Hypersim asset-family overlap are not fully excluded, so no blanket pristine/full-pipeline independent claim. Fresh raw acoustic rendering does not itself erase scene exposure.",
+  "prior_test_observed_directories": [
+    "104862417_172226382",
+    "104862687_172226883",
+    "105515301_173104305"
+  ],
+  "remaining": "held-out data/rendering and evaluation, paired robustness aggregate, final completeness audit"
+}

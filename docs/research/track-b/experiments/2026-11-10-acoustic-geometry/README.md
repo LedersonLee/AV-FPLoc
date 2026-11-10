@@ -1,6 +1,6 @@
 # Learned Acoustic Structural Geometry — Study 31
 
-2026-11-10. Status:18 representation fits completed; directional-geometry hypothesis not supported in the initial models. Full research objective active; transfer and physical paired robustness remain. Primary Track B. Evidence: Exploratory until independent evaluation is justified.
+2026-11-10. Status:18 representation and21 transfer fits completed. Directional-geometry and beneficial transfer hypotheses are not supported on inner validation. Physical paired controls completed; held-out evaluation remains active. Primary Track B. Evidence: Exploratory until independent evaluation is justified.
 
 ## Question and competing explanations
 
@@ -19,11 +19,11 @@ Existing positive-pair observations:48kHz,6 omni microphones,5cm radius, source 
 
 Canonical map source is stage slicing but adds a semantic exterior closure. The map's blocked pixels and `desdf_occluder_mask` therefore are not uniformly direct physical-wall evidence. New targets intersect vertical architectural stage faces (absolute Y-normal≤.15) at receiver height, native X/Z with36 body bearings. No-hit and >20m rays are masked, never assigned a physical20m wall. Fixed built-ins may be part of the stage: this is a vertical architectural-surface proxy, not a semantic wall classifier. Geometric fixtures verify heading, translation, open rays and range censoring. Three predeclared training-scene overlays were inspected. One exposed external structure beyond an opening: v3 conservatively masks stage hits >0.20m beyond the first canonical blocked boundary. The map never supplies the supervised distance. This excludes uncertain floorplan/stage disagreements as well as exterior hits; evaluation is conditional on the remaining valid directions. Mean train coverage is79.96%, not full360° accuracy.
 
-Existing FP/Observed positive pairs change native furnished geometry to canonical map extrusion (including assumed ceiling and exterior closure). They are **not** a furniture-only paired intervention. Stage-only pairs or new matched rendering remain to be audited; no consistency loss is enabled on these extrusion pairs. `scenes-uncluttered` is not accepted as furniture-free.
+Existing FP/Observed positive pairs change native furnished geometry to canonical map extrusion (including assumed ceiling and exterior closure). They are **not** a furniture-only paired intervention. New native-stage matched controls are now recorded in [transfer and paired follow-up](followup.md); no consistency loss is enabled on these extrusion pairs. `scenes-uncluttered` is not accepted as furniture-free.
 
 ## Split and evaluation plan
 
-Repartition the112 non-Test training scenes by fixed salted SHA256 **source-family** ordering:95 train /17 inner validation (16 held-out source families). Retain19 historical validation scenes as final **development test** after method freeze, with their previous exposure explicitly retained. No official Test observation has been opened. Same-family split exclusion is asserted. This supplies scene-disjoint development, not independent generalization; genuinely untouched official Test coverage must be audited separately before a final independent claim.64 uniformly scheduled queries per scene; source-family bootstrap after averaging seeds and same-family variants (inner validation17 scenes /16 families; final development19/19), seeds42/43/44. Query headings are not independent scenes.
+Repartition the112 non-Test training scenes by fixed salted SHA256 **source-family** ordering:95 train /17 inner validation (16 held-out source families). Retain19 historical validation scenes as final **development test** after method freeze, with their previous exposure explicitly retained. At the initial split audit no official Test observation was opened. Following the recorded method freeze, new official Test observations are being generated for evaluation. Same-family split exclusion is asserted. This supplies scene-disjoint development, not independent generalization; genuinely untouched official Test coverage must be audited separately before a final independent claim.64 uniformly scheduled queries per scene; source-family bootstrap after averaging seeds and same-family variants (inner validation17 scenes /16 families; final development19/19), seeds42/43/44. Query headings are not independent scenes.
 
 Phase A: Echo-Net-style6-channel CNN and spatial encoder, regression and categorical depth heads; fixed update budgets and parameter/time reporting. Phase B: different-position same-scene shuffle, train-prior baseline, phase ablation and furniture pairs where genuinely available. Phase C: existing acoustic branch, same-capacity scratch, geometry-frozen, geometry-fine-tuned, joint auxiliary training in the unchanged scoring/candidate pipeline. Report MAE/RMSE/correlation/NLL/calibration, R@1m/joint1m30°/fine0.1m/posterior ambiguity, costs and uncertainty. Existing strong visual/fixed fusion is mandatory; incompatible cohort numbers are not transplanted.
 
@@ -31,7 +31,7 @@ Phase A: Echo-Net-style6-channel CNN and spatial encoder, regression and categor
 
 Code: `track_b/acoustic_geometry/`; local output `/home/jeongeonlee/track1/experiments/acoustic_geometry_20261110`. Stage preparation uses installed `echoloc/floorplan-geometry:py311` (trimesh5.1.1); training environment planned `avfploc:cu124-clean`. Existing two GPU server processes are preserved. Raw data/weights/logs stay outside Git. Actual source SHA is recorded by each execution, then in the canonical index.
 
-Environment probes found host Python has no torch/trimesh and training container lacks trimesh; use separate installed geometry/training images. First fixture test collection from parent directory failed because PYTHONPATH was absent; rerun with repository PYTHONPATH. These are setup failures, not experimental model outcomes. Current model results and directional counterevidence are in [results](results.md). Furniture invariance and transfer gains remain unverified. Overall objective remains active.
+Environment probes found host Python has no torch/trimesh and training container lacks trimesh; use separate installed geometry/training images. First fixture test collection from parent directory failed because PYTHONPATH was absent; rerun with repository PYTHONPATH. These are setup failures, not experimental model outcomes. Current model results and directional counterevidence are in [results](results.md). Furniture invariance remains unsupported; inner-validation transfer gains were not observed. Overall objective remains active.
 
 ## Preflight update
 
@@ -46,3 +46,9 @@ Failure history is preserved in `<study-root>/targets_v1.log`, `targets_v2`, `qa
 ## Current outcome
 
 [Results and counterevidence](results.md), [full primary metrics](representation_summary.json), [phase-zero control](phase_zero_summary.json), [directional diagnostic](directional_diagnostic.json), [run registry](experiment_registry.json), [reproduction](reproduction.md). Same-scene donor sensitivity is present, but rotating predicted directions180° barely changes MAE and within-query angular correlation is near0. The initial models mainly capture range-scale information; successful directional structural representation is not established.
+
+## Transfer, physical controls and method freeze
+
+See [follow-up report](followup.md), [transfer table](transfer_results.md), [paired comparisons](pair_results.md), [runtime replay](transfer_runtime.json), and [frozen evaluation contract](method_freeze.json). The frozen contract includes39 checkpoints and17 official Test scenes; historical scene/upstream exposure prevents a blanket independent-validation claim.
+
+[Completed19-scene frozen development holdout](development_heldout.md) confirms the directional and transfer limitations. Official17-scene fresh observation generation is still running; no official performance result is claimed yet.
