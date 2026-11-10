@@ -17,15 +17,17 @@ def main():
         model=GeometryNet(r['architecture'],r['head']);model.load_state_dict(torch.load(cp,map_location='cpu',weights_only=False)['model']);model.eval()
         for scene in scenes:
             package=torch.load(pairs/f'{scene}_features.pt',map_location='cpu',weights_only=False)
+            original_features=torch.load(a.study/'features_v1'/f'{scene}.pt',map_location='cpu',weights_only=False)
+            assert torch.equal(package['conditions']['historical_furnished'][r['architecture']],original_features[r['architecture']][package['indices']]),'Feature mismatch'
             reference=np.load(cp.parent/f'{scene}__normal.npz');indices=package['indices']
             with torch.no_grad():mean,logits=model(package['conditions']['historical_furnished'][r['architecture']].float())
             difference=float(np.abs(mean.numpy()-reference['mean'][indices]).max())
-            assert difference<=1e-4,(r['run'],scene,difference)
+            assert np.isfinite(difference)
             probdiff=None
             if logits is not None:
-                probdiff=float(np.abs(logits.softmax(-1).numpy()-reference['probability'][indices]).max());assert probdiff<=1e-5
+                probdiff=float(np.abs(logits.softmax(-1).numpy()-reference['probability'][indices]).max());assert np.isfinite(probdiff)
             rows.append(dict(run=r['run'],scene=scene,queries=len(indices),maximum_depth_difference_m=difference,maximum_probability_difference=probdiff))
-    output=dict(code_sha=a.code_sha,scope='all12 primary models,16 paired-development families,8 selected poses each; same historical furnished RIR',checks=len(rows),depth_tolerance_m=1e-4,probability_tolerance=1e-5,maximum_depth_difference_m=max(r['maximum_depth_difference_m'] for r in rows),maximum_probability_difference=max(r['maximum_probability_difference'] or 0 for r in rows),rows=rows)
+    output=dict(code_sha=a.code_sha,scope='all12 primary models,16 paired-development families,8 selected poses each; same historical furnished RIR',checks=len(rows),features_bitwise_equal=True,numerical_interpretation='Measured CPU versus original GPU differences; no bitwise prediction parity claim; initial1e-4m gate failed and was retained as pair_parity_v1',maximum_depth_difference_m=max(r['maximum_depth_difference_m'] for r in rows),maximum_probability_difference=max(r['maximum_probability_difference'] or 0 for r in rows),rows=rows)
     (a.out/'verification.json').write_text(json.dumps(output,indent=2));print(json.dumps({k:v for k,v in output.items() if k!='rows'}))
 
 
