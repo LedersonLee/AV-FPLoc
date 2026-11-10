@@ -176,6 +176,12 @@ def main():
     p.add_argument('--smoke-scenes',type=int);p.add_argument('--device',default='cuda');p.add_argument('--code-sha',required=True)
     a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True);torch.set_num_threads(2);torch.backends.cudnn.benchmark=False
     data,source=load_data(a)
+    pretrain_protocol=read(a.study/'representation_v1/protocol.json')
+    assert pretrain_protocol['features_manifest_sha256']==sha(a.study/'features_v1/manifest.json')
+    for part in ['train','val']:
+        actual={s['scene'] for s in data[part]};expected=set(pretrain_protocol['scene_ids'][part])
+        assert actual<=expected if a.smoke_scenes else actual==expected
+    pretrained_registry={r['run']:r for r in read(a.study/'representation_v1/registry.json')}
     config={k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items()}
     config.update(scenes={k:[s['scene'] for s in v] for k,v in data.items()},batch_size=8,lr=.0003,weight_decay=.0001,
         geometry_aux_weight=1.,acoustic_fp_aux_weight=10.,visual_fp_aux_weight=1000.,visual_anchor_weight=1000.,
@@ -193,6 +199,9 @@ def main():
             run=a.out/f'{arm}_{seed}';run.mkdir()
             cp=a.study/'representation_v1'/f'{a.architecture}_regression_{seed}'/'model.pt'
             ck=torch.load(cp,map_location='cpu',weights_only=False) if arm in ['frozen','finetuned','joint'] else None
+            if ck:
+                assert ck['architecture']==a.architecture and ck['head']=='regression' and ck['seed']==seed
+                assert sha(cp)==pretrained_registry[f'{a.architecture}_regression_{seed}']['checkpoint_sha256']
             model=make_model(seed,arm,a.architecture,ck)
             record=fit(model,arm,seed,data['train'],a,run)
             record['pretrained_checkpoint_sha256']=sha(cp) if ck else None
