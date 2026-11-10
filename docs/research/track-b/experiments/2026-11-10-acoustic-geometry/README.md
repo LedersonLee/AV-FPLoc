@@ -52,3 +52,5 @@ Failure history is preserved in `<study-root>/targets_v1.log`, `targets_v2`, `qa
 See [follow-up report](followup.md), [transfer table](transfer_results.md), [paired comparisons](pair_results.md), [runtime replay](transfer_runtime.json), and [frozen evaluation contract](method_freeze.json). The frozen contract includes39 checkpoints and17 official Test scenes; historical scene/upstream exposure prevents a blanket independent-validation claim.
 
 [Completed19-scene frozen development holdout](development_heldout.md) confirms the directional and transfer limitations. Official17-scene fresh observation generation is still running; no official performance result is claimed yet.
+
+[Requirement audit and outstanding official evaluation](completion_audit.md) records the full scope and closure gate.

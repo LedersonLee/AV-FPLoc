@@ -12,3 +12,7 @@
 All-object removal also removes door/window objects. The opening-preserving control keeps registry-classified openings and removes other objects, potentially including fixed fixtures. The initial stage-only comparison therefore cannot identify a furniture-only effect. A near-zero difference is not an equivalence test or proof of invariance. Directional reconstruction remains unsuccessful; no paired consistency training was used.
 
 Historical-to-fresh furnished differences and first-query fresh-simulator repeat prediction/waveform changes are retained in [full paired results](pair_summary.json). These repeats cover one query per family, not every pose. CPU evaluation/source `4d36bc4`; renderer/source hashes are in the manifests.
+
+## Backend consistency check
+
+Across12 primary models ×16 families ×8 selected poses, freshly extracted historical inputs are bitwise equal to the original feature cache. CPU versus stored GPU predictions have maximum depth difference0.0015781m and probability difference0.0004370. An initial0.0001m parity gate failed and is retained externally as `pair_parity_v1/failure.json`; [full measurement](pair_backend_check.json) replaces any assumption of exact prediction equality. All physical conditions in the paired table use the same CPU backend. The check quantifies numerical differences; it does not prove bitwise prediction parity. Source `88b59ae8d4048c555833b574aa7967604769cdc1`.

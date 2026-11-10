@@ -1,0 +1,1355 @@
+{
+  "code_sha": "88b59ae8d4048c555833b574aa7967604769cdc1",
+  "scope": "all12 primary models,16 paired-development families,8 selected poses each; same historical furnished RIR",
+  "checks": 192,
+  "features_bitwise_equal": true,
+  "numerical_interpretation": "Measured CPU versus original GPU differences; no bitwise prediction parity claim; initial1e-4m gate failed and was retained as pair_parity_v1",
+  "maximum_depth_difference_m": 0.0015780925750732422,
+  "maximum_probability_difference": 0.00043696165084838867,
+  "rows": [
+    {
+      "run": "echo_regression_42",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0014791488647460938,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010797977447509766,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011926889419555664,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010542869567871094,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012755393981933594,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010366439819335938,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010590553283691406,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009818077087402344,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011668205261230469,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012390613555908203,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011844635009765625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0013136863708496094,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0015780925750732422,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011053085327148438,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012080669403076172,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_42",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.000988006591796875,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010042190551757812,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009503364562988281,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009577274322509766,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0014224052429199219,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012192726135253906,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010159015655517578,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009374618530273438,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012161731719970703,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011131763458251953,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009540319442749023,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0014431476593017578,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.001275777816772461,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010879039764404297,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010294914245605469,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009357929229736328,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_43",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009353160858154297,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012180805206298828,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010180473327636719,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.001074075698852539,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009396076202392578,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009551048278808594,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010099411010742188,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.001055002212524414,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010943412780761719,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008715391159057617,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009763240814208984,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012316703796386719,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012540817260742188,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009300708770751953,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007706880569458008,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009555816650390625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_regression_44",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009196996688842773,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009462833404541016,
+      "maximum_probability_difference": 0.00028836727142333984
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008807182312011719,
+      "maximum_probability_difference": 0.0003188028931617737
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009183883666992188,
+      "maximum_probability_difference": 0.00017894059419631958
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006816387176513672,
+      "maximum_probability_difference": 0.00036616623401641846
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008225440979003906,
+      "maximum_probability_difference": 0.0002633705735206604
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009012222290039062,
+      "maximum_probability_difference": 0.00036481767892837524
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006668567657470703,
+      "maximum_probability_difference": 0.00037629902362823486
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007796287536621094,
+      "maximum_probability_difference": 0.00030209869146347046
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010209083557128906,
+      "maximum_probability_difference": 0.0003536343574523926
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007562637329101562,
+      "maximum_probability_difference": 0.0001687183976173401
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009760856628417969,
+      "maximum_probability_difference": 0.00025175511837005615
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009570121765136719,
+      "maximum_probability_difference": 0.00033815205097198486
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009679794311523438,
+      "maximum_probability_difference": 0.0002958923578262329
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006308555603027344,
+      "maximum_probability_difference": 0.00043696165084838867
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.001186370849609375,
+      "maximum_probability_difference": 0.0001537427306175232
+    },
+    {
+      "run": "echo_categorical_42",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007257461547851562,
+      "maximum_probability_difference": 0.00038685649633407593
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00048160552978515625,
+      "maximum_probability_difference": 0.00017392635345458984
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008335113525390625,
+      "maximum_probability_difference": 0.00021949410438537598
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007355213165283203,
+      "maximum_probability_difference": 0.00013106316328048706
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0005772113800048828,
+      "maximum_probability_difference": 0.0003061145544052124
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007810592651367188,
+      "maximum_probability_difference": 0.00021269917488098145
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007688999176025391,
+      "maximum_probability_difference": 0.0002818554639816284
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006229877471923828,
+      "maximum_probability_difference": 0.0003015249967575073
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006871223449707031,
+      "maximum_probability_difference": 0.0001664981245994568
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0005497932434082031,
+      "maximum_probability_difference": 0.0003101080656051636
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007166862487792969,
+      "maximum_probability_difference": 0.0001616254448890686
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008015632629394531,
+      "maximum_probability_difference": 0.000161781907081604
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008935928344726562,
+      "maximum_probability_difference": 0.0002934485673904419
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006694793701171875,
+      "maximum_probability_difference": 0.00034002959728240967
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00046825408935546875,
+      "maximum_probability_difference": 0.0003521963953971863
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.000701904296875,
+      "maximum_probability_difference": 0.0001390799880027771
+    },
+    {
+      "run": "echo_categorical_43",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0005080699920654297,
+      "maximum_probability_difference": 0.0002669617533683777
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008635520935058594,
+      "maximum_probability_difference": 0.0003226250410079956
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0013012886047363281,
+      "maximum_probability_difference": 0.00024199485778808594
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0012631416320800781,
+      "maximum_probability_difference": 0.0002150312066078186
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007350444793701172,
+      "maximum_probability_difference": 0.00038313865661621094
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0011615753173828125,
+      "maximum_probability_difference": 0.0002529844641685486
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010852813720703125,
+      "maximum_probability_difference": 0.0002618730068206787
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0005674362182617188,
+      "maximum_probability_difference": 0.00027029216289520264
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0006697177886962891,
+      "maximum_probability_difference": 0.00023756176233291626
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008759498596191406,
+      "maximum_probability_difference": 0.0003481656312942505
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0007655620574951172,
+      "maximum_probability_difference": 0.00022665411233901978
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010142326354980469,
+      "maximum_probability_difference": 0.00014509260654449463
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009860992431640625,
+      "maximum_probability_difference": 0.00021905452013015747
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0010061264038085938,
+      "maximum_probability_difference": 0.00023415684700012207
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009105205535888672,
+      "maximum_probability_difference": 0.00030197203159332275
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0009353160858154297,
+      "maximum_probability_difference": 0.0002470538020133972
+    },
+    {
+      "run": "echo_categorical_44",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0008318424224853516,
+      "maximum_probability_difference": 0.00024475157260894775
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00018525123596191406,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00019311904907226562,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00031566619873046875,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00016379356384277344,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00022554397583007812,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00022745132446289062,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00020706653594970703,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00014066696166992188,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00025343894958496094,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00023412704467773438,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.000225067138671875,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00022220611572265625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00026035308837890625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00019919872283935547,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00024366378784179688,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_42",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00023412704467773438,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002391338348388672,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002617835998535156,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002512931823730469,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002467632293701172,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00028324127197265625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002884864807128906,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002753734588623047,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00026106834411621094,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00023627281188964844,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002446174621582031,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002598762512207031,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.000225067138671875,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00028228759765625,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002897977828979492,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002734661102294922,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_43",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00016689300537109375,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002086162567138672,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00023031234741210938,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002238750457763672,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002751350402832031,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00023293495178222656,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002601146697998047,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00019800662994384766,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0002753734588623047,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001583099365234375,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00016379356384277344,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001971721649169922,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001647472381591797,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00020551681518554688,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001881122589111328,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00017380714416503906,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_regression_44",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00013780593872070312,
+      "maximum_probability_difference": null
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00018739700317382812,
+      "maximum_probability_difference": 2.0876526832580566e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00013637542724609375,
+      "maximum_probability_difference": 1.6301870346069336e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00011873245239257812,
+      "maximum_probability_difference": 1.3660639524459839e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00014591217041015625,
+      "maximum_probability_difference": 2.1107494831085205e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 6.771087646484375e-05,
+      "maximum_probability_difference": 1.0818243026733398e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 6.985664367675781e-05,
+      "maximum_probability_difference": 7.160007953643799e-06
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 5.53131103515625e-05,
+      "maximum_probability_difference": 9.346753358840942e-06
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00014257431030273438,
+      "maximum_probability_difference": 1.8715858459472656e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00011420249938964844,
+      "maximum_probability_difference": 1.5690922737121582e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001575946807861328,
+      "maximum_probability_difference": 2.3826956748962402e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 2.5272369384765625e-05,
+      "maximum_probability_difference": 7.160007953643799e-06
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 8.225440979003906e-05,
+      "maximum_probability_difference": 1.315772533416748e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 5.1975250244140625e-05,
+      "maximum_probability_difference": 7.528811693191528e-06
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 7.009506225585938e-05,
+      "maximum_probability_difference": 1.2524425983428955e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 7.486343383789062e-05,
+      "maximum_probability_difference": 1.163780689239502e-05
+    },
+    {
+      "run": "spatial_categorical_42",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001430511474609375,
+      "maximum_probability_difference": 1.5504658222198486e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001201629638671875,
+      "maximum_probability_difference": 1.691281795501709e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 8.344650268554688e-05,
+      "maximum_probability_difference": 1.1645257472991943e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 4.124641418457031e-05,
+      "maximum_probability_difference": 7.4356794357299805e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 7.224082946777344e-05,
+      "maximum_probability_difference": 8.199363946914673e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00010323524475097656,
+      "maximum_probability_difference": 1.4081597328186035e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 4.57763671875e-05,
+      "maximum_probability_difference": 5.7220458984375e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 8.225440979003906e-05,
+      "maximum_probability_difference": 9.782612323760986e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 7.176399230957031e-05,
+      "maximum_probability_difference": 1.0371208190917969e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 6.270408630371094e-05,
+      "maximum_probability_difference": 7.972121238708496e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 8.320808410644531e-05,
+      "maximum_probability_difference": 1.0862946510314941e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 5.6743621826171875e-05,
+      "maximum_probability_difference": 9.533017873764038e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00011873245239257812,
+      "maximum_probability_difference": 1.8306076526641846e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 3.075599670410156e-05,
+      "maximum_probability_difference": 6.847083568572998e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 6.151199340820312e-05,
+      "maximum_probability_difference": 8.493661880493164e-06
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 9.72747802734375e-05,
+      "maximum_probability_difference": 1.3083219528198242e-05
+    },
+    {
+      "run": "spatial_categorical_43",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 7.748603820800781e-05,
+      "maximum_probability_difference": 1.0706484317779541e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "102344094",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00020933151245117188,
+      "maximum_probability_difference": 2.337247133255005e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "102815859",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00019025802612304688,
+      "maximum_probability_difference": 2.0615756511688232e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "102816786",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00013065338134765625,
+      "maximum_probability_difference": 1.411139965057373e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "102816852",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00014901161193847656,
+      "maximum_probability_difference": 1.74790620803833e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "103997643_171030747",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00018644332885742188,
+      "maximum_probability_difference": 2.9534101486206055e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "103997718_171030855",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00016450881958007812,
+      "maximum_probability_difference": 2.339482307434082e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "104348511_171513654",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00012946128845214844,
+      "maximum_probability_difference": 1.043081283569336e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "105515211_173104185",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00022602081298828125,
+      "maximum_probability_difference": 2.9519200325012207e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "105515490_173104566",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00012111663818359375,
+      "maximum_probability_difference": 1.646578311920166e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "106366353_174226695",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001442432403564453,
+      "maximum_probability_difference": 1.4670193195343018e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "106878867_174886977",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00011754035949707031,
+      "maximum_probability_difference": 9.88692045211792e-06
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "106879044_174887172",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00019025802612304688,
+      "maximum_probability_difference": 1.6197562217712402e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "107734227_176000091",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001571178436279297,
+      "maximum_probability_difference": 1.8574297428131104e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "107734449_176000403",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00018143653869628906,
+      "maximum_probability_difference": 2.44826078414917e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "108294417_176709879",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.0001747608184814453,
+      "maximum_probability_difference": 1.6137957572937012e-05
+    },
+    {
+      "run": "spatial_categorical_44",
+      "scene": "108736722_177263382",
+      "queries": 8,
+      "maximum_depth_difference_m": 0.00015282630920410156,
+      "maximum_probability_difference": 1.7002224922180176e-05
+    }
+  ]
+}
