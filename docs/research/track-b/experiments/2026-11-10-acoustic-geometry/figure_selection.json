@@ -1,0 +1,14 @@
+[
+  {
+    "selection": "predefined",
+    "scene": "105515211_173104185",
+    "query_id": 0,
+    "query_index": 0
+  },
+  {
+    "selection": "worst_spatial_categorical_seed42",
+    "scene": "103997718_171030855",
+    "query_id": 280,
+    "query_index": 7
+  }
+]

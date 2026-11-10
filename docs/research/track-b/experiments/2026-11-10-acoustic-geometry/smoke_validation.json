@@ -1,0 +1,53 @@
+{
+  "code_sha": "0bd7faa8280862a43e80ca1baaac341c3d623f2f",
+  "training_scene": "104348394_171513453",
+  "input_sha256": "5c5a277c007361ac0b15e4b4a77e1a501b9b6a76575c160aded438186b385127",
+  "target_sha256": "cb023aa7dd1d8b1ad7d9136e1eaebdd59920cc7bb0706f65e8cd7e4fd9da012e",
+  "scope": "2-step execution check only, no scientific performance interpretation",
+  "checks": [
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "encoder_changed": true,
+      "finite_loss": true,
+      "parameters": 501089,
+      "metric_conditions": [
+        "normal",
+        "same_scene_different_position"
+      ]
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "encoder_changed": true,
+      "finite_loss": true,
+      "parameters": 503696,
+      "metric_conditions": [
+        "normal",
+        "same_scene_different_position"
+      ]
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "encoder_changed": true,
+      "finite_loss": true,
+      "parameters": 101345,
+      "metric_conditions": [
+        "normal",
+        "same_scene_different_position"
+      ]
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "encoder_changed": true,
+      "finite_loss": true,
+      "parameters": 111536,
+      "metric_conditions": [
+        "normal",
+        "same_scene_different_position"
+      ]
+    }
+  ]
+}

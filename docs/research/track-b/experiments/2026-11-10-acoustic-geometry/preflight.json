@@ -1,0 +1,22 @@
+{
+  "target_scenes": 131,
+  "queries": 8384,
+  "train_valid_fraction_mean": 0.7995705409356726,
+  "unit_checks_passed": 4,
+  "qa_scenes": [
+    "104348394_171513453",
+    "106366104_174226329",
+    "106366263_174226557"
+  ],
+  "qa_artifacts": "<study-root>/qa_v2",
+  "target_source_sha": "f9d0f2e92a8d45cb750d65f38f4f3bed14859a42",
+  "feature_source_sha": "bd05ef297da92b085975e9c53d4a2c08b73a6f0b",
+  "gpu_smoke_source_sha": "0bd7faa8280862a43e80ca1baaac341c3d623f2f",
+  "model_results": "not yet trained",
+  "failures": [
+    "initial parent-directory pytest import failure",
+    "targets_v1 family overlap assertion before data generation",
+    "targets_v2 exterior architectural hits found by visual QA; preserved and replaced with v3 masks",
+    "smoke_v1 CPU/CUDA categorical evaluation mismatch; fixed and all4 arms passed smoke_v2"
+  ]
+}

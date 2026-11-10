@@ -1,0 +1,954 @@
+{
+  "code_sha": "6be2af1a690e039d1453e653d573607aade2cc4c",
+  "training_protocol_sha256": "18d44d6488d7244dd05745b5b5033d14778a50fcdbd340de9e8965c9fc4bc633",
+  "evidence": "Exploratory, inner scene-family validation; no independent Test",
+  "uncertainty": "10,000 paired source-family bootstrap draws after seed and variant averaging; uncorrected intervals",
+  "summary": [
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "mae",
+      "mean": 1.4794274717569351,
+      "ci95": [
+        1.2611961754970253,
+        1.7820482780846454
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "rmse",
+      "mean": 2.2023653263847036,
+      "ci95": [
+        1.8574527150020004,
+        2.6820897600923974
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "mean": 0.2845804575334585,
+      "ci95": [
+        0.24733384456242644,
+        0.32274476627293286
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "mean": 1.7813233509659767,
+      "ci95": [
+        1.5068436593438186,
+        2.1507926986863217
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "mean": 2.4162674595912295,
+      "ci95": [
+        2.050305615365505,
+        2.9199455007289847
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "mean": 0.005212027965714374,
+      "ci95": [
+        -0.019390347042527845,
+        0.03227688216860991
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "mae",
+      "mean": 1.545220329115788,
+      "ci95": [
+        1.3485369940598806,
+        1.8161595893713334
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "rmse",
+      "mean": 2.042735659827789,
+      "ci95": [
+        1.7486260131311913,
+        2.4576261707892018
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "mean": 0.34392813231035557,
+      "ci95": [
+        0.30149770867745046,
+        0.38447180613229986
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "categorical_nll",
+      "mean": 3.2407302955786386,
+      "ci95": [
+        3.1168162770569325,
+        3.392445222040018
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "crps_m",
+      "mean": 1.0785507025818029,
+      "ci95": [
+        0.9152126810513438,
+        1.313510906572143
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "coverage90",
+      "mean": 0.9322995630403359,
+      "ci95": [
+        0.9135287819430232,
+        0.9455681155746182
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "width90_m",
+      "mean": 7.0915234486262,
+      "ci95": [
+        6.523545829455057,
+        7.716056435803574
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "mean": 1.7856047513584297,
+      "ci95": [
+        1.5518110053613783,
+        2.1055217078886925
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "mean": 2.268586080521345,
+      "ci95": [
+        1.9521117446012795,
+        2.707332072686404
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "mean": 0.008942399913474185,
+      "ci95": [
+        -0.015524392560188692,
+        0.035207268407375876
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "categorical_nll",
+      "mean": 3.3840280547738075,
+      "ci95": [
+        3.2448723337302607,
+        3.5561550386870904
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "crps_m",
+      "mean": 1.217842389519016,
+      "ci95": [
+        1.0311113393865525,
+        1.4824731920845804
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "coverage90",
+      "mean": 0.8986773130794365,
+      "ci95": [
+        0.876464421239992,
+        0.91427929000929
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "width90_m",
+      "mean": 7.181409761309625,
+      "ci95": [
+        6.590403996532161,
+        7.832347064216931
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "mae",
+      "mean": 1.4921525406340759,
+      "ci95": [
+        1.2620329149067402,
+        1.811510383399824
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "rmse",
+      "mean": 2.2006293299297495,
+      "ci95": [
+        1.8486399665785334,
+        2.6930421848160524
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "mean": 0.3109849038400406,
+      "ci95": [
+        0.26976128389861787,
+        0.351102177118339
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "mean": 1.7469338638087113,
+      "ci95": [
+        1.4919812986006338,
+        2.1054818154312667
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "mean": 2.3936368748545647,
+      "ci95": [
+        2.0398266655082504,
+        2.8914873486384747
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "mean": 0.02013324215831997,
+      "ci95": [
+        -0.0036486230370452715,
+        0.04419995041733476
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "mae",
+      "mean": 1.703292495260636,
+      "ci95": [
+        1.5257413422999284,
+        1.9746491393695274
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "rmse",
+      "mean": 2.147284167508284,
+      "ci95": [
+        1.8564861337343852,
+        2.5845283500229317
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "direction_correlation",
+      "mean": 0.3041677803446755,
+      "ci95": [
+        0.2652876526781915,
+        0.343066577797875
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "categorical_nll",
+      "mean": 3.2343458781639733,
+      "ci95": [
+        3.1156621443728607,
+        3.3918632035454115
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "crps_m",
+      "mean": 1.1175044694294534,
+      "ci95": [
+        0.9459779304607461,
+        1.3758413690297553
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "coverage90",
+      "mean": 0.9462026848147312,
+      "ci95": [
+        0.9203376844680559,
+        0.9621867804788052
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "normal",
+      "metric": "width90_m",
+      "mean": 7.471860736608505,
+      "ci95": [
+        7.335021952788035,
+        7.6295675958196325
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "mae",
+      "mean": 1.8148230214913688,
+      "ci95": [
+        1.6254822292675577,
+        2.1035620138670006
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "rmse",
+      "mean": 2.261230046550433,
+      "ci95": [
+        1.9707871060197553,
+        2.6970270860319334
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "direction_correlation",
+      "mean": 0.044895956124491924,
+      "ci95": [
+        0.023614250559895644,
+        0.06795263314541355
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "categorical_nll",
+      "mean": 3.420058873792489,
+      "ci95": [
+        3.2970172791431347,
+        3.5779131015141807
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "crps_m",
+      "mean": 1.212829953680436,
+      "ci95": [
+        1.0332583566817144,
+        1.4814922670833761
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "coverage90",
+      "mean": 0.8906716108322144,
+      "ci95": [
+        0.8633192718029022,
+        0.909956205667307
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "condition": "same_scene_different_position",
+      "metric": "width90_m",
+      "mean": 7.490067114432653,
+      "ci95": [
+        7.34951826184988,
+        7.650098469605048
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    }
+  ],
+  "contrasts": [
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal_mae_m",
+      "mean": 0.24038442224264148,
+      "ci95": [
+        0.1892717283219099,
+        0.3016149205466112
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "categorical",
+      "contrast": "model_minus_train_median_mae_m",
+      "mean": -0.13667803754409155,
+      "ci95": [
+        -0.2491857372224331,
+        -0.06019165615240736
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal_mae_m",
+      "mean": 0.3018958792090416,
+      "ci95": [
+        0.2239519661913316,
+        0.3946553436728814
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "echo",
+      "head": "regression",
+      "contrast": "model_minus_train_median_mae_m",
+      "mean": -0.20247089490294456,
+      "ci95": [
+        -0.29063846074665584,
+        -0.1345818130920331
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "shuffle_minus_normal_mae_m",
+      "mean": 0.11153052623073254,
+      "ci95": [
+        0.08692117438962059,
+        0.13711178892602513
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "categorical",
+      "contrast": "model_minus_train_median_mae_m",
+      "mean": 0.021394128600756367,
+      "ci95": [
+        -0.08756897884110602,
+        0.10753695759922269
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "shuffle_minus_normal_mae_m",
+      "mean": 0.25478132317463553,
+      "ci95": [
+        0.2063463458170493,
+        0.30841212421655645
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    },
+    {
+      "architecture": "spatial",
+      "head": "regression",
+      "contrast": "model_minus_train_median_mae_m",
+      "mean": -0.18974582602580387,
+      "ci95": [
+        -0.26048481147736313,
+        -0.13119768236453336
+      ],
+      "independent_families": 16,
+      "scenes": 17
+    }
+  ],
+  "per_seed": [
+    {
+      "run": "echo_regression_42",
+      "seed": 42,
+      "condition": "normal",
+      "mae": 1.4742933958768845
+    },
+    {
+      "run": "echo_regression_42",
+      "seed": 42,
+      "condition": "same_scene_different_position",
+      "mae": 1.7808885648846626
+    },
+    {
+      "run": "echo_regression_43",
+      "seed": 43,
+      "condition": "normal",
+      "mae": 1.4701193757355213
+    },
+    {
+      "run": "echo_regression_43",
+      "seed": 43,
+      "condition": "same_scene_different_position",
+      "mae": 1.7745318114757538
+    },
+    {
+      "run": "echo_regression_44",
+      "seed": 44,
+      "condition": "normal",
+      "mae": 1.4938696436583996
+    },
+    {
+      "run": "echo_regression_44",
+      "seed": 44,
+      "condition": "same_scene_different_position",
+      "mae": 1.7885496765375137
+    },
+    {
+      "run": "echo_categorical_42",
+      "seed": 42,
+      "condition": "normal",
+      "mae": 1.5501058250665665
+    },
+    {
+      "run": "echo_categorical_42",
+      "seed": 42,
+      "condition": "same_scene_different_position",
+      "mae": 1.8025596551597118
+    },
+    {
+      "run": "echo_categorical_43",
+      "seed": 43,
+      "condition": "normal",
+      "mae": 1.5522397719323635
+    },
+    {
+      "run": "echo_categorical_43",
+      "seed": 43,
+      "condition": "same_scene_different_position",
+      "mae": 1.785772804170847
+    },
+    {
+      "run": "echo_categorical_44",
+      "seed": 44,
+      "condition": "normal",
+      "mae": 1.5333153903484344
+    },
+    {
+      "run": "echo_categorical_44",
+      "seed": 44,
+      "condition": "same_scene_different_position",
+      "mae": 1.76848179474473
+    },
+    {
+      "run": "spatial_regression_42",
+      "seed": 42,
+      "condition": "normal",
+      "mae": 1.4914389736950397
+    },
+    {
+      "run": "spatial_regression_42",
+      "seed": 42,
+      "condition": "same_scene_different_position",
+      "mae": 1.7377749420702457
+    },
+    {
+      "run": "spatial_regression_43",
+      "seed": 43,
+      "condition": "normal",
+      "mae": 1.4854906648397446
+    },
+    {
+      "run": "spatial_regression_43",
+      "seed": 43,
+      "condition": "same_scene_different_position",
+      "mae": 1.7476097233593464
+    },
+    {
+      "run": "spatial_regression_44",
+      "seed": 44,
+      "condition": "normal",
+      "mae": 1.499527983367443
+    },
+    {
+      "run": "spatial_regression_44",
+      "seed": 44,
+      "condition": "same_scene_different_position",
+      "mae": 1.755416925996542
+    },
+    {
+      "run": "spatial_categorical_42",
+      "seed": 42,
+      "condition": "normal",
+      "mae": 1.6953028924763203
+    },
+    {
+      "run": "spatial_categorical_42",
+      "seed": 42,
+      "condition": "same_scene_different_position",
+      "mae": 1.8095275051891804
+    },
+    {
+      "run": "spatial_categorical_43",
+      "seed": 43,
+      "condition": "normal",
+      "mae": 1.7086549885571003
+    },
+    {
+      "run": "spatial_categorical_43",
+      "seed": 43,
+      "condition": "same_scene_different_position",
+      "mae": 1.8132778592407703
+    },
+    {
+      "run": "spatial_categorical_44",
+      "seed": 44,
+      "condition": "normal",
+      "mae": 1.7059196047484875
+    },
+    {
+      "run": "spatial_categorical_44",
+      "seed": 44,
+      "condition": "same_scene_different_position",
+      "mae": 1.8216637000441551
+    }
+  ],
+  "registry": [
+    {
+      "run": "echo_regression_42",
+      "seed": 42,
+      "architecture": "echo",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 501089,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.475858206860721,
+      "checkpoint_sha256": "3276bc6a75a719c0727887c15d88b34be02ccc0a9ffec3dc9523cd19458b239e",
+      "encoder_head_batch1_latency_median_ms": 0.2074039075523615,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 39641600
+    },
+    {
+      "run": "echo_regression_43",
+      "seed": 43,
+      "architecture": "echo",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 501089,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.1817423570901155,
+      "checkpoint_sha256": "b13a8e83a3fa2093b8857415f15dd5ef0987dd2ee310bf9f20c9af081b47cbca",
+      "encoder_head_batch1_latency_median_ms": 0.21634390577673912,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 39838208
+    },
+    {
+      "run": "echo_regression_44",
+      "seed": 44,
+      "architecture": "echo",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 501089,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.208650093059987,
+      "checkpoint_sha256": "12311c8e1982b3b0f55bc246eb5b4f8a3700cd6d2fb9e196a0382605ae259585",
+      "encoder_head_batch1_latency_median_ms": 0.20809704437851906,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 39838208
+    },
+    {
+      "run": "echo_categorical_42",
+      "seed": 42,
+      "architecture": "echo",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 503696,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.455708345863968,
+      "checkpoint_sha256": "f670a3ca470895ab7929eff62be91a715b7e873e57d8be3e6598357f646e2108",
+      "encoder_head_batch1_latency_median_ms": 0.2233395352959633,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 40245760
+    },
+    {
+      "run": "echo_categorical_43",
+      "seed": 43,
+      "architecture": "echo",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 503696,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.457191809080541,
+      "checkpoint_sha256": "778f3464ee68aeb22adb71ea2f491d30cc10157ee118f9499ab998f219c72a17",
+      "encoder_head_batch1_latency_median_ms": 0.21951156668365002,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 40245760
+    },
+    {
+      "run": "echo_categorical_44",
+      "seed": 44,
+      "architecture": "echo",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 503696,
+      "encoder_parameters": 345056,
+      "train_seconds": 3.44355121999979,
+      "checkpoint_sha256": "1004a31dad6fddbd566f68e4e8129e4bb2a744a89742c4f077a347665216af7e",
+      "encoder_head_batch1_latency_median_ms": 0.22320495918393135,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 40245760
+    },
+    {
+      "run": "spatial_regression_42",
+      "seed": 42,
+      "architecture": "spatial",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 101345,
+      "encoder_parameters": 76064,
+      "train_seconds": 4.890188865829259,
+      "checkpoint_sha256": "f61588ad931cb750ec1f357908815d330b092d98d0dc93637126d001869aff4b",
+      "encoder_head_batch1_latency_median_ms": 0.2702565398067236,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 57418752
+    },
+    {
+      "run": "spatial_regression_43",
+      "seed": 43,
+      "architecture": "spatial",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 101345,
+      "encoder_parameters": 76064,
+      "train_seconds": 4.944279753603041,
+      "checkpoint_sha256": "2312fb9736b2980968f0aa25b241f02b3c54e8f2626bfc42ba8d1ef3e0b670d7",
+      "encoder_head_batch1_latency_median_ms": 0.26589143089950085,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 57811968
+    },
+    {
+      "run": "spatial_regression_44",
+      "seed": 44,
+      "architecture": "spatial",
+      "head": "regression",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 101345,
+      "encoder_parameters": 76064,
+      "train_seconds": 4.943042369093746,
+      "checkpoint_sha256": "054ca1c6367431709e7a39bffdabb9f309b87f2fd495393e7e5ed28c83eff641",
+      "encoder_head_batch1_latency_median_ms": 0.27049542404711246,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 57811968
+    },
+    {
+      "run": "spatial_categorical_42",
+      "seed": 42,
+      "architecture": "spatial",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 111536,
+      "encoder_parameters": 76064,
+      "train_seconds": 5.1755661042407155,
+      "checkpoint_sha256": "2bcc0f8e0b0a7d0c0e19df7d937a5699ce2fb11f2279ebae524bfd984dc0e4ff",
+      "encoder_head_batch1_latency_median_ms": 0.2559381537139416,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 58342400
+    },
+    {
+      "run": "spatial_categorical_43",
+      "seed": 43,
+      "architecture": "spatial",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 111536,
+      "encoder_parameters": 76064,
+      "train_seconds": 5.401064340956509,
+      "checkpoint_sha256": "e7b07f8b8b42fc4ba84d4cbe8e561019f1ad330a70535f701f634fc92d77e441",
+      "encoder_head_batch1_latency_median_ms": 0.2645934000611305,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 58342400
+    },
+    {
+      "run": "spatial_categorical_44",
+      "seed": 44,
+      "architecture": "spatial",
+      "head": "categorical",
+      "steps": 1500,
+      "code_sha": "13f18b028b35d694c8e0adee4d138d46fecf9d00",
+      "parameters": 111536,
+      "encoder_parameters": 76064,
+      "train_seconds": 5.155763799790293,
+      "checkpoint_sha256": "140e4b23ca262e549a7da1d6de37e81d9b4e7990d6c8a29a142db570edd5b05f",
+      "encoder_head_batch1_latency_median_ms": 0.2520959824323654,
+      "latency_excludes": "RIR loading, STFT and localization scoring; shared GPU, not isolated",
+      "peak_gpu_bytes": 58342400
+    }
+  ]
+}
