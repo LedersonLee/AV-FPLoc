@@ -29,6 +29,8 @@ def main():
     p.add_argument('--cohort', type=Path, required=True)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--code-sha', required=True)
+    p.add_argument('--official-test',action='store_true')
+    p.add_argument('--method-freeze',type=Path)
     a=p.parse_args(); a.out.mkdir(parents=True, exist_ok=False)
     original=read(a.cohort)['scenes']
     # Selection solely by scene ID, before new target metrics/model results.
@@ -39,18 +41,29 @@ def main():
             'val':[s for s in order if s.split('_')[0] in val_families], 'development_test':original['val']}
     families=[{s.split('_')[0] for s in v} for v in splits.values()]
     assert all(not families[i]&families[j] for i in range(3) for j in range(i))
+    if a.official_test:
+        assert a.method_freeze is not None
+        freeze=read(a.method_freeze);official_path=a.root/'manifests/scene_splits_v1.json'
+        assert sha(official_path)==freeze['official_split_sha256']
+        official=read(official_path)['test'];assert freeze['official_test']==official
+        assert not {s.split('_')[0] for s in official}&set.union(*families)
+        splits={'official_test':official}
     protocol=dict(scenes=splits, code_sha=a.code_sha, cohort_sha256=sha(a.cohort),
         directions=36, max_range_m=20., queries_per_scene=64, normal_y_abs_max=.15,
         supervision='first vertical architectural stage intersection at receiver height; no furniture; no semantic outer closure',
         limitations='Architectural stage may contain fixed built-ins; vertical-surface proxy, not semantic wall classification. Door/window holes remain openings. Beyond-range/no-hit masked. Stage hit past first canonical blocked boundary by >0.20m is conservatively masked (indoor-scope/disagreement filter); map boundary never supplies target depth.',
         official_test_accessed=False, evidence='Exploratory; development_test is reused original Val19; inner Val from historically exposed Train112',
         selection='fixed final checkpoints; inner val reserved for implementation diagnosis; development_test stays unopened until model freeze')
+    if a.official_test:
+        protocol.update(official_test_accessed=True,method_freeze_sha256=sha(a.method_freeze),
+            selection='all official Test scenes and uniform64 queries, fixed before labels/results; no method selection',
+            evidence='Scene-disjoint official Test after method freeze; historical Test scene exposure/upstream asset-family independence not fully excluded')
     (a.out/'protocol.json').write_text(json.dumps(protocol,indent=2))
     records=[]
     for part,scenes in splits.items():
       for scene in scenes:
         t=time.perf_counter()
-        source_part='val' if part=='development_test' else 'train'
+        source_part='test' if part=='official_test' else 'val' if part=='development_test' else 'train'
         schedule_path=a.root/f'RIR/manifests/positive_pairs_v1/schedules/{source_part}/{scene}.json'
         schedule=read(schedule_path)
         queries=schedule['queries']
@@ -84,7 +97,7 @@ def main():
         row=dict(scene=scene,split=part,queries=len(selected),stage_sha256=sha(mesh_path),schedule_sha256=sha(schedule_path),
                  target_sha256=sha(a.out/f'{scene}.npz'),map_sha256=sha(map_path),metadata_sha256=sha(meta_path),vertical_faces=int(keep.sum()),seconds=time.perf_counter()-t)
         # Do not inspect/report held-out target statistics during preparation.
-        if part!='development_test': row['valid_fraction']=float(mask.mean())
+        if part in ['train','val']: row['valid_fraction']=float(mask.mean())
         records.append(row)
         (a.out/'manifest.json').write_text(json.dumps(records,indent=2))
         print(json.dumps(row),flush=True)

@@ -18,22 +18,25 @@ def main():
     for k in ['root','targets','out']:p.add_argument('--'+k,type=Path,required=True)
     p.add_argument('--code-sha',required=True);p.add_argument('--scene-limit',type=int)
     p.add_argument('--queries',type=int,default=8);p.add_argument('--threads',type=int,default=2)
+    p.add_argument('--part',choices=['val','official_test'],default='val')
     a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True)
     source=a.root/'source/hssd-hab';helper=a.root/'RIR/tools/positive_pairs_v1'
     sys.path.insert(0,str(helper))
-    from hssd_positive_pairs import make_geometry_simulator
+    from hssd_positive_pairs import make_geometry_simulator,furnished_registry
     from render_hssd_paired_rirs import _add_audio_sensor
     from render_hssd_exp4_ring_rirs import _render_ring
     from hssd_cpu_rir_contract import require_cpu_device
     require_cpu_device(-1)
     protocol=read(a.targets/'protocol.json');families=set();scenes=[]
-    for s in protocol['scenes']['val']:
+    if a.part=='official_test':assert protocol.get('method_freeze_sha256') and a.scene_limit is None
+    for s in protocol['scenes'][a.part]:
         family=s.split('_')[0]
         if family not in families:scenes.append(s);families.add(family)
     if a.scene_limit:scenes=scenes[:a.scene_limit]
     settings=SimpleNamespace(gpu_device_id=-1,sample_rate=48000,indirect_rays=20000,ray_depth=50,
         source_rays=512,diffraction=True,max_diffraction_order=10,acoustic_threads=a.threads)
-    config=dict(code_sha=a.code_sha,scenes=scenes,queries_per_scene=a.queries,selection='one variant per inner-validation source family in frozen order; uniform query indices before pair results',
+    config=dict(code_sha=a.code_sha,scenes=scenes,part=a.part,queries_per_scene=a.queries,selection='one variant per source family in frozen order; uniform query indices before pair results',
+        targets_protocol_sha256=sha(a.targets/'protocol.json'),method_freeze_sha256=protocol.get('method_freeze_sha256'),
         geometry='same native stage, with all original object instances or with zero object instances',acoustics=vars(settings),
         source_receiver='exact captured centre,6 omni microphones at radius0.05m;48kHz; original stored base heading',
         default_materials=True,transmission=False,cpu_only=True,
@@ -46,6 +49,7 @@ def main():
         scene_path=source/f'scenes/{scene}.scene_instance.json';stage_path=source/f'stages/{scene}.glb'
         original=read(scene_path);assert original['stage_instance']=={'template_name':'stages/'+scene}
         registry=a.root/f'RIR/Geometry/{scene}/furnished.scene_dataset_config.json'
+        if not registry.exists():registry,_=furnished_registry(a.out,source,scene)
         for variant in ['furnished','stage_only','furnished_repeat']:
             geometry=stage_path if variant=='stage_only' else scene_path
             actual_registry=None if variant=='stage_only' else registry
