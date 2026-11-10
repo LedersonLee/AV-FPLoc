@@ -98,7 +98,7 @@ def main():
                 contrasts.append(dict(architecture=arch,head=head,left=left,right=right,metric=metric,**paired({s:l[s]-r[s] for s in l})))
     result=dict(code_sha=a.code_sha,pair_protocol_sha256=sha(a.pairs/'protocol.json'),pair_manifest_sha256=sha(a.pairs/'manifest.json'),
         scenes=len(corpus),pairs=sum(len(s['indices']) for s in corpus),validation='all raw hashes, original target stage hashes, poses, headings, source geometry and checkpoint hashes checked',
-        evidence='Exploratory16 development families,8 furnished-selected poses each; default material simulation; no real-world or furniture-invariance claim',
+        evidence=f"Exploratory{len(corpus)} development families,{pc['queries_per_scene']} furnished-selected poses each; default material simulation; no real-world or furniture-invariance claim",
         summary=summary,contrasts=contrasts,per_scene=rows,prediction_changes=prediction_changes,waveform_checks=wave_checks,checkpoints=checks)
     (a.out/'summary.json').write_text(json.dumps(result,indent=2))
     lines=['# Matched furniture comparison','',result['evidence'],'','| Encoder/head | Historical furnished MAE | Fresh furnished MAE | Stage-only MAE | Fresh furnished − stage-only,95% CI |','|---|---:|---:|---:|---:|']
