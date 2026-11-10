@@ -92,9 +92,16 @@ def main():
     sums=torch.zeros(36);counts=torch.zeros(36)
     for s in scenes['train']:sums+=(s['depth']*s['mask']).sum(0);counts+=s['mask'].sum(0)
     prior=sums/counts.clamp_min(1)
+    all_depth=torch.cat([s['depth'] for s in scenes['train']]);all_mask=torch.cat([s['mask'] for s in scenes['train']])
+    median=torch.stack([all_depth[all_mask[:,j],j].median() for j in range(36)])
+    histogram=torch.stack([torch.bincount((all_depth[all_mask[:,j],j]*4).long().clamp(0,79),minlength=80) for j in range(36)]).float()+1
+    prior_logp=(histogram/histogram.sum(-1,keepdim=True)).log()
     prior_rows=[dict(scene=s['scene'],mae=float((s['depth']-prior).abs()[s['mask']].mean()),
-                     rmse=float((s['depth']-prior).square()[s['mask']].mean().sqrt())) for s in scenes['val']]
+                     rmse=float((s['depth']-prior).square()[s['mask']].mean().sqrt()),
+                     median_mae=float((s['depth']-median).abs()[s['mask']].mean()),
+                     categorical_nll=float(-prior_logp[None].expand(len(s['depth']),-1,-1).gather(-1,(s['depth']*4).long().clamp(0,79)[...,None])[...,0][s['mask']].mean())) for s in scenes['val']]
     (a.out/'train_prior.json').write_text(json.dumps(prior_rows,indent=2))
+    np.savez(a.out/'train_prior_parameters.npz',mean=prior.numpy(),median=median.numpy(),probability=prior_logp.exp().numpy())
     registry=[]
     for architecture in a.architectures:
       for head in a.heads:
@@ -120,11 +127,21 @@ def main():
         train_seconds=time.perf_counter()-start
         torch.save(dict(model=model.state_dict(),architecture=architecture,head=head,seed=seed,code_sha=a.code_sha),run/'model.pt')
         rows,pred=evaluate(model,scenes['val'],a.device,a.phase_zero)
+        timing_input=scenes['val'][0]['echo' if architecture=='echo' else 'spatial'][:1].float().to(a.device)
+        if a.phase_zero and architecture=='spatial':timing_input[:,6:]=0
+        latency=[]
+        with torch.no_grad():
+            for repeat in range(55):
+                if a.device=='cuda':torch.cuda.synchronize()
+                tick=time.perf_counter();model(timing_input)
+                if a.device=='cuda':torch.cuda.synchronize()
+                if repeat>=5:latency.append(1000*(time.perf_counter()-tick))
         (run/'metrics.json').write_text(json.dumps(rows,indent=2));(run/'history.json').write_text(json.dumps(history,indent=2))
         for name,arrays in pred.items():np.savez_compressed(run/(name+'.npz'),**arrays)
         record=dict(run=run.name,seed=seed,architecture=architecture,head=head,steps=a.steps,code_sha=a.code_sha,
                     parameters=sum(p.numel() for p in model.parameters()),encoder_parameters=sum(p.numel() for p in model.encoder.parameters()),
                     train_seconds=train_seconds,checkpoint_sha256=sha(run/'model.pt'),
+                    encoder_head_batch1_latency_median_ms=float(np.median(latency)),latency_excludes='RIR loading, STFT and localization scoring; shared GPU, not isolated',
                     peak_gpu_bytes=torch.cuda.max_memory_allocated() if a.device=='cuda' else None)
         registry.append(record);(a.out/'registry.json').write_text(json.dumps(registry,indent=2))
     (a.out/'COMPLETE').write_text(a.code_sha+'\n')
