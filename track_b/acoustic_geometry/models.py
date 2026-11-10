@@ -39,7 +39,10 @@ class GeometryNet(nn.Module):
         self.register_buffer('bearings',torch.stack([theta.cos(),theta.sin()],-1))
         out=1 if head=='regression' else bins
         if architecture=='echo':
-            self.decoder=nn.Sequential(nn.Linear(512,256),nn.ReLU(),nn.Linear(256,directions*out))
+            if directions!=36:raise ValueError('Echo adaptation is configured for36 bearings')
+            self.seed=nn.Linear(512,32*9)
+            self.decoder=nn.Sequential(nn.ConvTranspose1d(32,32,4,2,1),nn.ReLU(),
+                nn.ConvTranspose1d(32,32,4,2,1),nn.ReLU(),nn.Conv1d(32,out,1))
         else:
             self.query=nn.Linear(2,64)
             self.attention=nn.MultiheadAttention(64,4,batch_first=True)
@@ -47,7 +50,7 @@ class GeometryNet(nn.Module):
         self.register_buffer('centres',(torch.arange(bins)+.5)*20/bins)
     def forward(self,x):
         z=self.encoder(x)
-        if self.architecture=='echo':raw=self.decoder(z).reshape(len(x),len(self.bearings),-1)
+        if self.architecture=='echo':raw=self.decoder(self.seed(z).reshape(len(x),32,9)).transpose(1,2)
         else:
             q=self.query(self.bearings)[None].expand(len(x),-1,-1)
             v,_=self.attention(q,z,z,need_weights=False)

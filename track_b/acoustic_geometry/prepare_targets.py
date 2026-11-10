@@ -5,7 +5,9 @@ import json
 from pathlib import Path
 import time
 import numpy as np
+from PIL import Image
 from .targets import intersect_segments
+from track_b.data.rays import rays_at_poses
 
 
 def read(path):
@@ -40,7 +42,7 @@ def main():
     protocol=dict(scenes=splits, code_sha=a.code_sha, cohort_sha256=sha(a.cohort),
         directions=36, max_range_m=20., queries_per_scene=64, normal_y_abs_max=.15,
         supervision='first vertical architectural stage intersection at receiver height; no furniture; no semantic outer closure',
-        limitations='Architectural stage may contain fixed built-ins; vertical-surface proxy, not semantic wall classification. Door/window holes remain openings. Beyond-range/no-hit masked.',
+        limitations='Architectural stage may contain fixed built-ins; vertical-surface proxy, not semantic wall classification. Door/window holes remain openings. Beyond-range/no-hit masked. Stage hit past first canonical blocked boundary by >0.20m is conservatively masked (indoor-scope/disagreement filter); map boundary never supplies target depth.',
         official_test_accessed=False, evidence='Exploratory; development_test is reused original Val19; inner Val from historically exposed Train112',
         selection='fixed final checkpoints; inner val reserved for implementation diagnosis; development_test stays unopened until model freeze')
     (a.out/'protocol.json').write_text(json.dumps(protocol,indent=2))
@@ -66,14 +68,21 @@ def main():
             segments_by_height[str(height)]=segments
             ids=heights==height
             target[ids],mask[ids]=intersect_segments(poses[ids],segments)
+        stage_mask=mask.copy()
+        meta_path=a.root/f'2DFP/{scene}/floorplan_metadata.json'
+        map_path=a.root/f'2DFP/{scene}/map.png'
+        meta=read(meta_path);free=np.array(Image.open(map_path))==255
+        origin=[meta['world_bounds_m'][k] for k in ('x_min','z_min')]
+        boundary,_=rays_at_poses(free,meta['map_spacing_m'],origin,poses,ray_bins=36,ray_step=.05)
+        mask &= target<=boundary+.20
         # Manifest only: no held-out RIR/RGB payload is read here.
         refs=[dict(query_id=q['sample_index'],rir_path=q['observed_rir_path'],rgb_path=q['image_path'],
                    centre_xyz_m=q['centre_xyz_m'],world_yaw_deg=q['world_yaw_deg'],base_acoustic_yaw_deg=q['base_acoustic_yaw_deg']) for q in selected]
-        np.savez_compressed(a.out/f'{scene}.npz',depth=target,mask=mask,poses=poses,heights=heights,
+        np.savez_compressed(a.out/f'{scene}.npz',depth=target,mask=mask,stage_mask=stage_mask,boundary_depth=boundary,poses=poses,heights=heights,
                             **{'segments_'+h:s for h,s in segments_by_height.items()})
         (a.out/f'{scene}_queries.json').write_text(json.dumps(refs,indent=2))
         row=dict(scene=scene,split=part,queries=len(selected),stage_sha256=sha(mesh_path),schedule_sha256=sha(schedule_path),
-                 target_sha256=sha(a.out/f'{scene}.npz'),vertical_faces=int(keep.sum()),seconds=time.perf_counter()-t)
+                 target_sha256=sha(a.out/f'{scene}.npz'),map_sha256=sha(map_path),metadata_sha256=sha(meta_path),vertical_faces=int(keep.sum()),seconds=time.perf_counter()-t)
         # Do not inspect/report held-out target statistics during preparation.
         if part!='development_test': row['valid_fraction']=float(mask.mean())
         records.append(row)
