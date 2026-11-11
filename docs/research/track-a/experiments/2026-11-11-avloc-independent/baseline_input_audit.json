@@ -1,0 +1,923 @@
+{
+  "complete": true,
+  "scenes": 19,
+  "queries": 9965,
+  "records": [
+    {
+      "scene": "102344115",
+      "queries": 320,
+      "poses": 28044,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/102344115",
+      "receipt_sha256": "d60caae218e6d2fc0bd7e631969f52cbe886bda080ae579c5dc460e869b8d6d7",
+      "files": {
+        "fp.npy": "9bc3a7dde646172c6b95863bacda8eff43b082052f6495caa0de7cc84da70092",
+        "xy.npy": "e44384f39d0399da7f36ddfc1e5c79707084cac8857254c03731689a6dd6a0b9",
+        "windows.npy": "ec32503143d38eaaf6546de1de83ad572db4207b0ebeb142916588da52f41c0b",
+        "query.npz": "f4597c61f38fcb40583ad379256ea97f3de74240bb59d4860fd1d68222bdd1cc"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.1920928955078125e-07,
+      "array_shapes": {
+        "visual": [
+          320,
+          40,
+          128
+        ],
+        "audio": [
+          320,
+          52,
+          100
+        ],
+        "mu": [
+          320,
+          40
+        ],
+        "scale": [
+          320,
+          40
+        ],
+        "observed": [
+          320,
+          128
+        ],
+        "truth": [
+          320,
+          3
+        ],
+        "sample_indices": [
+          320
+        ]
+      },
+      "seconds": 0.18190526962280273
+    },
+    {
+      "scene": "108294798_176710428",
+      "queries": 392,
+      "poses": 113760,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/108294798_176710428",
+      "receipt_sha256": "8fc7b30cc0024f75e1443660e11bf5ca288660f37c2bd44270fcbdf5af331816",
+      "files": {
+        "fp.npy": "126fc7ec1acbeccd52147dbc23652aec908574d640f8ccb22393877154a3bee0",
+        "query.npz": "48b51b5b3fad7a3a6b2a6be9dc28a8dba2583b5415b767eac4cf0c80d39ed500",
+        "xy.npy": "22bd958dcb84eb46b1e7f811675174e58c283d2c1e8658ab7ce20f4f018af1ee",
+        "windows.npy": "f69f1b78e5ec75a117693625b632fc2386f679196fdd1975bd91f770588218e0"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.1920928955078125e-07,
+      "array_shapes": {
+        "visual": [
+          392,
+          40,
+          128
+        ],
+        "audio": [
+          392,
+          52,
+          100
+        ],
+        "mu": [
+          392,
+          40
+        ],
+        "scale": [
+          392,
+          40
+        ],
+        "observed": [
+          392,
+          128
+        ],
+        "truth": [
+          392,
+          3
+        ],
+        "sample_indices": [
+          392
+        ]
+      },
+      "seconds": 0.2408006191253662
+    },
+    {
+      "scene": "104862573_172226682",
+      "queries": 576,
+      "poses": 146088,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/104862573_172226682",
+      "receipt_sha256": "6e363113fd439edb4ada9390e324d2cf28c7d5e8c37a0cbe7288cd8f580bbb85",
+      "files": {
+        "fp.npy": "b5922c5f15b8469df7f13e6116ecb42445b00518ae6b481f8e4a87ad08afce29",
+        "xy.npy": "add9a5bc159dd73dc3d99a922ffec6346ac85cffc44f76f955ae4c93979e9546",
+        "windows.npy": "7915fae9b0a83ba3577793e6e423802e89c67de1abcb931f1f1f125cce2ba427",
+        "query.npz": "c65c5e28872ea97895991579c0a72e20583bf4c982f5a910b43f97df1625b062"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          576,
+          40,
+          128
+        ],
+        "audio": [
+          576,
+          52,
+          100
+        ],
+        "mu": [
+          576,
+          40
+        ],
+        "scale": [
+          576,
+          40
+        ],
+        "observed": [
+          576,
+          128
+        ],
+        "truth": [
+          576,
+          3
+        ],
+        "sample_indices": [
+          576
+        ]
+      },
+      "seconds": 0.3253805637359619
+    },
+    {
+      "scene": "108736800_177263517",
+      "queries": 472,
+      "poses": 236916,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/108736800_177263517",
+      "receipt_sha256": "0a3c6901a3c3f6e0b76bc26a315ec6610f95b3331ea0db93b678f521cfb1d258",
+      "files": {
+        "fp.npy": "0e8c4692393fe91df87065a8265c6947535d0cfd7c16ce6f281ad06f0e77b639",
+        "query.npz": "9f7435d804aa8f3db96c91e3f30543240d517275f274186bcbe53d3d0037bee3",
+        "xy.npy": "db4e4ca332472152be12639f7bc9293f0f26f8f595ee4615d306a0eb09478b6c",
+        "windows.npy": "dc395ad508812172ceb33844d8ec42343624ce44bf767d7b602a2bd7df39b233"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          472,
+          40,
+          128
+        ],
+        "audio": [
+          472,
+          52,
+          100
+        ],
+        "mu": [
+          472,
+          40
+        ],
+        "scale": [
+          472,
+          40
+        ],
+        "observed": [
+          472,
+          128
+        ],
+        "truth": [
+          472,
+          3
+        ],
+        "sample_indices": [
+          472
+        ]
+      },
+      "seconds": 0.36546993255615234
+    },
+    {
+      "scene": "108294783_176710410",
+      "queries": 488,
+      "poses": 119340,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/108294783_176710410",
+      "receipt_sha256": "176ef72f47e0b01059429b8306273cb98ca27f1cdedbf8f3d488c04427136db1",
+      "files": {
+        "fp.npy": "fee2f7c9da395c1a78eb0249dca2356a4be7f76897a6544ac664774bf763316e",
+        "xy.npy": "fe99e7c110da034d51237fdb0883d8a64e1b26d73ad5efff5f5e1fb8681f9c4a",
+        "windows.npy": "3e3c182f8a5cf7ca3fe324e5570803b2eab6c56c900df84a31b489cc2ed9fca5",
+        "query.npz": "f90173b33f031ab5b82d6202450f9020375ebaa5b59621b345ea5bac4cc03b49"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          488,
+          40,
+          128
+        ],
+        "audio": [
+          488,
+          52,
+          100
+        ],
+        "mu": [
+          488,
+          40
+        ],
+        "scale": [
+          488,
+          40
+        ],
+        "observed": [
+          488,
+          128
+        ],
+        "truth": [
+          488,
+          3
+        ],
+        "sample_indices": [
+          488
+        ]
+      },
+      "seconds": 0.27976346015930176
+    },
+    {
+      "scene": "108736635_177263256",
+      "queries": 568,
+      "poses": 122868,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/108736635_177263256",
+      "receipt_sha256": "e34ebf7977fa65d0e2ab72676ae7fd822488811f3cbc233daa3d6b7960aaec49",
+      "files": {
+        "fp.npy": "4990c11981e9293864e86d8e5a495e098d8c2aafbeefec67f5cb529305c79711",
+        "query.npz": "14b72be76f75afc3f6383d1e5f752af7f72866a0ff38fa75b28c7a4ff33038eb",
+        "xy.npy": "2bbea217309d7768e00a6e6da80bfada0017d9a23a93a4d46de7ea7718d5823c",
+        "windows.npy": "02f30688f8a7f5899544572648932b1c8c261cc388a62fa1bc400729bbbdbcc4"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          568,
+          40,
+          128
+        ],
+        "audio": [
+          568,
+          52,
+          100
+        ],
+        "mu": [
+          568,
+          40
+        ],
+        "scale": [
+          568,
+          40
+        ],
+        "observed": [
+          568,
+          128
+        ],
+        "truth": [
+          568,
+          3
+        ],
+        "sample_indices": [
+          568
+        ]
+      },
+      "seconds": 0.33493804931640625
+    },
+    {
+      "scene": "105515286_173104287",
+      "queries": 448,
+      "poses": 316728,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/105515286_173104287",
+      "receipt_sha256": "e11fa25c6db325ccde5b87ec57888a146304736828a04622572ecc1668939859",
+      "files": {
+        "fp.npy": "65c25de7181c616924c396e22deff908cf6d01c7b15bc24c687694240981c2e9",
+        "xy.npy": "0a95930a3ea084949d8da6c84a4e70d53c88dc09e1cd387f86cd4137801d5a3c",
+        "windows.npy": "f674f0089dd6b9a72ed6ca130fb4e453f2a1af6a0292925f9eacd47ee0c1566a",
+        "query.npz": "c9822da7120199ef83f0b8b54fe2586c8db492ebc412a15aa5e637578f52e26b"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          448,
+          40,
+          128
+        ],
+        "audio": [
+          448,
+          52,
+          100
+        ],
+        "mu": [
+          448,
+          40
+        ],
+        "scale": [
+          448,
+          40
+        ],
+        "observed": [
+          448,
+          128
+        ],
+        "truth": [
+          448,
+          3
+        ],
+        "sample_indices": [
+          448
+        ]
+      },
+      "seconds": 0.4681398868560791
+    },
+    {
+      "scene": "102344457",
+      "queries": 544,
+      "poses": 144612,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/102344457",
+      "receipt_sha256": "5c0df6fe4e30be9ca17e1cbc23fc32a66a9e6a0911b23aedd032c4970e6b6012",
+      "files": {
+        "fp.npy": "4b2880c4dcc83e2aeeec16ca5ad9984ab344e84ce57924559b2e081ef7484de4",
+        "query.npz": "be01aa965a2d58ab380494f3244a4e622915ebbfc29270a424c76d3ce28c211d",
+        "xy.npy": "36703ffec438bf0afa0abdcd2014b93ee86bfbe27c80f58df8da57b07bcaa6a6",
+        "windows.npy": "279b635159406526308815cf0eca29854bc5aeeba92d71e9b2b200d973373ba7"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          544,
+          40,
+          128
+        ],
+        "audio": [
+          544,
+          52,
+          100
+        ],
+        "mu": [
+          544,
+          40
+        ],
+        "scale": [
+          544,
+          40
+        ],
+        "observed": [
+          544,
+          128
+        ],
+        "truth": [
+          544,
+          3
+        ],
+        "sample_indices": [
+          544
+        ]
+      },
+      "seconds": 0.31932568550109863
+    },
+    {
+      "scene": "106366134_174226362",
+      "queries": 584,
+      "poses": 120564,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/106366134_174226362",
+      "receipt_sha256": "8b257d3c4f95c1f496ddd58bba68b05a07019a75a848e171be8295b7a2055425",
+      "files": {
+        "fp.npy": "772873069bcc945490a244e26ce82de0b9e0b3b0ca53e44030ca986acfd41b9b",
+        "xy.npy": "5bda0824798be4fa3ace11b8fd3c5fd33c1a564ca5c34c8075141524239f54b6",
+        "windows.npy": "f0e455ebe10dc309c5f35ae4deeef07511f3349f3f50673ddd3a693740d1f19d",
+        "query.npz": "ab56eefea11ed6b4cd8376b29f2928449c83a18c5b872d414a2a431126baca0c"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.1920928955078125e-07,
+      "array_shapes": {
+        "visual": [
+          584,
+          40,
+          128
+        ],
+        "audio": [
+          584,
+          52,
+          100
+        ],
+        "mu": [
+          584,
+          40
+        ],
+        "scale": [
+          584,
+          40
+        ],
+        "observed": [
+          584,
+          128
+        ],
+        "truth": [
+          584,
+          3
+        ],
+        "sample_indices": [
+          584
+        ]
+      },
+      "seconds": 0.31718969345092773
+    },
+    {
+      "scene": "108294765_176710386",
+      "queries": 472,
+      "poses": 59940,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/108294765_176710386",
+      "receipt_sha256": "dd6c02fbb75592d5550b9db0fbb518c8b6b6d1bf0a631669b88a131a31178a65",
+      "files": {
+        "fp.npy": "d0d1213c1f771cc879eb1964fc750a6bd2aa332acc993808dff2364e4b139de0",
+        "xy.npy": "8d743f37a94e6225a6e129fbb2cb0d045edbb249a099ed1790c083ff286a8538",
+        "windows.npy": "1fddb7a3ccc29d27cc571b9b1e24acda14d10417b60e4b6d3a3061c4175435dc",
+        "query.npz": "932051611bad0867a53e175f542263028b67f283a6d189b58f7f8cc669df4f53"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.1920928955078125e-07,
+      "array_shapes": {
+        "visual": [
+          472,
+          40,
+          128
+        ],
+        "audio": [
+          472,
+          52,
+          100
+        ],
+        "mu": [
+          472,
+          40
+        ],
+        "scale": [
+          472,
+          40
+        ],
+        "observed": [
+          472,
+          128
+        ],
+        "truth": [
+          472,
+          3
+        ],
+        "sample_indices": [
+          472
+        ]
+      },
+      "seconds": 0.2444474697113037
+    },
+    {
+      "scene": "106879005_174887124",
+      "queries": 640,
+      "poses": 90612,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/106879005_174887124",
+      "receipt_sha256": "4b2e6eb2f826ca36217ffcc930fc87d6df7bead1931e2619b77be29c674b79a4",
+      "files": {
+        "fp.npy": "a9e9e8b45d9482af329359c419613eac7d84bb0ef612cc758e3c0605e7f4a53f",
+        "xy.npy": "597992ef1daf96a811fb040326d168621fd70a39eba42c06ca2fd907dbb4b17c",
+        "windows.npy": "6cb4dd4bbe3a1a0a2fc1ccfe09d45db56723de9c725a5f9024a3a4d25edf94f9",
+        "query.npz": "b9a37803791a087919a4ebc25005defb75e0c29732e0dad0c5c1cc3f03b8a088"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          640,
+          40,
+          128
+        ],
+        "audio": [
+          640,
+          52,
+          100
+        ],
+        "mu": [
+          640,
+          40
+        ],
+        "scale": [
+          640,
+          40
+        ],
+        "observed": [
+          640,
+          128
+        ],
+        "truth": [
+          640,
+          3
+        ],
+        "sample_indices": [
+          640
+        ]
+      },
+      "seconds": 0.3123035430908203
+    },
+    {
+      "scene": "103997478_171030528",
+      "queries": 548,
+      "poses": 128484,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/103997478_171030528",
+      "receipt_sha256": "5ab24ad9de1e4ace4c1b455763b743d7b97e98573fb06061050f30c0d3101606",
+      "files": {
+        "fp.npy": "12b54dbef14ed0514064f006c92c373d9a2f64101bdee248399844d83eeab51b",
+        "query.npz": "ea44b53122f955acef5580e6b8b38520e067f258d5e27acc1da40dcc8c334bea",
+        "xy.npy": "38f9829c841ca370ec96522beec6528e857c893aec66984d8554955987a73a44",
+        "windows.npy": "627457037401588d1354857bd062650be5a762a9803844871265c5ea62660c48"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.1920928955078125e-07,
+      "array_shapes": {
+        "visual": [
+          548,
+          40,
+          128
+        ],
+        "audio": [
+          548,
+          52,
+          100
+        ],
+        "mu": [
+          548,
+          40
+        ],
+        "scale": [
+          548,
+          40
+        ],
+        "observed": [
+          548,
+          128
+        ],
+        "truth": [
+          548,
+          3
+        ],
+        "sample_indices": [
+          548
+        ]
+      },
+      "seconds": 0.3008596897125244
+    },
+    {
+      "scene": "108736737_177263406",
+      "queries": 680,
+      "poses": 142596,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/108736737_177263406",
+      "receipt_sha256": "d556a23a807d8f9e5f287f586cd6fb7fc882204752f2810c96c6aab4f3d5f8f4",
+      "files": {
+        "fp.npy": "483eadc84137d56c183fb01988e5bed25a0a54570dbc5403cea7bfd3f216093e",
+        "query.npz": "54b3bcf22f1dc94315e07bc119c3044091ca0c425f0dbfef41bf555745c782a5",
+        "xy.npy": "6e10cc0524da61fe915a7bfa9223201dd61bf3bc2831854972d22c2461c72aee",
+        "windows.npy": "1d0ce45b82abdfce75f5a6d3f572e7c9d51341eba7088ed6bdd0d151d434e9b2"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          680,
+          40,
+          128
+        ],
+        "audio": [
+          680,
+          52,
+          100
+        ],
+        "mu": [
+          680,
+          40
+        ],
+        "scale": [
+          680,
+          40
+        ],
+        "observed": [
+          680,
+          128
+        ],
+        "truth": [
+          680,
+          3
+        ],
+        "sample_indices": [
+          680
+        ]
+      },
+      "seconds": 0.3789656162261963
+    },
+    {
+      "scene": "104348082_171512994",
+      "queries": 506,
+      "poses": 71928,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/104348082_171512994",
+      "receipt_sha256": "569f2cc26ad070e55e76016f03bc98c2f11aac227a8caf1582eac1cacdeb5467",
+      "files": {
+        "fp.npy": "33d3a431f2fd11496942070b98959b8c3a7592f0689c563f05def67395ca8a76",
+        "query.npz": "46f5258852a44eb90b22e92211a7790745fcb355a77ccdf47a8d5a91adee749f",
+        "xy.npy": "aa4af10990b8cb8c20521f10b71c1371a617d0dc803164880b37a13b3dc67b09",
+        "windows.npy": "75d7d4b8889120d04276ee2d73d3d9d725c413d8008bbb4581f3a0d41d5f3333"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          506,
+          40,
+          128
+        ],
+        "audio": [
+          506,
+          52,
+          100
+        ],
+        "mu": [
+          506,
+          40
+        ],
+        "scale": [
+          506,
+          40
+        ],
+        "observed": [
+          506,
+          128
+        ],
+        "truth": [
+          506,
+          3
+        ],
+        "sample_indices": [
+          506
+        ]
+      },
+      "seconds": 0.23657870292663574
+    },
+    {
+      "scene": "105515448_173104512",
+      "queries": 480,
+      "poses": 229860,
+      "folder_relative": "experiments/mbt_remaining_suite_20261106/data/105515448_173104512",
+      "receipt_sha256": "e9a2d5da5abbbe42f683dea58bc496698200928fd2dd74243808ebc7b89c6721",
+      "files": {
+        "fp.npy": "f43208a0849f77af13b4c016f48c7d473a3ab77541ecf3d70cbbc858191f0872",
+        "query.npz": "287a481a4f09ae55fc09687c0aec4adb5558ddcbe1cd917a3da64578281ec80c",
+        "xy.npy": "d85788e66fee706de3fbd3d4fac74aa0be845c9484c9c512b9f7b149cdf5ba31",
+        "windows.npy": "8cecfa776b92e692ea28c39ecf7770e96121d814250fb0157643c0842c3e4b73"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          480,
+          40,
+          128
+        ],
+        "audio": [
+          480,
+          52,
+          100
+        ],
+        "mu": [
+          480,
+          40
+        ],
+        "scale": [
+          480,
+          40
+        ],
+        "observed": [
+          480,
+          128
+        ],
+        "truth": [
+          480,
+          3
+        ],
+        "sample_indices": [
+          480
+        ]
+      },
+      "seconds": 0.3487701416015625
+    },
+    {
+      "scene": "102344307",
+      "queries": 416,
+      "poses": 115452,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/102344307",
+      "receipt_sha256": "c3dcf226959e35c11db074630c043f349f56eb138f19901e7ac68df384bc3376",
+      "files": {
+        "fp.npy": "869196f7ecc889587c5a736efca480662c14c7af0a08edce8a6f53aab7c34e44",
+        "xy.npy": "650fdba0280ea77bad507b9e29e0cdb85f5a97d150c5cf66d4930c6fcb595e66",
+        "windows.npy": "af85a1e34a10ec8d3fef2f174fd8f219f8696ccd87a60b87d00cdaa8ac7a9300",
+        "query.npz": "459e047cd2dd43878294f9919b300c691edc4f34c80414a83701f3991ae76cd0"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          416,
+          40,
+          128
+        ],
+        "audio": [
+          416,
+          52,
+          100
+        ],
+        "mu": [
+          416,
+          40
+        ],
+        "scale": [
+          416,
+          40
+        ],
+        "observed": [
+          416,
+          128
+        ],
+        "truth": [
+          416,
+          3
+        ],
+        "sample_indices": [
+          416
+        ]
+      },
+      "seconds": 0.26455211639404297
+    },
+    {
+      "scene": "108736611_177263226",
+      "queries": 480,
+      "poses": 145908,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/108736611_177263226",
+      "receipt_sha256": "ea944c41fed97a9cd977ff758574a73b340d349eef09667e8e7ab4cbf7c94a55",
+      "files": {
+        "fp.npy": "9ce4ddc3176b7c6fe2e169cd1ed3195152675e3fbc8eb132c4df6b89fb731700",
+        "xy.npy": "8a873d6ffaf5708d89799f5612abbbc4f73af73dfb9c68ec88f953654c88b249",
+        "windows.npy": "edba63c384aa84b1526acec5af9326864a4d9171a7bb9f1b00ea64bbbb74c924",
+        "query.npz": "f363f384e4811ffe40cb96857eefb3f33dc35a890a2f6d23fa17559746cfd50d"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          480,
+          40,
+          128
+        ],
+        "audio": [
+          480,
+          52,
+          100
+        ],
+        "mu": [
+          480,
+          40
+        ],
+        "scale": [
+          480,
+          40
+        ],
+        "observed": [
+          480,
+          128
+        ],
+        "truth": [
+          480,
+          3
+        ],
+        "sample_indices": [
+          480
+        ]
+      },
+      "seconds": 0.27983856201171875
+    },
+    {
+      "scene": "106366173_174226431",
+      "queries": 711,
+      "poses": 99972,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/106366173_174226431",
+      "receipt_sha256": "1c60bc8998962a49aa8e892f13afabf4b3691732133a3689fa46efddf1b0d4cc",
+      "files": {
+        "fp.npy": "7eeb859ed6fa9a93766a6913baab0fbdfa549348cab6976cf9c1681889336908",
+        "xy.npy": "ef1159cb0ecdcf38cf6dfbf9bba2e658ff5ae59c7c4bd007b0082078743e8a91",
+        "windows.npy": "6d8608f9a7777064bfec56fe1a0bd4ad97b8afdf43be1fb9b5b92723f8bab338",
+        "query.npz": "1c5f55fcbcf9f2e217c53cc205916b0fc2caa15798c02d30dc946ed541624087"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          711,
+          40,
+          128
+        ],
+        "audio": [
+          711,
+          52,
+          100
+        ],
+        "mu": [
+          711,
+          40
+        ],
+        "scale": [
+          711,
+          40
+        ],
+        "observed": [
+          711,
+          128
+        ],
+        "truth": [
+          711,
+          3
+        ],
+        "sample_indices": [
+          711
+        ]
+      },
+      "seconds": 0.3512880802154541
+    },
+    {
+      "scene": "108294624_176710203",
+      "queries": 640,
+      "poses": 136116,
+      "folder_relative": "experiments/fusion_vs_posterior_20261107_1300/independent_data/108294624_176710203",
+      "receipt_sha256": "dcbf1e9c5d4eb5deb500a344c6d81647dc9e3fc4798872f584381e9b52cb8f1e",
+      "files": {
+        "fp.npy": "01e61cde5431a1234789864dc9d06da06221a28ca9ed9b7dd1010ebc71abfc30",
+        "xy.npy": "951341262652dd79d037de265a9a22a551e0fcec7308f84494a2eda98b5636c3",
+        "windows.npy": "19d920beda796b07f8ace20020410c31dc8804c3e03fb6964479611ed5273a95",
+        "query.npz": "f9ec6a813aa6560e573e7c5dbaa48f77dd5a945070cb319d6fe250496995ecb5"
+      },
+      "pose_and_query_ids_match": true,
+      "grid_match": true,
+      "max_embedding_norm_error": 1.7881393432617188e-07,
+      "array_shapes": {
+        "visual": [
+          640,
+          40,
+          128
+        ],
+        "audio": [
+          640,
+          52,
+          100
+        ],
+        "mu": [
+          640,
+          40
+        ],
+        "scale": [
+          640,
+          40
+        ],
+        "observed": [
+          640,
+          128
+        ],
+        "truth": [
+          640,
+          3
+        ],
+        "sample_indices": [
+          640
+        ]
+      },
+      "seconds": 0.3518691062927246
+    }
+  ],
+  "source_sha256": "805a3366aa9ae03a4729605675bd49b10649de7c092ba59941002fa4e350207e",
+  "input_manifest_sha256": "7ee50a05d4901d0618d77caef288372958c1b773a8c742eb40c0a714e85e2c65",
+  "test_accessed": false,
+  "limitation": "Historical cached-feature provenance preserved; this audit is not raw-image/RIR encoder re-execution.20cm only;10cm acoustic bank is not synthesized."
+}

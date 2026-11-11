@@ -1,0 +1,13 @@
+{
+  "source_commit": "c81f817b2e8a17cd2d12e2b0d845e17337cd5cef",
+  "execution_base_commit": "8122cb0b48ee95d9b569818af9cdc45e2930eded",
+  "execution_state": "new source files executed then committed unchanged",
+  "code_sha256": {
+    "audit_baseline_inputs.py": "805a3366aa9ae03a4729605675bd49b10649de7c092ba59941002fa4e350207e",
+    "replay_geoq.py": "e5b54f822e8035c1948b3b693507d74b59d5bd942662ff6397c4a7d30c413c5b"
+  },
+  "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+  "epoch1_checkpoint_sha256": "135a5486fd83c8707028ff2f2cfd553bf37c9d463db42ff7b144379365c96ba8",
+  "checkpoint_status": "intermediate epoch1; not final selection; immutable best_epoch_001 retained",
+  "test_accessed": false
+}

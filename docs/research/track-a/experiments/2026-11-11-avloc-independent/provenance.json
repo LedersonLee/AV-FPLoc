@@ -1,6 +1,10 @@
 {
   "files": [
     {
+      "git_copy": "A0_seed42_epoch001.json",
+      "sha256": "46f8c85c4cad5b4c8672175bf65aefaed80694b2456f0b67f43fc2c2f0e8c1e2"
+    },
+    {
       "git_copy": "IMPLEMENTATION_AUDIT.md",
       "sha256": "d675a2280a729ee9d67f5e29d855c2aa0e5ee6ae204f774e11832a8f164e8326"
     },
@@ -14,7 +18,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "1fe5d0577b607cd20a51245dcce2b23d08ca0e645f7acdb7ba9bec9f1225fd44"
+      "sha256": "e7fe94993c16cd98193233b188e25792ab6c2b20d07ed99224688c317bd99f02"
     },
     {
       "git_copy": "architecture_test.json",
@@ -29,8 +33,24 @@
       "sha256": "85108f732ba70ea2515e8653d6688185c65578b01824efe6d49a243cadd13c55"
     },
     {
+      "git_copy": "baseline_input_audit.json",
+      "sha256": "712f472c68660afb0ed87bf932683f1f482d0e5fcfc572cd8992bfee65e80e69"
+    },
+    {
+      "git_copy": "baseline_replay_provenance.json",
+      "sha256": "48fe0c062efa0e3ac44ab3cf9beca0a80d62e2664c5b180a2ff6ecbbcf7cc5c2"
+    },
+    {
       "git_copy": "geometry_test_v2.json",
       "sha256": "1d7ac381e87e9fa3aa35d230d397bc78946790bd73ae15f24ce4d7bea81b0b22"
+    },
+    {
+      "git_copy": "geoq_seed42_summary.json",
+      "sha256": "d21a35cd98a19cf72d4a01c28ecc3d68e5cbb199bf415c61c07d73dbd5daed2b"
+    },
+    {
+      "git_copy": "geoq_seed43_summary.json",
+      "sha256": "3c48eb8ca68292080b3547d798d0209ae5942762858f5c57b63c55573412560f"
     },
     {
       "git_copy": "implementation_assumptions.md",
