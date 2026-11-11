@@ -1,0 +1,27 @@
+{
+  "queries": 9965,
+  "head": "A",
+  "grid_cm": 10,
+  "metric_means": {
+    "r1": 0.09222277972905168,
+    "joint": 0.025388861013547415,
+    "fine": 0.0030105368790767687,
+    "top5_nms": 0.10265930757651781,
+    "top20_nms": 0.2275965880582037,
+    "top5_raw": 0.06753637732062218,
+    "top20_raw": 0.0958354239839438,
+    "ray_mae": 1.4785059681533272,
+    "ray_nll": 2.0494116569422953,
+    "in_fov_mae": 1.4913805417269768,
+    "entropy_normalized": 0.5270107418354176,
+    "gt_region_mass": 0.024480603667603133,
+    "nearest_grid_nll": 30.88118268818684
+  },
+  "scene_macro_joint": 0.026091311337565423,
+  "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+  "source_sha256": {
+    "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+    "evaluate_fields.py": "a9b58cca92e184ddc8d2a2c300ea38b1e6c85d439dedaaaf2ede1ab9ac00af43"
+  },
+  "test_accessed": false
+}
