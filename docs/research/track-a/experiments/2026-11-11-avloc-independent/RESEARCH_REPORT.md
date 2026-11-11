@@ -141,3 +141,21 @@ GT-derived profiles never enter model inference, uncertainty prediction or propo
 The FP embedding payload is115.2× the20cm ray-bank-plus-coordinate payload. This difference follows from storing a128-vector at every yaw pose versus36 world-ray distances per XY with headings obtained by index rotation. It is a representation/storage observation, not evidence that both encode equivalent acoustic information. No10cm FP-RIR bank is synthesized.
 
 Recorded geometry preparation wall time is103.40seconds for **both grids together**, under the existing machine workload; it is neither an isolated timing nor a20cm-only estimate. Original FP rendering time is unmeasured here. Model weights, training, query encoders, B2/GEOQ compute and shared map assets are outside the bank figures. The requested accuracy/compute tradeoff remains pending trained matched evaluation and isolated runtime measurements.
+
+## B2 seed43 held-development temperature result
+
+All9,965 query temperature curves completed. Source `43c5eda1264030243f4fb9f8a99b2fe1931a5819` verifies curve temperature1 statistics against the separately executed native field evaluation, exact Top1 IDs and success labels, and recomputes the stored crossfit result. All checks pass. Four fit folds select T=0.0562341 and one selects0.1, with no boundary optimum. [Verification](calibration_seed43_verification.json), [fold/source summary](calibration_seed43_summary.json).
+
+| Statistic | Native T=1 | Held-development temperature |
+|---|---:|---:|
+|Nearest-grid NLL (query mean)|9.949639|5.164361|
+|Joint-neighborhood ECE (15bins)|0.679699|0.154966|
+|Joint-neighborhood Brier|0.674410|0.177783|
+|Normalized entropy|0.974670|0.374741|
+|Top1 joint success|69.2423%|69.2423%|
+
+**Observed:** scalar temperature changes concentration and confidence diagnostics without changing any Top1 pose. **Interpretation:** native standardized-score softmax is severely diffuse; a smaller temperature corrects much of this scaling mismatch. **Controlled conclusion:** the sharper distribution in this transformation is not a localization accuracy gain. **Limits:** residual ECE remains0.155 and confidence is mostly below observed success. Nearest-grid NLL fitting is not directly event-ECE minimization. Neither conditional independence nor cross-domain reliability is established. These are descriptive point estimates on reused development; model/teacher/checkpoint exposure prevents independent calibration claims.
+
+![B2 seed43 reliability and temperature](calibration_seed43_reliability.png)
+
+The right curve uses all-Val scene means for visualization only; fold temperatures were selected without each held family. The figure was rendered and visually inspected. This is an intermediate B2 calibration figure, not the still-pending AVLoc-versus-TrackA score-field comparison.

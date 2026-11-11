@@ -26,7 +26,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "bd075f568653d99ff562aaa8f5393e8b112d7a82adbcb0042150e1a42bb2f870"
+      "sha256": "5a36a39013afb8c7e597712ff09fb1f362dd37cce235987cdcfb61f0c0e2c5c7"
     },
     {
       "git_copy": "architecture_test.json",
@@ -63,6 +63,18 @@
     {
       "git_copy": "calibration_real_smoke_check.json",
       "sha256": "32f86432b66db1b4a1b86b2bc5204addd40c94ddadb63e45c0d8acecdbfce2dc"
+    },
+    {
+      "git_copy": "calibration_seed43_reliability.png",
+      "sha256": "2dce70c7129b42b6c6163b3c47fd830bfa8265dad34c6a088b747fccd1311055"
+    },
+    {
+      "git_copy": "calibration_seed43_summary.json",
+      "sha256": "f34cbb0761b2982ed533071fc1d08304e9c7c068a3765d660f5cfd849a1e64e1"
+    },
+    {
+      "git_copy": "calibration_seed43_verification.json",
+      "sha256": "5756e942d62c14cc81a34c3bf6460d1554ac19a19a60605fd19778dd36f8da18"
     },
     {
       "git_copy": "expert_training_queue.json",
