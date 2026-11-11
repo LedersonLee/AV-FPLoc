@@ -1,0 +1,202 @@
+{
+  "complete": true,
+  "scope": "4-query implementation check",
+  "seed": 42,
+  "queries": 4,
+  "scenes": 1,
+  "grid_cm": 20,
+  "temperature": 1,
+  "score_units": {
+    "visual": "negative scaled ray distance/40",
+    "acoustic": "unit-embedding cosine",
+    "fixed": ".85z(V)+.15z(A)",
+    "b2": "adapted .85z(V)+.15z(A)"
+  },
+  "warning": "Softmax score mass is not demonstrated calibrated probability; native temperatures/score scales differ. GEOQ utility is not a pose posterior.",
+  "methods": {
+    "b2": {
+      "means": {
+        "r1": 0.5,
+        "joint": 0.5,
+        "fine": 0.0,
+        "top5_raw": 0.5,
+        "top20_raw": 1.0,
+        "top5_nms": 1.0,
+        "top20_nms": 1.0,
+        "entropy_normalized": 0.9733773176740823,
+        "gt_region_mass": 0.02307248975423485,
+        "nearest_grid_nll": 9.274343714459565
+      },
+      "joint_event_calibration": {
+        "ece": 0.4737211006656207,
+        "brier": 0.47393297299783854,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 4,
+            "confidence": 0.026278899334379296,
+            "accuracy": 0.5
+          }
+        ],
+        "queries": 4
+      },
+      "per_scene": {
+        "102344115": {
+          "r1": 0.5,
+          "joint": 0.5,
+          "fine": 0.0,
+          "top5_raw": 0.5,
+          "top20_raw": 1.0,
+          "top5_nms": 1.0,
+          "top20_nms": 1.0,
+          "entropy_normalized": 0.9733773176740823,
+          "gt_region_mass": 0.02307248975423485,
+          "nearest_grid_nll": 9.274343714459565
+        }
+      }
+    },
+    "visual": {
+      "means": {
+        "r1": 0.0,
+        "joint": 0.0,
+        "fine": 0.0,
+        "top5_raw": 0.0,
+        "top20_raw": 0.5,
+        "top5_nms": 0.0,
+        "top20_nms": 0.75,
+        "entropy_normalized": 0.8944281267945184,
+        "gt_region_mass": 0.033069753655002115,
+        "nearest_grid_nll": 8.446160264328647
+      },
+      "joint_event_calibration": {
+        "ece": 0.03701169480166137,
+        "brier": 0.0013989204099927642,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 4,
+            "confidence": 0.03701169480166137,
+            "accuracy": 0.0
+          }
+        ],
+        "queries": 4
+      },
+      "per_scene": {
+        "102344115": {
+          "r1": 0.0,
+          "joint": 0.0,
+          "fine": 0.0,
+          "top5_raw": 0.0,
+          "top20_raw": 0.5,
+          "top5_nms": 0.0,
+          "top20_nms": 0.75,
+          "entropy_normalized": 0.8944281267945184,
+          "gt_region_mass": 0.033069753655002115,
+          "nearest_grid_nll": 8.446160264328647
+        }
+      }
+    },
+    "acoustic": {
+      "means": {
+        "r1": 0.75,
+        "joint": 0.5,
+        "fine": 0.0,
+        "top5_raw": 0.75,
+        "top20_raw": 0.75,
+        "top5_nms": 0.75,
+        "top20_nms": 1.0,
+        "entropy_normalized": 0.9969445702386522,
+        "gt_region_mass": 0.013875707878426433,
+        "nearest_grid_nll": 10.037789965782624
+      },
+      "joint_event_calibration": {
+        "ece": 0.4825992727318492,
+        "brier": 0.48079384547480286,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 4,
+            "confidence": 0.017400727268150788,
+            "accuracy": 0.5
+          }
+        ],
+        "queries": 4
+      },
+      "per_scene": {
+        "102344115": {
+          "r1": 0.75,
+          "joint": 0.5,
+          "fine": 0.0,
+          "top5_raw": 0.75,
+          "top20_raw": 0.75,
+          "top5_nms": 0.75,
+          "top20_nms": 1.0,
+          "entropy_normalized": 0.9969445702386522,
+          "gt_region_mass": 0.013875707878426433,
+          "nearest_grid_nll": 10.037789965782624
+        }
+      }
+    },
+    "fixed": {
+      "means": {
+        "r1": 0.25,
+        "joint": 0.25,
+        "fine": 0.0,
+        "top5_raw": 0.5,
+        "top20_raw": 0.75,
+        "top5_nms": 0.5,
+        "top20_nms": 1.0,
+        "entropy_normalized": 0.9733994532231767,
+        "gt_region_mass": 0.022739619004542935,
+        "nearest_grid_nll": 9.29796686967024
+      },
+      "joint_event_calibration": {
+        "ece": 0.22218836535206066,
+        "brier": 0.23657860590751628,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 4,
+            "confidence": 0.027811634647939357,
+            "accuracy": 0.25
+          }
+        ],
+        "queries": 4
+      },
+      "per_scene": {
+        "102344115": {
+          "r1": 0.25,
+          "joint": 0.25,
+          "fine": 0.0,
+          "top5_raw": 0.5,
+          "top20_raw": 0.75,
+          "top5_nms": 0.5,
+          "top20_nms": 1.0,
+          "entropy_normalized": 0.9733994532231767,
+          "gt_region_mass": 0.022739619004542935,
+          "nearest_grid_nll": 9.29796686967024
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "scene": "102344115",
+      "queries": 4,
+      "file": "102344115.json",
+      "sha256": "86a8d6be0df4a20b1e52bc09015b0e41ca4d79bfea5d72211c4555c880ed8b73",
+      "adapted_sha256": "3ed6a189bb725510c5980a069cd082d0229f76e06bfb832970a1305beb3dc506",
+      "candidate_archive_sha256": "0049db9b1124d73b179a7a6afb85d13d75c6bf9dea5f1aac56d0289c971ae404",
+      "input_receipt_sha256": "d60caae218e6d2fc0bd7e631969f52cbe886bda080ae579c5dc460e869b8d6d7",
+      "score_nms_replay_exact": true,
+      "seconds": 0.23633766174316406
+    }
+  ],
+  "source_sha256": {
+    "evaluate_baseline_fields.py": "f73f975afa876ec36bf14f6e80611dc4d81968d237c84c43d5dbf3fc1bc94c3f",
+    "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616"
+  },
+  "input_audit_sha256": "712f472c68660afb0ed87bf932683f1f482d0e5fcfc572cd8992bfee65e80e69",
+  "test_accessed": false,
+  "training": false
+}

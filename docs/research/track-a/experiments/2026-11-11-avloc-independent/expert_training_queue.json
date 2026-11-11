@@ -1,0 +1,45 @@
+{
+  "await_container": "avloc-a0-seed42-20261111",
+  "training_source_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+  "source_sha256": {
+    "train.py": "e4841ba02c3ae9eb380f3bd4ab508acdacf9665df575700c4bde444069d5423d",
+    "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+    "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+    "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+    "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+  },
+  "image_id": "sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318",
+  "plan": [
+    [
+      "A1",
+      42
+    ],
+    [
+      "A2",
+      42
+    ],
+    [
+      "A0",
+      43
+    ],
+    [
+      "A1",
+      43
+    ],
+    [
+      "A2",
+      43
+    ],
+    [
+      "A2_disabled",
+      42
+    ],
+    [
+      "A2_disabled",
+      43
+    ]
+  ],
+  "A3_included": false,
+  "policy": "wait existing A0; no restart, no overwrite, stop on failure; full100epochs/patience20",
+  "test_accessed": false
+}

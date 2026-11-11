@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "checks": [
+    "Eq2 versus scipy Laplace 36 rays",
+    "11 FoV ray index/heading convention",
+    "known exact pose recovery",
+    "circular yaw",
+    "GT diagnostic separation",
+    "empty GT region explicit infinity",
+    "score offset invariance",
+    "temperature changes entropy not top1",
+    "stable tie NMS",
+    "manual ECE"
+  ],
+  "max_logscore_difference": 1.1368683772161603e-13
+}
