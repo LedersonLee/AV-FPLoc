@@ -46,7 +46,7 @@ def main():
  for label,quantile in [('Representative A (40th MAE percentile)',.4),('Representative B (60th MAE percentile)',.6)]:
   q=np.quantile([r['mae']['normal'] for r in eligible],quantile);pool=[r for r in eligible if r['scene'] not in [c['scene'] for c in chosen]];choose(label,sorted(pool,key=lambda r:abs(r['mae']['normal']-q)))
  for label in ['Failure A (largest eligible MAE)','Failure B (largest MAE in another scene)']:
-  pool=[r for r in eligible if r['scene'] not in [c['scene'] for c in chosen[2:]];choose(label,sorted(pool,key=lambda r:-r['mae']['normal']))
+  pool=[r for r in eligible if r['scene'] not in [c['scene'] for c in chosen[2:]]];choose(label,sorted(pool,key=lambda r:-r['mae']['normal']))
  choose('Donor-sensitive (largest mean prediction change)',sorted(eligible,key=lambda r:-r['prediction_change']))
  median=np.median([r['mae']['normal'] for r in eligible]);pool=[r for r in eligible if abs(r['mae']['normal']-median)<.3 and r['gt_valid_angular_sd']>1]
  choose('Scalar-equivalent (smallest absolute MAE delta)',sorted(pool,key=lambda r:abs(r['delta']['scalar'])))
