@@ -18,7 +18,7 @@ def mesh(pose,state,path):
  path.write_text(f'{len(verts)} {len(faces)}\n'+'\n'.join(' '.join(map(str,v)) for v in verts+faces)+'\n');return dict(segments=kept,source=[pose['x'],1.5,pose['z']],state=state,vertices=verts,faces=faces)
 def material(default,absorption,scattering,profile):
  # Symmetric low/high profiles have equal arithmetic mean at the four log-spaced anchors.
- frequencies=[125.,500.,2000.,8000.];delta=min(absorption,1-absorption)*.8
+ frequencies=[83.910034,369.251007,1624.911255,7150.516602];delta=min(absorption,1-absorption)*.8
  shape=[1,1,-1,-1] if profile=='low' else [-1,-1,1,1] if profile=='high' else [0,0,0,0]
  values=[absorption+delta*v for v in shape];mat=copy.deepcopy(default);mat['labels']=['audit_surface'];mat['name']='Controlled surface';mat['absorption']=sum(([f,v] for f,v in zip(frequencies,values)),[]);mat['scattering']=[20.,scattering,20000.,scattering];mat['transmission']=[20.,0.,20000.,0.]
  bg=copy.deepcopy(default);bg['labels']=['fixed_background'];bg['name']='Fixed background';return dict(materials=[mat,bg])
