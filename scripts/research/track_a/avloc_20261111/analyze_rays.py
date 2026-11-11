@@ -10,7 +10,7 @@ from predict_hash import sha
 
 
 def correlation(x,y):
- x=np.asarray(x).ravel();y=np.asarray(y).ravel()
+ x=np.asarray(x,dtype=float).ravel();y=np.asarray(y,dtype=float).ravel()
  valid=np.isfinite(x)&np.isfinite(y);x=x[valid];y=y[valid]
  if len(x)<3 or np.ptp(x)==0 or np.ptp(y)==0:return None
  return float(spearmanr(x,y)[0])
