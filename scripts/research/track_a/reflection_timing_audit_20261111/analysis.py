@@ -5,7 +5,7 @@ import numpy as np
 from scipy import signal
 RING=np.pi+np.arange(6)*np.pi/3
 FS=48000
-METHODS=['wave_peak','energy_onset','short_increase','band_low_onset','band_high_onset','energy_centroid','envelope_peak','relative_1pct','relative_10pct','removed_difference_onset']
+METHODS=['wave_peak','energy_onset','short_increase','band_low_onset','band_high_onset','energy_centroid','envelope_peak','relative_1pct','relative_10pct','removed_difference_onset','band_low_difference_onset','band_high_difference_onset']
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def analytic(d,moved=False,direct=False):
  s=np.array([.17,1.5,d]);r=s+np.stack([.05*np.cos(RING),np.zeros(6),-.05*np.sin(RING)],-1)
@@ -25,8 +25,8 @@ def estimates(x,fs,reference,removed=None,threshold=1e-6):
  weights=np.maximum(window-threshold,0);result['energy_centroid']=float(np.sum(np.arange(lo,hi)*weights)/weights.sum()/fs*1000) if weights.sum()>0 else None
  result['relative_1pct']=onset(env,.01*env[lo:hi].max()) if gate else None;result['relative_10pct']=onset(env,.1*env[lo:hi].max()) if gate else None
  if removed is not None:
-  length=min(len(x),len(removed));e=np.maximum(x[:length]**2-removed[:length].astype(float)**2,0)/max(reference,1e-30);result['removed_difference_onset']=onset(signal.lfilter(np.ones(n)/n,[1],e),threshold)
- else:result['removed_difference_onset']=None
+  length=min(len(x),len(removed));e=np.maximum(x[:length]**2-removed[:length].astype(float)**2,0)/max(reference,1e-30);result['removed_difference_onset','band_low_difference_onset','band_high_difference_onset']=onset(signal.lfilter(np.ones(n)/n,[1],e),threshold)
+ else:result['removed_difference_onset','band_low_difference_onset','band_high_difference_onset']=None
  result['exact_nonzero_diagnostic']=onset((x!=0).astype(float),0)
  return result
 
@@ -66,7 +66,9 @@ def main():
    for ch,t in enumerate(expected):
     sample=t/1000*FS;n=int(np.floor(sample));fraction=sample-n;x[ch,n]=1-fraction;x[ch,n+1]=fraction
    refs.append(dict(distance=d,moved=moved,expected_ms=expected.tolist(),peak_ms=(x.argmax(-1)/FS*1000).tolist(),max_peak_error_ms=float(abs(x.argmax(-1)/FS*1000-expected).max()),method='Explicit analytic two-tap fractional-delay image-source reference, NOT SoundSpaces'))
-   np.save(root/f'analytic_reference_d{d}_moved{int(moved)}.npy',x)
+   file=root/f'analytic_reference_d{d}_moved{int(moved)}.npy'
+   if not file.exists():np.save(file,x)
+   else:np.testing.assert_array_equal(np.load(file),x)
  assert max(x['max_peak_error_ms'] for x in refs)<=1000/FS
  # Primary B statistics: no geometry-centered search or fitted correction.
  summary=[]
