@@ -1,0 +1,14 @@
+{
+  "matching_code_commit": "8eaaf247ae20ac39e132e2192bafee3f8b18ae4c",
+  "test_execution_base_commit": "3a9870949852d97af4e9a55bc49d37b40e1349ed",
+  "execution_source_state": "new uncommitted files then committed without modification",
+  "source_sha256": {
+    "matching.py": "0ecd6825585991c56721093b1d73ab52330ac75f90623063276cd699182d4a43",
+    "test_matching.py": "d31c863a0801ccf768214a476793202dca0c90534c7965d586577d5174c12fde",
+    "test_real_banks.py": "c82aa40e0bc4e7ccbd0954014e6ed2360c754db7fc469dabe21bdd5e3457f192",
+    "predict.py": "e21c005e825733bb2c5b6b0a87a32727c042ec5ee20cfb7134e394af9440eed9",
+    "evaluate_fields.py": "a9b58cca92e184ddc8d2a2c300ea38b1e6c85d439dedaaaf2ede1ab9ac00af43"
+  },
+  "scope": "matching tests passed; prediction/evaluation CLI compiled but awaits completed trained checkpoint integration; not learned accuracy",
+  "test_accessed": false
+}
