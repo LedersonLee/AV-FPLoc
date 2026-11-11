@@ -100,6 +100,6 @@ Geometric bearing은 벽을 관통해도 제공되는 이상적 oracle이다. FP
 
 ## 재현·비용·출처
 
-실행 명령은 [reproduction.md](reproduction.md), 정확한 source/input/output hashes와 코드 SHA는 [manifest.json](manifest.json), 자산 감사는 [audit.md](audit.md). 대형 RIR/WAV·raw predictions·원본 데이터/체크포인트는 로컬에만 둔다. 현재 최종 코드 SHA `47fc88265fa10a53ef5225ebc961ae5644a9db02`는 Docs commit과 구분한다. Source-only clean clone은 로컬 dataset/cache/native image 없이는 재현되지 않는다. Acoustic primary renderer 37.34s, oracle 1.99s; 전체 wall time·storage는 manifest. CPU4/8GB 제한, GPU/유료 resource 사용 없음.
+실행 명령은 [reproduction.md](reproduction.md), 정확한 source/input/output hashes와 코드 SHA는 [manifest.json](manifest.json), 자산 감사는 [audit.md](audit.md). 대형 RIR/WAV·raw predictions·원본 데이터/체크포인트는 로컬에만 둔다. 현재 보고서 생성 코드 SHA `0950b2d8fa2b44dc7befc6ebbd18634da428cda4`는 Docs commit과 구분한다. Source-only clean clone은 로컬 dataset/cache/native image 없이는 재현되지 않는다. Acoustic primary renderer 37.34s, oracle 1.99s; 전체 wall time·storage는 manifest. CPU4/8GB 제한, GPU/유료 resource 사용 없음.
 
 공식 API와 설치 근거: [SoundSpaces2 API](https://github.com/facebookresearch/sound-spaces/blob/main/SoundSpaces2.md), [설치 안내](https://github.com/facebookresearch/sound-spaces/blob/main/INSTALLATION.md), [HSSD dataset card](https://huggingface.co/datasets/hssd/hssd-hab/blob/main/README.md). 실제 판정은 설치된 binding/실행 결과를 우선했다.
