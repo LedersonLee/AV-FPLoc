@@ -27,7 +27,7 @@ def main():
     for p in pp:
      if not p['supported']:continue
      aligned=measure(raw[qi],p['times_ms'])['power_ratio'];donor=np.mean([measure(raw[(qi-int(np.random.default_rng(seed).integers(1,len(qs))))%len(qs)],p['times_ms'])['power_ratio'] for seed in [42,43,44]])
-     distance='<1m' if p['distance_m']<1 else '1-3m' if p['distance_m']<3 else '>=3m';overlap=str(np.sum(abs(tt-np.mean(p['times_ms']))<1)>1);bearing=str(int(((p['bearing_deg']-h['pose'][2])%360)//90)*90)
+     distance='<1m' if p['distance_m']<1 else '1-3m' if p['distance_m']<3 else '>=3m';overlap=str(np.sum(abs(tt-np.mean(p['times_ms']))<1)>1);bearing=str((int((((p['bearing_deg']-h['pose'][2])%360)+1e-8)//90)%4)*90)
      for field,key in [('distance',distance),('overlap',overlap),('body_bearing_quadrant',bearing)]:local.setdefault((field,key,qi),[]).append(aligned-donor)
   for field,key in sorted({(f,k) for f,k,q in local}):
    values=[np.mean(v) for (f,k,q),v in local.items() if (f,k)==(field,key)];rows.append(dict(scene=data['scene'],field=field,group=key,queries=len(values),difference=float(np.mean(values))))
