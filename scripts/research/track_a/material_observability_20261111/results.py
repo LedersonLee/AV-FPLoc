@@ -57,7 +57,7 @@ def main():
  if extreme!=representative:exceptions.append(extreme)
  fn=[]
  for pose in poses:
-  ps=choose(pose,state='present');fn.append(np.mean([v['scores']['combined']<models['combined']['threshold'] for v in ps]))
+  ps=[v for v in choose(pose) if v['state']!='removed'];fn.append(np.mean([v['scores']['combined']<models['combined']['threshold'] for v in ps]))
  worst=poses[int(np.argmax(fn))]
  if max(fn)>0 and worst!=representative and worst not in exceptions:exceptions.append(worst)
  represent=dict(default=representative,exceptions=exceptions,criterion='Robust distance to all-six-pose median absorption log-energy / scattering log-energy / scattering peak-error / high-low spectral tilt effects',vectors=vectors.tolist(),median=median.tolist(),mad_scale=scale.tolist(),distances=dict(zip(poses,dist.tolist())),combined_false_negative_by_pose=dict(zip(poses,list(map(float,fn)))),one_pose_sufficient=len(exceptions)==0)
