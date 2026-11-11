@@ -3,9 +3,9 @@ import argparse,json,subprocess,hashlib,time
 from pathlib import Path
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--executable',type=Path,required=True);a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True);rows=[]
+ p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--executable',type=Path,required=True);p.add_argument('--modes',default='baseline,radius0,indirect_off,direct_off,temporal_on,simultaneous,stationary_off,stationary_on');a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True);rows=[]
  for d in [2.,6.]:
-  for mode in ['baseline','radius0','indirect_off','direct_off','temporal_on','simultaneous','stationary_off','stationary_on']:
+  for mode in a.modes.split(','):
    for context in range(3):
     prefix=a.out/f'd{d}_{mode}_c{context}';repeat=5 if mode.startswith('stationary') else 1;start=time.perf_counter()
     with Path(str(prefix)+'.log').open('w') as f:subprocess.run([str(a.executable),str(prefix),mode,str(d),str(repeat)],stdout=f,stderr=subprocess.STDOUT,check=True)

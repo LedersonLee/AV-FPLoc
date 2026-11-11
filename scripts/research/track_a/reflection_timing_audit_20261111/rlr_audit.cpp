@@ -14,10 +14,13 @@ int main(int argc,char**argv){
  auto tick=std::chrono::steady_clock::now();RLRA_Context context=nullptr;ck(RLRA_CreateContext(&context,&cfg));ck(RLRA_AddSource(context));float s[3]={.17f,1.5f,d};ck(RLRA_SetSourcePosition(context,0,s));
  RLRA_ChannelLayout layout;layout.channelCount=1;layout.type=RLRA_ChannelLayoutType_Mono;
  int listeners=mode=="simultaneous"?6:1;
- for(int k=0;k<listeners;k++){ck(RLRA_AddListener(context,&layout));if(mode=="radius0")ck(RLRA_SetListenerRadius(context,k,0));}
- const float vertices[]={-12,-8,0,12,-8,0,12,12,0,-12,12,0,-12,-20,-12,12,-20,-12,12,-20,24,-12,-20,24};
- const uint32_t indices[]={0,1,2,0,2,3,2,1,0,3,2,0,4,6,5,4,7,6};ck(RLRA_AddMeshVertices(context,vertices,8));ck(RLRA_AddMeshIndices(context,indices,18,3,nullptr));ck(RLRA_AddObject(context));ck(RLRA_FinalizeObjectMesh(context,0));
- std::ofstream receipt(out+".json");receipt<<std::setprecision(10)<<"{\"mode\":\""<<mode<<"\",\"distance\":"<<d<<",\"sample_rate\":48000,\"unit_scale\":"<<cfg.unitScale<<",\"source_radius_default_m\":0,\"listener_radius_m\":"<<(mode=="radius0"?0:.1)<<",\"temporal_coherence\":"<<int(cfg.temporalCoherence)<<",\"direct\":"<<int(cfg.direct)<<",\"indirect\":"<<int(cfg.indirect)<<",\"records\":[";
+ for(int k=0;k<listeners;k++){ck(RLRA_AddListener(context,&layout));if((mode=="radius0"||mode=="specular_radius0"))ck(RLRA_SetListenerRadius(context,k,0));}
+ bool custom=(mode=="explicit_default"||mode=="specular"||mode=="specular_radius0"||mode=="specular_moved");
+ if(custom){float scatter=mode=="explicit_default"?.5f:0.f;std::ofstream mat(out+"_material.json");mat<<"{\"materials\":[{\"name\":\"audit\",\"labels\":[\"audit_wall\"],\"absorption\":[125,0.1,8000,0.1],\"scattering\":[125,"<<scatter<<",8000,"<<scatter<<"],\"transmission\":[125,0,8000,0]}]}";mat.close();ck(RLRA_SetMaterialDatabaseJSON(context,(out+"_material.json").c_str()));}
+ float vertices[]={-12,-8,0,12,-8,0,12,12,0,-12,12,0,-12,-20,-12,12,-20,-12,12,-20,24,-12,-20,24};
+ if(mode=="specular_moved")for(int i=0;i<4;i++)vertices[3*i+2]=-1;
+ const uint32_t indices[]={0,1,2,0,2,3,2,1,0,3,2,0,4,6,5,4,7,6};ck(RLRA_AddMeshVertices(context,vertices,8));ck(RLRA_AddMeshIndices(context,indices,18,3,custom?"audit_wall":nullptr));ck(RLRA_AddObject(context));ck(RLRA_FinalizeObjectMesh(context,0));
+ std::ofstream receipt(out+".json");receipt<<std::setprecision(10)<<"{\"mode\":\""<<mode<<"\",\"distance\":"<<d<<",\"sample_rate\":48000,\"unit_scale\":"<<cfg.unitScale<<",\"source_radius_default_m\":0,\"listener_radius_m\":"<<((mode=="radius0"||mode=="specular_radius0")?0:.1)<<",\"temporal_coherence\":"<<int(cfg.temporalCoherence)<<",\"direct\":"<<int(cfg.direct)<<",\"indirect\":"<<int(cfg.indirect)<<",\"records\":[";
  bool first=true;int stages=(mode=="simultaneous"||mode=="stationary_on"||mode=="stationary_off")?1:6;
  for(int rep=0;rep<repeats;rep++){
   for(int ch=0;ch<stages;ch++){
