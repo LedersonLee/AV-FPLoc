@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "queries": 9965,
+  "scenes": 19,
+  "grid_cm": 20,
+  "profile_joint_36_minus_11": {
+    "micro_delta": 0.32192674360260914,
+    "macro_delta": 0.32511493323585267,
+    "macro_ci95": [
+      0.2971819442755969,
+      0.35464442340117724
+    ],
+    "micro_ci95": [
+      0.29325580454486305,
+      0.3533484768342957
+    ],
+    "repair_count_seed_mean": 3227.0,
+    "harm_count_seed_mean": 19.0,
+    "replicates": 10000,
+    "bootstrap_seed": 20261111,
+    "scenes": 19,
+    "queries": 9965,
+    "model_seeds": 1,
+    "baseline_seeds": 1,
+    "per_scene_delta": {
+      "102344115": 0.409375,
+      "102344307": 0.3485576923076923,
+      "102344457": 0.2775735294117647,
+      "103997478_171030528": 0.2773722627737226,
+      "104348082_171512994": 0.25691699604743085,
+      "104862573_172226682": 0.3402777777777778,
+      "105515286_173104287": 0.40625,
+      "105515448_173104512": 0.35208333333333336,
+      "106366134_174226362": 0.2842465753424658,
+      "106366173_174226431": 0.42616033755274263,
+      "106879005_174887124": 0.35,
+      "108294624_176710203": 0.26875,
+      "108294765_176710386": 0.23940677966101695,
+      "108294783_176710410": 0.4569672131147541,
+      "108294798_176710428": 0.32653061224489793,
+      "108736611_177263226": 0.29791666666666666,
+      "108736635_177263256": 0.3028169014084507,
+      "108736737_177263406": 0.21911764705882353,
+      "108736800_177263517": 0.336864406779661
+    },
+    "scope": "paired scene bootstrap, average seeds within scene; reused development, no independence from model selection implied"
+  },
+  "summary_sha256": "6de300a4629411e61edeecbd725d4acb5d36cef8731d394b9bc6fddc56775387",
+  "source_sha256": "a1fd5b0c38a26584b8cd50e0be284f1a7901206135619388fa91fd8f77e6883c",
+  "interpretation": "Geometry information potential under perfect GT profiles, not evidence that RIR encodes/reconstructs them. Pairwise comparison changes direction count only under this diagnostic. Equal-scale result is not a learned-model upper bound.",
+  "test_accessed": false
+}

@@ -1,0 +1,201 @@
+{
+  "complete": true,
+  "scope": "all Val19 post-hoc geometric ambiguity; no learned predictions",
+  "queries": 9965,
+  "grid_cm": 20,
+  "results": {
+    "omnidirectional": {
+      "perfect_profile_joint": 0.9830406422478676,
+      "perfect_profile_fine": 0.41284495735072757,
+      "median_geometry_margin_m": 0.4134873035881267,
+      "nonpositive_geometry_margin_fraction": 0.016959357752132465,
+      "missing_correct_regions": 0
+    },
+    "visual_fov": {
+      "perfect_profile_joint": 0.6611138986452584,
+      "perfect_profile_fine": 0.27415955845459106,
+      "median_geometry_margin_m": 0.0682638721032578,
+      "nonpositive_geometry_margin_fraction": 0.3444054189663823,
+      "missing_correct_regions": 0
+    }
+  },
+  "records": [
+    {
+      "scene": "102344115",
+      "queries": 320,
+      "file": "102344115.json",
+      "sha256": "4dcf94b297eb699d0d074b7bf3a2742cb188decf14ceb468c6a96f567ffb17d5",
+      "bank_sha256": "1903966df31e492d999f9dad91c5415bd1e6e93a97c704faf11d115ddc30aa46",
+      "labels_sha256": "f37969b4e42e7070afce106e87570153f06ab8750f756ab2bc45844558a1f3b1",
+      "seconds": 3.31345796585083
+    },
+    {
+      "scene": "108294798_176710428",
+      "queries": 392,
+      "file": "108294798_176710428.json",
+      "sha256": "14133569e93c77ed98f251364b2053204a6aa12fc481a3f916313a37c5e13f35",
+      "bank_sha256": "666777e9e87db1592ec458339f8fd9718330f7f847e6822b54a5aff764d65aef",
+      "labels_sha256": "3fb5a70b39186655ecefeb7f68b4c1fb3ed6ff5bb60f668532d61f3f7372720f",
+      "seconds": 15.187602281570435
+    },
+    {
+      "scene": "104862573_172226682",
+      "queries": 576,
+      "file": "104862573_172226682.json",
+      "sha256": "bafa54aadab6380baac9332b3805346ec50ad8e24672ed580764bf3d24e2b356",
+      "bank_sha256": "752c94c61e62388bb899e0572a0688de1f3f4d513916f76e6bd400eebe081b26",
+      "labels_sha256": "001372074084a916952e74233850c29d01e1466fe39c8ddeedefc6ca57335bf7",
+      "seconds": 28.34168791770935
+    },
+    {
+      "scene": "108736800_177263517",
+      "queries": 472,
+      "file": "108736800_177263517.json",
+      "sha256": "09437f27e19a40d36e2c95d6f1b618297079163da3f80db5c4d4c4ea47667121",
+      "bank_sha256": "1a093792e2aa01864b6abf20aacbdda3c94018048889589cf11395190ee8271b",
+      "labels_sha256": "72c48246a087a03c3e10bd40ad3080c21eb25a1fa236eab36c7e9f7a2a9957d5",
+      "seconds": 38.90906739234924
+    },
+    {
+      "scene": "108294783_176710410",
+      "queries": 488,
+      "file": "108294783_176710410.json",
+      "sha256": "d64da23335ce005a4e4e170e7b824511604d5f8e109de0ffb60245ec03002946",
+      "bank_sha256": "62484f1ca79fd7669adeeffbed62475db558ffe300379a9d3c41b84c521850f8",
+      "labels_sha256": "429915f0005f4d6bef7603e7d63c6033a00a38508b045a04a43270cb9f15f101",
+      "seconds": 20.040111303329468
+    },
+    {
+      "scene": "108736635_177263256",
+      "queries": 568,
+      "file": "108736635_177263256.json",
+      "sha256": "5d22e2e68f2493fe26d6fc7534da27c0e48aa29cb98b2334b60b0c2a2bcf9228",
+      "bank_sha256": "1e36ca1a9d8a88d87670bec708aa254c07185d4ef39351a1c1d215053a2a7781",
+      "labels_sha256": "3f2b118065007f9a5a7c325ddae75e478b344ad17f8186fe7f615207296710de",
+      "seconds": 23.618956804275513
+    },
+    {
+      "scene": "105515286_173104287",
+      "queries": 448,
+      "file": "105515286_173104287.json",
+      "sha256": "20f9ecc1d44763ace02f1cd79d9f5e32abd58614e5dad7cb1feee3b5d009448f",
+      "bank_sha256": "be8d083ce9f1fdd6f5298813391c1e6e1efb6ddc82c2338922ec7e948869470e",
+      "labels_sha256": "46c6ee858fabb028ec56600a42035ca523f9665c0c2228de426f3f65dbf7d70a",
+      "seconds": 49.708067417144775
+    },
+    {
+      "scene": "102344457",
+      "queries": 544,
+      "file": "102344457.json",
+      "sha256": "5bf85b40bd3697803f96587308ede578eafaf91e3ff4ed776dd401487fd6c698",
+      "bank_sha256": "2be1ee9dc11005633d5ea5861438f06df8db0f18da82ead784a46fc7971a4638",
+      "labels_sha256": "e4f22aaa09d1902ecc64ec7965de727fd14c31d753a9d81f01f61ce961e1dc38",
+      "seconds": 27.293853282928467
+    },
+    {
+      "scene": "106366134_174226362",
+      "queries": 584,
+      "file": "106366134_174226362.json",
+      "sha256": "4d63d98f446496e95d7a83f019346967c1ef2a3b08951c6c28333e61417ef602",
+      "bank_sha256": "d6fac11351504b402e11cc45d93d930661e850d22783689ed4c8a9b6098c812b",
+      "labels_sha256": "3cb2543cca25e430e0272a625f903d39a0a7e2ac0fa02e3a1bdd6c442680d6a4",
+      "seconds": 25.668370485305786
+    },
+    {
+      "scene": "108294765_176710386",
+      "queries": 472,
+      "file": "108294765_176710386.json",
+      "sha256": "859c0b383a3d44db577ef352851c862dc0a2303429a27064da4d5abcecc59104",
+      "bank_sha256": "1b363e9064a1d61125a95ad05e683530a6fa24c16291a2a386589030500786ea",
+      "labels_sha256": "af6b3981531cdb0519022c9306786b2b550685d16fa77a3b334b11ec12087f65",
+      "seconds": 10.637948513031006
+    },
+    {
+      "scene": "106879005_174887124",
+      "queries": 640,
+      "file": "106879005_174887124.json",
+      "sha256": "b9dfa835f584e499cc3e95ab1d881fd167baf2c3635e7243a1282ebb9861b31b",
+      "bank_sha256": "59b6ca2437ed9ca291c86c9d686d99c771917758619030091a084ec29f673579",
+      "labels_sha256": "ecb0a062687008bcdcbfdd696e5cb2f7f7edcabba67c294570759c5f9be1c9a3",
+      "seconds": 20.505237340927124
+    },
+    {
+      "scene": "103997478_171030528",
+      "queries": 548,
+      "file": "103997478_171030528.json",
+      "sha256": "a1f6a39c80a3f416af107894921f3246c12939caa6eacc43b012913bf6a2d1eb",
+      "bank_sha256": "4aaef8e8fe461dc4e9357baff89d3c0d13cab4b00f7cbdd4ad1e1909dd5791c0",
+      "labels_sha256": "d7f7e4cac5b51ffb5066fcc6d8394aa164692dd885afa33c5c50a795ec335058",
+      "seconds": 24.377670526504517
+    },
+    {
+      "scene": "108736737_177263406",
+      "queries": 680,
+      "file": "108736737_177263406.json",
+      "sha256": "f28526637fd15e131a298a3c5a1a5e146315326fbe031395e555addefb9ee9f8",
+      "bank_sha256": "adc766b6a2400efe66760d733e890e03af48db251646abd64befae9a138c1a8f",
+      "labels_sha256": "fc1a076333f2af92949eb8474f9ddc74ec33653ad77eaebaa0b7e30cedc7dde1",
+      "seconds": 30.451594352722168
+    },
+    {
+      "scene": "104348082_171512994",
+      "queries": 506,
+      "file": "104348082_171512994.json",
+      "sha256": "1cfb597adaa9c368522dca0735aad7b7850677c1ce842f9deb26ef188dc3cb55",
+      "bank_sha256": "4ae5002adfe879fef796da65b18f0a0876f20dbf9c8d59321d9ebf331acc5831",
+      "labels_sha256": "1c0ebad6e1fabed3dcb453f2ad038c79a95832bb70298203c11b4be6eb5ec966",
+      "seconds": 12.29218602180481
+    },
+    {
+      "scene": "105515448_173104512",
+      "queries": 480,
+      "file": "105515448_173104512.json",
+      "sha256": "7edc5f2d5975a84042b630ac2156aaf037ab6ee7734f4815a08fbc7776ecfafb",
+      "bank_sha256": "48a80f470dc8a7c545787cded950cf8eee54b149c2291c7e9b500486f7d136d8",
+      "labels_sha256": "b402d8353a7db5d558906dd3a0a208c2f817fb7517ec489f362fb366c38fb4fd",
+      "seconds": 35.65486669540405
+    },
+    {
+      "scene": "102344307",
+      "queries": 416,
+      "file": "102344307.json",
+      "sha256": "3ee51f9d84c5e5dc0f0be2747e0a14404c0c36f974916aabfdb42da314b47b8a",
+      "bank_sha256": "52c4eb4b8c75f86014892495990b25a2b4bec2f92293cd02cc777c6cced15e97",
+      "labels_sha256": "0372b18ea43b90693c80bb796556c59caec1ed037af34d8c543f9ef8567a13f9",
+      "seconds": 15.096773147583008
+    },
+    {
+      "scene": "108736611_177263226",
+      "queries": 480,
+      "file": "108736611_177263226.json",
+      "sha256": "fe31f5828621bb5dd1bf57a6a4e5a70d002e07bf48e5ebd833a396c67c852646",
+      "bank_sha256": "ba893e8a7b345a36518581a870575d7b0270b60e8f65c814c72ba50814708273",
+      "labels_sha256": "bc5e30b3aabdae57a21817b476215e19f15fc12326db159d9226500bb58fb2f4",
+      "seconds": 21.148927927017212
+    },
+    {
+      "scene": "106366173_174226431",
+      "queries": 711,
+      "file": "106366173_174226431.json",
+      "sha256": "8e8f62a5eaba0ac7692c4f677d49c52ed5659aca7fa64b844e6a42168f8c109d",
+      "bank_sha256": "d5ca7966beb2db57f2dda39d7650dd44d47e5c77cf852f305d2e954fb9da961d",
+      "labels_sha256": "588090ae54cfa2b9bcbb108cd3f57405f40cd381e2d5f1ea7ff4804fc9b46a7c",
+      "seconds": 22.120164155960083
+    },
+    {
+      "scene": "108294624_176710203",
+      "queries": 640,
+      "file": "108294624_176710203.json",
+      "sha256": "35d50969ba7c6f4db95c48c33ea444ae8853ffbd208544da2d657ed72e1d3e5f",
+      "bank_sha256": "ea0123b338cc8b4e12b8ec67973a1e2e2aa05b434b0d8027600941e1a4105629",
+      "labels_sha256": "81f2bf8198e1ec894029e006a5eb53f9ac01f51d49e54d44ef5a2edbc535cf1e",
+      "seconds": 27.023170232772827
+    }
+  ],
+  "warning": "GT-derived profiles only in diagnostic; not model input, not pose proposals, not learned upper bound.5cm profile allowance is a predeclared descriptive threshold, not localization success.",
+  "source_sha256": {
+    "geometry_observability.py": "51d3c40249f3f2d8980e3e13eb76aaffe325cf86c8f233925495377fc7c49317",
+    "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616"
+  },
+  "test_accessed": false
+}

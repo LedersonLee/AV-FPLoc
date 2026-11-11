@@ -13,6 +13,10 @@
       "sha256": "bd1d905a938146260885c79f76600ebad5e99b5b74e3dc6075e618eb4cda0ffe"
     },
     {
+      "git_copy": "BASELINE_COMPARISON.md",
+      "sha256": "2b2d19ca73c45c77c2b4de0a713616dda2565979a0f5da408aa3e40d19376da1"
+    },
+    {
       "git_copy": "IMPLEMENTATION_AUDIT.md",
       "sha256": "d675a2280a729ee9d67f5e29d855c2aa0e5ee6ae204f774e11832a8f164e8326"
     },
@@ -26,7 +30,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "5a36a39013afb8c7e597712ff09fb1f362dd37cce235987cdcfb61f0c0e2c5c7"
+      "sha256": "2e1a2748ff4397a87c6db442cfb9eddced00915d63a50c6a67ef20ecfebb0434"
     },
     {
       "git_copy": "architecture_test.json",
@@ -43,6 +47,10 @@
     {
       "git_copy": "bank_cost_audit.json",
       "sha256": "c97b28c593ae6ba3e252801c5e595c6a1cad1e5585be5cb20e220d8c97a27b91"
+    },
+    {
+      "git_copy": "baseline_comparison.json",
+      "sha256": "a1a2bb55681dc6ac5cd9e8643406122fb485eb49d7dc6b2fc258ccf5c2b2df07"
     },
     {
       "git_copy": "baseline_fields_seed43_summary.json",
@@ -79,6 +87,14 @@
     {
       "git_copy": "expert_training_queue.json",
       "sha256": "5a255023d9ea2ca776285da214568ff5f091fe16fb9e35ddb8b968053542152c"
+    },
+    {
+      "git_copy": "geometry20_summary.json",
+      "sha256": "6de300a4629411e61edeecbd725d4acb5d36cef8731d394b9bc6fddc56775387"
+    },
+    {
+      "git_copy": "geometry20_verification.json",
+      "sha256": "459010f810c9f5e44237bd9965c2e43c04fe164e2e18db7c920f19cb3e42d310"
     },
     {
       "git_copy": "geometry_observability_smoke.json",

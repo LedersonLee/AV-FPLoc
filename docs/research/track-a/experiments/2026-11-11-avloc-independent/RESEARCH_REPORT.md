@@ -159,3 +159,25 @@ All9,965 query temperature curves completed. Source `43c5eda1264030243f4fb9f8a99
 ![B2 seed43 reliability and temperature](calibration_seed43_reliability.png)
 
 The right curve uses all-Val scene means for visualization only; fold temperatures were selected without each held family. The figure was rendered and visually inspected. This is an intermediate B2 calibration figure, not the still-pending AVLoc-versus-TrackA score-field comparison.
+
+## Completed full Val19 baseline comparison
+
+Both seed field jobs and strict matched aggregation completed:19 scenes/9,965 queries, identical20cm/10° bank and source queries. All B2 score-NMS20 lists replay. [Full table](BASELINE_COMPARISON.md) and [paired statistics](baseline_comparison.json). Aggregation source `81bcc165bba8bef19b43239d3d6a459f3cb938e6`; seed42 supplies the shared frozen visual/acoustic inputs (not a new seed42-only training experiment), while B2/Support/GEOQ average adapter/ranker seeds42/43.
+
+| Method | R@1m | Joint@1m/30° | R@0.1m |
+|---|---:|---:|---:|
+|UnLoc Visual|46.994%|45.850%|17.431%|
+|FP-RIR Acoustic cosine|30.376%|21.365%|5.349%|
+|Fixed .85V/.15A fusion|66.754%|65.038%|24.285%|
+|B2|70.968%|69.313%|22.499%|
+|B2+GEOQ|74.415%|73.071%|23.201%|
+
+Observed query-micro GEOQ−B2 joint gain is3.758pp and fine gain0.702pp. The corresponding scene-macro differences are3.815pp [paired scene95% CI3.205,4.468] and0.716pp [0.538,0.902]. Compared with fixed fusion, GEOQ gains8.033pp micro joint but **loses1.084pp micro fine**. Scene-macro fine difference is−0.906pp [−1.688,−0.102]. B2 itself loses1.786pp micro fine against fixed fusion. These regressions must remain visible in the later AVLoc comparison. The result establishes this reused-cohort behavior, not an independent/general causal advantage of feature exchange or geometry.
+
+Bootstrap resamples19 paired scenes10,000times with seed20261111, averaging model seeds within scene. Query-micro and scene-macro estimates differ and are not interchanged. Existing upstream teacher/research exposure remains. New AVLoc training uses112 scenes versus the historical B2 training regime; architecture/data-volume confounding must be reported rather than attributing later differences to architecture alone.
+
+## Completed20cm geometry-only diagnostic
+
+All9,965 GT-derived diagnostic profiles and IDs were verified. [Summary](geometry20_summary.json), [paired verification](geometry20_verification.json). With equal-scale perfect36-direction geometry profiles, joint localization is98.304% and fine41.284%; with11FoV directions, joint66.111% and fine27.416%. Median incorrect-minus-correct ray-MAE margin is0.41349m for36directions versus0.06826m for11. Missing joint-correct grid regions:0.
+
+The paired scene-macro joint difference is32.511pp [29.718,35.464]. This shows the **potential discriminative information in additional floorplan directions when their true values are supplied**. It does not show that observed audio recovers them. It is not a learned-model ceiling: equal scales, off-grid profile mismatch and ray-weighting choices differ from learned inference. The10cm version is running separately to distinguish grid effects. Learned A1 ray/pose errors and observability correlations remain pending.
