@@ -99,3 +99,9 @@ AVLoc evaluation implementation update (2026-11-11): ray temperature calibration
 AVLoc analysis implementation update (2026-11-11): [ray observability analysis and numerical tests](track-a/experiments/2026-11-11-avloc-independent/RESEARCH_REPORT.md) prepared; source `c44ce51cc7c2fcbaf4a8726f2dd4d8ef496f3a26`. Trained application remains pending; evidence level unchanged (Exploratory).
 
 AVLoc execution update (2026-11-11): [A0 evaluation queue](track-a/experiments/2026-11-11-avloc-independent/a0_evaluation_queue_plan.json) attached to the verified live training container; seven full-Val stages pending normal completion. Source `1a62afe422acf1c605dbfe6ef84f3afbe4346a68`. Not a completed model result.
+
+## Track A Experiment 1 — reflection_observability_20261111
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| Geometry-guided Reflection Observability / reflection_observability_20261111 | 2026-11-11 | A | 완료·핵심 물리 시간 정렬 가설 음성/조건부 energy 연관성 양성.96controlled/diagnostic rings; HSSD12장면384질의7680visual후보·6대조. 단일벽2/6m에서약+2.36/+6.15ms지연,좁은expected창귀속energy거의0. HSSD matched-time control 대비power+0.2619[0.1671,0.3681],coherence개선없음. Localization/scorer/Experiment2–4미수행. | Exploratory (시뮬레이션·재사용Train/development·upstream노출) | [RESEARCH_REPORT](track-a/experiments/2026-11-11-reflection-observability/RESEARCH_REPORT.md) | renderer `6a6fc1e83fa8f060d773393988e3da4b535b65a7`; paths `2c33fe3a9abaef3e70f953004d639d3169f7e97c`; final controls `fdbfb08d37b7a6b98deb5ecae58ffaa74438b4cc`; diagnostic sources/pilot dirty provenance는REPRODUCIBILITY.md참조 |

@@ -1,0 +1,2403 @@
+{
+  "diagnostic": [
+    {
+      "label": "baseline",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17787
+      ],
+      "seconds": 0.8529321430251002,
+      "sha256": "1ae8f7ff22022e61cce064d8215fb63844aa8cb718f4fb4dc95b476d53c7f121",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.145833333333334,
+        14.229166666666666,
+        14.125,
+        14.020833333333334,
+        13.8125,
+        13.854166666666668
+      ],
+      "mean_error_ms": 2.3689868760158483,
+      "interchannel_residual_std_ms": 0.07121833133126423
+    },
+    {
+      "label": "baseline",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17787
+      ],
+      "seconds": 0.13563163112848997,
+      "sha256": "96f8b8081b308cfdada47bbe029acedf58689d16368352187d5b934029143afa",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.145833333333334,
+        14.229166666666666,
+        14.166666666666666,
+        13.9375,
+        13.854166666666668,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3655146537936256,
+      "interchannel_residual_std_ms": 0.07610623061923498
+    },
+    {
+      "label": "baseline",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.13206806080415845,
+      "sha256": "1b9a0b066b4e9d30cec2b7401425480be5a29d1314d4334f152418d8ca5a1a19",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.104166666666666,
+        14.020833333333334,
+        13.770833333333332,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.344681320460292,
+      "interchannel_residual_std_ms": 0.0710619417904728
+    },
+    {
+      "label": "closed_box",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.6975494120270014,
+      "sha256": "1cd40c68a9c30f536ddfd02db775b1fdea5d8881760316b2fdf78d204ecb2966",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.104166666666666,
+        14.125,
+        14.041666666666666,
+        13.833333333333332,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3446813204602917,
+      "interchannel_residual_std_ms": 0.051437890873727216
+    },
+    {
+      "label": "closed_box",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17787
+      ],
+      "seconds": 0.12614998314529657,
+      "sha256": "5bc7b3189f6fa4b2c491d8c4bda22e7a8ef2bc28d1f6f0e3da93755768fa7792",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.145833333333334,
+        14.125,
+        14.0625,
+        13.979166666666668,
+        13.8125,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3307924315714037,
+      "interchannel_residual_std_ms": 0.07150090200802128
+    },
+    {
+      "label": "closed_box",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17787
+      ],
+      "seconds": 0.12881529005244374,
+      "sha256": "82f5ed58baddf8fab53e92282476e0baaf0e5db0543f945e22c715b4d27be281",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.145833333333334,
+        14.166666666666666,
+        14.166666666666666,
+        14.020833333333334,
+        13.854166666666668,
+        13.791666666666668
+      ],
+      "mean_error_ms": 2.3620424315714037,
+      "interchannel_residual_std_ms": 0.0687845212775486
+    },
+    {
+      "label": "depth1",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9128
+      ],
+      "seconds": 0.12036832980811596,
+      "sha256": "e700c266f390aa20a005524e10523940c84e67f8f050e39ac3167733f4157947",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.041666666666666,
+        14.145833333333334,
+        14.125,
+        13.979166666666668,
+        13.875,
+        13.916666666666668
+      ],
+      "mean_error_ms": 2.351625764904737,
+      "interchannel_residual_std_ms": 0.023276651911097575
+    },
+    {
+      "label": "depth1",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9128
+      ],
+      "seconds": 0.12373419664800167,
+      "sha256": "0d9bd192eb216c1fbe94e0cb3ef1530c46e7e94b1f76ec62e19242342c3d6e45",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.166666666666666,
+        14.1875,
+        14.166666666666666,
+        14.0,
+        13.875,
+        13.9375
+      ],
+      "mean_error_ms": 2.3932924315714033,
+      "interchannel_residual_std_ms": 0.0557305586137776
+    },
+    {
+      "label": "depth1",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9128
+      ],
+      "seconds": 0.11074351193383336,
+      "sha256": "b7bc87b74b323c9aacae17d1e9f8b5446ea72cb26c358f968234fa2a740b53b6",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.166666666666666,
+        14.166666666666666,
+        14.166666666666666,
+        14.020833333333334,
+        13.854166666666668,
+        13.895833333333332
+      ],
+      "mean_error_ms": 2.3828757649047367,
+      "interchannel_residual_std_ms": 0.05772661444664679
+    },
+    {
+      "label": "free_direct",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8782
+      ],
+      "seconds": 0.9122203146107495,
+      "sha256": "278f3b0230bb7049d3690d793a8e9d0f9903dfb289fca7de018bf92691a8b501",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        11.333333333333334,
+        11.458333333333332,
+        11.458333333333332,
+        11.333333333333334,
+        11.208333333333334,
+        11.208333333333334
+      ],
+      "mean_error_ms": -0.3289297906508188,
+      "interchannel_residual_std_ms": 0.0010626898474654395
+    },
+    {
+      "label": "free_direct",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8782
+      ],
+      "seconds": 0.11227755015715957,
+      "sha256": "96cf5759b28c0e2507476bd2d1ef012d9de3d75b1d144e07cf1da8a16554dc07",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        11.333333333333334,
+        11.458333333333332,
+        11.458333333333332,
+        11.333333333333334,
+        11.208333333333334,
+        11.208333333333334
+      ],
+      "mean_error_ms": -0.3289297906508188,
+      "interchannel_residual_std_ms": 0.0010626898474654395
+    },
+    {
+      "label": "free_direct",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8782
+      ],
+      "seconds": 0.1003627241589129,
+      "sha256": "05739d1ecadbb21322edc89886a88137acb09aa75824380457732c59e84b2a15",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        11.333333333333334,
+        11.458333333333332,
+        11.458333333333332,
+        11.333333333333334,
+        11.208333333333334,
+        11.208333333333334
+      ],
+      "mean_error_ms": -0.3289297906508188,
+      "interchannel_residual_std_ms": 0.0010626898474654395
+    },
+    {
+      "label": "fs24000",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8893
+      ],
+      "seconds": 0.1143412166275084,
+      "sha256": "b0bf470173a749eb47381add8a39e03c155b5750af12f71b7c064decbb3dd3a1",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.125,
+        14.083333333333334,
+        14.166666666666666,
+        14.0,
+        13.833333333333332,
+        13.875
+      ],
+      "mean_error_ms": 2.3516257649047367,
+      "interchannel_residual_std_ms": 0.056930497276298425
+    },
+    {
+      "label": "fs24000",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8482
+      ],
+      "seconds": 0.11582972668111324,
+      "sha256": "92728efa8bd03d536399a9dc053cd6e4d0152df25807a30814bc17ce1c33e7f8",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.083333333333334,
+        14.208333333333334,
+        14.083333333333334,
+        14.0,
+        13.833333333333332,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.344681320460292,
+      "interchannel_residual_std_ms": 0.055392048847023326
+    },
+    {
+      "label": "fs24000",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8482
+      ],
+      "seconds": 0.13716772384941578,
+      "sha256": "da124dc3b5c440084c801d5b29e84ed1602dde0450a6a3cffa67e4a8ede070d6",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.083333333333334,
+        14.208333333333334,
+        14.166666666666666,
+        14.0,
+        13.791666666666668,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3516257649047367,
+      "interchannel_residual_std_ms": 0.061181227084272455
+    },
+    {
+      "label": "fs44100",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15585
+      ],
+      "seconds": 0.12329306686297059,
+      "sha256": "61679abe0c198bf523acf8a59fb4354b3ce49b22f62cab88a2f604a7c47c17ff",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.081632653061225,
+        14.19501133786848,
+        14.17233560090703,
+        13.945578231292517,
+        13.832199546485262,
+        13.854875283446711
+      ],
+      "mean_error_ms": 2.3513423181927187,
+      "interchannel_residual_std_ms": 0.05393466958111013
+    },
+    {
+      "label": "fs44100",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15585
+      ],
+      "seconds": 0.12456161621958017,
+      "sha256": "736016917875e880e8e38fe5ca94b0de7e3a9f38611c07e17e945c2e466716fe",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.081632653061225,
+        14.19501133786848,
+        14.104308390022675,
+        14.01360544217687,
+        13.854875283446711,
+        13.80952380952381
+      ],
+      "mean_error_ms": 2.347563028699143,
+      "interchannel_residual_std_ms": 0.051413920076748
+    },
+    {
+      "label": "fs44100",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15585
+      ],
+      "seconds": 0.12554798601195216,
+      "sha256": "747169ad2de959acafd53465febfe289ea5e3a54bd6f53bca9be345c27e63168",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.081632653061225,
+        14.19501133786848,
+        14.058956916099774,
+        13.968253968253968,
+        13.854875283446711,
+        13.832199546485262
+      ],
+      "mean_error_ms": 2.3362251602184183,
+      "interchannel_residual_std_ms": 0.05616447014365547
+    },
+    {
+      "label": "fs96000",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        33928
+      ],
+      "seconds": 0.12453317502513528,
+      "sha256": "dfed0cf94188659dfc437f3df96c9c185b13dfbd693f4cef2d015249132367e7",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.083333333333334,
+        14.208333333333334,
+        14.09375,
+        13.96875,
+        13.84375,
+        13.8125
+      ],
+      "mean_error_ms": 2.339472987126959,
+      "interchannel_residual_std_ms": 0.05814541446654126
+    },
+    {
+      "label": "fs96000",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        33928
+      ],
+      "seconds": 0.12857345724478364,
+      "sha256": "f34b1238d4eef18656b36399abeac35b961c4bdb609deb9664fa3aaf9c14d8c9",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.083333333333334,
+        14.197916666666666,
+        14.09375,
+        13.947916666666668,
+        13.75,
+        13.802083333333332
+      ],
+      "mean_error_ms": 2.3169035426825144,
+      "interchannel_residual_std_ms": 0.0748342806163074
+    },
+    {
+      "label": "fs96000",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        33928
+      ],
+      "seconds": 0.13417021231725812,
+      "sha256": "f6f2c98f4305768696cd93bf8fb8a0013d64e2a1312a01f06119613d8ecd7d36",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.083333333333334,
+        14.197916666666666,
+        14.09375,
+        13.927083333333332,
+        13.791666666666668,
+        13.791666666666668
+      ],
+      "mean_error_ms": 2.318639653793626,
+      "interchannel_residual_std_ms": 0.0703312500601417
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.12556170299649239,
+      "sha256": "22084613c2bbf4d2e68dca9bd98c6f88e8890b741fea15f9f6059686bf3a71a7",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.104166666666666,
+        14.020833333333334,
+        13.833333333333332,
+        13.854166666666668
+      ],
+      "mean_error_ms": 2.3585702093491814,
+      "interchannel_residual_std_ms": 0.054485459238705874
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.12078206241130829,
+      "sha256": "ff1add7bf50b039ca42d110eed0962b660ae5288b3e427cceea8fc54bb768086",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.083333333333334,
+        14.0,
+        13.854166666666668,
+        13.854166666666668
+      ],
+      "mean_error_ms": 2.3550979871269595,
+      "interchannel_residual_std_ms": 0.05522079810260481
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.13263824675232172,
+      "sha256": "3f30cd8a24b21c68a11a1c87bd50e8f76aff6cae0dc76de80c18560fc96c4095",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.083333333333334,
+        14.0625,
+        13.854166666666668,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3620424315714037,
+      "interchannel_residual_std_ms": 0.060069591792957754
+    },
+    {
+      "label": "one_sided",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17787
+      ],
+      "seconds": 0.12483371701091528,
+      "sha256": "ab0a38798c370376b4c8e1f2ea4bd87a28acd21442eb4aff542bd225ed8c6c8b",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.145833333333334,
+        14.104166666666666,
+        14.1875,
+        14.020833333333334,
+        13.833333333333332,
+        13.791666666666668
+      ],
+      "mean_error_ms": 2.3516257649047367,
+      "interchannel_residual_std_ms": 0.0741264286097799
+    },
+    {
+      "label": "one_sided",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.11858299700543284,
+      "sha256": "76d8ca09e0fe0a0ed76cf91f33e6100feb0e57a9a613ec5448065aecdc277d9a",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.125,
+        13.979166666666668,
+        13.854166666666668,
+        13.8125
+      ],
+      "mean_error_ms": 2.351625764904737,
+      "interchannel_residual_std_ms": 0.05906135448737899
+    },
+    {
+      "label": "one_sided",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16964
+      ],
+      "seconds": 0.1288063838146627,
+      "sha256": "9cc6428212fb708a7601498bd4898c93a82b50c26b696835eccc8ee34c5aba5a",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        14.104166666666666,
+        14.208333333333334,
+        14.125,
+        14.020833333333334,
+        13.895833333333332,
+        13.854166666666668
+      ],
+      "mean_error_ms": 2.37245909823807,
+      "interchannel_residual_std_ms": 0.043946118223309336
+    },
+    {
+      "label": "rays200k",
+      "distance": 2.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        20850
+      ],
+      "seconds": 0.3165516499429941,
+      "sha256": "5084b2487efebc1a9f974500ea4eeb8206ca18d7ea4ada137da02bff17466abf",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        13.958333333333332,
+        14.104166666666666,
+        14.145833333333334,
+        14.0,
+        13.833333333333332,
+        13.854166666666668
+      ],
+      "mean_error_ms": 2.3203757649047367,
+      "interchannel_residual_std_ms": 0.021706695845073634
+    },
+    {
+      "label": "rays200k",
+      "distance": 2.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        20850
+      ],
+      "seconds": 0.3247099509462714,
+      "sha256": "adb5ddb977467c013c9abce110811550bee09ac776ea1f6dfccbae1bd5c73f8e",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        13.958333333333332,
+        14.104166666666666,
+        14.145833333333334,
+        14.0,
+        13.8125,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.313431320460292,
+      "interchannel_residual_std_ms": 0.027205566664358107
+    },
+    {
+      "label": "rays200k",
+      "distance": 2.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        20850
+      ],
+      "seconds": 0.32570230634883046,
+      "sha256": "15a4fc4e7f8d0e3ee12cfefaee195b25c65b9722c7ccd62815cc61a392b74dbf",
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peak_ms": [
+        13.958333333333332,
+        14.145833333333334,
+        14.145833333333334,
+        14.0,
+        13.854166666666668,
+        13.833333333333332
+      ],
+      "mean_error_ms": 2.3273202093491814,
+      "interchannel_residual_std_ms": 0.025495462727975333
+    },
+    {
+      "label": "baseline",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.11758731910958886,
+      "sha256": "c836d31d6e45d278d6fd2dfee81865dda3b46e9aa6eae1d435e20ea4be12d118",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.395833333333336,
+        41.354166666666664,
+        41.229166666666664,
+        41.020833333333336,
+        40.791666666666664,
+        40.895833333333336
+      ],
+      "mean_error_ms": 6.129008746190905,
+      "interchannel_residual_std_ms": 0.15706990500727824
+    },
+    {
+      "label": "baseline",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.1344951530918479,
+      "sha256": "9daa199817eb1ddb74f8724a85e254379b4f42089cf3fbdbf1d74ad51e4bcade",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.354166666666664,
+        41.333333333333336,
+        41.208333333333336,
+        41.104166666666664,
+        40.875,
+        41.041666666666664
+      ],
+      "mean_error_ms": 6.167203190635349,
+      "interchannel_residual_std_ms": 0.11104762537401269
+    },
+    {
+      "label": "baseline",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.11908641690388322,
+      "sha256": "0505e2d90022c7015968de71503f77f715d806d87c5fbec95e927c78d23d26f7",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.354166666666664,
+        41.333333333333336,
+        41.208333333333336,
+        41.041666666666664,
+        40.979166666666664,
+        40.9375
+      ],
+      "mean_error_ms": 6.156786523968683,
+      "interchannel_residual_std_ms": 0.10825832925413496
+    },
+    {
+      "label": "closed_box",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.11457818280905485,
+      "sha256": "6ab4e96dc0bd3e03164aa88d991f840a9e2258b5b4d3370c52440be7c1550fcc",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.625,
+        41.270833333333336,
+        41.0625,
+        40.916666666666664,
+        40.9375
+      ],
+      "mean_error_ms": 6.205397635079795,
+      "interchannel_residual_std_ms": 0.16919349142125853
+    },
+    {
+      "label": "closed_box",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.12391672655940056,
+      "sha256": "1d5390382f3970cb7ffb2dd29125cc97b023e61673fbd9f6526ee1cde8c7e2b0",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.625,
+        41.270833333333336,
+        41.020833333333336,
+        40.895833333333336,
+        40.979166666666664
+      ],
+      "mean_error_ms": 6.201925412857573,
+      "interchannel_residual_std_ms": 0.17410781618955778
+    },
+    {
+      "label": "closed_box",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.14216030202805996,
+      "sha256": "7069bf8be804880becf3ab4ee3ff81321127cdba8a0c613b31972072a24980f6",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.416666666666664,
+        41.5,
+        41.395833333333336,
+        41.1875,
+        40.979166666666664,
+        40.979166666666664
+      ],
+      "mean_error_ms": 6.257480968413127,
+      "interchannel_residual_std_ms": 0.12169203454256271
+    },
+    {
+      "label": "depth1",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8411
+      ],
+      "seconds": 0.12388966092839837,
+      "sha256": "475f939e47665287bb2186a0bf724acab88ae9295c4c04fb310743f8454f7a73",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.1875,
+        41.291666666666664,
+        41.1875,
+        41.229166666666664,
+        41.020833333333336,
+        41.041666666666664
+      ],
+      "mean_error_ms": 6.174147635079794,
+      "interchannel_residual_std_ms": 0.05083418649738919
+    },
+    {
+      "label": "depth1",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8411
+      ],
+      "seconds": 0.13877922436222434,
+      "sha256": "09e99369db0d59c14707133bd9f0caab011aed2647dc0e3790087ba7cc43fcd2",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.1875,
+        41.291666666666664,
+        41.270833333333336,
+        40.979166666666664,
+        40.9375,
+        40.9375
+      ],
+      "mean_error_ms": 6.115119857302016,
+      "interchannel_residual_std_ms": 0.07207382240771916
+    },
+    {
+      "label": "depth1",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 1,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8411
+      ],
+      "seconds": 0.10567944217473269,
+      "sha256": "9eacccb090406a89e246ae55bea9d18b6a0d289e73177eac219a07b13567774e",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.1875,
+        41.395833333333336,
+        41.479166666666664,
+        41.25,
+        40.958333333333336,
+        40.958333333333336
+      ],
+      "mean_error_ms": 6.219286523968684,
+      "interchannel_residual_std_ms": 0.09778892894006076
+    },
+    {
+      "label": "free_direct",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9366
+      ],
+      "seconds": 0.11024047341197729,
+      "sha256": "cc72f4fe064288061cc7ba2737ddf01a21b9496153afe64e39d39d3244917d10",
+      "expected_ms": [
+        34.985726432112415,
+        35.111741160921376,
+        35.111741160921376,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        34.604166666666664,
+        34.729166666666664,
+        34.729166666666664,
+        34.604166666666664,
+        34.458333333333336,
+        34.458333333333336
+      ],
+      "mean_error_ms": -0.38835236492020425,
+      "interchannel_residual_std_ms": 0.008898312884788588
+    },
+    {
+      "label": "free_direct",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9366
+      ],
+      "seconds": 0.10145817464217544,
+      "sha256": "31327aa64fb0d653075a382afcae78d4406105556e5f85f8d5e0aa690b0fb0d0",
+      "expected_ms": [
+        34.985726432112415,
+        35.111741160921376,
+        35.111741160921376,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        34.604166666666664,
+        34.729166666666664,
+        34.729166666666664,
+        34.604166666666664,
+        34.458333333333336,
+        34.458333333333336
+      ],
+      "mean_error_ms": -0.38835236492020425,
+      "interchannel_residual_std_ms": 0.008898312884788588
+    },
+    {
+      "label": "free_direct",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        9366
+      ],
+      "seconds": 0.1064560660161078,
+      "sha256": "8b88fc4ba4eeb46f42b614af1a73cd9ba84fa26860d944b079da10fde9846cb3",
+      "expected_ms": [
+        34.985726432112415,
+        35.111741160921376,
+        35.111741160921376,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        34.604166666666664,
+        34.729166666666664,
+        34.729166666666664,
+        34.604166666666664,
+        34.458333333333336,
+        34.458333333333336
+      ],
+      "mean_error_ms": -0.38835236492020425,
+      "interchannel_residual_std_ms": 0.008898312884788588
+    },
+    {
+      "label": "fs24000",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        7887
+      ],
+      "seconds": 0.11620777705684304,
+      "sha256": "5e12a28b4682987951317b8d801cff865d54447e1a6cdf7da98bcd90d53c0ee9",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.375,
+        41.333333333333336,
+        41.291666666666664,
+        41.041666666666664,
+        40.708333333333336,
+        40.875
+      ],
+      "mean_error_ms": 6.118592079524238,
+      "interchannel_residual_std_ms": 0.1706754138761673
+    },
+    {
+      "label": "fs24000",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8210
+      ],
+      "seconds": 0.12956611718982458,
+      "sha256": "d9d867163b7a778de6c7213edb413a21451305f150c87b11f4b7091f3e3bc7d4",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.333333333333336,
+        41.166666666666664,
+        41.041666666666664,
+        40.958333333333336,
+        41.0
+      ],
+      "mean_error_ms": 6.1533143017464615,
+      "interchannel_residual_std_ms": 0.10382134470794045
+    },
+    {
+      "label": "fs24000",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 24000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        8210
+      ],
+      "seconds": 0.12385041499510407,
+      "sha256": "66214accc05542ec71781da214d3734465bda11656b6bd452c18f97c34785967",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.333333333333336,
+        41.166666666666664,
+        41.125,
+        40.875,
+        41.041666666666664
+      ],
+      "mean_error_ms": 6.160258746190905,
+      "interchannel_residual_std_ms": 0.10937081441439607
+    },
+    {
+      "label": "fs44100",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15086
+      ],
+      "seconds": 0.1294173588976264,
+      "sha256": "e2eb878ed71c1fc4f6932e242925f5e8bf8257cd505585cf22f2ba47e2660c3b",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.337868480725625,
+        41.31519274376417,
+        41.156462585034014,
+        41.06575963718821,
+        40.8390022675737,
+        40.9750566893424
+      ],
+      "mean_error_ms": 6.1293158134622585,
+      "interchannel_residual_std_ms": 0.1206139793819764
+    },
+    {
+      "label": "fs44100",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15086
+      ],
+      "seconds": 0.11772237904369831,
+      "sha256": "349f319310eae7ccf7023091eccc91809a81191f33400c775fdb61d82983ad85",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.337868480725625,
+        41.31519274376417,
+        41.156462585034014,
+        40.997732426303855,
+        40.952380952380956,
+        41.08843537414966
+      ],
+      "mean_error_ms": 6.1557708399172855,
+      "interchannel_residual_std_ms": 0.11772051999436013
+    },
+    {
+      "label": "fs44100",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 44100,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15086
+      ],
+      "seconds": 0.1311672837473452,
+      "sha256": "583c5e32917b098c0413935c05500b3a020d0619ed5d768d637cf0e33b7299f6",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.337868480725625,
+        41.31519274376417,
+        41.20181405895692,
+        41.08843537414966,
+        40.952380952380956,
+        40.8843537414966
+      ],
+      "mean_error_ms": 6.144432971436561,
+      "interchannel_residual_std_ms": 0.10661116017103811
+    },
+    {
+      "label": "fs96000",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        32840
+      ],
+      "seconds": 0.13188198395073414,
+      "sha256": "b0a8fd61f339797117056b698dd32f0635c3d542285ed39c12ec1a199409521b",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.3125,
+        41.15625,
+        41.166666666666664,
+        40.947916666666664,
+        40.84375
+      ],
+      "mean_error_ms": 6.141161523968683,
+      "interchannel_residual_std_ms": 0.11860069181825172
+    },
+    {
+      "label": "fs96000",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        31547
+      ],
+      "seconds": 0.13076824368909,
+      "sha256": "fbb40a8449759593b99d0de642552bdcef934cf22ad01332b0c234e853e05c71",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.375,
+        41.333333333333336,
+        41.291666666666664,
+        41.104166666666664,
+        40.864583333333336,
+        41.041666666666664
+      ],
+      "mean_error_ms": 6.182828190635349,
+      "interchannel_residual_std_ms": 0.11531360365667424
+    },
+    {
+      "label": "fs96000",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 96000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        32840
+      ],
+      "seconds": 0.1341830939054489,
+      "sha256": "d343ad802b4765c13d9ddf41f1099c9dc70f021b9e7e517cc52c6cdd670a1f88",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.333333333333336,
+        41.3125,
+        41.3125,
+        41.09375,
+        40.84375,
+        40.864583333333336
+      ],
+      "mean_error_ms": 6.141161523968684,
+      "interchannel_residual_std_ms": 0.12504481648695553
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.14916437584906816,
+      "sha256": "be50f602ed52c9e596c0fc96095ac35b5d345c4af607d1803bd5001bc226b4f6",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.395833333333336,
+        41.354166666666664,
+        41.229166666666664,
+        41.104166666666664,
+        40.875,
+        40.875
+      ],
+      "mean_error_ms": 6.15331430174646,
+      "interchannel_residual_std_ms": 0.1379847338011003
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.1413337211124599,
+      "sha256": "109c822aa39e60849b276df3633b922135f58b29f3e08bb127b396e0b9e504fd",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.395833333333336,
+        41.354166666666664,
+        41.208333333333336,
+        41.229166666666664,
+        40.895833333333336,
+        41.0
+      ],
+      "mean_error_ms": 6.194980968413128,
+      "interchannel_residual_std_ms": 0.1215128516566337
+    },
+    {
+      "label": "no_diffraction",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.1262301169335842,
+      "sha256": "75e66b7f8c73f3bc8e9cadb2eee2c68d42897920b4b2a550643cfec2cf2ad147",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.395833333333336,
+        41.3125,
+        41.3125,
+        41.0625,
+        40.958333333333336,
+        40.916666666666664
+      ],
+      "mean_error_ms": 6.174147635079795,
+      "interchannel_residual_std_ms": 0.11960903755763654
+    },
+    {
+      "label": "one_sided",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        15774
+      ],
+      "seconds": 0.11766235809773207,
+      "sha256": "6361f4f2aa00dd636c41b09228076abcfa8bee5b63d9e5e6dd7b350ef9bbeff7",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.395833333333336,
+        41.3125,
+        41.5625,
+        41.083333333333336,
+        40.895833333333336,
+        40.916666666666664
+      ],
+      "mean_error_ms": 6.208869857302017,
+      "interchannel_residual_std_ms": 0.16536654772630327
+    },
+    {
+      "label": "one_sided",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.1234118789434433,
+      "sha256": "5858d0c12510f89347d5c9475f7dbbfd7a3fa4d7361ce01d7b867a3148ac4d41",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.354166666666664,
+        41.333333333333336,
+        41.166666666666664,
+        41.083333333333336,
+        40.958333333333336,
+        40.895833333333336
+      ],
+      "mean_error_ms": 6.146369857302017,
+      "interchannel_residual_std_ms": 0.11547335804406879
+    },
+    {
+      "label": "one_sided",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 20000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": true,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        16420
+      ],
+      "seconds": 0.11994424322620034,
+      "sha256": "8cb4681d02a4dc342d19c3d3881c9f86c8807d0fc8c819242f3d71e4fb332198",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.354166666666664,
+        41.333333333333336,
+        41.25,
+        41.145833333333336,
+        40.895833333333336,
+        40.979166666666664
+      ],
+      "mean_error_ms": 6.174147635079795,
+      "interchannel_residual_std_ms": 0.1027562224250665
+    },
+    {
+      "label": "rays200k",
+      "distance": 6.0,
+      "repeat": 0,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        18243
+      ],
+      "seconds": 0.2763510197401047,
+      "sha256": "dd77743550d280b4d40c4e0de219364815477c668b96eeb8de0a84ee26c7c594",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.125,
+        41.229166666666664,
+        41.25,
+        41.0625,
+        41.0,
+        40.958333333333336
+      ],
+      "mean_error_ms": 6.118592079524238,
+      "interchannel_residual_std_ms": 0.023931103240100955
+    },
+    {
+      "label": "rays200k",
+      "distance": 6.0,
+      "repeat": 1,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        17951
+      ],
+      "seconds": 0.26626674411818385,
+      "sha256": "ac09e9cb2a870969ca5328e07cabc75926a7306b4ac434ca340dafd9d5a5403e",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.166666666666664,
+        41.25,
+        41.25,
+        41.104166666666664,
+        40.979166666666664,
+        41.0
+      ],
+      "mean_error_ms": 6.1394254128575705,
+      "interchannel_residual_std_ms": 0.02061209206965011
+    },
+    {
+      "label": "rays200k",
+      "distance": 6.0,
+      "repeat": 2,
+      "settings": {
+        "sample_rate": 48000,
+        "indirect_rays": 200000,
+        "ray_depth": 50,
+        "source_rays": 512,
+        "diffraction": false,
+        "max_diffraction_order": 10,
+        "acoustic_threads": 2
+      },
+      "shape": [
+        6,
+        18243
+      ],
+      "seconds": 0.2705107540823519,
+      "sha256": "d73a09a24958719dcd42a766f2d7d0ac61871374c4a1f1b38ae83b887a3e9704",
+      "expected_ms": [
+        34.985726432112415,
+        35.11174116092138,
+        35.11174116092138,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peak_ms": [
+        41.125,
+        41.229166666666664,
+        41.291666666666664,
+        41.104166666666664,
+        40.958333333333336,
+        40.979166666666664
+      ],
+      "mean_error_ms": 6.129008746190904,
+      "interchannel_residual_std_ms": 0.025568292658352566
+    }
+  ],
+  "single_wall_attribution": [
+    {
+      "distance": 0.3,
+      "expected_ms": [
+        1.7553344867044165,
+        1.8769296280522587,
+        1.8769296280522587,
+        1.7553344867044165,
+        1.6246641165998965,
+        1.6246641165998965
+      ],
+      "observed_peaks_ms": {
+        "base": [
+          2.3541666666666665,
+          2.5208333333333335,
+          2.5208333333333335,
+          2.3333333333333335,
+          2.1666666666666665,
+          2.1666666666666665
+        ],
+        "repeat": [
+          2.3541666666666665,
+          2.5208333333333335,
+          2.5208333333333335,
+          2.3541666666666665,
+          2.1666666666666665,
+          2.1666666666666665
+        ],
+        "moved": [
+          9.041666666666666,
+          9.166666666666666,
+          9.166666666666666,
+          8.979166666666666,
+          8.833333333333334,
+          8.833333333333334
+        ]
+      },
+      "expected_window_attributable_energy_fraction": 3.286928258742377e-13,
+      "repeat_abs_energy_change_over_removed_effect": 0.19300782431740063
+    },
+    {
+      "distance": 2.0,
+      "expected_ms": [
+        11.662718623305897,
+        11.788275678658422,
+        11.788275678658422,
+        11.662718623305897,
+        11.535795069988136,
+        11.535795069988136
+      ],
+      "observed_peaks_ms": {
+        "base": [
+          14.145833333333334,
+          14.104166666666666,
+          14.145833333333334,
+          13.958333333333334,
+          13.854166666666666,
+          13.854166666666666
+        ],
+        "repeat": [
+          14.104166666666666,
+          14.229166666666666,
+          14.0625,
+          13.979166666666666,
+          13.8125,
+          13.833333333333334
+        ],
+        "moved": [
+          21.208333333333332,
+          21.1875,
+          21.291666666666668,
+          21.083333333333332,
+          20.895833333333332,
+          20.958333333333332
+        ]
+      },
+      "expected_window_attributable_energy_fraction": 6.631411121185992e-16,
+      "repeat_abs_energy_change_over_removed_effect": 1.4522225405996165
+    },
+    {
+      "distance": 6.0,
+      "expected_ms": [
+        34.985726432112415,
+        35.111741160921376,
+        35.111741160921376,
+        34.985726432112415,
+        34.859256168393486,
+        34.859256168393486
+      ],
+      "observed_peaks_ms": {
+        "base": [
+          41.395833333333336,
+          41.25,
+          41.3125,
+          41.166666666666664,
+          40.854166666666664,
+          40.916666666666664
+        ],
+        "repeat": [
+          41.354166666666664,
+          41.333333333333336,
+          41.208333333333336,
+          41.083333333333336,
+          40.833333333333336,
+          40.979166666666664
+        ],
+        "moved": [
+          47.583333333333336,
+          48.1875,
+          47.895833333333336,
+          47.395833333333336,
+          47.541666666666664,
+          47.604166666666664
+        ]
+      },
+      "expected_window_attributable_energy_fraction": 4.285560083602385e-16,
+      "repeat_abs_energy_change_over_removed_effect": 1.4945763043714204
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "new_rir_integrity": 96,
+    "rotated_specular_geometry_cases": 16,
+    "yaw_convention_cases": 36,
+    "pure_visual_pose_reconstruction_scenes": 12,
+    "candidates": 7680,
+    "independent_power_replays": 237,
+    "exact_marginal_permutations": 36,
+    "nonrandom_results_unchanged_after_support_fix": true,
+    "viewer": {
+      "browser": "Chrome headless",
+      "candidate_states_rendered": 69,
+      "ready": true,
+      "exit_code": 0
+    }
+  },
+  "limitations": "Independent scalar power replay uses first query of each scene; input SHA checks cover all384 in analyzer. No fresh independent scene/test inference claimed."
+}

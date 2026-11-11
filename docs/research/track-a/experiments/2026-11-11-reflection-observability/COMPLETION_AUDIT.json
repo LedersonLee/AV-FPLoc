@@ -1,0 +1,81 @@
+{
+  "study": "reflection_observability_20261111",
+  "scientific_status": "complete; physical alignment hypothesis not supported; conditional energy association exploratory",
+  "step0": "audited five prior studies, source/receiver/frame/FP-wall/RIR length",
+  "step1": "36primary plus60diagnostic six-channel rings; three scenes, all distances, remove/move/repeat",
+  "step2": "12Train/development scenes,384queries,7680pure-visual candidates,six controls,three widths,three control seeds",
+  "step3": "scene bootstrap, distance/body-bearing/overlap strata, five questions, limitations",
+  "path_gt": "unavailable; controlled wall interventions used; exact backend timing cause unresolved",
+  "trained_networks": 0,
+  "localization_scorers": 0,
+  "test_payloads_accessed": 0,
+  "later_experiments_started": 0,
+  "checks": "96RIR hashes;16rotatedgeometry;36yaw;12candidate reconstruction;237power replay;69HTMLstates;archive links/hashes",
+  "git_sync": "Recorded after commit in final response; this file contains no Docs commit SHA.",
+  "files": {
+    "INPUT_AUDIT.md": {
+      "bytes": 4240,
+      "sha256": "eefae89d53fb69d9b46f94c0efeb59863bd5353601c2436a9681acaf73ce5ade"
+    },
+    "METHOD_AT_A_GLANCE.md": {
+      "bytes": 3123,
+      "sha256": "bbd3100b9e7fceb449e7b8d151940fde717fd075d9a02e97dd575d1eb88f135c"
+    },
+    "PHYSICAL_VERIFICATION.md": {
+      "bytes": 6167,
+      "sha256": "2b3a8db0c37cf2ac13cf100c7db370935f6930fb6a17481db457c90a3c18d344"
+    },
+    "PROTOCOL.md": {
+      "bytes": 6829,
+      "sha256": "72a365b250a52a02e9bb8937c9341692a81150a468b682a38b542ea1f7c41f4e"
+    },
+    "README.md": {
+      "bytes": 289,
+      "sha256": "91b887e67390e2c4e8dcd326be8d31ae435900f72d43402082bde81f0aeb33b8"
+    },
+    "REPRODUCIBILITY.md": {
+      "bytes": 9235,
+      "sha256": "9dae02491f412c6f34a87d4f3b0efdd52b6d522a20b37d592756f5ebe651fc7b"
+    },
+    "RESEARCH_REPORT.md": {
+      "bytes": 12157,
+      "sha256": "e177849fa6255df3dfacc0c2c5fa49bc39aa4592ff8fa2128efeb949ba2a7d74"
+    },
+    "controlled_analysis.json": {
+      "bytes": 287025,
+      "sha256": "76cba071ad04c8bac0ed95bc96e9f448033566ad7821b4155c104489a0e4914c"
+    },
+    "evidence.png": {
+      "bytes": 115873,
+      "sha256": "3bb9ab3475000d3aa92a1169735cb986858d11e12828d569889b8f6482da4590"
+    },
+    "hssd_summary.json": {
+      "bytes": 728549,
+      "sha256": "de60e112189df35861f00c622b164fdde9bd07fcc4bd82ae4109f2381d6729e7"
+    },
+    "interactive.html": {
+      "bytes": 1999583,
+      "sha256": "cfee72e30dc41097356dd5c003a395c7e336dddf3058cf3a59b2047a01e0a476"
+    },
+    "matched_subgroups.json": {
+      "bytes": 21496,
+      "sha256": "3093edbba1b09dfb2a68afc7dcff041b5808ed25fa8780e36c7b38d9b3286a9b"
+    },
+    "reproducibility_manifest.json": {
+      "bytes": 63897,
+      "sha256": "50366834831e0b60706fd17753db91b5fc73344d438809e5bc4f1ddbf4cb6466"
+    },
+    "timing_diagnosis.json": {
+      "bytes": 62061,
+      "sha256": "12d9cbe92e3b8fe86f446936bc21a4e0ab6534e7bf040e1d93b09d9488ce2b51"
+    },
+    "verification.json": {
+      "bytes": 670,
+      "sha256": "bb22a6eb3ee88ca4135667da5373a57e876d947e6faac0ac9c0de707d191ab1f"
+    },
+    "viewer_verification.json": {
+      "bytes": 104,
+      "sha256": "bd12071f7709c2795be12e2bf614da69fcb8787002edb192d0864435eedcfaed"
+    }
+  }
+}

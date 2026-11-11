@@ -65,3 +65,7 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 [고정 모델의 점수 개입](track-b/experiments/2026-11-09-frozen-score-controls/completed_results.md)에서 초기 스케일 복원은 Joint2.34–2.78%p, 학습 게이트/잔차 제거는5.21–5.99%p를 회복했다. 둘을 복원하면 초기F1가 재현된다. 따라서 해당 고정 모델·재사용6장면에서는 두 변경 그룹이 모두 저하에 기여한다. NLL은 원래 결합 모델이 더 낮아 지표 간 tradeoff가 확인되지만, 학습 경로의 원인·물리 기작·일반화는 확정하지 않는다. 결합부 제거로 얻은 회복은 새로운 interaction의 성공이 아니다.
 
 [Track B 독립F1의 규모×학습량 비교](track-b/experiments/2026-11-09-expanded-cohort/completed_factorial_results.md)는36fits와19Val의4조건을 완료했다. 같은업데이트에서16→112장면은 Joint+7.24/+8.58%p를 보였지만, 업데이트만7배 늘리면16장면에서는−2.14%p,112장면에서는불확실했다. 이 nested cohort에서는 추가최적화보다 장면구성 확대가 유리했다는 근거이며, 장면수·내용다양성의 보편적인과효과나 M1결합성공·독립일반화를 증명하지 않는다.
+
+## 2026-11-11 추가 — Track A Experiment 1의 물리 시간 정렬과 energy 연관성을 구분
+
+[Reflection observability](track-a/experiments/2026-11-11-reflection-observability/RESEARCH_REPORT.md)는96개 통제/진단 RIR와HSSD12개 개발 장면의실제visual Top20을분석했다. 벽 제거·이동에따른음향응답은존재하지만c343의좁은first-order시간창대응은실패했다. 단일벽2m/6m에서peak bias약+2.36/+6.15ms가sampling rate·diffraction·depth·ray count·mesh형식변경에도남았다. HSSD에서는time/distance marginal을보존한query permutation보다power+0.2619[0.1671,0.3681]이나coherence는개선되지않았다. 이는조건부energy연관성이며확인된wall identity또는localization gain이아니다. 증거수준Exploratory;Test payload·새모델/scorer·Experiment2–4는수행하지않았다.

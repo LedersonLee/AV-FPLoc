@@ -1,0 +1,884 @@
+[
+  {
+    "field": "body_bearing_quadrant",
+    "group": "0",
+    "matched_power_difference": {
+      "mean": 0.42513219396698426,
+      "ci95": [
+        0.1757888676668586,
+        0.6758685331974646
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.4500229628598677
+      },
+      {
+        "scene": "102816615",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": -0.2522807275700806
+      },
+      {
+        "scene": "102816852",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 1.338769008644681
+      },
+      {
+        "scene": "102817200",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.4870745928300848
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.27220811553826096
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 31,
+        "difference": 0.24709070103040232
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 31,
+        "difference": -0.2792484253056621
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.041960237073751294
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.48993450014486734
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.8063884250312829
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.7384458092299488
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "body_bearing_quadrant",
+        "group": "0",
+        "queries": 32,
+        "difference": 0.7612211280964065
+      }
+    ]
+  },
+  {
+    "field": "body_bearing_quadrant",
+    "group": "180",
+    "matched_power_difference": {
+      "mean": 0.015330061142837916,
+      "ci95": [
+        -0.11790583191111507,
+        0.17706086855919836
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.31917806461248427
+      },
+      {
+        "scene": "102816615",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.2028133656141472
+      },
+      {
+        "scene": "102816852",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.051137604360934646
+      },
+      {
+        "scene": "102817200",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.02320194956026078
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.28993161979799
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.04823663496034579
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.07362361609208032
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.16987414191423184
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.017991813154381205
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.022315307301157813
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": 0.7562644385984161
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "body_bearing_quadrant",
+        "group": "180",
+        "queries": 32,
+        "difference": -0.03430482597367787
+      }
+    ]
+  },
+  {
+    "field": "body_bearing_quadrant",
+    "group": "270",
+    "matched_power_difference": {
+      "mean": 0.48390059046148043,
+      "ci95": [
+        0.21037321207530468,
+        0.7663595974973942
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": -0.2411938377535556
+      },
+      {
+        "scene": "102816615",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 31,
+        "difference": 1.1828893674180858
+      },
+      {
+        "scene": "102816852",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.9967257873512567
+      },
+      {
+        "scene": "102817200",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 31,
+        "difference": 0.4167143029576544
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 31,
+        "difference": -0.14582695584088312
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 31,
+        "difference": 0.15022589400121167
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.36314777102608964
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.3897318910931773
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.0821182674786109
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.8458028637686983
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 1.3446677088958645
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "body_bearing_quadrant",
+        "group": "270",
+        "queries": 32,
+        "difference": 0.42180402514155546
+      }
+    ]
+  },
+  {
+    "field": "body_bearing_quadrant",
+    "group": "90",
+    "matched_power_difference": {
+      "mean": 0.24065417823184154,
+      "ci95": [
+        0.10763785473027801,
+        0.3835912663051052
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.5837024155480355
+      },
+      {
+        "scene": "102816615",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.1947023541411917
+      },
+      {
+        "scene": "102816852",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": -0.056289528268523445
+      },
+      {
+        "scene": "102817200",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.30833324438206966
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.7427615883219797
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.2576942073150721
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.017767533637172525
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": -0.011224337935537856
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.36769813869547974
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.3564431082679962
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": -0.05509218496506574
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "body_bearing_quadrant",
+        "group": "90",
+        "queries": 32,
+        "difference": 0.18135359964222825
+      }
+    ]
+  },
+  {
+    "field": "distance",
+    "group": "1-3m",
+    "matched_power_difference": {
+      "mean": 0.07727716699770444,
+      "ci95": [
+        -0.009151796439778336,
+        0.15997445999316431
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": -0.003157457687534615
+      },
+      {
+        "scene": "102816615",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.004748049557686734
+      },
+      {
+        "scene": "102816852",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.21431085710652698
+      },
+      {
+        "scene": "102817200",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.18552121355350776
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.05587639395717968
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.22794868455432554
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": -0.26101129642875043
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.06630591163718957
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.3461979942414942
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": -0.0124562492756925
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.04023909018101261
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "distance",
+        "group": "1-3m",
+        "queries": 32,
+        "difference": 0.06280281257550777
+      }
+    ]
+  },
+  {
+    "field": "distance",
+    "group": "<1m",
+    "matched_power_difference": {
+      "mean": 0.5104402233643622,
+      "ci95": [
+        -0.2040529462375319,
+        1.496265510442022
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": -0.3579937877193948
+      },
+      {
+        "scene": "102816615",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": 0.7325116029747947
+      },
+      {
+        "scene": "102816852",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": 0.36871713021588226
+      },
+      {
+        "scene": "102817200",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 29,
+        "difference": 1.7109444966485252
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 31,
+        "difference": -1.1546080842228728
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": -0.15214682403850266
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 28,
+        "difference": -0.0370384396928478
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": 0.3991476364557738
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 29,
+        "difference": -0.9994945749555305
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": 0.1637759979198533
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 23,
+        "difference": 4.980880953883873
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "distance",
+        "group": "<1m",
+        "queries": 32,
+        "difference": 0.47058657290279254
+      }
+    ]
+  },
+  {
+    "field": "distance",
+    "group": ">=3m",
+    "matched_power_difference": {
+      "mean": 0.02949108400936835,
+      "ci95": [
+        0.01540703101012784,
+        0.044393030858331274
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.038759752433449396
+      },
+      {
+        "scene": "102816615",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.002489478123695687
+      },
+      {
+        "scene": "102816852",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.04944290031129018
+      },
+      {
+        "scene": "102817200",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.039732002699633145
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.03764119306841619
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": -0.0007808255844689842
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.08417662559231615
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.015403250542732706
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.024803255000313957
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.01453202283379344
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": -0.011454557366922906
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "distance",
+        "group": ">=3m",
+        "queries": 32,
+        "difference": 0.059147910458171235
+      }
+    ]
+  },
+  {
+    "field": "overlap",
+    "group": "False",
+    "matched_power_difference": {
+      "mean": 0.1933317080723346,
+      "ci95": [
+        0.11428246646171224,
+        0.2961888368066576
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.005271020094375925
+      },
+      {
+        "scene": "102816615",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.15865428813650884
+      },
+      {
+        "scene": "102816852",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.23911624152911443
+      },
+      {
+        "scene": "102817200",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.2321169631278591
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.06791954439788592
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.09820912518227586
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.047614441996943604
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.10136455305930987
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.24643458415115382
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.28643190526525797
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.6504869752148524
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "overlap",
+        "group": "False",
+        "queries": 32,
+        "difference": 0.1863608547124775
+      }
+    ]
+  },
+  {
+    "field": "overlap",
+    "group": "True",
+    "matched_power_difference": {
+      "mean": 0.4968822097272652,
+      "ci95": [
+        0.33987089252828434,
+        0.648377724682916
+      ],
+      "scenes": 12
+    },
+    "per_scene": [
+      {
+        "scene": "102344250",
+        "field": "overlap",
+        "group": "True",
+        "queries": 30,
+        "difference": 0.1424835210011587
+      },
+      {
+        "scene": "102816615",
+        "field": "overlap",
+        "group": "True",
+        "queries": 32,
+        "difference": 0.6185572989271049
+      },
+      {
+        "scene": "102816852",
+        "field": "overlap",
+        "group": "True",
+        "queries": 32,
+        "difference": 1.00982015034692
+      },
+      {
+        "scene": "102817200",
+        "field": "overlap",
+        "group": "True",
+        "queries": 32,
+        "difference": 0.19978081225878438
+      },
+      {
+        "scene": "103997940_171031257",
+        "field": "overlap",
+        "group": "True",
+        "queries": 29,
+        "difference": 0.4488752893000683
+      },
+      {
+        "scene": "104862513_172226580",
+        "field": "overlap",
+        "group": "True",
+        "queries": 29,
+        "difference": 0.6318533677423348
+      },
+      {
+        "scene": "104862621_172226772",
+        "field": "overlap",
+        "group": "True",
+        "queries": 30,
+        "difference": 0.4157856514762101
+      },
+      {
+        "scene": "106366248_174226527",
+        "field": "overlap",
+        "group": "True",
+        "queries": 31,
+        "difference": 0.4054073293671026
+      },
+      {
+        "scene": "106366434_174226881",
+        "field": "overlap",
+        "group": "True",
+        "queries": 30,
+        "difference": 0.036920566152259436
+      },
+      {
+        "scene": "106878945_174887058",
+        "field": "overlap",
+        "group": "True",
+        "queries": 30,
+        "difference": 0.8267498072904248
+      },
+      {
+        "scene": "108294846_176710506",
+        "field": "overlap",
+        "group": "True",
+        "queries": 28,
+        "difference": 0.6788974700725505
+      },
+      {
+        "scene": "108736689_177263340",
+        "field": "overlap",
+        "group": "True",
+        "queries": 32,
+        "difference": 0.5474552527922638
+      }
+    ]
+  }
+]
