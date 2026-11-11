@@ -31,7 +31,7 @@ def proposals(scores,xy,k=20,distance=1.,yaw=30.):
  order=np.argsort(-scores,kind='stable');selected=[];selected_poses=[]
  for idx in order:
   pose=pose_values(xy,[idx])[0]
-  if any(np.linalg.norm(pose[:2]-p[:2])<=distance and circular_error(pose[2],p[2])<=yaw for p in selected_poses):continue
+  if any(np.linalg.norm(pose[:2]-p[:2])<=distance+1e-7 and circular_error(pose[2],p[2])<=yaw for p in selected_poses):continue
   selected.append(int(idx));selected_poses.append(pose)
   if len(selected)==k:break
  return np.asarray(selected,dtype=int)
