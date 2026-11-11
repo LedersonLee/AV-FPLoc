@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "checks": [
+    "constant correlation null",
+    "negative rank correlation",
+    "11/36 direction MAE",
+    "FoV missing directions null",
+    "distance bins exhaustive",
+    "analytic Laplace interval coverage",
+    "nonpositive scales rejected"
+  ],
+  "initial_failure": "Older installed SciPy Spearman result lacks statistic attribute; fixed portable tuple indexing.",
+  "scope": "Synthetic numerical checks; trained end-to-end validation pending"
+}

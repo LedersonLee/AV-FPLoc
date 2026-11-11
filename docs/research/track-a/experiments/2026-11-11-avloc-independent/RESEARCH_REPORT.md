@@ -238,3 +238,17 @@ python /source/calibrate_rays.py --predictions /study/predictions/A0_seed42 --da
 ```
 
 Repeat with appropriate headA/AV/F only after the corresponding model and native evaluation complete. Keep10cm calibration/evaluation separate. Do not count implementation or synthetic checks as a trained comparison result.
+
+## Post-hoc ray observability analysis prepared
+
+Source `c44ce51cc7c2fcbaf4a8726f2dd4d8ef496f3a26` adds `analyze_rays.py` for completed19-scene/9,965-query predictions and their matching full-field evaluation. It checks prediction/data hashes, exact scene/query IDs, grid agreement with the ideal-profile geometry diagnostic, and per-query MAE consistency before combining evidence. Outputs include direction-wise MAE/scale, in/outFoV MAE, fixed target-distance bins[0,1,2,4,8,infinity)m, Laplace central interval coverage at50/80/90/95%, and scale–absolute-error Spearman correlations. Per-scene statistics are retained; pooled correlated rays are not treated as independent observations. Constant-variable correlations are null, not misleading zeros.
+
+Geometry-margin versus joint-success correlation is descriptive. Cases include high ray MAE(≥1m) with correct joint pose, low ray MAE(≤0.2m) with wrong joint pose, and fine localization successes. Fixed sampling seed20261111 selects up to5 uniform examples per group, alongside ray-error extremes; full case rows remain local. These thresholds are diagnostic definitions, not a method/checkpoint selection rule. Labels never enter inference or proposals.
+
+[Synthetic tests](ray_analysis_test.json) verify11/36-direction summaries, FoV null handling, exhaustive distance bins, analytic interval coverage, correlation degeneracy and rejection of nonpositive scales. The first test failed because the installed older SciPy result lacked `.statistic`; portable tuple indexing corrected compatibility. No trained-model finding is claimed: full integration, figures and acoustic conclusions remain pending.
+
+```bash
+python /source/analyze_rays.py --predictions /study/predictions/A1_seed42 --data /study/data_v1 --evaluation /study/evaluation/A1_seed42_20cm --geometry /study/observability/geometry20 --head A --out /study/analysis/A1_seed42_20cm
+```
+
+Run only after corresponding training/prediction/evaluation completion; repeat otherheads/seeds/grids separately. This does not replace the still-required A3 router-weight analysis or controlled joint/independent/disabled comparisons.

@@ -30,7 +30,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "dc22f5b47ab3dcd7639e89e4bc50efe748878c9226566e3105e43316bdfec0ba"
+      "sha256": "53586e3f0ef109ed087229d1c3d77f705a02140f368286a576a4b422400c7d59"
     },
     {
       "git_copy": "architecture_test.json",
@@ -163,6 +163,10 @@
     {
       "git_copy": "paired_summary_test.json",
       "sha256": "e7fbc07328e35443ee8111f47f131d589c866422527aacc1b2505b816f9ca91b"
+    },
+    {
+      "git_copy": "ray_analysis_test.json",
+      "sha256": "cef80ebc3ace72f5829106f266960ee105e09e0e150c19e6aca383ad33a287dc"
     },
     {
       "git_copy": "ray_calibration_test.json",
