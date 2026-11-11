@@ -252,3 +252,11 @@ python /source/analyze_rays.py --predictions /study/predictions/A1_seed42 --data
 ```
 
 Run only after corresponding training/prediction/evaluation completion; repeat otherheads/seeds/grids separately. This does not replace the still-required A3 router-weight analysis or controlled joint/independent/disabled comparisons.
+
+## A0 completed-run evaluation queue attached
+
+Source `1a62afe422acf1c605dbfe6ef84f3afbe4346a68` adds a no-training evaluation queue. [Pinned plan](a0_evaluation_queue_plan.json) captures the actual live A0 container ID, its immutable Docker image ID and42 Python source snapshot hashes. The running queue waits on that exact container, requires exit code0 plus `training_complete`, then reads the completed run's selected checkpoint. It does not evaluate intermediate checkpoints or start/restart training.
+
+Stages: full Val19 float32 prediction (batch4), native20cm localization,20cm ray analysis, native10cm localization,10cm ray analysis,20cm temperature calibration,10cm calibration. Every stage must produce a complete9,965-query receipt before proceeding. Only prediction requests GPU access; remaining stages use CPU. This throughput-oriented scheduling may overlap the next queued expert's training, so its elapsed times are **not isolated runtime benchmarks**. All outputs remain local on SSD. Any source hash mismatch, existing output or command failure stops the queue without overwrite/retry. The immutable source snapshot ensures later development does not silently alter the running evaluation plan.
+
+Observed launch verification: live A0 attachment,42 snapshot hashes and seven ordered stages passed; queue process confirmed waiting on Docker. Actual completed-model inference/evaluation remains pending. A3 training still requires A0/A1/A2 validation and is not started by this queue. Original user runtime modifications and training closure remain untouched.

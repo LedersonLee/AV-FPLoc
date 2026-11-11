@@ -30,7 +30,11 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "53586e3f0ef109ed087229d1c3d77f705a02140f368286a576a4b422400c7d59"
+      "sha256": "fb1b2b2fe187315547b5af8cad0dd81f90844888a1d3908dabae77f8d207d971"
+    },
+    {
+      "git_copy": "a0_evaluation_queue_plan.json",
+      "sha256": "bba83632b66edde62a6a3031f06d62b4cf81f34bb7d6182c2840fb41821e59f5"
     },
     {
       "git_copy": "architecture_test.json",

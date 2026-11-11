@@ -97,3 +97,5 @@ AVLoc study update (2026-11-11, Exploratory; primary Track A): [seed42 calibrati
 AVLoc evaluation implementation update (2026-11-11): ray temperature calibration uses the existing baseline family-fold protocol and native replay checks; [synthetic checks](track-a/experiments/2026-11-11-avloc-independent/ray_calibration_test.json) pass, trained execution pending. Source `a3731d07c0a747307b7d544820f81ffbdfb48725`. Evidence remains Exploratory; no new learned-model conclusion.
 
 AVLoc analysis implementation update (2026-11-11): [ray observability analysis and numerical tests](track-a/experiments/2026-11-11-avloc-independent/RESEARCH_REPORT.md) prepared; source `c44ce51cc7c2fcbaf4a8726f2dd4d8ef496f3a26`. Trained application remains pending; evidence level unchanged (Exploratory).
+
+AVLoc execution update (2026-11-11): [A0 evaluation queue](track-a/experiments/2026-11-11-avloc-independent/a0_evaluation_queue_plan.json) attached to the verified live training container; seven full-Val stages pending normal completion. Source `1a62afe422acf1c605dbfe6ef84f3afbe4346a68`. Not a completed model result.
