@@ -22,7 +22,7 @@ class Tokens(nn.Module):
   h,w=(15,20) if kind=='vision' else (9,10)
   self.row=nn.Parameter(torch.randn(1,128,h,1)*.02);self.col=nn.Parameter(torch.randn(1,128,1,w)*.02);self.modality=nn.Parameter(torch.randn(1,1,128)*.02);self.intra=transformer(2)
  def forward(self,x):
-  x=self.project(self.backbone(x));h,w=x.shape[-2:];pos=F.interpolate(self.row,size=(h,1),mode='bilinear',align_corners=False)+F.interpolate(self.col,size=(1,w),mode='bilinear',align_corners=False)
+  x=self.project(self.backbone(x));h,w=x.shape[-2:];assert h==self.row.shape[2] and w==self.col.shape[3], 'Expected full-resolution input';pos=self.row+self.col
   tokens=self.intra((x+pos).flatten(2).transpose(1,2)+self.modality)
   return tokens,tokens.transpose(1,2).reshape(len(x),128,h,w)
 
@@ -35,11 +35,15 @@ class Expert(nn.Module):
   rays=(self.rays+self.direction).expand(len(tokens),-1,-1)
   if visual_map is not None:
    # Image right maps to increasing logical yaw; RGB horizontal FOV=106.2602deg.
-   angles=torch.arange(-5,6,device=tokens.device,dtype=tokens.dtype)*torch.pi/18
-   gx=torch.tan(angles)/torch.tan(torch.tensor(106.2602*torch.pi/360,device=tokens.device,dtype=tokens.dtype))
-   grid=torch.stack([gx,torch.zeros_like(gx)],-1)[None,None].expand(len(tokens),-1,-1,-1)
-   cols=F.grid_sample(visual_map.mean(-2,keepdim=True),grid,mode='bilinear',align_corners=True).squeeze(-2).transpose(1,2)
-   seed=torch.zeros_like(rays);seed[:,list(FOV) if self.k==36 else list(range(11))]=cols;rays=rays+seed
+   # Match focal/width=3/8 and feature-column centres; deterministic matmul,
+   # avoiding CUDA grid_sample backward and its corner-vs-centre mismatch.
+   width=visual_map.shape[-1];angles=torch.arange(-5,6,device=tokens.device,dtype=torch.float32)*torch.pi/18
+   coords=torch.tan(angles)*width*3/8+(width-1)/2
+   assert bool((coords>=0).all() and (coords<=width-1).all())
+   columns=torch.arange(width,device=tokens.device,dtype=torch.float32)
+   weights=(1-abs(columns[:,None]-coords[None,:])).clamp_min(0).to(visual_map.dtype)
+   cols=(visual_map.mean(-2)@weights).transpose(1,2)
+   seed=torch.zeros_like(rays);seed[:,list(FOV) if self.k==36 else list(range(11))]=cols.to(rays.dtype);rays=rays+seed
   result=self.encoder(torch.cat([rays,tokens],1))[:,:self.k];mu,scale=F.softplus(self.head(result)).unbind(-1)
   return mu+1e-4,scale+1e-3
 
