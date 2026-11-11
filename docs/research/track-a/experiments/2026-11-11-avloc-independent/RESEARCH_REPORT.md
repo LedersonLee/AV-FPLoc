@@ -224,3 +224,17 @@ The process exited and all19 scenes/9,965 IDs and per-scene hashes passed [verif
 |11 FoV directions|66.111% →77.832%|27.416% →52.363%|
 
 At10cm, median incorrect-minus-correct ray-MAE margin is0.44415m for36 directions and0.09218m for11; no joint-correct regions are missing. The paired scene-macro36-minus11 joint difference is21.733pp [19.843,23.622]. These are GT-derived geometry diagnostics, never inference inputs/proposal filters, and not learned-model ceilings. The finer bank changes geometric approximation and candidate density; its large fine-metric effect must not be credited to a network. Whether audio predicts these informative profiles remains untested until A1 completes. No Test17 observations were used.
+
+## Matched ray calibration path prepared, trained execution pending
+
+Source `a3731d07c0a747307b7d544820f81ffbdfb48725` adds `calibrate_rays.py`, using the same25 temperatures and five source-family folds as baseline calibration. It requires completed19-scene/9,965-query predictions and completed native evaluation at the selected20cm or10cm grid. Prediction/data/bank manifests, file hashes, IDs, head and grid must agree. Before accepting each temperature curve, nativeT1 nearest-grid NLL, confidence, entropy, GT mass, exact Top1 ID and success label must match the separate full-field evaluation. Output preserves per-scene source hashes and records the training/checkpoint-selection exposure. It neither selects a network checkpoint nor uses Test17.
+
+[Tests](ray_calibration_test.json) pass for synthetic11/36-ray distributions and reject corrupted Top1 IDs and confidence. This is numerical interface evidence only; full trained-model execution remains pending. Existing training closure was unchanged and A0 continues to its predefined stopping criterion.
+
+Example after completed A0 prediction and native20cm evaluation:
+
+```bash
+python /source/calibrate_rays.py --predictions /study/predictions/A0_seed42 --data /study/data_v1 --banks /study/banks_v1 --native /study/evaluation/A0_seed42_20cm --out /study/calibration/A0_seed42_20cm --head V --grid-cm 20
+```
+
+Repeat with appropriate headA/AV/F only after the corresponding model and native evaluation complete. Keep10cm calibration/evaluation separate. Do not count implementation or synthetic checks as a trained comparison result.

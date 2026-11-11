@@ -30,7 +30,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "4a936a94e3c9c6a7df5387135aafcefb2ed2be2878190927ce665390517a1284"
+      "sha256": "dc22f5b47ab3dcd7639e89e4bc50efe748878c9226566e3105e43316bdfec0ba"
     },
     {
       "git_copy": "architecture_test.json",
@@ -163,6 +163,10 @@
     {
       "git_copy": "paired_summary_test.json",
       "sha256": "e7fbc07328e35443ee8111f47f131d589c866422527aacc1b2505b816f9ca91b"
+    },
+    {
+      "git_copy": "ray_calibration_test.json",
+      "sha256": "4b66684a61557601f604a09462267dae6774bc6bb10c9b2b625d70e96bf4ea62"
     },
     {
       "git_copy": "real_bank_matching_test.json",

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "directions": 11,
+      "native_agreement": true,
+      "corrupt_id_rejected": true,
+      "corrupt_confidence_rejected": true
+    },
+    {
+      "directions": 36,
+      "native_agreement": true,
+      "corrupt_id_rejected": true,
+      "corrupt_confidence_rejected": true
+    }
+  ],
+  "scope": "Synthetic distribution and native diagnostic consistency only; completed trained prediction integration pending"
+}
