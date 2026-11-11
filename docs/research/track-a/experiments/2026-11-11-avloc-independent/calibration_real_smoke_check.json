@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "query_method_checks": 16,
+  "temperature": 1,
+  "scope": "real cached-input curves versus independently executed baseline field diagnostics; no calibration fit in smoke"
+}
