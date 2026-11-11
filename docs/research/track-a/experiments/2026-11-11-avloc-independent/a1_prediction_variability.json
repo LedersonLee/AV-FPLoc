@@ -1,0 +1,198 @@
+{
+  "scope": "descriptive Val19 only; no model selection",
+  "records": [
+    {
+      "scene": "102344115",
+      "prediction_query_std_mean": 0.7519603967666626,
+      "target_query_std_mean": 1.511192798614502,
+      "prediction_direction_std_mean": 0.26155418157577515,
+      "target_direction_std_mean": 1.3242981433868408,
+      "mean_scale": 0.9837452173233032,
+      "mean_mu": 1.8327298164367676,
+      "mean_target": 2.4491939544677734
+    },
+    {
+      "scene": "108294798_176710428",
+      "prediction_query_std_mean": 0.73292475938797,
+      "target_query_std_mean": 1.8816577196121216,
+      "prediction_direction_std_mean": 0.347062349319458,
+      "target_direction_std_mean": 1.7497506141662598,
+      "mean_scale": 1.1848478317260742,
+      "mean_mu": 1.8965463638305664,
+      "mean_target": 2.339526414871216
+    },
+    {
+      "scene": "104862573_172226682",
+      "prediction_query_std_mean": 0.9097834825515747,
+      "target_query_std_mean": 1.9012398719787598,
+      "prediction_direction_std_mean": 0.39387738704681396,
+      "target_direction_std_mean": 1.7062231302261353,
+      "mean_scale": 1.279346227645874,
+      "mean_mu": 2.3753838539123535,
+      "mean_target": 2.722095489501953
+    },
+    {
+      "scene": "108736800_177263517",
+      "prediction_query_std_mean": 1.190995454788208,
+      "target_query_std_mean": 2.5463902950286865,
+      "prediction_direction_std_mean": 0.44768646359443665,
+      "target_direction_std_mean": 2.1989176273345947,
+      "mean_scale": 1.52997887134552,
+      "mean_mu": 2.5628247261047363,
+      "mean_target": 3.4151692390441895
+    },
+    {
+      "scene": "108294783_176710410",
+      "prediction_query_std_mean": 0.7589068412780762,
+      "target_query_std_mean": 1.5602144002914429,
+      "prediction_direction_std_mean": 0.3596058487892151,
+      "target_direction_std_mean": 1.418889045715332,
+      "mean_scale": 1.0507127046585083,
+      "mean_mu": 1.867146372795105,
+      "mean_target": 2.2344229221343994
+    },
+    {
+      "scene": "108736635_177263256",
+      "prediction_query_std_mean": 1.291296362876892,
+      "target_query_std_mean": 2.5503015518188477,
+      "prediction_direction_std_mean": 0.4703589379787445,
+      "target_direction_std_mean": 2.1472911834716797,
+      "mean_scale": 1.5321967601776123,
+      "mean_mu": 2.770186185836792,
+      "mean_target": 3.383556842803955
+    },
+    {
+      "scene": "105515286_173104287",
+      "prediction_query_std_mean": 1.259018898010254,
+      "target_query_std_mean": 2.5853939056396484,
+      "prediction_direction_std_mean": 0.4605073630809784,
+      "target_direction_std_mean": 2.2172389030456543,
+      "mean_scale": 1.5653603076934814,
+      "mean_mu": 2.5007543563842773,
+      "mean_target": 3.248419761657715
+    },
+    {
+      "scene": "102344457",
+      "prediction_query_std_mean": 1.1129276752471924,
+      "target_query_std_mean": 2.4262208938598633,
+      "prediction_direction_std_mean": 0.5292069911956787,
+      "target_direction_std_mean": 2.19022274017334,
+      "mean_scale": 1.511932611465454,
+      "mean_mu": 2.5058844089508057,
+      "mean_target": 3.1021945476531982
+    },
+    {
+      "scene": "106366134_174226362",
+      "prediction_query_std_mean": 0.7907636165618896,
+      "target_query_std_mean": 1.6602474451065063,
+      "prediction_direction_std_mean": 0.34613272547721863,
+      "target_direction_std_mean": 1.5444083213806152,
+      "mean_scale": 1.2198164463043213,
+      "mean_mu": 2.237515687942505,
+      "mean_target": 2.5442841053009033
+    },
+    {
+      "scene": "108294765_176710386",
+      "prediction_query_std_mean": 0.8623963594436646,
+      "target_query_std_mean": 2.114565372467041,
+      "prediction_direction_std_mean": 0.4658108055591583,
+      "target_direction_std_mean": 2.0519208908081055,
+      "mean_scale": 1.4844073057174683,
+      "mean_mu": 2.031078815460205,
+      "mean_target": 2.840632438659668
+    },
+    {
+      "scene": "106879005_174887124",
+      "prediction_query_std_mean": 1.250553846359253,
+      "target_query_std_mean": 2.4873898029327393,
+      "prediction_direction_std_mean": 0.5838620066642761,
+      "target_direction_std_mean": 2.2413229942321777,
+      "mean_scale": 1.7047598361968994,
+      "mean_mu": 2.691049337387085,
+      "mean_target": 3.362461566925049
+    },
+    {
+      "scene": "103997478_171030528",
+      "prediction_query_std_mean": 0.8018314838409424,
+      "target_query_std_mean": 2.3059158325195312,
+      "prediction_direction_std_mean": 0.3384507894515991,
+      "target_direction_std_mean": 2.011822462081909,
+      "mean_scale": 1.1913937330245972,
+      "mean_mu": 1.931217908859253,
+      "mean_target": 2.7910401821136475
+    },
+    {
+      "scene": "108736737_177263406",
+      "prediction_query_std_mean": 1.4870007038116455,
+      "target_query_std_mean": 3.0029757022857666,
+      "prediction_direction_std_mean": 0.49651360511779785,
+      "target_direction_std_mean": 2.672389030456543,
+      "mean_scale": 1.7705979347229004,
+      "mean_mu": 3.064159631729126,
+      "mean_target": 3.702043056488037
+    },
+    {
+      "scene": "104348082_171512994",
+      "prediction_query_std_mean": 1.1127538681030273,
+      "target_query_std_mean": 2.1938905715942383,
+      "prediction_direction_std_mean": 0.3251156806945801,
+      "target_direction_std_mean": 2.0020253658294678,
+      "mean_scale": 1.4483333826065063,
+      "mean_mu": 2.309913158416748,
+      "mean_target": 3.0411217212677
+    },
+    {
+      "scene": "105515448_173104512",
+      "prediction_query_std_mean": 1.1940398216247559,
+      "target_query_std_mean": 2.5506837368011475,
+      "prediction_direction_std_mean": 0.48472893238067627,
+      "target_direction_std_mean": 2.172245740890503,
+      "mean_scale": 1.6041028499603271,
+      "mean_mu": 2.559252977371216,
+      "mean_target": 3.2490854263305664
+    },
+    {
+      "scene": "102344307",
+      "prediction_query_std_mean": 1.2445787191390991,
+      "target_query_std_mean": 2.0442755222320557,
+      "prediction_direction_std_mean": 0.30532774329185486,
+      "target_direction_std_mean": 1.677909016609192,
+      "mean_scale": 1.3050098419189453,
+      "mean_mu": 2.1806721687316895,
+      "mean_target": 2.549765110015869
+    },
+    {
+      "scene": "108736611_177263226",
+      "prediction_query_std_mean": 0.9921861290931702,
+      "target_query_std_mean": 2.1731157302856445,
+      "prediction_direction_std_mean": 0.3640490770339966,
+      "target_direction_std_mean": 1.9741195440292358,
+      "mean_scale": 1.4045891761779785,
+      "mean_mu": 2.5282766819000244,
+      "mean_target": 3.0440685749053955
+    },
+    {
+      "scene": "106366173_174226431",
+      "prediction_query_std_mean": 1.0308737754821777,
+      "target_query_std_mean": 2.129457950592041,
+      "prediction_direction_std_mean": 0.4235207140445709,
+      "target_direction_std_mean": 1.9985241889953613,
+      "mean_scale": 1.565016508102417,
+      "mean_mu": 2.748382568359375,
+      "mean_target": 3.299933671951294
+    },
+    {
+      "scene": "108294624_176710203",
+      "prediction_query_std_mean": 1.069166660308838,
+      "target_query_std_mean": 2.1589066982269287,
+      "prediction_direction_std_mean": 0.44739848375320435,
+      "target_direction_std_mean": 1.9616813659667969,
+      "mean_scale": 1.4989547729492188,
+      "mean_mu": 2.156144618988037,
+      "mean_target": 2.8126866817474365
+    }
+  ],
+  "formula": "Per scene: mean over directions of population std across queries; mean over queries of population std across36 directions. Macro means weight19scenes equally.",
+  "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+  "reproduction": "For every manifest record load A_mu and A_scale from prediction NPZ and target from matching data_v1/<scene>/labels.npz; np.std(axis=0).mean() and np.std(axis=1).mean(), ddof=0. No fitting or selections."
+}

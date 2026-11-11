@@ -15,3 +15,14 @@ python3 AV-FPLoc/scripts/research/track_a/avloc_20261111/evaluate_completed_expe
 ```
 
 Requires existing local assets and completed training artifacts; outputs must not exist. Plan and logs remain local under a1_evaluation_queue_v1. Runtime overlaps A2 training and is not an isolated cost measurement. Quantitative matching, controls, uncertainty intervals and interpretation will be appended after completion; this report is not a research stopping condition.
+
+
+## Initial20cm matching: negative result
+
+All19 Val scenes/9,965 queries completed prediction,20cm matching and post-hoc ray analysis. R@1m9.2524%, Joint2.4285%, R@0.1m0.1505%, NMS Top5 coverage9.9147%, Top20 coverage22.6894%. The same-cohort FP-RIR cosine baseline is30.376% R@1m and21.365% Joint. [Matched table](A0_A1_MATCHED_COMPARISON.md), [aggregation provenance](a0_a1_matched_comparison.json). Current A1 does not support the hypothesis of strong acoustic-only localization. No positive cases were selected to override this aggregate failure.
+
+Ray MAE1.478506m reproduces selected-checkpoint validation. In-FoV1.491381m, outside1.472841m. Pooled scale/absolute-error Spearman0.374921 is descriptive and does not establish calibrated uncertainty. [Direction/distance/interval diagnostics](a1_ray_diagnostics_20cm.json).
+
+Competing explanations include insufficient learned directional information, adaptation/optimization limitations and remaining input/coordinate/model errors. [Prediction variability diagnostic](a1_prediction_variability.json) rules out literally identical outputs across queries: equal-scene mean of per-direction query std is1.0444m versus target2.1992m. Within-query directional std is only0.4132m versus target1.9611m; mean predicted distance2.3552m versus target2.9543m. These observations are consistent with directional smoothing and distance underprediction, but do not identify a causal mechanism or prove an input error. Full distribution/perturbation controls and independent-fusion/interaction-disabled comparisons remain required. No architecture change or new checkpoint selection has been made from these results.
+
+Variability is an ad-hoc read-only NumPy analysis, reproduced by the formulas and source manifest hash in its JSON; it has no separate historical experiment-code commit. Source context is the committed prediction/analysis pipeline, training SHA above.10cm and temperature analyses remain in progress; A2 is still training. Do not interpret this single-seed result as failure of the original paper or physical non-observability.
