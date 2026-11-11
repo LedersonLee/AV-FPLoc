@@ -16,7 +16,7 @@ int main(int argc,char**argv){
  int listeners=mode=="simultaneous"?6:1;
  for(int k=0;k<listeners;k++){ck(RLRA_AddListener(context,&layout));if((mode=="radius0"||mode=="specular_radius0"))ck(RLRA_SetListenerRadius(context,k,0));}
  bool custom=(mode=="explicit_default"||mode=="specular"||mode=="specular_radius0"||mode=="specular_moved");
- if(custom){float scatter=mode=="explicit_default"?.5f:0.f;std::ofstream mat(out+"_material.json");mat<<"{\"materials\":[{\"name\":\"audit\",\"labels\":[\"audit_wall\"],\"absorption\":[125,0.1,8000,0.1],\"scattering\":[125,"<<scatter<<",8000,"<<scatter<<"],\"transmission\":[125,0,8000,0]}]}";mat.close();ck(RLRA_SetMaterialDatabaseJSON(context,(out+"_material.json").c_str()));}
+ if(custom){float scatter=mode=="explicit_default"?.5f:0.f;std::ofstream mat(out+"_material.json");mat<<"{\"materials\":[{\"name\":\"audit\",\"labels\":[\"audit_wall\"],\"absorption\":[125,0.1,8000,0.1],\"scattering\":[125,"<<scatter<<",8000,"<<scatter<<"],\"transmission\":[125,0,8000,0],\"damping\":[125,0,8000,0],\"speed\":343}]}";mat.close();ck(RLRA_SetMaterialDatabaseJSON(context,(out+"_material.json").c_str()));}
  float vertices[]={-12,-8,0,12,-8,0,12,12,0,-12,12,0,-12,-20,-12,12,-20,-12,12,-20,24,-12,-20,24};
  if(mode=="specular_moved")for(int i=0;i<4;i++)vertices[3*i+2]=-1;
  const uint32_t indices[]={0,1,2,0,2,3,2,1,0,3,2,0,4,6,5,4,7,6};ck(RLRA_AddMeshVertices(context,vertices,8));ck(RLRA_AddMeshIndices(context,indices,18,3,custom?"audit_wall":nullptr));ck(RLRA_AddObject(context));ck(RLRA_FinalizeObjectMesh(context,0));
