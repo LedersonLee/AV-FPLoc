@@ -125,10 +125,12 @@ OUT=/home/jeongeonlee/track1/experiments/semantic_sound_poc_replay
 python3 "$CODE/run_prepare.py" --out "$OUT"
 bash "$CODE/run_native.sh" "$OUT" geometry
 bash "$CODE/run_native.sh" "$OUT" render validate_depth_clearance.py
-# Follow validated-support correction step in README before Oracle if any depth failures occur.
-python3 "$CODE/run_oracle.py" --out "$OUT"
 bash "$CODE/run_native.sh" "$OUT" render
 bash "$CODE/run_native.sh" "$OUT" render run_direct_probe.py
+python3 "$CODE/run_oracle.py" --out "$OUT"  # preserve provisional result
+python3 "$CODE/apply_depth_correction.py" --out "$OUT"
+OUT="$OUT/validated"
+python3 "$CODE/run_oracle.py" --out "$OUT"
 python3 "$CODE/analyze_audio.py" --out "$OUT"
 python3 "$CODE/verify_results.py" --out "$OUT"
 python3 -m unittest discover -s "$CODE" -p test_sanity.py
@@ -143,9 +145,9 @@ Actual primary oracle/native render executed from `ee9e56cd9027011a4c08132928b06
  files=[]
  for p in sorted(o.rglob('*')):
   if p.is_file() and p.name!='manifest.json':files.append(dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)))
- manifest=dict(study=c['study'],scene=sid,seeds=c['seeds'],code_head=head,primary_execution_sha='ee9e56cd9027011a4c08132928b06d09e352ce4e',initial_base=(initial/'initial_git_head.txt').read_text().strip(),sources=[dict(path=str(p),sha256=sha(p)) for p in sorted(code.iterdir()) if p.is_file()],inputs=inputm,config=c,environment=env,acoustic_settings=json.loads((o/'acoustic_render.json').read_text())['settings'],outputs=files,total_output_bytes=sum(x['bytes'] for x in files),evidence_level='Exploratory',track='A / semantic hypothesis discrimination; no learned Track B',local_only=['RIR','WAV','raw predictions','full logs','source/source pools'],correction=cor,git_scope='only explicit study code/docs/index paths',docs_sha='not stored: reported after commit')
+ manifest=dict(study=c['study'],scene=sid,seeds=c['seeds'],code_head=head,primary_execution_sha='ee9e56cd9027011a4c08132928b06d09e352ce4e',initial_base=(initial/'initial_git_head.txt').read_text().strip(),sources=[dict(path=str(p),sha256=sha(p)) for p in sorted(code.iterdir()) if p.is_file()],inputs=inputm,config=c,environment=env,acoustic_settings=json.loads((o/'acoustic_render.json').read_text())['settings'],outputs=files,total_output_bytes=sum(x['bytes'] for x in files),external_native_outputs=[dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)) for sub in ['rirs','direct_probe'] for p in sorted((initial/sub).glob('*.npy'))],evidence_level='Exploratory',track='A / semantic hypothesis discrimination; no learned Track B',local_only=['RIR','WAV','raw predictions','full logs','source pools'],correction=cor,git_scope='only explicit study code/docs/index paths',docs_sha='not stored: reported after commit')
  (o/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
- selected=['report.md','audit.md','reproduction.md','config.json','metrics.csv','metrics.json','manifest.json','environment.json','verification.json','alignment.json','audio_validation.json','figure_cases.json']
+ selected=['report.md','audit.md','reproduction.md','config.json','metrics.csv','metrics.json','manifest.json','environment.json','verification.json','alignment.json','audio_validation.json','figure_cases.json','correction.json','subgroup_details.json']
  for name in selected:shutil.copy2(o/name,docs/name)
  shutil.copytree(o/'figures',docs/'figures',dirs_exist_ok=True)
  (docs/'README.md').write_text('# Semantic sound PoC\n\n[Research report](report.md) · [Asset audit](audit.md) · [Reproduction](reproduction.md) · [Metrics](metrics.csv) · [Manifest](manifest.json)\n')

@@ -7,7 +7,7 @@ for row in d['records']:
 for room in support:
  for group in ['generation','integration']:room[group]=[p for i,p in enumerate(room[group]) if i not in invalid.get((room['room'],group),set())];assert room[group]
 for name in ['config.json','inference_candidates.npz','evaluation_truth.npz','input_manifest.json','images.json','alignment.json','environment.json','geometry_validation.json','source_depth_clearance.json','acoustic_pairs.json','acoustic_render.json','direct_probe.json','collision_backend_check.json','collision_backend_physics_check.json','receiver_radius_audit.txt','protocol.md']:
- shutil.copy2(old/name,new/name)
+ if (old/name).exists():shutil.copy2(old/name,new/name)
 for name in ['rirs','direct_probe']:(new/name).symlink_to(old/name,target_is_directory=True)
 (new/'source_support.json').write_text(json.dumps(support,indent=2)+'\n')
 code=Path(__file__).parent;sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=code,text=True).strip();correction=dict(reason='cast_ray backend false-negative floor control; replace by actual six-cardinal depth clearance at height1.2m',invalid_source_points=d['invalid'],original_source_points=d['count'],retained_source_points=sum(len(r[g]) for r in support for g in ['generation','integration']),initial_metrics_path=str(old/'metrics.json'),initial_metrics_sha256=hashlib.sha256((old/'metrics.json').read_bytes()).hexdigest(),initial_delta_pp=json.loads((old/'metrics.json').read_text())['metrics'][3]['delta_pp'],execution_sha=sha,threshold_m=.15,threshold_preexisting=True,native_audio_scope='same preserved source positions and RIR; selected RIR source positions independently confirmed in depth-valid pool',raw_parent=str(old))

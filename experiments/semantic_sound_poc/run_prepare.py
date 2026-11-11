@@ -1,5 +1,6 @@
 """Freeze assets and geometry-only source proposals; no GT-based query filtering."""
-import argparse, json, hashlib, subprocess, sys
+import argparse, json, hashlib, subprocess, sys, time
+import scipy, matplotlib, PIL
 from pathlib import Path
 import numpy as np
 from PIL import Image
@@ -10,6 +11,9 @@ def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def write(p,x): Path(p).write_text(json.dumps(x,indent=2)+'\n')
 def main():
  a=argparse.ArgumentParser();a.add_argument('--out',type=Path,required=True);a.add_argument('--config',type=Path,default=Path(__file__).with_name('config.json'));args=a.parse_args();out=args.out;c=json.loads(args.config.read_text());r=Path(c['root']);w=Path(c['workspace']);s=r/'source/hssd-hab';sid=c['scene'];out.mkdir(parents=True,exist_ok=True)
+ write(out/'environment.json',dict(python=sys.version,numpy=np.__version__,scipy=scipy.__version__,matplotlib=matplotlib.__version__,Pillow=PIL.__version__,native_image='track1-soundspaces-echoloc:ktx-hssd-20261015',native_image_id=subprocess.check_output(['docker','image','inspect','track1-soundspaces-echoloc:ktx-hssd-20261015','--format','{{.Id}}'],text=True).strip(),RLR_commit='4fd446b4abb5c71fb7a232a083bbddd65f25fc6f',start_unix=time.time()))
+ (out/'protocol.md').write_text(Path(__file__).with_name('PROTOCOL.md').read_text())
+ (out/'initial_git_head.txt').write_text(subprocess.check_output(['git','rev-parse','HEAD'],cwd=Path(__file__).parent,text=True))
  split=json.loads((r/'manifests/scene_splits_v1.json').read_text());assert sid in split['train'];assert sid.split('_')[0] not in {x.split('_')[0] for x in split['test']}
  sem=s/'semantics/scenes'/f'{sid}.semantic_config.json';regions=json.loads(sem.read_text())['region_annotations'];mp=r/'2DFP'/sid/'map.png';meta=json.loads(mp.with_name('floorplan_metadata.json').read_text());assert sha(sem)==meta['semantic_sha256'];assert meta['raster_view']=='+Y top-down: +X right, +Z down';free=np.array(Image.open(mp))==255;dist=distance_transform_edt(free)*meta['map_spacing_m'];b=meta['world_bounds_m'];origin=np.array([b['x_min'],b['z_min']]);step=meta['map_spacing_m'];pools=[];rng=np.random.default_rng(c['geometry_seed']);audit=[]
  for i,reg in enumerate(regions):
