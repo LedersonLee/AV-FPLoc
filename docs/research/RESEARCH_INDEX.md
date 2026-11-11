@@ -135,3 +135,5 @@ AVLoc Router replay validation correction (2026-11-11): scalar fused-output acce
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | AVLoc A0 seed42 initial evaluation | 2026-11-12 | A | A0 100epoch 완료; best99 MAE0.17957m;20cm Joint50.1054%;사후 분석 boolean 오류 수정 및 재개,전체 연구 진행 중 | Exploratory; reused Val19, single seed | [A0 initial results](track-a/experiments/2026-11-11-avloc-independent/A0_INITIAL_RESULTS.md) | training `62c58da20ed26ba95863638bbfd4926829999eec`; analysis/recovery `5f8fdc4e8fdd22a17f1a243646c263fcd23e9ae1` |
+
+AVLoc A0 matched follow-up (2026-11-12, Track A, Exploratory):20cm Joint improves4.255pp over existing visual baseline, with791 harmed queries; below fixed/B2/GEOQ. Separate10cm Joint60.462% is a grid effect. [Evidence](track-a/experiments/2026-11-11-avloc-independent/A0_INITIAL_RESULTS.md#matched-baseline-integration-and-separate10cm-evaluation). Aggregation code `81bcc165bba8bef19b43239d3d6a459f3cb938e6`; training `62c58da20ed26ba95863638bbfd4926829999eec`.

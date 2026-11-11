@@ -26,3 +26,14 @@ python3 AV-FPLoc/scripts/research/track_a/avloc_20261111/recover_a0_evaluation.p
 ```
 
 Executed with the original pinned Docker image recorded in the recovery plan. Existing outputs intentionally cause refusal; never overwrite them to rerun. Inference49.06s was measured concurrently with A1 training and is not an isolated runtime benchmark. Reports contain aggregates only; checkpoints, query arrays and logs stay local.
+
+
+## Matched baseline integration and separate10cm evaluation
+
+All19 scenes/9,965 query IDs were aligned to the existing baseline cohort, with baseline file hashes verified. [Matched table](A0_MATCHED_COMPARISON.md) and [paired estimates/provenance](a0_matched_comparison.json). Aggregation source `81bcc165bba8bef19b43239d3d6a459f3cb938e6`.
+
+At20cm, A0 Joint50.105% exceeds the existing visual baseline45.850% by4.255 percentage points micro. Equal-scene mean improvement4.370pp, paired19-scene bootstrap95% interval[3.546,5.197]pp (10,000 resamples, seed20261111). All19 scene differences are positive. A0 repairs1,215 visual failures and harms791 visual successes. This compares trained systems, not a controlled causal architecture ablation: training data/initialization/protocol differ, and the reused development cohort selected the checkpoint. Seed43 remains pending.
+
+A0 remains below fixed fusion65.038%, B2(two-seed mean)69.313% and B2+GEOQ73.071% Joint. These are descriptive comparisons; the two-seed baseline mean is explicitly distinguished from A0's single seed. No claim about full AVLoc-style superiority or acoustic recoverability follows from vision-only A0.
+
+Separate10cm evaluation completed on the same predictions and all9,965 queries: R@1m61.274%, Joint60.462%, R@0.1m38.906%, NMS Top20 coverage92.122%. [Metrics and hashes](a0_seed42_10cm_metrics.json). The Joint increase10.356pp versus20cm is a grid effect with unchanged network and predictions. Do not substitute this result into the primary20cm comparison table.10cm ray analysis also completed with source/ID/MAE replay checks.20cm temperature calibration completed;10cm calibration and independent review of the calibration aggregates remain pending.
