@@ -1,0 +1,1635 @@
+{
+  "records": 324,
+  "poses": [
+    "corridor_near",
+    "room_far",
+    "single6"
+  ],
+  "source_records": [
+    {
+      "key": "corridor_near|0.7|1|low|removed",
+      "name": "corridor_near_removed_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "938b2c1631d362b4f36bccc14c3e7aa6dc2dd9767ac172b7ac3368c0e663927f"
+    },
+    {
+      "key": "room_far|0.05|0.5|low|moved",
+      "name": "room_far_moved_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "c97673572de14996040d46b0c14a38601ccf94287bc3a8f8ceec399ddf567997"
+    },
+    {
+      "key": "corridor_near|0.7|1|uniform|moved",
+      "name": "corridor_near_moved_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "725329c0b7da934ed9007152baf86f808d9e823d10c6090e5f2fae4a1981ddb6"
+    },
+    {
+      "key": "corridor_near|0.7|1|low|moved",
+      "name": "corridor_near_moved_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "4977f495151dc5fcdad002931f4f7efd6303d5ba2d299aa351c3b93c8ad538ed"
+    },
+    {
+      "key": "room_far|0.99|0.5|high|present",
+      "name": "room_far_present_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "df041f807212d334a783190edd4eb1a3b4e9a403853f8cf50a0b6dd694ddccca"
+    },
+    {
+      "key": "single6|0.3|0.5|low|present",
+      "name": "single6_present_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "da313d44d17f63ef56d502a53ea810f442646233cd1463a97628bc8cbec39477"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|low|present",
+      "name": "corridor_near_present_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "b15ee04dceaeebee70be7131d9f6ae9603b544fd6fb265741038969446e9d116"
+    },
+    {
+      "key": "corridor_near|0.99|0|high|removed",
+      "name": "corridor_near_removed_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "eeaf84e60b14dc9702f8bf9937e1b73119e1a3e32ca0f67826b44fac32ed7d92"
+    },
+    {
+      "key": "corridor_near|0.99|1|high|removed",
+      "name": "corridor_near_removed_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "f8e84d417dbc80f4cacb2137207510945ad14d5ecbd9d64e28615d1cba73b523"
+    },
+    {
+      "key": "room_far|0.3|0|uniform|moved",
+      "name": "room_far_moved_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "6669ce3224bbec60602c77c55c35a91a60a81f1ec53aaff4f7ad21745b20c502"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|low|present",
+      "name": "corridor_near_present_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "ce097addfb3707a91e8cc6c5b277b4e6d367fad72ac4facf27bcf3de27aa6447"
+    },
+    {
+      "key": "room_far|0.7|0.5|uniform|removed",
+      "name": "room_far_removed_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "93cbab4e0913354ce2e30e6359f534833deedb8154efa40de1dfa9c40877b766"
+    },
+    {
+      "key": "corridor_near|0.7|0|low|removed",
+      "name": "corridor_near_removed_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "c22bbdecf866e04513d256a51033dcf053b762f35961b2815dd99102029a2b7a"
+    },
+    {
+      "key": "corridor_near|0.3|0|uniform|moved",
+      "name": "corridor_near_moved_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "8923412c10b86051943f9850acd076be92f3ad836d96fc226b977a78a42a6aff"
+    },
+    {
+      "key": "single6|0.7|1|high|moved",
+      "name": "single6_moved_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "7b3254b01831ac48608add00ec221b7ccc7af25e7318d761bab4246de5dd7102"
+    },
+    {
+      "key": "single6|0.99|0.5|uniform|moved",
+      "name": "single6_moved_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "35e53f7c68852cc5268f69f7ee30855854a43e50ef998a01e9ea596ef4485b43"
+    },
+    {
+      "key": "corridor_near|0.3|1|high|removed",
+      "name": "corridor_near_removed_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "3b47bf4e3a18e6093cee737441550587378b504e19a22b0419b96c774fb4f90b"
+    },
+    {
+      "key": "room_far|0.99|1|uniform|removed",
+      "name": "room_far_removed_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "19bbedf6851e129cedaa1d292533b15be462f2b1e5cbbcc9c72ff1e889e9ed2e"
+    },
+    {
+      "key": "room_far|0.05|0.5|uniform|removed",
+      "name": "room_far_removed_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "f8d8da4bc5971128667cd43fe3ff6681574469ec908e0afc19d227c3080593d4"
+    },
+    {
+      "key": "single6|0.05|0.5|uniform|present",
+      "name": "single6_present_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "31d8116de5cd80ee6580152f6a0fec8635611276ac482ea785ba8e7e8c62fa4a"
+    },
+    {
+      "key": "single6|0.05|0|low|present",
+      "name": "single6_present_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "1d0a028420be0c04416363e237f2268e8627d4602028981e89e67bc6089a0942"
+    },
+    {
+      "key": "single6|0.99|1|low|present",
+      "name": "single6_present_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "bd55ea9dd969fb2c173ad5e62daf53a3fa56a8438d1751d5f95a6bb8603b2bbc"
+    },
+    {
+      "key": "room_far|0.99|1|high|moved",
+      "name": "room_far_moved_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "7c0607b8f28cf4a8eeba3590121a34b78e9e1dff9bf8c4d33f3244c61f093782"
+    },
+    {
+      "key": "single6|0.7|0.5|low|present",
+      "name": "single6_present_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "28656134209498115d39dcbe300cd56f6e1a9f59dae3c6989a066f4685bfe4d1"
+    },
+    {
+      "key": "corridor_near|0.7|1|high|present",
+      "name": "corridor_near_present_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "39d62d066aea2e8f4db591e3db612cac2827c29a635a577562047a1489fdac85"
+    },
+    {
+      "key": "room_far|0.05|0|uniform|removed",
+      "name": "room_far_removed_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "bf25cf5cba2b9d09ee7346fa6eb800549a2f1aab100bfea9e97ad5a2a6586f7e"
+    },
+    {
+      "key": "room_far|0.99|0|high|moved",
+      "name": "room_far_moved_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "43d8311857fab1927d7071432735556ca69411c2e5d2186cfc5091d7fc45d892"
+    },
+    {
+      "key": "room_far|0.3|1|high|moved",
+      "name": "room_far_moved_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "20124e40911b8db63141cc00feca5467cbce4180bfa478fe991ed44c6d01d233"
+    },
+    {
+      "key": "room_far|0.3|0.5|low|moved",
+      "name": "room_far_moved_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "c5fe8a2149d1662a93a23e98f574aafee9fcdba322b0daecd3a38dc429816e1a"
+    },
+    {
+      "key": "corridor_near|0.99|0|low|moved",
+      "name": "corridor_near_moved_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "37033bb88fca64fd4ce092f96ae0b60163a05653b2fe8005bb1afbe00585a939"
+    },
+    {
+      "key": "corridor_near|0.05|0|low|present",
+      "name": "corridor_near_present_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "0fe29fc30b46ab9d1a669cf92f14a96ed5d53802ec78e569e3eff749539fad02"
+    },
+    {
+      "key": "single6|0.99|0.5|low|moved",
+      "name": "single6_moved_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "a9ad4c8903fa4e6d2efb6cc7f94ff1439039c2d09236c36129dbaea36ce4caf6"
+    },
+    {
+      "key": "corridor_near|0.7|0|uniform|moved",
+      "name": "corridor_near_moved_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "ecdd64ffd6e1ddcc01a9d12ef1a7bc9c946162142fd88cc0964f5017c52c2811"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|high|present",
+      "name": "corridor_near_present_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "593947203f05a61fc707ca07c00a115bcafa54e38108e2245d157df5b8c504b8"
+    },
+    {
+      "key": "single6|0.99|0.5|uniform|present",
+      "name": "single6_present_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "4d2877a20cc306cc1b9d3529a7484a9de30b4d86d3eb9793a2e9ca10fca9f625"
+    },
+    {
+      "key": "single6|0.7|0.5|high|present",
+      "name": "single6_present_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "629c322ec51e9f01ad2e2017545bafc7cba215de5994d5f756b718375a9a4b43"
+    },
+    {
+      "key": "single6|0.05|0.5|high|moved",
+      "name": "single6_moved_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "5d0b129faa6c1e266a84285439b0da5a51e949d8eb0e7e4017a44bde3c62d574"
+    },
+    {
+      "key": "single6|0.05|0.5|uniform|removed",
+      "name": "single6_removed_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "6b96ffd603da4c1758b7993895942ce209a0df51bcc0053c821908ee35cb8e1f"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|low|moved",
+      "name": "corridor_near_moved_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "be298128e67319327e37e1cfff62ab7345a4de6642e72423da021fe1e871df37"
+    },
+    {
+      "key": "room_far|0.7|1|high|removed",
+      "name": "room_far_removed_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "1fed8596d47f3ea32e000d17b10355f008cccfaff0bef8f8accf49a34ffb6aae"
+    },
+    {
+      "key": "single6|0.7|0|low|present",
+      "name": "single6_present_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "7655acf0d52b1eb7fe5c108c1e8facff69c8c8c834af24796e17cde74e806d69"
+    },
+    {
+      "key": "corridor_near|0.99|0|high|present",
+      "name": "corridor_near_present_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "05080b06a5642b90da64e77c051faedeb2b445db44e4f83e0c3fc016332b1d61"
+    },
+    {
+      "key": "room_far|0.7|0|uniform|removed",
+      "name": "room_far_removed_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "5ba570ed646d8f8b7434378d5e06805afd57b7ca6ba136b797e9cb12b3652805"
+    },
+    {
+      "key": "room_far|0.3|1|low|present",
+      "name": "room_far_present_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "bd7ef720c894211d32b7be18a1f3152342d9c3aae5b8717fe3b0c5ecf91c4025"
+    },
+    {
+      "key": "corridor_near|0.99|0|low|present",
+      "name": "corridor_near_present_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "9e5268c5565de882389cfae9ad72e60b56aade3aafff5dd12b4a03ae23384ca1"
+    },
+    {
+      "key": "single6|0.3|0|high|moved",
+      "name": "single6_moved_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "7093789b7432128e25087e7e14cc3a2e54157e958968fb0d22a34ade8ccc305d"
+    },
+    {
+      "key": "single6|0.05|0.5|uniform|moved",
+      "name": "single6_moved_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "afddf0aaad24e63f95d37bc9a1474b92cf30e916441e01edf09464ccf467ce1f"
+    },
+    {
+      "key": "single6|0.7|1|high|removed",
+      "name": "single6_removed_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "15f463fcc6787de94d8356d131e66a46fffd73af8c95f286e354ea02064d3a38"
+    },
+    {
+      "key": "single6|0.7|1|uniform|moved",
+      "name": "single6_moved_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "42d800702317e93c16a499837c4183fcfe4fe5b8e9bf8ccaaa0fadebee9a96f5"
+    },
+    {
+      "key": "corridor_near|0.7|1|uniform|removed",
+      "name": "corridor_near_removed_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "18fa6272ec4939c077698c480f19e1d1401700e4ee59885ef3d17d43ec832894"
+    },
+    {
+      "key": "corridor_near|0.05|0|low|removed",
+      "name": "corridor_near_removed_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "7970b34aaca9f13aa1c0963f910b17c5f910f1a4a131b0df213a8a01f9fe9bf4"
+    },
+    {
+      "key": "single6|0.99|0|low|moved",
+      "name": "single6_moved_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "353faff4ce56cbae4c75c2738f1a0a59ad0eff9fa4d10c489c1dce24bccf6c17"
+    },
+    {
+      "key": "room_far|0.05|0.5|low|removed",
+      "name": "room_far_removed_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "fa2810c8306604994e5439917da7786366c652b8a2bc0e4e59182a060f606cbc"
+    },
+    {
+      "key": "single6|0.99|0.5|high|present",
+      "name": "single6_present_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "473d7737b5ed354993fd6df11e6425edf9081d0ac19bb3ff2ba8657ca310154d"
+    },
+    {
+      "key": "single6|0.3|0.5|high|moved",
+      "name": "single6_moved_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "013395e1524e827b46a20933fa5dfba85a0cea454e340fad7a726bcb4e536980"
+    },
+    {
+      "key": "single6|0.05|0|uniform|present",
+      "name": "single6_present_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "6c48114375f63017bc7e1de8dea10877259054a1b35c3afe82777e627a18189b"
+    },
+    {
+      "key": "room_far|0.05|1|high|present",
+      "name": "room_far_present_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "2ef5d74e693d9e475c81b5131a6603649035f59d688a0e42996cd41c8859f79f"
+    },
+    {
+      "key": "corridor_near|0.7|0|uniform|removed",
+      "name": "corridor_near_removed_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "7fcdcb8dbb985a965ead5037b32e5225c7ed0256d9c2de9e1c1c8b62ccdcd205"
+    },
+    {
+      "key": "room_far|0.05|1|uniform|present",
+      "name": "room_far_present_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "58bb66050c8a55748c89596d9b1335f2723ad04711e53af935684e569e15ab11"
+    },
+    {
+      "key": "room_far|0.05|0|uniform|present",
+      "name": "room_far_present_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "cd6ab0362b2c52448968fcdf2ecb4573a57f7b3f3ac56403ab048f5248388a39"
+    },
+    {
+      "key": "single6|0.05|1|low|removed",
+      "name": "single6_removed_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "7a39805e9b39c8bb6b647cf13ac86f47bd244c437582bbcdc7f89e32265388f7"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|low|removed",
+      "name": "corridor_near_removed_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "76b660c687c2b816f1a46c6d0555c24023a6e2de67c36b5228394103c58488b8"
+    },
+    {
+      "key": "single6|0.05|0.5|high|removed",
+      "name": "single6_removed_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "42641b5ddb9a191ce03c867eef12376e8de9b66c5ef0c3ba66a1739396ba5195"
+    },
+    {
+      "key": "corridor_near|0.7|0|high|removed",
+      "name": "corridor_near_removed_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "ea86ad8560735ddc860b2a7d7e36c35dc338bf641203fcfdf3c4328599fbbf43"
+    },
+    {
+      "key": "corridor_near|0.3|0|high|removed",
+      "name": "corridor_near_removed_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "e6b7bba2a37b86a93bf3ee654d362408f7e21f4d0184d9a9a8e5aca6760b5c47"
+    },
+    {
+      "key": "corridor_near|0.7|0|low|present",
+      "name": "corridor_near_present_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "d7353a1f90f98e98a3f81a5cf3059ba969e81b683b2f99996fda7c75edae6be5"
+    },
+    {
+      "key": "single6|0.05|1|high|present",
+      "name": "single6_present_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "1c193327c2b9d167f5878aa7025ce89b7f3c3859152ca83be12acd2af21916dd"
+    },
+    {
+      "key": "room_far|0.7|1|low|removed",
+      "name": "room_far_removed_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "b9d654117e7836685a6d925f41ca6303be56661a1d92c39e3a8c6f0976d8ea50"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|uniform|present",
+      "name": "corridor_near_present_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "bf50b93cf76c1a95200b50d443b25782fe2997f3250341326140fb2fca912427"
+    },
+    {
+      "key": "single6|0.99|0.5|low|removed",
+      "name": "single6_removed_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "08742b847430b38dc66c0e352993f780dca21ea8a0dc1e0caf0cbf810e2476f1"
+    },
+    {
+      "key": "room_far|0.7|1|low|moved",
+      "name": "room_far_moved_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "736ccfb764f9a14e0805b197ae4204f38f41c8e6a9062b7cbc52a0cac2d78cd7"
+    },
+    {
+      "key": "room_far|0.99|0|low|present",
+      "name": "room_far_present_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "f181b7ad95d923c989555a6b2c05d35c28d9214880ed3d12c26fe33f6631321f"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|high|removed",
+      "name": "corridor_near_removed_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "cfafcd7a91de1cc999d46aa0d56c2c4383c17dd78f2b70f1cf0ff122e34d497f"
+    },
+    {
+      "key": "single6|0.7|1|uniform|removed",
+      "name": "single6_removed_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "fed8ffd42e4825c22ffb5439f79c00cb95d9900de62ecaf32d06683e7da137fa"
+    },
+    {
+      "key": "single6|0.3|0|low|moved",
+      "name": "single6_moved_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "a6487713e5471662009d81ff41b93729b768a2d099defdfbed483f23f4a60dd6"
+    },
+    {
+      "key": "corridor_near|0.05|0|uniform|present",
+      "name": "corridor_near_present_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "159d8ceec5982255350e4b77e74f5789bf364b145fb51bcfb5aebe876558e01a"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|high|removed",
+      "name": "corridor_near_removed_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "fc4dc648ec1ed2cc28acac00cc02145b2dd0fa8076e1405154cff66c5db9b3c1"
+    },
+    {
+      "key": "corridor_near|0.3|1|high|moved",
+      "name": "corridor_near_moved_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "e217bf5ca0078b3d9005a23cac497ec2771fa5554a36103ff718848390cc1090"
+    },
+    {
+      "key": "single6|0.99|1|uniform|present",
+      "name": "single6_present_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "0a5fc8302de14fd91b4ca9fa7f5194e72fa82f9775f0bd629f333c3855489ccd"
+    },
+    {
+      "key": "corridor_near|0.05|0|high|moved",
+      "name": "corridor_near_moved_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "352765c49850742feadaf8541e0c35d60b09c2bab983dd5be58a60ab7b6d0d58"
+    },
+    {
+      "key": "room_far|0.7|0.5|uniform|moved",
+      "name": "room_far_moved_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "39a018dc6d857abb4a923e4b54ee90b66be543d7f94e7b6c9b3f8ca913fd3129"
+    },
+    {
+      "key": "corridor_near|0.99|1|low|removed",
+      "name": "corridor_near_removed_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "2fa8df5897da1a94baceae08659795821f8602a0aa45b85a8243cebd0f12ac70"
+    },
+    {
+      "key": "room_far|0.7|1|uniform|present",
+      "name": "room_far_present_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "eb4552032ffc97ca9fa26513ed9bc4cb167fe887f048f5754403ba81ed878610"
+    },
+    {
+      "key": "single6|0.05|0|uniform|removed",
+      "name": "single6_removed_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "1ad672a9b27c1b253fb3264cb61b8a99a851ad779f7c6c41f302635b5755678a"
+    },
+    {
+      "key": "corridor_near|0.7|0|uniform|present",
+      "name": "corridor_near_present_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "0bee8800401ab4405ea24942168789724f101e96dc164ace3f86eac4afe307f5"
+    },
+    {
+      "key": "room_far|0.7|0.5|low|present",
+      "name": "room_far_present_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "f524440769bf84c0a83dbe291bae1edc29d0298f2bae4eacacb203ecc5627bab"
+    },
+    {
+      "key": "room_far|0.05|1|low|moved",
+      "name": "room_far_moved_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "763d70c296d0725e9a9091fbca714dfe56a1c27a8c47a7363d2faba0ced2c99b"
+    },
+    {
+      "key": "single6|0.7|0|uniform|moved",
+      "name": "single6_moved_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "f12e9709310a1856c198cf3fb7d8fd6639ecee9a9d4509f787c12b3a9e6c3c20"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|low|present",
+      "name": "corridor_near_present_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "5c7a72e6107f0388b08790bfd544d6ee5dae4df6dd8adf3e4d18b0cc63822c6b"
+    },
+    {
+      "key": "single6|0.7|1|high|present",
+      "name": "single6_present_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "0f2ee699f521bc2f668005af1505ecf635a00b794b54e44625d775afd4594a6c"
+    },
+    {
+      "key": "single6|0.05|1|low|present",
+      "name": "single6_present_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "ff40207b56f441847255acdcd77140e7223edd7ba0060642003d45597812e86a"
+    },
+    {
+      "key": "single6|0.7|0|low|removed",
+      "name": "single6_removed_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "ffcd39ea5d4dcc9e6b5d3c7f9816faddd24320fe59d529f93c50a304e0c5bb3a"
+    },
+    {
+      "key": "room_far|0.99|1|low|removed",
+      "name": "room_far_removed_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "ae5a4abb8829aa443561fd7a89d4c719d49315a408da990f810bed3e1ad5bf4b"
+    },
+    {
+      "key": "corridor_near|0.3|1|uniform|removed",
+      "name": "corridor_near_removed_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "b43c3adfd90c5d55d7fdcbb4ac7acab17ebbfeb5dc8b77e10c8d2bcda8e5d230"
+    },
+    {
+      "key": "room_far|0.3|1|uniform|removed",
+      "name": "room_far_removed_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "8d28168f9b712f94a52e7fd3705d171b935585982e4c53852d169156db8581ee"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|low|moved",
+      "name": "corridor_near_moved_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "8536b9ad0198ca8cf1fb21d65f2ee2d97988e10224d3a940b4f024685605ed55"
+    },
+    {
+      "key": "corridor_near|0.3|0|low|moved",
+      "name": "corridor_near_moved_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "05a54f9b5d419e73c33b1e6c6cb2ca202824539924dfe898ca262e9f942c8f87"
+    },
+    {
+      "key": "single6|0.7|0.5|uniform|moved",
+      "name": "single6_moved_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "70c93b1bc55f0d012718d5e0270977ec1c9d2f926d9bd7c4531fb3c8ba18701e"
+    },
+    {
+      "key": "single6|0.05|1|uniform|moved",
+      "name": "single6_moved_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "dc9b6089cadc7ab5fb3a7ea9cb686259e77a5c007d560665702826786a4d4549"
+    },
+    {
+      "key": "single6|0.3|0.5|low|moved",
+      "name": "single6_moved_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "b7dbe2b60019b6f34558b09fc4c4abf02cecfecc32214745a7129601ea1e7ec4"
+    },
+    {
+      "key": "corridor_near|0.05|1|high|moved",
+      "name": "corridor_near_moved_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "fa82e16fbb91401c218c63c65e0316e5bca5df1a831988853cb5379d1a44540c"
+    },
+    {
+      "key": "corridor_near|0.3|0|high|moved",
+      "name": "corridor_near_moved_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "f6c888e398d92eac0ce5b149db29c0064e739f240ea2d0f7d0f5ab28852cdc9a"
+    },
+    {
+      "key": "room_far|0.3|1|low|moved",
+      "name": "room_far_moved_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "5363c9e4a8f6cc26ea0ee9191671b462734f3ac279b97c064452faaa5378d56b"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|uniform|moved",
+      "name": "corridor_near_moved_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "150bb52e8281ec64d5581ec69a158c96a33406dbf2c0a55165bf0b8872e84302"
+    },
+    {
+      "key": "room_far|0.99|1|low|present",
+      "name": "room_far_present_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "4dd2bbeb01fb10056d268c61d36c8416dc792243b18c041f9609b62d81d173d7"
+    },
+    {
+      "key": "room_far|0.99|1|low|moved",
+      "name": "room_far_moved_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "2bc3e0742e9a3e614cc4360474fc0d56aceb36e472b99e10dd9a3d65a79b4726"
+    },
+    {
+      "key": "room_far|0.3|1|uniform|moved",
+      "name": "room_far_moved_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "ae4defa050557b16e6818d14efc465c35eeb6789060fbc12452a203b274e0c5e"
+    },
+    {
+      "key": "room_far|0.3|0|high|moved",
+      "name": "room_far_moved_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "426ad172d0b1ba29ccead8ce79bd8431bd24a25ff464d8b88b529d4eac91f142"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|uniform|removed",
+      "name": "corridor_near_removed_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "bd6e418365a9579e9cb08a76b790ff0da902eaa37c725163a8e88385e03a2cb4"
+    },
+    {
+      "key": "single6|0.05|0|high|removed",
+      "name": "single6_removed_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "f0b8b6f7b23fa1e0607a03441b142e932692f5a84575343604fb0ccc91d50928"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|low|removed",
+      "name": "corridor_near_removed_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "e3246859a7878c653e4339d3037e08b7b77f35f5e1e1d671f0ef1cd872e5e659"
+    },
+    {
+      "key": "room_far|0.3|0|uniform|removed",
+      "name": "room_far_removed_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "39b6a527bfd25d268b66e57bcfe29ff592469e1dae8ac33960fa04ed68a09571"
+    },
+    {
+      "key": "corridor_near|0.99|1|uniform|removed",
+      "name": "corridor_near_removed_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "6f8c8c017ad66b92e53fbc65876353bb37a3f728e857e87f79b0e9ea0f3d6044"
+    },
+    {
+      "key": "single6|0.3|0|low|present",
+      "name": "single6_present_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "7e5ef2956ec9db29bbb605bfdc16ab1389a9e789bfd9ca70fc1d8f3bd37ddb42"
+    },
+    {
+      "key": "single6|0.99|0.5|high|removed",
+      "name": "single6_removed_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "8ac39517360fe2ecac78e0cfcf22e08d1b7c5840322cc300480e7400c2e21396"
+    },
+    {
+      "key": "room_far|0.3|1|uniform|present",
+      "name": "room_far_present_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "7b9a8513466a231c79f8dbbafc6577358a8a0d587bed096358b05259eabd8482"
+    },
+    {
+      "key": "room_far|0.99|0|uniform|removed",
+      "name": "room_far_removed_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "2ff48d6e7982b701eca9ad747908c237b3c2cf71970b379582741d7fad3fc488"
+    },
+    {
+      "key": "room_far|0.99|0.5|uniform|removed",
+      "name": "room_far_removed_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "4820aea55df94b9233e288121861e2305849dd879e38b96b74ef611280349945"
+    },
+    {
+      "key": "single6|0.3|1|uniform|moved",
+      "name": "single6_moved_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "4d29d04edb59ad3b4c12b5b0711dac6688c0a864bfe25588d5c040516732bc40"
+    },
+    {
+      "key": "single6|0.3|0.5|high|present",
+      "name": "single6_present_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "7dbae11f27242be477dd43acd09a109580246096e9e5fc1f7f21de515fa98e8e"
+    },
+    {
+      "key": "room_far|0.05|0|low|moved",
+      "name": "room_far_moved_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "9341750579142f25ca83d7dc3d9db7f627320b2461436df4437f5a3237464bc3"
+    },
+    {
+      "key": "corridor_near|0.99|1|uniform|moved",
+      "name": "corridor_near_moved_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "be81b8b9dca558ad688d389d75fa9a1fe4147e449866e65370444ff7b0fa3088"
+    },
+    {
+      "key": "room_far|0.99|1|high|present",
+      "name": "room_far_present_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "b798f32252e9c299b00315c9ba489abe25c0bbeeb8f8eec9b3e8d03ca8213191"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|low|moved",
+      "name": "corridor_near_moved_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "b4dfab9b55d6b4f095b897dedefe65eb253d369faaba57b28f2e4130668cffbe"
+    },
+    {
+      "key": "room_far|0.05|1|uniform|moved",
+      "name": "room_far_moved_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "d65a879b6f871c726f0cdefe0566e5417d0685ba5f6a1260c5e6d6853d3ea361"
+    },
+    {
+      "key": "corridor_near|0.3|1|low|removed",
+      "name": "corridor_near_removed_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "5d01b0be8c07af5b2c58128e1c6c3c50b380899f7c544b899380432d9373143a"
+    },
+    {
+      "key": "room_far|0.99|0|low|removed",
+      "name": "room_far_removed_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "189c6301fd262e5ad8eeec97afa60928e6ba983b9df363bb00f813ccf81b2ec2"
+    },
+    {
+      "key": "room_far|0.99|0.5|high|moved",
+      "name": "room_far_moved_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "d71e01b426ae1beb14a1cfd7d037f6f97ef834c305eb16cf59f93a400f576090"
+    },
+    {
+      "key": "single6|0.3|1|high|removed",
+      "name": "single6_removed_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "90feb2634a6af285dabd85dd235063633065562f85e656ce6564827bd136ab74"
+    },
+    {
+      "key": "single6|0.99|1|low|removed",
+      "name": "single6_removed_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "a3d5fccba90ced4a7a8e797607a36c16672353ecda34aa462ac523056d321c40"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|uniform|moved",
+      "name": "corridor_near_moved_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "cc4285d93b11bc454fbee93b98ec70c2e6967eeec84a94e836fd4462b0a74db6"
+    },
+    {
+      "key": "room_far|0.7|0|low|moved",
+      "name": "room_far_moved_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "c23f85be5438653062bf02b578238bb95a4f04c09b4ac9f9317233f78b06e444"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|high|present",
+      "name": "corridor_near_present_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "59958289963c9723cfbcbb9285b04b8647f66c8d905a8c636033009987bd9ebf"
+    },
+    {
+      "key": "room_far|0.99|0|high|present",
+      "name": "room_far_present_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "bd9e1a033a1fda0f432b1ffce2d47ba4c43130b4cd0f5dca3fdca44fc7aa81dc"
+    },
+    {
+      "key": "single6|0.7|0.5|low|removed",
+      "name": "single6_removed_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "c4327fd81f7a7c0af8918daf615eeda447e7bb7dd0d20990242dd45d6e7a30ae"
+    },
+    {
+      "key": "room_far|0.7|0|low|present",
+      "name": "room_far_present_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "d320411db0de63cf77ff987b75b2136602259fb542d50b34dabb8fb5cd269747"
+    },
+    {
+      "key": "corridor_near|0.99|1|high|moved",
+      "name": "corridor_near_moved_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "632c90a3743ca039f6af923e71f92ae7c63e13ed9427fbf7df6ca888cd8ccdd3"
+    },
+    {
+      "key": "room_far|0.3|0|uniform|present",
+      "name": "room_far_present_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "5a7fa112df75b5b33a8cc5180fd05f56333bafa5dcef9a8a0815344d3a41a207"
+    },
+    {
+      "key": "single6|0.05|0|uniform|moved",
+      "name": "single6_moved_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "9acd056593f8650adacbcec2aeeea1afd2b0f96dca4c78fd6015391b7c6ca149"
+    },
+    {
+      "key": "room_far|0.7|0|uniform|present",
+      "name": "room_far_present_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "a5351a7549ee7f8d6cc60d6f41a28f917dc9918ed27578d9b3c219a9a9fb2363"
+    },
+    {
+      "key": "single6|0.99|0|uniform|moved",
+      "name": "single6_moved_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "465951320b8344918dfe5331f6582b628f22fd9a865bb428e6cedee1dfc0fcfb"
+    },
+    {
+      "key": "corridor_near|0.7|1|high|moved",
+      "name": "corridor_near_moved_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "a9a6d2bb857489d7da40a1a03ee6325a7f1ce64ffcaf85816069c347c5f1ae7f"
+    },
+    {
+      "key": "room_far|0.05|1|low|present",
+      "name": "room_far_present_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "a23ba774c8cb1c86d313c44ffbb0e8dfb47189a31d90ac3b93b27316cfb63629"
+    },
+    {
+      "key": "corridor_near|0.3|0|high|present",
+      "name": "corridor_near_present_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "00059de1187108c854a1df62334b0a38494516fcf8641595e812f99dd89241e4"
+    },
+    {
+      "key": "room_far|0.05|0|high|present",
+      "name": "room_far_present_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "74e337117d2b3fe5d2103c419cf9b29dc8defa78d1f194a4d389d5e367230ad3"
+    },
+    {
+      "key": "room_far|0.7|0|high|present",
+      "name": "room_far_present_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "a512d016797f66cd4a093bf38be8f5b12526cd682087000128f89b90e593f6e6"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|uniform|moved",
+      "name": "corridor_near_moved_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "5c9325a456769ba8628e40c5e93ef4bdb473ca30353a605e4ed39869b635d1f6"
+    },
+    {
+      "key": "corridor_near|0.05|1|low|present",
+      "name": "corridor_near_present_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "df8cb898af65875ef4677352920c85abc579e812ec6147a97098a1945216fbb7"
+    },
+    {
+      "key": "room_far|0.3|0|low|moved",
+      "name": "room_far_moved_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "53732dfe6249d4b2a3de05c0cac01d88f148317893307fd32417cd578a6db685"
+    },
+    {
+      "key": "room_far|0.99|0|uniform|moved",
+      "name": "room_far_moved_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "3f9b5ae53ec9b5b7f9ade7f3f22c03eb734b6fa9bbd0e824857cb59e49c3c1ca"
+    },
+    {
+      "key": "single6|0.7|1|low|present",
+      "name": "single6_present_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "8f50974a44608f9363e7f315ac694632451e809523e859b25c3a28a0a7fe56a8"
+    },
+    {
+      "key": "corridor_near|0.05|1|uniform|moved",
+      "name": "corridor_near_moved_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "1c91b2acdff04136afcfd3419e8f1b55565c7235577742cd23c078052d7c0750"
+    },
+    {
+      "key": "room_far|0.3|0|low|removed",
+      "name": "room_far_removed_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "be5179d9bfb8941648d0cc79183c496bc3b18889795f77433b73011ce2113e93"
+    },
+    {
+      "key": "corridor_near|0.05|1|high|removed",
+      "name": "corridor_near_removed_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "ce66e54954f76017ae872bc353b26120eaf16c2cfb04cdff1ef2b264dd976ff6"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|uniform|present",
+      "name": "corridor_near_present_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "47e0b25e36aa49f5f903f58aa03fa22b2045e79a84981e9333139ab966f2de99"
+    },
+    {
+      "key": "corridor_near|0.99|1|uniform|present",
+      "name": "corridor_near_present_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "4ab18651a23a97ca14a5d5c21d364ab7b1209e3ad1ad9c7991452401b2e2bae3"
+    },
+    {
+      "key": "corridor_near|0.99|1|high|present",
+      "name": "corridor_near_present_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "c47d6df1b8587f23573c59ab22934c479ed1dfc0a260d8f3fc3e0bb3c2573411"
+    },
+    {
+      "key": "single6|0.05|1|uniform|removed",
+      "name": "single6_removed_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "7f27e44d424dc472060e04af2dbe068fa1fb775efc0ccba66752dfd786ca732b"
+    },
+    {
+      "key": "room_far|0.7|0|high|moved",
+      "name": "room_far_moved_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "1aa0677a32a0aea9f9f3ca721be8278ac00f4ad8ce8332125955b87d74e03fc6"
+    },
+    {
+      "key": "room_far|0.99|0|high|removed",
+      "name": "room_far_removed_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "bb61554ebb756f11a8a6915afa49621234ce8a3a5c07fe1e4a87e4f77026cd43"
+    },
+    {
+      "key": "single6|0.05|0.5|low|moved",
+      "name": "single6_moved_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "ced4e9ddda7517aba59605b892956fa0441551b33b475effc6e787d20560d6fc"
+    },
+    {
+      "key": "corridor_near|0.05|1|uniform|present",
+      "name": "corridor_near_present_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "1f5537e87f08620cd711fb38e38a7e36336db335f52caa803cf69737220cd867"
+    },
+    {
+      "key": "single6|0.7|0.5|uniform|present",
+      "name": "single6_present_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "77c79096180cfa78556a55750d5b20e6126bae176bdceebada7dc4f724716731"
+    },
+    {
+      "key": "room_far|0.05|0.5|high|moved",
+      "name": "room_far_moved_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "27a1cb78d8ad78bb6453ba7f1bd2ff55ae58d17e84b4fc5b81cd20a9d84548ad"
+    },
+    {
+      "key": "single6|0.3|0|high|present",
+      "name": "single6_present_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "670828dc4e9d82fceadf17c4c73b6f6e927af4a336498bf354597a1c7766b102"
+    },
+    {
+      "key": "corridor_near|0.99|0|uniform|present",
+      "name": "corridor_near_present_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "cfe1444c5285747d689375ba75a43c3c0ee7d2abf88b325438ac1066fb855cbb"
+    },
+    {
+      "key": "corridor_near|0.3|0|uniform|present",
+      "name": "corridor_near_present_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "054661dc24c4817f714dfd14f011ec3472232517065e58250f5b27932b7a1904"
+    },
+    {
+      "key": "corridor_near|0.99|0|high|moved",
+      "name": "corridor_near_moved_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "f9a04cabf005e0e530d9f9440d40de4c103144cce5bfc7be5055765be98e03c8"
+    },
+    {
+      "key": "single6|0.3|1|high|moved",
+      "name": "single6_moved_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "979be2b09af151ec2cdd4beecb2044cb93138af4b506403099a087a210672035"
+    },
+    {
+      "key": "single6|0.05|1|uniform|present",
+      "name": "single6_present_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "be080821a8afd79c8ddc3b8430c9fcc48b505ac962150ffaa2b34d2be4de6e6d"
+    },
+    {
+      "key": "single6|0.99|1|high|moved",
+      "name": "single6_moved_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "01c2a0f98ff265ed17d2ac12682d2b5a313d50cfec7032790b56f953a8ff2102"
+    },
+    {
+      "key": "single6|0.3|0.5|uniform|moved",
+      "name": "single6_moved_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "aa2c912a1a6ea036195ea0ac78fd78ee57753688e1f13e2cdd76ac617656e8c8"
+    },
+    {
+      "key": "single6|0.3|1|uniform|present",
+      "name": "single6_present_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "74ead327608f8468ed70d3e18d72a6e24bbda27dcb1d457c7203c4bca22c37dd"
+    },
+    {
+      "key": "corridor_near|0.3|0|uniform|removed",
+      "name": "corridor_near_removed_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "d0f212f7d5e668e11be27b6ebf0a7cce658c43c5f4cf98d857629314ef1c20e6"
+    },
+    {
+      "key": "single6|0.05|1|low|moved",
+      "name": "single6_moved_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "a8e1ec26b9f3d3b8093d443fa11c65a3eb90f9bf76c78ba3c92f95050fda0a6f"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|high|present",
+      "name": "corridor_near_present_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "bb722586299ea72554cf1ba78cd978fa520627fe07dd8fee35e5751ffcc73f82"
+    },
+    {
+      "key": "room_far|0.99|0|low|moved",
+      "name": "room_far_moved_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "9591714422ca19d452a1126c85714f688b18908e9eec6d22517eb93aafcfa091"
+    },
+    {
+      "key": "room_far|0.99|0.5|low|moved",
+      "name": "room_far_moved_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "4816858c867fe27fe06a1fd48fbe69ecac5bfa3823e4af2dd534ca3f8c3dfa61"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|high|moved",
+      "name": "corridor_near_moved_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "75e1f15b65553a6c54c13f99efd561594e26f1ad77e08e2793a59c09be3e3000"
+    },
+    {
+      "key": "room_far|0.99|1|high|removed",
+      "name": "room_far_removed_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "1269b6258976436dce863f628850f9cf4490a21ef9d6e860e88fec1732996a4c"
+    },
+    {
+      "key": "single6|0.3|0|uniform|moved",
+      "name": "single6_moved_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "d0de24eafc1b5915d59c8051cea2c7bdeee7bbecb14abcb39fff65cd97a24ca0"
+    },
+    {
+      "key": "room_far|0.99|1|uniform|moved",
+      "name": "room_far_moved_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "4a82166cbc92e5c318fd199e58016fd0629553e919219e009e448dbf8de1edba"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|high|present",
+      "name": "corridor_near_present_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "619587de526d20785e61536d860767619cf84d54883a7201c0ed4377bf24d026"
+    },
+    {
+      "key": "corridor_near|0.7|0|high|present",
+      "name": "corridor_near_present_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "13c77a414d330de4695a94342e5de23cb8a7e49b582a1ad530a1a9b7079430a0"
+    },
+    {
+      "key": "single6|0.05|1|high|removed",
+      "name": "single6_removed_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "bddb9b0838ba575f4c3cb055ebeab364009a4f7dccbe308ff16b7fa22f19aa2a"
+    },
+    {
+      "key": "single6|0.7|1|low|removed",
+      "name": "single6_removed_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "502205c6368fea265eb91451cfafb4ee288b3b59199a3d37114a90169654d8bc"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|high|removed",
+      "name": "corridor_near_removed_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "148d3f4041f85352bb38474b6cb615ea726115dee33cfad6cf637f41b026fe8c"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|uniform|present",
+      "name": "corridor_near_present_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "7f50ee4437e06222195eb479bfa59574dac0892116287038cd9b4673e64537fc"
+    },
+    {
+      "key": "corridor_near|0.99|1|low|present",
+      "name": "corridor_near_present_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "55280c1adcdfff4baeec1d922920399cee10980cbd709c8ee419e64864ff6236"
+    },
+    {
+      "key": "corridor_near|0.3|0|low|present",
+      "name": "corridor_near_present_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "3f90b0c5f81e6dc988f258943a5b1c651126868f5af30d5a7ea2d60fcee8558c"
+    },
+    {
+      "key": "room_far|0.05|1|high|removed",
+      "name": "room_far_removed_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "12e71088cf3b94bb3d598a5989b84a48fb1daa33d8099a154f90aa443c2fea30"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|uniform|present",
+      "name": "corridor_near_present_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "85e86e9c18059a008920cba18f6097218f2865edd26f7118b69e404e0a7ae5ad"
+    },
+    {
+      "key": "single6|0.7|1|low|moved",
+      "name": "single6_moved_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "399efa587ddff0e8687ce3c44a4d7c98dadbed7d3ab5c50de4f7e9b6917f4f35"
+    },
+    {
+      "key": "room_far|0.05|0.5|uniform|moved",
+      "name": "room_far_moved_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "631bd8ecd2fe0cda895f3500bba80b47cd39e185749fa382ec6316717cae7420"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|low|removed",
+      "name": "corridor_near_removed_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "7c759809b0a7d983c9b89985844cf5621a8cb3cabfb28c66110bfc7cfba21d28"
+    },
+    {
+      "key": "single6|0.7|0.5|high|moved",
+      "name": "single6_moved_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "ff29b409a872d78597f39fd606d50d5c853627c93fea9873936870259d637d49"
+    },
+    {
+      "key": "room_far|0.7|0|uniform|moved",
+      "name": "room_far_moved_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "13e515b10159cdb57f26148d6fde947938524459799865b325734fcdbf6161c4"
+    },
+    {
+      "key": "room_far|0.05|0|high|moved",
+      "name": "room_far_moved_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "c8d4f5cc4a2ada4cbc8c1783975d22a2c7610e98acfdedb8867543740e05a98a"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|low|removed",
+      "name": "corridor_near_removed_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "106deeb469d2f8ac848fddf8169d374753f2ecda5a091a5c5139a0f211d4788c"
+    },
+    {
+      "key": "room_far|0.7|0.5|uniform|present",
+      "name": "room_far_present_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "2a0df1fd37e8b0e0f4c576d289819640379905899cc75b6c5daf37be025a597a"
+    },
+    {
+      "key": "room_far|0.05|1|uniform|removed",
+      "name": "room_far_removed_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "4f9f211ab39927303e5a7bf594039ff6396844e1ae9a0702086e1d2de15612ad"
+    },
+    {
+      "key": "room_far|0.3|0.5|uniform|moved",
+      "name": "room_far_moved_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "283fab147b23a61bfb0678c72f0b4b820f859ff182622ee83a361653a3215473"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|uniform|moved",
+      "name": "corridor_near_moved_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "81e591a55f38ac9395388047b16ec66dc2cfd895c60f74ad0c4d29f1a644263c"
+    },
+    {
+      "key": "room_far|0.7|1|high|present",
+      "name": "room_far_present_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "79802a27be060e2628c01371a5f4c10964a17fde8816eb934f853d6c0a5585dd"
+    },
+    {
+      "key": "room_far|0.7|1|high|moved",
+      "name": "room_far_moved_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "301e54bf2960a3f5bf9eee31e2f345c018ecbdb199b2e503dc347f74badd948d"
+    },
+    {
+      "key": "corridor_near|0.7|0|high|moved",
+      "name": "corridor_near_moved_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "9970258ffed70a1acd9ed472583db25187b1f10e77921c5fc95ae4361ae972e9"
+    },
+    {
+      "key": "single6|0.3|0.5|low|removed",
+      "name": "single6_removed_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "1c5f7fbb21d5f73b9791411bc188861a41514076c14c3fa759f2b7da00289883"
+    },
+    {
+      "key": "single6|0.99|0|high|present",
+      "name": "single6_present_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "974bee533482fb23fd5a4841e342c2fbcd6eb411a455190281783883dcfbfd3b"
+    },
+    {
+      "key": "room_far|0.3|0|high|present",
+      "name": "room_far_present_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "d0ae694252ea572fb0ce91ea79c8f5378e4c13c10f2932df3a71de7fde811422"
+    },
+    {
+      "key": "single6|0.7|0|uniform|present",
+      "name": "single6_present_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "c5be53a9e0a71f5282aaf932494eb3289ffed3f420b8e9b24507b4909d51f4bf"
+    },
+    {
+      "key": "corridor_near|0.3|1|uniform|present",
+      "name": "corridor_near_present_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "1ce26adfecc7be94a2ac77d29fb4a11858b35ec109d7c59f60cb1d6d7b460af9"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|uniform|removed",
+      "name": "corridor_near_removed_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "f80da1977106a43ba9d0add36964c42f13410b27d5be49e72fd5ca9fd2db0025"
+    },
+    {
+      "key": "single6|0.99|0|low|present",
+      "name": "single6_present_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "36fef48d2e35e20eb1b550612a25aa36c25bee92cdb958503c61d81ed30ddf8e"
+    },
+    {
+      "key": "single6|0.99|0.5|low|present",
+      "name": "single6_present_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "ac30f8eab5d2bde545e069dc1f09263722d41cd22f06669741857b370504a345"
+    },
+    {
+      "key": "single6|0.99|1|high|present",
+      "name": "single6_present_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "5f7bbec1ed6a09d5549fab0dddf003bd3c6ea27338d0573699a2c3c3293cf34d"
+    },
+    {
+      "key": "room_far|0.99|0.5|uniform|moved",
+      "name": "room_far_moved_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "42589b9c83494df440973a0bd19985281cc44e3c2ea9e2114337c2b1542bc006"
+    },
+    {
+      "key": "room_far|0.3|1|low|removed",
+      "name": "room_far_removed_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "3e489c071762fcd23d9f48bc238b2368a8c2d3ac19c9737ef0fe99fd3571b492"
+    },
+    {
+      "key": "corridor_near|0.3|1|low|present",
+      "name": "corridor_near_present_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "9cc8e102ebaea778aeaa99908dfc3135207f9a5bb0ae188bf9456cfa684d3774"
+    },
+    {
+      "key": "room_far|0.7|0.5|high|removed",
+      "name": "room_far_removed_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "575c3079201d605fdba3b49acfe45f7dc450dc06a7f6f31587fc6ac7d7502302"
+    },
+    {
+      "key": "corridor_near|0.3|0|low|removed",
+      "name": "corridor_near_removed_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "a43df7a17f70e403b1994639f3fc1aadc306ac49fe52cf1de06e570bc8e973c2"
+    },
+    {
+      "key": "single6|0.99|0|high|moved",
+      "name": "single6_moved_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "083f1adb42798efe20a87c6660a4ceaa14716f47226e07cbd3a80cc60d93d022"
+    },
+    {
+      "key": "room_far|0.99|1|uniform|present",
+      "name": "room_far_present_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "a5625eaee6e916d57d1b65ca3754fde0f0f7ee5bc0ccf846afa52565920715dc"
+    },
+    {
+      "key": "single6|0.3|1|low|removed",
+      "name": "single6_removed_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "357f4cbde9dffea7d61d44912150c58357fcc23aa472e030f8983da66e070a3d"
+    },
+    {
+      "key": "single6|0.05|0|high|moved",
+      "name": "single6_moved_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "4f76429dacf700c4970708febd65c1392de2245158d39321da0a7afbf3b615dd"
+    },
+    {
+      "key": "corridor_near|0.05|1|low|moved",
+      "name": "corridor_near_moved_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "1cd2ca21229de9503549e89418ab1fb97e5b83767bdf0b20d427a551cff621bd"
+    },
+    {
+      "key": "room_far|0.3|1|high|present",
+      "name": "room_far_present_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "573f8ef6ca0df614d0fc49c950a811d44f061e07267f72e3ef997ec5282f54e9"
+    },
+    {
+      "key": "room_far|0.05|1|low|removed",
+      "name": "room_far_removed_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "4b60777fef3a1c4b49be9223ece8547ff0382e890e6aca00bd8b12f18791f646"
+    },
+    {
+      "key": "room_far|0.05|0|low|removed",
+      "name": "room_far_removed_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "159c64a970d0a191389cdccaa814a3c01b3356227e1116bb33a1ff56061c3218"
+    },
+    {
+      "key": "single6|0.99|0|uniform|present",
+      "name": "single6_present_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "66b07cdec18da9c73c69c36998b7607e87d8b5ec4ff8ac394c0473f0e2de471a"
+    },
+    {
+      "key": "room_far|0.7|0.5|high|moved",
+      "name": "room_far_moved_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "5e529c42ef2b70d55a0279089e20bdeeb93f20e9a38bf6703ea71c86b38b9028"
+    },
+    {
+      "key": "single6|0.05|0|low|removed",
+      "name": "single6_removed_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "23dc06a6aa27e7fbba2a244f99e30714f1272dbc53d76f59c5f5373c42f33939"
+    },
+    {
+      "key": "room_far|0.7|0.5|low|moved",
+      "name": "room_far_moved_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "9f1d47be09a1475dd4907ad969a30b6d71b1efa76ac1272c4aa870592f6d41ab"
+    },
+    {
+      "key": "room_far|0.7|0|high|removed",
+      "name": "room_far_removed_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "6a422768b4dd006fec4600ade77c986497f003727096a382522a14ebe45913fb"
+    },
+    {
+      "key": "single6|0.99|1|uniform|removed",
+      "name": "single6_removed_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "1426f89ca79315b5e32515513f6f287c5c426c9126d82f7fdf9f602aba8c762b"
+    },
+    {
+      "key": "single6|0.99|0|uniform|removed",
+      "name": "single6_removed_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "4e0132129e28a942cd39807c5f4c9f47bdaac194cbf2dc22adfb93bb4b62d1aa"
+    },
+    {
+      "key": "single6|0.05|0.5|low|present",
+      "name": "single6_present_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "89396931bbe8d6a4527731b17b5c589c053ce0a1203ed9e0fe837a76561d72ca"
+    },
+    {
+      "key": "single6|0.7|1|uniform|present",
+      "name": "single6_present_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "769b01dd2a8b1d2b2719acbd503dbea7cf6f920571cd8d94e91a1628500cbebf"
+    },
+    {
+      "key": "corridor_near|0.05|0|high|removed",
+      "name": "corridor_near_removed_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "643754dcd77a5b2c0633b8027f38dcbe122a78f34ecd37eea9e439bbcda45f75"
+    },
+    {
+      "key": "corridor_near|0.7|1|uniform|present",
+      "name": "corridor_near_present_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "b75a2075fc4c408abd1c17cf0e63e7035fd862966deb4e05b29b0d501ce92a5d"
+    },
+    {
+      "key": "single6|0.05|0.5|low|removed",
+      "name": "single6_removed_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "f8340aa4ca5e5492c05d2a1a9cac637690da8956a06393884b711b7eb2630465"
+    },
+    {
+      "key": "room_far|0.7|1|uniform|removed",
+      "name": "room_far_removed_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "dd19a155ef7faed039060fc24d3ebb87b4b23ead7fc4dd1251651275970d770b"
+    },
+    {
+      "key": "single6|0.7|0|high|moved",
+      "name": "single6_moved_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "80f8fce8ba7d6399a6eacd6a57e9ab169a4bff63b42f3e7a9547b3386eaf6656"
+    },
+    {
+      "key": "room_far|0.3|1|high|removed",
+      "name": "room_far_removed_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "daa7e302056cbfc4df5a4839b0cb722aa323c28bfd2a92ef55a3602b5d0cccaa"
+    },
+    {
+      "key": "corridor_near|0.3|1|low|moved",
+      "name": "corridor_near_moved_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "2d3a12128d098266ac033d593e64199ba93e89fa0dd094bb48e9186dfa293e85"
+    },
+    {
+      "key": "corridor_near|0.99|0|low|removed",
+      "name": "corridor_near_removed_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "fe0914b2e915ace440f62feadf32d18d01f58af4364321f315cf841fa09510e4"
+    },
+    {
+      "key": "corridor_near|0.3|1|uniform|moved",
+      "name": "corridor_near_moved_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "640915ba7cf6ee6b08f6d2df3cdfba61085f304da40f02e9928dfda2a62cd6d6"
+    },
+    {
+      "key": "room_far|0.7|1|uniform|moved",
+      "name": "room_far_moved_a0.70_s1.0_uniform_r0_both",
+      "raw_sha256": "fef6806a8e4ca0eb838e11f0e6fa56e0080e905ead4a82b33ca002c60bb6f3d0"
+    },
+    {
+      "key": "single6|0.7|0|low|moved",
+      "name": "single6_moved_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "a06e35c686b4724b6c6d0a7c29bd83ba43a0a6a1273f0cb361da0e6effd69527"
+    },
+    {
+      "key": "room_far|0.99|0.5|uniform|present",
+      "name": "room_far_present_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "454726f20d5bdcaa9f3e2fb431e50feb130c4f8558fa391cf9c84d3f7d600046"
+    },
+    {
+      "key": "corridor_near|0.7|1|low|present",
+      "name": "corridor_near_present_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "e053fdc8abec786305758a847c740e4dcf1f299a337e1fd639d339d49620e4c4"
+    },
+    {
+      "key": "corridor_near|0.99|0|uniform|moved",
+      "name": "corridor_near_moved_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "b12a920c1db5c60b74286d5153429a7f97e0d0bf4e69eb59a6e8269a3147693d"
+    },
+    {
+      "key": "room_far|0.05|0.5|low|present",
+      "name": "room_far_present_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "c24e7086c98904311882bdd88380f501641b598b6a3b8218391ebbf884fb74be"
+    },
+    {
+      "key": "room_far|0.05|1|high|moved",
+      "name": "room_far_moved_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "0dc912d29085443b00d6bcd9cd06755267c2b62d9430c4069d0741d9f71b1799"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|uniform|removed",
+      "name": "corridor_near_removed_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "d0044dc37dfcc08023a6ae1cf81f82b981569d343aca55743615ccf677a94cfd"
+    },
+    {
+      "key": "single6|0.3|1|low|moved",
+      "name": "single6_moved_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "640cb5f3c9278def3a1a0a8e441060e9a263bf097e4026bf1beed6c4ab8fe1d6"
+    },
+    {
+      "key": "single6|0.3|0|high|removed",
+      "name": "single6_removed_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "c35ced4437044f94fb760ff2538e678877b12e50dc64ac9ee0ad833ffa388cd0"
+    },
+    {
+      "key": "corridor_near|0.7|0.5|high|removed",
+      "name": "corridor_near_removed_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "f822f2d969f9c614115b581f9024a82257c40bd30f876444880cabfd91392e8a"
+    },
+    {
+      "key": "room_far|0.7|1|low|present",
+      "name": "room_far_present_a0.70_s1.0_low_r0_both",
+      "raw_sha256": "914f6a0cb4fef9fff345f159469a945f90e3e2c2fc1aa988d6f6abb22e5a4611"
+    },
+    {
+      "key": "room_far|0.3|0.5|high|removed",
+      "name": "room_far_removed_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "62f45906dc3e27e21bc52b88eaec1bb37e9fca5dfe27a76fbded9029c198335a"
+    },
+    {
+      "key": "room_far|0.05|0.5|high|present",
+      "name": "room_far_present_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "eff275f70b1a062a5e3aaddfc0102ba3f4e05e81515be667134ac025e3ba7cf6"
+    },
+    {
+      "key": "room_far|0.3|0.5|low|removed",
+      "name": "room_far_removed_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "f1ea46fc72e49b3bb25c615b2368d924e0566854455ebc08b7bd851ddb5f9f5a"
+    },
+    {
+      "key": "corridor_near|0.99|0.5|high|moved",
+      "name": "corridor_near_moved_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "f11aa6bc565d33cd65875eadbb67ab53e9100461d27a9d3dcbff53bae552d509"
+    },
+    {
+      "key": "corridor_near|0.3|1|high|present",
+      "name": "corridor_near_present_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "3e2598e63f45bac11c472ffd8b7fc0c0ab4c8a8e85b90a05ed28bc9ba8fa1de2"
+    },
+    {
+      "key": "corridor_near|0.99|0|uniform|removed",
+      "name": "corridor_near_removed_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "805f86a17a4ef4ac8c91963d8c20d3279883715d5f41612b86ebb66cd0aeeea5"
+    },
+    {
+      "key": "single6|0.3|0.5|uniform|removed",
+      "name": "single6_removed_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "967c35b83f3af68b4f5654a4f91666cd39ba6ef5a78a331d941ef8fe372e6f71"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|high|moved",
+      "name": "corridor_near_moved_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "118875c9561fed7ae3ba4a95655418ed6bb0fb67cdbf1b5c4f8380a164added0"
+    },
+    {
+      "key": "room_far|0.3|0.5|uniform|present",
+      "name": "room_far_present_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "32b302578e799fa1e8604f5fe1e5165d1edd7b8434a552427a447def71a27c26"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|low|moved",
+      "name": "corridor_near_moved_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "faf6d56de91269852d6f24b75950c9c1b43d35ee41a39ff5ddd3dfac2f959583"
+    },
+    {
+      "key": "room_far|0.3|0.5|low|present",
+      "name": "room_far_present_a0.30_s0.5_low_r0_both",
+      "raw_sha256": "542eb8983f7a1e0ef047cbbf93f35cd9ca12a15d312cbd3e852b844e3251a6b9"
+    },
+    {
+      "key": "single6|0.7|0.5|uniform|removed",
+      "name": "single6_removed_a0.70_s0.5_uniform_r0_both",
+      "raw_sha256": "22f09fce0c8b8dbb212937bfd38636c1cacaf01740be08eea5e7a4cec1f5f7cf"
+    },
+    {
+      "key": "room_far|0.05|0.5|high|removed",
+      "name": "room_far_removed_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "983d6fa3072136bcde42040b789a44e3571445cafd66e24d6992722f34675bf7"
+    },
+    {
+      "key": "single6|0.3|0|uniform|present",
+      "name": "single6_present_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "4d66cae413f18f74801e53d3f77fe1e91a791417025b8fd2c135cc193326abd9"
+    },
+    {
+      "key": "single6|0.7|0|high|present",
+      "name": "single6_present_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "2669f19a543040e651d28ad48a59aae1acb05624aedacc2777a6429f7c0ee48e"
+    },
+    {
+      "key": "corridor_near|0.05|1|uniform|removed",
+      "name": "corridor_near_removed_a0.05_s1.0_uniform_r0_both",
+      "raw_sha256": "cb49ecfd699792456ceba84fd4d7293ad844cfc04a0da46962563c10255470d4"
+    },
+    {
+      "key": "corridor_near|0.05|1|low|removed",
+      "name": "corridor_near_removed_a0.05_s1.0_low_r0_both",
+      "raw_sha256": "ff09b64e5b8958ebb76b5e4818a1b191058dd6272c70b45b4c5a20e3db61d725"
+    },
+    {
+      "key": "room_far|0.05|0|high|removed",
+      "name": "room_far_removed_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "c9df8976a00dc12a381c43d337450df189d5f35e39dff3e305cc6db092fec189"
+    },
+    {
+      "key": "single6|0.99|1|high|removed",
+      "name": "single6_removed_a0.99_s1.0_high_r0_both",
+      "raw_sha256": "048630ef64102f064a7c05d9027351392de9457f34553277f800333bf69316b4"
+    },
+    {
+      "key": "single6|0.99|0|high|removed",
+      "name": "single6_removed_a0.99_s0.0_high_r0_both",
+      "raw_sha256": "f16b4c9e2b54adf3a82d101bfe793848002dfeacbfca0ab07b16d4e6e2cf1b29"
+    },
+    {
+      "key": "single6|0.05|0|high|present",
+      "name": "single6_present_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "a03836bd48e495ab01dadbd7a4b56035f37109d555159fab6b8d5e560cb3663a"
+    },
+    {
+      "key": "single6|0.7|0.5|low|moved",
+      "name": "single6_moved_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "5292fc3954aa5d24d640f4dd53faae59aa6f279aee442ed7a285a4f496514406"
+    },
+    {
+      "key": "single6|0.3|1|high|present",
+      "name": "single6_present_a0.30_s1.0_high_r0_both",
+      "raw_sha256": "2ff08c13ae3bc0a00a6f419697e5fc8ff3c01b583ad94694540ee619646451ec"
+    },
+    {
+      "key": "single6|0.99|0.5|high|moved",
+      "name": "single6_moved_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "51ec1a47dc927c91a61b6f0bb11419264540d72c2337869ef1424665092298cc"
+    },
+    {
+      "key": "room_far|0.99|0.5|low|removed",
+      "name": "room_far_removed_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "1733b50ab75dc23004a2d1eb000a6144c10f76fd35151c9f7979a045f3a54880"
+    },
+    {
+      "key": "corridor_near|0.99|1|low|moved",
+      "name": "corridor_near_moved_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "e52c81dfdb7d2de3912c39f8ad13e6852b7c2a401a883188c80ca5d8b64a451d"
+    },
+    {
+      "key": "room_far|0.05|0|uniform|moved",
+      "name": "room_far_moved_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "b64c073ce796c92ee16eeb58453b03229427e0e40a076a087fe8b4dc220ac218"
+    },
+    {
+      "key": "single6|0.99|0.5|uniform|removed",
+      "name": "single6_removed_a0.99_s0.5_uniform_r0_both",
+      "raw_sha256": "b476b7c8748fae93df09d2fd693c117e3a7636f8070938813b3b38649986ad67"
+    },
+    {
+      "key": "single6|0.7|0.5|high|removed",
+      "name": "single6_removed_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "7530678c45c048be8cfb4011d829a4a1379cff4f42843e04e48a23e10ea3d7c9"
+    },
+    {
+      "key": "single6|0.3|0.5|uniform|present",
+      "name": "single6_present_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "a4d9772449e97ca527231df9f6ed2779cab6a5f78936b29dae85fe6a950c6c69"
+    },
+    {
+      "key": "single6|0.05|1|high|moved",
+      "name": "single6_moved_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "eacf32541947755e1270779673a9a46e27e5d0364d27f7a94bc3dd3623fe64e7"
+    },
+    {
+      "key": "single6|0.99|1|low|moved",
+      "name": "single6_moved_a0.99_s1.0_low_r0_both",
+      "raw_sha256": "8365444138d43cad20471000272dd468344b0fa960803988d9b64169697edba0"
+    },
+    {
+      "key": "corridor_near|0.3|0.5|uniform|removed",
+      "name": "corridor_near_removed_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "d118e0a8dfc4a09b8be126836997442df4e093d75ca0143bbcbde276482642cf"
+    },
+    {
+      "key": "room_far|0.7|0.5|low|removed",
+      "name": "room_far_removed_a0.70_s0.5_low_r0_both",
+      "raw_sha256": "e9336edee892ca9e09ff902b45f3a5a17eeb140547bb5add13fba0df087afa07"
+    },
+    {
+      "key": "single6|0.7|0|high|removed",
+      "name": "single6_removed_a0.70_s0.0_high_r0_both",
+      "raw_sha256": "f0358a4e907dbb94b1239878c5555a846fd0310a5f6edc0f8ec1667952bbeadb"
+    },
+    {
+      "key": "single6|0.3|1|low|present",
+      "name": "single6_present_a0.30_s1.0_low_r0_both",
+      "raw_sha256": "945013b1e42f2c7c03c9ec5e276e2add3d5c1acf2336f11ca97e38bcf035544d"
+    },
+    {
+      "key": "room_far|0.05|0.5|uniform|present",
+      "name": "room_far_present_a0.05_s0.5_uniform_r0_both",
+      "raw_sha256": "4e0a00bb04133d79b69764a7fddb16cd3bbadf09bd6dbbf2df179cf18cfd95dd"
+    },
+    {
+      "key": "corridor_near|0.7|0|low|moved",
+      "name": "corridor_near_moved_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "53233b51921cae67871e1a2eb6ea42d3b4225c1aea8c2c30153becbec6fe7f0c"
+    },
+    {
+      "key": "corridor_near|0.05|0|uniform|moved",
+      "name": "corridor_near_moved_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "6680145dabfaa1eb0227cd16bb4782281e1181739c209473e1a6599ab3f74ddd"
+    },
+    {
+      "key": "room_far|0.3|0|high|removed",
+      "name": "room_far_removed_a0.30_s0.0_high_r0_both",
+      "raw_sha256": "c44943704d67fe0f3c5a7170df1f60964cf0a99f0117bdefaa81bf968dfe9173"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|low|present",
+      "name": "corridor_near_present_a0.05_s0.5_low_r0_both",
+      "raw_sha256": "ad86755b6162bf9427b8543f061f26e732cc9b8691447664f0242430dfe8b2a9"
+    },
+    {
+      "key": "single6|0.05|0.5|high|present",
+      "name": "single6_present_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "7084bbdcbc8007dab0858f9eb5ce714a6b587c6efca54e9400f78961774fbd39"
+    },
+    {
+      "key": "single6|0.7|0|uniform|removed",
+      "name": "single6_removed_a0.70_s0.0_uniform_r0_both",
+      "raw_sha256": "6cc3689188ff034593634488bf079975370ea7c108f63c247a6dc87a9c75b690"
+    },
+    {
+      "key": "single6|0.99|0|low|removed",
+      "name": "single6_removed_a0.99_s0.0_low_r0_both",
+      "raw_sha256": "b099349af831567adf78b756aa2940304a7bd399427a4197eb19eb01639f679b"
+    },
+    {
+      "key": "single6|0.99|1|uniform|moved",
+      "name": "single6_moved_a0.99_s1.0_uniform_r0_both",
+      "raw_sha256": "ab13352d05bf2accff3c88184dbf6788cec1bcbb784c8a3e34586d25ee740e27"
+    },
+    {
+      "key": "room_far|0.7|0|low|removed",
+      "name": "room_far_removed_a0.70_s0.0_low_r0_both",
+      "raw_sha256": "4e55d93ab27752a7f0ff62f835768b2ef41294e3524289eb93f7ba3e7d6c22c3"
+    },
+    {
+      "key": "room_far|0.3|0.5|high|moved",
+      "name": "room_far_moved_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "3754f8986297b5243a66525366fbc698b970d4752eb334ef1de901aebd485f76"
+    },
+    {
+      "key": "single6|0.3|0|uniform|removed",
+      "name": "single6_removed_a0.30_s0.0_uniform_r0_both",
+      "raw_sha256": "9447a05c10168e67b6a87628eeeeca31de0d2a24220665f5717f8d92c4cc2836"
+    },
+    {
+      "key": "corridor_near|0.05|1|high|present",
+      "name": "corridor_near_present_a0.05_s1.0_high_r0_both",
+      "raw_sha256": "e8024ea377604d37ada16d299f3e98aa1ff587e8871213f15712c671b219e1cc"
+    },
+    {
+      "key": "corridor_near|0.05|0.5|high|moved",
+      "name": "corridor_near_moved_a0.05_s0.5_high_r0_both",
+      "raw_sha256": "7f7ca4e054c81794e8b366793ddca57f0cf44d410fac7040848daf1157cab1a1"
+    },
+    {
+      "key": "single6|0.05|0|low|moved",
+      "name": "single6_moved_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "6dc0018be6e2bf7fb93572ed59a709c10b335d5e61d1e30819c0ad55142a428d"
+    },
+    {
+      "key": "room_far|0.3|0.5|uniform|removed",
+      "name": "room_far_removed_a0.30_s0.5_uniform_r0_both",
+      "raw_sha256": "38fd64de1ab3ae65b0bbf9728f4893bf10a4506eb172d9b9a917cb8399fc0243"
+    },
+    {
+      "key": "single6|0.3|0|low|removed",
+      "name": "single6_removed_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "aef97aca72ff3430db19ed580af0e6a7862b5d8235b76bd87cec711d1f2ecd47"
+    },
+    {
+      "key": "room_far|0.3|0.5|high|present",
+      "name": "room_far_present_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "fdbdd40cdf31e847b1f70583a48ecb1f7bd44ec439ce74859451441c81ceaf2d"
+    },
+    {
+      "key": "room_far|0.05|0|low|present",
+      "name": "room_far_present_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "087dab84605de8b8d342ba2e57339c726bf6f6c91ed577d1a7be77f3c7f874b5"
+    },
+    {
+      "key": "room_far|0.99|0|uniform|present",
+      "name": "room_far_present_a0.99_s0.0_uniform_r0_both",
+      "raw_sha256": "00d2bb5930b2333f0dec0834c11530440f0f929d303ad88088613aaec864daf5"
+    },
+    {
+      "key": "single6|0.3|0.5|high|removed",
+      "name": "single6_removed_a0.30_s0.5_high_r0_both",
+      "raw_sha256": "d2e3ba6299fe2f847e9de3f2d977dcf8b39c904c8d2f3c51482cd58bf3dc0b4e"
+    },
+    {
+      "key": "corridor_near|0.7|1|high|removed",
+      "name": "corridor_near_removed_a0.70_s1.0_high_r0_both",
+      "raw_sha256": "9d3c47e0e769a484307ffdf3d1adcdce4550bd3d808d655183f0ba56850f74cf"
+    },
+    {
+      "key": "corridor_near|0.05|0|uniform|removed",
+      "name": "corridor_near_removed_a0.05_s0.0_uniform_r0_both",
+      "raw_sha256": "6ebc942237776f71ae2eb0dea68a6dd5765394e7f70b4cff1053e20255141ef5"
+    },
+    {
+      "key": "room_far|0.99|0.5|high|removed",
+      "name": "room_far_removed_a0.99_s0.5_high_r0_both",
+      "raw_sha256": "cf900b32e449c5542361aa6d18876a75237582fd634c46ad461ef06be7a5ee18"
+    },
+    {
+      "key": "room_far|0.99|0.5|low|present",
+      "name": "room_far_present_a0.99_s0.5_low_r0_both",
+      "raw_sha256": "aa9bf32f211200503bd0298f7c2cebd6cdbad914c25e8a0023289a9e44907ca0"
+    },
+    {
+      "key": "corridor_near|0.05|0|high|present",
+      "name": "corridor_near_present_a0.05_s0.0_high_r0_both",
+      "raw_sha256": "a925bd886e386539605d3168694edf885a1bf78bf7f4fe6b31fe263a09ace453"
+    },
+    {
+      "key": "corridor_near|0.05|0|low|moved",
+      "name": "corridor_near_moved_a0.05_s0.0_low_r0_both",
+      "raw_sha256": "1d559b7fc844bf17c67fc2ba5ec6e5432ca5080c635f2d778294bd8e23f2f61e"
+    },
+    {
+      "key": "room_far|0.7|0.5|high|present",
+      "name": "room_far_present_a0.70_s0.5_high_r0_both",
+      "raw_sha256": "c3870f54463e2e996006339ce6279db46b6f7a7b6d3cff38871beb8034016b56"
+    },
+    {
+      "key": "single6|0.3|1|uniform|removed",
+      "name": "single6_removed_a0.30_s1.0_uniform_r0_both",
+      "raw_sha256": "424fa5b92da2c12d9c2af913dd93152c4e5e0fa6e7574566dadf082b968165de"
+    },
+    {
+      "key": "room_far|0.3|0|low|present",
+      "name": "room_far_present_a0.30_s0.0_low_r0_both",
+      "raw_sha256": "0829a2aa9bc0c17d6927b4d391bcaca271b36859417d56433514186ea894b6e5"
+    }
+  ],
+  "uncompressed_bytes": 15256583,
+  "html_bytes": 8482563,
+  "payload_sha256": "59aef8f549aac9589d5ecd096111cfdd1b2c9eb24abdbe1bd71b5478d629454b",
+  "html_sha256": "e02aa1d8a69b4ba670402d4c9a23d74fb269090e9940c89ced04c7c803b84171",
+  "display": "480early/160full extrema/envelope bins;16-bit display quantization (wave error<=peak/65534);EDC .01dB;128float32 spectral samples; metrics from full raw arrays; context0 deterministic choice; no generated/interpolated RIR"
+}

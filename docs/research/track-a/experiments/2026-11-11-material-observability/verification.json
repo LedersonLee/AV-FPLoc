@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "controlled_rings": 1980,
+  "controlled_mono_hashes": 11880,
+  "complete_factorial_cells": 1944,
+  "acoustic_exports_checked": 1980,
+  "independent_geometry_energy_onset_checks": 108,
+  "reliability_rules_recounted": 6,
+  "hssd_rings": 72,
+  "hssd_raw_mono_hashes": 432,
+  "default_representative": "corridor_near",
+  "exceptions": [
+    "room_far",
+    "single6"
+  ],
+  "saved_failure_case": "single6_moved_a0.99_s0.0_high_r0_both",
+  "limits": "Per-path identity unverified; HSSD native stage vertical proxy only; browser checks recorded separately; no Test payload use"
+}

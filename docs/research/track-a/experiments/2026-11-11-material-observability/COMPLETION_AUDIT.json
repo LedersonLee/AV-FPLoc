@@ -1,0 +1,114 @@
+{
+  "study": "material_observability_20261111",
+  "outcome": "B \u2014 Material-dependent but Ambiguous",
+  "scientific_and_artifact_status": "complete",
+  "requirements": [
+    {
+      "requirement": "Phase0 / prior studies",
+      "status": "verified",
+      "evidence": "RESEARCH_REPORT.md; PHYSICAL_MATERIAL_AUDIT.md; prior Experiment1/1B/AcousticCues/TrackB links"
+    },
+    {
+      "requirement": "Actual material defaults, bands, surface mapping",
+      "status": "verified with documented interpolation/path-GT limit",
+      "evidence": "1980 OBJ coefficient checks; actual4band metrics; PHYSICAL_MATERIAL_AUDIT.md"
+    },
+    {
+      "requirement": "A factorial /6poses /3states /3contexts",
+      "status": "verified",
+      "evidence": "1944 complete cells +36direct/indirect controls; verification.json"
+    },
+    {
+      "requirement": "Temporal /energy /spatial metrics, absolute and normalized",
+      "status": "verified",
+      "evidence": "648 grouped conditions in measurement_summary.json; features.json raw-derived archive"
+    },
+    {
+      "requirement": "Aligned /shifted /matched-time controls",
+      "status": "verified",
+      "evidence": "quantitative_summary.json window_controls; fixed nonaligned donor distribution"
+    },
+    {
+      "requirement": "B three profiles /matched mean /6ablations",
+      "status": "verified",
+      "evidence": "quantitative_summary.json profile_classification; diagnostics.json shape_distance/band_decay_window_ratio"
+    },
+    {
+      "requirement": "C fit-separated six rules and oracle distinction",
+      "status": "verified negative result",
+      "evidence": "single2 uniform fit108 /evaluation1836; quantitative_summary.json; independent recount6rules"
+    },
+    {
+      "requirement": "C calibration /FNR /movement /repeat /ranking",
+      "status": "verified within target-wall-label limit",
+      "evidence": "quantitative_summary.json reliability/movement; measurement_summary.json; path-level true detection explicitly unverified"
+    },
+    {
+      "requirement": "Noise clean/moderate/severe",
+      "status": "verified",
+      "evidence": "noise_summary.json;324records localnoise_results.json; fixed seeds/baseline RMS"
+    },
+    {
+      "requirement": "D native HSSD mapping and controlled pairs",
+      "status": "verified limited native-stage feasibility",
+      "evidence": "Train2scenes/4poses/72rings; source hashes; furniture excluded; exact semantic mapping unverified"
+    },
+    {
+      "requirement": "HSSD FP/RGB preservation and candidate evidence",
+      "status": "verified bounded scope",
+      "evidence": "read-only native inputs, unchangedsourcehashes; cached pure-visual windows; noGTfilter; hssd_summary.json"
+    },
+    {
+      "requirement": "All-pose consistency before representative selection",
+      "status": "verified",
+      "evidence": "6poseeffectvectors; corridor_near median representative; room_far andsingle6 exceptions"
+    },
+    {
+      "requirement": "Discrete absorption/scattering/profile/wall and6mic A/B",
+      "status": "verified",
+      "evidence": "324actualsettings; common sample0/amplitude;349Chromecontrolchecks; nointerpolation"
+    },
+    {
+      "requirement": "Wave /earlylate /expected/onset/peak /energy/spectrum /metrics",
+      "status": "verified",
+      "evidence": "interactive.html; raw metrics exact for324records;1944displaychecks"
+    },
+    {
+      "requirement": "Failure example wall present but undetected",
+      "status": "verified",
+      "evidence": "single6_moved_a0.99_s0.0_high_r0_both; browser #failure 0/6rawgate; #removed showsfalsepositive"
+    },
+    {
+      "requirement": "Transmission0, no independent reflection slider, qualified RT60",
+      "status": "verified",
+      "evidence": "materialJSON/coeffchecks; template controls; explicitT20gate/NAlabel"
+    },
+    {
+      "requirement": "HTML-reports-2 reference and static browser execution",
+      "status": "verified",
+      "evidence": "referencecommit b79e31c; offline gzip payload; Chrome349checks andcounterexample renders"
+    },
+    {
+      "requirement": "Mandatory reports and reproducibility",
+      "status": "verified",
+      "evidence": "RESEARCH_REPORT /PHYSICAL_MATERIAL_AUDIT /METHOD_AT_A_GLANCE /REPRODUCIBILITY; fullinputhashes/codeSHAs/cost/failures"
+    },
+    {
+      "requirement": "NoTest /noNetwork /noExperiment2/3 /CPU<=80%",
+      "status": "verified execution scope",
+      "evidence": "Train-onlyasserts; nofitcheckpoint; maximum2containers\u00d74CPU/20; preserveduserfiles"
+    },
+    {
+      "requirement": "Canonical Index and Git",
+      "status": "index updated; synchronization reported after commit",
+      "evidence": "RESEARCH_INDEX.md; finalDocsSHA intentionally not embedded"
+    }
+  ],
+  "limits": [
+    "No internal acoustic path GT or exact interpolation kernel",
+    "Native-stage vertical proxy, not full furnished semantic HSSD mapping",
+    "Exploratory reused/design scenes; contexts not independent seeds",
+    "No localization utility claim"
+  ],
+  "final_html_sha256": "e02aa1d8a69b4ba670402d4c9a23d74fb269090e9940c89ced04c7c803b84171"
+}

@@ -74,3 +74,10 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 ## 2026-11-11 추가 — Reflection timing의 renderer 설정 의존성
 
 [Experiment1B](track-a/experiments/2026-11-11-reflection-timing-audit/RESEARCH_REPORT.md)는 **Outcome C**로 완료했다. 기본 scattering0.5를0으로만 바꾸면 dominant peak bias가2m +2.347→−0.134ms,6m +6.168→+0.114ms로 크게 변했다. 이전 wall-dependent response를 보존하면서 큰 timing mismatch의 설정 의존성을 추가로 확인했다. Exact path/order/wall ID와 모든 채널 절대시간 기준은 미확립이다. 따라서 기존 HSSD energy enrichment를 물리적 first-order matching 증거로 해석하지 않으며 HSSD 재평가는 gate 실패로 생략했다. Exploratory; 현실 음향 일반화나 localization 개선을 주장하지 않는다.
+
+
+## 2026-11-11 추가 — Material-dependent Acoustic Observability
+
+[Experiment4A](track-a/experiments/2026-11-11-material-observability/RESEARCH_REPORT.md)는 **Outcome B — 재질에 따라 달라지지만 모호함**으로 완료했다. 흡수 증가와 주파수 profile의 효과는6개 설계 위치에서 같은 방향이었지만, 산란의 시간·에너지 효과는 기하에 의존했다. Single-wall에서 고정한 결합 규칙의 다른 조건 target-wall 제거 오검출률은70.6%로, 관측이 있다는 사실만으로 목표 벽의 존재를 증명하지 못했다. Fit-domain shift와 다중 반사도 경쟁 설명이며 모든 reliability 방법의 불가능성을 뜻하지 않는다.
+
+HSSD Train2장면/4위치의 native-stage 재질 대조72rings를 생성했다. 동일 FP에서 재질만 바꾸어도 후보 evidence 순위가 바뀌었지만 furnished semantic mapping이나 localization 개선은 검증하지 않았다. [실제 RIR Explorer](track-a/experiments/2026-11-11-material-observability/interactive.html)는 중앙 경향의 대표 위치1개와 예외2개를 제공한다. 새 모델 학습 및 Experiment2/3은 수행하지 않았다.

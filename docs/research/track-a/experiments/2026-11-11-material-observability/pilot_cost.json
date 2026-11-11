@@ -1,0 +1,9 @@
+{
+  "rings": 6,
+  "seconds": 2.5222038961946964,
+  "compressed_bytes": 3445204,
+  "raw_bytes": 3857208,
+  "forecast_1980_rings_seconds": 832.3272857442498,
+  "forecast_compressed_bytes": 1136917320.0,
+  "maximum_observed_samples": 34546
+}

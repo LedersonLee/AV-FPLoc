@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "records": 324,
+  "raw_channel_displays": 1944,
+  "max_relative_wave_display_error": 1.5259252931904836e-05,
+  "metric_records_exact": 324,
+  "html_sha256": "e02aa1d8a69b4ba670402d4c9a23d74fb269090e9940c89ced04c7c803b84171",
+  "browser": [
+    {
+      "view": "selftest",
+      "ready": true,
+      "control_checks": 349
+    },
+    {
+      "view": "failure",
+      "ready": true
+    },
+    {
+      "view": "removed",
+      "ready": true
+    }
+  ],
+  "visual_review": "Screenshots separately inspected; common axes, counterexample controls, profiles and readouts visible"
+}
