@@ -47,6 +47,9 @@ def main():
  for ch in range(6):
   reference=(removed[ch,:48]**2).max();power=raw[ch].astype(float)**2/reference;env=np.convolve(power,np.ones(6)/6,mode='full')[:len(power)];ix=np.flatnonzero(env[48:3840]>1e-6)[0]+48;expected=ix/48;calc=estimates(raw[ch],48000,float(reference),removed[ch])['energy_onset'];assert abs(expected-calc)<1e-12;manual.append(calc)
  checks['independent_onset_replay']=6
- result=dict(passed=True,checks=checks,method_gate=gate,hssd_gate='FAIL — no physically validated arrival estimator; D skipped as preauthorized',outcome='B — Limited Observability',limits='Analytic reference validates geometry only; not SoundSpaces path GT. Fresh contexts are not independent scenes. Internal histogram/early-path timing unexported.')
+ spec=json.loads((root/'specular_analysis.json').read_text()); assert spec['checks']['mono_hashes']==144
+ for effect in spec['effects']:assert effect['specular_minus_default_peak_ms'] < -2
+ checks['specular_audit']=spec['checks']
+ result=dict(passed=True,checks=checks,method_gate=gate,hssd_gate='FAIL — no physically validated arrival estimator; D skipped as preauthorized',outcome='C — Renderer-dependent Artifact',limits='Analytic reference validates geometry only; not SoundSpaces path GT. Fresh contexts are not independent scenes. Internal histogram/early-path timing unexported.')
  (root/'verification.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))
 if __name__=='__main__':main()
