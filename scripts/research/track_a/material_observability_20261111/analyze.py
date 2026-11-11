@@ -35,7 +35,11 @@ def features(channels,expected,matched):
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);a=p.parse_args();folder=a.root/'controlled';manifest=json.loads((folder/'manifest.json').read_text());assert len(manifest)==1980
- poses={v['pose']['id']:v for v in manifest};ordered=sorted(poses);permutation=np.random.default_rng(4211).permutation(ordered);donor=dict(zip(ordered,permutation));rows=[];start=time.perf_counter()
+ poses={v['pose']['id']:v for v in manifest};ordered=sorted(poses);rng=np.random.default_rng(4211)
+ while True:
+  permutation=rng.permutation(ordered)
+  if all(abs(poses[x]['pose']['z']-poses[y]['pose']['z'])>1 for x,y in zip(ordered,permutation)):break
+ donor=dict(zip(ordered,permutation));rows=[];start=time.perf_counter()
  for i,v in enumerate(manifest):
   raw=folder/v['name']/'rir.npz';assert hashlib.sha256(raw.read_bytes()).hexdigest()==v['rir_sha256']
   with np.load(raw) as z:channels=[z[f'ch{c}'] for c in range(6)]
