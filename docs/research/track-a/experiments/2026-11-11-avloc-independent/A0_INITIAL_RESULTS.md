@@ -37,3 +37,23 @@ At20cm, A0 Joint50.105% exceeds the existing visual baseline45.850% by4.255 perc
 A0 remains below fixed fusion65.038%, B2(two-seed mean)69.313% and B2+GEOQ73.071% Joint. These are descriptive comparisons; the two-seed baseline mean is explicitly distinguished from A0's single seed. No claim about full AVLoc-style superiority or acoustic recoverability follows from vision-only A0.
 
 Separate10cm evaluation completed on the same predictions and all9,965 queries: R@1m61.274%, Joint60.462%, R@0.1m38.906%, NMS Top20 coverage92.122%. [Metrics and hashes](a0_seed42_10cm_metrics.json). The Joint increase10.356pp versus20cm is a grid effect with unchanged network and predictions. Do not substitute this result into the primary20cm comparison table.10cm ray analysis also completed with source/ID/MAE replay checks.20cm temperature calibration completed;10cm calibration and independent review of the calibration aggregates remain pending.
+
+
+## Temperature replay verification (both grids)
+
+Analysis source `1a494e31f89a23fa42ef6f0dd371db707004880c`. All9,965 queries at each grid passed saved-curve hashes, scene/query identity, native T=1 NLL/confidence/entropy/mass replay, exact Top1 and joint labels, and exact reconstruction of the five-family-fold calibration summary. The first plotting invocation failed on an f-string quote syntax error before any output; corrected before execution, with both full-data runs then passing.
+
+| Grid | Native → crossfit nearest-grid NLL | Native → crossfit ECE | Selected T in all5 folds | Joint unchanged |
+|---|---|---|---|---|
+|20cm|119.0391 → 6.2260|0.39337 → 0.28573|56.2341|50.1054%|
+|10cm|81.4629 → 6.3283|0.25258 → 0.24211|31.6228|60.4616%|
+
+Observed: native fields are sharply concentrated; temperature smoothing improves nearest-grid NLL substantially while leaving every selected pose unchanged. ECE improves less and remains high. Interpretation: sharpness is not sufficient evidence for calibration. The temperature objective is nearest-grid NLL, not joint-event ECE; those objectives differ. The20cm reliability curve becomes underconfident after smoothing, so lower NLL must not be described as perfect reliability. Family-fold fitting does not undo prior full-Val checkpoint selection; these remain reused-development diagnostics, not independent calibration.
+
+[20cm verification](a0_calibration_20cm_verification.json) · [10cm verification](a0_calibration_10cm_verification.json).
+
+![A0 20cm reliability](a0_reliability_20cm.png)
+
+![A0 10cm reliability](a0_reliability_10cm.png)
+
+Reproduce with `summarize_ray_calibration.py --baseline <native-evaluation-directory> --calibration <completed-calibration-directory> --out <new-review-directory>`. Raw curves remain local. A0 recovery stages are now complete; A1 and all remaining research arms remain pending.
