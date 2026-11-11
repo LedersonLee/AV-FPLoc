@@ -130,3 +130,8 @@ AVLoc Router replay validation correction (2026-11-11): scalar fused-output acce
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | Material-dependent Acoustic Observability / material_observability_20261111 | 2026-11-11 | A | 완료·Outcome B.1980controlled rings+72HSSD native-stage rings. 흡수·profile 효과6poses에서일관,산란효과는기하의존. 결합rule제거벽FPR70.6%,first-order귀속미검증. 대표corridor_near+room_far/single6예외의324조건explorer;349UI검사. 새Network/Experiment2/3미수행. | Exploratory (설계3기하·6poses,재사용Train2scenes;pathGT/실환경일반화미검증) | [RESEARCH_REPORT](track-a/experiments/2026-11-11-material-observability/RESEARCH_REPORT.md) · [Explorer](track-a/experiments/2026-11-11-material-observability/interactive.html) | renderer `aff5991`; profiles/main `47d6740`; analysis `97b5d71013f42f15e372d2f76ebdd51bffae2399`; finalselection `e54e706`; verifier `239de7d`; viewer `a1b0e83`; fullSHA/inputhashes는reproducibility_manifest.json |
+
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| AVLoc A0 seed42 initial evaluation | 2026-11-12 | A | A0 100epoch 완료; best99 MAE0.17957m;20cm Joint50.1054%;사후 분석 boolean 오류 수정 및 재개,전체 연구 진행 중 | Exploratory; reused Val19, single seed | [A0 initial results](track-a/experiments/2026-11-11-avloc-independent/A0_INITIAL_RESULTS.md) | training `62c58da20ed26ba95863638bbfd4926829999eec`; analysis/recovery `5f8fdc4e8fdd22a17f1a243646c263fcd23e9ae1` |

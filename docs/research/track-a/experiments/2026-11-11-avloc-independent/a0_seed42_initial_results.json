@@ -1,0 +1,77 @@
+{
+  "status": "A0 seed42 complete; whole benchmark incomplete",
+  "training_complete": {
+    "status": "training_complete",
+    "last_epoch": 100,
+    "best": 0.17957088634169885,
+    "reason": "max_epochs",
+    "benchmark_complete": false
+  },
+  "prediction": {
+    "complete": true,
+    "split": "val",
+    "scenes": 19,
+    "queries": 9965,
+    "arm": "A0",
+    "seed": 42,
+    "epoch": 99,
+    "checkpoint_sha256": "03942eba07916c8da6d494319b484c830e74a5740793765e864433ce58b091f7",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "extractor_sha256": "e21c005e825733bb2c5b6b0a87a32727c042ec5ee20cfb7134e394af9440eed9",
+    "input_manifest_sha256": "7ee50a05d4901d0618d77caef288372958c1b773a8c742eb40c0a714e85e2c65",
+    "precision": "float32",
+    "selection": "training best clean Val19 ray MAE; reused development",
+    "test_accessed": false,
+    "seconds": 49.0595600605011
+  },
+  "metrics_20cm": {
+    "r1": 0.5094831911690918,
+    "joint": 0.5010536879076769,
+    "fine": 0.22027094831911692,
+    "top5_nms": 0.7097842448569995,
+    "top20_nms": 0.8875062719518314,
+    "top5_raw": 0.658906171600602,
+    "top20_raw": 0.8013045659809332,
+    "ray_mae": 0.1795708834640032,
+    "ray_nll": 0.8388550303862381,
+    "in_fov_mae": 0.1795708834640032,
+    "entropy_normalized": 0.042972747736281264,
+    "gt_region_mass": 0.5030022502904717,
+    "nearest_grid_nll": 119.03912543456256
+  },
+  "scene_macro_joint": 0.49669910459734085,
+  "calibration": {
+    "ece": 0.3933717650536014,
+    "brier": 0.36407002144898126,
+    "queries": 9965
+  },
+  "ray_analysis": {
+    "queries": 9965,
+    "ray_mae": 0.17957088355083228,
+    "pooled_scale_abs_error_spearman": 0.7217412767594034,
+    "laplace_central_interval_coverage": [
+      {
+        "nominal": 0.5,
+        "observed": 0.2355790722072709
+      },
+      {
+        "nominal": 0.8,
+        "observed": 0.5082880992564887
+      },
+      {
+        "nominal": 0.9,
+        "observed": 0.6684030470282352
+      },
+      {
+        "nominal": 0.95,
+        "observed": 0.7841536286092232
+      }
+    ]
+  },
+  "input_hashes": {
+    "runs/A0_seed42/complete.json": "75c9daf84a54454a68343e0314162f61aa3499d2ab239251a4fa550c54b78e6d",
+    "predictions/A0_seed42/manifest.json": "aa5d6807f530d165fb6d068eca14e669f46cd8d447281007c4c68ae37779d56c",
+    "evaluation/A0_seed42_20cm/summary.json": "ece4088320511a1aa965bf1f0930128e3a9e6a2d6010a2015a9a4270f9af552b",
+    "analysis/A0_seed42_20cm_v2/summary.json": "9c8c0dbe62bf5a708b636a3b9cf1719cdd14985c2cf957229f920d311ecfe844"
+  }
+}
