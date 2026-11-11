@@ -30,6 +30,7 @@ def main():
   for f in r['files']:assert hashlib.sha256((root/'backend_v2'/f['name']).read_bytes()).hexdigest()==f['sha256'];waves+=1
   vertices=[]
   for line in (root/'backend_v2'/(r['file_prefix']+'.obj')).read_text().splitlines():
+   if line.startswith('# Listeners'):break
    if line.startswith('v '):vertices.append([float(v) for v in line.split()[1:4]])
   vertices=np.array(vertices);assert len(vertices)==8;assert np.sum(np.isclose(vertices[:,2],0))==4;np.testing.assert_allclose(vertices.min(0),[-12,-20,-12],atol=1e-6);np.testing.assert_allclose(vertices.max(0),[12,12,24],atol=1e-6);meshes+=1
   for rec in r['records']:assert rec['ray_hit']==1 and abs(rec['ray_distance']-r['distance'])<1e-5

@@ -25,8 +25,12 @@ def estimates(x,fs,reference,removed=None,threshold=1e-6):
  weights=np.maximum(window-threshold,0);result['energy_centroid']=float(np.sum(np.arange(lo,hi)*weights)/weights.sum()/fs*1000) if weights.sum()>0 else None
  result['relative_1pct']=onset(env,.01*env[lo:hi].max()) if gate else None;result['relative_10pct']=onset(env,.1*env[lo:hi].max()) if gate else None
  if removed is not None:
-  length=min(len(x),len(removed));e=np.maximum(x[:length]**2-removed[:length].astype(float)**2,0)/max(reference,1e-30);result['removed_difference_onset','band_low_difference_onset','band_high_difference_onset']=onset(signal.lfilter(np.ones(n)/n,[1],e),threshold)
- else:result['removed_difference_onset','band_low_difference_onset','band_high_difference_onset']=None
+  length=min(len(x),len(removed));e=np.maximum(x[:length]**2-removed[:length].astype(float)**2,0)/max(reference,1e-30);result['removed_difference_onset']=onset(signal.lfilter(np.ones(n)/n,[1],e),threshold)
+ else:result['removed_difference_onset']=None
+ for name,band in [('band_low_difference_onset',[500,2000]),('band_high_difference_onset',[2000,8000])]:
+  if removed is None:result[name]=None;continue
+  length=min(len(x),len(removed));sos=signal.butter(4,band,btype='bandpass',fs=fs,output='sos');f=signal.sosfilt(sos,x[:length]-removed[:length].astype(float));e=signal.lfilter(np.ones(n)/n,[1],f*f/max(reference,1e-30));result[name]=onset(e,threshold)
+ assert set(METHODS)<=set(result)
  result['exact_nonzero_diagnostic']=onset((x!=0).astype(float),0)
  return result
 
