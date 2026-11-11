@@ -260,3 +260,18 @@ Source `1a62afe422acf1c605dbfe6ef84f3afbe4346a68` adds a no-training evaluation 
 Stages: full Val19 float32 prediction (batch4), native20cm localization,20cm ray analysis, native10cm localization,10cm ray analysis,20cm temperature calibration,10cm calibration. Every stage must produce a complete9,965-query receipt before proceeding. Only prediction requests GPU access; remaining stages use CPU. This throughput-oriented scheduling may overlap the next queued expert's training, so its elapsed times are **not isolated runtime benchmarks**. All outputs remain local on SSD. Any source hash mismatch, existing output or command failure stops the queue without overwrite/retry. The immutable source snapshot ensures later development does not silently alter the running evaluation plan.
 
 Observed launch verification: live A0 attachment,42 snapshot hashes and seven ordered stages passed; queue process confirmed waiting on Docker. Actual completed-model inference/evaluation remains pending. A3 training still requires A0/A1/A2 validation and is not started by this queue. Original user runtime modifications and training closure remain untouched.
+
+## Router diagnostics prepared (not a trained result)
+
+Source `cdc8b6cd01d6b312f83c01afc30d52f9e14f243e` adds `analyze_router.py` and reproducible analytic tests. The driver requires completed A3 predictions for all19 Val scenes/9,965queries, checks the input/prediction manifest hashes and exact query IDs, and replays each saved fused mean and moment-matched scale from the saved expert outputs and weights. It rejects nonpositive scales, invalid weights and nonzero visual weights outside the FoV. Labels are used only after prediction for diagnostics, never for routing or pose proposals.
+
+Per-direction and per-scene results retain mean expert weight, expert MAE/scale, weight–error, scale–error and weight–scale Spearman correlations. Constant-variable correlations are null. A diagnostic minimum-error expert comparison counts tied minimum errors correctly and reports selection excess MAE. It is an after-the-fact comparison, not an available inference rule. Fused MAE is also compared with uniform weights applied to the same learned heads; this is an inference-only control and does not replace separately trained fixed routing or full pose evaluation. Ray interval coverage is descriptive, and pooled rays/queries are correlated. Reused Val19 associations cannot establish independently calibrated reliability or a causal mechanism.
+
+Validation: four synthetic test cases passed, covering tied errors and constant correlations, a correct one-hot expert with an analytically2m uniform-control error, independent scalar moment reconstruction with known ±1 rank correlations, and rejection of corrupted fused outputs/scales/weights including unavailable visual routing. No actual A3 integration or learned Router conclusion is claimed. No training files or the running queues were changed.
+
+```bash
+python scripts/research/track_a/avloc_20261111/test_router_analysis.py
+python /source/analyze_router.py --predictions /study/predictions/A3_seed42 --data /study/data_v1 --out /study/analysis/A3_seed42_router
+```
+
+The second command is for after A3 training and prediction completion. A0/A1/A2 validation remains the prerequisite for initiating A3 optimization.

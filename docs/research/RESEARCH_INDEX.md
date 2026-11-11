@@ -100,6 +100,8 @@ AVLoc analysis implementation update (2026-11-11): [ray observability analysis a
 
 AVLoc execution update (2026-11-11): [A0 evaluation queue](track-a/experiments/2026-11-11-avloc-independent/a0_evaluation_queue_plan.json) attached to the verified live training container; seven full-Val stages pending normal completion. Source `1a62afe422acf1c605dbfe6ef84f3afbe4346a68`. Not a completed model result.
 
+AVLoc Router analysis implementation update (2026-11-11): [replay-checked weight/error and uncertainty diagnostics](track-a/experiments/2026-11-11-avloc-independent/RESEARCH_REPORT.md) prepared; four analytic tests passed. Source `cdc8b6cd01d6b312f83c01afc30d52f9e14f243e`. Actual A3 application and independent reliability evidence remain pending; Exploratory, no new trained-model result.
+
 ## Track A Experiment 1 — reflection_observability_20261111
 
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
