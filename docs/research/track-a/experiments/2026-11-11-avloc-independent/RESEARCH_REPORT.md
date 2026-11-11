@@ -181,3 +181,18 @@ Bootstrap resamples19 paired scenes10,000times with seed20261111, averaging mode
 All9,965 GT-derived diagnostic profiles and IDs were verified. [Summary](geometry20_summary.json), [paired verification](geometry20_verification.json). With equal-scale perfect36-direction geometry profiles, joint localization is98.304% and fine41.284%; with11FoV directions, joint66.111% and fine27.416%. Median incorrect-minus-correct ray-MAE margin is0.41349m for36directions versus0.06826m for11. Missing joint-correct grid regions:0.
 
 The paired scene-macro joint difference is32.511pp [29.718,35.464]. This shows the **potential discriminative information in additional floorplan directions when their true values are supplied**. It does not show that observed audio recovers them. It is not a learned-model ceiling: equal scales, off-grid profile mismatch and ray-weighting choices differ from learned inference. The10cm version is running separately to distinguish grid effects. Learned A1 ray/pose errors and observability correlations remain pending.
+
+## Frozen fusion controls prepared
+
+Source `a405fb3f51f23e320632949baed87ec322e6db2d` supplies two no-fitting controls for completed predictions: `independent_equal` combines paired-seed A0 V11 and A1 A36 using equal mixture moment matching inside FoV and audio alone outside; `A3_uniform` reuses the same A3 V/A/AV predicted distributions but replaces learned routing by uniform weights over available experts. The11-ray wrap-around ordering is preserved and no vision is introduced outside FoV. Query IDs, source hashes, seed and input manifests must match before combining. No GT or candidate scores are inputs. [Analytic tests](fusion_predictions_test.json) verify two/three-expert means, within/between variance, identical-expert invariance and directional indexing.
+
+These controls are implemented and numerically tested but **not yet executed on trained predictions**. They separate independent modality combination from joint experts, and router inference effects from fixed experts. The uniform A3 intervention is not equivalent to training A3 with a fixed router; do not interpret it as that training ablation. Shared training exposure and different compute/parameter use must remain explicit. The requested interaction-disabled model is separately queued.
+
+After completed prediction extraction:
+
+```bash
+python /source/fusion_predictions.py --mode independent_equal --first /study/predictions/A0_seed42 --second /study/predictions/A1_seed42 --out /study/predictions/independent_equal_seed42
+python /source/fusion_predictions.py --mode A3_uniform --first /study/predictions/A3_seed42 --out /study/predictions/A3_uniform_seed42
+```
+
+Use `evaluate_fields.py --head F` for each resulting manifest, with20cm and10cm outputs kept separate. Repeat for seed43. These commands are pending trained checkpoints and do not authorize bypassing the A3 expert-validation gate.

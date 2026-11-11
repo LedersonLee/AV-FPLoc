@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "checks": [
+    "analytic mixture mean/variance",
+    "audio-only outside FoV",
+    "equal experts invariant",
+    "weight normalization",
+    "FoV wrap-around direction ordering"
+  ]
+}

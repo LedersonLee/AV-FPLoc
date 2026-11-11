@@ -79,5 +79,12 @@
     "near_alias_count": "incorrect profiles within0.05m mean ray error of best correct profile",
     "missing_correct_region": "explicit null margin",
     "limitation": "equal-scale ideal-profile matching is not a mathematical upper bound for learned uncertainty"
+  },
+  "fusion_controls": {
+    "independent_equal": "paired-seed A0+A1 predictions, equal mixture within V FoV, A only outside; moment matched Laplace",
+    "A3_uniform": "same trained A3 V/A/AV predictions; equal expert weights insideFoV, equal A/AV outsideFoV; moment matched Laplace",
+    "A3_learned": "unchanged cached learned-router F prediction",
+    "limitation": "post-hoc weight intervention does not estimate effect of training from scratch with fixed router; independent experts and joint model have different compute/parameter use",
+    "GT_input": false
   }
 }

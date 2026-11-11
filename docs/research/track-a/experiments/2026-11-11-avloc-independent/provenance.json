@@ -26,11 +26,11 @@
     },
     {
       "git_copy": "PROTOCOL.json",
-      "sha256": "14c689c1a2e564310aa0c87e0570aba5a3dbd9a225eb4f064537c88a5f764f0e"
+      "sha256": "e3f4cdb4e3c066ad65d35ed0eecdcc9959c6047dedd1e72264058c9ad6f8faea"
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "2e1a2748ff4397a87c6db442cfb9eddced00915d63a50c6a67ef20ecfebb0434"
+      "sha256": "6c9e44efac2eaede8c4db45a8c1577a3edb8458a06c4c3122676b661826faf49"
     },
     {
       "git_copy": "architecture_test.json",
@@ -87,6 +87,10 @@
     {
       "git_copy": "expert_training_queue.json",
       "sha256": "5a255023d9ea2ca776285da214568ff5f091fe16fb9e35ddb8b968053542152c"
+    },
+    {
+      "git_copy": "fusion_predictions_test.json",
+      "sha256": "f4aa29085491b3a225d2657a06154478d0127b2d39a523d67d8a5625dc954344"
     },
     {
       "git_copy": "geometry20_summary.json",
