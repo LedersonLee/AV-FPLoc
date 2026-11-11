@@ -8,6 +8,10 @@ def main():
   for mode in a.modes.split(','):
    for context in range(3):
     prefix=a.out/f'd{d}_{mode}_c{context}';repeat=5 if mode.startswith('stationary') else 1;start=time.perf_counter()
+    if mode.startswith('specular') or mode=='explicit_default':
+     source=Path('/opt/src/habitat-sim/src/deps/rlr-audio-propagation/RLRAudioPropagationPkg/data/mp3d_material_config.json');mat=json.loads(source.read_text())['materials'][0];mat['labels']=['audit_wall']
+     if mode!='explicit_default':mat['scattering'][1::2]=[0.]*len(mat['scattering'][1::2])
+     Path(str(prefix)+'_material.json').write_text(json.dumps(dict(materials=[mat])))
     with Path(str(prefix)+'.log').open('w') as f:subprocess.run([str(a.executable),str(prefix),mode,str(d),str(repeat)],stdout=f,stderr=subprocess.STDOUT,check=True)
     r=json.loads(Path(str(prefix)+'.json').read_text());r['context']=context;r['receipt_sha256']=hashlib.sha256(Path(str(prefix)+'.json').read_bytes()).hexdigest();r['file_prefix']=prefix.name;r['wall_seconds']=time.perf_counter()-start;r['files']=[dict(name=f.name,sha256=hashlib.sha256(f.read_bytes()).hexdigest(),bytes=f.stat().st_size) for f in sorted(a.out.glob(prefix.name+'*.f32'))];rows.append(r);(a.out/'manifest.json').write_text(json.dumps(rows,indent=2));print(mode,d,context,round(r['seconds'],3),flush=True)
 if __name__=='__main__':main()
