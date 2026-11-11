@@ -32,7 +32,7 @@ def main():
       for seed,rng in rngs.items():
        for p in selected:
         center=np.mean(p['times_ms']);delta=np.asarray(p['times_ms'])-center
-        random.append(measure(raw,np.full(6,rng.uniform(2,79))+delta,half))
+        random.append(measure(raw,np.full(6,rng.uniform(2+np.max(abs(delta)),79-np.max(abs(delta))))+delta,half))
         donor.append(measure(raws[donors[seed][qi]],p['times_ms'],half))
       # Reassign query waveform to each fixed window: exact scene time/distance
       # marginal preserved, including candidate/path counts and support strata.

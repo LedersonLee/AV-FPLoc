@@ -23,5 +23,8 @@ def main():
   for h in q['hypotheses']:
    for p in h['paths']:p['metrics']=measure(raw,p['times_ms'])
   cases.append(dict(name=f"HSSD · {r['scene']} · query {q['query_id']}",kind='hssd',segments=r['segments'],architecture=r['architecture'],hypotheses=q['hypotheses'],wave={'observed':envelope(raw)},note='Deterministic first query of scenes 1/7/12. Candidate geometry uses pure-visual Top20; no true pose is drawn or used. Gray native architectural slices audit FP support.'))
- data=json.dumps(cases,separators=(',',':'));template=Path(__file__).with_name('viewer_template.html').read_text();a.out.write_text(template.replace('__DATA__',data));print(a.out,a.out.stat().st_size)
+ summary=json.loads((a.root/'hssd_summary.json').read_text());rows=[]
+ for control in ['random','shifted','other_candidate','matched_marginal','full_early']:
+  x=next(x for x in summary['contrasts'] if x['control']==control and x['supported'] and x['half_ms']==.5 and x['ranks']=='all20' and x['metric']=='power_ratio');lo,hi=x['difference']['ci95'];rows.append(f"<tr><td>{control}</td><td>{x['aligned_mean']:.3f}</td><td>{x['control_mean']:.3f}</td><td>[{lo:.3f},{hi:.3f}]</td></tr>")
+ data=json.dumps(cases,separators=(',',':'));template=Path(__file__).with_name('viewer_template.html').read_text();a.out.write_text(template.replace('__DATA__',data).replace('__CONTROL_TABLE__',''.join(rows)));print(a.out,a.out.stat().st_size)
 if __name__=='__main__':main()
