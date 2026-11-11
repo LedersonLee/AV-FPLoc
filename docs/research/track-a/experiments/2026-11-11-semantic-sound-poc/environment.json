@@ -1,0 +1,10 @@
+{
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "numpy": "1.21.5",
+  "scipy": "1.8.0",
+  "matplotlib": "3.5.1",
+  "Pillow": "9.0.1",
+  "native_image": "track1-soundspaces-echoloc:ktx-hssd-20261015",
+  "native_image_id": "sha256:6abd00f2d4bbab222532b6f1c001577afe947d7f501e61936066dcd1dcae722b",
+  "RLR_commit": "4fd446b4abb5c71fb7a232a083bbddd65f25fc6f"
+}

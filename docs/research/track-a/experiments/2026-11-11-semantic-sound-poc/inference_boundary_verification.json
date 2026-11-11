@@ -1,0 +1,7 @@
+{
+  "posterior_sha256": "5f4b1043e73b46c688d655b78487431f43035f2f717e2e7759fe9fdf9ca301d5",
+  "note": "Earlier inference dictionaries contained unused generation support, never selected-source identity; boundary now explicitly strips generation. Verify exact numerical equivalence.",
+  "posterior_after_sha256": "5f4b1043e73b46c688d655b78487431f43035f2f717e2e7759fe9fdf9ca301d5",
+  "bitwise_identical": true,
+  "final_execution_sha": "8fe5e91946ae41b0542f4ec9482c82be4cd29e26"
+}

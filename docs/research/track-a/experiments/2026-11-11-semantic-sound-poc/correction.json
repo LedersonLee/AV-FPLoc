@@ -1,0 +1,16 @@
+{
+  "reason": "cast_ray backend false-negative floor control; replace by actual six-cardinal depth clearance at height1.2m",
+  "invalid_source_points": 16,
+  "original_source_points": 1108,
+  "retained_source_points": 1092,
+  "initial_metrics_path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/metrics.json",
+  "initial_metrics_sha256": "cfa94659b792c7f4b519e527f582e776c8af4b8fc6194b1d837edeebd52933be",
+  "initial_delta_pp": 4.838709677419355,
+  "execution_sha": "77ad36897f62d466b9d5975a64f65800769a962d",
+  "threshold_m": 0.15,
+  "threshold_preexisting": true,
+  "native_audio_scope": "same preserved source positions and RIR; selected RIR source positions independently confirmed in depth-valid pool",
+  "raw_parent": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111",
+  "final_oracle_execution_sha": "8fe5e91946ae41b0542f4ec9482c82be4cd29e26",
+  "inference_boundary_cleanup": "generation fields removed from model arguments; posterior bitwise identical"
+}

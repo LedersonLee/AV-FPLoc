@@ -1,0 +1,10 @@
+{
+  "wall_seconds_since_initial_audit": 1248.3122429847717,
+  "study_total_bytes": 24096982,
+  "physical_rir_records": 33,
+  "primary_native_seconds": 37.34329946897924,
+  "depth_validation_seconds": 73.1269031278789,
+  "direct_probe_seconds": 3.3658885080367327,
+  "gpu_used": false,
+  "paid_resources_used": false
+}

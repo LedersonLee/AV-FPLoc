@@ -114,3 +114,10 @@ AVLoc Router analysis implementation update (2026-11-11): [replay-checked weight
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | Reflection Timing & Renderer Physics Audit / reflection_timing_audit_20261111 | 2026-11-11 | A | 완료·Outcome C(Renderer-dependent Artifact). 기존96RIR 검증/60peak 재생; 신규420mono. Scattering0.5→0만 변경해 peak bias2m +2.347→−0.134ms,6m +6.168→+0.114ms. 잔여 절대오차/내부path GT 미확보로 first-order 정렬은 미검증. HSSD D gate 실패로 생략; Experiment2–4 미수행. 이전 결과 보존 및 원인 해석 확장. | Exploratory (재사용 통제 환경·사후 원인 진단; 독립 Test 아님) | [RESEARCH_REPORT](track-a/experiments/2026-11-11-reflection-timing-audit/RESEARCH_REPORT.md) | C API `4a9070a5faa60bb9f26c60f78f78edac862b3ffb`; runner `f5d16dbbdd6b02826143c6b9136b06588fc7ecbb`; estimators `f86af5d81ef89ee46c56ae9e9ce6529d58a81a17`; scattering `46c1ddfdea29e30f6230126752b27a735f9b84d1`; final audit `65e7eb1588fd7d99a84f6cb5da201dff02269ab1`; pilot dirty/failed provenance는 REPRODUCIBILITY 참조 |
+
+
+## Track A — semantic_sound_poc_20261111
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| HSSD Semantic Sound Pose Disambiguation / semantic_sound_poc_20261111 | 2026-11-11 | A | 완료·Oracle 이득 불확실/물리6mic 부분 실패. 1scene124RGB×3seeds: B0 58.06%, B3 63.17%, +5.11pp CI[-2.15,12.63]. B1=B0; 15°noise 이득 없음. 165가구 포함 RIR, 4/6조건TDOA<1sample; 거실 직접음 차단 및10cm receiver sphere 한계. 무효 cast_ray 검출 후16/1108source points 제거·모든 대조 재실행, 초기 결과 보존. 실제 시스템 개선 주장은 No-go. | Exploratory (training scene·synthetic source·GT bearing·upstream teacher/평가 재사용) | [report](track-a/experiments/2026-11-11-semantic-sound-poc/report.md) | primary renderer `ee9e56cd9027011a4c08132928b06d09e352ce4e`; depth-corrected evaluation `77ad36897f62d466b9d5975a64f65800769a962d`; final inference boundary replay `8fe5e91` (full SHA in correction.json); diagnostics dirty-source provenance in manifest/reproduction |

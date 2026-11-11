@@ -1,0 +1,31 @@
+[
+  {
+    "type": "success",
+    "seed": 42,
+    "query": 128,
+    "q": 10,
+    "selection": "first qualifying seed/query, descriptive not representative frequency",
+    "image": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/UnLoc/RGB/104862621_172226772/rgb/00128.png",
+    "visual_top": 0,
+    "fused_top": 2,
+    "valid_candidates": [
+      2,
+      4
+    ],
+    "fp_line_clear": false
+  },
+  {
+    "type": "failure",
+    "seed": 42,
+    "query": 292,
+    "q": 19,
+    "selection": "first qualifying seed/query, descriptive not representative frequency",
+    "image": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/UnLoc/RGB/104862621_172226772/rgb/00292.png",
+    "visual_top": 0,
+    "fused_top": 2,
+    "valid_candidates": [
+      0
+    ],
+    "fp_line_clear": true
+  }
+]

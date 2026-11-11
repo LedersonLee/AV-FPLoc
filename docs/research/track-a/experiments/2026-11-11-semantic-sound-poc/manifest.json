@@ -1,0 +1,709 @@
+{
+  "study": "2026-11-11-semantic-sound-poc",
+  "scene": "104862621_172226772",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "code_head": "47fc88265fa10a53ef5225ebc961ae5644a9db02",
+  "primary_execution_sha": "ee9e56cd9027011a4c08132928b06d09e352ce4e",
+  "initial_base": "785240510bb1990da9e662ff06610de0a7035d93",
+  "sources": [
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/.gitignore",
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/PROTOCOL.md",
+      "sha256": "d74b53dcc9fdbb5db8141095b7648cf1ae8005881c933f56043ffc79dfc3ddf9"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/analyze_audio.py",
+      "sha256": "deaf700b41c5614bcbbe7b4ba233920b59014c32b79bcddefeea62ced1e5ffb6"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/apply_depth_correction.py",
+      "sha256": "ab509ec68abf0fa52474d96138ee5a215010ef51990bc8e9b7c9b3d2bdc5e458"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/build_report.py",
+      "sha256": "0a81ed65bd0103c715eeacd61a645f66026856e9426c3b44031be04501c1a4d0"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/check_geometry_backend.py",
+      "sha256": "d0c7c589702ecfe40ad2b897e6da9cf101c892d35bae244442f2e44667041689"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/config.json",
+      "sha256": "1d76a97c5131462abefe884db163f712bb77bac4005812ee25018748697893d1"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/make_figures.py",
+      "sha256": "d21beeac94e338b87e241df3c591c673196d4c5dee22788ba97f3ded3b8ca382"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/model.py",
+      "sha256": "5737159cf38917d9941275a379b2dbfad8e9214b8206cbcdce12965d7027835c"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/requirements.txt",
+      "sha256": "d7cbf935c00da6a34ee060ae40ed9184d53fb34a9907864b670484639f9f95cc"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/run_acoustic.py",
+      "sha256": "4edbf4925c957d06daf5de0719d42b338009b4965d5d6de3bbe5581a266a7e31"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/run_direct_probe.py",
+      "sha256": "cb519f847040d97d46488709fbd0b225a1e4763403b38e5d48c9dbaa5cf66213"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/run_native.sh",
+      "sha256": "34338adca34bbe9e844133b18a502e23e2e5f7c4a43eaf04a35a22f31d97ac72"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/run_oracle.py",
+      "sha256": "833c6dc7b0df4d1967c18377cff382823650ba8e6c89b2740b88dde543d0d88f"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/run_prepare.py",
+      "sha256": "c7023db68f2ac27a2d690a208e1616dab9ab1f1104cd25537c39848c4b92e3b1"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/subgroups.py",
+      "sha256": "0c7a6b3632f2bf1fcc61939796cbc1a73f88bdce8f2c5ff60116942a72e4ab04"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/test_sanity.py",
+      "sha256": "dc67ee457667a2892c6c58c983e0912d49e228c26eb21f64e438c29c7b7d1ac4"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/validate_depth_clearance.py",
+      "sha256": "8a1299a209f1203d4d1391e9fbccc2216c22bf7ce4119866c4e1d5d5286ec204"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/verify_results.py",
+      "sha256": "3c771cf1ab2b2851bbada8f359e4adbb30505a8f924a22ea95b31a88fbf06ea5"
+    }
+  ],
+  "inputs": {
+    "files": [
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/source/hssd-hab/semantics/scenes/104862621_172226772.semantic_config.json",
+        "bytes": 5891,
+        "sha256": "37b5a80c7ebe150555ec03356b8ff89e6536121ead160a3527fc340e5f154fc6"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/2DFP/104862621_172226772/map.png",
+        "bytes": 6027,
+        "sha256": "c5e9107fbd3ea5d8c1f778593df37deab3998f15f07b950605018d81b17ea2ee"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/2DFP/104862621_172226772/floorplan_metadata.json",
+        "bytes": 1115,
+        "sha256": "067c1d52d94dcf85ff88e042cdec28337a9d08a8fec5e85f9491b888b6655b79"
+      },
+      {
+        "path": "/home/jeongeonlee/track1/experiments/directional_structure_20261109/candidates/104862621_172226772/pure_visual.npz",
+        "bytes": 164229,
+        "sha256": "7fda089b6e725e085e8292984d67bfaff0f0b0fff37ceaf20e3abd4586786c64"
+      },
+      {
+        "path": "/home/jeongeonlee/track1/experiments/directional_tribranch_20261109/data/104862621_172226772/observations.npz",
+        "bytes": 2447958,
+        "sha256": "3c93b31a2e43ab4549e92981e74c2e7e3e973c02dfde8ecc9c6607a8adc7b7aa"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/manifests/scene_splits_v1.json",
+        "bytes": 3875,
+        "sha256": "af1f5ded1e3cc8286b7f6fc4155f39761b0afc12c04c33313ea43f40705f2dc8"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/source/hssd-hab/scenes/104862621_172226772.scene_instance.json",
+        "bytes": 55562,
+        "sha256": "6f62fa866e5890235d0da4aa43b350a1350c9d7a7e8211b4dcf9d396d7cf9eed"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/source/hssd-hab/stages/104862621_172226772.stage_config.json",
+        "bytes": 244,
+        "sha256": "a31c1aa34df4ea687dbb2a7c13b50038e05ea3ba94c6e3f270cbb6415ab78767"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/source/hssd-hab/stages/104862621_172226772.glb",
+        "bytes": 1331100,
+        "sha256": "c0b0b4d29b5b0b0161efa9894b67ead501c6691a6b16e9225751e7dbb450a5ba"
+      },
+      {
+        "path": "/file2/jeongeon/AV-FPLoc/datasets/HSSD/RIR/Geometry/104862621_172226772/furnished.scene_dataset_config.json",
+        "bytes": 12116,
+        "sha256": "6d42272b41459e187bb62928f5a55df8ba3d718bc2304c1d7b72745bcf7f65f0"
+      },
+      {
+        "path": "/home/jeongeonlee/track1/AV-FPLoc/experiments/semantic_sound_poc/config.json",
+        "bytes": 2151,
+        "sha256": "1d76a97c5131462abefe884db163f712bb77bac4005812ee25018748697893d1"
+      },
+      {
+        "path": "/home/jeongeonlee/track1/realW_exp/analysis/channel_map/uma8_channel_map.json",
+        "bytes": 8829,
+        "sha256": "7e69de7c7a15dfe066d7688a141fe9edee3bd4f374d3aa087fb733567022871a"
+      }
+    ],
+    "scene": "104862621_172226772",
+    "queries_before": 128,
+    "queries_after": 124,
+    "visual_prior": "actual cached pure-visual NMS20 raw scores; softmax T=1 conditional, not calibrated posterior",
+    "exposure": "Train scene; visual teacher Train116/Val19 and repeated development upstream; Exploratory",
+    "images_found": 124,
+    "test_observations_read": false
+  },
+  "config": {
+    "study": "2026-11-11-semantic-sound-poc",
+    "scene": "104862621_172226772",
+    "root": "/file2/jeongeon/AV-FPLoc/datasets/HSSD",
+    "workspace": "/home/jeongeonlee/track1",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "scene_selection": "first compact training scene with literal living room, kitchen and repeated bathroom labels; selection from metadata, not performance",
+    "ambiguity_max_top2_log_gap": 1.0986122886681098,
+    "candidate_count": 20,
+    "visual_temperature": 1.0,
+    "alpha": 1,
+    "beta": 1,
+    "angular_sigma_deg": 15,
+    "noise_deg": [
+      0,
+      15,
+      30,
+      60
+    ],
+    "event_probabilities": {
+      "running_water": 0.3,
+      "toilet_flush": 0.3,
+      "tv_speech": 0.3,
+      "silence": 0.1
+    },
+    "room_event_weights": {
+      "running_water": {
+        "kitchen": 1,
+        "bathroom": 1,
+        "laundryroom/mudroom": 0.5,
+        "default": 0.05
+      },
+      "toilet_flush": {
+        "bathroom": 1,
+        "toilet": 1,
+        "default": 0.02
+      },
+      "tv_speech": {
+        "living room": 1,
+        "tv": 1,
+        "bedroom": 0.25,
+        "default": 0.05
+      }
+    },
+    "source_height_m": 1.2,
+    "listener_height_m": 1.5,
+    "grid_spacing_m": 0.2,
+    "clearance_m": 0.15,
+    "source_generation_count_per_room": 64,
+    "source_integration_count_per_room": 128,
+    "geometry_seed": 20261111,
+    "bootstrap_seed": 20261111,
+    "bootstrap_repetitions": 10000,
+    "mic_raw_channels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mic_clockwise_angles_deg": [
+      257.14285714285717,
+      308.57142857142856,
+      205.71428571428572,
+      154.28571428571428,
+      102.85714285714286,
+      51.42857142857143
+    ],
+    "mic_radius_m": 0.05,
+    "mic_radius_status": "provisional: radius not measured; 6-channel subset of local 7-MEMS angular calibration, not uniform hexagon",
+    "sample_rate": 48000,
+    "sound_speed": 343,
+    "audio_seeds": [
+      42,
+      43,
+      44
+    ],
+    "rir_headings_deg": [
+      0,
+      90
+    ],
+    "indirect_rays": 20000,
+    "source_rays": 512,
+    "ray_depth": 50,
+    "diffraction": true,
+    "max_diffraction_order": 10,
+    "acoustic_threads": 2,
+    "materials": false,
+    "scope": "one training scene, oracle geometric bearing; no learned fusion or training"
+  },
+  "environment": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "matplotlib": "3.5.1",
+    "Pillow": "9.0.1",
+    "native_image": "track1-soundspaces-echoloc:ktx-hssd-20261015",
+    "native_image_id": "sha256:6abd00f2d4bbab222532b6f1c001577afe947d7f501e61936066dcd1dcae722b",
+    "RLR_commit": "4fd446b4abb5c71fb7a232a083bbddd65f25fc6f"
+  },
+  "acoustic_settings": {
+    "diffraction": 1,
+    "direct": 1,
+    "directRayCount": 500,
+    "directSHOrder": 3,
+    "frequencyBands": 4,
+    "globalVolume": 1.0,
+    "indirect": 1,
+    "indirectRayCount": 20000,
+    "indirectRayDepth": 50,
+    "indirectSHOrder": 1,
+    "maxDiffractionOrder": 10,
+    "maxIRLength": 4.0,
+    "meshSimplification": 0,
+    "sampleRate": 48000.0,
+    "sourceRayCount": 512,
+    "sourceRayDepth": 50,
+    "temporalCoherence": 0,
+    "threadCount": 2,
+    "transmission": 0,
+    "unitScale": 1.0
+  },
+  "outputs": [
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/acoustic_pairs.json",
+      "bytes": 773,
+      "sha256": "5f6f68946cd4b53511dd9addf6fdc8ef2867716421472b6f82fbd11b51a6e28a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/acoustic_render.json",
+      "bytes": 24604,
+      "sha256": "195e57ca1dd98553503224f4d4e71829a5d7ea5ffc3949f7be749f5e1843beab"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/alignment.json",
+      "bytes": 1518,
+      "sha256": "fb45988a5eca5d7eb9bfcdcedfa86816ff62e4d918bc128c922c9068f54daebb"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/audio_analysis.log",
+      "bytes": 1847,
+      "sha256": "e61ec6c15bb36d2b076a9dd1c5384a91c50e075c79f79d5740b2a0f2829ff318"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/audio_validation.json",
+      "bytes": 24657,
+      "sha256": "17a0f430ddc4fbbef6e02dd8c4a6b042a706a2a7465d3e2de0b65ad78bf5ac3a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/audit.md",
+      "bytes": 4424,
+      "sha256": "e204d12612bddbcba37781fe9df6de809b4a6f03524ea9de7695590a69c45d3b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/broadband_received_6ch.wav",
+      "bytes": 691426,
+      "sha256": "02a353cfadf480c2d75ff37685bc03a221f308f4a634449f709a553827a5e7a0"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/broadband_source.wav",
+      "bytes": 19258,
+      "sha256": "9905501c623c83b8a6147c2b34a289a7fd8e97e52e0be4018debf7e8ca2152a3"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/collision_backend_check.json",
+      "bytes": 650,
+      "sha256": "b49b25b64e9004686af8774c35bbc798e3a82cd1ef1eb3e57b82f8832a6dce1b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/collision_backend_physics_check.json",
+      "bytes": 650,
+      "sha256": "b49b25b64e9004686af8774c35bbc798e3a82cd1ef1eb3e57b82f8832a6dce1b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/config.json",
+      "bytes": 2151,
+      "sha256": "1d76a97c5131462abefe884db163f712bb77bac4005812ee25018748697893d1"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/correction.json",
+      "bytes": 1000,
+      "sha256": "ebba6b231f55882be355714d97517b0ca833cbf032fa20004991fd022549a7b9"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/direct_probe.json",
+      "bytes": 4333,
+      "sha256": "02be030025c9bf65140a78036e21bbb86c96dd3073df46f0e52fcf55dd55d91e"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/environment.json",
+      "bytes": 377,
+      "sha256": "5eeccb4b83ceeeed2073395e26a9e490924648e16b7781e70fbe3b2ff0ed1c42"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/evaluation_truth.npz",
+      "bytes": 1342,
+      "sha256": "25ad6e884cbb693f0ec95001560b021f5ff82c24f41d0ceda2ef0904adee23d2"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figure_cases.json",
+      "bytes": 764,
+      "sha256": "8b60d7b2b3f22d4c1bf675aadf027254365cfa733d4370a76f9023add558722c"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/broadband_spectrogram.png",
+      "bytes": 1364220,
+      "sha256": "a190b24e01b6601f31fd01ee28eeeddc2baed3fcdf64955bb32474da59dc37de"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/case_failure.png",
+      "bytes": 349858,
+      "sha256": "cd038cf3aa456a896b3609c8710561f828db8828423fa94d0fc315eb6aa26b30"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/case_success.png",
+      "bytes": 275636,
+      "sha256": "f6d4096cb6be6810ed270aa88c9f07a4fed062f0eae0c7311cbf306e2501464b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/microphone_timing.png",
+      "bytes": 204829,
+      "sha256": "51a8cadb81b1e5445e5cce425e733b48796c6e93b9db8f04645f9711131ea3bc"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/noise_sensitivity.png",
+      "bytes": 67612,
+      "sha256": "96515ea79c88297e28e9fbc58b4a08e3be385ba68fcd59f0441c4b4be5cde9ec"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/figures/semantic_overlay.png",
+      "bytes": 97427,
+      "sha256": "4c7ca56091a0fc8721940356069960a1f6037a2bbd56029dfd495bd4b07c6bb7"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/geometry_validation.json",
+      "bytes": 5375,
+      "sha256": "97715c4f9d946e5af26c6b1cebd148e2a79a1b102452f22f0804fad570174c32"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/images.json",
+      "bytes": 11815,
+      "sha256": "b3bcf954fe44d7ad82d360c746921bbe26bc0dd88b1ac1006a9ad4520d03b51b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/inference_boundary_before.json",
+      "bytes": 284,
+      "sha256": "dbd5d419d1f6c702b080a9352b4bd9945a832bc1b750852dc6b1853955f624ed"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/inference_boundary_verification.json",
+      "bytes": 478,
+      "sha256": "7c297f3e39ee08075478223739530d1e3e3e7fc35fd09681f7ad395867f90864"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/inference_candidates.npz",
+      "bytes": 30970,
+      "sha256": "45249050a5b9be80a5ac95912793fbfacffd3eeaeb30a2ba1a09fc1c40a606b8"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/input_manifest.json",
+      "bytes": 3119,
+      "sha256": "06f4752c60f5971a52dba10c0c65cd81413dfff1776bcb72067e29ec8e4969e3"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/metrics.csv",
+      "bytes": 2266,
+      "sha256": "1150eebf8468b92b1cf73c9504b4b1a23d9dee409ea02a9c92c996baaa2f7bdb"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/metrics.json",
+      "bytes": 20468,
+      "sha256": "214d4020b0c9ed7af59582e1130b1b0bc3d168a19f84ac03f2a327aa3984ce64"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/oracle.log",
+      "bytes": 5749,
+      "sha256": "9cd476e3a4ba469a719cc203210246c6b2428d3c9c90fd215d1b57d93f3e0a85"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/oracle_boundary_verified.log",
+      "bytes": 5749,
+      "sha256": "a5afea133ffc6077ef1817ccae045925d8585cf3d9f1c2e068da9031c722bc3c"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/oracle_observations.json",
+      "bytes": 177296,
+      "sha256": "c8108b75bb379c132698ce823be11d74eae5a930bc84c4fdb1ba86adf3fa01ac"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/oracle_predictions.npz",
+      "bytes": 452510,
+      "sha256": "954ea4439a218a0db7b799e21bd45715f416c92904c6522459807225d290c634"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/protocol.md",
+      "bytes": 1457,
+      "sha256": "d74b53dcc9fdbb5db8141095b7648cf1ae8005881c933f56043ffc79dfc3ddf9"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/receiver_radius_audit.txt",
+      "bytes": 1521,
+      "sha256": "3e6c172ea044f38b2fe0bbaeb46498a08097c011e5813db6510d6c58f21f1828"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/report.md",
+      "bytes": 15409,
+      "sha256": "01ef53ae175c639a689a8c0f8923796f0f00fa2c8a1d7869548748b0900c1e25"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/reproduction.md",
+      "bytes": 1954,
+      "sha256": "0bfe1e0856329a79566bf45f2dbf422884bd891b552e30b7f7782703a3cc8d8a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/resource_summary.json",
+      "bytes": 317,
+      "sha256": "ca8ccc1a3d90749f4cc7527aa5151a99267b119a673aff36e390b7bc8bc37f33"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/source_depth_clearance.json",
+      "bytes": 333339,
+      "sha256": "bc32523e38232333effc8a997dd34aeba38e8c396f3bbabfbed63e10766e9f02"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/source_support.json",
+      "bytes": 92939,
+      "sha256": "465c6642a4d596b5e795bb707cc18afb63f87359786710dfe9aec45b7b05597d"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/subgroup_details.json",
+      "bytes": 3483,
+      "sha256": "a78b2de8c03eae05677958c23578509742997fdc3daa2ef7d8ea0bfa8ccb9a19"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/validated/verification.json",
+      "bytes": 905,
+      "sha256": "d722bb5f7ad830855f6923cf7b6e7812128b95e73340baaddcd8f88dd7e3b6cb"
+    }
+  ],
+  "total_output_bytes": 4306759,
+  "external_native_outputs": [
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h0_s42.npy",
+      "bytes": 576320,
+      "sha256": "ece62a0ed3d9d98a7e12b0bc95796778c0de8bfa66f07ca37176984edf17dc4f"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h0_s43.npy",
+      "bytes": 707984,
+      "sha256": "aeb09d90dd33f9a56600fecf9a9ced66ae03239c17b0d47ea80284ba63e8b08b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h0_s44.npy",
+      "bytes": 707984,
+      "sha256": "7f58ca09d9250316a1b630353c0234247ef06ee7c5745d6eb922ed7b0970c655"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h90_s42.npy",
+      "bytes": 592568,
+      "sha256": "a6fea4e15edbb05f09e2501bc88325b2a77c136ef3c73457014195bb48949382"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h90_s43.npy",
+      "bytes": 707984,
+      "sha256": "5886296817dc73b0efa7b385f2d907923907bb88a2223697c9a1b366e1a3a1c6"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p0_h90_s44.npy",
+      "bytes": 707984,
+      "sha256": "e1ae69021183b1f29f9e317b114f8dbc66772bf4bf6b6861fba0131f8ff9fa83"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h0_s42.npy",
+      "bytes": 708920,
+      "sha256": "8828f3d4ece98da4503e5a3210fb19534a283078cf7fed9d95f908a4000307cd"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h0_s43.npy",
+      "bytes": 708920,
+      "sha256": "423713169a23fb4bd020c2399aa1186891dcd458d5ac9be21999d674dc1cbb5e"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h0_s44.npy",
+      "bytes": 708920,
+      "sha256": "64f028c428907d9b7f41446f6610fd8cd926d77b0335027c2f049cb1461cae5b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h90_s42.npy",
+      "bytes": 708920,
+      "sha256": "f74066d79ec2187dcfa9cf57a4c2a1050871772a7440928d6490dae8d2c8cfaf"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h90_s43.npy",
+      "bytes": 708920,
+      "sha256": "9ba2d35d955870f3908337edfa4220cc5043426d2e7e921e93324a040b9f951d"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p1_h90_s44.npy",
+      "bytes": 708920,
+      "sha256": "98b718e99dfdb2c1bbdd87217f9ea078aec509faf38f7fcbc4582c39c312f27a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h0_s42.npy",
+      "bytes": 717176,
+      "sha256": "e92ff9f647abd31e5d821f8a2cc1098c9136bbe601fc72281bb3d1712ccf8993"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h0_s43.npy",
+      "bytes": 717176,
+      "sha256": "73b5b24f6a69e693dc009cf07ed2f8c984635b0d609181f85032fe9cff7db311"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h0_s44.npy",
+      "bytes": 717176,
+      "sha256": "6887598448c1ab66ecdd03fab819a4418ac383127d4d09e55c19e6c6762fb67c"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h90_s42.npy",
+      "bytes": 717176,
+      "sha256": "17f726b766ae0655e4ec2ea7002ab08d8cc5eab23c2464cb1699bff0a4c7b968"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h90_s43.npy",
+      "bytes": 717176,
+      "sha256": "456801c03b50ebc08f6ef24f03790fc74ef48040bab0caacea719fae43ef895b"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/furnished_p2_h90_s44.npy",
+      "bytes": 717176,
+      "sha256": "6aaed4322f5a4246dda30b832fcbb0bfd25efc723388c566feb69e282a0139c2"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/stage_p0_h0_s42.npy",
+      "bytes": 615248,
+      "sha256": "bf0fa9242354905067daa3def1722a71f332698dd0e4498bfad47ea41553dfaf"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/stage_p0_h0_s43.npy",
+      "bytes": 615320,
+      "sha256": "ccd0efe64b81a3ba3018448b4d6a0eee97f659db8da694f4e2aa8334e550832a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/rirs/stage_p0_h0_s44.npy",
+      "bytes": 615320,
+      "sha256": "3c9a9d0c970139dc6270fff4494dc36a32841d961a9367fc026e03ef2d362978"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p0_h0.npy",
+      "bytes": 53144,
+      "sha256": "36c29ba94af87a7a8e8dfef70df5a974c52ce7d36542327fe6ca0703003d850a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p0_h90.npy",
+      "bytes": 53144,
+      "sha256": "93b5c4251b6858605211ce67acce146dfc090ae72ed4dc0a12150a7722228409"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p1_h0.npy",
+      "bytes": 54080,
+      "sha256": "b2f8bb1f1900a65c6fa7ea9e21a820859f0f80bb636e3035867e6304f5edddda"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p1_h90.npy",
+      "bytes": 54080,
+      "sha256": "79d0b8bf551aad2c5f58404bf47204bb57caae70e97143cdb6fb374a582227c8"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p2_h0.npy",
+      "bytes": 62336,
+      "sha256": "caf92d4ca20f376e97eba9a240a63217cfdf3184f8b7c7d13296232455a5aa46"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/furnished_p2_h90.npy",
+      "bytes": 62336,
+      "sha256": "caf92d4ca20f376e97eba9a240a63217cfdf3184f8b7c7d13296232455a5aa46"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p0_h0.npy",
+      "bytes": 53144,
+      "sha256": "36c29ba94af87a7a8e8dfef70df5a974c52ce7d36542327fe6ca0703003d850a"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p0_h90.npy",
+      "bytes": 53144,
+      "sha256": "93b5c4251b6858605211ce67acce146dfc090ae72ed4dc0a12150a7722228409"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p1_h0.npy",
+      "bytes": 54080,
+      "sha256": "b2f8bb1f1900a65c6fa7ea9e21a820859f0f80bb636e3035867e6304f5edddda"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p1_h90.npy",
+      "bytes": 54080,
+      "sha256": "79d0b8bf551aad2c5f58404bf47204bb57caae70e97143cdb6fb374a582227c8"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p2_h0.npy",
+      "bytes": 62336,
+      "sha256": "101a6d025fa63beb9851941baf73090d987884369ab5f24f684cccae3f90fcc0"
+    },
+    {
+      "path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/direct_probe/stage_p2_h90.npy",
+      "bytes": 62336,
+      "sha256": "d490f323988a0f97f56352130156251d5db067cdee987d57b3366c33abaa4172"
+    }
+  ],
+  "evidence_level": "Exploratory",
+  "track": "A / semantic hypothesis discrimination; no learned Track B",
+  "local_only": [
+    "RIR",
+    "WAV",
+    "raw predictions",
+    "full logs",
+    "source pools"
+  ],
+  "correction": {
+    "reason": "cast_ray backend false-negative floor control; replace by actual six-cardinal depth clearance at height1.2m",
+    "invalid_source_points": 16,
+    "original_source_points": 1108,
+    "retained_source_points": 1092,
+    "initial_metrics_path": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111/metrics.json",
+    "initial_metrics_sha256": "cfa94659b792c7f4b519e527f582e776c8af4b8fc6194b1d837edeebd52933be",
+    "initial_delta_pp": 4.838709677419355,
+    "execution_sha": "77ad36897f62d466b9d5975a64f65800769a962d",
+    "threshold_m": 0.15,
+    "threshold_preexisting": true,
+    "native_audio_scope": "same preserved source positions and RIR; selected RIR source positions independently confirmed in depth-valid pool",
+    "raw_parent": "/home/jeongeonlee/track1/experiments/semantic_sound_poc_20261111",
+    "final_oracle_execution_sha": "8fe5e91946ae41b0542f4ec9482c82be4cd29e26",
+    "inference_boundary_cleanup": "generation fields removed from model arguments; posterior bitwise identical"
+  },
+  "git_scope": "only explicit study code/docs/index paths",
+  "resource_summary": {
+    "wall_seconds_since_initial_audit": 1248.3122429847717,
+    "study_total_bytes": 24096982,
+    "physical_rir_records": 33,
+    "primary_native_seconds": 37.34329946897924,
+    "depth_validation_seconds": 73.1269031278789,
+    "direct_probe_seconds": 3.3658885080367327,
+    "gpu_used": false,
+    "paid_resources_used": false
+  }
+}

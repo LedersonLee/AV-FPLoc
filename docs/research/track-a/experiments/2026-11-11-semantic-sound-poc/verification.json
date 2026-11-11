@@ -1,0 +1,41 @@
+{
+  "tests": {
+    "candidate_bank_reconstruction": true,
+    "independent_success_labels": true,
+    "source_schedule_independent_of_robot": true,
+    "scalar_likelihood_max_error": 2.220446049250313e-16,
+    "disjoint_valid_source_support_points": 1092
+  },
+  "contrasts": {
+    "B3-B2": {
+      "delta_pp": 7.258064516129034,
+      "ci95_pp": [
+        3.225806451612903,
+        11.559139784946236
+      ]
+    },
+    "B3-C1": {
+      "delta_pp": 20.43010752688172,
+      "ci95_pp": [
+        14.784946236559144,
+        26.075268817204293
+      ]
+    },
+    "B3-C2": {
+      "delta_pp": 38.97849462365592,
+      "ci95_pp": [
+        32.795698924731184,
+        45.43010752688172
+      ]
+    }
+  },
+  "position_cluster_sensitivity": {
+    "unique_positions": 75,
+    "delta_pp": 5.10752688172043,
+    "ci95_pp": [
+      -2.067587209302325,
+      12.308123249299713
+    ]
+  },
+  "checks_passed": true
+}
