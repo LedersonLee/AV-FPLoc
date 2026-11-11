@@ -7,7 +7,7 @@ from model import posterior,softmax,bearing,wrap,room_weights
 
 def write(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();o=a.out;c=json.loads((o/'config.json').read_text());support=json.loads((o/'source_support.json').read_text());d=np.load(o/'inference_candidates.npz');gt=np.load(o/'evaluation_truth.npz');np.testing.assert_array_equal(d['query_ids'],gt['query_ids']);poses=d['poses'];scores=d['scores'];truth=gt['truth'];n=len(truth);start=time.monotonic();labels=[r['label'] for r in support];names=['B0','B1','B2','B3','C1','C2','B3_noise15','B3_noise30','B3_noise60'];pout=np.empty((len(c['seeds']),len(names),n,20));records=[]
+ ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();o=a.out;c=json.loads((o/'config.json').read_text());support=json.loads((o/'source_support.json').read_text());d=np.load(o/'inference_candidates.npz');gt=np.load(o/'evaluation_truth.npz');np.testing.assert_array_equal(d['query_ids'],gt['query_ids']);poses=d['poses'];scores=d['scores'];truth=gt['truth'];n=len(truth);start=time.monotonic();labels=[r['label'] for r in support];inference_support=[dict(label=r['label'],integration=r['integration']) for r in support];names=['B0','B1','B2','B3','C1','C2','B3_noise15','B3_noise30','B3_noise60'];pout=np.empty((len(c['seeds']),len(names),n,20));records=[]
  meta=json.loads((Path(c['root'])/'2DFP'/c['scene']/'floorplan_metadata.json').read_text());free=np.asarray(Image.open(Path(c['root'])/'2DFP'/c['scene']/'map.png'))==255;origin=np.array([meta['world_bounds_m']['x_min'],meta['world_bounds_m']['z_min']]);spacing=meta['map_spacing_m']
  for si,seed in enumerate(c['seeds']):
   rng=np.random.default_rng(seed);events=list(c['event_probabilities']);events=rng.choice(events,size=n,p=[c['event_probabilities'][e] for e in events]);sources=[];roomids=[]
@@ -23,7 +23,7 @@ def main():
    for j,name in enumerate(names):
     observed=mismatch[q] if name=='C2' else angle
     if name.startswith('B3_noise'):observed=wrap(angle+np.deg2rad(int(name[8:]))*unit_noise[q])
-    pout[si,j,q]=posterior(poses[q],scores[q],str(event),observed,support,c,method=name,labels=shuffled if name=='C1' else None)
+    pout[si,j,q]=posterior(poses[q],scores[q],str(event),observed,inference_support,c,method=name,labels=shuffled if name=='C1' else None)
    records.append(dict(seed=seed,query_id=int(d['query_ids'][q]),q=q,event=str(event),source_room=roomids[q],source_xyz=source.tolist() if event!='silence' else None,oracle_bearing_rad=angle if event!='silence' else None,fp_line_clear=los,shuffled_labels=shuffled))
  np.testing.assert_allclose(pout.sum(-1),1,atol=1e-12);np.testing.assert_array_equal(pout[:,0],pout[:,1]);dist=np.linalg.norm(poses[:,:,:2]-truth[:,None,:2],axis=-1);yaw=np.abs(wrap(np.deg2rad(poses[:,:,2]-truth[:,None,2])));valid=(dist<=1)&(yaw<=np.pi/6+1e-10);best=pout.argmax(-1);correct=np.take_along_axis(np.broadcast_to(valid,(3,len(names),n,20)),best[...,None],axis=-1)[...,0];mass=(pout*valid[None,None]).sum(-1);entropy=-(pout*np.log(np.maximum(pout,1e-300))).sum(-1);covered=valid.any(-1)
  rng=np.random.default_rng(c['bootstrap_seed']);boot=rng.integers(n,size=(c['bootstrap_repetitions'],n));metrics=[]
