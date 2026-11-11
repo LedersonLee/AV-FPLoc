@@ -202,7 +202,7 @@ Test는scene/family식별메타데이터로제외확인만했다. 기존TrackB�
  # Compact scientific figure, not a screenshot of the viewer.
  fig,ax=plt.subplots(1,2,figsize=(12,4.5),constrained_layout=True)
  for v,col in [('base','#1767b0'),('removed','#15956f'),('moved','#db5b45')]:
-  raw=np.load(root/f'controlled/single_d2.0_{v}/rir.npy').astype(float);power=(raw[:,:3840]**2).mean(0);ax[0].plot(np.arange(3840)/48,power,label=v,color=col,lw=1)
+  raw=np.load(root/f'controlled/single_d2.0_{v}/rir.npy').astype(float);power=(raw[:,:3840]**2).mean(0);ax[0].plot(np.arange(384,1201)/48,power[384:1201],label=v,color=col,lw=1)
  ax[0].axvspan(11.66-.5,11.66+.5,color='#efb654',alpha=.5,label='predicted window');ax[0].set(xlim=(8,25),xlabel='Time (ms)',ylabel='Mean squared amplitude',title='Single wall, 2m: intervention response is late');ax[0].legend(fontsize=8)
  controls=['random','shifted','other_candidate','matched_marginal','full_early'];vals=[contrast(x)['difference'] for x in controls];y=np.arange(len(vals));means=[x['mean'] for x in vals];errs=np.array([[x['mean']-x['ci95'][0],x['ci95'][1]-x['mean']] for x in vals]).T;ax[1].errorbar(means,y,xerr=errs,fmt='o',color='#1767b0',capsize=4);ax[1].axvline(0,color='gray',lw=1);ax[1].set_yticks(y,controls);ax[1].set(xlabel='Aligned − control normalized power (95% scene CI)',title='HSSD: association, not verified wall identity');fig.savefig(docs/'evidence.png',dpi=180);plt.close(fig)
  for f in ['hssd_summary.json','controlled_analysis.json','timing_diagnosis.json','matched_subgroups.json','viewer_verification.json']:shutil.copyfile(root/f,docs/f)
