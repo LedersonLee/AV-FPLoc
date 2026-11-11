@@ -22,6 +22,8 @@ def main():
   ax=axes[row,0];ax.plot([0,1],[0,1],'--',color='gray',label='Ideal reliability')
   for label,detail,color in [('Native T=1',native['joint_event_calibration'],'#b44b40'),('Held-development temperature',cf['joint_calibration'],'#2472a4')]:
    bins=detail['bins'];ax.plot([b['confidence'] for b in bins],[b['accuracy'] for b in bins],'o-',color=color,label=label)
+   for point in bins:
+    if point['count']<30:ax.annotate('n='+str(point['count']),(point['confidence'],point['accuracy']),xytext=(5,-12 if point['accuracy']>.9 else 6),textcoords='offset points',fontsize=7,color=color)
   ax.set(xlim=(0,1),ylim=(0,1),xlabel='Predicted joint-neighborhood mass',ylabel='Observed joint success',title=f'{name.upper()} seed{cal["seed"]}: reliability');ax.legend(fontsize=8);ax.grid(alpha=.2)
   ax=axes[row,1];loss=np.array([values[scenes==s,:,0].mean(0) for s in np.unique(scenes)]).mean(0);ax.plot(temps,loss,'o-',markersize=3,color='#2472a4');ax.axvline(1,color='#b44b40',linestyle='--',label='Native T=1')
   for i,t in enumerate(sorted(set(results[name]['fold_temperatures']))):ax.axvline(t,color='#548b54',alpha=.7,linestyle=':',label='Fit-fold selected T' if i==0 else None)
