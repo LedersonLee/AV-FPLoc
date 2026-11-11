@@ -275,3 +275,7 @@ python /source/analyze_router.py --predictions /study/predictions/A3_seed42 --da
 ```
 
 The second command is for after A3 training and prediction completion. A0/A1/A2 validation remains the prerequisite for initiating A3 optimization.
+
+## Router replay input validation correction
+
+Source `151b969075837042309ad4244d0857952b8dc823` fixes a reproduced diagnostic validation defect: NumPy's replay assertion accepts a scalar fused mean/scale when every reconstructed entry equals that scalar. A synthetic eight-query constant-output example was accepted before the fix even though its saved fused predictions lacked query/direction axes. The diagnostic now requires exact nonempty query×36 fused arrays, finite values and positive saved scales before numerical replay. Existing valid-array moment and correlation controls still pass. Six analytic test cases pass, including scalar, missing-query-axis, singleton-axis and empty-query rejection. This changes input validation only; no training code, live queue snapshot, checkpoint, or experimental result changed. Actual A3 predictions are still pending, so this is an engineering correction, not a learned-model finding.
