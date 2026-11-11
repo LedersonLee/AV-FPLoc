@@ -12,7 +12,8 @@ from predict_hash import sha
 
 def router_statistics(z, target):
     target = np.asarray(target, dtype=float)
-    assert target.ndim == 2 and target.shape[1] == 36
+    assert target.ndim == 2 and target.shape[1] == 36 and len(target) > 0
+    assert np.isfinite(target).all()
     n = len(target)
     means = np.zeros((n, 36, 3), dtype=float)
     scales = np.zeros_like(means)
@@ -33,9 +34,14 @@ def router_statistics(z, target):
     assert np.all(weights[:, ~available] == 0), 'Unavailable visual expert must have zero weight'
     fused = (weights * means).sum(-1)
     scale = np.sqrt((weights * (2 * scales**2 + (means - fused[..., None])**2)).sum(-1) / 2)
-    np.testing.assert_allclose(fused, z['F_mu'], rtol=2e-5, atol=2e-6)
-    np.testing.assert_allclose(scale, z['F_scale'], rtol=2e-5, atol=2e-6)
-    assert np.isfinite(target).all()
+    # assert_allclose permits scalar broadcasting; require one saved value per
+    # query and direction before accepting a replay as complete.
+    saved_mu, saved_scale = np.asarray(z['F_mu']), np.asarray(z['F_scale'])
+    assert saved_mu.shape == saved_scale.shape == target.shape
+    assert np.isfinite(saved_mu).all() and np.isfinite(saved_scale).all()
+    assert (saved_scale > 0).all()
+    np.testing.assert_allclose(fused, saved_mu, rtol=2e-5, atol=2e-6)
+    np.testing.assert_allclose(scale, saved_scale, rtol=2e-5, atol=2e-6)
     error = abs(means - target[..., None])
     uniform = available / available.sum(-1, keepdims=True)
     uniform_mu = (means * uniform).sum(-1)

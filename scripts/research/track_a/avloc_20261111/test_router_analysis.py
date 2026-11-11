@@ -58,6 +58,19 @@ class RouterAnalysisTest(unittest.TestCase):
             self.assertAlmostEqual(a['weight_abs_error_spearman'], -1)
             self.assertAlmostEqual(a['scale_abs_error_spearman'], 1)
 
+    def test_fused_output_shape_required(self):
+        for key in ['F_mu', 'F_scale']:
+            for shape in [(), (36,), (1, 36), (8, 1)]:
+                with self.subTest(key=key, shape=shape):
+                    z = {k: v.copy() for k, v in self.z.items()}
+                    z[key] = np.ones(shape)
+                    with self.assertRaises(AssertionError):
+                        router_statistics(z, self.target)
+
+    def test_empty_queries_rejected(self):
+        with self.assertRaises(AssertionError):
+            router_statistics({k: v[:0] for k, v in self.z.items()}, self.target[:0])
+
 
 if __name__ == '__main__':
     unittest.main()
