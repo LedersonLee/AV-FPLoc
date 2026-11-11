@@ -82,7 +82,7 @@ Supported matched-marginal power 차이는 반폭0.25ms +0.2333 [0.1128,0.3753],
 
 ## 실패·반증·일반화 한계
 
-통제36rings와 후속60rings 전부 보존했다. 단일 벽 성공 사례만 고르지 않았으며9 geometry×distance조건의 실패 수치를 모두 공개한다. Trimesh 미설치,PLY loader/degenerate OBJ 오류는 로컬 로그에 보존하고 GLB+원격 바닥으로 수정했다. 최초 direction subgroup에 floating modulo로360°가 별도 bin이 된 오류는 원본 JSON을 보존한 뒤0° bin으로 정정했다. 이는 primary contrast를 바꾸지 않는다.
+통제36rings와 후속60rings 전부 보존했다. 단일 벽 성공 사례만 고르지 않았으며9 geometry×distance조건의 실패 수치를 모두 공개한다. Trimesh 미설치,PLY loader/degenerate OBJ 오류는 로컬 로그에 보존하고 GLB+원격 바닥으로 수정했다. 최초 direction subgroup에 floating modulo로360°가 별도 bin이 된 오류는 원본 JSON을 보존한 뒤0° bin으로 정정했다. 이는 primary contrast를 바꾸지 않는다. Random sensitivity 창이 최대0.15ms 분석 경계를 넘을 수 있던 구현도 수정해 전 대조를 재계산했고, 수정 전 결과를 보존했다. Non-random contrasts는 전부 동일함을 검증했다.
 
 물리1차 검증이 실패했으므로 HSSD 단계는 '통제 환경에서 검증 완료된 검출기 적용'으로 부를 수 없다. 사용자 요청의 feasibility 비교는 모두 실행하되 **미검증 물리 시간창의 적용 실험**으로 격하한다. Raw6ch RIR는 현장 녹음이 아니라 SoundSpaces 합성이다. 재질·transmission을 비활성화했고 실제 음속/표면 scattering/path export를 직접 확인할 공개 binding이 없다. 반사 경로 GT 대조는 미수행이며 이를 위해 내부 path length/order/wall ID와 합성 전 energy histogram export가 필요하다. wall 제거/이동 개입으로 가능한 대체 검증을 수행했다.
 

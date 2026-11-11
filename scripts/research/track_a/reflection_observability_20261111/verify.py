@@ -26,6 +26,11 @@ def main():
  for yaw in range(0,360,10):
   acoustic=(-yaw)%360;base=acoustic%60;roll=-round((acoustic-base)/60);raw=np.stack([.05*np.cos(RING+np.deg2rad(base)),-.05*np.sin(RING+np.deg2rad(base))],-1);rolled=np.roll(raw,roll,axis=0);pred=np.stack([.05*np.cos(RING-np.deg2rad(yaw)),-.05*np.sin(RING-np.deg2rad(yaw))],-1);np.testing.assert_allclose(rolled,pred,atol=1e-15)
  checks['yaw_convention_cases']=36
+ oldroot=Path('/home/jeongeonlee/track1/experiments/directional_structure_20261109')
+ for f in sorted((root/'hssd').glob('*.json')):
+  sid=f.stem;cp=oldroot/'candidates'/sid/'pure_visual.npz';bank=np.load(oldroot/'candidates'/sid/'bank_geometry.npz');candidates=np.load(cp);idx=candidates['indices'];expected=np.concatenate([bank['xy'][idx//36],(idx%36*10)[...,None]],axis=-1);np.testing.assert_array_equal(candidates['pred'],expected)
+  receipt=json.loads((cp.parent/'receipt.json').read_text());assert hashlib.sha256(cp.read_bytes()).hexdigest()==receipt['files']['pure_visual.npz']
+ checks['pure_visual_pose_reconstruction_scenes']=12
  candidate_count=0;replays=0;donor_checks=0
  for f in sorted((root/'hssd').glob('*.json')):
   data=json.loads(f.read_text());q=data['queries'][0];raw=np.roll(np.load(q['raw_path']),q['roll'],axis=0);saved=json.loads((root/'hssd_metrics'/f.name).read_text());assert len(data['queries'])==32
