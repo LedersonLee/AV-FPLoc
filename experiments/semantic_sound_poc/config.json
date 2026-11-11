@@ -1,0 +1,95 @@
+{
+  "study": "2026-11-11-semantic-sound-poc",
+  "scene": "104862621_172226772",
+  "root": "/file2/jeongeon/AV-FPLoc/datasets/HSSD",
+  "workspace": "/home/jeongeonlee/track1",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scene_selection": "first compact training scene with literal living room, kitchen and repeated bathroom labels; selection from metadata, not performance",
+  "ambiguity_max_top2_log_gap": 1.0986122886681098,
+  "candidate_count": 20,
+  "visual_temperature": 1.0,
+  "alpha": 1,
+  "beta": 1,
+  "angular_sigma_deg": 15,
+  "noise_deg": [
+    0,
+    15,
+    30,
+    60
+  ],
+  "event_probabilities": {
+    "running_water": 0.3,
+    "toilet_flush": 0.3,
+    "tv_speech": 0.3,
+    "silence": 0.1
+  },
+  "room_event_weights": {
+    "running_water": {
+      "kitchen": 1,
+      "bathroom": 1,
+      "laundryroom/mudroom": 0.5,
+      "default": 0.05
+    },
+    "toilet_flush": {
+      "bathroom": 1,
+      "toilet": 1,
+      "default": 0.02
+    },
+    "tv_speech": {
+      "living room": 1,
+      "tv": 1,
+      "bedroom": 0.25,
+      "default": 0.05
+    }
+  },
+  "source_height_m": 1.2,
+  "listener_height_m": 1.5,
+  "grid_spacing_m": 0.2,
+  "clearance_m": 0.15,
+  "source_generation_count_per_room": 64,
+  "source_integration_count_per_room": 128,
+  "geometry_seed": 20261111,
+  "bootstrap_seed": 20261111,
+  "bootstrap_repetitions": 10000,
+  "mic_raw_channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "mic_clockwise_angles_deg": [
+    257.14285714285717,
+    308.57142857142856,
+    205.71428571428572,
+    154.28571428571428,
+    102.85714285714286,
+    51.42857142857143
+  ],
+  "mic_radius_m": 0.05,
+  "mic_radius_status": "provisional: radius not measured; 6-channel subset of local 7-MEMS angular calibration, not uniform hexagon",
+  "sample_rate": 48000,
+  "sound_speed": 343,
+  "audio_seeds": [
+    42,
+    43,
+    44
+  ],
+  "rir_headings_deg": [
+    0,
+    90
+  ],
+  "indirect_rays": 20000,
+  "source_rays": 512,
+  "ray_depth": 50,
+  "diffraction": true,
+  "max_diffraction_order": 10,
+  "acoustic_threads": 2,
+  "materials": false,
+  "scope": "one training scene, oracle geometric bearing; no learned fusion or training"
+}
