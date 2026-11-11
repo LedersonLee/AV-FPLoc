@@ -26,7 +26,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "4f5c6e8daf4728417797bd8fabbd88967051ccc24164ec12e70fb1e4b0a4dcd3"
+      "sha256": "bd075f568653d99ff562aaa8f5393e8b112d7a82adbcb0042150e1a42bb2f870"
     },
     {
       "git_copy": "architecture_test.json",
@@ -39,6 +39,10 @@
     {
       "git_copy": "audio_test.json",
       "sha256": "85108f732ba70ea2515e8653d6688185c65578b01824efe6d49a243cadd13c55"
+    },
+    {
+      "git_copy": "bank_cost_audit.json",
+      "sha256": "c97b28c593ae6ba3e252801c5e595c6a1cad1e5585be5cb20e220d8c97a27b91"
     },
     {
       "git_copy": "baseline_fields_seed43_summary.json",

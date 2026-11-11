@@ -124,3 +124,20 @@ Source `76e0307c295b02e10c37930218d4a08d4b362f9f` implements a separate post-hoc
 [Tests](geometry_observability_test.json) verify identical distant profiles, a distinct correct profile and out-of-support labels; a four-real-query [smoke check](geometry_observability_smoke.json) passed. Synthetic ties demonstrate that zero ray discrepancy can coexist with an incorrect pose, but this is not claimed as a measured HSSD frequency. The full19-scene job is active; later analysis will join these descriptors to learned acoustic ray errors and localization outcomes by scene/query ID.
 
 GT-derived profiles never enter model inference, uncertainty prediction or proposal generation. This equal-scale perfect-profile experiment is not an upper bound on a learned model with direction-specific scales. It isolates geometry/grid ambiguity for interpretation. No new dataset rendering, model fitting or Test access occurs in this diagnostic. A0 training and the full baseline/calibration jobs continue independently.
+
+## Matched bank storage audit
+
+[Storage audit](bank_cost_audit.json), source `d92fe413fc0d269dcf1f1f899b9888de64129bd8`, covers the same19 Val scenes,71,383 XY cells and2,569,788 poses at20cm/10°. It reads verified FP manifests and cached representations, not raw waveforms.
+
+| Artifact | Total bytes | Scope |
+|---|---:|---|
+| Historical FP-RIR raw files |323,380,029,888|428,298 files; manifest-recorded sizes, not fresh waveform audit|
+| FP acoustic embeddings |1,315,731,456|float32 pose×128 array payload|
+| Historical visual windows |113,070,672|existing pose×11 ray windows|
+|20cm world-ray bank + XY |11,421,280|uncompressed array payload|
+|20cm compressed bank files |2,629,328|actual on-disk NPZ size|
+|10cm world-ray bank + XY |45,876,960|separate finer grid, not a primary matched acoustic comparison|
+
+The FP embedding payload is115.2× the20cm ray-bank-plus-coordinate payload. This difference follows from storing a128-vector at every yaw pose versus36 world-ray distances per XY with headings obtained by index rotation. It is a representation/storage observation, not evidence that both encode equivalent acoustic information. No10cm FP-RIR bank is synthesized.
+
+Recorded geometry preparation wall time is103.40seconds for **both grids together**, under the existing machine workload; it is neither an isolated timing nor a20cm-only estimate. Original FP rendering time is unmeasured here. Model weights, training, query encoders, B2/GEOQ compute and shared map assets are outside the bank figures. The requested accuracy/compute tradeoff remains pending trained matched evaluation and isolated runtime measurements.
