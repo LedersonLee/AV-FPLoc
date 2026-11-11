@@ -196,3 +196,31 @@ python /source/fusion_predictions.py --mode A3_uniform --first /study/prediction
 ```
 
 Use `evaluate_fields.py --head F` for each resulting manifest, with20cm and10cm outputs kept separate. Repeat for seed43. These commands are pending trained checkpoints and do not authorize bypassing the A3 expert-validation gate.
+
+## Completed seed42 temperature diagnostic and sparse-bin review
+
+All19 scenes/9,965 queries and four cached baseline methods completed. [Verification](calibration_seed42_verification.json) checks39,860 query-method pairs against the independently evaluated native T=1 statistics and exact Top1 IDs/labels, and reconstructs the family-fold calibration. [Safe summary](calibration_seed42_summary.json). Review source `9da96e33607fe0ce8ce9b105e444d2673cfba2f7`; calibration driver source5040792 (full provenance in source history). The plot annotates bins with fewer than30 observations.
+
+| Method | Native nearest-grid NLL → crossfit | Native ECE → crossfit | Joint accuracy, unchanged |
+|---|---:|---:|---:|
+|B2 seed42|9.94789 →5.14342|0.68112 →0.15393|69.383%|
+|Visual|8.05253 →6.37353|0.41815 →0.21182|45.850%|
+|Acoustic cosine|11.15884 →8.15896|0.20753 →0.11587|21.365%|
+|Fixed fusion|10.14092 →5.15638|0.63904 →0.17210|65.038%|
+
+![Temperature calibration and reliability](calibration_seed42_reliability.png)
+
+Observed: sharpening improves these development calibration metrics without changing pose ranking or Top1 accuracy. Each held-family fold uses a temperature selected on other folds from25 fixed candidates, minimizing equal-scene nearest-grid NLL. NLL fitting does not directly minimize event ECE. B2 usesT0.056234 in four folds and0.1 in one; visual uses0.177828 or0.316228; acoustic/fixed use0.056234 throughout. Residual ECE remains substantial. Acoustic high-confidence bins contain only9,3,1 observations, so their irregular curve cannot support a general calibration claim. All-Val NLL curves are descriptive, not the fitting rule.
+
+Interpretation: score scale is an important contributor to apparent diffuse posterior mass. This intervention does not improve localization, prove acoustic reliability, or establish independent calibration. Teacher/checkpoint/research exposure to reused Val19 persists despite family-fold temperature fitting. Learned ray-model comparison remains pending.
+
+## Completed10cm geometry diagnostic, separated from learned accuracy
+
+The process exited and all19 scenes/9,965 IDs and per-scene hashes passed [verification](geometry10_verification.json); [summary](geometry10_summary.json). Same true query profiles and10° yaw resolution, separate10cm XY bank:
+
+| Perfect-profile diagnostic | Joint20cm →10cm | Fine20cm →10cm |
+|---|---:|---:|
+|36 directions|98.304% →99.378%|41.284% →67.687%|
+|11 FoV directions|66.111% →77.832%|27.416% →52.363%|
+
+At10cm, median incorrect-minus-correct ray-MAE margin is0.44415m for36 directions and0.09218m for11; no joint-correct regions are missing. The paired scene-macro36-minus11 joint difference is21.733pp [19.843,23.622]. These are GT-derived geometry diagnostics, never inference inputs/proposal filters, and not learned-model ceilings. The finer bank changes geometric approximation and candidate density; its large fine-metric effect must not be credited to a network. Whether audio predicts these informative profiles remains untested until A1 completes. No Test17 observations were used.

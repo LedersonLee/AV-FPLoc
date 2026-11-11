@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "queries": 9965,
+  "scenes": 19,
+  "grid_cm": 10,
+  "profile_joint_36_minus_11": {
+    "micro_delta": 0.21545408931259408,
+    "macro_delta": 0.21732989073319775,
+    "macro_ci95": [
+      0.1984343309492889,
+      0.23621975251882601
+    ],
+    "micro_ci95": [
+      0.19537892685004232,
+      0.23537278410725926
+    ],
+    "repair_count_seed_mean": 2155.0,
+    "harm_count_seed_mean": 8.0,
+    "replicates": 10000,
+    "bootstrap_seed": 20261111,
+    "scenes": 19,
+    "queries": 9965,
+    "model_seeds": 1,
+    "baseline_seeds": 1,
+    "per_scene_delta": {
+      "102344115": 0.234375,
+      "102344307": 0.23317307692307693,
+      "102344457": 0.18933823529411764,
+      "103997478_171030528": 0.20437956204379562,
+      "104348082_171512994": 0.17984189723320157,
+      "104862573_172226682": 0.2309027777777778,
+      "105515286_173104287": 0.24776785714285715,
+      "105515448_173104512": 0.24166666666666667,
+      "106366134_174226362": 0.2089041095890411,
+      "106366173_174226431": 0.25738396624472576,
+      "106879005_174887124": 0.246875,
+      "108294624_176710203": 0.1828125,
+      "108294765_176710386": 0.1461864406779661,
+      "108294783_176710410": 0.305327868852459,
+      "108294798_176710428": 0.21683673469387754,
+      "108736611_177263226": 0.21041666666666667,
+      "108736635_177263256": 0.1954225352112676,
+      "108736737_177263406": 0.1264705882352941,
+      "108736800_177263517": 0.2711864406779661
+    },
+    "scope": "paired scene bootstrap, average seeds within scene; reused development, no independence from model selection implied"
+  },
+  "summary_sha256": "f2adc7fad799c461a6299a39411437bf654b751fa96b4a7b3e871e2c337c53af",
+  "source_sha256": "a1fd5b0c38a26584b8cd50e0be284f1a7901206135619388fa91fd8f77e6883c",
+  "interpretation": "Geometry information potential under perfect GT profiles, not evidence that RIR encodes/reconstructs them. Pairwise comparison changes direction count only under this diagnostic. Equal-scale result is not a learned-model upper bound.",
+  "test_accessed": false
+}

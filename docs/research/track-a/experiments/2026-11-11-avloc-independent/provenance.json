@@ -30,7 +30,7 @@
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "6c9e44efac2eaede8c4db45a8c1577a3edb8458a06c4c3122676b661826faf49"
+      "sha256": "4a936a94e3c9c6a7df5387135aafcefb2ed2be2878190927ce665390517a1284"
     },
     {
       "git_copy": "architecture_test.json",
@@ -73,6 +73,18 @@
       "sha256": "32f86432b66db1b4a1b86b2bc5204addd40c94ddadb63e45c0d8acecdbfce2dc"
     },
     {
+      "git_copy": "calibration_seed42_reliability.png",
+      "sha256": "49a26d72807d56f137839a8a599a41d5cd03cca71e227fba2451902c620e12e9"
+    },
+    {
+      "git_copy": "calibration_seed42_summary.json",
+      "sha256": "28449ad2660de50058002d984ae4c4220200cadf7e3f2ab0066f8c4b281ecd1a"
+    },
+    {
+      "git_copy": "calibration_seed42_verification.json",
+      "sha256": "cc7201fff1d2188a45c786c09aaa82e6d2035a416216a7afaf8986eb7fdd1936"
+    },
+    {
       "git_copy": "calibration_seed43_reliability.png",
       "sha256": "2dce70c7129b42b6c6163b3c47fd830bfa8265dad34c6a088b747fccd1311055"
     },
@@ -91,6 +103,14 @@
     {
       "git_copy": "fusion_predictions_test.json",
       "sha256": "f4aa29085491b3a225d2657a06154478d0127b2d39a523d67d8a5625dc954344"
+    },
+    {
+      "git_copy": "geometry10_summary.json",
+      "sha256": "f2adc7fad799c461a6299a39411437bf654b751fa96b4a7b3e871e2c337c53af"
+    },
+    {
+      "git_copy": "geometry10_verification.json",
+      "sha256": "ef15f0a92c2ac15471aca4699f0af41514437c992a30ba71a608aa7d2cb5ddf0"
     },
     {
       "git_copy": "geometry20_summary.json",
