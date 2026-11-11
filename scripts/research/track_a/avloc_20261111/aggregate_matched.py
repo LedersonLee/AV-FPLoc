@@ -34,7 +34,13 @@ def main():
  b2={s:np.array([r['joint'] for r in rows]) for s,rows in methods['b2'].items()};contrasts={}
  for name in methods:
   if set(methods[name])==set(b2):contrasts[name+'_vs_B2']=paired([[r['joint'] for r in methods[name][s]] for s in sorted(b2)],[b2[s] for s in sorted(b2)],scenes)
- a.out.mkdir(parents=True,exist_ok=False);result=dict(scope='matched20cm/10deg full Val19 reused development; seed-mean query estimates and paired scene bootstrap',complete_for_listed_methods=True,full_research_complete=False,queries=9965,scenes=19,results=results,paired_contrasts=contrasts,sources=sources,source_sha256={n:sha(Path(__file__).with_name(n)) for n in ['aggregate_matched.py','paired_summary.py']},test_accessed=False);(a.out/'comparison.json').write_text(json.dumps(result,indent=2)+'\n')
+ detailed={}
+ for model_name,baseline_name in [('fixed','visual'),('b2','fixed'),('B2_GEOQ','fixed'),('B2_GEOQ','b2'),('B2_GEOQ','B2_Support')]:
+  for metric in ['r1','joint','fine']:
+   mm=methods[model_name];bb=methods[baseline_name]
+   if not all(metric in r for rr in [*mm.values(),*bb.values()] for r in rr):continue
+   detailed[f'{model_name}_vs_{baseline_name}_{metric}']=paired([[r[metric] for r in mm[s]] for s in sorted(mm)],[[r[metric] for r in bb[s]] for s in sorted(bb)],scenes)
+ a.out.mkdir(parents=True,exist_ok=False);result=dict(scope='matched20cm/10deg full Val19 reused development; seed-mean query estimates and paired scene bootstrap',complete_for_listed_methods=True,full_research_complete=False,queries=9965,scenes=19,results=results,paired_contrasts=contrasts,paired_metric_contrasts=detailed,sources=sources,source_sha256={n:sha(Path(__file__).with_name(n)) for n in ['aggregate_matched.py','paired_summary.py']},test_accessed=False);(a.out/'comparison.json').write_text(json.dumps(result,indent=2)+'\n')
  lines=['# Matched Val19 comparison (development)','', 'Not independent validation; pending AVLoc arms must not be interpreted as missing failures.','', '| Method | Seeds | R@1m | Joint | R@0.1m | Macro joint |','|---|---|---:|---:|---:|---:|']
  for name,r in results.items():
   show=lambda k:f"{r['micro'][k]*100:.3f}%" if k in r['micro'] else 'N/A'
