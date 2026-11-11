@@ -1,0 +1,125 @@
+{
+  "status": "pass",
+  "checks": [
+    "mixture total variance",
+    "FoV router mask",
+    "router normalization",
+    "uncertainty routing input detached",
+    {
+      "arm": "A0",
+      "parameters": 24571586,
+      "shapes": {
+        "V": [
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            11
+          ]
+        ]
+      },
+      "loss": 12.388888359069824
+    },
+    {
+      "arm": "A1",
+      "parameters": 12491394,
+      "shapes": {
+        "A": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ]
+      },
+      "loss": 5.130209445953369
+    },
+    {
+      "arm": "A2",
+      "parameters": 36663106,
+      "shapes": {
+        "AV": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ]
+      },
+      "loss": 5.29456901550293
+    },
+    {
+      "arm": "A3",
+      "parameters": 37869113,
+      "shapes": {
+        "V": [
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            11
+          ]
+        ],
+        "A": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ],
+        "AV": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ],
+        "F": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ]
+      },
+      "loss": 12.796878814697266
+    },
+    {
+      "arm": "A2_disabled",
+      "parameters": 36663106,
+      "shapes": {
+        "AV": [
+          [
+            2,
+            36
+          ],
+          [
+            2,
+            36
+          ]
+        ]
+      },
+      "loss": 5.142566204071045
+    }
+  ],
+  "scope": "architecture only, random untrained weights; not checkpoint evaluation"
+}

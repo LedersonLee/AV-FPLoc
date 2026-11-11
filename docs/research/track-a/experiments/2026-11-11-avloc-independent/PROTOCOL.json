@@ -1,0 +1,51 @@
+{
+  "study": "avloc_20261111",
+  "status": "active",
+  "requirements": [
+    "Phase0 Method3/AppB,C,G/reviews audit and code availability",
+    "Phase1 full asset validity, Test-family exclusions,6ch chirp adaptation",
+    "Phase2 trained A0/A1/A2 then A3",
+    "Phase3 matched baselines/all metrics20cm and separate10cm",
+    "Phase4 posterior/observability/fusion controls/calibration",
+    "Phase5 evidence-based interpretation and cost comparison",
+    "Deliver all named Docs/figures/checkpoint/source hashes and Git index sync"
+  ],
+  "arms": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A2_disabled"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "training": {
+    "max_epochs": 100,
+    "patience": 20,
+    "checkpoint": "minimum clean validation ray L1",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "min_lr": 1e-06,
+    "weight_decay": 0.01,
+    "effective_batch_size": 32,
+    "physical_batch_size": "benchmark before freeze; gradient accumulation to32"
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "chirp_ms": 50,
+    "chirp_hz": [
+      20,
+      20000
+    ],
+    "observation_ms": 100,
+    "stft_nfft": 512,
+    "window": 64,
+    "hop": 16,
+    "channels": 18,
+    "direct_path": "retained",
+    "phase": "six adjacent-channel sin/cos IPD"
+  },
+  "test_evaluation_authorized_before_freeze": false
+}

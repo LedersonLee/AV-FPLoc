@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checks": [
+    "chirp equals independent SciPy log sweep",
+    "causal FFT convolution equals SciPy",
+    "full 18x257x301 STFT finite",
+    "joint reflection involution",
+    "direct path impulse retained"
+  ],
+  "training": false
+}

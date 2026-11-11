@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "git_copy": "IMPLEMENTATION_AUDIT.md",
+      "sha256": "e9c8449e4bde8d6be3b43d5585a2144d6fb84157b53ec35ec1c0d75cace4b163"
+    },
+    {
+      "git_copy": "METHOD_AT_A_GLANCE.md",
+      "sha256": "5cfaff225eec98a7915e9be8e9bf520e9e2f2e12749a13d950016782fed27e1c"
+    },
+    {
+      "git_copy": "PROTOCOL.json",
+      "sha256": "47e5395ca3698f8f5bba04eb7df5a773ad2e02a4713fcedc2d9708b18c0760ed"
+    },
+    {
+      "git_copy": "RESEARCH_REPORT.md",
+      "sha256": "4f6392a38ede2375a5251ae337cfa39f7e111c163c81c0ef18ca0eb95577acd7"
+    },
+    {
+      "git_copy": "architecture_test.json",
+      "sha256": "da03bcb7527d161733d51897658caabfe884d8c2942afda80d86e5e71a9073f7"
+    },
+    {
+      "git_copy": "audio_test.json",
+      "sha256": "85108f732ba70ea2515e8653d6688185c65578b01824efe6d49a243cadd13c55"
+    },
+    {
+      "git_copy": "implementation_assumptions.md",
+      "sha256": "1f2ca01dbdb0634e75cf0a0497eb0b23b7a948f22b309d99746df2149e88f11d"
+    },
+    {
+      "git_copy": "source_snapshot.json",
+      "sha256": "c7aac84f8aff9a87a63f634c2b0254175821c33ad355dd5a33ae011237944017"
+    }
+  ]
+}

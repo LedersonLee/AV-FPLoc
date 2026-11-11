@@ -85,3 +85,9 @@ Study22 final F1 evaluation source `6e6f3a5380b6b124ebfdb978b4c1978baad7c275`; n
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 분석 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | Study 31 visualization audit / study31_visualization_audit_20261111 | 2026-11-11 | C (사용자 지정 사후 해석; 원 연구 B 유지) | 완료·음성결과 해석: 저장된 공식 Test 17장면·3seed의 6사례 및 분포 그림. Spatial donor +0.263m, scalar +0.00030m, rotation +0.00224m; angular r 평균0.0159이나 분포는 넓음. 위치별 거리 수준 의존성은 지지, 유용한 방향 복원 미확립. 신규 학습/추론 없음. | Exploratory (공식 Test 사후 재사용·upstream 노출 한계) | [시각화 보고서](track-c/2026-11-11-study31-visualization-audit/README.md) | 55155a7ee03dc21cec0f5b112c4c171ad661db28 (배열 분석/그림); 원 학습13f18b0·평가6907b72, 입력 SHA-256은 audit.json |
+
+## Track A 진행 연구 — AVLoc independent / avloc_20261111
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실행 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| AVLoc independent reimplementation & matched benchmark / avloc_20261111 | 2026-11-11 | A | 진행 중: 원문/리뷰 명세 감사,6ch 전해상도 audio·A0–A3 구조/분리/router 검증 통과.112Train/19Val 전체 자산 검사 실행 중; 학습·정량 비교·교정·비용 분석 미완료. SSD 대체 경로0-query 실패 보존. | Exploratory | [연구 진행 보고](track-a/experiments/2026-11-11-avloc-independent/RESEARCH_REPORT.md) | base e3e0500 + 당시 신규 uncommitted 코드; 정확한 소스 해시는 source_snapshot.json. 학습 실행 SHA 아직 없음. |

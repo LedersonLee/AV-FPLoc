@@ -1,0 +1,13 @@
+{
+  "base_commit": "e3e0500aedad855a87f2d8ab727c6cca32fc283f",
+  "state": "new uncommitted sources at initial code-test execution; snapshot commit follows",
+  "sources": {
+    "test_audio.py": "0b67d9c7d4408fa16408dd20188395235ba8f9d5eb8ad91746e0ee2822cff65f",
+    "audit_data.py": "5df0c314f3ec0d396e3d163fec150c48ea9b9539349cba470cf7583fe63f90b1",
+    "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c",
+    "model.py": "1a0c00748060a2c121960753f371d0c7c9c7f9ff4dc95f614f84b5f04143ff4c",
+    "test_model.py": "5e28c580fd3e8d8f5c083fde65726c4bf25201de163529ef69279ef8efb15395"
+  },
+  "paper_sha256": "39de318b14cbc0e2924b06437a38c725265e39668874dd4001e79772d2a56c4b",
+  "imagenet_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+}
