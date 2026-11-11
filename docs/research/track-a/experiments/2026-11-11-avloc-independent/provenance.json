@@ -2,35 +2,55 @@
   "files": [
     {
       "git_copy": "IMPLEMENTATION_AUDIT.md",
-      "sha256": "e9c8449e4bde8d6be3b43d5585a2144d6fb84157b53ec35ec1c0d75cace4b163"
+      "sha256": "d675a2280a729ee9d67f5e29d855c2aa0e5ee6ae204f774e11832a8f164e8326"
     },
     {
       "git_copy": "METHOD_AT_A_GLANCE.md",
-      "sha256": "5cfaff225eec98a7915e9be8e9bf520e9e2f2e12749a13d950016782fed27e1c"
+      "sha256": "d673180b5eb7088423c160061d0d135f5eac83d3d5e9e141a6056a10bc78833d"
     },
     {
       "git_copy": "PROTOCOL.json",
-      "sha256": "47e5395ca3698f8f5bba04eb7df5a773ad2e02a4713fcedc2d9708b18c0760ed"
+      "sha256": "be8a419ef42e0509c9f7c13339b8b2fa391a62bb3318d3bee9ecb455838a56ac"
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "4f6392a38ede2375a5251ae337cfa39f7e111c163c81c0ef18ca0eb95577acd7"
+      "sha256": "4fecc5055b3bea730d0bf844f6b13ccc5c1b0f8e73ea3494e65b7fea7ad8ec21"
     },
     {
       "git_copy": "architecture_test.json",
       "sha256": "da03bcb7527d161733d51897658caabfe884d8c2942afda80d86e5e71a9073f7"
     },
     {
+      "git_copy": "asset_audit_summary.json",
+      "sha256": "2366387723462ba0ec400753fd18b02b80ecff3f1806c717ba737426782ad426"
+    },
+    {
       "git_copy": "audio_test.json",
       "sha256": "85108f732ba70ea2515e8653d6688185c65578b01824efe6d49a243cadd13c55"
     },
     {
+      "git_copy": "geometry_test_v2.json",
+      "sha256": "1d7ac381e87e9fa3aa35d230d397bc78946790bd73ae15f24ce4d7bea81b0b22"
+    },
+    {
       "git_copy": "implementation_assumptions.md",
-      "sha256": "1f2ca01dbdb0634e75cf0a0497eb0b23b7a948f22b309d99746df2149e88f11d"
+      "sha256": "e67a6f521f38241d976b47a424bac42cbcf2fef9fef3e025666310eda845c22e"
+    },
+    {
+      "git_copy": "initialization_test.json",
+      "sha256": "76b2a5a1ea0e3c37719a597e90eae3682d826706588d12fbf017dc4a6e84c5ab"
+    },
+    {
+      "git_copy": "runtime_smoke_v2.json",
+      "sha256": "28b67163c80a24ee99e6180af14a26cecab5ca7014695e33a629945ef096b25c"
     },
     {
       "git_copy": "source_snapshot.json",
       "sha256": "c7aac84f8aff9a87a63f634c2b0254175821c33ad355dd5a33ae011237944017"
+    },
+    {
+      "git_copy": "training_state_test.json",
+      "sha256": "2b26d7ecb46d2d1bcb2ab96b48283933ceb351d789c572d92f2c62ea9e3bdb9c"
     }
   ]
 }

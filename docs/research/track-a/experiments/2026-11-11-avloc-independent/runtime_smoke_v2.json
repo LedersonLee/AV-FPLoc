@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "scope": "one disposable code-check update per arm; no production checkpoint, no model selection",
+  "records": [
+    {
+      "arm": "A0",
+      "batch": 8,
+      "loss": 1.5334320068359375,
+      "gradient_norm": 15.512005805969238,
+      "seconds": 0.7260861359536648,
+      "peak_allocated_bytes": 2517099520
+    },
+    {
+      "arm": "A1",
+      "batch": 8,
+      "loss": 1.4945074319839478,
+      "gradient_norm": 10.802618980407715,
+      "seconds": 0.08292663795873523,
+      "peak_allocated_bytes": 624355840
+    },
+    {
+      "arm": "A2",
+      "batch": 8,
+      "loss": 1.4629510641098022,
+      "gradient_norm": 9.769986152648926,
+      "seconds": 0.06437914539128542,
+      "peak_allocated_bytes": 2924856320
+    },
+    {
+      "arm": "A3",
+      "batch": 8,
+      "loss": 3.1413002014160156,
+      "gradient_norm": 13.522850036621094,
+      "seconds": 0.11016746098175645,
+      "peak_allocated_bytes": 3178132992
+    },
+    {
+      "arm": "A2_disabled",
+      "batch": 8,
+      "loss": 1.3597257137298584,
+      "gradient_norm": 7.182645320892334,
+      "seconds": 0.0670176618732512,
+      "peak_allocated_bytes": 3138951680
+    }
+  ]
+}

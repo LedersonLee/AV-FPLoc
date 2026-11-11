@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "scope": "disposable 4-query integration check; no benchmark or production checkpoint",
+  "train_queries": 58894,
+  "val_queries": 9965,
+  "all_scene_labels_valid": true,
+  "augmentation_seed_replay_exact": true,
+  "esc_shared_draws": 16,
+  "gaussian_draws": 14,
+  "optimizer_resume_byte_exact": true,
+  "first_loss": 1.3982003927230835,
+  "resumed_loss": 2.6188747882843018,
+  "validation_path_finite": true
+}

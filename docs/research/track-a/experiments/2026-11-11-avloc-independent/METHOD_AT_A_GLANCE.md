@@ -15,3 +15,6 @@ Loss per branch: mean(|target−μ|/b+log(2b)); V uses11 rays. Full objective LF
 Inference matches predicted Laplace rays against known2D floorplan rays at each candidate pose, summing log densities. Primary20cm/10° bank matches historical baselines; separate10cm evaluation must not be attributed to model improvement. AVLoc model receives no FP-RIR reference embeddings/bank. Ray scores can be normalized into an explicit discrete posterior, but calibration is a separate held-development analysis, not implied by sharpness.
 
 Implementation assumptions and incomplete components are recorded in the companion audit. No performance claims are available yet.
+
+
+Update2026-11-11: full asset preparation, geometry targets/banks and the training pipeline are now implemented and code-checked. See the current [research report](RESEARCH_REPORT.md) and [assumptions](implementation_assumptions.md); any earlier pending implementation notes describe the initial audit snapshot. Learned benchmark results remain pending.

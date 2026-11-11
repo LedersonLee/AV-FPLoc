@@ -30,7 +30,10 @@
     "min_lr": 1e-06,
     "weight_decay": 0.01,
     "effective_batch_size": 32,
-    "physical_batch_size": "benchmark before freeze; gradient accumulation to32"
+    "physical_batch_size": 8,
+    "precision": "BF16 train with FP32 NLL; FP32 clean validation",
+    "code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "augmentation": "See implementation_assumptions.md; ESC50 pinned category split"
   },
   "audio": {
     "sample_rate": 48000,

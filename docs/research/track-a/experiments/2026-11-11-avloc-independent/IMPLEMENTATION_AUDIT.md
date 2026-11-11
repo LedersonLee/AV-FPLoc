@@ -23,3 +23,6 @@ Official-code availability: the supplied submission says code/benchmarks will be
 Review issues informing controls: reviewer xnLp asks about sensor/sim-to-real gaps and split inconsistency; reviewer ZToi questions acquisition practicality and missing audio-to-ray detail; reviewer riEz highlights joint-only versus router increment, missing scale/error calibration, and out-of-FoV visual contamination through the joint expert. These are questions/criticisms, not empirical facts about HSSD. Phase4 explicitly tests complementarity, interaction and reliability separately.
 
 All numerical benchmark claims remain pending. This audit does not equate architecture shape tests with a reproduced training result.
+
+
+Update2026-11-11: full asset preparation, geometry targets/banks and the training pipeline are now implemented and code-checked. See the current [research report](RESEARCH_REPORT.md) and [assumptions](implementation_assumptions.md); any earlier pending implementation notes describe the initial audit snapshot. Learned benchmark results remain pending.

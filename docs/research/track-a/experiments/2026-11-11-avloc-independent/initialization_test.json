@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checks": [
+    "common initialization exact across A0/A1/A2/disabled and A3",
+    "ImageNet conv1 byte equality",
+    "perspective image-column seeding at feature centres",
+    "no visual seeding outside FoV"
+  ]
+}

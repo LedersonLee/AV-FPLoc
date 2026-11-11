@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "checks": [
+    "analytic rectangular room boundary",
+    "yaw sign and90deg equivariance",
+    "query-independent XY grid",
+    "bank yaw permutation matches direct cast"
+  ],
+  "note": "No distance cap; raster exit carries known=false"
+}
