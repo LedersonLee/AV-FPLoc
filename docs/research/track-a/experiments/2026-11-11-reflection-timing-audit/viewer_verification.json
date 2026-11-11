@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "recordings": 32,
+  "channel_views_checked": 192,
+  "renderer": "Chrome headless",
+  "visual_review": [
+    "full early RIR with default material",
+    "focused specular 2m with six-channel table"
+  ],
+  "display": "Actual recording min/max pressure and causal energy aggregates; no fabricated waveform",
+  "html_sha256": "e7cbcb5c42db3c3429a706a1c2064e89f519e67d578a11142e45d0251f63c8b3",
+  "viewer_code_sha": "0ae34bac9fc56ba721087a7d31c02868fc3cc890"
+}

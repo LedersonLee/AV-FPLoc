@@ -69,3 +69,8 @@ HSSD 단일 ambiguity gate도 실패한 결과를 보존했다. Threshold를 추
 ## 2026-11-11 추가 — Track A Experiment 1의 물리 시간 정렬과 energy 연관성을 구분
 
 [Reflection observability](track-a/experiments/2026-11-11-reflection-observability/RESEARCH_REPORT.md)는96개 통제/진단 RIR와HSSD12개 개발 장면의실제visual Top20을분석했다. 벽 제거·이동에따른음향응답은존재하지만c343의좁은first-order시간창대응은실패했다. 단일벽2m/6m에서peak bias약+2.36/+6.15ms가sampling rate·diffraction·depth·ray count·mesh형식변경에도남았다. HSSD에서는time/distance marginal을보존한query permutation보다power+0.2619[0.1671,0.3681]이나coherence는개선되지않았다. 이는조건부energy연관성이며확인된wall identity또는localization gain이아니다. 증거수준Exploratory;Test payload·새모델/scorer·Experiment2–4는수행하지않았다.
+
+
+## 2026-11-11 추가 — Reflection timing의 renderer 설정 의존성
+
+[Experiment1B](track-a/experiments/2026-11-11-reflection-timing-audit/RESEARCH_REPORT.md)는 **Outcome C**로 완료했다. 기본 scattering0.5를0으로만 바꾸면 dominant peak bias가2m +2.347→−0.134ms,6m +6.168→+0.114ms로 크게 변했다. 이전 wall-dependent response를 보존하면서 큰 timing mismatch의 설정 의존성을 추가로 확인했다. Exact path/order/wall ID와 모든 채널 절대시간 기준은 미확립이다. 따라서 기존 HSSD energy enrichment를 물리적 first-order matching 증거로 해석하지 않으며 HSSD 재평가는 gate 실패로 생략했다. Exploratory; 현실 음향 일반화나 localization 개선을 주장하지 않는다.

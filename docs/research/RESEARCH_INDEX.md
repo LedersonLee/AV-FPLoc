@@ -107,3 +107,10 @@ AVLoc Router analysis implementation update (2026-11-11): [replay-checked weight
 | 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
 |---|---|---|---|---|---|---|
 | Geometry-guided Reflection Observability / reflection_observability_20261111 | 2026-11-11 | A | 완료·핵심 물리 시간 정렬 가설 음성/조건부 energy 연관성 양성.96controlled/diagnostic rings; HSSD12장면384질의7680visual후보·6대조. 단일벽2/6m에서약+2.36/+6.15ms지연,좁은expected창귀속energy거의0. HSSD matched-time control 대비power+0.2619[0.1671,0.3681],coherence개선없음. Localization/scorer/Experiment2–4미수행. | Exploratory (시뮬레이션·재사용Train/development·upstream노출) | [RESEARCH_REPORT](track-a/experiments/2026-11-11-reflection-observability/RESEARCH_REPORT.md) | renderer `6a6fc1e83fa8f060d773393988e3da4b535b65a7`; paths `2c33fe3a9abaef3e70f953004d639d3169f7e97c`; final controls `fdbfb08d37b7a6b98deb5ecae58ffaa74438b4cc`; diagnostic sources/pilot dirty provenance는REPRODUCIBILITY.md참조 |
+
+
+## Track A Experiment 1B — reflection_timing_audit_20261111
+
+| 연구/ID | 날짜 | Track | 상태·핵심 발견 | 증거 수준 | 보고서 | 실제 실험 코드 Commit SHA |
+|---|---|---|---|---|---|---|
+| Reflection Timing & Renderer Physics Audit / reflection_timing_audit_20261111 | 2026-11-11 | A | 완료·Outcome C(Renderer-dependent Artifact). 기존96RIR 검증/60peak 재생; 신규420mono. Scattering0.5→0만 변경해 peak bias2m +2.347→−0.134ms,6m +6.168→+0.114ms. 잔여 절대오차/내부path GT 미확보로 first-order 정렬은 미검증. HSSD D gate 실패로 생략; Experiment2–4 미수행. 이전 결과 보존 및 원인 해석 확장. | Exploratory (재사용 통제 환경·사후 원인 진단; 독립 Test 아님) | [RESEARCH_REPORT](track-a/experiments/2026-11-11-reflection-timing-audit/RESEARCH_REPORT.md) | C API `4a9070a5faa60bb9f26c60f78f78edac862b3ffb`; runner `f5d16dbbdd6b02826143c6b9136b06588fc7ecbb`; estimators `f86af5d81ef89ee46c56ae9e9ce6529d58a81a17`; scattering `46c1ddfdea29e30f6230126752b27a735f9b84d1`; final audit `65e7eb1588fd7d99a84f6cb5da201dff02269ab1`; pilot dirty/failed provenance는 REPRODUCIBILITY 참조 |

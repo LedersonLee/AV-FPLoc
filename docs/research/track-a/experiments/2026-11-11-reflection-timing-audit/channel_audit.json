@@ -1,0 +1,402 @@
+[
+  {
+    "distance": 2.0,
+    "mode": "stationary_off",
+    "within_context": [
+      {
+        "waveform_cosine": 0.003127158166486324,
+        "phase_resultant": 0.6130338149692279
+      },
+      {
+        "waveform_cosine": 0.102717113361997,
+        "phase_resultant": 0.6163650320952547
+      },
+      {
+        "waveform_cosine": 0.10246451193930539,
+        "phase_resultant": 0.6103480509163784
+      }
+    ],
+    "across_fresh_context": [
+      {
+        "waveform_cosine": 0.9999999999999795,
+        "phase_resultant": 0.9999999999999933
+      },
+      {
+        "waveform_cosine": 0.0049378109906093376,
+        "phase_resultant": 0.8469283561071814
+      },
+      {
+        "waveform_cosine": 0.004937807743261183,
+        "phase_resultant": 0.8469283355982203
+      }
+    ],
+    "timing": [
+      {
+        "context": 0,
+        "onsets_ms": [
+          14.083333333333334,
+          13.958333333333332,
+          13.979166666666668,
+          14.0,
+          13.9375
+        ],
+        "sd_ms": 0.05628856702544325
+      },
+      {
+        "context": 1,
+        "onsets_ms": [
+          14.083333333333334,
+          13.958333333333332,
+          13.979166666666668,
+          13.9375,
+          13.958333333333332
+        ],
+        "sd_ms": 0.05781015385629886
+      },
+      {
+        "context": 2,
+        "onsets_ms": [
+          14.125,
+          14.0,
+          13.979166666666668,
+          13.958333333333332,
+          13.979166666666668
+        ],
+        "sd_ms": 0.06686169389950501
+      }
+    ]
+  },
+  {
+    "distance": 2.0,
+    "mode": "stationary_on",
+    "within_context": [
+      {
+        "waveform_cosine": 0.10339317945791107,
+        "phase_resultant": 0.7238093582239755
+      },
+      {
+        "waveform_cosine": 0.1033777955762151,
+        "phase_resultant": 0.7238093548806251
+      },
+      {
+        "waveform_cosine": 0.3026705257881971,
+        "phase_resultant": 0.7968342897002956
+      }
+    ],
+    "across_fresh_context": [
+      {
+        "waveform_cosine": 0.004937812348722456,
+        "phase_resultant": 0.846928340077041
+      },
+      {
+        "waveform_cosine": 0.00493778765131268,
+        "phase_resultant": 0.8469283364606338
+      },
+      {
+        "waveform_cosine": 0.999999999999988,
+        "phase_resultant": 0.9999999999999947
+      }
+    ],
+    "timing": [
+      {
+        "context": 0,
+        "onsets_ms": [
+          14.125,
+          14.0625,
+          14.041666666666666,
+          14.020833333333334,
+          14.020833333333334
+        ],
+        "sd_ms": 0.043200919486099235
+      },
+      {
+        "context": 1,
+        "onsets_ms": [
+          14.083333333333334,
+          14.020833333333334,
+          14.0,
+          13.979166666666668,
+          13.979166666666668
+        ],
+        "sd_ms": 0.043200919486099235
+      },
+      {
+        "context": 2,
+        "onsets_ms": [
+          14.083333333333334,
+          14.020833333333334,
+          14.0,
+          14.0,
+          14.0
+        ],
+        "sd_ms": 0.036084391824351865
+      }
+    ]
+  },
+  {
+    "distance": 2.0,
+    "mode": "baseline",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": 0.19980492749209786,
+        "phase_resultant": 0.4006375786334247
+      },
+      {
+        "context": 1,
+        "waveform_cosine": 0.13295997636439308,
+        "phase_resultant": 0.29842395790885096
+      },
+      {
+        "context": 2,
+        "waveform_cosine": -0.000545721647121292,
+        "phase_resultant": 0.2119335332274513
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  },
+  {
+    "distance": 2.0,
+    "mode": "temporal_on",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": 0.003102225940602804,
+        "phase_resultant": 0.6152660733400003
+      },
+      {
+        "context": 1,
+        "waveform_cosine": 0.06904813341525046,
+        "phase_resultant": 0.5822773358441825
+      },
+      {
+        "context": 2,
+        "waveform_cosine": 0.069050039247102,
+        "phase_resultant": 0.5719132513956883
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  },
+  {
+    "distance": 2.0,
+    "mode": "simultaneous",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": -0.00034059808347690286,
+        "phase_resultant": 0.23805632177145808
+      },
+      {
+        "context": 1,
+        "waveform_cosine": -0.0002184680937066481,
+        "phase_resultant": 0.2524753036217749
+      },
+      {
+        "context": 2,
+        "waveform_cosine": -0.00021847995879810026,
+        "phase_resultant": 0.2524753025452166
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  },
+  {
+    "distance": 6.0,
+    "mode": "stationary_off",
+    "within_context": [
+      {
+        "waveform_cosine": 0.0013244007366835005,
+        "phase_resultant": 0.17610567909422242
+      },
+      {
+        "waveform_cosine": 0.10168752937687105,
+        "phase_resultant": 0.282251315915905
+      },
+      {
+        "waveform_cosine": 0.10051954049019649,
+        "phase_resultant": 0.28948843316932715
+      }
+    ],
+    "across_fresh_context": [
+      {
+        "waveform_cosine": 0.014209147917429017,
+        "phase_resultant": 0.6757919347294762
+      },
+      {
+        "waveform_cosine": 0.9999999999999853,
+        "phase_resultant": 0.9999999999999941
+      },
+      {
+        "waveform_cosine": 0.014209156503552528,
+        "phase_resultant": 0.6757919228417133
+      }
+    ],
+    "timing": [
+      {
+        "context": 0,
+        "onsets_ms": [
+          41.375,
+          41.229166666666664,
+          41.333333333333336,
+          41.104166666666664,
+          40.9375
+        ],
+        "sd_ms": 0.17836545660836725
+      },
+      {
+        "context": 1,
+        "onsets_ms": [
+          41.3125,
+          41.145833333333336,
+          41.145833333333336,
+          41.020833333333336,
+          41.0
+        ],
+        "sd_ms": 0.12499999999999971
+      },
+      {
+        "context": 2,
+        "onsets_ms": [
+          41.375,
+          41.25,
+          41.166666666666664,
+          41.166666666666664,
+          41.0
+        ],
+        "sd_ms": 0.13693063937629174
+      }
+    ]
+  },
+  {
+    "distance": 6.0,
+    "mode": "stationary_on",
+    "within_context": [
+      {
+        "waveform_cosine": 0.006407270903625079,
+        "phase_resultant": 0.40012614922706585
+      },
+      {
+        "waveform_cosine": 0.10936071566797752,
+        "phase_resultant": 0.5669203427577484
+      },
+      {
+        "waveform_cosine": 0.009860185672416108,
+        "phase_resultant": 0.5124050288245925
+      }
+    ],
+    "across_fresh_context": [
+      {
+        "waveform_cosine": 0.014209121837867638,
+        "phase_resultant": 0.675791922591066
+      },
+      {
+        "waveform_cosine": 0.014209121837867638,
+        "phase_resultant": 0.675791922591066
+      },
+      {
+        "waveform_cosine": 1.0,
+        "phase_resultant": 1.0
+      }
+    ],
+    "timing": [
+      {
+        "context": 0,
+        "onsets_ms": [
+          41.375,
+          41.3125,
+          41.229166666666664,
+          41.1875,
+          41.145833333333336
+        ],
+        "sd_ms": 0.09316949906249071
+      },
+      {
+        "context": 1,
+        "onsets_ms": [
+          41.3125,
+          41.229166666666664,
+          41.229166666666664,
+          41.1875,
+          41.145833333333336
+        ],
+        "sd_ms": 0.06180165405912964
+      },
+      {
+        "context": 2,
+        "onsets_ms": [
+          41.3125,
+          41.229166666666664,
+          41.166666666666664,
+          41.145833333333336,
+          41.125
+        ],
+        "sd_ms": 0.07597742720337654
+      }
+    ]
+  },
+  {
+    "distance": 6.0,
+    "mode": "baseline",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": 0.06830480160279517,
+        "phase_resultant": 0.2878651234492341
+      },
+      {
+        "context": 1,
+        "waveform_cosine": 0.07238256170501485,
+        "phase_resultant": 0.38215398320550203
+      },
+      {
+        "context": 2,
+        "waveform_cosine": 0.0033712036103222395,
+        "phase_resultant": 0.2712089861879463
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  },
+  {
+    "distance": 6.0,
+    "mode": "temporal_on",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": 0.006235050292096837,
+        "phase_resultant": 0.3861918766668895
+      },
+      {
+        "context": 1,
+        "waveform_cosine": 0.0761584822367716,
+        "phase_resultant": 0.5385963151179937
+      },
+      {
+        "context": 2,
+        "waveform_cosine": 0.009675686685527192,
+        "phase_resultant": 0.4871680719048928
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  },
+  {
+    "distance": 6.0,
+    "mode": "simultaneous",
+    "interchannel_unaligned": [
+      {
+        "context": 0,
+        "waveform_cosine": 0.0037956419493747288,
+        "phase_resultant": 0.28208661994945167
+      },
+      {
+        "context": 1,
+        "waveform_cosine": 0.2037374663032935,
+        "phase_resultant": 0.45769879505798483
+      },
+      {
+        "context": 2,
+        "waveform_cosine": 0.007268102107914844,
+        "phase_resultant": 0.38834503174327095
+      }
+    ],
+    "interpretation": "Same-context multiple listeners is not proof of synchronous physical phase; no per-channel peak realignment."
+  }
+]

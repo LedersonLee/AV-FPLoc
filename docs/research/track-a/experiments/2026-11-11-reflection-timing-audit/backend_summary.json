@@ -1,0 +1,74 @@
+[
+  {
+    "distance": 2,
+    "mode": "baseline",
+    "detected": 18,
+    "mean_onset_bias_ms": 2.325005394534366
+  },
+  {
+    "distance": 2,
+    "mode": "radius0",
+    "detected": 18,
+    "mean_onset_bias_ms": 2.612042431571403
+  },
+  {
+    "distance": 2,
+    "mode": "indirect_off",
+    "detected": 0,
+    "mean_onset_bias_ms": null
+  },
+  {
+    "distance": 2,
+    "mode": "direct_off",
+    "detected": 18,
+    "mean_onset_bias_ms": 2.322690579719551
+  },
+  {
+    "distance": 2,
+    "mode": "temporal_on",
+    "detected": 18,
+    "mean_onset_bias_ms": 2.4222276167565884
+  },
+  {
+    "distance": 2,
+    "mode": "simultaneous",
+    "detected": 18,
+    "mean_onset_bias_ms": 2.309959098238069
+  },
+  {
+    "distance": 6,
+    "mode": "baseline",
+    "detected": 18,
+    "mean_onset_bias_ms": 6.155629116561283
+  },
+  {
+    "distance": 6,
+    "mode": "radius0",
+    "detected": 18,
+    "mean_onset_bias_ms": 6.434564301746467
+  },
+  {
+    "distance": 6,
+    "mode": "indirect_off",
+    "detected": 0,
+    "mean_onset_bias_ms": null
+  },
+  {
+    "distance": 6,
+    "mode": "direct_off",
+    "detected": 18,
+    "mean_onset_bias_ms": 6.157943931376098
+  },
+  {
+    "distance": 6,
+    "mode": "temporal_on",
+    "detected": 18,
+    "mean_onset_bias_ms": 6.266740227672395
+  },
+  {
+    "distance": 6,
+    "mode": "simultaneous",
+    "detected": 18,
+    "mean_onset_bias_ms": 6.162573561005727
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "checks": {
+    "old_rir_hashes": 96,
+    "old_diagnostic_peak_replays": 60,
+    "independent_fermat_paths": 36,
+    "analytic_reference": [
+      {
+        "distance": 0.3,
+        "moved": false,
+        "max_peak_error_ms": 0.005334486704416497
+      },
+      {
+        "distance": 0.3,
+        "moved": true,
+        "max_peak_error_ms": 0.00404483531048605
+      },
+      {
+        "distance": 2.0,
+        "moved": false,
+        "max_peak_error_ms": 0.005871596678529656
+      },
+      {
+        "distance": 2.0,
+        "moved": true,
+        "max_peak_error_ms": 0.008378450365697176
+      },
+      {
+        "distance": 6.0,
+        "moved": false,
+        "max_peak_error_ms": 0.007574494254704689
+      },
+      {
+        "distance": 6.0,
+        "moved": true,
+        "max_peak_error_ms": 0.005134177183748534
+      }
+    ],
+    "new_wave_hashes": 276,
+    "acoustic_mesh_exports": 48,
+    "first_hit_queries": 276,
+    "independent_onset_replay": 6,
+    "specular_audit": {
+      "mono_hashes": 144,
+      "material_only_scattering_pairs": 24,
+      "acoustic_exports": 24,
+      "receipts": 24
+    }
+  },
+  "method_gate": [
+    {
+      "method": "wave_peak",
+      "passes": false
+    },
+    {
+      "method": "energy_onset",
+      "passes": false
+    },
+    {
+      "method": "short_increase",
+      "passes": false
+    },
+    {
+      "method": "band_low_onset",
+      "passes": false
+    },
+    {
+      "method": "band_high_onset",
+      "passes": false
+    },
+    {
+      "method": "energy_centroid",
+      "passes": false
+    },
+    {
+      "method": "envelope_peak",
+      "passes": false
+    },
+    {
+      "method": "relative_1pct",
+      "passes": false
+    },
+    {
+      "method": "relative_10pct",
+      "passes": false
+    },
+    {
+      "method": "removed_difference_onset",
+      "passes": false
+    },
+    {
+      "method": "band_low_difference_onset",
+      "passes": false
+    },
+    {
+      "method": "band_high_difference_onset",
+      "passes": false
+    }
+  ],
+  "hssd_gate": "FAIL \u2014 no physically validated arrival estimator; D skipped as preauthorized",
+  "outcome": "C \u2014 Renderer-dependent Artifact",
+  "limits": "Analytic reference validates geometry only; not SoundSpaces path GT. Fresh contexts are not independent scenes. Internal histogram/early-path timing unexported."
+}

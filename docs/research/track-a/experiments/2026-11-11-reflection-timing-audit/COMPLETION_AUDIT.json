@@ -1,0 +1,33 @@
+{
+  "study": "reflection_timing_audit_20261111",
+  "outcome": "C \u2014 Renderer-dependent Artifact",
+  "status": "complete scientific work; Git synchronization recorded after commit",
+  "A": "Complete: path geometry verified; internal acoustic GT inaccessible and documented",
+  "B": "Complete: 12 estimators, three fixed thresholds, distance/repeat/movement/FDR",
+  "C": "Complete: old remove/move/repeats, new direct/indirect/radius/temporal/simultaneous/scattering interventions; residual limitations retained",
+  "D": "Skipped under explicit user condition: physical arrival gate failed",
+  "raw_prior_hashes": 96,
+  "new_valid_mono": 420,
+  "training": false,
+  "localization": false,
+  "experiment_2_3_4": false,
+  "viewer": {
+    "passed": true,
+    "recordings": 32,
+    "channel_views_checked": 192,
+    "renderer": "Chrome headless",
+    "visual_review": [
+      "full early RIR with default material",
+      "focused specular 2m with six-channel table"
+    ],
+    "display": "Actual recording min/max pressure and causal energy aggregates; no fabricated waveform",
+    "html_sha256": "e7cbcb5c42db3c3429a706a1c2064e89f519e67d578a11142e45d0251f63c8b3",
+    "viewer_code_sha": "0ae34bac9fc56ba721087a7d31c02868fc3cc890"
+  },
+  "limitations": [
+    "No acoustic path order/wall ID or internal histogram export",
+    "No independent real-world/scene-held-out validation",
+    "No specular-specific removed-wall control; no specular FDR claim",
+    "Fresh contexts are not guaranteed independent random seeds"
+  ]
+}

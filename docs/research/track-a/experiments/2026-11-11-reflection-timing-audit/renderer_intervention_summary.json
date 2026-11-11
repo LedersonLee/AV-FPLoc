@@ -1,0 +1,760 @@
+{
+  "summary": [
+    {
+      "distance": 2,
+      "mode": "explicit_default",
+      "method": "wave_peak",
+      "bias_ms": 2.346996135275106,
+      "max_abs_error_ms": 2.4617243213415776,
+      "context_mean_range_ms": [
+        2.3446813204602917,
+        2.3516257649047354
+      ],
+      "repeat_sd_mean_ms": 0.0295331718731435,
+      "repeat_sd_max_ms": 0.08419691425682077,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "explicit_default",
+      "method": "energy_onset",
+      "bias_ms": 2.3261628019417735,
+      "max_abs_error_ms": 2.4408909880082437,
+      "context_mean_range_ms": [
+        2.323847987126958,
+        2.330792431571403
+      ],
+      "repeat_sd_mean_ms": 0.029533171873142666,
+      "repeat_sd_max_ms": 0.08419691425681974,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "explicit_default",
+      "method": "energy_centroid",
+      "bias_ms": 2.4351364790986705,
+      "max_abs_error_ms": 2.5493887303883778,
+      "context_mean_range_ms": [
+        2.432775801524341,
+        2.439774981836656
+      ],
+      "repeat_sd_mean_ms": 0.02944340841617445,
+      "repeat_sd_max_ms": 0.08400030535283629,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "explicit_default",
+      "method": "removed_difference_onset",
+      "bias_ms": 2.3261628019417735,
+      "max_abs_error_ms": 2.4408909880082437,
+      "context_mean_range_ms": [
+        2.323847987126958,
+        2.330792431571403
+      ],
+      "repeat_sd_mean_ms": 0.029533171873142666,
+      "repeat_sd_max_ms": 0.08419691425681974,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "explicit_default",
+      "method": "band_high_difference_onset",
+      "bias_ms": 2.346996135275106,
+      "max_abs_error_ms": 2.4617243213415776,
+      "context_mean_range_ms": [
+        2.3446813204602917,
+        2.3516257649047354
+      ],
+      "repeat_sd_mean_ms": 0.0295331718731435,
+      "repeat_sd_max_ms": 0.08419691425682077,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular",
+      "method": "wave_peak",
+      "bias_ms": -0.1344853462063753,
+      "max_abs_error_ms": 0.1424423453250938,
+      "context_mean_range_ms": [
+        -0.13795756842859794,
+        -0.13101312398415269
+      ],
+      "repeat_sd_mean_ms": 0.004009376869374307,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular",
+      "method": "energy_onset",
+      "bias_ms": -0.15531867953970865,
+      "max_abs_error_ms": 0.16327567865842596,
+      "context_mean_range_ms": [
+        -0.15879090176193067,
+        -0.1518464573174866
+      ],
+      "repeat_sd_mean_ms": 0.004009376869372535,
+      "repeat_sd_max_ms": 0.01202813060811652,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular",
+      "method": "energy_centroid",
+      "bias_ms": -0.05695039148691164,
+      "max_abs_error_ms": 0.06528283216062114,
+      "context_mean_range_ms": [
+        -0.06043335476588604,
+        -0.05366554656066095
+      ],
+      "repeat_sd_mean_ms": 0.004405088256924768,
+      "repeat_sd_max_ms": 0.011909086962499359,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular",
+      "method": "removed_difference_onset",
+      "bias_ms": -0.15531867953970865,
+      "max_abs_error_ms": 0.16327567865842596,
+      "context_mean_range_ms": [
+        -0.15879090176193067,
+        -0.1518464573174866
+      ],
+      "repeat_sd_mean_ms": 0.004009376869372535,
+      "repeat_sd_max_ms": 0.01202813060811652,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular",
+      "method": "band_high_difference_onset",
+      "bias_ms": -0.10207793879896737,
+      "max_abs_error_ms": 0.12105195663922963,
+      "context_mean_range_ms": [
+        -0.10670756842859674,
+        -0.09629090176193067
+      ],
+      "repeat_sd_mean_ms": 0.006014065304059347,
+      "repeat_sd_max_ms": 0.024056261216233037,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_radius0",
+      "method": "wave_peak",
+      "bias_ms": 0.15370909823806933,
+      "max_abs_error_ms": 0.17005765467490974,
+      "context_mean_range_ms": [
+        0.15370909823806933,
+        0.15370909823806933
+      ],
+      "repeat_sd_mean_ms": 3.625973214694715e-16,
+      "repeat_sd_max_ms": 2.175583928816829e-15,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_radius0",
+      "method": "energy_onset",
+      "bias_ms": 0.13287576490473718,
+      "max_abs_error_ms": 0.1492243213415776,
+      "context_mean_range_ms": [
+        0.13287576490473718,
+        0.13287576490473718
+      ],
+      "repeat_sd_mean_ms": 1.812986607347358e-15,
+      "repeat_sd_max_ms": 2.175583928816829e-15,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_radius0",
+      "method": "energy_centroid",
+      "bias_ms": 0.23163146533864568,
+      "max_abs_error_ms": 0.24497804765390185,
+      "context_mean_range_ms": [
+        0.23140948352487337,
+        0.23180582133491465
+      ],
+      "repeat_sd_mean_ms": 0.00039546612581806557,
+      "repeat_sd_max_ms": 0.0010320775036098964,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_radius0",
+      "method": "removed_difference_onset",
+      "bias_ms": 0.13287576490473718,
+      "max_abs_error_ms": 0.1492243213415776,
+      "context_mean_range_ms": [
+        0.13287576490473718,
+        0.13287576490473718
+      ],
+      "repeat_sd_mean_ms": 1.812986607347358e-15,
+      "repeat_sd_max_ms": 2.175583928816829e-15,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_radius0",
+      "method": "band_high_difference_onset",
+      "bias_ms": 0.1814868760158467,
+      "max_abs_error_ms": 0.2117243213415776,
+      "context_mean_range_ms": [
+        0.1814868760158467,
+        0.1814868760158467
+      ],
+      "repeat_sd_mean_ms": 1.812986607347358e-15,
+      "repeat_sd_max_ms": 2.175583928816829e-15,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 2,
+      "mode": "specular_moved",
+      "method": "wave_peak",
+      "bias_ms": -0.08329284226427565,
+      "max_abs_error_ms": 0.09827156496253053,
+      "context_mean_range_ms": [
+        -0.08329284226427565,
+        -0.08329284226427565
+      ],
+      "repeat_sd_mean_ms": 0.008018753738745714,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": 0.051192503942099656,
+      "shift_error_max_abs_ms": 0.06523321110990388
+    },
+    {
+      "distance": 2,
+      "mode": "specular_moved",
+      "method": "energy_onset",
+      "bias_ms": -0.12032987930131316,
+      "max_abs_error_ms": 0.16077156496253053,
+      "context_mean_range_ms": [
+        -0.12148728670872089,
+        -0.11801506448649828
+      ],
+      "repeat_sd_mean_ms": 0.013495664395652756,
+      "repeat_sd_max_ms": 0.020833333333333925,
+      "shift_error_mean_ms": 0.03498880023839549,
+      "shift_error_max_abs_ms": 0.06523321110990032
+    },
+    {
+      "distance": 2,
+      "mode": "specular_moved",
+      "method": "energy_centroid",
+      "bias_ms": 0.05712471101355909,
+      "max_abs_error_ms": 0.07059946861213717,
+      "context_mean_range_ms": [
+        0.053612281225692136,
+        0.06131039798295627
+      ],
+      "repeat_sd_mean_ms": 0.009969279898912685,
+      "repeat_sd_max_ms": 0.017492726820805216,
+      "shift_error_mean_ms": 0.11407510250047073,
+      "shift_error_max_abs_ms": 0.13270451807917105
+    },
+    {
+      "distance": 2,
+      "mode": "specular_moved",
+      "method": "removed_difference_onset",
+      "bias_ms": -0.12032987930131316,
+      "max_abs_error_ms": 0.16077156496253053,
+      "context_mean_range_ms": [
+        -0.12148728670872089,
+        -0.11801506448649828
+      ],
+      "repeat_sd_mean_ms": 0.013495664395652756,
+      "repeat_sd_max_ms": 0.020833333333333925,
+      "shift_error_mean_ms": 0.03498880023839549,
+      "shift_error_max_abs_ms": 0.06523321110990032
+    },
+    {
+      "distance": 2,
+      "mode": "specular_moved",
+      "method": "band_high_difference_onset",
+      "bias_ms": -0.045098397819832194,
+      "max_abs_error_ms": 0.07743823162919483,
+      "context_mean_range_ms": [
+        -0.04857062004205422,
+        -0.04162617559761017
+      ],
+      "repeat_sd_mean_ms": 0.009486287526280284,
+      "repeat_sd_max_ms": 0.02083333333333215,
+      "shift_error_mean_ms": 0.056979540979135185,
+      "shift_error_max_abs_ms": 0.08606654444323247
+    },
+    {
+      "distance": 6,
+      "mode": "explicit_default",
+      "method": "wave_peak",
+      "bias_ms": 6.168360598042764,
+      "max_abs_error_ms": 6.410106901220921,
+      "context_mean_range_ms": [
+        6.118592079524245,
+        6.219286523968691
+      ],
+      "repeat_sd_mean_ms": 0.08659655332861782,
+      "repeat_sd_max_ms": 0.12672421938121506,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "explicit_default",
+      "method": "energy_onset",
+      "bias_ms": 6.1475272647094314,
+      "max_abs_error_ms": 6.389273567887585,
+      "context_mean_range_ms": [
+        6.097758746190912,
+        6.198453190635356
+      ],
+      "repeat_sd_mean_ms": 0.08659655332861609,
+      "repeat_sd_max_ms": 0.12672421938121095,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "explicit_default",
+      "method": "energy_centroid",
+      "bias_ms": 6.222612102626275,
+      "max_abs_error_ms": 6.464100834595762,
+      "context_mean_range_ms": [
+        6.172921584464775,
+        6.273476285921148
+      ],
+      "repeat_sd_mean_ms": 0.08648183491756822,
+      "repeat_sd_max_ms": 0.12647963117592842,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "explicit_default",
+      "method": "removed_difference_onset",
+      "bias_ms": 6.1475272647094314,
+      "max_abs_error_ms": 6.389273567887585,
+      "context_mean_range_ms": [
+        6.097758746190912,
+        6.198453190635356
+      ],
+      "repeat_sd_mean_ms": 0.08659655332861609,
+      "repeat_sd_max_ms": 0.12672421938121095,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "explicit_default",
+      "method": "band_high_difference_onset",
+      "bias_ms": 6.230860598042764,
+      "max_abs_error_ms": 6.472606901220921,
+      "context_mean_range_ms": [
+        6.181092079524245,
+        6.281786523968691
+      ],
+      "repeat_sd_mean_ms": 0.08659655332861782,
+      "repeat_sd_max_ms": 0.12672421938121506,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular",
+      "method": "wave_peak",
+      "bias_ms": 0.11396244989461597,
+      "max_abs_error_ms": 0.13927356788758516,
+      "context_mean_range_ms": [
+        0.10817541285757908,
+        0.11859207952424573
+      ],
+      "repeat_sd_mean_ms": 0.008018753738744345,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular",
+      "method": "energy_onset",
+      "bias_ms": 0.09312911656128264,
+      "max_abs_error_ms": 0.11844023455424946,
+      "context_mean_range_ms": [
+        0.08734207952424573,
+        0.0977587461909124
+      ],
+      "repeat_sd_mean_ms": 0.008018753738745029,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular",
+      "method": "energy_centroid",
+      "bias_ms": 0.16101217891725186,
+      "max_abs_error_ms": 0.1861042129670949,
+      "context_mean_range_ms": [
+        0.1552723420652621,
+        0.16554610490953556
+      ],
+      "repeat_sd_mean_ms": 0.007910715288458927,
+      "repeat_sd_max_ms": 0.01206436220735149,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular",
+      "method": "removed_difference_onset",
+      "bias_ms": 0.09312911656128264,
+      "max_abs_error_ms": 0.11844023455424946,
+      "context_mean_range_ms": [
+        0.08734207952424573,
+        0.0977587461909124
+      ],
+      "repeat_sd_mean_ms": 0.008018753738745029,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular",
+      "method": "band_high_difference_onset",
+      "bias_ms": 0.17646244989461599,
+      "max_abs_error_ms": 0.20177356788758516,
+      "context_mean_range_ms": [
+        0.17067541285757906,
+        0.18109207952424575
+      ],
+      "repeat_sd_mean_ms": 0.008018753738744345,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_radius0",
+      "method": "wave_peak",
+      "bias_ms": 0.40910133878350524,
+      "max_abs_error_ms": 0.43094023455424946,
+      "context_mean_range_ms": [
+        0.40678652396869097,
+        0.4102587461909124
+      ],
+      "repeat_sd_mean_ms": 0.0020046884346857446,
+      "repeat_sd_max_ms": 0.012028130608114468,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_radius0",
+      "method": "energy_onset",
+      "bias_ms": 0.3882680054501727,
+      "max_abs_error_ms": 0.41010690122092086,
+      "context_mean_range_ms": [
+        0.38595319063535766,
+        0.38942541285758026
+      ],
+      "repeat_sd_mean_ms": 0.0020046884346864285,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_radius0",
+      "method": "energy_centroid",
+      "bias_ms": 0.45606424701825,
+      "max_abs_error_ms": 0.47757871955599995,
+      "context_mean_range_ms": [
+        0.45376601673957967,
+        0.4572818655411197
+      ],
+      "repeat_sd_mean_ms": 0.002099378511583945,
+      "repeat_sd_max_ms": 0.011546239597862856,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_radius0",
+      "method": "removed_difference_onset",
+      "bias_ms": 0.3882680054501727,
+      "max_abs_error_ms": 0.41010690122092086,
+      "context_mean_range_ms": [
+        0.38595319063535766,
+        0.38942541285758026
+      ],
+      "repeat_sd_mean_ms": 0.0020046884346864285,
+      "repeat_sd_max_ms": 0.01202813060811857,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_radius0",
+      "method": "band_high_difference_onset",
+      "bias_ms": 0.47160133878350524,
+      "max_abs_error_ms": 0.49344023455424946,
+      "context_mean_range_ms": [
+        0.46928652396869097,
+        0.4727587461909124
+      ],
+      "repeat_sd_mean_ms": 0.0020046884346857446,
+      "repeat_sd_max_ms": 0.012028130608114468,
+      "shift_error_mean_ms": null,
+      "shift_error_max_abs_ms": null
+    },
+    {
+      "distance": 6,
+      "mode": "specular_moved",
+      "method": "wave_peak",
+      "bias_ms": 0.17544146332968166,
+      "max_abs_error_ms": 0.22507982867956144,
+      "context_mean_range_ms": [
+        0.1731266485148666,
+        0.18007109295931065
+      ],
+      "repeat_sd_mean_ms": 0.01603750747749006,
+      "repeat_sd_max_ms": 0.02405626121623714,
+      "shift_error_mean_ms": 0.06147901343506569,
+      "shift_error_max_abs_ms": 0.10660712910893011
+    },
+    {
+      "distance": 6,
+      "mode": "specular_moved",
+      "method": "energy_onset",
+      "bias_ms": 0.14997850036671817,
+      "max_abs_error_ms": 0.20424649534623285,
+      "context_mean_range_ms": [
+        0.1418766485148666,
+        0.15576553740375587
+      ],
+      "repeat_sd_mean_ms": 0.012028130608117202,
+      "repeat_sd_max_ms": 0.02405626121623714,
+      "shift_error_mean_ms": 0.056849383805435534,
+      "shift_error_max_abs_ms": 0.10660712910893011
+    },
+    {
+      "distance": 6,
+      "mode": "specular_moved",
+      "method": "energy_centroid",
+      "bias_ms": 0.25924796377861864,
+      "max_abs_error_ms": 0.31359309051146056,
+      "context_mean_range_ms": [
+        0.2506438104051867,
+        0.26368049538015487
+      ],
+      "repeat_sd_mean_ms": 0.02342076584658563,
+      "repeat_sd_max_ms": 0.04337334587239072,
+      "shift_error_mean_ms": 0.09823578486136676,
+      "shift_error_max_abs_ms": 0.16256712414563879
+    },
+    {
+      "distance": 6,
+      "mode": "specular_moved",
+      "method": "removed_difference_onset",
+      "bias_ms": 0.14997850036671817,
+      "max_abs_error_ms": 0.20424649534623285,
+      "context_mean_range_ms": [
+        0.1418766485148666,
+        0.15576553740375587
+      ],
+      "repeat_sd_mean_ms": 0.012028130608117202,
+      "repeat_sd_max_ms": 0.02405626121623714,
+      "shift_error_mean_ms": 0.056849383805435534,
+      "shift_error_max_abs_ms": 0.10660712910893011
+    },
+    {
+      "distance": 6,
+      "mode": "specular_moved",
+      "method": "band_high_difference_onset",
+      "bias_ms": 0.24488590777412572,
+      "max_abs_error_ms": 0.30841316201289715,
+      "context_mean_range_ms": [
+        0.2425710929593118,
+        0.24604331518153325
+      ],
+      "repeat_sd_mean_ms": 0.016714294468872324,
+      "repeat_sd_max_ms": 0.04336804165554254,
+      "shift_error_mean_ms": 0.06842345787950974,
+      "shift_error_max_abs_ms": 0.14827365040428475
+    }
+  ],
+  "effects": [
+    {
+      "distance": 2,
+      "specular_minus_default_peak_ms": -2.4814814814814814
+    },
+    {
+      "distance": 6,
+      "specular_minus_default_peak_ms": -6.054398148148148
+    }
+  ],
+  "checks": {
+    "mono_hashes": 144,
+    "material_only_scattering_pairs": 24,
+    "acoustic_exports": 24,
+    "receipts": 24
+  },
+  "inputs": [
+    {
+      "prefix": "d2.0_explicit_default_c0",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "ee305f93139d1e1925828d9f171c032cd722afffb929bb92bd91a6c50214726e"
+    },
+    {
+      "prefix": "d2.0_explicit_default_c1",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "ee305f93139d1e1925828d9f171c032cd722afffb929bb92bd91a6c50214726e"
+    },
+    {
+      "prefix": "d2.0_explicit_default_c2",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "ee305f93139d1e1925828d9f171c032cd722afffb929bb92bd91a6c50214726e"
+    },
+    {
+      "prefix": "d2.0_specular_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_radius0_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_radius0_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_radius0_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "904fb3862fada571001aa2618854025db3f8ca6a925e9a4c6c1be2c5140eff8c"
+    },
+    {
+      "prefix": "d2.0_specular_moved_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "31a4992b665f6018144bfac85df52c1a31692b5ad976bfc4babe105fa65029b2"
+    },
+    {
+      "prefix": "d2.0_specular_moved_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "31a4992b665f6018144bfac85df52c1a31692b5ad976bfc4babe105fa65029b2"
+    },
+    {
+      "prefix": "d2.0_specular_moved_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "31a4992b665f6018144bfac85df52c1a31692b5ad976bfc4babe105fa65029b2"
+    },
+    {
+      "prefix": "d6.0_explicit_default_c0",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "a82391cf1b4cf4ca0961d528f60e0600c30d08891a3ccab297224121d19b7e47"
+    },
+    {
+      "prefix": "d6.0_explicit_default_c1",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "a82391cf1b4cf4ca0961d528f60e0600c30d08891a3ccab297224121d19b7e47"
+    },
+    {
+      "prefix": "d6.0_explicit_default_c2",
+      "material_sha256": "7356868275a94e2662dd217b36a15f678b1241eebc144a89c9d0a8d5a262d3d4",
+      "mesh_sha256": "a82391cf1b4cf4ca0961d528f60e0600c30d08891a3ccab297224121d19b7e47"
+    },
+    {
+      "prefix": "d6.0_specular_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_radius0_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_radius0_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_radius0_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "7c3159fa1101e725eaf0323b9812c5a2a68136d775bb1e92a8b4f805522ef91a"
+    },
+    {
+      "prefix": "d6.0_specular_moved_c0",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "f58c774cfed1cb6aa50974ba86ba63b767362b74b0533bee3e69d245c177a155"
+    },
+    {
+      "prefix": "d6.0_specular_moved_c1",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "f58c774cfed1cb6aa50974ba86ba63b767362b74b0533bee3e69d245c177a155"
+    },
+    {
+      "prefix": "d6.0_specular_moved_c2",
+      "material_sha256": "1c345c8d3f1a9616e39a99e0a1e6e512e3fc7aa04702563a979a0110cbf70e74",
+      "mesh_sha256": "f58c774cfed1cb6aa50974ba86ba63b767362b74b0533bee3e69d245c177a155"
+    }
+  ],
+  "cost": {
+    "backend_v2": {
+      "contexts": 48,
+      "mono_outputs": 276,
+      "bytes": 18203812,
+      "render_call_seconds": 0.9822734689999999,
+      "process_wall_seconds": 1.1625003954395652
+    },
+    "specular_v3": {
+      "contexts": 24,
+      "mono_outputs": 144,
+      "bytes": 10042836,
+      "render_call_seconds": 0.6597820859999999,
+      "process_wall_seconds": 0.7726057814434171
+    }
+  },
+  "outcome": "C \u2014 Renderer-dependent Artifact",
+  "hssd_gate": "FAIL: no validated default-renderer path timing; default-vs-specular effect is not a validated HSSD arrival estimator"
+}
