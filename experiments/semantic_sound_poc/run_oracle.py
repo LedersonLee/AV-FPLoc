@@ -36,6 +36,6 @@ def main():
  # Local raw predictions, never Git artifacts.
  np.savez_compressed(o/'oracle_predictions.npz',posterior=pout,correct=correct,valid=valid,mass=mass,entropy=entropy,names=np.array(names),events=events,source_rooms=rooms)
  write(o/'oracle_observations.json',records);write(o/'metrics.json',dict(metrics=metrics,breakdown=breakdown,ci_unit='query cluster, mean over three seeds; within-scene only, not scene-generalization',activation_fraction=float((~silent).mean()),silence_trials=int(silent.sum()),silence_exact_prior=True,oracle_coverage_percent=float(covered.mean()*100),seconds=time.monotonic()-start,source_inputs_to_inference=False,semantic_only_constant_by_design=True,noise_kernel='fixed 15deg von Mises-equivalent concentration; additive wrapped Gaussian oracle noise 0/15/30/60, no re-tuning',NLL_scope='covered_success_set_logloss is diagnostic set-mass log loss on covered queries, not calibrated categorical NLL'))
- with (o/'metrics.csv').open('w') as f:wr=csv.DictWriter(f,fieldnames=list(metrics[0]));wr.writeheader();wr.writerows(metrics)
+ with (o/'metrics.csv').open('w') as f:wr=csv.DictWriter(f,fieldnames=list(metrics[0]),lineterminator="\n");wr.writeheader();wr.writerows(metrics)
  print(json.dumps(metrics,indent=2));print('time',time.monotonic()-start)
 if __name__=='__main__':main()
