@@ -18,11 +18,11 @@
     },
     {
       "git_copy": "PROTOCOL.json",
-      "sha256": "be8a419ef42e0509c9f7c13339b8b2fa391a62bb3318d3bee9ecb455838a56ac"
+      "sha256": "a01a90dcd0a9eae8ffc17ba695c6cfe2b98a22e87fed8cd9f4c547c283e0b028"
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "c822738d64d36dfe20d810c6586f179aed18692335b8523f5849d2283ae69281"
+      "sha256": "2c859afa7be6f53505d1e94d655543557c30b964414c26f85e578c097eb27731"
     },
     {
       "git_copy": "architecture_test.json",
@@ -85,6 +85,10 @@
       "sha256": "97b46c773f910bae9145e56786e0daa812f3b11ae4073fea615a9ac5d6e6d2fb"
     },
     {
+      "git_copy": "paired_summary_test.json",
+      "sha256": "e7fbc07328e35443ee8111f47f131d589c866422527aacc1b2505b816f9ca91b"
+    },
+    {
       "git_copy": "real_bank_matching_test.json",
       "sha256": "c2468c753c7e803da81f5cc68c6b8c624ca94eb0b76890363ef2991f7f3bd0aa"
     },
@@ -95,6 +99,10 @@
     {
       "git_copy": "source_snapshot.json",
       "sha256": "c7aac84f8aff9a87a63f634c2b0254175821c33ad355dd5a33ae011237944017"
+    },
+    {
+      "git_copy": "temperature_calibration_test.json",
+      "sha256": "e1711a96a3af9ce7407e3795436e7eae4f88c5b1f631709976310301639aa7b7"
     },
     {
       "git_copy": "training_state_test.json",

@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checks": [
+    "unequal scene-size macro/micro distinction",
+    "paired clustered uncertainty",
+    "seed averaging no pseudo-replication",
+    "query replication does not create scenes",
+    "strict ID alignment",
+    "duplicate/missing rows rejected"
+  ]
+}

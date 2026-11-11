@@ -50,5 +50,21 @@
     "direct_path": "retained",
     "phase": "six adjacent-channel sin/cos IPD"
   },
-  "test_evaluation_authorized_before_freeze": false
+  "test_evaluation_authorized_before_freeze": false,
+  "comparison": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261111,
+    "unit": "scene, with seeds averaged within scene",
+    "cohort": "strict scene/query ID equality, all19 Val9965 queries",
+    "micro_and_macro": true
+  },
+  "temperature_calibration": {
+    "grid": "25 log-spaced temperatures10^-3 through10^3",
+    "folds": 5,
+    "group": "scene source-family prefix, stable hash ordering and round-robin assignment",
+    "selection": "minimum equal-scene nearest-grid NLL on other development folds",
+    "evaluation": "held-fold region mass/NLL, confidence ECE/Brier and normalized entropy",
+    "limitation": "checkpoint selection uses all Val19; held-development calibration is not independent Test validation",
+    "boundary_optimum": "flag explicitly; no silent range retuning"
+  }
 }

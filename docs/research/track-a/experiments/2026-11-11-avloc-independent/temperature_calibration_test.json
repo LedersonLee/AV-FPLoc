@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "checks": [
+    "temperature statistics match independent diagnostic path",
+    "offset invariance",
+    "held fold cannot choose its own temperature",
+    "fit/held scene separation",
+    "source-family grouping"
+  ]
+}
