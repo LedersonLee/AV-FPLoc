@@ -5,8 +5,8 @@ import numpy as np
 import habitat_sim
 
 def write(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
-def make(c,out,furnished=True):
- r=Path(c['root'])/'source/hssd-hab';b=habitat_sim.SimulatorConfiguration();b.scene_id=str(r/('scenes' if furnished else 'stages')/(c['scene']+('.scene_instance.json' if furnished else '.stage_config.json')));b.scene_dataset_config_file=str(out/'furnished.scene_dataset_config.json');b.load_semantic_mesh=False;b.enable_physics=False;b.gpu_device_id=-1;b.requires_textures=False
+def make(c,out,furnished=True,physics=False):
+ r=Path(c['root'])/'source/hssd-hab';b=habitat_sim.SimulatorConfiguration();b.scene_id=str(r/('scenes' if furnished else 'stages')/(c['scene']+('.scene_instance.json' if furnished else '.stage_config.json')));b.scene_dataset_config_file=str(out/'furnished.scene_dataset_config.json');b.load_semantic_mesh=False;b.enable_physics=physics;b.gpu_device_id=-1;b.requires_textures=False
  a=habitat_sim.agent.AgentConfiguration();cam=habitat_sim.CameraSensorSpec();cam.uuid='depth';cam.resolution=[16,16];cam.sensor_type=habitat_sim.SensorType.DEPTH;a.sensor_specifications=[cam];return habitat_sim.Simulator(habitat_sim.Configuration(b,[a]))
 def ray_distance(sim,p,d):
  ray=habitat_sim.geo.Ray();ray.origin=np.asarray(p,dtype=np.float32);ray.direction=np.asarray(d,dtype=np.float32);hits=sim.cast_ray(ray).hits;return min([float(x.ray_distance) for x in hits]+[1e9])
@@ -48,7 +48,7 @@ def main():
    for x,z in room['points_xz']:
     p=[x,c['source_height_m'],z];floor=[x,.05,z];snap=np.array(sim.pathfinder.snap_point(floor)) if nav_ok else np.array([np.nan]*3)
     if not np.isfinite(snap).all() or np.linalg.norm(snap-np.array(floor))>.15:continue
-    if not clear(sim,p,c['clearance_m']):continue
+    # Native cast_ray has no functional collision backend here; depth validation is mandatory.
     good.append(p)
     if len(good)>=c['source_generation_count_per_room']+c['source_integration_count_per_room']:break
    # Disjoint interleaved supports; small rooms retain their actual finite quadrature size.
@@ -57,7 +57,7 @@ def main():
   for i in range(len(reps)):
    for j in range(i+1,len(reps)):
     path=habitat_sim.ShortestPath();path.requested_start=sim.pathfinder.snap_point([reps[i][0],.05,reps[i][2]]);path.requested_end=sim.pathfinder.snap_point([reps[j][0],.05,reps[j][2]]);ok=sim.pathfinder.find_path(path);conn.append(dict(rooms=[i,j],connected=bool(ok),distance=float(path.geodesic_distance) if ok else None))
-  # Three same-room LOS pairs selected purely on geometry, not localization outcome.
+  # Three same-room pairs; acoustic visibility is NOT established by cast_ray.
   pairs=[]
   for label in ['bathroom','kitchen','living room']:
    room=next(r for r in pools if r['label']==label);found=None
@@ -65,13 +65,11 @@ def main():
     for p in room['integration']:
      center=np.array(p);center[1]=c['listener_height_m'];delta=np.array(src)-center;d=np.linalg.norm(delta)
      if not 1<=d<=4:continue
-     if any(not clear(sim,m,.05) for yaw in c['rir_headings_deg'] for m in center+offsets(c,yaw)):continue
-     if ray_distance(sim,center,delta/d)<d-.02:continue
      found=dict(room=room['room'],label=label,source=src,center=center.tolist(),distance=d);break
     if found:break
    assert found,label;pairs.append(found)
   env=dict(habitat_version=habitat_sim.__version__,habitat_path=habitat_sim.__file__,habitat_commit=Path('/opt/src/habitat-sim/.git/HEAD').read_text().strip(),soundspaces_commit=Path('/opt/src/soundspaces2/.git/HEAD').read_text().strip(),python=sys.version,numpy=np.__version__)
-  write(o/'source_support.json',pools);write(o/'acoustic_pairs.json',pairs);write(o/'geometry_validation.json',dict(objects_loaded=nobj,objects_expected=expected,bounds=[list(bounds.min),list(bounds.max)],source_points=total,navmesh_built=bool(nav_ok),room_connectivity=conn,environment=env,seconds=time.monotonic()-start,placement='rule-based polygon/free-map/navmesh and bidirectional 15cm axis-ray clearance at 1.2m; no object-specific sink/TV attachment',collision_limit='finite axis clearance is not a full volumetric proof'))
+  write(o/'source_support.json',pools);write(o/'acoustic_pairs.json',pairs);write(o/'geometry_validation.json',dict(objects_loaded=nobj,objects_expected=expected,bounds=[list(bounds.min),list(bounds.max)],source_points=total,navmesh_built=bool(nav_ok),room_connectivity=conn,environment=env,seconds=time.monotonic()-start,placement='provisional polygon/free-map/navmesh points; actual depth clearance must follow; no object attachment',collision_limit='cast_ray backend nonfunctional; never treat it as free-space evidence'))
   sim.close()
  else:
   pairs=json.loads((o/'acoustic_pairs.json').read_text());folder=o/'rirs';folder.mkdir(exist_ok=True);records=[]
