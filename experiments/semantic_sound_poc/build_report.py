@@ -48,7 +48,7 @@ Inference 함수는 candidate pose/visual score/event/angle/known FP latent sour
 
 {table}
 
-Event availability={m['activation_fraction']*100:.2f}%, silence {m['silence_trials']}trials는 정확히 visual prior 유지. B3 correct-mass/entropy와 개선·훼손 수는 위 표, class/source-room/FP-line subgroup와 seed별 값은 [metrics.json](metrics.json)에 있다. Room breakdown은 **source room**이며 robot room별 결과는 후속 validation summary를 참조한다. Noise는 같은 event/source에 동일 표준정규 draw를0/15/30/60°로 scaling; likelihood kernel 자체는 재최적화하지 않았다.
+Event availability={m['activation_fraction']*100:.2f}%, silence {m['silence_trials']}trials는 정확히 visual prior 유지. B3 correct-mass/entropy와 개선·훼손 수는 위 표, class/source-room/FP-line subgroup와 seed별 값은 [metrics.json](metrics.json)에 있다. Room breakdown은 **source room**이며 robot room별 결과는 [subgroup_details.json](subgroup_details.json)에 있다. Noise는 같은 event/source에 동일 표준정규 draw를0/15/30/60°로 scaling; likelihood kernel 자체는 재최적화하지 않았다.
 
 B3−B2={verify['contrasts']['B3-B2']['delta_pp']:.2f}%p, CI={verify['contrasts']['B3-B2']['ci95_pp']}; B3−shuffled semantics={verify['contrasts']['B3-C1']['delta_pp']:.2f}%p, B3−random angle={verify['contrasts']['B3-C2']['delta_pp']:.2f}%p. 이 대조는 **현재 simulator/prior와 oracle 관측 하에서** 의미·방향 정합의 기여를 지지한다. B3가 B0보다 안정적으로 우수하다는 결론은 지지하지 않는다.
 
@@ -71,6 +71,8 @@ B3−B2={verify['contrasts']['B3-B2']['delta_pp']:.2f}%p, CI={verify['contrasts'
 초기 native import는 `free(): invalid pointer`; 문서화된 system libstdc++ preload로 해결했다. Geometry v1/v2는 결과 작성 직전 Git ownership 검사에서 실패했고, 전역 설정을 바꾸지 않고 detached HEAD 파일을 읽어 provenance를 확보했다. 원본 로그는 로컬에 남겼다.
 
 **초기 `cast_ray` clearance/LOS 판정은 철회했다.** Physics off/on 모두 floor downward ray가 no-hit을 반환하는 무효 backend였으며 independent positive-control 검사가 이를 발견했다. Furnished navmesh/region checks는 유효하지만 ray-based 높이 clearance의 증거는 아니었다. 실제 1×1 depth camera6방향으로 {depth['count']}점을 재검사했고 초기 invalid={depth['invalid']}. {'무효 위치를 제외한 source support로 모든 oracle baseline을 재실행했다. 초기 결과는 상위 디렉터리에 보존하며 correction.json으로 연결한다.' if correction else '모든 source support가 depth 재검증을 통과하여 Oracle 수치는 유지했다.'} 이 정정은 성능을 높이기 위한 선택이 아니라 물리적 유효성 검사 복구다. 6방향 depth+navmesh 역시 완전한 volumetric collision certification은 아니다.
+
+추가 경계 정리: 초기 inference dictionary에 사용되지 않는 generation support가 포함되어 있었으나 선택된 source identity나 해당 좌표를 읽는 연산은 없었다. 최종 실행에서는 generation 필드를 함수 입력에서 제거했다. [inference_boundary_verification.json](inference_boundary_verification.json)의 posterior 배열 bitwise 일치 검사로 수치가 변하지 않음을 확인했다.
 
 ## 사례와 한계
 
@@ -145,9 +147,9 @@ Actual primary oracle/native render executed from `ee9e56cd9027011a4c08132928b06
  files=[]
  for p in sorted(o.rglob('*')):
   if p.is_file() and p.name!='manifest.json':files.append(dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)))
- manifest=dict(study=c['study'],scene=sid,seeds=c['seeds'],code_head=head,primary_execution_sha='ee9e56cd9027011a4c08132928b06d09e352ce4e',initial_base=(initial/'initial_git_head.txt').read_text().strip(),sources=[dict(path=str(p),sha256=sha(p)) for p in sorted(code.iterdir()) if p.is_file()],inputs=inputm,config=c,environment=env,acoustic_settings=json.loads((o/'acoustic_render.json').read_text())['settings'],outputs=files,total_output_bytes=sum(x['bytes'] for x in files),external_native_outputs=[dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)) for sub in ['rirs','direct_probe'] for p in sorted((initial/sub).glob('*.npy'))],evidence_level='Exploratory',track='A / semantic hypothesis discrimination; no learned Track B',local_only=['RIR','WAV','raw predictions','full logs','source pools'],correction=cor,git_scope='only explicit study code/docs/index paths',docs_sha='not stored: reported after commit')
+ manifest=dict(study=c['study'],scene=sid,seeds=c['seeds'],code_head=head,primary_execution_sha='ee9e56cd9027011a4c08132928b06d09e352ce4e',initial_base=(initial/'initial_git_head.txt').read_text().strip(),sources=[dict(path=str(p),sha256=sha(p)) for p in sorted(code.iterdir()) if p.is_file()],inputs=inputm,config=c,environment=env,acoustic_settings=json.loads((o/'acoustic_render.json').read_text())['settings'],outputs=files,total_output_bytes=sum(x['bytes'] for x in files),external_native_outputs=[dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)) for sub in ['rirs','direct_probe'] for p in sorted((initial/sub).glob('*.npy'))],evidence_level='Exploratory',track='A / semantic hypothesis discrimination; no learned Track B',local_only=['RIR','WAV','raw predictions','full logs','source pools'],correction=cor,git_scope='only explicit study code/docs/index paths',resource_summary=json.loads((o/'resource_summary.json').read_text()))
  (o/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
- selected=['report.md','audit.md','reproduction.md','config.json','metrics.csv','metrics.json','manifest.json','environment.json','verification.json','alignment.json','audio_validation.json','figure_cases.json','correction.json','subgroup_details.json']
+ selected=['report.md','audit.md','reproduction.md','config.json','metrics.csv','metrics.json','manifest.json','environment.json','verification.json','alignment.json','audio_validation.json','figure_cases.json','correction.json','subgroup_details.json','inference_boundary_verification.json','resource_summary.json']
  for name in selected:shutil.copy2(o/name,docs/name)
  shutil.copytree(o/'figures',docs/'figures',dirs_exist_ok=True)
  (docs/'README.md').write_text('# Semantic sound PoC\n\n[Research report](report.md) · [Asset audit](audit.md) · [Reproduction](reproduction.md) · [Metrics](metrics.csv) · [Manifest](manifest.json)\n')
