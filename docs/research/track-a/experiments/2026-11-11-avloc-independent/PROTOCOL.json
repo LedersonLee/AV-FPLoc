@@ -66,5 +66,18 @@
     "evaluation": "held-fold region mass/NLL, confidence ECE/Brier and normalized entropy",
     "limitation": "checkpoint selection uses all Val19; held-development calibration is not independent Test validation",
     "boundary_optimum": "flag explicitly; no silent range retuning"
+  },
+  "geometry_observability": {
+    "scope": "post-hoc GT-derived ideal ray profiles only, not model input or pose proposal",
+    "directions": [
+      11,
+      36
+    ],
+    "primary_grid_cm": 20,
+    "margin": "minimum incorrect-region profile MAE minus minimum joint-correct-region profile MAE",
+    "joint_region": "position<=1m and circular yaw<=30deg",
+    "near_alias_count": "incorrect profiles within0.05m mean ray error of best correct profile",
+    "missing_correct_region": "explicit null margin",
+    "limitation": "equal-scale ideal-profile matching is not a mathematical upper bound for learned uncertainty"
   }
 }

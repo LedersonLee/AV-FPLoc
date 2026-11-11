@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checks": [
+    "identical distant profiles are ambiguous",
+    "known distinct profile has positive margin",
+    "tie can yield wrong pose with zero ray error",
+    "missing correct region explicit"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "scope": "4query diagnostic code check",
+  "queries": 4,
+  "grid_cm": 20,
+  "results": {
+    "omnidirectional": {
+      "perfect_profile_joint": 1.0,
+      "perfect_profile_fine": 0.5,
+      "median_geometry_margin_m": 0.30441883351240007,
+      "nonpositive_geometry_margin_fraction": 0.0,
+      "missing_correct_regions": 0
+    },
+    "visual_fov": {
+      "perfect_profile_joint": 0.5,
+      "perfect_profile_fine": 0.0,
+      "median_geometry_margin_m": -0.007854977791959539,
+      "nonpositive_geometry_margin_fraction": 0.5,
+      "missing_correct_regions": 0
+    }
+  },
+  "records": [
+    {
+      "scene": "102344115",
+      "queries": 4,
+      "file": "102344115.json",
+      "sha256": "87d1b161f9427a7b9f1db59ad051c26977996db9a7829fdde1a5985195a18fd0",
+      "bank_sha256": "1903966df31e492d999f9dad91c5415bd1e6e93a97c704faf11d115ddc30aa46",
+      "labels_sha256": "f37969b4e42e7070afce106e87570153f06ab8750f756ab2bc45844558a1f3b1",
+      "seconds": 0.053316354751586914
+    }
+  ],
+  "warning": "GT-derived profiles only in diagnostic; not model input, not pose proposals, not learned upper bound.5cm profile allowance is a predeclared descriptive threshold, not localization success.",
+  "source_sha256": {
+    "geometry_observability.py": "51d3c40249f3f2d8980e3e13eb76aaffe325cf86c8f233925495377fc7c49317",
+    "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616"
+  },
+  "test_accessed": false
+}

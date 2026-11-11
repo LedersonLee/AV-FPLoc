@@ -22,11 +22,11 @@
     },
     {
       "git_copy": "PROTOCOL.json",
-      "sha256": "a01a90dcd0a9eae8ffc17ba695c6cfe2b98a22e87fed8cd9f4c547c283e0b028"
+      "sha256": "14c689c1a2e564310aa0c87e0570aba5a3dbd9a225eb4f064537c88a5f764f0e"
     },
     {
       "git_copy": "RESEARCH_REPORT.md",
-      "sha256": "bbe9d2c308d6fda0f44199bc0910665bc4b5e66c23bceb704b59c654e017d296"
+      "sha256": "4f5c6e8daf4728417797bd8fabbd88967051ccc24164ec12e70fb1e4b0a4dcd3"
     },
     {
       "git_copy": "architecture_test.json",
@@ -63,6 +63,14 @@
     {
       "git_copy": "expert_training_queue.json",
       "sha256": "5a255023d9ea2ca776285da214568ff5f091fe16fb9e35ddb8b968053542152c"
+    },
+    {
+      "git_copy": "geometry_observability_smoke.json",
+      "sha256": "21a31b1b368fb4b137dda4b3aa26a188faef4bd3ff38c8b9ef3a6f381e3d338b"
+    },
+    {
+      "git_copy": "geometry_observability_test.json",
+      "sha256": "928fc1d4db3e9b939fe1a6bfbee88ed00dfecab3344d32c88d76419d5047dc0c"
     },
     {
       "git_copy": "geometry_test_v2.json",
