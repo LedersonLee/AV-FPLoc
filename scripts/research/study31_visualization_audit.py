@@ -15,11 +15,11 @@ def corr(a,b):return float(np.corrcoef(a,b)[0,1]) if len(a)>2 and np.std(a)>1e-7
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--study',type=Path,required=True);p.add_argument('--docs',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--code-sha',required=True);a=p.parse_args()
- a.out.mkdir(parents=True,exist_ok=False);inputs={};rows=[];cache={};verified=0
+ a.out.mkdir(parents=True,exist_ok=False);inputs={};rows=[];cache={};verified=0;max_donor_difference=0.
  def load(path):
   inputs[str(path.relative_to(a.study))]=sha(path)
   with np.load(path) as z:return {k:z[k].copy() for k in z.files}
- frozen=read(a.study/'method_freeze_v1.json');scenes=frozen['official_test'];models=['echo_regression','echo_categorical','spatial_regression','spatial_categorical']
+ inputs['method_freeze_v1.json']=sha(a.study/'method_freeze_v1.json');frozen=read(a.study/'method_freeze_v1.json');scenes=frozen['official_test'];models=['echo_regression','echo_categorical','spatial_regression','spatial_categorical']
  refs={s:read(a.study/'official_targets_v1'/f'{s}_queries.json') for s in scenes}
  for s in scenes:inputs[str(Path('official_targets_v1')/f'{s}_queries.json')]=sha(a.study/'official_targets_v1'/f'{s}_queries.json')
  for model in models:
@@ -32,7 +32,7 @@ def main():
     assert m.shape==(64,36) and mask.dtype==bool and np.isfinite(m).all()
     # Saved donor is a different location, not a different yaw at the same centre.
     xy=np.array([q['centre_xyz_m'] for q in refs[scene]])[:,[0,2]];assert np.all(np.linalg.norm(xy-xy[z['donor']],axis=1)>.5)
-    assert np.max(abs(d-m[z['donor']]))<.01  # Different inference batch grouping may introduce small numeric differences.
+    max_donor_difference=max(max_donor_difference,float(np.max(abs(d-m[z['donor']]))));assert max_donor_difference<.01  # Different inference batch grouping may introduce small numeric differences.
     verified+=1
     for i in range(64):
      good=mask[i];n=int(good.sum());assert n>2
@@ -81,7 +81,7 @@ def main():
   ax.hist(x,bins=bins,color=COL[k],alpha=.85);ax.axvline(0,color='#333',lw=1,ls='--');ax.set(xlim=(low,high),xlabel='Change in per-query MAE (m)',ylabel='Query × seed count',title={'scalar':'Scalarized − original','rotated':'Rotated 180° − original','donor':'Donor − original'}[k])
   ax.text(.03,.94,f"query mean {x.mean():+.4f} m\nmedian {np.median(x):+.4f} m\npositive: {np.mean(x>0):.1%}",transform=ax.transAxes,va='top',fontsize=9)
   if k!='donor':
-   ins=inset_axes(ax,width='44%',height='40%',loc='upper right');ins.hist(x,bins=35,color=COL[k]);ins.axvline(0,color='#333',ls='--',lw=.7);ins.tick_params(labelsize=7);ins.set_title('Full local range (zoom)',fontsize=7)
+   ins=inset_axes(ax,width='44%',height='40%',loc='center right');ins.hist(x,bins=35,color=COL[k]);ins.axvline(0,color='#333',ls='--',lw=.7);ins.tick_params(labelsize=7);ins.set_title('Full local range (zoom)',fontsize=7)
  cc=np.array([r['correlation'] for r in primary if r['correlation'] is not None]);axs[1,0].hist(cc,bins=np.linspace(-1,1,31),color=COL['normal']);axs[1,0].axvline(0,color='#333',ls='--');axs[1,0].set(title='Within-query angular correlation',xlabel='Pearson r on valid directions',ylabel='Query × seed count');axs[1,0].text(.03,.94,f'mean {cc.mean():+.4f}; median {np.median(cc):+.4f}',transform=axs[1,0].transAxes,va='top',fontsize=9)
  sd=np.array([r['prediction_angular_sd'] for r in primary]);gs=np.array([r['gt_valid_angular_sd'] for r in primary]);b=np.geomspace(min(sd.min(),gs[gs>0].min())*.8,max(sd.max(),gs.max())*1.1,45)
  axs[1,1].hist(sd,bins=b,alpha=.8,color=COL['normal'],label='Prediction: all 36');axs[1,1].hist(gs,bins=b,histtype='step',lw=2,color=COL['gt'],label='GT: valid directions');axs[1,1].set(xscale='log',title='Angular standard deviation',xlabel='SD across directions (m; log axis)',ylabel='Query × seed count');axs[1,1].legend(fontsize=8)
@@ -101,7 +101,7 @@ def main():
   axes[1].plot(angles,truth,color=col,alpha=.5,lw=1,label=lab+' GT');axes[1].plot(angles,pred,color=col,lw=2.5,label=lab+' prediction')
   axes[2].plot(angles,truth-np.nanmean(truth),color=col,alpha=.5,lw=1);axes[2].plot(angles,pred-np.nanmean(pred),color=col,lw=2.5)
  for ax in axes[1:]:ax.set(xlabel='Body bearing (degrees)',xlim=(0,350));ax.set_xticks([0,90,180,270,350]);ax.grid(alpha=.15)
- axes[1].set(title='Same scene, two actual positions',ylabel='Distance (m)');axes[2].set(title='Remove each profile’s valid-direction mean',ylabel='Relative directional shape (m)');axes[2].axhline(0,color='#555',ls='--',lw=1)
+ axes[1].set(title='Same scene, two actual positions',ylabel='Distance (m)');axes[2].set(title='Remove each profile’s mean\n(valid directions)',ylabel='Relative directional shape (m)');axes[2].axhline(0,color='#555',ls='--',lw=1)
  h,l=axes[1].get_legend_handles_labels();fig.legend(h,l,loc='lower center',ncol=4,frameon=False)
  fig.suptitle(f'Range-scale evidence ≠ directional shape reconstruction\nExample: {scene}; queries {refs[scene][i]["query_id"]} and {refs[scene][j]["query_id"]}; seed 42',fontsize=13);finish(fig,'range_vs_shape')
  # Matched phase-zero trained counterpart; not an inference-only phase intervention.
@@ -116,6 +116,6 @@ def main():
   v=cache[r['scene'],42];i=r['index'];good=v['mask'][i];pp=phase_cache[r['scene']][i];err=float(np.abs(pp-v['gt'][i])[good].mean())
   ax.plot(angles,np.where(good,v['gt'][i],np.nan),'.-',color=COL['gt'],label='GT');ax.plot(angles,v['normal'][i],lw=2,color=COL['normal'],label='Full-phase model');ax.plot(angles,pp,'--',lw=2,color=COL['phase'],label='Phase-zero trained model');ax.set(xlabel='Body bearing (degrees)',ylabel='Distance (m)',title=f"{r['scene']} / query {r['query_id']} / seed42\nMAE: full {r['mae']['normal']:.3f}; phase-zero {err:.3f} m",xlim=(0,350));ax.grid(alpha=.15)
  fig.suptitle(f'Matched phase control: phase-zero − full = {phase_mean:+.3f} m\n17-scene paired 95% CI [{expected["ci95"][0]:.3f}, {expected["ci95"][1]:.3f}]; identical selected queries',fontsize=13);h,l=axes[0].get_legend_handles_labels();fig.legend(h,l,loc='lower center',ncol=3,frameon=False);finish(fig,'phase_control')
- result=dict(code_sha=a.code_sha,source_docs_commit='d52936cab06e96476ad4ead6ce79145c3b417e52',environment=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),scope='furnished official Test saved outputs; all4 primary models ×3seeds ×17scenes ×64queries',primary_query_seed_records=len(primary),raw_pairs_verified=verified,selection='seed42; >=18 valid directions; representative nearest40th/60th MAE percentile in distinct scenes; largest2 MAEs in distinct scenes; maximum mean absolute donor prediction change; minimum absolute scalar delta within0.3m of median MAE and GT SD>1m; unique queries',selected=chosen,summaries=summaries,phase_zero_minus_full=phase_mean,within_scene_centered_scalar_correlation_seed42=corr(np.array(xx),np.array(yy)),input_hashes=inputs,docs_hashes={n:sha(a.docs/n) for n in ['official_results.md','conclusion.md','results.md','representation_summary.json','official_summary.json','directional_diagnostic.json','official_contrasts.json','predefined.png','failure.png']})
+ result=dict(code_sha=a.code_sha,source_docs_commit='d52936cab06e96476ad4ead6ce79145c3b417e52',environment=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),scope='furnished official Test saved outputs; all4 primary models ×3seeds ×17scenes ×64queries',primary_query_seed_records=len(primary),max_donor_replay_difference_m=max_donor_difference,primary_gt_valid_sd_median=float(np.median(gs)),primary_correlation_median=float(np.median(cc)),primary_valid_ray_range=[min(r['valid'] for r in primary),max(r['valid'] for r in primary)],raw_pairs_verified=verified,selection='seed42; >=18 valid directions; representative nearest40th/60th MAE percentile in distinct scenes; largest2 MAEs in distinct scenes; maximum mean absolute donor prediction change; minimum absolute scalar delta within0.3m of median MAE and GT SD>1m; unique queries',selected=chosen,summaries=summaries,phase_zero_minus_full=phase_mean,within_scene_centered_scalar_correlation_seed42=corr(np.array(xx),np.array(yy)),input_hashes=inputs,docs_hashes={n:sha(a.docs/n) for n in ['official_results.md','conclusion.md','results.md','representation_summary.json','official_summary.json','directional_diagnostic.json','official_contrasts.json','predefined.png','failure.png']})
  (a.out/'audit.json').write_text(json.dumps(result,indent=2,allow_nan=False));print(json.dumps({k:v for k,v in result.items() if k not in ['input_hashes','docs_hashes','selected']},indent=2))
 if __name__=='__main__':main()
