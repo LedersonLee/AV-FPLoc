@@ -4,7 +4,52 @@ Study `avloc_20261111`, Primary Track A, started2026-11-11. **Active, incomplete
 
 Objective: reproduce the paper-based architecture as an explicit6ch HSSD adaptation, train on the full eligible cohort, and complete all requested matched baseline, calibration, observability, interaction and cost comparisons. No superiority of Track A is assumed.
 
-## Current evidence
+## Consolidated verified findings — 2026-11-12
+
+**A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model is training; A3 is queued behind it. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
+
+### Matched primary accuracy
+
+Full Val19,9,965 queries, identical20cm position-candidate /10° yaw-candidate grid.20cm is not the floorplan image resolution; the raster maps are1cm. B2/GEOQ values average seeds42/43; A0/A1/A2 use seed42. Existing visual/acoustic/fixed rows use frozen baseline caches. All are reused-development results, not independent validation.
+
+| Method | Position≤0.1m | Position≤1m | Joint≤1m/30° |
+|---|---:|---:|---:|
+| Existing Visual |17.43%|46.99%|45.85%|
+| FP-RIR cosine |5.35%|30.38%|21.36%|
+| Fixed score fusion |24.28%|66.75%|65.04%|
+| B2 |22.50%|70.97%|69.31%|
+| B2+GEOQ |23.20%|74.42%|73.07%|
+| A0 visual rays |22.03%|50.95%|50.11%|
+| A1 acoustic rays |0.15%|9.25%|2.43%|
+| A2 joint rays |30.47%|65.72%|64.93%|
+
+[Seven requested position/yaw metrics and exact source hashes](REQUESTED_METRIC_TABLE.md). A2 has better fine accuracy but worse Joint than B2+GEOQ; this is a tradeoff, not uniform superiority. A2−GEOQ Joint micro−8.144pp; equal-scene macro−8.211pp95%CI[−10.045,−6.477]. Fine micro+7.265pp; macro+7.089ppCI[5.418,8.704]. The paired19-scene bootstrap does not quantify training-seed variance. [A2 contrasts](A2_INITIAL_RESULTS.md).
+
+At10cm candidate spacing the same A2 checkpoint reaches fine49.33% and Joint74.18%. This is an inference-grid intervention, not learned model improvement, and cannot establish superiority over20cm B2/GEOQ. A0 also benefits; A1 remains poor. [Grid comparison](GRID_AND_A2_CALIBRATION.md). A native10cm B2 comparison would require additional FP-RIR reference locations; it has not been run or substituted with interpolation.
+
+### Mechanism evidence and negative results
+
+- **Acoustic rays:** A1 rayMAE1.4785m and Joint2.43% do not support strong standalone acoustic geometric localization in this adaptation. Its15 fine-position successes at20cm occur in3scenes,7with wrong yaw. Smaller ray error associates with success, but even the lowest-error quartile has Joint7.627%. Perfect GT profiles distinguish many failed cases; geometry ambiguity alone is insufficient to explain A1 failure. Acoustic information, representation and optimization explanations remain unresolved. [Success conditions](ACOUSTIC_SUCCESS_CONDITIONS.md), [training and calibration](A1_FUSION_CALIBRATION.md).
+- **Independent fusion:** equal moment fusion of independently trained A0/A1 yields Joint9.553%, harming A0. Keeping A0 inside its FoV and using A1 only outside yields52.303%, versus A0's50.105%; macro+2.284ppCI[1.288,3.236], but the fine-accuracy CI includes zero. Mixing insideFoV alone yields7.396%, locating major harm in that intervention. This changes both means and scales and does not isolate the physical cause. [Fusion decomposition](FUSION_DECOMPOSITION.md).
+- **Joint interaction:** A2 exceeds A0 and the tested independent controls; the completed A2-disabled contrast is still needed. Its two isolated passes/equal distribution mixture change several computational factors, so even that future contrast will not prove a pure attention-edge effect. [Control contract](INTERACTION_CONTROL_CONTRACT.md).
+- **Sharpness/calibration:** A2 entropy at20cm is0.00970, yet failures can be confidently far away. Temperature improves nearest-grid NLL at both grids without changing Top1. At10cm, however, JointECE worsens0.24206→0.30802 and Brier0.24001→0.27589. NLL-selected temperature is not a universal reliability fix. [Calibration evidence](GRID_AND_A2_CALIBRATION.md), [random and extreme score maps with28exact replays](MATCHED_SCORE_FIELDS.md).
+- **Routing:** no learned A3 routing result yet. Its actual fusion replay, error/weight correlations and same-head uniform intervention are prepared. An inference-only uniform control is not independently trained fixed routing. Reliability claims remain unproven.
+
+### Cost and reproducibility
+
+FP-RIR inference banks are absent from A0/A1/A2. Earlier storage accounting quantifies bank payload differences but does not establish information equivalence or end-to-end speed. Completed A0/A1/A2 epoch wall-time sums are10.56/3.16/12.40hours (including validation, shared resources), with24.572/12.491/36.663M parameters. These are not isolated GPU-hours or inference latency. [Cost audit](COMPLETED_TRAINING_COST.md). Isolated inference/runtime comparison remains outstanding.
+
+Training source remains `62c58da20ed26ba95863638bbfd4926829999eec`; each linked analysis records its own source SHA/hashes, inputs and reproduction commands. Epoch counts are100/70/99; best epochs99/50/79. Original complete receipts' patience-loop off-by-one counters are preserved and explained, not rewritten. All prior models, negative results and interrupted seed43 artifacts remain local. Test17 observations and Track B are untouched.
+
+### Decisions still requiring evidence
+
+No complete AVLoc-style versus Track A verdict is warranted until A3 and control evaluations finish. Current evidence favors retaining the strong B2+GEOQ Joint baseline while investigating A2's fine-position advantage and FP-RIR-free deployment costs. It does not justify claiming that acoustic evidence is useless, that the original AVLoc paper fails, or that routing learns independently calibrated reliability. Complete the queued models, matched contrasts and routing analysis, extend figures/metric tables, measure isolated runtime, and then update the final interpretation. Report writing is not a stopping criterion.
+
+## Historical implementation and progress notes
+
+The following chronology is preserved as earlier evidence; status statements are date-dependent and superseded by the consolidated section above.
+
+### Initial evidence
 
 Paper Method3/AppB,C,G and the three supplied reviews were read. The implementation reproduces the specified token/expert depths and routing formula, with deviations explicitly listed. Synthetic full-resolution architecture checks passed for A0/A1/A2/A3 and the interaction-disabled control. Unimodal predictions are invariant to changes in the other input; detached routing gradients and absent vision weights outside FoV were checked. Independent SciPy tests verify the chirp and convolution, and reflection is involutive. These are code checks, not learned localization results.
 
