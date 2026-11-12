@@ -16,6 +16,7 @@ def read(p):return json.loads(Path(p).read_text())
 def main():
  p=argparse.ArgumentParser()
  for k in ['workspace','study','out']:p.add_argument('--'+k,type=Path,required=True)
+ p.add_argument('--include-arm',action='append',choices=['A2_disabled','A3'],default=[])
  a=p.parse_args();sys.path.insert(0,str(a.workspace/'AV-FPLoc/src'))
  from avfploc.geometry.rays import angular_rays
  from avfploc.evaluation.baselines import standardized
@@ -53,8 +54,11 @@ def main():
    mu,b=angular_rays(z['mu'][i].astype(float),z['scale'][i].astype(float));fields['b2']=.85*standardized(-(abs(win-mu)/b).sum(-1)/40)+.15*standardized(fp@z['observed'][i].astype(float))
   bp=a.study/f'banks_v1/{sid}/grid_20cm.npz';assert sha(bp)==br[sid]['files']['grid_20cm.npz'];bank=np.load(bp);np.testing.assert_allclose(xy,bank['xy'],rtol=0,atol=1e-7);sources['ray_bank']=sha(bp)
   expected={k:r for k,r in base[(sid,qid)]['methods'].items()}
-  for arm,head in [('A0','V'),('A1','A'),('A2','AV')]:
-   root=a.study/f'predictions/{arm}_seed42';pm=read(root/'manifest.json');pr=next(r for r in pm['records'] if r['scene']==sid);pp=root/pr['file'];assert sha(pp)==pr['sha256'];sources[arm]=pr['sha256']
+  for arm,head in [('A0','V'),('A1','A'),('A2','AV')]+[(arm,'F' if arm=='A3' else 'AV') for arm in dict.fromkeys(a.include_arm)]:
+   root=a.study/f'predictions/{arm}_seed42';pm=read(root/'manifest.json');assert pm['complete'] and pm['queries']==9965 and pm['seed']==42
+   assert read(a.study/f'runs/{arm}_seed42/complete.json')['status']=='training_complete'
+   ev=read(a.study/f'evaluation/{arm}_seed42_20cm/summary.json');assert ev['complete'] and ev['queries']==9965 and ev['prediction_manifest_sha256']==sha(root/'manifest.json')
+   pr=next(r for r in pm['records'] if r['scene']==sid);pp=root/pr['file'];assert sha(pp)==pr['sha256'];sources[arm]=pr['sha256']
    with np.load(pp) as z:
     j=int(np.flatnonzero(z['query_ids']==qid)[0]);fields[arm]=laplace_field(bank['world_rays'],z[head+'_mu'][j],z[head+'_scale'][j],FOV if head=='V' else None)
    expected[arm]=next(r for r in read(a.study/f'evaluation/{arm}_seed42_20cm/{sid}.json') if r['query_id']==qid)
@@ -67,7 +71,7 @@ def main():
    diagnostics[method]={k:d[k] for k in ['top1_id','joint','fine','position_error_m','yaw_error_deg','entropy_normalized','raw_peak_margin','distinct_peak_margin']}
   gp=pose_values(xy,[geo[(sid,qid)]['selected_id']])[0]
   for mode in ['native_logmass','standardized_score']:
-   fig,axes=plt.subplots(2,4,figsize=(17,9),layout='constrained');lo,hi=(-16,0) if mode=='native_logmass' else (-3,3)
+   nrows=(len(fields)+4)//4;fig,axes=plt.subplots(nrows,4,figsize=(17,4.5*nrows),layout='constrained');lo,hi=(-16,0) if mode=='native_logmass' else (-3,3)
    for ax,(method,field) in zip(axes.flat,fields.items()):
     values=field-logsumexp(field) if mode=='native_logmass' else standardized(field)
     values=values.reshape(-1,36).max(1);im=ax.scatter(xy[:,0],xy[:,1],c=values,s=7,marker='s',cmap='viridis',vmin=lo,vmax=hi,rasterized=True)
@@ -76,12 +80,14 @@ def main():
     for pp,color in [(truth,'white'),(pose,'red')]:ax.arrow(pp[0],pp[1],.45*np.cos(np.deg2rad(pp[2])),.45*np.sin(np.deg2rad(pp[2])),color=color,width=.025,length_includes_head=True)
     if method=='b2':ax.scatter(*gp[:2],marker='D',s=35,facecolors='none',edgecolors='cyan',label='GEOQ selection')
     dd=diagnostics[method];ax.set_title(f"{method} | error {dd['position_error_m']:.2f}m / {dd['yaw_error_deg']:.0f}°\nH={dd['entropy_normalized']:.3f}; Joint={dd['joint']}",fontsize=10);ax.set_aspect('equal');ax.set_xlabel('x (m)');ax.set_ylabel('y (m)')
-   axes.flat[7].axis('off');axes.flat[7].text(0,.95,'20cm XY / 10° yaw; seed42\nXY maximum over yaw (not marginal)\nWhite star/arrow: GT diagnostic\nRed cross/arrow: inferred Top1\nCyan diamond: GEOQ selected pose\nBackground: valid pose-grid cells\n\nNative: log normalized score mass, T=1\nNot demonstrated calibrated probability\nz-score: within-method full-pose scaling\nColor limits shared within each figure\n\nNo RGB/RIR/raw arrays included.\nGEOQ utility has no global score field.',va='top',fontsize=11)
+   
+   for unused in list(axes.flat)[len(fields):]:unused.axis('off')
+   axes.flat[len(fields)].text(0,.95,'20cm XY / 10° yaw; seed42\nXY maximum over yaw (not marginal)\nWhite star/arrow: GT diagnostic\nRed cross/arrow: inferred Top1\nCyan diamond: GEOQ selected pose\nBackground: valid pose-grid cells\n\nNative: log normalized score mass, T=1\nNot demonstrated calibrated probability\nz-score: within-method full-pose scaling\nColor limits shared within each figure\n\nNo RGB/RIR/raw arrays included.\nGEOQ utility has no global score field.',va='top',fontsize=11)
    label='log normalized score mass (clipped at −16)' if mode=='native_logmass' else 'within-method z-score (clipped to ±3)'
-   fig.colorbar(im,ax=list(axes.flat[:7]),label=label,shrink=.65)
+   fig.colorbar(im,ax=list(axes.flat[:len(fields)]),label=label,shrink=.65)
    fig.suptitle(f'{selection} | scene {sid} | query {qid}\nReused Val19 diagnostic; same query and pose grid',fontsize=14)
    fig.savefig(a.out/f'case_{ci}_{mode}.png',dpi=140);plt.close(fig)
   records.append({'selection':selection,'scene':sid,'query_id':qid,'sources':sources,'diagnostics':diagnostics})
- result={'complete':True,'cases':records,'field_replays':sum(len(r['diagnostics']) for r in records),'selection':'2 uniform queries seed20261111; max positional-error difference in A2 harm/repair versus existing visual. Extremes are diagnostic, not representative frequency.','source_sha256':sha(__file__),'audit_sha256':sha(audit_path),'geoq_sha256':sha(geopath),'test_accessed':False,'scope':'Exploratory reused Val19 seed42. A3 pending. Native score scales differ; z-scores are visualization only.'}
+ result={'complete':True,'cases':records,'field_replays':sum(len(r['diagnostics']) for r in records),'selection':'2 uniform queries seed20261111; max positional-error difference in A2 harm/repair versus existing visual. Extremes are diagnostic, not representative frequency.','source_sha256':sha(__file__),'audit_sha256':sha(audit_path),'geoq_sha256':sha(geopath),'test_accessed':False,'scope':'Exploratory reused Val19 seed42; only included completed arms are visualized. Native score scales differ; z-scores are visualization only. Optional arms require their completed evaluation.', 'included_optional_arms':list(dict.fromkeys(a.include_arm))}
  (a.out/'verification.json').write_text(json.dumps(result,indent=2)+'\n');print('PASS',result['field_replays'],'field replays;',len(records),'cases',flush=True)
 if __name__=='__main__':main()
