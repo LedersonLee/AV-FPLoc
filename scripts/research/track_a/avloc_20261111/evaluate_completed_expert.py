@@ -30,8 +30,17 @@ def evaluation_stages(tag, head, arm):
 def main():
  p=argparse.ArgumentParser()
  for k in ['workspace','study','out']:p.add_argument('--'+k,type=Path,required=True)
+ p.add_argument('--await-container',help='Optional live completed-run predecessor; event wait, never restart')
  p.add_argument('--arm',choices=['A0','A1','A2','A2_disabled','A3'],required=True);p.add_argument('--seed',type=int,required=True);a=p.parse_args();tag=f'{a.arm}_seed{a.seed}';head={'A0':'V','A1':'A','A2':'AV','A2_disabled':'AV','A3':'F'}[a.arm]
  image='sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318'
+ if a.await_container:
+  state=json.loads(run(['docker','inspect',a.await_container],capture_output=True).stdout)[0]
+  assert state['State']['Running'],'Await mode requires a live predecessor at scheduling'
+  assert f'/study/runs/{tag}' in state['Config']['Cmd'] and state['Image']==image
+  assert not a.out.exists(),'Existing evaluation output requires review'
+  print('WAIT LIVE',state['Id'],flush=True)
+  result=run(['docker','wait',state['Id']],capture_output=True)
+  assert result.stdout.strip()=='0',result.stdout
  source=a.workspace/'AV-FPLoc/scripts/research/track_a/avloc_20261111';training=a.study/'runs'/tag;protocol=json.loads((training/'protocol.json').read_text())
  assert protocol['arm']==a.arm and protocol['seed']==a.seed
  assert json.loads((training/'complete.json').read_text())['status']=='training_complete'
