@@ -1,0 +1,15 @@
+# What the interaction-disabled control isolates — 2026-11-12
+
+Track A; implementation validation, Exploratory. No learned control result yet. Existing training remains unchanged.
+
+A2 concatenates visual and audio tokens and processes them jointly with36 ray tokens in a shared4-layer expert. A2-disabled invokes that same expert module twice: visual tokens with visual ray seeding, then audio tokens without visual seeding. It combines the two predicted Laplace distributions with equal weights and moment matching. Both encoders remain trainable; the decoder weights are shared across the isolated passes. Training supervises the resulting fused distribution. This is not the earlier independent A0+A1 checkpoint fusion.
+
+A new CPU dependency test exercises the real AVLoc.forward and Expert with inexpensive synthetic encoders. Perturbing audio leaves the visual-pass mean/scale bit-identical; perturbing visual leaves the audio-pass outputs bit-identical. Each own-input change produces an output difference>1e−5, avoiding a vacuous constant-output check. Saved fused outputs exactly replay the equal moment formula. Test passed. Existing common-initialization tests established matching shared state keys. Test source `49a6a10`; unchanged model/training source `62c58da20ed26ba95863638bbfd4926829999eec`. Reproduce in the pinned study image with `python test_disabled_interaction.py`; no GPU, pretrained checkpoints or dataset observations are needed.
+
+## Interpretation boundary
+
+The comparison removes cross-modal activation exchange inside the joint expert while retaining encoders, expert parameter capacity and the study's common initialization/training protocol. However, it also changes distribution fusion, sequence lengths, ray-token duplication, dropout draws and the optimization path. Shared decoder weights and gradients can transfer information across training examples/modalities even though forward activations are isolated. The intervention therefore contrasts joint token processing against shared-weight isolated-pass equal fusion; it does not identify the effect of a single attention edge or rule out a better non-interacting fusion rule.
+
+Using300 visual tokens,90 audio tokens and36 ray tokens, per-layer attention pair counts are426²=181,476 for A2 versus336²+126²=128,772 across the two disabled passes. Total tokens processed are426 versus462. These analytic counts are not FLOPs or measured latency; attention, feed-forward and encoder costs differ. Equal parameter count must not be called equal compute. Training wall times and final inference costs should be reported separately.
+
+The active A2-disabled experiment remains valid as the specified architectural control, but any eventual accuracy difference must carry these limits. A3's uniform-weight inference control separately holds its trained expert outputs fixed and changes routing weights; it also cannot substitute for independently training with a fixed router. No causal performance conclusion is drawn before completed-model evaluation. Test17 unused; source closure and existing checkpoints preserved.
