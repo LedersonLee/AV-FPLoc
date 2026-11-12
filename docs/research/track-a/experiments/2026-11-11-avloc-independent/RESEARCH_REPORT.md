@@ -6,7 +6,7 @@ Objective: reproduce the paper-based architecture as an explicit6ch HSSD adaptat
 
 ## Consolidated verified findings — 2026-11-13
 
-**A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model has completed69 epochs and both native grid evaluations; its10cm calibration review remains pending. A3 is now training, with its completion-triggered evaluation queued. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
+**A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model has completed69 epochs, both native grid evaluations and both calibration reviews. A3 is now training, with its completion-triggered evaluation queued. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
 
 ### Matched primary accuracy
 

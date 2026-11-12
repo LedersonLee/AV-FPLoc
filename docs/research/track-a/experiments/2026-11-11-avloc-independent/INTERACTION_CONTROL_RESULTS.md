@@ -1,6 +1,6 @@
 # Completed interaction-disabled control — seed42
 
-2026-11-13 KST. Track A. Exploratory reused-development evidence; one seed, no independent Test evaluation. Full Train112/58,894 and Val19/9,965. Training and native20cm/10cm evaluations complete;10cm calibration review remains pending at this report. A3 has started and is not yet evaluated.
+2026-11-13 KST. Track A. Exploratory reused-development evidence; one seed, no independent Test evaluation. Full Train112/58,894 and Val19/9,965. Training, native20cm/10cm evaluations and both calibration reviews are complete. The follow-up below supersedes the initially pending10cm status. A3 has started and is not yet evaluated.
 
 ## Hypothesis, setting and competing explanations
 
@@ -47,3 +47,21 @@ Control trained69 executed epochs and stopped by patience20; best epoch49, clean
 Training code `62c58da20ed26ba95863638bbfd4926829999eec`, pinned runtime `sha256:e51cb712100f25d0018aa65e371e63deaa51d12601c465ce698c0c446800c318`. [Integrity gate](disabled_integrity_seed42.json) verifies best-checkpoint hash, manifest/source cohort, finite positive scales, all query IDs, replayed ray MAE and every stored metric mean for both grids. It does not re-execute every dense field or certify independent validation. Integrity code `591e28e`; matched aggregation `a8f1a60`; calibration review retains its executable source hash in the verification receipt.
 
 Run `validate_expert_gate.py --study <study> --seed 42 --arm A2_disabled --out <fresh-json>`, `compare_joint_expert.py --study <study> --out <fresh-directory> --include-disabled`, and `requested_metric_table.py --study <study> --out <fresh-directory> --include-arm A2_disabled`. Prediction, bank and checkpoint artifacts remain local on SSD. No Test observations, new rendering or changes to Track B occurred.
+
+## Follow-up:10cm calibration fully verified
+
+The seven-stage control evaluation queue terminated successfully. All19scenes/9,965queries in the10cm native and crossfit calibration replay agree with saved IDs, Top1, success flags and summary statistics. All five held-development folds select T=10.
+
+| Metric | Native T=1 | Held-development temperature |
+|---|---:|---:|
+| Nearest-grid NLL |29.68799|7.37607|
+| Joint ECE |0.401622|0.171899|
+| Joint Brier |0.384847|0.259398|
+| Normalized entropy |0.113329|0.542151|
+| Joint success |46.3924%|46.3924%|
+
+The control improves NLL/ECE/Brier at both grids, but retains underconfidence over much of the calibrated curve. This is a method-dependent outcome: A2's10cm ECE/Brier regression remains counterevidence against universal improvement from NLL-selected temperature. No new temperature objective, checkpoint or model was selected. Reused-development folds do not remove upstream exposure or checkpoint-selection effects.
+
+[Verification with executable source hash](disabled_calibration10_verification.json). Figure inspected; sparse bins remain labeled and are not interpreted as stable estimates. Reproduce with `summarize_ray_calibration.py --baseline <study>/evaluation/A2_disabled_seed42_10cm --calibration <study>/calibration/A2_disabled_seed42_10cm --out <fresh-review-directory>`. This uses the existing committed reviewer; no training source change.
+
+![Disabled control10cm calibration](disabled_calibration10_reliability.png)
