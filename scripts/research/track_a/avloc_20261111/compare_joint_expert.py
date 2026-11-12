@@ -6,13 +6,13 @@ from paired_summary import align,paired
 from predict_hash import sha
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--study',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();sources={};methods={}
+ p=argparse.ArgumentParser();p.add_argument('--study',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--include-disabled',action='store_true');a=p.parse_args();sources={};methods={}
  m=json.loads((a.study/'predictions/A2_seed42/manifest.json').read_text());assert m['complete'] and m['queries']==9965 and m['seed']==42
  expected=[]
  for rec in m['records']:
   path=a.study/'predictions/A2_seed42'/rec['file'];assert sha(path)==rec['sha256'];expected.extend((rec['scene'],int(q)) for q in np.load(path)['query_ids'])
  assert len(expected)==9965 and len({s for s,q in expected})==19
- for tag in ['A2','A0','independent_equal','visual_inside_audio_outside']:
+ for tag in ['A2','A0','independent_equal','visual_inside_audio_outside']+(['A2_disabled'] if a.include_disabled else []):
   root=a.study/'evaluation'/f'{tag}_seed42_20cm';summary=json.loads((root/'summary.json').read_text());assert summary['complete'] and summary['queries']==9965 and summary['grid_cm']==20
   rows=[];hashes={}
   for sid in sorted({s for s,q in expected}):
