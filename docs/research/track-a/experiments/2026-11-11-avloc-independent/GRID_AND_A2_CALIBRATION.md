@@ -35,3 +35,20 @@ Native sharpness does not establish calibration. Smoothing improves the stated c
 Training code `62c58da20ed26ba95863638bbfd4926829999eec`; evaluation `8e77076c4f9c0f7cb0db32fceb2b230a3f16f31b`; grid comparison `598696f`; calibration-review helper source hashes are preserved in verification JSON. Run `compare_ray_grids.py --study <study-root> --out <fresh-output>` and `summarize_ray_calibration.py --baseline <study-root>/evaluation/A2_seed42_20cm --calibration <study-root>/calibration/A2_seed42_20cm --out <fresh-review>` from the study code directory. All manifests/query sets and aggregate metrics were checked; the expert gate independently replayed per-query ray MAE. Dense fields are not re-evaluated by the comparison script. Figure visually reviewed.
 
 Single seed, repeated validation use and upstream baseline exposure limit generalization. Scene resampling does not measure seed variance. A3 and interaction-disabled comparisons remain outstanding; this report is not the research termination criterion.
+
+## Follow-up: A2 10cm calibration completed
+
+The previously pending10cm calibration and its full9,965-query native/cross-fit replay are complete. All five folds select T=56.2341. Top1 poses and Joint accuracy74.1796% remain unchanged.
+
+| Quantity | Native T=1 | Cross-fit T |
+|---|---:|---:|
+| Nearest-grid NLL |118.13384|5.69013|
+| Joint-event ECE |0.24206|0.30802|
+| Joint-event Brier |0.24001|0.27589|
+| Normalized entropy |0.01611|0.48126|
+
+Unlike20cm, the10cm Joint-event ECE and Brier **worsen** after NLL-selected temperature scaling. The reliability curve shows substantial underconfidence after smoothing. Thus the earlier20cm improvements must not be generalized to all grids or confidence events. Fitting nearest-grid NLL is distinct from fitting the probability of the broader Joint neighborhood; this objective mismatch is a plausible explanation, not an isolated causal result. No replacement temperature was selected to hide the regression.
+
+![A2 10cm calibration](a2_calibration10_reliability.png)
+
+[Exact replay verification](a2_calibration10_verification.json). The same existing calibration and review code were used; figure visually inspected. All A2 evaluation stages (prediction, both pose grids, both ray analyses, both calibrations) are now complete. This does not complete the benchmark: A2-disabled and A3 are still outstanding. At the scheduled09:40UTC check, the seed42 interaction-disabled model was in epoch4; A3 and its control-evaluation queue remained waiting on the exact live predecessor. Monitoring continues at30-minute intervals.
