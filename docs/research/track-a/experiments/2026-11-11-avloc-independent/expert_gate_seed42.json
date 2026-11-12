@@ -1,0 +1,150 @@
+{
+  "scope": "Reused Val19, integrity/evaluation gate; not proof of accuracy or independent validation",
+  "seed": 42,
+  "test_accessed": false,
+  "validator_sha256": "6f53e35224265797a7e0f535cd151c1fa9f00fd2684be2e14bcfa86fd8fc43d6",
+  "A0": {
+    "validated": true,
+    "checkpoint_sha256": "03942eba07916c8da6d494319b484c830e74a5740793765e864433ce58b091f7",
+    "prediction_manifest_sha256": "aa5d6807f530d165fb6d068eca14e669f46cd8d447281007c4c68ae37779d56c",
+    "complete_sha256": "75c9daf84a54454a68343e0314162f61aa3499d2ab239251a4fa550c54b78e6d",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 99,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "ece4088320511a1aa965bf1f0930128e3a9e6a2d6010a2015a9a4270f9af552b",
+        "metrics": {
+          "r1": 0.5094831911690918,
+          "joint": 0.5010536879076769,
+          "fine": 0.22027094831911692,
+          "top5_nms": 0.7097842448569995,
+          "top20_nms": 0.8875062719518314,
+          "top5_raw": 0.658906171600602,
+          "top20_raw": 0.8013045659809332,
+          "ray_mae": 0.1795708834640032,
+          "ray_nll": 0.8388550303862381,
+          "in_fov_mae": 0.1795708834640032,
+          "entropy_normalized": 0.042972747736281264,
+          "gt_region_mass": 0.5030022502904717,
+          "nearest_grid_nll": 119.03912543456256
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "7c69d695d7b70a095534de64543a2c6d80f57b408d1d0058a32a084590e8eade",
+        "metrics": {
+          "r1": 0.612744606121425,
+          "joint": 0.6046161565479177,
+          "fine": 0.3890617160060211,
+          "top5_nms": 0.7768188660311088,
+          "top20_nms": 0.9212242849974912,
+          "top5_raw": 0.7256397390868038,
+          "top20_raw": 0.8330155544405419,
+          "ray_mae": 0.1795708834640032,
+          "ray_nll": 0.8388550303862381,
+          "in_fov_mae": 0.1795708834640032,
+          "entropy_normalized": 0.05982897301312456,
+          "gt_region_mass": 0.604883268722477,
+          "nearest_grid_nll": 81.46294116496449
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A1": {
+    "validated": true,
+    "checkpoint_sha256": "e920d21d187f165a77f1b108ef0bf11c5a232ee801d811344042df6ab5f81325",
+    "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+    "complete_sha256": "e076c1a30cc42be0e9ffe3a88248a051a5dacf069c4edb3cddf49917088dd45e",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 50,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "d0c6f2cb10c3fc9882bfd7473c983b597c4a6dfbf0efab950f4b4b7a3509fe7f",
+        "metrics": {
+          "r1": 0.09252383341695936,
+          "joint": 0.024284997491219266,
+          "fine": 0.0015052684395383843,
+          "top5_nms": 0.09914701455092825,
+          "top20_nms": 0.2268941294530858,
+          "top5_raw": 0.07205218263923734,
+          "top20_raw": 0.10546914199698947,
+          "ray_mae": 1.4785059681533272,
+          "ray_nll": 2.0494116569422953,
+          "in_fov_mae": 1.4913805417269768,
+          "entropy_normalized": 0.4783620951457204,
+          "gt_region_mass": 0.02413505710951168,
+          "nearest_grid_nll": 29.572609659086734
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "c4a2c6ddbe4780ff11656dd8be4c543f36c02ed23163eac4f2f8607f7f7fe15a",
+        "metrics": {
+          "r1": 0.09222277972905168,
+          "joint": 0.025388861013547415,
+          "fine": 0.0030105368790767687,
+          "top5_nms": 0.10265930757651781,
+          "top20_nms": 0.2275965880582037,
+          "top5_raw": 0.06753637732062218,
+          "top20_raw": 0.0958354239839438,
+          "ray_mae": 1.4785059681533272,
+          "ray_nll": 2.0494116569422953,
+          "in_fov_mae": 1.4913805417269768,
+          "entropy_normalized": 0.5270107418354176,
+          "gt_region_mass": 0.024480603667603133,
+          "nearest_grid_nll": 30.88118268818684
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A2": {
+    "validated": true,
+    "checkpoint_sha256": "d4a9e44580cb4aa87f3909fc08cbabd04ddb925bf1e44b1c50133064f39e7bd2",
+    "prediction_manifest_sha256": "d650bd3fc2e3d4f53b6f95c334a31621d31e13613795b5e8e00decc19be228e5",
+    "complete_sha256": "c3da8be395683c7db4e2fd779e9296633c9f820cd483038b0c82cbcd4bc3cd37",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 79,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "1a2fd7ee5467d6728c262fc666951b0f2a7de08136e844607785255c7fcfcdd5",
+        "metrics": {
+          "r1": 0.6572002007024587,
+          "joint": 0.6492724535875565,
+          "fine": 0.304666332162569,
+          "top5_nms": 0.8550928248871049,
+          "top20_nms": 0.9417962870045158,
+          "top5_raw": 0.782940291018565,
+          "top20_raw": 0.8687405920722528,
+          "ray_mae": 0.560813454961207,
+          "ray_nll": 2.6483865042827563,
+          "in_fov_mae": 0.17737218501618504,
+          "entropy_normalized": 0.00969931717715634,
+          "gt_region_mass": 0.6492368959876412,
+          "nearest_grid_nll": 154.8475699043452
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "d0b04915aae4b5741844d94481870841774562a6c7a41de555395d63d9705cb9",
+        "metrics": {
+          "r1": 0.7484194681384847,
+          "joint": 0.7417962870045158,
+          "fine": 0.4933266432513798,
+          "top5_nms": 0.9017561465127948,
+          "top20_nms": 0.9562468640240843,
+          "top5_raw": 0.8235825388861013,
+          "top20_raw": 0.8861013547415956,
+          "ray_mae": 0.560813454961207,
+          "ray_nll": 2.6483865042827563,
+          "in_fov_mae": 0.17737218501618504,
+          "entropy_normalized": 0.016105295750054226,
+          "gt_region_mass": 0.7412018636268273,
+          "nearest_grid_nll": 118.13383537149154
+        },
+        "verified_queries": 9965
+      }
+    }
+  }
+}
