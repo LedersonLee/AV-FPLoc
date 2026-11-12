@@ -14,13 +14,14 @@ def read(path):
     return json.loads(Path(path).read_text())
 
 
-def validate(study, seed):
+def validate(study, seed, arms=None):
     data = read(study / 'data_v1/manifest.json')
     expected = {r['scene']: r for r in data['records'] if r['split'] == 'val'}
     assert len(expected) == 19 and sum(r['queries'] for r in expected.values()) == 9965
     gate = {'scope': 'Reused Val19, integrity/evaluation gate; not proof of accuracy or independent validation',
             'seed': seed, 'test_accessed': False, 'validator_sha256': sha(__file__)}
-    for arm, head in [('A0', 'V'), ('A1', 'A'), ('A2', 'AV')]:
+    for arm in (['A0', 'A1', 'A2'] if arms is None else arms):
+        head = {'A0':'V', 'A1':'A', 'A2':'AV', 'A2_disabled':'AV', 'A3':'F'}[arm]
         run = study / f'runs/{arm}_seed{seed}'
         pred = study / f'predictions/{arm}_seed{seed}'
         protocol, completion, best = [read(run / f'{name}.json') for name in ['protocol', 'complete', 'best']]
@@ -73,7 +74,8 @@ def validate(study, seed):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); p.add_argument('--study', type=Path, required=True); p.add_argument('--seed', type=int, required=True); p.add_argument('--out', type=Path, required=True)
-    a = p.parse_args(); result = validate(a.study, a.seed)
+    p.add_argument('--arm', action='append', choices=['A0','A1','A2','A2_disabled','A3'])
+    a = p.parse_args(); result = validate(a.study, a.seed, a.arm)
     a.out.parent.mkdir(parents=True, exist_ok=True)
     with a.out.open('x') as f: json.dump(result, f, indent=2); f.write('\n')
-    print('PASS: three completed experts, both grids, 9965 aligned queries per expert/grid; no accuracy threshold')
+    print('PASS: requested completed experts, both grids, 9965 aligned queries per expert/grid; no accuracy threshold')
