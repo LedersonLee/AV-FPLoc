@@ -47,3 +47,18 @@ Scene `105515286_173104287`, Query `349`.
 Figure/replay code `4117246`; underlying expert training `62c58da20ed26ba95863638bbfd4926829999eec`. Run `plot_matched_fields.py --workspace <workspace> --study <study-root> --out <fresh-output>` from the research code directory. It reconstructs fields from frozen local assets, checks saved diagnostics, and writes figures plus [verification metadata](matched_fields_seed42/verification.json). All eight figures were visually inspected via overview and a full-size failure panel. No new training, FP-RIR rendering, or Test17 access.
 
 A3 and interaction-disabled results are pending and must be added to the full comparison when available. These are native-temperature and standardized views; existing temperature-calibration analyses remain separate. Four illustrative cases cannot replace full-cohort quantitative evaluation. Current artifacts are an intermediate deliverable, not completion of the benchmark.
+
+## Completed-control extension — 2026-11-13
+
+The original four cases (two uniform-random queries, plus A2-versus-existing-visual harm/repair extremes) are retained unchanged and extended with A2 interaction-disabled. All32 method/query fields reproduce saved Top1/Joint/fine/Top20 and diagnostic metrics within the original tolerances; all eight rendered figures were inspected in a contact sheet and the repair example at full size. Source `48c7d61`. [Replay verification](matched_fields_with_disabled/verification.json). Original seven-method figures remain intact.
+
+These four cases have identical Joint success flags for A2 and disabled: both fail the two random queries and the existing-visual harm extreme, and both succeed on the repair extreme. This is useful counterevidence to treating a selected repair image as proof of a unique interaction mechanism. It does not contradict the full-cohort A2 advantage; case selection predates the disabled result and is not a representative estimate of its repair/harm rates. [All-query control comparison](INTERACTION_CONTROL_RESULTS.md).
+
+The new views retain identical color limits,20cm/10° candidates, XY maximum-over-yaw and explicit uncalibrated score-mass labels. No raw observations or reference arrays are copied into Docs. A3 is still absent until its completed evaluation is available.
+
+| Case | Native log score mass | Within-method standardized scores |
+|---|---|---|
+| uniform_random | [Figure](matched_fields_with_disabled/case_0_native_logmass.png) | [Figure](matched_fields_with_disabled/case_0_standardized_score.png) |
+| uniform_random | [Figure](matched_fields_with_disabled/case_1_native_logmass.png) | [Figure](matched_fields_with_disabled/case_1_standardized_score.png) |
+| A2_harm_extreme | [Figure](matched_fields_with_disabled/case_2_native_logmass.png) | [Figure](matched_fields_with_disabled/case_2_standardized_score.png) |
+| A2_repair_extreme | [Figure](matched_fields_with_disabled/case_3_native_logmass.png) | [Figure](matched_fields_with_disabled/case_3_standardized_score.png) |
