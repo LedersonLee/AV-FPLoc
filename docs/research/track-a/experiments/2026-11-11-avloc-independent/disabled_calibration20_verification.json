@@ -1,0 +1,126 @@
+{
+  "status": "pass",
+  "query_method_checks": 9965,
+  "scenes": 19,
+  "results": {
+    "ray": {
+      "native_nearest_nll": 37.937863780798395,
+      "crossfit_nearest_nll": 7.018713022711569,
+      "native_ece": 0.48033448741980955,
+      "crossfit_ece": 0.23255473676331886,
+      "native_brier": 0.45768131801636824,
+      "crossfit_brier": 0.28902186573811733,
+      "native_entropy": 0.07697822408054629,
+      "crossfit_entropy": 0.6460560782091908,
+      "joint_accuracy_unchanged": 0.403411941796287,
+      "fold_temperatures": [
+        17.78279410038923,
+        17.78279410038923,
+        17.78279410038923,
+        17.78279410038923,
+        17.78279410038923
+      ]
+    }
+  },
+  "sources": [
+    {
+      "scene": "102344115",
+      "baseline_sha256": "0367626698170c1f67835c3009bf20d736aeb69a97cdaac370f08754e87e0d87",
+      "curve_sha256": "c69c0d4426fbe069edb0cf4d26b5ec6b3ea33038a84cfb51e18d38acb8f209a4"
+    },
+    {
+      "scene": "108294798_176710428",
+      "baseline_sha256": "35eeabba865e3d669c05f21b1f901161edf66caa6d60d605d0510d956f821798",
+      "curve_sha256": "f1a1bb59fef4f35be02bd29318852ba366e99865b96004322b04452b0914ea3d"
+    },
+    {
+      "scene": "104862573_172226682",
+      "baseline_sha256": "b6d2ed00d18526d74706e214c59ee93b924e7f0ec7f268c3c904559168682791",
+      "curve_sha256": "da62032e2a58afe278aa54f306cb1711e326e01be1ef86a9d8d250ae6f50bd6e"
+    },
+    {
+      "scene": "108736800_177263517",
+      "baseline_sha256": "10751d95fe7bd17eaf0832cfc195905bf0d1e8121914c32e3b982164e9e3b6b6",
+      "curve_sha256": "3205d065850036241614c9709e20e89836d87fa2986ac68b36cb2b53476eab54"
+    },
+    {
+      "scene": "108294783_176710410",
+      "baseline_sha256": "f5c549d0047419f349c13d84d867c76ac7c04606f95424781f46d22815559383",
+      "curve_sha256": "6689423dc402181f9b84e24a1b5c999e45e9ea3c40e6dbe9fbea003b1c953164"
+    },
+    {
+      "scene": "108736635_177263256",
+      "baseline_sha256": "338ec3c9ad119f6227e6a2e3cf1c717b0fbc12cddd82d4bcd6be8f45459090eb",
+      "curve_sha256": "ad57f50bc7e2f9e24b68f0bf918e968f2259337d347d552c29672aef56cdf098"
+    },
+    {
+      "scene": "105515286_173104287",
+      "baseline_sha256": "c6adf15545ff83f7637ce7d84904c52ada0f5fa975fa3d634c0c1a3db78f9fa5",
+      "curve_sha256": "cfbbd1a8b5ddad9040b6448a74106118c0fd19e4b9a4cd3737c1bf48b1035e85"
+    },
+    {
+      "scene": "102344457",
+      "baseline_sha256": "153e688af4f999518e9bc4558c1eeed875a3081b8a37e280e2cb284b13bb5aad",
+      "curve_sha256": "92ef08e9bfe10610ad6c3afe32c66baede687fde8531a1ce3d3514400d742816"
+    },
+    {
+      "scene": "106366134_174226362",
+      "baseline_sha256": "2a9b788c465630b5566b2e1ee782d61e496a62f1e86ad0147af4dfda921d9edd",
+      "curve_sha256": "db05910615de0743ce954d47d34ba935496083d92994e757d0a6a26cd75bd25f"
+    },
+    {
+      "scene": "108294765_176710386",
+      "baseline_sha256": "ead589fdeb90193c224bd2828e95bd9aa39afe3165fc950850c09511c66be69e",
+      "curve_sha256": "48c5d469f5abc1182d4cd450f4300e808d80f9d9fd4bcca0f8f3ebdd0d1db930"
+    },
+    {
+      "scene": "106879005_174887124",
+      "baseline_sha256": "bb081fa80035e126bea1189d38e842b24a883fc3e74085747a943d31151d6422",
+      "curve_sha256": "e595c9c25870b5228a2c6707e2d7e7dafb7becb57de6e9221ace52192c96373d"
+    },
+    {
+      "scene": "103997478_171030528",
+      "baseline_sha256": "fa2acbedbcccecbbcd6292f44b3cc235a7461aa76796526dc5ea35639d372312",
+      "curve_sha256": "29b569c4679595db6fa6b6d03197c6542182d31baaa3bc6f0daf03fe573641e9"
+    },
+    {
+      "scene": "108736737_177263406",
+      "baseline_sha256": "450803eec1e9680696844c318ed61297c9a2757e923ee78938c01ccfb33d01be",
+      "curve_sha256": "852d8eb7b47b0c2fe4c55ba1c18fd4617cab9278613151bacad3c6712aa455c0"
+    },
+    {
+      "scene": "104348082_171512994",
+      "baseline_sha256": "9fa37e3bcdc6cf9b11b63b596cbdbf0b167788ca27e1eacb1ff11b17c3e4578c",
+      "curve_sha256": "70afdf69ea40cd1f4919344e817cdd38cebff30b37d0778e3e211c8cb1df88fc"
+    },
+    {
+      "scene": "105515448_173104512",
+      "baseline_sha256": "1e858d46d1645fba9f69cf5638cce5520e5d67bc67f4de95fedbd57d99d24ff4",
+      "curve_sha256": "4acfc6d5e17784d7a107346fbbba150fcc610d0ddad13b1dd7e07b02944f4f99"
+    },
+    {
+      "scene": "102344307",
+      "baseline_sha256": "d8cd4e3b16441634068b3bfb1dfc7439d8b09f86693faf098e3204cd00dd6312",
+      "curve_sha256": "ad6e5093b771abb886efce1ff75d3a3c01b7a989799d69aa7c09c1891f29e31c"
+    },
+    {
+      "scene": "108736611_177263226",
+      "baseline_sha256": "ad97826e4284b2e9bb2fc6a26c03c706c7a06d17c39b40fa824862c610e6af4b",
+      "curve_sha256": "97ea2b331ed389efa85eb76b7a65ff8e79387a98d26f47ce2d9c698c5a6e998b"
+    },
+    {
+      "scene": "106366173_174226431",
+      "baseline_sha256": "dcca7945d7b03738e9c7bbacaf38fbc1ca532d8df1ae5d6e97492f41a818e8d1",
+      "curve_sha256": "496d220d3418d1d5a20b3d4aaf8a9b1aef7d8b3243a02155633f78307497b6d0"
+    },
+    {
+      "scene": "108294624_176710203",
+      "baseline_sha256": "a6c5f7789af61b9a07988f1541dd03c918fd4642c87c255331ba230a73cf2f5b",
+      "curve_sha256": "b4a2ca857b666a995e44b8078f698386798fd7a80583c1f2180447b4ad82e819"
+    }
+  ],
+  "scope": "Held-development temperature calibration; prior training/checkpoint/teacher exposure persists. ECE residual is not zero. No independent calibration claim.",
+  "source_sha256": "d0e5ef8c73cd739b6a0525ec764b8de907447398b6d2f04dbf01f828a1864c0f",
+  "baseline_summary_sha256": "70d8b7bbf3ab1810239bee4abbe81ad4afd651a22425ac6f0cd71beec0690933",
+  "calibration_summary_sha256": "f4f1b349c7531014dd459cc6781852f2b7fb6e14d98d2e7bd4c020a0f6b5cf38"
+}

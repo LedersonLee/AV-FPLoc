@@ -1,0 +1,54 @@
+{
+  "scope": "Reused Val19, integrity/evaluation gate; not proof of accuracy or independent validation",
+  "seed": 42,
+  "test_accessed": false,
+  "validator_sha256": "53200a78fae34a153444db4968de963be37a4ce21aefcb0eb37ad76aa19de0c3",
+  "A2_disabled": {
+    "validated": true,
+    "checkpoint_sha256": "af0baabf94f20f73aa6766ad1f0a1918a1a236ba342dd5cd25c1debd408b06a1",
+    "prediction_manifest_sha256": "301ef0f0c31d935ac6bbead14f9e851f2c1e8059f7860849b8ef86a0312b887d",
+    "complete_sha256": "6ce2464a852451006252eb747a338a0f4b97dacaf461467319e121cb5203ea22",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 49,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "70d8b7bbf3ab1810239bee4abbe81ad4afd651a22425ac6f0cd71beec0690933",
+        "metrics": {
+          "r1": 0.417059708981435,
+          "joint": 0.403411941796287,
+          "fine": 0.12754641244355244,
+          "top5_nms": 0.7230306071249373,
+          "top20_nms": 0.9060712493728048,
+          "top5_raw": 0.5734069242348219,
+          "top20_raw": 0.7290516808830908,
+          "ray_mae": 0.7172172131931818,
+          "ray_nll": 1.060620124563504,
+          "in_fov_mae": 0.3553417908891099,
+          "entropy_normalized": 0.07697822408054629,
+          "gt_region_mass": 0.39599285764590325,
+          "nearest_grid_nll": 37.937863780798395
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "f3448abd13404424475efdb6e2d60b25a31047b0d043590ce56a45fd828fd916",
+        "metrics": {
+          "r1": 0.4750627195183141,
+          "joint": 0.46392373306573004,
+          "fine": 0.19357752132463624,
+          "top5_nms": 0.7737079779227296,
+          "top20_nms": 0.9230306071249372,
+          "top5_raw": 0.5908680381334671,
+          "top20_raw": 0.7190165579528349,
+          "ray_mae": 0.7172172131931818,
+          "ray_nll": 1.060620124563504,
+          "in_fov_mae": 0.3553417908891099,
+          "entropy_normalized": 0.11332895403003326,
+          "gt_region_mass": 0.4527269728512225,
+          "nearest_grid_nll": 29.68798978612348
+        },
+        "verified_queries": 9965
+      }
+    }
+  }
+}

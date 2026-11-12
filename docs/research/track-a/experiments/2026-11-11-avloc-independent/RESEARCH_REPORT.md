@@ -4,9 +4,9 @@ Study `avloc_20261111`, Primary Track A, started2026-11-11. **Active, incomplete
 
 Objective: reproduce the paper-based architecture as an explicit6ch HSSD adaptation, train on the full eligible cohort, and complete all requested matched baseline, calibration, observability, interaction and cost comparisons. No superiority of Track A is assumed.
 
-## Consolidated verified findings — 2026-11-12
+## Consolidated verified findings — 2026-11-13
 
-**A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model is training; A3 is queued behind it. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
+**A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model has completed69 epochs and both native grid evaluations; its10cm calibration review remains pending. A3 is now training, with its completion-triggered evaluation queued. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
 
 ### Matched primary accuracy
 
@@ -22,6 +22,7 @@ Full Val19,9,965 queries, identical20cm position-candidate /10° yaw-candidate g
 | A0 visual rays |22.03%|50.95%|50.11%|
 | A1 acoustic rays |0.15%|9.25%|2.43%|
 | A2 joint rays |30.47%|65.72%|64.93%|
+| A2 interaction-disabled |12.75%|41.71%|40.34%|
 
 [Seven requested position/yaw metrics and exact source hashes](REQUESTED_METRIC_TABLE.md). A2 has better fine accuracy but worse Joint than B2+GEOQ; this is a tradeoff, not uniform superiority. A2−GEOQ Joint micro−8.144pp; equal-scene macro−8.211pp95%CI[−10.045,−6.477]. Fine micro+7.265pp; macro+7.089ppCI[5.418,8.704]. The paired19-scene bootstrap does not quantify training-seed variance. [A2 contrasts](A2_INITIAL_RESULTS.md).
 
@@ -31,13 +32,13 @@ At10cm candidate spacing the same A2 checkpoint reaches fine49.33% and Joint74.1
 
 - **Acoustic rays:** A1 rayMAE1.4785m and Joint2.43% do not support strong standalone acoustic geometric localization in this adaptation. Its15 fine-position successes at20cm occur in3scenes,7with wrong yaw. Smaller ray error associates with success, but even the lowest-error quartile has Joint7.627%. Perfect GT profiles distinguish many failed cases; geometry ambiguity alone is insufficient to explain A1 failure. Acoustic information, representation and optimization explanations remain unresolved. [Success conditions](ACOUSTIC_SUCCESS_CONDITIONS.md), [training and calibration](A1_FUSION_CALIBRATION.md).
 - **Independent fusion:** equal moment fusion of independently trained A0/A1 yields Joint9.553%, harming A0. Keeping A0 inside its FoV and using A1 only outside yields52.303%, versus A0's50.105%; macro+2.284ppCI[1.288,3.236], but the fine-accuracy CI includes zero. Mixing insideFoV alone yields7.396%, locating major harm in that intervention. This changes both means and scales and does not isolate the physical cause. [Fusion decomposition](FUSION_DECOMPOSITION.md).
-- **Joint interaction:** A2 exceeds A0 and the tested independent controls; the completed A2-disabled contrast is still needed. Its two isolated passes/equal distribution mixture change several computational factors, so even that future contrast will not prove a pure attention-edge effect. [Control contract](INTERACTION_CONTROL_CONTRACT.md).
+- **Joint interaction:** A2 exceeds the completed disabled control by24.586pp micro Joint; macro24.482pp95%CI[21.565,27.330], positive on all19 scenes,2,898repairs/448harms. The disabled control reaches40.34% Joint at20cm and46.39% at10cm. Its isolated passes/equal mixture change multiple factors, so this supports the joint design versus that alternative without isolating attention alone. [Results and limitations](INTERACTION_CONTROL_RESULTS.md), [control contract](INTERACTION_CONTROL_CONTRACT.md).
 - **Sharpness/calibration:** A2 entropy at20cm is0.00970, yet failures can be confidently far away. Temperature improves nearest-grid NLL at both grids without changing Top1. At10cm, however, JointECE worsens0.24206→0.30802 and Brier0.24001→0.27589. NLL-selected temperature is not a universal reliability fix. [Calibration evidence](GRID_AND_A2_CALIBRATION.md), [random and extreme score maps with28exact replays](MATCHED_SCORE_FIELDS.md).
 - **Routing:** no learned A3 routing result yet. Its actual fusion replay, error/weight correlations and same-head uniform intervention are prepared. An inference-only uniform control is not independently trained fixed routing. Reliability claims remain unproven.
 
 ### Cost and reproducibility
 
-FP-RIR inference banks are absent from A0/A1/A2. Earlier storage accounting quantifies bank payload differences but does not establish information equivalence or end-to-end speed. Completed A0/A1/A2 epoch wall-time sums are10.56/3.16/12.40hours (including validation, shared resources), with24.572/12.491/36.663M parameters. These are not isolated GPU-hours or inference latency. [Cost audit](COMPLETED_TRAINING_COST.md). Isolated inference/runtime comparison remains outstanding.
+FP-RIR inference banks are absent from A0/A1/A2. Earlier storage accounting quantifies bank payload differences but does not establish information equivalence or end-to-end speed. Completed A0/A1/A2 epoch wall-time sums are10.56/3.16/12.40hours (including validation, shared resources), with24.572/12.491/36.663M parameters. These are not isolated GPU-hours or inference latency. [Cost audit](COMPLETED_TRAINING_COST.md). Isolated inference/runtime comparison remains outstanding; [stage timing integration and backend audit](RUNTIME_MEASUREMENT_PROTOCOL.md) are complete but are not latency results.
 
 Training source remains `62c58da20ed26ba95863638bbfd4926829999eec`; each linked analysis records its own source SHA/hashes, inputs and reproduction commands. Epoch counts are100/70/99; best epochs99/50/79. Original complete receipts' patience-loop off-by-one counters are preserved and explained, not rewritten. All prior models, negative results and interrupted seed43 artifacts remain local. Test17 observations and Track B are untouched.
 

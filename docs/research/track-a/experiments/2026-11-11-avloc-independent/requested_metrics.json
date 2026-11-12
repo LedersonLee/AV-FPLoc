@@ -207,6 +207,21 @@
           71.3998996487707,
           71.57049673858505
         ]
+      },
+      {
+        "method": "A2_disabled",
+        "seeds": [
+          42
+        ],
+        "values": [
+          12.754641244355245,
+          38.07325639739087,
+          41.705970898143505,
+          40.3411941796287,
+          50.015052684395386,
+          51.35975915704968,
+          52.00200702458605
+        ]
       }
     ],
     "10cm": [
@@ -254,10 +269,25 @@
           79.6588058203713,
           79.80933266432514
         ]
+      },
+      {
+        "method": "A2_disabled",
+        "seeds": [
+          42
+        ],
+        "values": [
+          19.357752132463624,
+          43.973908680381335,
+          47.50627195183141,
+          46.392373306573006,
+          55.6547917711992,
+          56.80883090817862,
+          57.350727546412436
+        ]
       }
     ]
   },
-  "source_sha256": "f1c000fa27dd1f887b8cf11a267b7d0a9904372038e59457a6fa662b17f8ab07",
+  "source_sha256": "560902ff289e5041e614b336613f0ec5c17175843861ac1b4552c70998443374",
   "sources": {
     "baselines/fields_seed42/summary.json": "1717f4ba7764ddd3a0849ef8e268ec9cf5379046e88a0d835034a45497553cd4",
     "baselines/fields_seed42/102344115.json": "e031b2574132d7af5e46fb047f3344d287f3d08956384ca577a4ec4b1c1593a7",
@@ -364,6 +394,27 @@
     "evaluation/A2_seed42_20cm/108736635_177263256.json": "abe3b7ce777aed7abf80e0da89f6382b04e118241a8893f077ae97edf7d81dfd",
     "evaluation/A2_seed42_20cm/108736737_177263406.json": "8db4d111cf2a03a7f1a0af8b1373f032ecf679185307d60a5041de9248ebfa21",
     "evaluation/A2_seed42_20cm/108736800_177263517.json": "6b628ddf70768146f951f46c0d63f94852f91cd95320131d671430dd0ee3986d",
+    "runs/A2_disabled_seed42/complete.json": "6ce2464a852451006252eb747a338a0f4b97dacaf461467319e121cb5203ea22",
+    "evaluation/A2_disabled_seed42_20cm/summary.json": "70d8b7bbf3ab1810239bee4abbe81ad4afd651a22425ac6f0cd71beec0690933",
+    "evaluation/A2_disabled_seed42_20cm/102344115.json": "0367626698170c1f67835c3009bf20d736aeb69a97cdaac370f08754e87e0d87",
+    "evaluation/A2_disabled_seed42_20cm/102344307.json": "d8cd4e3b16441634068b3bfb1dfc7439d8b09f86693faf098e3204cd00dd6312",
+    "evaluation/A2_disabled_seed42_20cm/102344457.json": "153e688af4f999518e9bc4558c1eeed875a3081b8a37e280e2cb284b13bb5aad",
+    "evaluation/A2_disabled_seed42_20cm/103997478_171030528.json": "fa2acbedbcccecbbcd6292f44b3cc235a7461aa76796526dc5ea35639d372312",
+    "evaluation/A2_disabled_seed42_20cm/104348082_171512994.json": "9fa37e3bcdc6cf9b11b63b596cbdbf0b167788ca27e1eacb1ff11b17c3e4578c",
+    "evaluation/A2_disabled_seed42_20cm/104862573_172226682.json": "b6d2ed00d18526d74706e214c59ee93b924e7f0ec7f268c3c904559168682791",
+    "evaluation/A2_disabled_seed42_20cm/105515286_173104287.json": "c6adf15545ff83f7637ce7d84904c52ada0f5fa975fa3d634c0c1a3db78f9fa5",
+    "evaluation/A2_disabled_seed42_20cm/105515448_173104512.json": "1e858d46d1645fba9f69cf5638cce5520e5d67bc67f4de95fedbd57d99d24ff4",
+    "evaluation/A2_disabled_seed42_20cm/106366134_174226362.json": "2a9b788c465630b5566b2e1ee782d61e496a62f1e86ad0147af4dfda921d9edd",
+    "evaluation/A2_disabled_seed42_20cm/106366173_174226431.json": "dcca7945d7b03738e9c7bbacaf38fbc1ca532d8df1ae5d6e97492f41a818e8d1",
+    "evaluation/A2_disabled_seed42_20cm/106879005_174887124.json": "bb081fa80035e126bea1189d38e842b24a883fc3e74085747a943d31151d6422",
+    "evaluation/A2_disabled_seed42_20cm/108294624_176710203.json": "a6c5f7789af61b9a07988f1541dd03c918fd4642c87c255331ba230a73cf2f5b",
+    "evaluation/A2_disabled_seed42_20cm/108294765_176710386.json": "ead589fdeb90193c224bd2828e95bd9aa39afe3165fc950850c09511c66be69e",
+    "evaluation/A2_disabled_seed42_20cm/108294783_176710410.json": "f5c549d0047419f349c13d84d867c76ac7c04606f95424781f46d22815559383",
+    "evaluation/A2_disabled_seed42_20cm/108294798_176710428.json": "35eeabba865e3d669c05f21b1f901161edf66caa6d60d605d0510d956f821798",
+    "evaluation/A2_disabled_seed42_20cm/108736611_177263226.json": "ad97826e4284b2e9bb2fc6a26c03c706c7a06d17c39b40fa824862c610e6af4b",
+    "evaluation/A2_disabled_seed42_20cm/108736635_177263256.json": "338ec3c9ad119f6227e6a2e3cf1c717b0fbc12cddd82d4bcd6be8f45459090eb",
+    "evaluation/A2_disabled_seed42_20cm/108736737_177263406.json": "450803eec1e9680696844c318ed61297c9a2757e923ee78938c01ccfb33d01be",
+    "evaluation/A2_disabled_seed42_20cm/108736800_177263517.json": "10751d95fe7bd17eaf0832cfc195905bf0d1e8121914c32e3b982164e9e3b6b6",
     "evaluation/A0_seed42_10cm/summary.json": "7c69d695d7b70a095534de64543a2c6d80f57b408d1d0058a32a084590e8eade",
     "evaluation/A0_seed42_10cm/102344115.json": "14b84be798ba323092c62b00b8c17c52a78dfa7557bdc176c8e2be5a52d2f8d8",
     "evaluation/A0_seed42_10cm/102344307.json": "99f928410de5c34ba824f1a9cfcec09d258a340c1d37494629a685e2aecdfe0a",
@@ -423,7 +474,27 @@
     "evaluation/A2_seed42_10cm/108736611_177263226.json": "e115c5adb0b95c57d0a2acd48dca9551d8027f5083ddb345025b5780beed59ba",
     "evaluation/A2_seed42_10cm/108736635_177263256.json": "2eb27061394262d5aecae21dc60f8ab38fa2534eea8343925552835d08b55144",
     "evaluation/A2_seed42_10cm/108736737_177263406.json": "20e0a5682eca4b0c18d42a21ed4f79b2feab073010c606f580603d899c6e849d",
-    "evaluation/A2_seed42_10cm/108736800_177263517.json": "5208c47e98a09c6774b002d174e7496fb4d2cb72040812d1ee9887755085174d"
+    "evaluation/A2_seed42_10cm/108736800_177263517.json": "5208c47e98a09c6774b002d174e7496fb4d2cb72040812d1ee9887755085174d",
+    "evaluation/A2_disabled_seed42_10cm/summary.json": "f3448abd13404424475efdb6e2d60b25a31047b0d043590ce56a45fd828fd916",
+    "evaluation/A2_disabled_seed42_10cm/102344115.json": "74099853be1696f613c95a2610fc94dd3a209dd5e403e0974ae61811c57a613b",
+    "evaluation/A2_disabled_seed42_10cm/102344307.json": "def25b5293323c762c77b68ed891519d106530bee72ce770da72a03b86b150ac",
+    "evaluation/A2_disabled_seed42_10cm/102344457.json": "333852231f5c542720087dedae349f0661ad1514f8d088eb0a2005b837abd899",
+    "evaluation/A2_disabled_seed42_10cm/103997478_171030528.json": "975abdf887d4ce0f51b91c3c0e5bcde6394633e81a82ce22deff64d40e0705f4",
+    "evaluation/A2_disabled_seed42_10cm/104348082_171512994.json": "093539bc97bbb4e17b041343c554798c932e24c0316554f90cf8dfd2cd33dcf5",
+    "evaluation/A2_disabled_seed42_10cm/104862573_172226682.json": "188d95702da27a4293b4d4f0d66ffe58cf60760ea1b84c9aebebc338d856ff6d",
+    "evaluation/A2_disabled_seed42_10cm/105515286_173104287.json": "5b1a486b7496ee92d92ecec914e6e3766aa9576352aef9d7a24242e0ce70bc52",
+    "evaluation/A2_disabled_seed42_10cm/105515448_173104512.json": "6bddf8fd6aa873a0306433a370579e0bb51615b49096ce2ddce7632fe9048efe",
+    "evaluation/A2_disabled_seed42_10cm/106366134_174226362.json": "c052576e048f44e0d2f10635fe30586751e307cc9e16612ef0a38649cff44a84",
+    "evaluation/A2_disabled_seed42_10cm/106366173_174226431.json": "65e1cbe8b41feeaf3942363339a0c13e7dbf086b92adb4caec54f6867d087491",
+    "evaluation/A2_disabled_seed42_10cm/106879005_174887124.json": "490547c079dcedbe81a06c82c35bdf05ef9d90e778b086d49096d12c46554522",
+    "evaluation/A2_disabled_seed42_10cm/108294624_176710203.json": "c62d49bc7ab31ee3e795c9ae0ce2e8947816b69d7c2d260049b120b20f3fa077",
+    "evaluation/A2_disabled_seed42_10cm/108294765_176710386.json": "9ac55c8a79a14033fbb25e80e9476b62916fa35be9fbfba5c755343e0fb62089",
+    "evaluation/A2_disabled_seed42_10cm/108294783_176710410.json": "b843fafeaf8e8e05c5ba7bcdfb4285d6e768895ee1f61b625b043a1bbd515c06",
+    "evaluation/A2_disabled_seed42_10cm/108294798_176710428.json": "8222eede6e7a2b1b5eb5b53da9f9b2fd7cef1830b396810929e8a6f160c0b356",
+    "evaluation/A2_disabled_seed42_10cm/108736611_177263226.json": "3a12614cc5f2a48579afbe4d7a6196f6bec10c440bbedadffb319425dddeed83",
+    "evaluation/A2_disabled_seed42_10cm/108736635_177263256.json": "bbe24eb29aa71851a8987fc12310b75c8589fc02980bc6bb9988a884a5cddd37",
+    "evaluation/A2_disabled_seed42_10cm/108736737_177263406.json": "7952b2f754eab7a8055ff2c544ebd99d29f0b70c4fbbb01365d71615d269b6dd",
+    "evaluation/A2_disabled_seed42_10cm/108736800_177263517.json": "abe065f30adde7025e310a929a7c8dfc96bc68dcb328e9697c4a5e3f7118c55d"
   },
   "test_accessed": false,
   "scope": "Reused Val19 micro-averaged success percentages; B2/GEOQ average seeds42/43. Other methods seed42 or frozen cache label42. Inclusive thresholds with original floating-point errors and no epsilon, exactly reproducing stored metrics. Angular errors circular. No new inference/training."
