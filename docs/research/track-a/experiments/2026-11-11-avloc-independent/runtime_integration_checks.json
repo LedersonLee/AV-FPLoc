@@ -1,0 +1,77 @@
+{
+  "code_commit": "a4463e9ddebd1596018860a199946a7530b89521",
+  "status": "integration_only_not_latency_results",
+  "cuda_checks": [
+    {
+      "arm": "A0",
+      "checkpoint_sha256": "03942eba07916c8da6d494319b484c830e74a5740793765e864433ce58b091f7",
+      "source_sha256": {
+        "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+        "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+        "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+        "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+        "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+        "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+      },
+      "prediction_manifest_sha256": "aa5d6807f530d165fb6d068eca14e669f46cd8d447281007c4c68ae37779d56c",
+      "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+      "scene": "102344115",
+      "query_id": 1587,
+      "prediction_max_abs_delta": 1.6689300537109375e-06,
+      "candidate_replay_exact": true,
+      "local_summary_sha256": "7e26a2be45b42c46d32e68c1864bd7efc8d9a1cb9dffbbbe1eb3df7bf26cc364"
+    },
+    {
+      "arm": "A1",
+      "checkpoint_sha256": "e920d21d187f165a77f1b108ef0bf11c5a232ee801d811344042df6ab5f81325",
+      "source_sha256": {
+        "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+        "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+        "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+        "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+        "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+        "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+      },
+      "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+      "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+      "scene": "102344115",
+      "query_id": 1587,
+      "prediction_max_abs_delta": 9.5367431640625e-07,
+      "candidate_replay_exact": true,
+      "local_summary_sha256": "dec2398ab4ce7973e1232c2c839340edaa69a75cb4f9f36c07c20c567f49f4cd"
+    },
+    {
+      "arm": "A2",
+      "checkpoint_sha256": "d4a9e44580cb4aa87f3909fc08cbabd04ddb925bf1e44b1c50133064f39e7bd2",
+      "source_sha256": {
+        "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+        "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+        "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+        "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+        "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+        "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+      },
+      "prediction_manifest_sha256": "d650bd3fc2e3d4f53b6f95c334a31621d31e13613795b5e8e00decc19be228e5",
+      "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+      "scene": "102344115",
+      "query_id": 1587,
+      "prediction_max_abs_delta": 1.430511474609375e-06,
+      "candidate_replay_exact": true,
+      "local_summary_sha256": "cbfa65285fa1be1c93717b091f732029d13cf03661abb6eee9a1f27a8ae892cd"
+    }
+  ],
+  "cpu_failure": {
+    "status": "failed_integration",
+    "arm": "A2",
+    "device": "cpu",
+    "queries": 1,
+    "max_absolute_prediction_difference": 0.00307512,
+    "max_relative_prediction_difference": 0.0008387,
+    "assertion": "prediction allclose rtol=2e-4 atol=2e-4",
+    "timing_claim": false,
+    "explanation": "CPU versus saved CUDA predictions differ beyond the predefined replay tolerance; backend source of difference not isolated. No tolerance relaxation. Failure precedes candidate validation.",
+    "code_commit": "a4463e9ddebd1596018860a199946a7530b89521"
+  },
+  "test_accessed": false,
+  "training": false
+}
