@@ -1,0 +1,25 @@
+{
+  "original_completion_receipt": {
+    "status": "training_complete",
+    "last_epoch": 100,
+    "best": 0.5608134521381735,
+    "reason": "patience",
+    "benchmark_complete": false
+  },
+  "actual_last_completed_epoch": 99,
+  "patience_used": 20,
+  "best": {
+    "epoch": 79,
+    "path": "best_epoch_079.pt",
+    "ray_mae": 0.5608134521381735
+  },
+  "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+  "evaluation_runner_commit": "8e77076c4f9c0f7cb0db32fceb2b230a3f16f31b",
+  "source_sha256": {
+    "complete.json": "c3da8be395683c7db4e2fd779e9296633c9f820cd483038b0c82cbcd4bc3cd37",
+    "best.json": "74dc75661d63a917b4ad6142d1a5a2e61005deee0eb05b5ce7c36a0674b4bd1a",
+    "protocol.json": "f637f74c3b590b069ca5edc6faa894d8bcf12452abbc06dc5ce212de1e14dbad",
+    "best_epoch_079.pt": "d4a9e44580cb4aa87f3909fc08cbabd04ddb925bf1e44b1c50133064f39e7bd2",
+    "epoch_099.json": "7b9c06bccc60b1b365c97378f5a9df4bb93ec686ecc286dc1c012ec176f7298c"
+  }
+}
