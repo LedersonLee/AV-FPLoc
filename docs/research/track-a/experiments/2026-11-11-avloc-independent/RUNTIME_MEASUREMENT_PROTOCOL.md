@@ -31,3 +31,26 @@ python /source/benchmark_ray_runtime.py --study /study \
 ```
 
 Use a fresh output path for each arm/grid. Append `--smoke --warmups 1 --repeats 1` only for integration checks. No training, FP-RIR rendering or Test observation access occurs. The existing cached baseline field timings do not include original image/audio encoders or GEOQ selection. Those stages require their own matched benchmark; this new ray-side tool does **not** complete the end-to-end B2+GEOQ cost comparison. Cross-method speed or generalization conclusions remain unverified.
+
+## Follow-up: controlled CPU/CUDA backend audit
+
+A completed four-way intervention on the same predetermined query separates preprocessing device from model device. Both models load the identical frozen A2 checkpoint; no weights or thresholds change. Source `9f07c1085df63a6fa8753b1bcf062cbb467920e8`. [Detailed evidence](runtime_backend_audit.json).
+
+| Preprocessing | Model | Maximum mean difference from saved GPU prediction (m) | Maximum scale difference (m) | Top1 / full Top20 IDs |
+|---|---|---:|---:|---|
+| CPU | CPU | 0.00307512 | 0.00369477 | Exact / exact |
+| CPU | CUDA | 0.00043273 | 0.00373548 | Exact / exact |
+| CUDA | CPU | 0.00308561 | 0.00281560 | Exact / exact |
+| CUDA | CUDA | 0.00000143 | 0.00000036 | Exact / exact |
+
+**Observed:** changing only the model device with CUDA-prepared inputs changes ray means by up to0.00308609m and scales by0.00281525m. Changing only preprocessing with the CUDA model changes means by0.00043201m and scales by0.00373536m. Thus the CPU discrepancy is not attributable solely to audio preprocessing. These effects need not add linearly.
+
+Additional localization checks found CPU/CUDA chirp max/mean absolute waveform differences0.00073588/0.00001099, echo differences0.00070892/0.00001561, and spectrogram differences on an identical GPU-generated echo of max2.0/mean0.00023081. These are diagnostic numerical differences, not error tolerances or acoustic quality scores. Which individual kernels cause them, and whether low-energy phase bins explain the maximum, remain unisolated.
+
+**Interpretation and limits:** both preprocessing and model execution can affect backend portability in this implementation. All four combinations preserve the final candidates on this one query, but no full-cohort equivalence or accuracy conclusion follows. The original failed CPU check remains a failure of the predefined prediction tolerance. This audit does not relax it or replace the established CUDA predictions. A general deployment-portability claim would require full-cohort evaluation with the exact intended backend. No retraining or new rendering is justified by this narrow diagnostic alone.
+
+Reproduce inside the same pinned runtime with CUDA access and documented deterministic settings:
+
+```bash
+python /source/audit_runtime_backend.py --study /study --out /study/runtime/backend_A2_fresh
+```
