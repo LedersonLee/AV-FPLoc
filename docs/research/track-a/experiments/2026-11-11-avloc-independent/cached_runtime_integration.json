@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "smoke": true,
+  "queries": 1,
+  "records": [
+    {
+      "scene": "102344115",
+      "query_id": 1587,
+      "xy_candidates": 779,
+      "top1_candidates_and_geoq_replay_exact": true,
+      "adapted_sha256": "3ed6a189bb725510c5980a069cd082d0229f76e06bfb832970a1305beb3dc506",
+      "candidate_sha256": "0049db9b1124d73b179a7a6afb85d13d75c6bf9dea5f1aac56d0289c971ae404",
+      "geoq_features_sha256": "8c92964ea62e632e43681ef3fff2c7eaad66cd299cf6e8e5d8f47f7fa7d3fc90"
+    }
+  ],
+  "seed": 42,
+  "grid_cm": 20,
+  "scope": "Batch-one warm cached-input stages only; integration-only when smoke=true.",
+  "exclusions": [
+    "RGB/RIR encoding and B2 feature adaptation",
+    "FP-RIR rendering/embedding",
+    "Support/refinement proposal construction and score-feature extraction",
+    "Loading, hashing, disk I/O, posterior diagnostics"
+  ],
+  "warning": "GEOQ timing starts from cached support candidates, not score-NMS outputs. Do not sum these timings into B2+GEOQ end-to-end latency. Shared hardware; no isolation established.",
+  "selection": "One uniform query per Val scene, RNG20261111, same manifest order as ray benchmark",
+  "warmups": 1,
+  "repeats": 1,
+  "data_manifest_sha256": "7ee50a05d4901d0618d77caef288372958c1b773a8c742eb40c0a714e85e2c65",
+  "baseline_math_sha256": {
+    "geometry/rays.py": "bf10b9c237ffaa3751f99f3e2ce5ed4d225684e2f935ea7d47493340f41b6eb4",
+    "evaluation/baselines.py": "feab7b3b0e861d959741529e2f534af7e8baf2fdc136bfda3b77fd144aef5aac"
+  },
+  "source_sha256": "d8a84a4e03e1490a7f6bceaed34dfb1c9257afebf7c40b256f9fdb7780faba76",
+  "matching_sha256": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+  "historical_geoq_sha256": "22ce81387de85fd91425070d5a99034e025f56711ee2c1df35223ca931e1e325",
+  "model_sha256": "3211de3e4f1bd2be5e51b85cd5fd9f1068af621a4dcd7bc953086c108c43d2b5",
+  "audit_sha256": "712f472c68660afb0ed87bf932683f1f482d0e5fcfc572cd8992bfee65e80e69",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+  "numpy_version": "1.24.4",
+  "sklearn_version": "1.5.2",
+  "scipy_version": "1.10.1",
+  "joblib_version": "1.4.2",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "version": "0.3.21",
+      "threading_layer": "pthreads",
+      "architecture": "Prescott"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "version": "0.3.18",
+      "threading_layer": "pthreads",
+      "architecture": "Prescott"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "version": null
+    }
+  ],
+  "load_average": [
+    1.96240234375,
+    1.95703125,
+    2.00244140625
+  ],
+  "threads_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "test_accessed": false,
+  "training": false,
+  "code_commit": "3785879",
+  "timings_omitted": "Integration under shared load; no performance claim"
+}

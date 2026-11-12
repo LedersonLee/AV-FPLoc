@@ -54,3 +54,17 @@ Reproduce inside the same pinned runtime with CUDA access and documented determi
 ```bash
 python /source/audit_runtime_backend.py --study /study --out /study/runtime/backend_A2_fresh
 ```
+
+## Cached baseline stages prepared — 2026-11-13
+
+`benchmark_cached_baseline.py` (executed code `3785879`) uses the same uniform-per-scene query selection and20cm candidate grid as the ray runtime tool. It separately times original visual, acoustic cosine, fixed fusion and adapted B2 fields, followed by score-based Top20 NMS. A separate GEOQ stage times geometry summarization and utility prediction from the **historical cached support/refinement candidate bank**. The GEOQ stage is not fed the score-NMS outputs, so adding those stages would omit work and misrepresent B2+GEOQ end-to-end latency.
+
+The first predetermined query (scene102344115/query1587) passes exact Top1/Top20 comparisons for all four fields and GEOQ selected pose/gain replay (gain atol1e-10). [Integration evidence](cached_runtime_integration.json). This is an integration test, not the full19scene timing experiment. Initial host startup lacked joblib; the pinned model-training image then lacked sklearn. Both failures occurred before any measurement output. The serialized GEOQ model records sklearn1.5.2, so matching scikit-learn1.5.2 and threadpoolctl3.5.0 were installed into a separate local runtime dependency directory; the training container/image and model files were unchanged. The successful test uses the pinned image with that directory on PYTHONPATH and OMP/OpenBLAS/MKL threads1. Actual library versions/thread pools are recorded. No raw features or model files are published.
+
+Reproduce in the pinned image with the repository workspace mounted read-only, study mounted at `/study`, and the isolated dependency directory on PYTHONPATH:
+
+```bash
+python <workspace>/AV-FPLoc/scripts/research/track_a/avloc_20261111/benchmark_cached_baseline.py   --workspace <workspace> --study /study --out /study/runtime/cached_baseline_fresh   --warmups 3 --repeats 10
+```
+
+Use `--smoke --warmups 1 --repeats 1` for the integration-only scope. Formal timings remain deferred until active training/evaluation finishes. Original RGB/RIR encoder, B2 feature adaptation, support/refinement extraction, FP-RIR preparation and disk/cold-start costs remain excluded and must be measured or explicitly left unmeasured in the final cost comparison. This tool does not justify an end-to-end speed claim.
