@@ -14,8 +14,8 @@ def sha(p):
 
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--study',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();records=[]
- for arm in ['A0','A1','A2']:
+ p=argparse.ArgumentParser();p.add_argument('--study',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--include-arm',action='append',choices=['A2_disabled','A3'],default=[]);a=p.parse_args();records=[]
+ for arm in ['A0','A1','A2']+list(dict.fromkeys(a.include_arm)):
   run=a.study/f'runs/{arm}_seed42';complete=json.loads((run/'complete.json').read_text());assert complete['status']=='training_complete'
   best=json.loads((run/'best.json').read_text());protocol=json.loads((run/'protocol.json').read_text());files=sorted(run.glob('epoch_*.json'));epochs=[json.loads(p.read_text()) for p in files]
   assert [r['epoch'] for r in epochs]==list(range(1,len(epochs)+1))
@@ -33,7 +33,7 @@ def main():
   del ck,state,params
  result={'complete':True,'records':records,'source_sha256':{n:sha(Path(__file__).with_name(n)) for n in ['audit_completed_training_cost.py','model.py']},'test_accessed':False,
  'scope':'Recorded epoch wall time includes training and validation, excludes initial validation/startup, and overlaps other jobs. Not isolated GPU compute or end-to-end latency. Checkpoint file includes metadata; tensor payload separate. Parameter-like count is a state-dict accounting proxy, not FLOPs.',
- 'limitations':['No historical FP-RIR rendering wall time recovered.','No new training or checkpoint modification.','Single seed; data loading/caching/concurrent jobs affect elapsed time.','Pending A3 and interaction-disabled training excluded.','Recorded complete.last_epoch can exceed actual executed epochs on patience break; executed epoch files are authoritative.']}
+ 'limitations':['No historical FP-RIR rendering wall time recovered.','No new training or checkpoint modification.','Single seed; data loading/caching/concurrent jobs affect elapsed time.','Only explicitly included completed runs are counted; missing arms are not zero cost.','Recorded complete.last_epoch can exceed actual executed epochs on patience break; executed epoch files are authoritative.']}
  a.out.parent.mkdir(parents=True,exist_ok=True)
  with a.out.open('x') as f:json.dump(result,f,indent=2);f.write('\n')
  print(json.dumps([{k:r[k] for k in ['arm','executed_epochs','epoch_seconds_sum','epoch_seconds_median','parameter_like_elements_excluding_bn_buffers','state_tensor_payload_bytes','best_checkpoint_file_bytes','verified_model_parameters']} for r in records],indent=2))
