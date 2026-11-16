@@ -1,0 +1,742 @@
+{
+  "A0": {
+    "complete": true,
+    "smoke": false,
+    "arm": "A0",
+    "seed": 42,
+    "grid_cm": 20,
+    "scope": "uniform one query per Val19 scene; warm batch-one stage timings",
+    "exclusions": "RGB/RIR disk decode, bank/checkpoint load, initialization, posterior diagnostics. No FP-RIR baseline encoder or GEOQ time included.",
+    "limitation": "Shared host; isolation is not established by this script. prepare computes both modalities for every arm. Stage sum includes synchronization boundaries; not streaming throughput.",
+    "source_sha256": {
+      "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+      "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+      "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+      "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+      "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+      "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+    },
+    "checkpoint_sha256": "03942eba07916c8da6d494319b484c830e74a5740793765e864433ce58b091f7",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "prediction_manifest_sha256": "aa5d6807f530d165fb6d068eca14e669f46cd8d447281007c4c68ae37779d56c",
+    "device": "cuda",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+    "torch_version": "2.4.1+cu124",
+    "numpy_version": "1.24.4",
+    "torch_threads": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "load_average": [
+      1.39208984375,
+      1.24169921875,
+      0.78076171875
+    ],
+    "threads_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "warmups": 3,
+    "repeats": 10,
+    "queries": 19,
+    "pooled_ms": {
+      "prepare_ms": {
+        "median": 0.742957,
+        "p90": 1.0049085
+      },
+      "model_ms": {
+        "median": 4.868223499999999,
+        "p90": 5.0579259
+      },
+      "output_transfer_ms": {
+        "median": 0.042784,
+        "p90": 0.050467399999999996
+      },
+      "field_ms": {
+        "median": 2.4739145,
+        "p90": 4.2958875
+      },
+      "nms_ms": {
+        "median": 10.3764535,
+        "p90": 19.340597600000002
+      },
+      "stage_sum_ms": {
+        "median": 18.874635,
+        "p90": 29.4696852
+      }
+    },
+    "test_accessed": false,
+    "training": false,
+    "raw_summary_sha256": "9936b864e999755f0927cc68a3b96dc4bb44d9fe741451dea4e2b07d84630a06",
+    "query_ids": [
+      [
+        "102344115",
+        1587
+      ],
+      [
+        "108294798_176710428",
+        840
+      ],
+      [
+        "104862573_172226682",
+        518
+      ],
+      [
+        "108736800_177263517",
+        1585
+      ],
+      [
+        "108294783_176710410",
+        1338
+      ],
+      [
+        "108736635_177263256",
+        1374
+      ],
+      [
+        "105515286_173104287",
+        162
+      ],
+      [
+        "102344457",
+        1015
+      ],
+      [
+        "106366134_174226362",
+        67
+      ],
+      [
+        "108294765_176710386",
+        161
+      ],
+      [
+        "106879005_174887124",
+        1320
+      ],
+      [
+        "103997478_171030528",
+        1457
+      ],
+      [
+        "108736737_177263406",
+        1061
+      ],
+      [
+        "104348082_171512994",
+        724
+      ],
+      [
+        "105515448_173104512",
+        854
+      ],
+      [
+        "102344307",
+        220
+      ],
+      [
+        "108736611_177263226",
+        624
+      ],
+      [
+        "106366173_174226431",
+        609
+      ],
+      [
+        "108294624_176710203",
+        559
+      ]
+    ],
+    "maximum_prediction_delta": 5.7220458984375e-06
+  },
+  "A1": {
+    "complete": true,
+    "smoke": false,
+    "arm": "A1",
+    "seed": 42,
+    "grid_cm": 20,
+    "scope": "uniform one query per Val19 scene; warm batch-one stage timings",
+    "exclusions": "RGB/RIR disk decode, bank/checkpoint load, initialization, posterior diagnostics. No FP-RIR baseline encoder or GEOQ time included.",
+    "limitation": "Shared host; isolation is not established by this script. prepare computes both modalities for every arm. Stage sum includes synchronization boundaries; not streaming throughput.",
+    "source_sha256": {
+      "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+      "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+      "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+      "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+      "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+      "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+    },
+    "checkpoint_sha256": "e920d21d187f165a77f1b108ef0bf11c5a232ee801d811344042df6ab5f81325",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+    "device": "cuda",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+    "torch_version": "2.4.1+cu124",
+    "numpy_version": "1.24.4",
+    "torch_threads": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "load_average": [
+      1.48583984375,
+      1.26708984375,
+      0.79443359375
+    ],
+    "threads_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "warmups": 3,
+    "repeats": 10,
+    "queries": 19,
+    "pooled_ms": {
+      "prepare_ms": {
+        "median": 0.9016805,
+        "p90": 1.0057502999999999
+      },
+      "model_ms": {
+        "median": 2.633493,
+        "p90": 2.7765511
+      },
+      "output_transfer_ms": {
+        "median": 0.049199,
+        "p90": 0.0565547
+      },
+      "field_ms": {
+        "median": 9.5260195,
+        "p90": 17.7563724
+      },
+      "nms_ms": {
+        "median": 15.488821999999999,
+        "p90": 36.6225867
+      },
+      "stage_sum_ms": {
+        "median": 30.4687725,
+        "p90": 53.2565761
+      }
+    },
+    "test_accessed": false,
+    "training": false,
+    "raw_summary_sha256": "1cf1f93bbe1640de78d5da33d32b859a17783bd0ff8f4b1750e8a1f8f8ac3560",
+    "query_ids": [
+      [
+        "102344115",
+        1587
+      ],
+      [
+        "108294798_176710428",
+        840
+      ],
+      [
+        "104862573_172226682",
+        518
+      ],
+      [
+        "108736800_177263517",
+        1585
+      ],
+      [
+        "108294783_176710410",
+        1338
+      ],
+      [
+        "108736635_177263256",
+        1374
+      ],
+      [
+        "105515286_173104287",
+        162
+      ],
+      [
+        "102344457",
+        1015
+      ],
+      [
+        "106366134_174226362",
+        67
+      ],
+      [
+        "108294765_176710386",
+        161
+      ],
+      [
+        "106879005_174887124",
+        1320
+      ],
+      [
+        "103997478_171030528",
+        1457
+      ],
+      [
+        "108736737_177263406",
+        1061
+      ],
+      [
+        "104348082_171512994",
+        724
+      ],
+      [
+        "105515448_173104512",
+        854
+      ],
+      [
+        "102344307",
+        220
+      ],
+      [
+        "108736611_177263226",
+        624
+      ],
+      [
+        "106366173_174226431",
+        609
+      ],
+      [
+        "108294624_176710203",
+        559
+      ]
+    ],
+    "maximum_prediction_delta": 1.9073486328125e-06
+  },
+  "A2": {
+    "complete": true,
+    "smoke": false,
+    "arm": "A2",
+    "seed": 42,
+    "grid_cm": 20,
+    "scope": "uniform one query per Val19 scene; warm batch-one stage timings",
+    "exclusions": "RGB/RIR disk decode, bank/checkpoint load, initialization, posterior diagnostics. No FP-RIR baseline encoder or GEOQ time included.",
+    "limitation": "Shared host; isolation is not established by this script. prepare computes both modalities for every arm. Stage sum includes synchronization boundaries; not streaming throughput.",
+    "source_sha256": {
+      "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+      "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+      "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+      "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+      "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+      "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+    },
+    "checkpoint_sha256": "d4a9e44580cb4aa87f3909fc08cbabd04ddb925bf1e44b1c50133064f39e7bd2",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "prediction_manifest_sha256": "d650bd3fc2e3d4f53b6f95c334a31621d31e13613795b5e8e00decc19be228e5",
+    "device": "cuda",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+    "torch_version": "2.4.1+cu124",
+    "numpy_version": "1.24.4",
+    "torch_threads": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "load_average": [
+      1.5654296875,
+      1.29150390625,
+      0.80810546875
+    ],
+    "threads_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "warmups": 3,
+    "repeats": 10,
+    "queries": 19,
+    "pooled_ms": {
+      "prepare_ms": {
+        "median": 0.8947605000000001,
+        "p90": 1.014533
+      },
+      "model_ms": {
+        "median": 6.501177,
+        "p90": 6.6351386
+      },
+      "output_transfer_ms": {
+        "median": 0.046515,
+        "p90": 0.0534751
+      },
+      "field_ms": {
+        "median": 9.431058499999999,
+        "p90": 17.748781499999996
+      },
+      "nms_ms": {
+        "median": 13.0006725,
+        "p90": 23.8663122
+      },
+      "stage_sum_ms": {
+        "median": 28.482093,
+        "p90": 51.604312799999995
+      }
+    },
+    "test_accessed": false,
+    "training": false,
+    "raw_summary_sha256": "da6d4e265d3be65d7e5f4d02bb123e865e5f59d21feeb7f21806445169dbae1f",
+    "query_ids": [
+      [
+        "102344115",
+        1587
+      ],
+      [
+        "108294798_176710428",
+        840
+      ],
+      [
+        "104862573_172226682",
+        518
+      ],
+      [
+        "108736800_177263517",
+        1585
+      ],
+      [
+        "108294783_176710410",
+        1338
+      ],
+      [
+        "108736635_177263256",
+        1374
+      ],
+      [
+        "105515286_173104287",
+        162
+      ],
+      [
+        "102344457",
+        1015
+      ],
+      [
+        "106366134_174226362",
+        67
+      ],
+      [
+        "108294765_176710386",
+        161
+      ],
+      [
+        "106879005_174887124",
+        1320
+      ],
+      [
+        "103997478_171030528",
+        1457
+      ],
+      [
+        "108736737_177263406",
+        1061
+      ],
+      [
+        "104348082_171512994",
+        724
+      ],
+      [
+        "105515448_173104512",
+        854
+      ],
+      [
+        "102344307",
+        220
+      ],
+      [
+        "108736611_177263226",
+        624
+      ],
+      [
+        "106366173_174226431",
+        609
+      ],
+      [
+        "108294624_176710203",
+        559
+      ]
+    ],
+    "maximum_prediction_delta": 5.7220458984375e-06
+  },
+  "A2_disabled": {
+    "complete": true,
+    "smoke": false,
+    "arm": "A2_disabled",
+    "seed": 42,
+    "grid_cm": 20,
+    "scope": "uniform one query per Val19 scene; warm batch-one stage timings",
+    "exclusions": "RGB/RIR disk decode, bank/checkpoint load, initialization, posterior diagnostics. No FP-RIR baseline encoder or GEOQ time included.",
+    "limitation": "Shared host; isolation is not established by this script. prepare computes both modalities for every arm. Stage sum includes synchronization boundaries; not streaming throughput.",
+    "source_sha256": {
+      "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+      "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+      "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+      "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+      "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+      "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+    },
+    "checkpoint_sha256": "af0baabf94f20f73aa6766ad1f0a1918a1a236ba342dd5cd25c1debd408b06a1",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "prediction_manifest_sha256": "301ef0f0c31d935ac6bbead14f9e851f2c1e8059f7860849b8ef86a0312b887d",
+    "device": "cuda",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+    "torch_version": "2.4.1+cu124",
+    "numpy_version": "1.24.4",
+    "torch_threads": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "load_average": [
+      1.6328125,
+      1.3154296875,
+      0.82177734375
+    ],
+    "threads_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "warmups": 3,
+    "repeats": 10,
+    "queries": 19,
+    "pooled_ms": {
+      "prepare_ms": {
+        "median": 0.8792365,
+        "p90": 1.0078041
+      },
+      "model_ms": {
+        "median": 7.6503205,
+        "p90": 7.8362407
+      },
+      "output_transfer_ms": {
+        "median": 0.047563999999999995,
+        "p90": 0.055752800000000005
+      },
+      "field_ms": {
+        "median": 9.6220485,
+        "p90": 17.9127917
+      },
+      "nms_ms": {
+        "median": 13.267866999999999,
+        "p90": 23.6204282
+      },
+      "stage_sum_ms": {
+        "median": 32.258113,
+        "p90": 55.9643314
+      }
+    },
+    "test_accessed": false,
+    "training": false,
+    "raw_summary_sha256": "51839afcae5f97e58418318a35b51549f8b312789827a1ae9ee3b4aa9719e656",
+    "query_ids": [
+      [
+        "102344115",
+        1587
+      ],
+      [
+        "108294798_176710428",
+        840
+      ],
+      [
+        "104862573_172226682",
+        518
+      ],
+      [
+        "108736800_177263517",
+        1585
+      ],
+      [
+        "108294783_176710410",
+        1338
+      ],
+      [
+        "108736635_177263256",
+        1374
+      ],
+      [
+        "105515286_173104287",
+        162
+      ],
+      [
+        "102344457",
+        1015
+      ],
+      [
+        "106366134_174226362",
+        67
+      ],
+      [
+        "108294765_176710386",
+        161
+      ],
+      [
+        "106879005_174887124",
+        1320
+      ],
+      [
+        "103997478_171030528",
+        1457
+      ],
+      [
+        "108736737_177263406",
+        1061
+      ],
+      [
+        "104348082_171512994",
+        724
+      ],
+      [
+        "105515448_173104512",
+        854
+      ],
+      [
+        "102344307",
+        220
+      ],
+      [
+        "108736611_177263226",
+        624
+      ],
+      [
+        "106366173_174226431",
+        609
+      ],
+      [
+        "108294624_176710203",
+        559
+      ]
+    ],
+    "maximum_prediction_delta": 3.337860107421875e-06
+  },
+  "A3": {
+    "complete": true,
+    "smoke": false,
+    "arm": "A3",
+    "seed": 42,
+    "grid_cm": 20,
+    "scope": "uniform one query per Val19 scene; warm batch-one stage timings",
+    "exclusions": "RGB/RIR disk decode, bank/checkpoint load, initialization, posterior diagnostics. No FP-RIR baseline encoder or GEOQ time included.",
+    "limitation": "Shared host; isolation is not established by this script. prepare computes both modalities for every arm. Stage sum includes synchronization boundaries; not streaming throughput.",
+    "source_sha256": {
+      "benchmark_ray_runtime.py": "050f9635dbe7554af62f6f8aee2a359bc2dc45f3834d78bd846b99e93d47c1b1",
+      "matching.py": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+      "model.py": "74f3f8de2d222ff11475dad816e11a4166f5fa75c198c612fad7b076ad7fd35b",
+      "dataset.py": "7c42b53d5d96d4cae5ebddb84cd4d46c6d5effafe164e3c719e506ad9f100957",
+      "augment.py": "e04d150b408bae72d380e94c7dcadc0423a5feff389f2034cb4e0527cbba7031",
+      "audio.py": "57581ae69ac7c059b657a49bed04748a7c8a1633e4b04b27d26c7ebc39147c5c"
+    },
+    "checkpoint_sha256": "105d117e2b70365055225738971051089b1f6d83ab6ebd76303d9c8d5910d452",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "prediction_manifest_sha256": "6078957e08eed11fefd018c0b88d3a574bfff14dc22be944e84591d1b60de46f",
+    "device": "cuda",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+    "torch_version": "2.4.1+cu124",
+    "numpy_version": "1.24.4",
+    "torch_threads": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "load_average": [
+      1.71484375,
+      1.349609375,
+      0.8408203125
+    ],
+    "threads_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "warmups": 3,
+    "repeats": 10,
+    "queries": 19,
+    "pooled_ms": {
+      "prepare_ms": {
+        "median": 0.890474,
+        "p90": 1.0073583000000002
+      },
+      "model_ms": {
+        "median": 14.365893,
+        "p90": 14.831157600000001
+      },
+      "output_transfer_ms": {
+        "median": 0.047103,
+        "p90": 0.0603983
+      },
+      "field_ms": {
+        "median": 9.593869000000002,
+        "p90": 17.7406309
+      },
+      "nms_ms": {
+        "median": 12.941486000000001,
+        "p90": 20.920400599999997
+      },
+      "stage_sum_ms": {
+        "median": 36.521737,
+        "p90": 54.0117184
+      }
+    },
+    "test_accessed": false,
+    "training": false,
+    "raw_summary_sha256": "d5fa23a3677e61a97acb6d96a010dd80cc49d3fbbcbf960b002969cc10d8e7f4",
+    "query_ids": [
+      [
+        "102344115",
+        1587
+      ],
+      [
+        "108294798_176710428",
+        840
+      ],
+      [
+        "104862573_172226682",
+        518
+      ],
+      [
+        "108736800_177263517",
+        1585
+      ],
+      [
+        "108294783_176710410",
+        1338
+      ],
+      [
+        "108736635_177263256",
+        1374
+      ],
+      [
+        "105515286_173104287",
+        162
+      ],
+      [
+        "102344457",
+        1015
+      ],
+      [
+        "106366134_174226362",
+        67
+      ],
+      [
+        "108294765_176710386",
+        161
+      ],
+      [
+        "106879005_174887124",
+        1320
+      ],
+      [
+        "103997478_171030528",
+        1457
+      ],
+      [
+        "108736737_177263406",
+        1061
+      ],
+      [
+        "104348082_171512994",
+        724
+      ],
+      [
+        "105515448_173104512",
+        854
+      ],
+      [
+        "102344307",
+        220
+      ],
+      [
+        "108736611_177263226",
+        624
+      ],
+      [
+        "106366173_174226431",
+        609
+      ],
+      [
+        "108294624_176710203",
+        559
+      ]
+    ],
+    "maximum_prediction_delta": 4.76837158203125e-06
+  }
+}

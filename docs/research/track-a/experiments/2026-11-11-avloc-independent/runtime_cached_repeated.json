@@ -1,0 +1,105 @@
+{
+  "complete": true,
+  "smoke": false,
+  "queries": 19,
+  "seed": 42,
+  "grid_cm": 20,
+  "scope": "Batch-one warm cached-input stages only; integration-only when smoke=true.",
+  "exclusions": [
+    "RGB/RIR encoding and B2 feature adaptation",
+    "FP-RIR rendering/embedding",
+    "Static geometry-neighborhood preparation",
+    "Loading, hashing, disk I/O, posterior diagnostics"
+  ],
+  "warning": "Separate cached and rebuilt-support GEOQ paths. Historical extraction computes score/support/connected candidate alternatives; not an optimized support-only latency. Raw-input encoding/adaptation excluded; no end-to-end claim. Shared hardware; no isolation established.",
+  "selection": "One uniform query per Val scene, RNG20261111, same manifest order as ray benchmark",
+  "warmups": 3,
+  "repeats": 10,
+  "data_manifest_sha256": "7ee50a05d4901d0618d77caef288372958c1b773a8c742eb40c0a714e85e2c65",
+  "baseline_math_sha256": {
+    "geometry/rays.py": "bf10b9c237ffaa3751f99f3e2ce5ed4d225684e2f935ea7d47493340f41b6eb4",
+    "evaluation/baselines.py": "feab7b3b0e861d959741529e2f534af7e8baf2fdc136bfda3b77fd144aef5aac"
+  },
+  "source_sha256": "ee8500fe7bd134510a9f1093040018fb1eaeb1050290655d51a291ff7ac422f0",
+  "matching_sha256": "72b129275a999879bdfe05bc7f572292e0cf2c4acfaa8f3fc5d0b8daef227616",
+  "historical_geoq_sha256": "22ce81387de85fd91425070d5a99034e025f56711ee2c1df35223ca931e1e325",
+  "model_sha256": "3211de3e4f1bd2be5e51b85cd5fd9f1068af621a4dcd7bc953086c108c43d2b5",
+  "audit_sha256": "712f472c68660afb0ed87bf932683f1f482d0e5fcfc572cd8992bfee65e80e69",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.36",
+  "numpy_version": "1.24.4",
+  "sklearn_version": "1.5.2",
+  "scipy_version": "1.10.1",
+  "joblib_version": "1.4.2",
+  "load_average": [
+    2.60546875,
+    1.998046875,
+    1.20068359375
+  ],
+  "threads_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "test_accessed": false,
+  "training": false,
+  "raw_summary_sha256": "cd733e29742c4801b96c58606d46339dd355cada9fa55acc2a62f77db5a731c1",
+  "aggregate_ms": {
+    "visual": {
+      "field_ms": {
+        "median": 4.4433995,
+        "p90": 9.0142542
+      },
+      "score_nms_ms": {
+        "median": 10.27733,
+        "p90": 19.7886311
+      }
+    },
+    "acoustic": {
+      "field_ms": {
+        "median": 6.0289765,
+        "p90": 11.894939699999998
+      },
+      "score_nms_ms": {
+        "median": 8.636785499999998,
+        "p90": 15.3581449
+      }
+    },
+    "fixed": {
+      "field_ms": {
+        "median": 11.386463,
+        "p90": 22.4017339
+      },
+      "score_nms_ms": {
+        "median": 10.55791,
+        "p90": 21.795230099999998
+      }
+    },
+    "b2": {
+      "field_ms": {
+        "median": 11.2493265,
+        "p90": 22.109636899999998
+      },
+      "score_nms_ms": {
+        "median": 10.9686295,
+        "p90": 22.2428124
+      }
+    },
+    "geoq": {
+      "cached_candidate_rank_ms": {
+        "median": 0.9234205,
+        "p90": 0.9569626
+      }
+    },
+    "rebuilt_support_geoq": {
+      "historical_three_extractors_ms": {
+        "median": 14.105539499999999,
+        "p90": 21.5192285
+      },
+      "rebuilt_support_rank_ms": {
+        "median": 1.138265,
+        "p90": 1.2273154000000002
+      }
+    }
+  },
+  "replay_pass": true
+}
