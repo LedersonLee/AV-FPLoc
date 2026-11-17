@@ -62,3 +62,17 @@ The new views retain identical color limits,20cm/10° candidates, XY maximum-ove
 | uniform_random | [Figure](matched_fields_with_disabled/case_1_native_logmass.png) | [Figure](matched_fields_with_disabled/case_1_standardized_score.png) |
 | A2_harm_extreme | [Figure](matched_fields_with_disabled/case_2_native_logmass.png) | [Figure](matched_fields_with_disabled/case_2_standardized_score.png) |
 | A2_repair_extreme | [Figure](matched_fields_with_disabled/case_3_native_logmass.png) | [Figure](matched_fields_with_disabled/case_3_standardized_score.png) |
+
+## A3 extension — 2026-11-17
+
+The same four previously selected queries now include A3: nine methods,36verified field replays. All eight native/logmass and standardized-score figures were visually reviewed for overlays, scales and layout; no new case selection was made. A3 fails all four illustrative queries, including the prior A2-repair case. This does not estimate its aggregate failure rate; the two extreme cases were selected using earlier A2 contrasts. Keep the random/extreme selection labels and full-cohort statistics together.
+
+[Replay and source evidence](matched_fields_with_a3/verification.json). Plot source48c7d61; frozen training62c58da20ed26ba95863638bbfd4926829999eec.
+
+Case0: [native logmass](matched_fields_with_a3/case_0_native_logmass.png), [standardized score](matched_fields_with_a3/case_0_standardized_score.png).
+
+Case1: [native logmass](matched_fields_with_a3/case_1_native_logmass.png), [standardized score](matched_fields_with_a3/case_1_standardized_score.png).
+
+Case2: [native logmass](matched_fields_with_a3/case_2_native_logmass.png), [standardized score](matched_fields_with_a3/case_2_standardized_score.png).
+
+Case3: [native logmass](matched_fields_with_a3/case_3_native_logmass.png), [standardized score](matched_fields_with_a3/case_3_standardized_score.png).
