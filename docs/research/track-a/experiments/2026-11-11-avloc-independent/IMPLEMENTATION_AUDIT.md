@@ -26,3 +26,14 @@ All numerical benchmark claims remain pending. This audit does not equate archit
 
 
 Update2026-11-11: full asset preparation, geometry targets/banks and the training pipeline are now implemented and code-checked. See the current [research report](RESEARCH_REPORT.md) and [assumptions](implementation_assumptions.md); any earlier pending implementation notes describe the initial audit snapshot. Learned benchmark results remain pending.
+
+## Current-state reconciliation — 2026-11-17
+
+The table above preserves the initial implementation audit; its pending statuses are historical. Production evidence now supersedes them:
+
+- ImageNet initialization and architecture: [initialization checks](initialization_test.json), [architecture checks](architecture_test.json), pinned initialization and training sources in [method](METHOD_AT_A_GLANCE.md).
+- Full-cohort data and augmentation/training: [asset audit](asset_audit_summary.json), [optimizer/resume tests](training_state_test.json), [documented assumptions](implementation_assumptions.md). Production A0/A1/A2/disabled/A3 completed100/70/99/69/87epochs under max100/patience20. See [all-arm accounting](completed_training_cost_all_seed42.json).
+- Learned A3 routing and moment matching: [full9965query replay](A3_router_diagnostics.json); architecture normalization is not reliability evidence. See [interpretation and calibration](A3_ROUTER_AND_CALIBRATION.md).
+- Native20/10cm floorplan matching: [A3 integrity](A3_integrity.json), [all requested metrics](REQUESTED_METRIC_TABLE.md), [earlier expert gate](expert_gate_seed42.json). Frozen geometry/pose contracts remain unchanged.
+
+Official-code availability remains unverified beyond the original documented search/access result; this is an independent6ch adaptation, not an official implementation replication. All results are reused-development; uniform-router localization and final integrated audit remain pending.
