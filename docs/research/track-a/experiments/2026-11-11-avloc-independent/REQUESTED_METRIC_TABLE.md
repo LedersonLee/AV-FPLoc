@@ -1,4 +1,4 @@
-# Requested final-pose metrics — updated 2026-11-13
+# Requested final-pose metrics — 2026-11-12
 
 All values percent; higher is better. Val19:9,965 queries,19 scenes; reused development. P=position error; Y=circular yaw error. All thresholds inclusive. Angular-only columns do not constrain position. B2/GEOQ:mean of42/43; AVLoc-style arms:seed42. Frozen baseline cache label42 is not a new training replicate.
 
@@ -15,6 +15,7 @@ All values percent; higher is better. Val19:9,965 queries,19 scenes; reused deve
 | A1 | 42 | 0.15 | 3.44 | 9.25 | 2.43 | 12.02 | 17.79 | 31.90 |
 | A2 | 42 | 30.47 | 63.94 | 65.72 | 64.93 | 71.09 | 71.40 | 71.57 |
 | A2_disabled | 42 | 12.75 | 38.07 | 41.71 | 40.34 | 50.02 | 51.36 | 52.00 |
+| A3 | 42 | 30.92 | 65.84 | 67.75 | 66.92 | 72.87 | 73.21 | 73.28 |
 
 ## 10cm XY /10° yaw
 
@@ -24,13 +25,8 @@ All values percent; higher is better. Val19:9,965 queries,19 scenes; reused deve
 | A1 | 42 | 0.30 | 3.52 | 9.22 | 2.54 | 12.46 | 18.18 | 32.48 |
 | A2 | 42 | 49.33 | 73.17 | 74.84 | 74.18 | 79.47 | 79.66 | 79.81 |
 | A2_disabled | 42 | 19.36 | 43.97 | 47.51 | 46.39 | 55.65 | 56.81 | 57.35 |
+| A3 | 42 | 49.47 | 75.05 | 76.83 | 76.19 | 80.85 | 81.07 | 81.17 |
 
 The20cm table is the matched primary comparison. The10cm table changes pose sampling for the same frozen networks; it must not imply model superiority over20cm baselines. Only explicitly included, completed and evaluated arms appear; absence does not indicate zero performance. Seed43 A0 was interrupted and is excluded. No method was selected or retrained for these additional thresholds. Existing fine/r1/joint flags were reproduced exactly from stored errors for every query.
 
 Training code: `62c58da20ed26ba95863638bbfd4926829999eec`. Script: `requested_metric_table.py --study <study-root> --out <fresh-output>`. Source/output hashes in [summary](requested_metrics.json). Single seed and reused validation limit generalization; no Test17 access.
-
-Updated with the completed interaction control using code `a8f1a60`; [original pre-control snapshot](requested_metrics_before_disabled.json) retained. [Control interpretation](INTERACTION_CONTROL_RESULTS.md).
-
-## What the grid resolution means
-
-The20cm/10cm values are XY pose-candidate spacings, not the floorplan raster resolution and not an acoustic-specific input resolution. The prepared floorplan maps use1cm raster spacing; ray casting uses the original binary-pixel boundary geometry. The main matching grid samples valid XY positions every20cm, each with36 candidate yaws at10° intervals. The separate10cm evaluation samples finer XY positions while retaining the same floorplan, checkpoint, predicted ray distributions and yaw spacing. This applies to global localization across modalities. Val19 candidate totals are71,383 XY cells at20cm and286,731 at10cm (approximately4×; clearance/mask boundaries prevent an exact factor). See the existing bank-cost audit for underlying manifests.

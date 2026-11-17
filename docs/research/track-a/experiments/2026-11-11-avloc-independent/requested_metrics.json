@@ -222,6 +222,21 @@
           51.35975915704968,
           52.00200702458605
         ]
+      },
+      {
+        "method": "A3",
+        "seeds": [
+          42
+        ],
+        "values": [
+          30.91821374811842,
+          65.84044154540894,
+          67.74711490215756,
+          66.92423482187657,
+          72.86502759658806,
+          73.20622177621676,
+          73.27646763672855
+        ]
       }
     ],
     "10cm": [
@@ -283,6 +298,21 @@
           55.6547917711992,
           56.80883090817862,
           57.350727546412436
+        ]
+      },
+      {
+        "method": "A3",
+        "seeds": [
+          42
+        ],
+        "values": [
+          49.47315604616156,
+          75.05268439538384,
+          76.82890115403914,
+          76.18665328650276,
+          80.85298544907175,
+          81.07375815353738,
+          81.17410938283994
         ]
       }
     ]
@@ -415,6 +445,27 @@
     "evaluation/A2_disabled_seed42_20cm/108736635_177263256.json": "338ec3c9ad119f6227e6a2e3cf1c717b0fbc12cddd82d4bcd6be8f45459090eb",
     "evaluation/A2_disabled_seed42_20cm/108736737_177263406.json": "450803eec1e9680696844c318ed61297c9a2757e923ee78938c01ccfb33d01be",
     "evaluation/A2_disabled_seed42_20cm/108736800_177263517.json": "10751d95fe7bd17eaf0832cfc195905bf0d1e8121914c32e3b982164e9e3b6b6",
+    "runs/A3_seed42/complete.json": "b2750f5b3bf517fdfd8b59e0139d2f1fce5006dbbacf99ebd7462c768cd079e0",
+    "evaluation/A3_seed42_20cm/summary.json": "46837fab82bdfa45bad0206c69965521b765c5f9521ee3a16b5dc5af50d579c8",
+    "evaluation/A3_seed42_20cm/102344115.json": "45151e14f771ff518a1762fa896c26642e2ffc307b43500cbbcdf2fd66ae91cb",
+    "evaluation/A3_seed42_20cm/102344307.json": "804c3439c11bee1ed0e5081bc1d4a3dfb08a948c999329cc1af0e07011254da9",
+    "evaluation/A3_seed42_20cm/102344457.json": "196ef371b41147ad79b0e315b9cce3064cff38f36e84783405d25663a668dd1d",
+    "evaluation/A3_seed42_20cm/103997478_171030528.json": "6eb95deb86230be297de79ca2235b86b960772766cf65cf8c5af05d4ff75a100",
+    "evaluation/A3_seed42_20cm/104348082_171512994.json": "f97fa8ead4710acf5891a8c545ecf6e8c1cb1e518aba8fd98bbcbf2966eb5bb0",
+    "evaluation/A3_seed42_20cm/104862573_172226682.json": "47161f95fbda15329a0f622329047e95324c7103de27beaa1feefe2e1c37dc67",
+    "evaluation/A3_seed42_20cm/105515286_173104287.json": "736efd2273a41d60cc0785a49873b451a69b747b6535f0ef1a0793ed076286e8",
+    "evaluation/A3_seed42_20cm/105515448_173104512.json": "cc6fa4c3b17205cae35a65f359646af0dd2f9aa619f709eb52fc9b0ac1a0ec2f",
+    "evaluation/A3_seed42_20cm/106366134_174226362.json": "23e1cac1eaa55165a800ade41b4bc4cf6d7f0594e15cd31c7c4a1b761b3ee8d7",
+    "evaluation/A3_seed42_20cm/106366173_174226431.json": "db6cf6655b1cd861dc10198b0aaa6e02bb3a60ab075d0cff56459ce996705440",
+    "evaluation/A3_seed42_20cm/106879005_174887124.json": "b9f6e3f88eef18845e588ec72d39bfa9c2f149070ab39f4fde665378addbd4e0",
+    "evaluation/A3_seed42_20cm/108294624_176710203.json": "3f8a211dd9d8fb9004ef2995b9a29eacb1b0206cd1a58593fc55c31ca5c5a4f3",
+    "evaluation/A3_seed42_20cm/108294765_176710386.json": "fb06934ece4ce6933f1722ae796059f84cbfee31d4b5fcf4fd317cb42b8a56b7",
+    "evaluation/A3_seed42_20cm/108294783_176710410.json": "924cae372d59f85437061b6a037dde0f7cfeeebcf7f77819a108a8ab6b62e273",
+    "evaluation/A3_seed42_20cm/108294798_176710428.json": "c73dcb6466430d6720e37a901eb77a6c2f6c811a9940af2c56d8d11c45aa2828",
+    "evaluation/A3_seed42_20cm/108736611_177263226.json": "3a8ea41d50048040f541cf5ef490456e30039c94a64264e5437f6b436b3e12f6",
+    "evaluation/A3_seed42_20cm/108736635_177263256.json": "617a9f49326fa5c286a902b7065092c255c6f168b7d827677728a4d96006f40d",
+    "evaluation/A3_seed42_20cm/108736737_177263406.json": "f50871f2922fa64b0e1e48131b23ae6d15c0b3b7b3e832625d3d2be4fcaebbe0",
+    "evaluation/A3_seed42_20cm/108736800_177263517.json": "8ca2b965b757f8ec881df7f3dc72df0d2be317ddfacbe987aa187d4178fdce0e",
     "evaluation/A0_seed42_10cm/summary.json": "7c69d695d7b70a095534de64543a2c6d80f57b408d1d0058a32a084590e8eade",
     "evaluation/A0_seed42_10cm/102344115.json": "14b84be798ba323092c62b00b8c17c52a78dfa7557bdc176c8e2be5a52d2f8d8",
     "evaluation/A0_seed42_10cm/102344307.json": "99f928410de5c34ba824f1a9cfcec09d258a340c1d37494629a685e2aecdfe0a",
@@ -494,7 +545,27 @@
     "evaluation/A2_disabled_seed42_10cm/108736611_177263226.json": "3a12614cc5f2a48579afbe4d7a6196f6bec10c440bbedadffb319425dddeed83",
     "evaluation/A2_disabled_seed42_10cm/108736635_177263256.json": "bbe24eb29aa71851a8987fc12310b75c8589fc02980bc6bb9988a884a5cddd37",
     "evaluation/A2_disabled_seed42_10cm/108736737_177263406.json": "7952b2f754eab7a8055ff2c544ebd99d29f0b70c4fbbb01365d71615d269b6dd",
-    "evaluation/A2_disabled_seed42_10cm/108736800_177263517.json": "abe065f30adde7025e310a929a7c8dfc96bc68dcb328e9697c4a5e3f7118c55d"
+    "evaluation/A2_disabled_seed42_10cm/108736800_177263517.json": "abe065f30adde7025e310a929a7c8dfc96bc68dcb328e9697c4a5e3f7118c55d",
+    "evaluation/A3_seed42_10cm/summary.json": "5b12cbf63753c448bb7cea3fd8563f1ed6f2ac64a98d2fa98ccfe77618ae4cd9",
+    "evaluation/A3_seed42_10cm/102344115.json": "5d1970ff807e077ad361ddc5087b22c2f946ab9350b9c30887137c5a7bbaac77",
+    "evaluation/A3_seed42_10cm/102344307.json": "84de1f868dfb220d8c09996ee5bee6bfa73697b3862bb3f3dce30647cca058fa",
+    "evaluation/A3_seed42_10cm/102344457.json": "d326035ed4b3a649916abaae2a9d364bf0eb8e0ef1e87719bd81cf5f86a1e79c",
+    "evaluation/A3_seed42_10cm/103997478_171030528.json": "2b9200178bb7beae498b1b65bf432245937d0910edb1661e2acbe4e400fe7a5a",
+    "evaluation/A3_seed42_10cm/104348082_171512994.json": "4aedbb70f7f22e547959c938fb85e75ca23c0da88e9753e571159c7f526c0276",
+    "evaluation/A3_seed42_10cm/104862573_172226682.json": "2cdc9b416989fe6a14091d7e37b510754c88f2a8b4d1fbaf51d665e4fdd84a89",
+    "evaluation/A3_seed42_10cm/105515286_173104287.json": "820c1617ac63b852c7136bfb124999da908cff8bec2bcc756b3126bb4b2397d9",
+    "evaluation/A3_seed42_10cm/105515448_173104512.json": "f4113e1d713335c771f15e03c909d742d16b92daf5a35a66ae92a6f7f84192de",
+    "evaluation/A3_seed42_10cm/106366134_174226362.json": "79339158da77b929f521d8399cde8d2b734045197443e000d0e3a970659adc81",
+    "evaluation/A3_seed42_10cm/106366173_174226431.json": "308a25b3890430cd4355f8b2cec36b4a698c0c4b6fd3bdae951140ec4598642b",
+    "evaluation/A3_seed42_10cm/106879005_174887124.json": "afe5dbf3779278cc734c133b7e710a48ff56ad98b075660b5c91e21878e317a2",
+    "evaluation/A3_seed42_10cm/108294624_176710203.json": "148578f6ccef827bff0a7a35ae0ea499cd8c471493f490c8dc01975c824ca9f4",
+    "evaluation/A3_seed42_10cm/108294765_176710386.json": "64ca4a45734b9b5d263f57e9339095f30fdd1d228edb9aedf85de3fb66da1d7a",
+    "evaluation/A3_seed42_10cm/108294783_176710410.json": "dc3e7b2db387b63a12a863c7f73c5999f88543e0d06188d21146f31367bf7c55",
+    "evaluation/A3_seed42_10cm/108294798_176710428.json": "c99d6ad6f979624bf30fb587144fdf041fe517b4b33be7f22fcd56438ef9d319",
+    "evaluation/A3_seed42_10cm/108736611_177263226.json": "275c95b7c71bf56160a685b476e3f7725b46c3dcbd4bcdb9be424ed22f1fc5a3",
+    "evaluation/A3_seed42_10cm/108736635_177263256.json": "b752c4d17a9267f237cd21f6f2945f67a7558b2c5bbe9a8f81c8affa1067395d",
+    "evaluation/A3_seed42_10cm/108736737_177263406.json": "c3b8ba904e53d9b66f15355dc83aaf9a72b40d8b678f0dd2d0722050fb56d507",
+    "evaluation/A3_seed42_10cm/108736800_177263517.json": "2401ab5a8c808233f658601581c3d011143cbf6b63364ce0465c5b63544d86de"
   },
   "test_accessed": false,
   "scope": "Reused Val19 micro-averaged success percentages; B2/GEOQ average seeds42/43. Other methods seed42 or frozen cache label42. Inclusive thresholds with original floating-point errors and no epsilon, exactly reproducing stored metrics. Angular errors circular. No new inference/training."

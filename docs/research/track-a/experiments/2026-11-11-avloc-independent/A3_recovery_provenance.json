@@ -1,0 +1,9 @@
+{
+  "base_code_commit": "542b328bc46c553d87694da6cd5482abb5ceb888",
+  "uncommitted_external_recovery_sources": {
+    "experiments/avloc_20261111/recover_a3_finalization_20261117.py": "1703d7f0da34268175e05e57315227c5fc33b39cdb951d1940ab21d3c5799df2",
+    "experiments/avloc_20261111/recover_a3_tail_20261117.py": "292f5327a96cf8037d2e9d942bac8f6d2cabba3716053863a0c4b7d2b55ba57b"
+  },
+  "reason": "Original parent process absent; output hashes verified before continuing only missing stages",
+  "test_accessed": false
+}
