@@ -5,5 +5,10 @@
     "experiments/avloc_20261111/recover_a3_tail_20261117.py": "292f5327a96cf8037d2e9d942bac8f6d2cabba3716053863a0c4b7d2b55ba57b"
   },
   "reason": "Original parent process absent; output hashes verified before continuing only missing stages",
-  "test_accessed": false
+  "test_accessed": false,
+  "followup": "Finalization waiter exited143 after reviews/figures. Added completed-stage skips and relaunched with a detached session; no completed output recomputed.",
+  "revised_recovery_sources": {
+    "experiments/avloc_20261111/recover_a3_finalization_20261117.py": "eb9de424fef3b523f7d77160fa6f087ad346ab2ff58f4636e30272dfba1ed54b",
+    "experiments/avloc_20261111/recover_a3_tail_20261117.py": "292f5327a96cf8037d2e9d942bac8f6d2cabba3716053863a0c4b7d2b55ba57b"
+  }
 }
