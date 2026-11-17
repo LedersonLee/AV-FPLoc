@@ -21,7 +21,7 @@ Original objective: AVLoc independent reimplementation and matched Track A bench
 | Router weight/error and scale/error | A3_router_diagnostics.json | Full36directions/9965queries; descriptive, not independent reliability proof |
 | Posterior figures and failure cases | MATCHED_SCORE_FIELDS.md, A3_failure_case349.png | All8 A3-expanded figures reviewed;36field replays verified and archived in matched_fields_with_a3 |
 | Cost implications | COMPLETED_RUNTIME_RESULTS.md, bank_cost_audit.json | Storage and scoped warm stages measured; historical rendering/end-to-end latency unavailable, no speedup claim |
-| Phase5 five research decisions | RESEARCH_REPORT.md | Needs final synthesis including completed uniform controls and cost limitations |
+| Phase5 five research decisions | RESEARCH_REPORT.md | INTERPRETATION_AND_DECISIONS.md answers all5questions from primary evidence; final10cmcontrol reconciliation pending |
 | Reproducibility, preserved failures and provenance | per-analysis receipts, codeSHA, recovery hashes | Preserved; raw artifacts local, external recovery not clean-clone reproducible by itself |
 | Git index and named deliverables | RESEARCH_INDEX.md, METHOD_AT_A_GLANCE.md, IMPLEMENTATION_AUDIT.md, RESEARCH_REPORT.md | Present; final synchronization pending final results |
 

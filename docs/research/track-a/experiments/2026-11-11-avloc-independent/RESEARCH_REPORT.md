@@ -4,6 +4,8 @@ Study `avloc_20261111`, Primary Track A, started2026-11-11. **Active, incomplete
 
 Objective: reproduce the paper-based architecture as an explicit6ch HSSD adaptation, train on the full eligible cohort, and complete all requested matched baseline, calibration, observability, interaction and cost comparisons. No superiority of Track A is assumed.
 
+Interpretation of the five original research questions: [decisions and limitations](INTERPRETATION_AND_DECISIONS.md).
+
 ## Consolidated verified findings — 2026-11-16
 
 **A0/A1/A2 seed42 training and complete evaluation are finished. The full study remains incomplete:** the interaction-disabled seed42 model has completed69 epochs, both native grid evaluations and both calibration reviews. A3 completed87epochs (best67); both native grids, calibration replay and router diagnostics are complete; uniform-weight localization controls remain pending. [Verified router/calibration results](A3_ROUTER_AND_CALIBRATION.md). [A3 initial matched results](A3_INITIAL_RESULTS.md) supersede prior pending status. Seed43 replication was deferred by the user's resource-priority decision, with the interrupted A0 checkpoint preserved. The later dated reports linked below supersede stale launch/pending status in the chronological notes retained after this section. See [seed priority](SEED_PRIORITY_UPDATE.md) and [validated A3 gate and queue](EXPERT_VALIDATION_GATE.md).
