@@ -29,7 +29,7 @@ def main():
   for key in ['raw_peak_margin','distinct_peak_margin','entropy_normalized','gt_region_mass']:
    values=np.array([x[key] for x in rows],float);assert np.isfinite(values).all()
    stats[key]={group:dict(count=int(mask.sum()),mean=float(values[mask].mean()),median=float(np.median(values[mask])),q10=float(np.quantile(values[mask],.1)),q90=float(np.quantile(values[mask],.9))) for group,mask in [('all',np.ones(len(rows),bool)),('success',correct),('failure',~correct)]}
-   stats[key]['spearman_joint']=float(spearmanr(values,correct.astype(float)).statistic)
+   stats[key]['spearman_joint']=float(spearmanr(values,correct.astype(float))[0])
   result[name]=stats
  a.out.parent.mkdir(parents=True,exist_ok=True)
  with a.out.open('x') as f:json.dump(dict(complete=True,queries=9965,scenes=19,seed=42,grid_cm=20,methods=result,sources=sources,source_sha256=sha(__file__),test_accessed=False,scope='Reused development; descriptive within-method native-score margins. Different score units prevent interpreting raw cross-method magnitudes as confidence or information. GT masses and success strata are post-hoc diagnostics, never inference inputs.'),f,indent=2)
