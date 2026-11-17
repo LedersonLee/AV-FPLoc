@@ -14,7 +14,7 @@ Original objective: AVLoc independent reimplementation and matched Track A bench
 | Separate10cm evaluation | REQUESTED_METRIC_TABLE.md | Complete for all five ray arms; native10cmB2 absent and never represented by interpolation |
 | Position/yaw/ray/FoV/coverage/scenewise/repair-harm | metrics, ray analyses, A3_initial_contrasts.json | Primary metrics complete; final uniform paired comparisons pending |
 | Independent fusion and disabled interaction | FUSION_DECOMPOSITION.md, INTERACTION_CONTROL_RESULTS.md | Complete; matched-parameter control changes multiple factors, not pure attention causality |
-| Fixed versus learned routing | A3_router_diagnostics.json and running uniform evaluation | Ray-level comparison complete; pose-level20/10cm controls pending |
+| Fixed versus learned routing | A3_router_diagnostics.json and running uniform evaluation | Ray-level and20cm pose control complete (A3_UNIFORM_CONTROL.md);10cm pending |
 | Sharpness, entropy, GT mass and peak margins | matching.py saved row fields; matched score maps | PEAK_MARGIN_ANALYSIS.md now covers all9methods/9965queries; native units differ by method |
 | Temperature/NLL/ECE and reliability | all-arm calibration verification files | Complete; A2 negative10cm result preserved, A3 residual error documented |
 | Acoustic observability, direction/distance/error conditions | ACOUSTIC_SUCCESS_CONDITIONS.md, a1_ray_diagnostics_20cm.json | Existing full-cohort diagnostic evidence; geometry oracle not an acoustic information bound |
