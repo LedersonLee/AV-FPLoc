@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "test_accessed": false,
+  "checks": "Prediction hashes, query IDs, uniqueness and all aggregate means on both grids",
+  "grids": {
+    "20": {
+      "queries": 9965,
+      "summary_sha256": "97a7d46cbd533539a7292c18aec8256fc09fbc074d3599bbe4ac422d5aa8184f",
+      "metric_means": {
+        "r1": 0.4887104867034621,
+        "joint": 0.4781736076266934,
+        "fine": 0.17902659307576518,
+        "top5_nms": 0.7526342197691922,
+        "top20_nms": 0.8957350727546413,
+        "top5_raw": 0.6126442548921224,
+        "top20_raw": 0.7402910185649774,
+        "ray_mae": 0.6321188211558799,
+        "ray_nll": 1.7410188281340198,
+        "in_fov_mae": 0.36499332896493586,
+        "entropy_normalized": 0.0666182663245919,
+        "gt_region_mass": 0.47020820710353195,
+        "nearest_grid_nll": 70.69167171912359
+      }
+    },
+    "10": {
+      "queries": 9965,
+      "summary_sha256": "1413209230ea17ebddbe7efa973c8a8d2e9254af69506c46893abc052d613702",
+      "metric_means": {
+        "r1": 0.5730055193176117,
+        "joint": 0.562468640240843,
+        "fine": 0.2828901154039137,
+        "top5_nms": 0.8155544405418966,
+        "top20_nms": 0.9231309583542399,
+        "top5_raw": 0.6626191670847967,
+        "top20_raw": 0.7625689914701456,
+        "ray_mae": 0.6321188211558799,
+        "ray_nll": 1.7410188281340198,
+        "in_fov_mae": 0.36499332896493586,
+        "entropy_normalized": 0.09583599438907976,
+        "gt_region_mass": 0.5522176001004895,
+        "nearest_grid_nll": 58.347152183085285
+      }
+    }
+  }
+}

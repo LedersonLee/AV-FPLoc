@@ -1,6 +1,6 @@
 # Interpretation and decisions — 2026-11-17
 
-Primary Track A, AVLoc-style6ch HSSD adaptation. Conclusions below concern the completed seed42 primary20cm comparison on reused Val19/9,965queries; the10cm uniform-router control remains pending. These are development findings, not a reproduction of the original paper's binaural dataset results or an independent Test claim.
+Primary Track A, AVLoc-style6ch HSSD adaptation. Conclusions below concern the completed seed42 primary20cm comparison on reused Val19/9,965queries; the10cm uniform-router control is also complete. These are development findings, not a reproduction of the original paper's binaural dataset results or an independent Test claim.
 
 ## 1. Does the AVLoc-style framework match or exceed Track A?
 
@@ -36,4 +36,4 @@ Reconsider equal mixing of weak acoustic-only estimates, equating sharper fields
 
 ## Scientific limits and remaining execution
 
-Full112Train, cleanVal checkpoint selection, single current training seed, reused19Val scenes and6ch sensor adaptation bound generalization. Test17 remains unused, Track B unchanged, and all checkpoints/failures preserved. This document answers the five interpretation questions from existing verified evidence; it does not mark the study complete. Remaining execution:10cmuniform control, final paired receipts, integrated report/index reconciliation and completion audit. Each linked report records its executed source hashes; frozen training code62c58da20ed26ba95863638bbfd4926829999eec.
+Full112Train, cleanVal checkpoint selection, single current training seed, reused19Val scenes and6ch sensor adaptation bound generalization. Test17 remains unused, Track B unchanged, and all checkpoints/failures preserved. This document answers the five interpretation questions from verified evidence. Both uniform controls, final paired receipts, figure review and integrity audit are complete. At10cm learned versus uniform Joint is76.19%versus56.25%; the inference-weighting conclusion is consistent across grids. Seed42 benchmark scope is complete; deferred replication and unmeasured end-to-end/rendering costs remain explicit limitations, not claimed findings. Each linked report records its executed source hashes; frozen training code62c58da20ed26ba95863638bbfd4926829999eec.

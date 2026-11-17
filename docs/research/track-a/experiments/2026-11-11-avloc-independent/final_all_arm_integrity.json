@@ -1,0 +1,246 @@
+{
+  "scope": "Reused Val19, integrity/evaluation gate; not proof of accuracy or independent validation",
+  "seed": 42,
+  "test_accessed": false,
+  "validator_sha256": "53200a78fae34a153444db4968de963be37a4ce21aefcb0eb37ad76aa19de0c3",
+  "A0": {
+    "validated": true,
+    "checkpoint_sha256": "03942eba07916c8da6d494319b484c830e74a5740793765e864433ce58b091f7",
+    "prediction_manifest_sha256": "aa5d6807f530d165fb6d068eca14e669f46cd8d447281007c4c68ae37779d56c",
+    "complete_sha256": "75c9daf84a54454a68343e0314162f61aa3499d2ab239251a4fa550c54b78e6d",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 99,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "ece4088320511a1aa965bf1f0930128e3a9e6a2d6010a2015a9a4270f9af552b",
+        "metrics": {
+          "r1": 0.5094831911690918,
+          "joint": 0.5010536879076769,
+          "fine": 0.22027094831911692,
+          "top5_nms": 0.7097842448569995,
+          "top20_nms": 0.8875062719518314,
+          "top5_raw": 0.658906171600602,
+          "top20_raw": 0.8013045659809332,
+          "ray_mae": 0.1795708834640032,
+          "ray_nll": 0.8388550303862381,
+          "in_fov_mae": 0.1795708834640032,
+          "entropy_normalized": 0.042972747736281264,
+          "gt_region_mass": 0.5030022502904717,
+          "nearest_grid_nll": 119.03912543456256
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "7c69d695d7b70a095534de64543a2c6d80f57b408d1d0058a32a084590e8eade",
+        "metrics": {
+          "r1": 0.612744606121425,
+          "joint": 0.6046161565479177,
+          "fine": 0.3890617160060211,
+          "top5_nms": 0.7768188660311088,
+          "top20_nms": 0.9212242849974912,
+          "top5_raw": 0.7256397390868038,
+          "top20_raw": 0.8330155544405419,
+          "ray_mae": 0.1795708834640032,
+          "ray_nll": 0.8388550303862381,
+          "in_fov_mae": 0.1795708834640032,
+          "entropy_normalized": 0.05982897301312456,
+          "gt_region_mass": 0.604883268722477,
+          "nearest_grid_nll": 81.46294116496449
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A1": {
+    "validated": true,
+    "checkpoint_sha256": "e920d21d187f165a77f1b108ef0bf11c5a232ee801d811344042df6ab5f81325",
+    "prediction_manifest_sha256": "8667b249a6f4eb16a93022b7d0001c1ec34ee63b023e9c80a32671cf6ba21085",
+    "complete_sha256": "e076c1a30cc42be0e9ffe3a88248a051a5dacf069c4edb3cddf49917088dd45e",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 50,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "d0c6f2cb10c3fc9882bfd7473c983b597c4a6dfbf0efab950f4b4b7a3509fe7f",
+        "metrics": {
+          "r1": 0.09252383341695936,
+          "joint": 0.024284997491219266,
+          "fine": 0.0015052684395383843,
+          "top5_nms": 0.09914701455092825,
+          "top20_nms": 0.2268941294530858,
+          "top5_raw": 0.07205218263923734,
+          "top20_raw": 0.10546914199698947,
+          "ray_mae": 1.4785059681533272,
+          "ray_nll": 2.0494116569422953,
+          "in_fov_mae": 1.4913805417269768,
+          "entropy_normalized": 0.4783620951457204,
+          "gt_region_mass": 0.02413505710951168,
+          "nearest_grid_nll": 29.572609659086734
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "c4a2c6ddbe4780ff11656dd8be4c543f36c02ed23163eac4f2f8607f7f7fe15a",
+        "metrics": {
+          "r1": 0.09222277972905168,
+          "joint": 0.025388861013547415,
+          "fine": 0.0030105368790767687,
+          "top5_nms": 0.10265930757651781,
+          "top20_nms": 0.2275965880582037,
+          "top5_raw": 0.06753637732062218,
+          "top20_raw": 0.0958354239839438,
+          "ray_mae": 1.4785059681533272,
+          "ray_nll": 2.0494116569422953,
+          "in_fov_mae": 1.4913805417269768,
+          "entropy_normalized": 0.5270107418354176,
+          "gt_region_mass": 0.024480603667603133,
+          "nearest_grid_nll": 30.88118268818684
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A2": {
+    "validated": true,
+    "checkpoint_sha256": "d4a9e44580cb4aa87f3909fc08cbabd04ddb925bf1e44b1c50133064f39e7bd2",
+    "prediction_manifest_sha256": "d650bd3fc2e3d4f53b6f95c334a31621d31e13613795b5e8e00decc19be228e5",
+    "complete_sha256": "c3da8be395683c7db4e2fd779e9296633c9f820cd483038b0c82cbcd4bc3cd37",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 79,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "1a2fd7ee5467d6728c262fc666951b0f2a7de08136e844607785255c7fcfcdd5",
+        "metrics": {
+          "r1": 0.6572002007024587,
+          "joint": 0.6492724535875565,
+          "fine": 0.304666332162569,
+          "top5_nms": 0.8550928248871049,
+          "top20_nms": 0.9417962870045158,
+          "top5_raw": 0.782940291018565,
+          "top20_raw": 0.8687405920722528,
+          "ray_mae": 0.560813454961207,
+          "ray_nll": 2.6483865042827563,
+          "in_fov_mae": 0.17737218501618504,
+          "entropy_normalized": 0.00969931717715634,
+          "gt_region_mass": 0.6492368959876412,
+          "nearest_grid_nll": 154.8475699043452
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "d0b04915aae4b5741844d94481870841774562a6c7a41de555395d63d9705cb9",
+        "metrics": {
+          "r1": 0.7484194681384847,
+          "joint": 0.7417962870045158,
+          "fine": 0.4933266432513798,
+          "top5_nms": 0.9017561465127948,
+          "top20_nms": 0.9562468640240843,
+          "top5_raw": 0.8235825388861013,
+          "top20_raw": 0.8861013547415956,
+          "ray_mae": 0.560813454961207,
+          "ray_nll": 2.6483865042827563,
+          "in_fov_mae": 0.17737218501618504,
+          "entropy_normalized": 0.016105295750054226,
+          "gt_region_mass": 0.7412018636268273,
+          "nearest_grid_nll": 118.13383537149154
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A2_disabled": {
+    "validated": true,
+    "checkpoint_sha256": "af0baabf94f20f73aa6766ad1f0a1918a1a236ba342dd5cd25c1debd408b06a1",
+    "prediction_manifest_sha256": "301ef0f0c31d935ac6bbead14f9e851f2c1e8059f7860849b8ef86a0312b887d",
+    "complete_sha256": "6ce2464a852451006252eb747a338a0f4b97dacaf461467319e121cb5203ea22",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 49,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "70d8b7bbf3ab1810239bee4abbe81ad4afd651a22425ac6f0cd71beec0690933",
+        "metrics": {
+          "r1": 0.417059708981435,
+          "joint": 0.403411941796287,
+          "fine": 0.12754641244355244,
+          "top5_nms": 0.7230306071249373,
+          "top20_nms": 0.9060712493728048,
+          "top5_raw": 0.5734069242348219,
+          "top20_raw": 0.7290516808830908,
+          "ray_mae": 0.7172172131931818,
+          "ray_nll": 1.060620124563504,
+          "in_fov_mae": 0.3553417908891099,
+          "entropy_normalized": 0.07697822408054629,
+          "gt_region_mass": 0.39599285764590325,
+          "nearest_grid_nll": 37.937863780798395
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "f3448abd13404424475efdb6e2d60b25a31047b0d043590ce56a45fd828fd916",
+        "metrics": {
+          "r1": 0.4750627195183141,
+          "joint": 0.46392373306573004,
+          "fine": 0.19357752132463624,
+          "top5_nms": 0.7737079779227296,
+          "top20_nms": 0.9230306071249372,
+          "top5_raw": 0.5908680381334671,
+          "top20_raw": 0.7190165579528349,
+          "ray_mae": 0.7172172131931818,
+          "ray_nll": 1.060620124563504,
+          "in_fov_mae": 0.3553417908891099,
+          "entropy_normalized": 0.11332895403003326,
+          "gt_region_mass": 0.4527269728512225,
+          "nearest_grid_nll": 29.68798978612348
+        },
+        "verified_queries": 9965
+      }
+    }
+  },
+  "A3": {
+    "validated": true,
+    "checkpoint_sha256": "105d117e2b70365055225738971051089b1f6d83ab6ebd76303d9c8d5910d452",
+    "prediction_manifest_sha256": "6078957e08eed11fefd018c0b88d3a574bfff14dc22be944e84591d1b60de46f",
+    "complete_sha256": "b2750f5b3bf517fdfd8b59e0139d2f1fce5006dbbacf99ebd7462c768cd079e0",
+    "training_code_commit": "62c58da20ed26ba95863638bbfd4926829999eec",
+    "best_epoch": 67,
+    "evaluation": {
+      "20": {
+        "summary_sha256": "46837fab82bdfa45bad0206c69965521b765c5f9521ee3a16b5dc5af50d579c8",
+        "metrics": {
+          "r1": 0.6774711490215756,
+          "joint": 0.6692423482187657,
+          "fine": 0.30918213748118417,
+          "top5_nms": 0.8701455092824887,
+          "top20_nms": 0.9532363271450075,
+          "top5_raw": 0.8081284495735073,
+          "top20_raw": 0.8909182137481184,
+          "ray_mae": 0.555558467502166,
+          "ray_nll": 1.7859796831564028,
+          "in_fov_mae": 0.17745746687448682,
+          "entropy_normalized": 0.011532405625395543,
+          "gt_region_mass": 0.6694523998433994,
+          "nearest_grid_nll": 125.72314317050567
+        },
+        "verified_queries": 9965
+      },
+      "10": {
+        "summary_sha256": "5b12cbf63753c448bb7cea3fd8563f1ed6f2ac64a98d2fa98ccfe77618ae4cd9",
+        "metrics": {
+          "r1": 0.7682890115403914,
+          "joint": 0.7618665328650276,
+          "fine": 0.49473156046161565,
+          "top5_nms": 0.9083793276467637,
+          "top20_nms": 0.9634721525338685,
+          "top5_raw": 0.8414450577019569,
+          "top20_raw": 0.9043652784746613,
+          "ray_mae": 0.555558467502166,
+          "ray_nll": 1.7859796831564028,
+          "in_fov_mae": 0.17745746687448682,
+          "entropy_normalized": 0.018321748970063594,
+          "gt_region_mass": 0.7605627253199314,
+          "nearest_grid_nll": 96.58931461238089
+        },
+        "verified_queries": 9965
+      }
+    }
+  }
+}

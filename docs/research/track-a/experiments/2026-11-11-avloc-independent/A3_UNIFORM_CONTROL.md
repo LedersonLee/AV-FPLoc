@@ -19,6 +19,12 @@ This is an inference intervention in a model trained with learned routing, not a
 
 Uniform rayMAE0.632119 versus learned0.555558. Uniform native nearest-gridNLL70.692 is lower than learned125.723 despite worse localization; the broader uniform field illustrates that distribution scoring and Top1 success are distinct objectives. Calibration results, not native sharpness alone, must accompany claims.
 
-10cm uniform evaluation is still running; final paired output and integrated study completion remain pending. Original9,965-query model outputs and all prior artifacts are preserved.
+10cm uniform evaluation and both final paired comparisons are now complete. Original9,965-query model outputs and all prior artifacts are preserved.
 
 Reproduce `compare_router.py --study <study> --out <fresh> --grid-cm 20 --include-uniform` at f20d22f. Uniform export and field evaluation used the original immutable evaluation snapshot; executable/input hashes in receipts. Frozen training62c58da20ed26ba95863638bbfd4926829999eec.
+
+## Completed10cm result
+
+Uniform: fine28.289%, R@1m57.301%, Joint56.247%, Top5joint81.555%, Top20joint92.313%. Learned A3: fine49.473%, R@1m76.829%, Joint76.187%. Learned−uniform Joint+19.940pp micro; macro+20.093pp95%CI[17.171,22.850]pp,2288repairs/301harms. Fine+21.184pp; macroCI[18.008,23.849]pp. [10cm aggregate](A3_uniform10_summary.json), [both-grid row verification](A3_uniform_final_integrity.json).
+
+A3−A2 at10cm: Joint+2.007pp, macroCI[1.228,2.787]pp,765repairs/565harms. Fine+0.140pp, macroCI[−0.766,1.629]pp includes zero. Therefore the small fine improvement is not robust across the sampled development scenes under this bootstrap. [Final20cm contrasts](A3_final_paired20.json), [final10cm contrasts](A3_final_paired10.json). Paired code f20d22f, exact sources in receipts. Same-head uniform limitations stated above remain unchanged.
